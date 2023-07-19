@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item Detail</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../dist/output.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div>
-            <h2>Wide-leg Pants</h2>
+            <h2 class="text-4xl">Wide-leg Pants</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
                 illo provident a exercitationem sunt.
@@ -37,7 +37,9 @@
                 <span class="w-5 bg-black">a</span>
                 <span class="w-5 bg-black">a</span>
             </div>
-            Quantity <input type="number">
+            <div>
+                Quantity <input type="number">
+            </div>
 
         </div>
     </header>
