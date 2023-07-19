@@ -17,7 +17,7 @@ session_start();
 
 
     <div class="w-1/2 mx-auto pt-20">
-        <h2 class="text-3xl text-center my-10">Welcome From Our System</h2>
+        <h2 class="text-3xl text-center my-10">Welcome beyond</h2>
         <form action="../Controller/loginController.php" method="post">
             <div class="mb-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
