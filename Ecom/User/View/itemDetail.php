@@ -6,6 +6,6 @@
     <title>ItemDetail</title>
 </head>
 <body>
-    <h1>what's up</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus quasi vitae est perspiciatis dolorem, ipsam accusamus sint cupiditate magnam nostrum dolores quia ab officiis qui perferendis voluptas eligendi inventore quibusdam.</p>
 </body>
 </html>
