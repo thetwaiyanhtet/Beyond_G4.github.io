@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <nav>
         <img src="../../image/logo.png" alt="..." class="w-16 ml-5 mt-3">
     </nav>
@@ -45,6 +46,9 @@
     </header>
 
 
+=======
+    <h1>Hello World</h1>
+>>>>>>> origin/kyawswar
 </body>
 
 </html>
