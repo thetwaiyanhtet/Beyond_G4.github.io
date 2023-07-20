@@ -558,6 +558,14 @@ video {
   right: 300px;
 }
 
+.bottom-32 {
+  bottom: 8rem;
+}
+
+.right-\[270px\] {
+  right: 270px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -835,6 +843,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-tl {

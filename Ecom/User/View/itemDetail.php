@@ -10,16 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<body>
-<<<<<<< HEAD
-=======
-<body class="bg-indigo-300">
->>>>>>> e6ca24cdb2daafa4598615f64f4c4a46c4a1dead
-=======
 <body class="bg-my-purple1 font-serif">
->>>>>>> 51034aad9807bae2510eb5d41731d266964abca8
     <nav>
         <img src="./resources/img/logo.png" alt="..." class="w-16 ml-5 mt-3">
     </nav>
@@ -76,9 +67,6 @@
     </div>
 
 
-=======
-    <h1>Hello World</h1>
->>>>>>> origin/kyawswar
 </body>
 
 </html>
