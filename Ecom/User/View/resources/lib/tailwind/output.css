@@ -707,29 +707,13 @@ video {
   background-color: rgb(167 139 250 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
-<<<<<<< Updated upstream
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-tl {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
-=======
-.bg-slate-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
->>>>>>> Stashed changes
 }
 
 .from-purple-400 {
@@ -755,19 +739,24 @@ video {
   font-family: Philosopher, sans-serif;
 }
 
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
-<<<<<<< Updated upstream
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
-=======
->>>>>>> Stashed changes
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -776,7 +765,6 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
-<<<<<<< Updated upstream
 }
 
 .text-9xl {
@@ -786,20 +774,14 @@ video {
 
 .font-bold {
   font-weight: 700;
-=======
->>>>>>> Stashed changes
 }
 
 .font-semibold {
   font-weight: 600;
-<<<<<<< Updated upstream
 }
 
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-=======
->>>>>>> Stashed changes
+.font-extrabold {
+  font-weight: 800;
 }
 
 .text-white {
