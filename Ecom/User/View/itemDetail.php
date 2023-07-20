@@ -49,7 +49,7 @@
                 <div class="flex space-x-16">
                     <h3>Size</h3>
                     <ul class="flex space-x-2">
-                        <li>XS</li>
+                        <li class=" text-red-700">XS</li>
                         <li>S</li>
                         <li>M</li>
                         <li>L</li>
