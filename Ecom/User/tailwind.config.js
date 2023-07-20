@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./View/*.{html,js,php}"],
   theme: {
-    extend: {}
+    extend: {
+      colors:{
+        'my-purple1' : '#a78bfa',
+        'my-purple2' : '#8b5cf6'
+      },
+    },
   },
   plugins: []
 };
