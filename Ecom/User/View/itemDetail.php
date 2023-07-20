@@ -66,82 +66,83 @@
         <div class=" absolute right-[300px] bottom-28 col-start-5 ml-36 w-14 h-14 bg-white rounded-lg flex justify-center items-center"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
     </div>
 
-    <main class=" mt-20 min-h-screen flex-col justify-center items-center">
-        <div class="flex justify-center items-center flex-col space-y-3">
-            <p class=" text-3xl">Overall Rating</p>
-            <h1>4.0</h1>
-            <div class="flex">
-                <img src="./resources/img/star.svg" alt="..." width="50px">
-                <img src="./resources/img/star.svg" alt="..." width="50px">
-                <img src="./resources/img/star.svg" alt="..." width="50px">
-                <img src="./resources/img/star.svg" alt="..." width="50px">
-                <img src="./resources/img/star.svg" alt="..." width="50px">
+    <main class="flex justify-center ">
+        <div class=" mt-20 min-h-screen flex-col justify-center items-center border w-[950px] shadow-xl  rounded-xl bg-slate-200">
+            <div class="flex justify-center items-center flex-col space-y-3">
+                <p class=" text-3xl">Overall Rating</p>
+                <h1>4.0</h1>
+                <div class="flex">
+                    <img src="./resources/img/star.svg" alt="..." width="50px">
+                    <img src="./resources/img/star.svg" alt="..." width="50px">
+                    <img src="./resources/img/star.svg" alt="..." width="50px">
+                    <img src="./resources/img/star.svg" alt="..." width="50px">
+                    <img src="./resources/img/star.svg" alt="..." width="50px">
+                </div>
+                <p class="">Based on 23 Reviews</p>
             </div>
-            <p class="">Based on 23 Reviews</p>
-        </div>
 
-        <div class=" w-full flex items-center justify-center">
-            <div class=" flex justify-around items-center flex-wrap w-[900px] border">
-                <div class=" flex justify-center items-center w-[400px] h-[250px] bg-teal-300 mt-5">
-                    <img src="./resources/img/profile.png" alt="..." width="50px">
-                    <div>
-                        <h2>Ruby Jane</h2>
-                        <div class=" flex">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
+            <div class=" w-full flex items-center justify-center">
+                <div class=" flex justify-around items-center flex-wrap w-[840px]">
+                    <div class="reviewCard">
+                        <img src="./resources/img/profile.png" alt="..." width="50px">
+                        <div>
+                            <h2>Ruby Jane</h2>
+                            <div class=" flex">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                     </div>
-                </div>
-                <div class=" flex justify-center items-center w-[400px] h-[250px] bg-teal-300 mt-5 p-5">
-                    <img src="./resources/img/profile.png" alt="..." width="50px">
-                    <div>
-                        <h2>Ruby Jane</h2>
-                        <div class=" flex">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
+                    <div class="reviewCard">
+                        <img src="./resources/img/profile.png" alt="..." width="50px">
+                        <div>
+                            <h2>Ruby Jane</h2>
+                            <div class=" flex">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                     </div>
-                </div>
-                <div class=" flex justify-center items-center w-[400px] h-[250px] bg-teal-300 mt-5">
-                    <img src="./resources/img/profile.png" alt="..." width="50px">
-                    <div>
-                        <h2>Ruby Jane</h2>
-                        <div class=" flex">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
+                    <div class="reviewCard">
+                        <img src="./resources/img/profile.png" alt="..." width="50px">
+                        <div>
+                            <h2>Ruby Jane</h2>
+                            <div class=" flex">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                     </div>
-                </div>
-                <div class=" flex justify-center items-center w-[400px] h-[250px] bg-teal-300 mt-5">
-                    <img src="./resources/img/profile.png" alt="..." width="50px">
-                    <div>
-                        <h2>Ruby Jane</h2>
-                        <div class=" flex">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
-                            <img src="./resources/img/star.svg" alt="..." width="15px">
+                    <div class="reviewCard">
+                        <img src="./resources/img/profile.png" alt="..." width="50px">
+                        <div>
+                            <h2>Ruby Jane</h2>
+                            <div class=" flex">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                                <img src="./resources/img/star.svg" alt="..." width="15px">
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-<div></div>
 
 </body>
 
