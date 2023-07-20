@@ -14,8 +14,8 @@
 </head>
 
 <body class="bg-white lg:bg-[#DDD4FF] relative overflow-hidden">
-  <section class="lg:absolute lg:top-[21px] lg:left-[35px] flex justify-between items-center">
-    <img class="w-32 ml-5 mt-5 lg:w-36" src="../View/resources/img/logo.png" />
+  <section class="lg:absolute lg:top-[15px] lg:left-[35px] flex justify-between items-center">
+    <img class="w-32 ml-5 mt-5 lg:w-24" src="../View/resources/img/logo.png" />
     <span><ion-icon class="w-36 h-20 lg:hidden" name="menu-outline"></ion-icon></span>
   </section>
   <section class="hidden lg:block">
