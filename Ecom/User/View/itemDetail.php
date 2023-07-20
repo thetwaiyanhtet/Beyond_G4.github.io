@@ -8,38 +8,57 @@
     <link rel="stylesheet" href="../dist/output.css">
 </head>
 
+<<<<<<< HEAD
 <body>
 <<<<<<< HEAD
+=======
+<body class="bg-indigo-300">
+>>>>>>> e6ca24cdb2daafa4598615f64f4c4a46c4a1dead
     <nav>
         <img src="../../image/logo.png" alt="..." class="w-16 ml-5 mt-3">
     </nav>
     <header class="grid grid-cols-2 justify-items-center">
-        <div class="flex-column ">
+        <div class="flex-column bg-slate-200 w-96 rounded-tl-xl rounded-bl-xl space-y-3">
             <div>
                 <img src="../images/image 1.png" alt="...">
             </div>
-            <div class="flex">
+            <div class="flex items-center justify-center space-x-3">
                 <img src="../images/image 2.png" alt="...">
                 <img src="../images/image 3.png" alt="...">
             </div>
         </div>
-        <div>
-            <h2 class="text-4xl">Wide-leg Pants</h2>
+        <div class="w-[500px] bg-slate-200 rounded-xl grid">
+            <h2 class="text-4xl ">Wide-leg Pants</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
                 illo provident a exercitationem sunt.
             </p>
             <h3>H&M</h3>
             <h1>$749</h1>
-            <div>
-                <span class="w-5 bg-black text-white">a</span>
-                <span class="w-5 bg-black">a</span>
-                <span class="w-5 bg-black">a</span>
-                <span class="w-5 bg-black">a</span>
-                <span class="w-5 bg-black">a</span>
+            <div class="flex space-x-3">
+                <div class="w-5 h-5 bg-black text-white">a</div>
+                <div class="w-5 h-5 bg-black">a</div>
+                <div class="w-5 h-5 bg-black">a</div>
+                <div class="w-5 h-5 bg-black">a</div>
+                <div class="w-5 h-5 bg-black">a</div>
+            </div>
+            <div class="flex space-x-7">
+                <h3>Quantity</h3>
+                <input type="number" class="border w-20 h-6">
+            </div>
+            <div class="flex space-x-16">
+                <h3>Size</h3>
+                <ul class="flex space-x-2">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                </ul>
             </div>
             <div>
-                Quantity <input type="number">
+                <button class="p-3 bg">Add To Cart</button>
+                <button class="p-3">Add To Wishlist</button>
             </div>
 
         </div>
