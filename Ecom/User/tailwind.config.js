@@ -9,6 +9,7 @@ module.exports = {
       },
       fontFamily:{
         'philosopher' : ['Philosopher', 'sans-serif'],
+        'poppins':['Poppins', 'sans-serif'],
       },
     },
   },
