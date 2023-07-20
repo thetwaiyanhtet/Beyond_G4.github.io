@@ -13,7 +13,7 @@
 <body class="mt-3 font-Philosopher overflow-hidden">
  <section class=" flex items-center justify-between mx-[5%]">
 <span class="flex items-center  mb-[1%]">
-    <img class="w-16" src="../image/logo.png" alt="">
+    <img class="w-16" src="./resources/img/logo.png" alt="">
     <p class="text-3xl ml-[1%] max-md:text-2xl font-philosopher ">Beyond</p>
 </span>
   <span >
