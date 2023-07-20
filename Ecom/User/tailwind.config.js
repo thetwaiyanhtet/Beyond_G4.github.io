@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors:{
         'my-purple1' : '#a78bfa',
-        'my-purple2' : '#8b5cf6'
+        'my-purple2' : '#8b5cf6',
+        'green'      : '#48BB78',
       },
       fontFamily:{
         'philosopher' : ['Philosopher', 'sans-serif'],
