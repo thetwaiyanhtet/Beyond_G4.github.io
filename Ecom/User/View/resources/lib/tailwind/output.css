@@ -522,6 +522,22 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-36 {
+  bottom: 9rem;
+}
+
+.left-14 {
+  left: 3.5rem;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -530,8 +546,25 @@ video {
   grid-column-start: 2;
 }
 
+.float-right {
+  float: right;
+}
+
+.mx-\[5\%\] {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.mb-\[1\%\] {
+  margin-bottom: 1%;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
+}
+
+.ml-\[1\%\] {
+  margin-left: 1%;
 }
 
 .mt-3 {
@@ -554,6 +587,10 @@ video {
   height: 1.5rem;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -574,8 +611,20 @@ video {
   width: 500px;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -584,6 +633,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .justify-items-center {
@@ -620,12 +673,20 @@ video {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
 .rounded-bl-xl {
   border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-tl-\[5\%\] {
+  border-top-left-radius: 5%;
 }
 
 .rounded-tl-xl {
@@ -641,9 +702,9 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-300 {
+.bg-my-purple1 {
   --tw-bg-opacity: 1;
-  background-color: rgb(165 180 252 / var(--tw-bg-opacity));
+  background-color: rgb(167 139 250 / var(--tw-bg-opacity));
 }
 
 .bg-slate-200 {
@@ -651,18 +712,39 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
-.bg-slate-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+.bg-gradient-to-tl {
+  background-image: linear-gradient(to top left, var(--tw-gradient-stops));
 }
 
-.bg-my-purple1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(167 139 250 / var(--tw-bg-opacity));
+.from-purple-400 {
+  --tw-gradient-from: #c084fc var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(192 132 252 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.p-3 {
-  padding: 0.75rem;
+.via-purple-400 {
+  --tw-gradient-to: rgb(192 132 252 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #c084fc var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-purple-500 {
+  --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.font-philosopher {
+  font-family: Philosopher, sans-serif;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .text-3xl {
@@ -670,9 +752,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl {
@@ -680,8 +762,26 @@ video {
   line-height: 1;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .text-white {
@@ -691,4 +791,38 @@ video {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+@media not all and (min-width: 768px) {
+  .max-md\:bottom-24 {
+    bottom: 6rem;
+  }
+
+  .max-md\:left-8 {
+    left: 2rem;
+  }
+
+  .max-md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .max-md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .max-md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }

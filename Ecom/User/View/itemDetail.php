@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
 </head>
 
-<body class="bg-my-purple1">
+<body class="bg-my-purple1 font-philosopher">
     <nav>
         <img src="../../image/logo.png" alt="..." class="w-16 ml-5 mt-3">
     </nav>
@@ -52,8 +52,8 @@
                 </ul>
             </div>
             <div>
-                <button class="p-3 bg">Add To Cart</button>
-                <button class="p-3">Add To Wishlist</button>
+                <button class="btn">Add To Cart</button>
+                <button class="btn">Add To Wishlist</button>
             </div>
 
         </div>
