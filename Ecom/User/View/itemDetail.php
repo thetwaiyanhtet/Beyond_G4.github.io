@@ -23,8 +23,8 @@
     <nav>
         <img src="./resources/img/logo.png" alt="..." class="w-16 ml-5 mt-3">
     </nav>
-    <header class=" flex justify-evenly items-center">
-        <div class="flex-column bg-slate-200 rounded-tl-xl rounded-bl-xl space-y-3 m-16">
+    <header class="  justify-evenly items-center grid grid-cols-3 relative">
+        <div class=" bg-slate-200 rounded-tl-xl rounded-bl-xl space-y-3 m-16 absolute left-60 z-50">
             <div>
                 <img src="./resources/img/image 1.png" alt="...">
             </div>
@@ -33,13 +33,15 @@
                 <img src="./resources/img/image 3.png" alt="...">
             </div>
         </div>
-        <div class="w-[500px] bg-slate-200 rounded-xl p-10 flex-col space-y-5">
+        <div class="w-[600px] bg-slate-200 rounded-xl p-10 ml-20 flex-col space-y-5 col-start-2 col-span-2">
             <h2 class="text-4xl font-semibold">Wide-leg Pants</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
                 illo provident a exercitationem sunt.
             </p>
-            <h3 class="flex justify-start items-center gap-2"> <div class=" w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center">H</div> H&M</h3>
+            <h3 class="flex justify-start items-center gap-2">
+                <div class=" w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center">H</div> H&M
+            </h3>
             <h1>$749</h1>
             <div class="flex space-x-3">
                 <div class="w-5 h-5 bg-black text-white"></div>
@@ -63,14 +65,14 @@
                 </ul>
             </div>
             <div>
-                <button class="btn">Add To Cart</button>
+                <button class="btn mr-3">Add To Cart</button>
                 <button class="btn">Add To Wishlist</button>
             </div>
         </div>
     </header>
     <div class="grid grid-cols-6">
-        <div class=" col-start-1 text-end"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
-        <div class=" col-start-6 ml-10"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
+        <div class=" absolute bottom-[115px] left-64 col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
+        <div class=" absolute right-[300px] bottom-28 col-start-5 ml-36 w-14 h-14 bg-white rounded-lg flex justify-center items-center"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
     </div>
 
 
