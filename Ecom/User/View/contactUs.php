@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
 </head>
 <body>
-    <h1>hello</h1>
+    <h1 class=" text-4xl">hello</h1>
 </body>
 </html>
