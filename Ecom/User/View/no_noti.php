@@ -30,6 +30,5 @@
   </section>
   <ion-icon  class="text-5xl absolute left-14 bottom-36 cursor-pointer max-md:text-3xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>
 </section>
-
 </body>
 </html>
