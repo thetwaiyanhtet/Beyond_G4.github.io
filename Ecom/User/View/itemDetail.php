@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
 </head>
 
-<body class="bg-indigo-300">
+<body class="bg-my-purple1">
     <nav>
         <img src="../../image/logo.png" alt="..." class="w-16 ml-5 mt-3">
     </nav>
     <header class="grid grid-cols-3 justify-items-center">
-        <div class="flex-column bg-slate-600 w-96 rounded-tl-xl rounded-bl-xl space-y-3">
+        <div class="flex-column bg-slate-200 w-96 rounded-tl-xl rounded-bl-xl space-y-3">
             <div>
                 <img src="./resources/img/image 1.png" alt="...">
             </div>
