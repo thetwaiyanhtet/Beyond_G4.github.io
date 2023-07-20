@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn{
+    @apply text-red-700 rounded-lg p-3 bg-slate-400;
+}
