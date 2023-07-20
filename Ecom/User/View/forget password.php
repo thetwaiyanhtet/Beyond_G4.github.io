@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
 </head>
 <body>
-    <img src="./resources/img/logo.png" alt="" class="w-5">
     <p class="text-center">Forgot Password </p>
+    <img src="./resources/img/forget.png" alt="" srcset="">
 </body>
 </html>
