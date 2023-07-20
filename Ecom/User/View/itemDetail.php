@@ -39,7 +39,7 @@
                 <div class="w-5 h-5 bg-stone-600"></div>
                 <div class="w-5 h-5 bg-red-600"></div>
                 <div class="w-5 h-5 bg-blue-800"></div>
-                <div class="w-5 h-5 bg-green-500"></div>
+                <div class="w-5 h-5 bg-green"></div>
             </div>
             <div class="flex space-x-7">
                 <h3>Quantity</h3>
