@@ -7,6 +7,9 @@ module.exports = {
         'my-purple1' : '#a78bfa',
         'my-purple2' : '#8b5cf6'
       },
+      fontFamily:{
+        'philosopher' : ['Philosopher', 'sans-serif'],
+      },
     },
   },
   plugins: []
