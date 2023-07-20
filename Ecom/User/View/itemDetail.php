@@ -15,11 +15,11 @@
     <header class="grid grid-cols-3 justify-items-center">
         <div class="flex-column bg-slate-600 w-96 rounded-tl-xl rounded-bl-xl space-y-3">
             <div>
-                <img src="../images/image 1.png" alt="...">
+                <img src="./resources/img/image 1.png" alt="...">
             </div>
             <div class="flex items-center justify-center space-x-3">
-                <img src="../images/image 2.png" alt="...">
-                <img src="../images/image 3.png" alt="...">
+                <img src="./resources/img/image 2.png" alt="...">
+                <img src="./resources/img/image 3.png" alt="...">
             </div>
         </div>
         <div class="w-[500px] bg-slate-200 rounded-xl grid col-start-2 col-span-2">
