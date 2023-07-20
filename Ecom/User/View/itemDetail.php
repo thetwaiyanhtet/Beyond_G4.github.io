@@ -10,13 +10,13 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body class="bg-my-purple1 font-serif">
+<body class=" bg-violet-200 font-serif">
     <div>
         <nav>
             <img src="./resources/img/logo.png" alt="..." class="w-16 ml-5 mt-3">
         </nav>
-        <header class="  justify-evenly items-center grid grid-cols-3 relative">
-            <div class=" bg-slate-100 rounded-tl-xl rounded-bl-xl space-y-3 m-16 absolute left-[210px] shadow-2xl w-96 ">
+        <header class=" justify-evenly items-center grid grid-cols-3 relative">
+            <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 m-16 absolute left-[210px] shadow-2xl w-[350px] ">
                 <div>
                     <img src="./resources/img/image 1.png" alt="...">
                 </div>
@@ -25,7 +25,7 @@
                     <img src="./resources/img/image 3.png" alt="...">
                 </div>
             </div>
-            <div class="w-[600px] bg-slate-100 rounded-xl p-10 ml-20 flex-col space-y-5 col-start-2 col-span-2 shadow-2xl z-50">
+            <div class=" border w-[600px] h-[530px] bg-transparent rounded-xl p-20 ml-20 flex-col space-y-5 col-start-2 col-span-2 shadow-2xl z-50">
                 <h2 class="text-4xl font-semibold">Wide-leg Pants</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
@@ -63,14 +63,14 @@
             </div>
         </header>
         <div class="grid grid-cols-6">
-            <div class=" absolute bottom-[115px] left-64 col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
+            <div class=" absolute bottom-[90px] left-[220px] col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
             <div class=" fixed right-[50px] bottom-10 col-start-5 ml-36 w-14 h-14 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
         </div>
 
         <main class="flex justify-center">
-            <div class=" h-[800px] mt-20 min-h-screen flex-col justify-center items-center border w-[950px] shadow-xl  rounded-xl bg-slate-200">
+            <div class=" h-[800px] mt-20 min-h-screen flex-col justify-center items-center border-2 w-[950px] shadow-xl  rounded-xl bg-transparent">
                 <div class="flex justify-center items-center flex-col space-y-3">
-                    <p class=" text-3xl">Overall Rating</p>
+                    <p class=" text-3xl mt-3">Overall Rating</p>
                     <h1>4.0</h1>
                     <div class="flex">
                         <img src="./resources/img/star.svg" alt="..." width="50px">
