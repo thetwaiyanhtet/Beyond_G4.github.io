@@ -8,6 +8,12 @@
 </head>
 <body>
     <p class="text-center">Forgot Password </p>
-    <img src="./resources/img/forget.png" alt="" srcset="">
+    <img src="./resources/img/forget.png" alt="forget" class="m-auto">
+    <p class="text-center">Please Enter Your Email Address To <br>
+ Receive a Verification Card </p>
+ <form action="">
+    <label for="email">Email</label><br>
+ </form>
+ 
 </body>
 </html>
