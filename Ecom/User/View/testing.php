@@ -9,6 +9,6 @@
   </head>
 
   <body>
-    <h1 class="">Hello World</h1>
+    <h1 class="underline text-3xl">Hello World</h1>
   </body>
 </html>
