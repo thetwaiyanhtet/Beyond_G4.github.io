@@ -44,7 +44,7 @@
                 </div>
                 <div class="flex space-x-7">
                     <h3>Quantity</h3>
-                    <input type="number" class="border w-20 h-6 indent-12 shadow-xl" value="1">
+                    <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1">
                 </div>
                 <div class="flex space-x-16">
                     <h3>Size</h3>
