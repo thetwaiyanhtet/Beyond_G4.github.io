@@ -1775,6 +1775,10 @@ video {
     margin-top: 2.5rem;
   }
 
+  .lg\:mt-9 {
+    margin-top: 2.25rem;
+  }
+
   .lg\:block {
     display: block;
   }
