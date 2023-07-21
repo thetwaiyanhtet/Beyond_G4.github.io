@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +9,13 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body class=" bg-violet-200 font-serif">
-    <div>
+<body class=" bg-violet-200 font-serif w-full">
+    <div class=" w-full">
         <nav>
             <img src="./resources/img/logo.png" alt="..." class="w-16 ml-5 mt-3">
         </nav>
-        <header class=" justify-evenly items-center grid grid-cols-3 relative">
-            <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 m-16 absolute left-[210px] shadow-2xl w-[350px] ">
+        <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
+            <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl w-[350px] ">
                 <div>
                     <img src="./resources/img/image 1.png" alt="...">
                 </div>
@@ -25,8 +24,8 @@
                     <img src="./resources/img/image 3.png" alt="...">
                 </div>
             </div>
-            <div class=" border w-[600px] h-[530px] bg-transparent rounded-xl p-20 ml-20 flex-col space-y-5 col-start-2 col-span-2 shadow-2xl z-50">
-                <h2 class="text-4xl font-semibold">Wide-leg Pants</h2>
+            <div class=" border lg:w-[600px] w-4/6 lg:h-[530px] h-[265px] bg-transparent rounded-xl p-20 ml-20 flex-col space-y-5 col-start-2 col-span-2 shadow-2xl z-50">
+                <h2 class="lg:text-4xl font-semibold">Wide-leg Pants</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
                     illo provident a exercitationem sunt.
