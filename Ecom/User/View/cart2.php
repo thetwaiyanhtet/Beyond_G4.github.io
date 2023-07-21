@@ -80,7 +80,7 @@
         <p class=" font-philosopher text-3xl max-lg:ml-5">Shopping Bag</p>
         <div class="flex items-center justify-around ">
             <div class=" relative mt-8 ">
-                <img class="w-40" src="./resources/img/cart shopping.png" alt="">
+                <img class=" max-lg:w-40" src="./resources/img/cart shopping.png" alt="">
                 <ion-icon  class="absolute top-0 right-0 text-3xl cursor-pointer bg-pink-300 rounded-3xl" name="close-outline"></ion-icon>
             </div>
             <div class="flex flex-col items-center font-philosopher">
@@ -111,7 +111,7 @@
            
         </div>
         <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <button class=" py-1 px-5 rounded-md bg-green" >Next Step></button>
+                <button class=" text-white py-1 px-5 rounded-md bg-button-color" >Next Step></button>
             </div>
     </div>
 
