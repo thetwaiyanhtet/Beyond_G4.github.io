@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,12 @@
 </head>
 
 <body class=" bg-violet-200 font-serif w-full">
-    <div class=" w-full">
+    <div>
         <nav>
             <img src="./resources/img/logo.png" alt="..." class="w-16 ml-5 mt-3">
         </nav>
         <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
-            <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl w-[350px] ">
+            <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
                 <div>
                     <img src="./resources/img/image 1.png" alt="...">
                 </div>
@@ -24,14 +25,14 @@
                     <img src="./resources/img/image 3.png" alt="...">
                 </div>
             </div>
-            <div class=" border lg:w-[600px] w-4/6 lg:h-[530px] h-[265px] bg-transparent rounded-xl p-20 ml-20 flex-col space-y-5 col-start-2 col-span-2 shadow-2xl z-50">
-                <h2 class="lg:text-4xl font-semibold">Wide-leg Pants</h2>
-                <p>
+            <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[370px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
+                <h2 class="lg:text-4xl text-2xl font-semibold">Wide-leg Pants</h2>
+                <p class=" lg:text-base text-xs">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
                     illo provident a exercitationem sunt.
                 </p>
                 <h3 class="flex justify-start items-center gap-2">
-                    <div class=" w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center">H</div> H&M
+                    <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center">H</div> H&M
                 </h3>
                 <h1>$749</h1>
                 <div class="flex space-x-3">
@@ -67,27 +68,27 @@
         </div>
 
         <main class="flex justify-center">
-            <div class=" h-[800px] mt-20 min-h-screen flex-col justify-center items-center border-2 w-[950px] shadow-xl  rounded-xl bg-transparent">
+            <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
                 <div class="flex justify-center items-center flex-col space-y-3">
-                    <p class=" text-3xl mt-3">Overall Rating</p>
+                    <p class=" lg:text-3xl text-lg mt-3">Overall Rating</p>
                     <h1>4.0</h1>
                     <div class="flex">
-                        <img src="./resources/img/star.svg" alt="..." width="50px">
-                        <img src="./resources/img/star.svg" alt="..." width="50px">
-                        <img src="./resources/img/star.svg" alt="..." width="50px">
-                        <img src="./resources/img/star.svg" alt="..." width="50px">
-                        <img src="./resources/img/star.svg" alt="..." width="50px">
+                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
+                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
+                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
+                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
+                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
                     </div>
                     <p class="">Based on 23 Reviews</p>
                 </div>
 
-                <div class=" w-full flex items-center justify-center">
-                    <div class=" flex justify-around items-center flex-wrap w-[840px]">
+                <div class=" w-full lg:flex-col lg:text-base text-sm">
+                    <div class=" lg:flex justify-evenly items-center">
                         <div class="reviewCard ">
                             <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." width="70px" class=" mr-10">
+                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
                                 <div class="">
-                                    <h2 class=" font-semibold text-xl">Ruby Jane</h2>
+                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
                                     <div class=" flex space-x-2">
                                         <img src="./resources/img/star.svg" alt="..." width="15px">
                                         <img src="./resources/img/star.svg" alt="..." width="15px">
@@ -101,9 +102,27 @@
                         </div>
                         <div class="reviewCard">
                             <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." width="70px" class=" mr-10">
+                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
                                 <div>
-                                    <h2 class=" font-semibold text-xl">Ruby Jane</h2>
+                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
+                                    <div class=" flex space-x-2">
+                                        <img src="./resources/img/star.svg" alt="..." width="15px">
+                                        <img src="./resources/img/star.svg" alt="..." width="15px">
+                                        <img src="./resources/img/star.svg" alt="..." width="15px">
+                                        <img src="./resources/img/star.svg" alt="..." width="15px">
+                                        <img src="./resources/img/star.svg" alt="..." width="15px">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
+                        </div>
+                    </div>
+                    <div class=" lg:flex justify-evenly items-center">
+                        <div class="reviewCard">
+                            <div class="flex">
+                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
+                                <div>
+                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
                                     <div class=" flex space-x-2">
                                         <img src="./resources/img/star.svg" alt="..." width="15px">
                                         <img src="./resources/img/star.svg" alt="..." width="15px">
@@ -117,25 +136,9 @@
                         </div>
                         <div class="reviewCard">
                             <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." width="70px" class=" mr-10">
+                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
                                 <div>
-                                    <h2 class=" font-semibold text-xl">Ruby Jane</h2>
-                                    <div class=" flex space-x-2">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
-                        </div>
-                        <div class="reviewCard">
-                            <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." width="70px" class=" mr-10">
-                                <div>
-                                    <h2 class=" font-semibold text-xl">Ruby Jane</h2>
+                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
                                     <div class=" flex space-x-2">
                                         <img src="./resources/img/star.svg" alt="..." width="15px">
                                         <img src="./resources/img/star.svg" alt="..." width="15px">

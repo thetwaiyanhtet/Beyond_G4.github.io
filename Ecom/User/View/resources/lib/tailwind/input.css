@@ -6,5 +6,5 @@
     @apply text-red-700 rounded-lg p-3 bg-white shadow-xl;
 }
 .reviewCard{
-    @apply flex justify-center items-center flex-wrap w-[400px] h-[250px] bg-white mt-5 rounded-sm shadow-2xl p-5;
+    @apply flex justify-center items-center flex-wrap lg:w-[400px] lg:h-[250px] w-[300px] h-[190px] bg-white mt-5 rounded-sm shadow-2xl p-5;
 }
