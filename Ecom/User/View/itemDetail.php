@@ -15,7 +15,7 @@
         <nav>
             <img src="./resources/img/logo.png" alt="..." class="w-16 ml-5 mt-3">
         </nav>
-        <header class=" justify-evenly items-center grid grid-cols-3 relative md:flex md:flex-wrap">
+        <header class=" justify-evenly items-center grid grid-cols-3 relative">
             <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 m-16 absolute left-[210px] shadow-2xl w-[350px] ">
                 <div>
                     <img src="./resources/img/image 1.png" alt="...">
