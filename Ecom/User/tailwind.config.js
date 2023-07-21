@@ -7,6 +7,7 @@ module.exports = {
         'my-purple1' : '#a78bfa',
         'my-purple2' : '#8b5cf6',
         'green'      : '#48BB78',
+        'button-color' : '#314755',
       },
       fontFamily:{
         'philosopher' : ['Philosopher', 'sans-serif'],
