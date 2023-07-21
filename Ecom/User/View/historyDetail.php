@@ -26,7 +26,7 @@
     <section class="relative">
         <section class="w-screen  h-screen rounded-tl-[50px] rounded-tr-[50px] 
               bg-gradient-to-tl from-[#d5a0e6] - to-[#9f80f4] min-h-screen flex items-center justify-center">
-            <div class="lg:w-[948px] h-[466px] lg:h-[400px] bg-[#ffffff41] mb-72 lg:mt-10 rounded-3xl shadow-inner  flex items-center lg:justify-evenly lg:flex-row flex-col ">
+            <div class="lg:w-[948px] h-[466px] lg:h-[400px] bg-[#ffffff41] mb-72 mt-14 lg:mt-10 rounded-3xl shadow-inner  flex items-center lg:justify-evenly lg:flex-row flex-col ">
                 <div class="pt-10 lg:pt-0">
                     <div class="w-[250px] h-[200px] lg:h-[248px] bg-[#fffbfb47] rounded-3xl flex items-center border ">
                         <img src="../View/resources/img/black girl blouse.png" alt="">
