@@ -111,7 +111,7 @@
 
             </div>
         </section>
-        <ion-icon class=" lg:text-6xl absolute left-[4%] top-[80%] lg:top-[75%] cursor-pointer max-md:text-6xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>
+        <ion-icon class=" lg:text-7xl absolute left-[4%] top-[80%] lg:top-[75%] cursor-pointer max-md:text-6xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>
     </section>
 
 </body>
