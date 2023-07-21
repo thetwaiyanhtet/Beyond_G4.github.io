@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <title>cart</title>
+    <title>Delivery</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                                 <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm ">Cart</p>
                             </div>
                         </div>
-                        <div class="w-1/3 bg-gray-200 h-3 flex items-center relative">
+                        <div class="w-1/3 bg-button-color h-3 flex items-center relative">
                             <div class="absolute right-0 -mr-2">
                                 <div class="relative px-2 py-1 rounded mt-20 -mr-12">
                                     <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm">Delivery</p>
@@ -76,43 +76,60 @@
         </div>
 
     </div>
-    <div class=" relative mt-10 mx-auto container">
-        <p class=" font-philosopher text-3xl max-lg:ml-5">Shopping Bag</p>
-        <div class="flex items-center justify-around ">
-            <div class=" relative mt-8 ">
-                <img class=" max-lg:w-40" src="./resources/img/cart shopping.png" alt="">
-                <ion-icon  class="absolute top-0 right-0 text-3xl cursor-pointer bg-pink-300 rounded-3xl" name="close-outline"></ion-icon>
-            </div>
-            <div class="flex flex-col items-center font-philosopher">
-                <p >1 items</p>
-                <div class="flex mt-10  justify-center align-middle justify-items-center">
-                    <div class="mr-10 ">
-                        <p class="mb-5">Size</p>
-                        <p class="mb-5">Color</p>
-                        <p class="mb-5">Amount</p>
-                        <p class="mb-5">Price</p>
-                        <p class="mb-5">Total Price</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <p class="mb-5">M</p>
-                        <p class="mb-5">Natural</p>
-                        <div  class="w-16 h-8 flex justify-center items-center">
-                        <ion-icon class="bg-gray-200  cursor-pointer"  name="remove-outline"></ion-icon>
-                        <p class=" px-2">2</p>
-                        <ion-icon class="bg-gray-200 cursor-pointer " name="add-outline"></ion-icon>
-                        </div>
-                        <p class="mb-5 mt-5">$250</p>
-                        <p class="mb-5">$250</p>
-                    </div>
-
+    <div class=" font-poppins relative mt-10 mx-auto container">
+        <div class="flex justify-around">
+            <div class="w-2/4 h-80 max-lg:h-72 bg-gray-200 p-5 rounded-lg shadow-md">
+                <p class=" font-bold text-center ">Select Your Delivery Method</p>
+                <div class="mt-5 font-semibold max-lg:text-sm">
+                    <label class="flex items-center space-x-2 mb-5">
+                        <input type="radio" name="deli" class="form-checkbox w-6 h-6  ">
+                        <span>Royal Express</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mb-5">
+                        <input type="radio" name="deli" class="form-checkbox w-6 h-6 ">
+                        <span>Bee Express</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mb-5">
+                        <input type="radio" name="deli" class="form-checkbox w-6 h-6">
+                        <span>Jack Express</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mb-5">
+                        <input type="radio" name="deli" class="form-checkbox w-6 h-6">
+                        <span>Hello Express</span>
+                    </label>
 
                 </div>
             </div>
+            <div class="flex flex-col  font-poppins">
+                <p class=" text-3xl text-center max-lg:text-xl font-bold">Your order</p>
+                <div class="flex mt-10 border-b-4 border-button-color  justify-center align-middle justify-items-center">
+                    <div class="mr-10 text-xl max-lg:text-sm font-semibold">
+                        <p class="mb-5">Subtotal</p>
+                        <p class="mb-5 ">Delivery Fee</p>
+                       
+                    </div>
+                    <div class="flex flex-col max-lg:text-base items-end text-xl font-semibold">
+                        <p class="mb-5">$250</p>
+                        <p class="mb-5">$10</p>
+                       
+                    </div>
+                </div>
+                <div class="flex mt-5 max-lg:text-sm justify-between text-xl font-semibold">
+                    <div>
+                    <p class="mb-5">Total Amount</p>
+                    </div>
+                    <div>
+                    <p class="mb-5">$260</p>
+                    </div>
+                </div>
+            
            
         </div>
         <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <button class=" text-white py-1 px-5 rounded-md bg-button-color" >Next Step></button>
+                <button class=" text-white py-1 px-5 rounded-md bg-button-color" >Next Step ></button>
             </div>
+        </div>
+        
     </div>
 
 </body>

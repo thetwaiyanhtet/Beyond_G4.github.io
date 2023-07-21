@@ -9,5 +9,5 @@
     @apply flex justify-center items-center flex-wrap lg:w-[400px] lg:h-[250px] w-[300px] h-[190px] bg-white mt-5 rounded-sm shadow-2xl p-5;
 }
 .settingBar{
-    @apply  flex justify-around items-center py-4 px-2 border bg-white rounded-xl shadow-lg;
+    @apply  w-[110px] lg:w-[293px] flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white rounded-xl shadow-lg;
 }
