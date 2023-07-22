@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class=" bg-violet-200 font-serif w-full">
+<body class=" bg-violet-200 font-poppins w-full">
     <div>
         <nav>
             <img src="./resources/img/logo.png" alt="..." class="w-16 ml-5 mt-3">
@@ -26,15 +30,15 @@
                 </div>
             </div>
             <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[370px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
-                <h2 class="lg:text-4xl text-2xl font-semibold">Wide-leg Pants</h2>
+                <h2 class="lg:text-4xl text-2xl font-semibold font-philosopher">Wide-leg Pants</h2>
                 <p class=" lg:text-base text-xs">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
                     illo provident a exercitationem sunt.
                 </p>
-                <h3 class="flex justify-start items-center gap-2">
-                    <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center">H</div> H&M
+                <h3 class="flex justify-start items-center gap-2 font-philosopher">
+                    <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center ">H</div> H&M
                 </h3>
-                <h1>$749</h1>
+                <h1 class=" font-philosopher">$749</h1>
                 <div class="flex space-x-3">
                     <div class="w-5 h-5 bg-black text-white"></div>
                     <div class="w-5 h-5 bg-stone-600"></div>
@@ -46,7 +50,7 @@
                     <h3>Quantity</h3>
                     <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1">
                 </div>
-                <div class="flex space-x-16">
+                <div class="flex space-x-16 font-philosopher">
                     <h3>Size</h3>
                     <ul class="flex space-x-2">
                         <li class=" text-red-700">XS</li>
@@ -79,7 +83,7 @@
                         <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
                         <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
                     </div>
-                    <p class="">Based on 23 Reviews</p>
+                    <p class=" font-philosopher">Based on 23 Reviews</p>
                 </div>
 
                 <div class=" w-full lg:flex-col lg:text-base text-sm">

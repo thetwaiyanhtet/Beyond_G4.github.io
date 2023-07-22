@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 .btn{
-    @apply text-red-700 rounded-lg p-3 bg-white shadow-xl;
+    @apply text-red-700 rounded-lg p-3 bg-white shadow-xl font-philosopher;
 }
 .reviewCard{
     @apply flex justify-center items-center flex-wrap lg:w-[400px] lg:h-[250px] w-[300px] h-[190px] bg-white mt-5 rounded-sm shadow-2xl p-5;
 }
 .settingBar{
     @apply  w-[110px] lg:w-[293px] flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white rounded-xl shadow-lg;
+}
+.inputBox{
+    @apply  font-semibold bg-white w-auto py-3 rounded-lg indent-4;
+}
+.addressCard{
+    @apply  flex justify-around items-center space-x-5 bg-white px-8 py-6 w-[600px] rounded-md;
 }
