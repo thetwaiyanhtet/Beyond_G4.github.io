@@ -14,3 +14,6 @@
 .inputBox{
     @apply  font-semibold bg-white w-auto py-3 rounded-lg indent-4;
 }
+.addressCard{
+    @apply  flex justify-around items-center space-x-5 bg-white px-8 py-6 w-[600px] rounded-md;
+}

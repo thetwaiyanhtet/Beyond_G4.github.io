@@ -34,7 +34,7 @@
                     <input type="text" placeholder="Phone" class=" inputBox">
                 </div>
                 <div class=" lg:flex justify-around items-center">
-                    <input type="text" placeholder="Building,Street etc.." class=" inputBox  w-24">
+                    <input type="text" placeholder="Building,Street etc.." class=" inputBox  w-[600px]">
                 </div>
                 <div class=" lg:flex lg:justify-around justify-center items-center lg:space-x-5 lg:space-y-0 space-y-3">
                     <input type="text" placeholder="City" class=" inputBox">
