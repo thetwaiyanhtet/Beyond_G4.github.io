@@ -12,5 +12,11 @@
     @apply  w-[110px] lg:w-[293px] flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white rounded-xl shadow-lg;
 }
 .inputBox{
-    @apply  font-semibold bg-white w-auto py-3 rounded-lg indent-4;
+    @apply  font-semibold bg-white py-3 rounded-lg indent-4 w-full;
+}
+.addressCard{
+    @apply  flex justify-around items-center space-x-5 bg-white px-8 py-6 w-[600px] rounded-md;
+}
+.profileInputBox{
+    @apply  indent-4 p-3 rounded-lg shadow-xl font-bold w-72;
 }

@@ -716,13 +716,10 @@ video {
   top: 24rem;
 }
 
-<<<<<<< Updated upstream
 .top-\[15\%\] {
   top: 15%;
 }
 
-=======
->>>>>>> Stashed changes
 .top-\[16\%\] {
   top: 16%;
 }
@@ -779,6 +776,14 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
 .col-start-2 {
   grid-column-start: 2;
 }
@@ -795,7 +800,6 @@ video {
   float: left;
 }
 
-<<<<<<< Updated upstream
 .m-10 {
   margin: 2.5rem;
 }
@@ -816,28 +820,6 @@ video {
   margin: 1.25rem;
 }
 
-=======
-.-m-1 {
-  margin: -0.25rem;
-}
-
-.m-10 {
-  margin: 2.5rem;
-}
-
-.m-2 {
-  margin: 0.5rem;
-}
-
-.m-4 {
-  margin: 1rem;
-}
-
-.m-5 {
-  margin: 1.25rem;
-}
-
->>>>>>> Stashed changes
 .m-auto {
   margin: auto;
 }
@@ -852,19 +834,16 @@ video {
   margin-right: 5rem;
 }
 
+.mx-28 {
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
 
-<<<<<<< Updated upstream
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-=======
->>>>>>> Stashed changes
 .mx-\[10\%\] {
   margin-left: 10%;
   margin-right: 10%;
@@ -1071,13 +1050,10 @@ video {
   margin-right: 2.5rem;
 }
 
-<<<<<<< Updated upstream
 .mr-2 {
   margin-right: 0.5rem;
 }
 
-=======
->>>>>>> Stashed changes
 .mr-28 {
   margin-right: 7rem;
 }
@@ -1090,13 +1066,10 @@ video {
   margin-right: 1rem;
 }
 
-<<<<<<< Updated upstream
 .mr-5 {
   margin-right: 1.25rem;
 }
 
-=======
->>>>>>> Stashed changes
 .mt-0 {
   margin-top: 0px;
 }
@@ -1209,13 +1182,10 @@ video {
   height: 0.75rem;
 }
 
-<<<<<<< Updated upstream
 .h-4 {
   height: 1rem;
 }
 
-=======
->>>>>>> Stashed changes
 .h-48 {
   height: 12rem;
 }
@@ -1228,24 +1198,18 @@ video {
   height: 1.5rem;
 }
 
-<<<<<<< Updated upstream
 .h-64 {
   height: 16rem;
 }
 
-=======
->>>>>>> Stashed changes
 .h-7 {
   height: 1.75rem;
 }
 
-<<<<<<< Updated upstream
 .h-72 {
   height: 18rem;
 }
 
-=======
->>>>>>> Stashed changes
 .h-8 {
   height: 2rem;
 }
@@ -1264,6 +1228,10 @@ video {
 
 .h-\[113px\] {
   height: 113px;
+}
+
+.h-\[145px\] {
+  height: 145px;
 }
 
 .h-\[16px\] {
@@ -1292,6 +1260,10 @@ video {
 
 .h-\[30px\] {
   height: 30px;
+}
+
+.h-\[31px\] {
+  height: 31px;
 }
 
 .h-\[32px\] {
@@ -1342,6 +1314,10 @@ video {
   height: 58px;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
@@ -1354,13 +1330,6 @@ video {
   min-height: 100vh;
 }
 
-<<<<<<< Updated upstream
-=======
-.w-1 {
-  width: 0.25rem;
-}
-
->>>>>>> Stashed changes
 .w-1\/2 {
   width: 50%;
 }
@@ -1425,13 +1394,10 @@ video {
   width: 9rem;
 }
 
-<<<<<<< Updated upstream
 .w-4 {
   width: 1rem;
 }
 
-=======
->>>>>>> Stashed changes
 .w-4\/5 {
   width: 80%;
 }
@@ -1478,6 +1444,14 @@ video {
 
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-\[120px\] {
+  width: 120px;
+}
+
+.w-\[121px\] {
+  width: 121px;
 }
 
 .w-\[136px\] {
@@ -1556,8 +1530,24 @@ video {
   width: 401px;
 }
 
+.w-\[40px\] {
+  width: 40px;
+}
+
 .w-\[57px\] {
   width: 57px;
+}
+
+.w-\[600px\] {
+  width: 600px;
+}
+
+.w-\[700px\] {
+  width: 700px;
+}
+
+.w-\[70px\] {
+  width: 70px;
 }
 
 .w-\[80\%\] {
@@ -1570,13 +1560,10 @@ video {
 
 .w-\[90px\] {
   width: 90px;
-<<<<<<< Updated upstream
 }
 
 .w-auto {
   width: auto;
-=======
->>>>>>> Stashed changes
 }
 
 .w-full {
@@ -1615,6 +1602,10 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-cols-6 {
@@ -1669,6 +1660,12 @@ video {
   gap: 0.5rem;
 }
 
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2.5rem * var(--tw-space-x-reverse));
@@ -1703,6 +1700,12 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.75rem * var(--tw-space-x-reverse));
   margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -1871,8 +1874,20 @@ video {
   border-bottom-width: 4px;
 }
 
+.border-r-2 {
+  border-right-width: 2px;
+}
+
 .border-solid {
   border-style: solid;
+}
+
+.border-\[\#f3f5f761\] {
+  border-color: #f3f5f761;
+}
+
+.border-\[\#f3f5f768\] {
+  border-color: #f3f5f768;
 }
 
 .border-black {
@@ -1938,6 +1953,11 @@ video {
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#E5E5E5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#EBEBEB\] {
   --tw-bg-opacity: 1;
   background-color: rgb(235 235 235 / var(--tw-bg-opacity));
@@ -1946,6 +1966,11 @@ video {
 .bg-\[\#F0F0F0\] {
   --tw-bg-opacity: 1;
   background-color: rgb(240 240 240 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F3F5F7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 245 247 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#FDFDFD\] {
@@ -2028,7 +2053,6 @@ video {
 .bg-pink-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 168 212 / var(--tw-bg-opacity));
-<<<<<<< Updated upstream
 }
 
 .bg-purple-300 {
@@ -2039,8 +2063,6 @@ video {
 .bg-purple-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(192 132 252 / var(--tw-bg-opacity));
-=======
->>>>>>> Stashed changes
 }
 
 .bg-red-500 {
@@ -2051,14 +2073,6 @@ video {
 .bg-red-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-<<<<<<< Updated upstream
-=======
-}
-
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
->>>>>>> Stashed changes
 }
 
 .bg-slate-500 {
@@ -2098,19 +2112,20 @@ video {
   --tw-bg-opacity: 0.75;
 }
 
-<<<<<<< Updated upstream
 .bg-gradient-to-bl {
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
 
-=======
->>>>>>> Stashed changes
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-tl {
@@ -2123,21 +2138,30 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#e5e8ea\] {
+  --tw-gradient-from: #e5e8ea var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(229 232 234 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#f5edf8\] {
+  --tw-gradient-from: #f5edf8 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(245 237 248 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-fuchsia-300 {
   --tw-gradient-from: #f0abfc var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(240 171 252 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-<<<<<<< Updated upstream
 .from-linear-color2 {
   --tw-gradient-from: #6F5FCE var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(111 95 206 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-=======
->>>>>>> Stashed changes
 .from-purple-400 {
   --tw-gradient-from: #c084fc var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(192 132 252 / 0) var(--tw-gradient-to-position);
@@ -2155,17 +2179,22 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), #c084fc var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.to-\[\#949ba0\] {
+  --tw-gradient-to: #949ba0 var(--tw-gradient-to-position);
+}
+
 .to-\[\#9f80f4\] {
   --tw-gradient-to: #9f80f4 var(--tw-gradient-to-position);
 }
 
-<<<<<<< Updated upstream
+.to-\[\#c2aaca7e\] {
+  --tw-gradient-to: #c2aaca7e var(--tw-gradient-to-position);
+}
+
 .to-linear-color {
   --tw-gradient-to: #D56EE5 var(--tw-gradient-to-position);
 }
 
-=======
->>>>>>> Stashed changes
 .to-pink-500 {
   --tw-gradient-to: #ec4899 var(--tw-gradient-to-position);
 }
@@ -2190,13 +2219,10 @@ video {
   padding: 0.375rem;
 }
 
-<<<<<<< Updated upstream
 .p-10 {
   padding: 2.5rem;
 }
 
-=======
->>>>>>> Stashed changes
 .p-16 {
   padding: 4rem;
 }
@@ -2207,6 +2233,10 @@ video {
 
 .p-2\.5 {
   padding: 0.625rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-4 {
@@ -2280,6 +2310,10 @@ video {
   padding-bottom: 2.5rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -2292,8 +2326,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.pl-12 {
+  padding-left: 3rem;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
+}
+
+.pr-12 {
+  padding-right: 3rem;
 }
 
 .pr-4 {
@@ -2302,6 +2344,10 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .pt-2 {
@@ -2314,6 +2360,10 @@ video {
 
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pt-5 {
@@ -2393,6 +2443,10 @@ video {
   line-height: 1;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .text-\[13px\] {
   font-size: 13px;
 }
@@ -2411,6 +2465,14 @@ video {
 
 .text-\[36px\] {
   font-size: 36px;
+}
+
+.text-\[5px\] {
+  font-size: 5px;
+}
+
+.text-\[9px\] {
+  font-size: 9px;
 }
 
 .text-base {
@@ -2458,13 +2520,10 @@ video {
   font-weight: 600;
 }
 
-<<<<<<< Updated upstream
 .font-thin {
   font-weight: 100;
 }
 
-=======
->>>>>>> Stashed changes
 .uppercase {
   text-transform: uppercase;
 }
@@ -2478,9 +2537,19 @@ video {
   color: rgb(75 75 75 / var(--tw-text-opacity));
 }
 
+.text-\[\#637381\] {
+  --tw-text-opacity: 1;
+  color: rgb(99 115 129 / var(--tw-text-opacity));
+}
+
 .text-\[\#777777\] {
   --tw-text-opacity: 1;
   color: rgb(119 119 119 / var(--tw-text-opacity));
+}
+
+.text-\[\#A61473\] {
+  --tw-text-opacity: 1;
+  color: rgb(166 20 115 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -2612,6 +2681,10 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .duration-75 {
   transition-duration: 75ms;
 }
@@ -2683,9 +2756,8 @@ video {
   }
 }
 
-<<<<<<< Updated upstream
 .inputBox {
-  width: auto;
+  width: 100%;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2695,21 +2767,56 @@ video {
   font-weight: 600;
 }
 
-=======
->>>>>>> Stashed changes
+.addressCard {
+  display: flex;
+  width: 600px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.addressCard > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.addressCard {
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.profileInputBox {
+  width: 18rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  text-indent: 1rem;
+  font-weight: 700;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-<<<<<<< Updated upstream
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
-=======
->>>>>>> Stashed changes
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2786,14 +2893,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-<<<<<<< Updated upstream
 :is([data-mode="dark"] .dark\:bg-gray-700) {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-=======
->>>>>>> Stashed changes
 :is([data-mode="dark"] .dark\:bg-gray-800) {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -3060,13 +3164,10 @@ video {
     margin-left: 10rem;
   }
 
-<<<<<<< Updated upstream
   .md\:ml-5 {
     margin-left: 1.25rem;
   }
 
-=======
->>>>>>> Stashed changes
   .md\:ml-52 {
     margin-left: 13rem;
   }
@@ -3248,14 +3349,11 @@ video {
     line-height: 2;
   }
 
-<<<<<<< Updated upstream
   .md\:text-black {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 
-=======
->>>>>>> Stashed changes
   .md\:text-blue-700 {
     --tw-text-opacity: 1;
     color: rgb(29 78 216 / var(--tw-text-opacity));
@@ -3275,14 +3373,11 @@ video {
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
 
-<<<<<<< Updated upstream
   :is([data-mode="dark"] .md\:dark\:text-black) {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 
-=======
->>>>>>> Stashed changes
   :is([data-mode="dark"] .md\:dark\:text-blue-500) {
     --tw-text-opacity: 1;
     color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -3331,15 +3426,16 @@ video {
     left: 220px;
   }
 
-<<<<<<< Updated upstream
   .lg\:left-\[35\%\] {
     left: 35%;
   }
 
-=======
->>>>>>> Stashed changes
   .lg\:left-\[35px\] {
     left: 35px;
+  }
+
+  .lg\:top-\[15\%\] {
+    top: 15%;
   }
 
   .lg\:top-\[15px\] {
@@ -3352,10 +3448,6 @@ video {
 
   .lg\:top-\[22\%\] {
     top: 22%;
-  }
-
-  .lg\:top-\[23\%\] {
-    top: 23%;
   }
 
   .lg\:top-\[24\%\] {
@@ -3409,6 +3501,10 @@ video {
   .lg\:my-\[6\%\] {
     margin-top: 6%;
     margin-bottom: 6%;
+  }
+
+  .lg\:ml-0 {
+    margin-left: 0px;
   }
 
   .lg\:ml-20 {
@@ -3483,12 +3579,28 @@ video {
     height: 5rem;
   }
 
+  .lg\:h-8 {
+    height: 2rem;
+  }
+
   .lg\:h-\[154px\] {
     height: 154px;
   }
 
   .lg\:h-\[248px\] {
     height: 248px;
+  }
+
+  .lg\:h-\[25px\] {
+    height: 25px;
+  }
+
+  .lg\:h-\[320px\] {
+    height: 320px;
+  }
+
+  .lg\:h-\[33px\] {
+    height: 33px;
   }
 
   .lg\:h-\[350px\] {
@@ -3505,6 +3617,10 @@ video {
 
   .lg\:h-\[420px\] {
     height: 420px;
+  }
+
+  .lg\:h-\[44px\] {
+    height: 44px;
   }
 
   .lg\:h-\[530px\] {
@@ -3531,6 +3647,10 @@ video {
     width: 2.5rem;
   }
 
+  .lg\:w-14 {
+    width: 3.5rem;
+  }
+
   .lg\:w-2\/6 {
     width: 33.333333%;
   }
@@ -3547,6 +3667,14 @@ video {
     width: 9rem;
   }
 
+  .lg\:w-60 {
+    width: 15rem;
+  }
+
+  .lg\:w-8 {
+    width: 2rem;
+  }
+
   .lg\:w-\[1043px\] {
     width: 1043px;
   }
@@ -3559,8 +3687,24 @@ video {
     width: 113px;
   }
 
+  .lg\:w-\[127px\] {
+    width: 127px;
+  }
+
+  .lg\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .lg\:w-\[25px\] {
+    width: 25px;
+  }
+
   .lg\:w-\[290px\] {
     width: 290px;
+  }
+
+  .lg\:w-\[300px\] {
+    width: 300px;
   }
 
   .lg\:w-\[30px\] {
@@ -3637,10 +3781,34 @@ video {
     margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:space-x-5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.25rem * var(--tw-space-x-reverse));
     margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -3688,14 +3856,11 @@ video {
     padding-bottom: 2.5rem;
   }
 
-<<<<<<< Updated upstream
   .lg\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
 
-=======
->>>>>>> Stashed changes
   .lg\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -3703,6 +3868,10 @@ video {
 
   .lg\:pl-0 {
     padding-left: 0px;
+  }
+
+  .lg\:pr-0 {
+    padding-right: 0px;
   }
 
   .lg\:pt-0 {

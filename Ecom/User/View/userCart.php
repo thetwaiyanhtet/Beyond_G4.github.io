@@ -16,7 +16,7 @@
 <body class="mt-3 font-poppins overflow-hidden">
     <section class=" flex items-center justify-between mx-[3%]">
         <span class="flex items-center  my-[1%]">
-            <img class="w-14 lg:w-20" src="../View/resources/img/logo.png" alt="">
+            <img class=" w-12 lg:w-20" src="../View/resources/img/logo.png" alt="">
             <p class="text-2xl lg:text-4xl ml-[1%] max-md:text-2xl font-philosopher font-bold ">Beyond</p>
         </span>
         <span>
