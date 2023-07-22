@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class=" bg-violet-200 font-philosopher letter relative">
-    <main class=" min-h-screen flex items-center justify-center overflow-hidden">
+<body class=" bg-violet-200 font-philosopher letter relative overflow-hidden">
+    <main class=" min-h-screen flex items-center justify-center">
 
         <div class="lg:flex justify-center items-center lg:space-x-5 lg:w-[800px] w-[380px] h-min-screen bg-transparent border shadow-2xl lg:py-10 lg:px-20 py-5 px-16 rounded-3xl z-50">
 
