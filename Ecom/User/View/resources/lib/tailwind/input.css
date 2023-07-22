@@ -11,3 +11,6 @@
 .settingBar{
     @apply  w-[110px] lg:w-[293px] flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white rounded-xl shadow-lg;
 }
+.inputBox{
+    @apply  font-semibold bg-white w-auto py-3 rounded-lg indent-4;
+}
