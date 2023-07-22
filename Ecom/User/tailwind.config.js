@@ -11,12 +11,15 @@ module.exports = {
         "cart-color" :'#FDFBFB',
         "btn2-color" :'#F09578',
         'border-color' : '#9A9A9A',
-        'text-color' : '#314755'
+        'text-color' : '#314755',
+        'linear-color' : '#D56EE5',
+        'linear-color2' : '#6F5FCE'
       },
       fontFamily:{
         'philosopher' : ['Philosopher', 'sans-serif'],
         'poppins':['Poppins', 'sans-serif'],
-        'Playfair Display': ['Playfair Display', 'serif']
+        'Playfair Display': ['Playfair Display', 'serif'],
+        'PlayfairSC': ['Playfair Display SC', 'serif']
       },
     },
   },
