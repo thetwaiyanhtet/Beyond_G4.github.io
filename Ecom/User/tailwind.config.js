@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+<<<<<<< HEAD
   darkMode : ['class','[data-mode="dark"]'],
+=======
+  darkMode: ['class', '[data-mode="dark"]'],
+>>>>>>> cf996fff52c794044f5bdb87b43db03cd980d395
   content: ["./View/*.{html,js,php}"],
   theme: {
     extend: {
