@@ -28,7 +28,7 @@
                     <img src="./resources/img/image 3.png" alt="...">
                 </div>
             </div>
-            <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[370px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
+            <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
                 <h2 class="lg:text-4xl text-2xl font-semibold font-philosopher">Wide-leg Pants</h2>
                 <p class=" lg:text-base text-xs">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
