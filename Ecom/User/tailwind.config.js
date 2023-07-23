@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
   darkMode : ['class','[data-mode="dark"]'],
-=======
-  darkMode: ['class', '[data-mode="dark"]'],
->>>>>>> cf996fff52c794044f5bdb87b43db03cd980d395
   content: ["./View/*.{html,js,php}"],
   theme: {
     extend: {
@@ -18,7 +14,9 @@ module.exports = {
         'border-color' : '#9A9A9A',
         'text-color' : '#314755',
         'linear-color' : '#D56EE5',
-        'linear-color2' : '#6F5FCE'
+        'linear-color2' : '#6F5FCE',
+        '404-color' : '#F2E0FB',
+        'text-color': 'A61473'
       },
       fontFamily:{
         'philosopher' : ['Philosopher', 'sans-serif'],

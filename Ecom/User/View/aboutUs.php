@@ -66,7 +66,7 @@
         While we are starting our journey, we are also excited to empower merchants and creators by providing them with a platform to showcase their unique creations. Together, we can build a community that celebrates creativity and craftsmanship.
     </p>
     <p class="md:text-xl text-lg font-PlayfairSC text-center m-3">MEET OUT TEAM</p>
-    <div class="flex items-center justify-center space-x-5 m-5">
+    <div class="md:flex flex-col items-center justify-center space-x-5 m-5">
         <div class="w-[180px] h-[160px] rounded-lg border border-solid bg-verify-color p-6">
             <img src="./resources/img/p1.png" alt="p1" class="rounded-full">
         </div>
