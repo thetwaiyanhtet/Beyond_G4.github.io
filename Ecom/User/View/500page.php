@@ -25,7 +25,7 @@
     <img src="./resources/img/500.png" alt="404">
         <div class="font-PlayfairSC m-5">
             <p class="font-PlayfairSC text-4xl text-center">UN HO!!</p>
-            <p class="text-center">Something went wrong at our end.Don't worry, it's not you_ it's us. Sorry about that.</p><br><br>
+            <p class="text-center md:text-base text-sm">Something went wrong at our end.Don't worry, it's not you_ it's us. Sorry about that.</p><br><br>
            <div class="flex justify-center w-screen"> <button class="w-56 h-14 rounded-xl border border-solid text-text-color bg-white"><img src="./resources/img/Vector.png" class="w-5 inline">REFRESH THE PAGE</button></div>
         </div>
         

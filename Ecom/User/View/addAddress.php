@@ -27,8 +27,8 @@
 
     <main class="relative w-screen h-screen rounded-tl-[35px] rounded-tr-[35px] bg-purple-300">
 
-        <div class=" absolute lg:top-[15%] lg:left-[35%] top-[15%] left-[7%] lg:w-[450px] lg:h-[420px] w-[360px] h-[530px] bg-white bg-opacity-50 rounded-lg shadow-2xl z-50">
-            <div class=" flex-col lg:space-y-6 space-y-4 p-10">
+        <div class=" absolute lg:top-[15%] lg:left-[35%] top-[15%] left-[7%] md:w-[450px] md:h-[420px] w-[360px] h-[520px] bg-white bg-opacity-50 rounded-lg shadow-2xl z-50">
+            <div class=" flex-col md:space-y-6 space-y-4 p-5">
                 <div class=" lg:flex lg:justify-around justify-center items-center lg:space-x-5 lg:space-y-0 space-y-4">
                     <input type="text" placeholder="Name" class=" inputBox">
                     <input type="text" placeholder="Phone" class=" inputBox">
@@ -41,7 +41,7 @@
                     <input type="text" placeholder="Division/State" class=" inputBox">
                 </div>
             </div>
-            <div class=" flex-col space-y-5 ml-6">
+            <div class=" flex-col ml-6 space-y-3">
                 <h2 class=" font-bold">Type</h2>
                 <div class=" ml-5">
                     <span class=" w-auto bg-white text-black p-1 rounded-md mr-2">Home</span>
