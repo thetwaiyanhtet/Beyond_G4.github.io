@@ -28,7 +28,7 @@
     <main class="relative w-screen h-screen rounded-tl-[35px] rounded-tr-[35px] bg-purple-300">
 
         <div class=" absolute lg:top-[15%] lg:left-[35%] top-[15%] left-[7%] md:w-[450px] md:h-[420px] w-[360px] h-[490px] bg-white bg-opacity-50 rounded-lg shadow-2xl z-50">
-            <div class=" flex-col md:space-y-6 space-y-0 p-5">
+            <div class=" flex-col md:space-y-6 space-y-4 p-5">
                 <div class=" lg:flex lg:justify-around justify-center items-center lg:space-x-5 lg:space-y-0 space-y-4">
                     <input type="text" placeholder="Name" class=" inputBox">
                     <input type="text" placeholder="Phone" class=" inputBox">
