@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page</title>
+    <title>500 Page</title>
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,14 +21,14 @@
             <ion-icon class="text-4xl" name="person-circle-outline"></ion-icon>
         </span>
     </nav>
-    <div class="flex justify-around items-center">
-        <div class="font-PlayfairSC m-10">
-            <p class="font-PlayfairSC text-5xl">OH NO!!</p>
-            <span class="font-PlayfairSC text-5xl">ERROR</span>
-            <span>Page not found</span><br><br>
-            <button class="w-40 h-10 rounded-xl border border-solid text-text-color bg-white m-5">Go To Home</button>
+    <div class="flex flex-col items-center m-10 justify-center">
+    <img src="./resources/img/500.png" alt="404">
+        <div class="font-PlayfairSC m-5">
+            <p class="font-PlayfairSC text-4xl text-center">UN HO!!</p>
+            <p class="text-center">Something went wrong at our end.Don't worry, it's not you_ it's us. Sorry about that.</p><br><br>
+           <div class="flex justify-center w-screen"> <button class="w-56 h-14 rounded-xl border border-solid text-text-color bg-white"><img src="./resources/img/Vector.png" class="w-5 inline">REFRESH THE PAGE</button></div>
         </div>
-        <img src="./resources/img/404.png" alt="404" class="md:w-96 w-48">
+        
     </div>
 </body>
 

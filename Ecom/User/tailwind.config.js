@@ -15,8 +15,8 @@ module.exports = {
         'text-color' : '#314755',
         'linear-color' : '#D56EE5',
         'linear-color2' : '#6F5FCE',
-        '404-color' : '#F2E0FB',
-        'text-color': 'A61473'
+        'background-404' : '#F2E0FB',
+        'text-color': '#A61473'
       },
       fontFamily:{
         'philosopher' : ['Philosopher', 'sans-serif'],
