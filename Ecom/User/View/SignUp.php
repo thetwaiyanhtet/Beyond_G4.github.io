@@ -16,7 +16,7 @@
     <img src="./resources/img/Triangle.png" alt="1" class="md:w-64 w-36 absolute left-2/3 top-40 md:scale-100 scale-125">
     <img src="./resources/img/Triangle-2.png" alt="1" class="md:w-64 w-36 absolute right-2/3 scale-125">
     </div>
-        <div class="md:w-1/2 w-96 md:h-fit h-96 border border-solid bg-white mt-5 rounded-lg drop-shadow-xl opacity-75 m-auto z-10">
+        <div class="md:w-1/2 w-96 md:h-fit h-96 border border-solid  bg-transparent mt-5 rounded-lg  drop-shadow-2xl opacity-75 m-auto z-10">
             <div class="m-5 flex flex-col items-center">
                 <div class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 font-poppins drop-shadow-md bg-blend-normal">Full Name</div>
                 <div class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 font-poppins drop-shadow-md bg-blend-normal">Email</div>
@@ -26,7 +26,7 @@
             </div>
         </div>
         </div>
-        <div class="flex flex-col items-center mt-3 md:hidden border border-solid">
+        <div class="flex flex-col items-center mt-3 md:hidden">
             <p class="font-poppins p-2">Don't have account?</p>
             <p class=" text-blue-700 underline font-poppins p-2">Create New Account</p>
             <p class="underline font-poppins text-text-color text-center p-2">Terms and Conditions</p>

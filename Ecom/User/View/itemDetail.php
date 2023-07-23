@@ -28,7 +28,7 @@
                     <img src="./resources/img/image 3.png" alt="...">
                 </div>
             </div>
-            <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[370px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
+            <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
                 <h2 class="lg:text-4xl text-2xl font-semibold font-philosopher">Wide-leg Pants</h2>
                 <p class=" lg:text-base text-xs">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
@@ -67,7 +67,7 @@
         </header>
         <div class="grid grid-cols-6">
             <div class="lg:block hidden absolute bottom-[90px] left-[220px] col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
-            <div class=" fixed right-[50px] bottom-10 col-start-5 ml-36 w-14 h-14 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
+            <div class=" fixed lg:right-[50px] right-[20px] bottom-10 col-start-5 ml-36 w-14 h-14 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
         </div>
 
         <main class="flex justify-center">

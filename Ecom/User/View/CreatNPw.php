@@ -17,7 +17,7 @@
         <img src="./resources/img/forget.png" class="mt-10">
         <p class="text-center font-poppins font-medium mt-5">Your New Password Must Be Different from <br>
             Previously Used Password.</p>
-        <form action="" class="md:mr-20 mr-28 mt-16">
+        <form action="" class="m-auto">
             <label for="" class="font-poppins  text-lg dark:text-black text-white md:ml-6">New Password</label><br><br>
             <input type="email" name="" id="" class="dark:border-black  border-0 border-b-2 border-black w-72 outline-none hover:outline-none md:ml-6 " placeholder="************"><br><br>
             <label for="" class="font-poppins  text-lg dark:text-black text-white md:ml-6">Confirm Password</label><br><br>
