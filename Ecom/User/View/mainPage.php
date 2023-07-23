@@ -78,14 +78,80 @@
         </div>
     </div>
     <div>
-        <img src="./resources/img/home_hero/Banner_1.png" alt="">
+        <img src="./resources/img/home_hero/Banner_1.png" alt="" class="w-full">
     </div>
     <div class="trend inline-flex m-4">
         <p class="font-PlayfairSC text-2xl">Trending Product</p>
         <img src="./resources/img/home_hero/fire.png" alt="" class="mt-2 w-4 h-4">
     </div>
     <!-- product -->
-   
+    <div class="flex justify-center font-poppins space-x-6">
+        <div>
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+
+        <div>
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+
+        <div>
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="./resources/img/home_hero/Banner_2.png" alt="" class="w-full">
+    </div>
 </body>
 
 </html>
