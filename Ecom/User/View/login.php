@@ -11,18 +11,18 @@
 <body>
     <img src="./resources/img/logo.png" alt="logo" class="w-24 m-2">
     <p class="font-poppins font-semibold text-center text-4xl mb-10">Login</p>
-    <img src="./resources/img/Triangle.png" alt="1" class="md:w-64 w-36 absolute md:bottom-2 ">
+    <img src="./resources/img/Triangle.png" alt="1" class="md:w-72 w-48 scale-125 absolute ml-8 md:bottom-5">
     
     <section class="relative">
     <div class="float-right w-72 h-96 z-10">
-        <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-28 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
+        <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-40 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
     </div>
         <div class="md:w-4/5 w-56 md:h-fit h-96  border-2 border-solid  m-auto rounded-lg drop-shadow-xl bg-transparent z-10">
             <div class="flex md:m-2 md:justify-center space-x-10 z-20">
                 <div class="md:mt-5 mt-10">
-                    <div class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm">UserName</div>
-                    <div class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm ">Password</div>
-                    <p class="underline font-poppins md:ml-52 ml-20 md:text-base text-sm mb-8">Forget Password</p>
+                    <input class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm" placeholder="UserName"></input>
+                    <input class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm " placeholder="Password"></input>
+                    <a href="./forgetPw.php" class="underline font-poppins md:ml-52 ml-20 md:text-base text-sm mb-8">Forget Password</a>
                     <button class="text-white bg-btn-color rounded-xl w-32 h-10 ml-10 mt-6 opacity-100">Log in</button>
                 </div>
                 <p class="font-poppins font-semibold mt-36 md:block hidden">Or</p>
@@ -41,7 +41,7 @@
         </div>
         <div class="flex flex-col items-center m-10 md:hidden">
             <p class="font-poppins p-2">Don't have account?</p>
-            <p class=" text-blue-700 underline font-poppins p-2">Create New Account</p>
+            <a href="./SignUp.php" class=" text-blue-700 underline font-poppins p-2">Create New Account</a>
             <p class="underline font-poppins text-text-color text-center p-2">Terms and Conditions</p>
         </div>
     </section>
