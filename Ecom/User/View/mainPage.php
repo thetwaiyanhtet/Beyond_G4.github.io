@@ -58,13 +58,13 @@
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500 font-bold" aria-current="page">Home</a>
+                        <a href="./mainPage.php" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500 font-bold" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">About</a>
+                        <a href="./aboutUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">About</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">Contact</a>
+                        <a href="./contactUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -80,13 +80,10 @@
     <div>
         <img src="./resources/img/home_hero/Banner_1.png" alt="" class="w-full">
     </div>
-    <div class="trend inline-flex m-4">
-        <p class="font-PlayfairSC text-2xl">Trending Product</p>
-        <img src="./resources/img/home_hero/fire.png" alt="" class="mt-2 w-4 h-4">
-    </div>
+    <a href=""></a>
     <!-- product -->
-    <div class="flex justify-center font-poppins space-x-6">
-        <div>
+    <div class="flex justify-center font-poppins space-x-6 my-4">
+        <div class="my-2">
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
@@ -107,7 +104,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="my-2">
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
@@ -128,7 +125,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="my-2">
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
@@ -151,6 +148,131 @@
     </div>
     <div>
         <img src="./resources/img/home_hero/Banner_2.png" alt="" class="w-full">
+    </div>
+    <div class="pdt inline-flex m-4">
+        <p class="font-PlayfairSC text-2xl">All Product</p>
+        <img src="./resources/img/home_hero/fire.png" alt="" class="mt-2 w-4 h-4">
+    </div>
+    <div class="flex justify-evenly text-center p-4">
+        <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+        <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+        <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+        <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+        <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+        <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+    </div>
+    <!--All Product-->
+    <div class="flex justify-center items-center flex-wrap m-2 font-poppins space-x-6 p-6">
+        <div class="my-2">
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+
+        <div class="my-2">
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+
+        <div class="my-2">
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+
+        <div class="my-2">
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+
+        <div class="my-2">
+            <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-2">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
+                <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="./resources/img/home_hero/Banner_3.png" alt="" class="w-full">
+    </div>
+    <div>
+        <img src="./resources/img/home_hero/shop_bg.gif" alt="" class="w-full">
     </div>
 </body>
 
