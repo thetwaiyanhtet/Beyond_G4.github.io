@@ -24,7 +24,7 @@
     </section>
 
     <section class="relative">
-        <section class="w-full h-full rounded-t-[5%] bg-gradient-to-tl from-purple-400 via-purple-400 to-purple-500 ">
+        <section class="w-full h-full rounded-t-3xl bg-gradient-to-tl from-purple-400 via-purple-400 to-purple-500 ">
             <p class=" font-poppins font-bold text-2xl text-white md:p-10 p-5 ">WishList</p>
             <!--Card-->
             <div class="flex justify-center items-center flex-wrap m-auto ">

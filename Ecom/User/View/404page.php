@@ -26,7 +26,7 @@
             <p class="font-PlayfairSC text-5xl">OH NO!!</p>
             <span class="font-PlayfairSC text-5xl">ERROR</span>
             <span>Page not found</span><br><br>
-            <button class="w-40 h-10 rounded-xl border border-solid text-text-color bg-white m-5">Go To Home</button>
+            <button class="w-40 h-10 rounded-xl border border-solid text-text-color bg-white m-5 md:text-base text-sm">Go To Home</button>
         </div>
         <img src="./resources/img/404.png" alt="404" class="md:w-96 w-48">
     </div>
