@@ -111,7 +111,7 @@
            
         </div>
         <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <button class=" text-white py-1 px-5 rounded-md bg-button-color" >Next Step></button>
+                <button class=" text-white py-1 px-5 rounded-md bg-btn-color" >Next Step></button>
             </div>
     </div>
 
