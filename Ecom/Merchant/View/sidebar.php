@@ -14,7 +14,8 @@
 <body class=" font-poppins">
   <!-- component -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
-  <div class="fixed top-0 left-0 z-40 min-h-screen text-ellipsis flex flex-row">
+  <div class="fixed top-0 left-0 z-40 min-h-screen text-ellipsis flex justify-around">
+
     <div class="flex flex-col w-56 bg-blue-600 rounded-r-3xl overflow-hidden">
       <div class="flex items-center justify-center h-20 shadow-md">
         <div class="flex justify-items-center items-center justify-center space-x-3">
@@ -98,7 +99,9 @@
         </li>
       </ul>
     </div>
+    
   </div>
+ 
 
 
 </body>
