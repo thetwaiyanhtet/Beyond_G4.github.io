@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./View/*.{html,js,php}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+          'sidebar' : "#085FC6",
+      }
+    },
   },
   plugins: [],
 }
