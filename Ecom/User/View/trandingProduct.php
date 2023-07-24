@@ -174,16 +174,16 @@
             </div>
         </div>
 </div>
-        <div class="hidden md:block flex justify-evenly text-center pt-12">
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+        <div class="flex justify-evenly text-center pt-5 md:pt-12">
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
         </div>
 
-<div class="flex justify-around font-poppins pt-12 pl-12 pr-12 lg:pl-0 lg:pr-0 space-x-3">
+<div class="flex justify-around font-poppins pt-5 md:pt-12 pl-12 pr-12 lg:pl-0 lg:pr-0 space-x-3">
         <div>
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
