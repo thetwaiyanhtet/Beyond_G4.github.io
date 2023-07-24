@@ -49,7 +49,7 @@
                 </div>
                 <input type="checkbox"> <span>Set as Default</span>
             </div>
-            <div class=" flex space-x-3 float-right mr-5 mt-3 mb-5 md:mb-0">
+            <div class=" flex space-x-3 float-right mr-5 mt-3 mb-5">
                 <button class="flex justify-center items-center w-20 px-4 py-2 bg-white rounded-md text-black font-philosopher">Cancel</button>
                 <button class="flex justify-center items-center w-20 px-4 py-2 bg-white rounded-md text-black font-philosopher">Sent</button>
             </div>
