@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <h1 class=" underline italic text-blue-700 font-bold text-4xl">Hello</h1>
+    <h1 class=" underline italic text-blue-700 font-bold text-7xl">Hello</h1>
 </body>
 
 </html>

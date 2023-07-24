@@ -34,7 +34,7 @@
                 </div>
                 <div class="flex flex-col text-white w-[354px] h-[295px] mb-16  pt-9 p-16  lg:pt-0 lg:pl-0">
                     <p class="font-semibold text-[15px] lg:text-[36px] lg:text-center">Crop Tube</p>
-                    <div class="flex font-medium text-[13px] lg:text-[24px] pt-10">
+                    <div class="flex font-medium text-[13px] lg:text-[24px] pt-3 md:pt-10">
                         <p>Color:</p>
                         <p class="ml-[100px] lg:ml-[130px]">Black</p>
                     </div>

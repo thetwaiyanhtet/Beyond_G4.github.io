@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./resources/lib/tailwind/output.css" rel="stylesheet" />
+    <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -102,10 +102,10 @@
                         <p>1456</p>
                     </div>
                     <div class="ml-[110px] mt-3">
-                    <button class="w-[90px] h-[28px] bg-[#314755] font-bold text-xs rounded-lg text-white">Checkout</button>
-                    <div class="mt-2"><button class="w-[100px] h-[40px] bg-[#3147558b] font-bold text-xs rounded-lg text-white">Continue Shopping</button></div>
+                        <button class="w-[90px] h-[28px] bg-[#314755] font-bold text-xs rounded-lg text-white">Checkout</button>
+                        <div class="mt-2"><button class="w-[100px] h-[40px] bg-[#3147558b] font-bold text-xs rounded-lg text-white">Continue Shopping</button></div>
                     </div>
-                    
+
                 </div>
 
 

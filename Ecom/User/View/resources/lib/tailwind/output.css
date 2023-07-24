@@ -793,12 +793,12 @@ video {
   top: 38%;
 }
 
-.top-\[67\%\] {
-  top: 67%;
+.top-\[65\%\] {
+  top: 65%;
 }
 
-.top-\[72\%\] {
-  top: 72%;
+.top-\[67\%\] {
+  top: 67%;
 }
 
 .top-\[80\%\] {
@@ -2693,6 +2693,10 @@ video {
   font-size: 5px;
 }
 
+.text-\[7px\] {
+  font-size: 7px;
+}
+
 .text-\[9px\] {
   font-size: 9px;
 }
@@ -3607,6 +3611,10 @@ video {
     top: 11rem;
   }
 
+  .md\:top-\[72\%\] {
+    top: 72%;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -3808,6 +3816,10 @@ video {
   .md\:py-3\.5 {
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
+  }
+
+  .md\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .md\:text-3xl {

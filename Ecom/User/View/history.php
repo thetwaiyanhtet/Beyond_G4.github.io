@@ -89,7 +89,7 @@
 
 
         <ion-icon
-            class=" lg:text-6xl absolute left-[5%] top-[72%] cursor-pointer max-md:text-7xl max-md:left-8 max-md:bottom-24"
+            class=" lg:text-6xl absolute left-[5%] top-[65%] md:top-[72%] cursor-pointer max-md:text-7xl max-md:left-8 max-md:bottom-24"
             name="caret-back-outline"></ion-icon>
     </section>
 
