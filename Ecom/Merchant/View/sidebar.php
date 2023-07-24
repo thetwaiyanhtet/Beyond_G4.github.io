@@ -17,7 +17,7 @@
   <div class="fixed top-0 left-0 z-40 min-h-screen text-ellipsis flex flex-row">
     <div class="flex flex-col w-56 bg-blue-600 rounded-r-3xl overflow-hidden">
       <div class="flex items-center justify-center h-20 shadow-md">
-        <div class="flex justify-items-center items-center justify-center">
+        <div class="flex justify-items-center items-center justify-center space-x-3">
           <img class=" w-16" src="./resources/img/logo.png" alt="...">
           <p class="font-bold text-white text-2xl">Beyond</p>
         </div>
@@ -81,7 +81,7 @@
         <li>
           <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-white hover:text-white">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"></span>
-            <button class=" bg-gray-400 px-4 py-1 rounded-lg">Upgrade Plan</button>
+            <button class=" bg-gray-300 px-4 py-1 rounded-lg">Upgrade Plan</button>
           </a>
         </li>
         <li>
