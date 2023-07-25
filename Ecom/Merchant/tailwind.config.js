@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         philosopher: ["Philosopher", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        playfairDisplay: ["Playfair Display", "serif"],
         PlayfairSC: ["Playfair Display SC", "serif"],
       },
     },
