@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,24 @@
 </head>
 
 <body>
-    <h1 class=" underline italic text-blue-700 font-bold text-7xl">Hello</h1>
+<div class="flex justify-around items-center">
+    <div><img src="../View/resources/img/welcome.png" alt="" class="w-96"></div>
+    <div class="flex">
+        <span><img src="../View/resources/img/logo.png" alt=""></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
 </body>
+
 
 </html>
