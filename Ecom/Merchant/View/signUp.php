@@ -16,7 +16,7 @@
 <div class="flex justify-around items-center">
     <div><img src="../View/resources/img/welcome.png" alt="" class="w-96"></div>
     <div class="flex">
-        <span></span>
+        <span><img src="../View/resources/img/logo.png" alt=""></span>
         <span></span>
         <span></span>
         <span></span>
