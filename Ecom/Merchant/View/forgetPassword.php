@@ -26,8 +26,10 @@
             <div class="text-[#667085] pt-5"> 
                 <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none" placeholder="User@gmail.com">
             </div>       
+            <a href="./dashboard.php">
             <button class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center 
             font-PlayfairSC text-white">Get Started</button>
+            </a>
         
         </div>
     </div>
