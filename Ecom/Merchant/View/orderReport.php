@@ -34,18 +34,18 @@ include "./sidebar.php";
         </header>
         <div class="flex justify-between mt-6">
             <div class="flex space-x-3">
-                <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 
-         font-poppins text-white">Sale reports</button>
-                <a href="./orderReport.php">
+                <a href="./saleReport.php">
                     <button class="w-[220px] h-[40px]  rounded-md bg-[#D9D9D9] flex items-center justify-center 
-         font-poppins text-black transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Order reports</button>
+         font-poppins text-black transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Sale reports</button>
                 </a>
+                <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 
+         font-poppins text-white ">Order reports</button>
             </div>
 
-            <button class="p-2 border border-[#1366D9] rounded-lg mr-7  transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
+            <button class="p-2 border border-[#1366D9] rounded-lg mr-7">Export to CSV</button>
         </div>
-        <div class="flex  items-center ml-[56%] mt-3">
-            <p class="text-2xl font-semibold mr-3">Sale report
+        <div class="flex  items-center ml-[55%] mt-3">
+            <p class="text-2xl font-semibold mr-3">Order report
             <h3 class="text-[#756e6ef7] mr-3">for</h3>
             </p>
             <span class="flex p-1 border rounded-lg">
@@ -64,20 +64,20 @@ include "./sidebar.php";
                     <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Product name
+                                Customer name
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Product id
+                                Payment By
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Category
+                                Total amount
                             </th>
 
                             <th scope="col" class="px-6 py-3">
-                                quantity sold
+                                Order date
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                date
+                                Action
                             </th>
 
                         </tr>
@@ -85,135 +85,117 @@ include "./sidebar.php";
                     <tbody>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Apple MacBook Pro 17"
+                                Kyaw Swarr Myo
                             </th>
                             <td class="px-6 py-4">
-                                #101
+                                Bank deposit
                             </td>
                             <td class="px-6 py-4">
-                                Laptop
+                                2000.0
                             </td>
 
-                            <td class="px-16 py-4 ">
-                                9
+                            <td class="px-6 py-4 ">
+                                24/07/2023
                             </td>
                             <td class="px-6 py-4">
-                                24/07/2023
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
-                        <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Microsoft Surface Pro
+                                Kyaw Swarr Myo
                             </th>
                             <td class="px-6 py-4">
-                                #201
+                                Bank deposit
                             </td>
                             <td class="px-6 py-4">
-                                Laptop Pc
+                                2000.0
                             </td>
 
-                            <td class="px-16 py-4">
-                                9
+                            <td class="px-6 py-4 ">
+                                24/07/2023
                             </td>
                             <td class="px-6 py-4">
-                                24/07/2023
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
-                        <tr class=" hover:bg-gray-200 border-b border-gray-500">
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Magic Mouse 2
+                                Kyaw Swarr Myo
                             </th>
                             <td class="px-6 py-4">
-                                #101
+                                Bank deposit
                             </td>
                             <td class="px-6 py-4">
-                                Accessories
+                                2000.0
                             </td>
 
-                            <td class="px-16 py-4">
-                                9
+                            <td class="px-6 py-4 ">
+                                24/07/2023
                             </td>
                             <td class="px-6 py-4">
-                                24/07/2023
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
-                        <tr class=" hover:bg-gray-200 border-b border-gray-500">
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Magic Mouse 2
+                                Kyaw Swarr Myo
                             </th>
                             <td class="px-6 py-4">
-                                #101
+                                Bank deposit
                             </td>
                             <td class="px-6 py-4">
-                                Accessories
+                                2000.0
                             </td>
 
-                            <td class="px-16 py-4">
-                                9
+                            <td class="px-6 py-4 ">
+                                24/07/2023
                             </td>
                             <td class="px-6 py-4">
-                                24/07/2023
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
-                        <tr class=" hover:bg-gray-200 border-b border-gray-500">
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Magic Mouse 2
+                                Kyaw Swarr Myo
                             </th>
                             <td class="px-6 py-4">
-                                #101
+                                Bank deposit
                             </td>
                             <td class="px-6 py-4">
-                                Accessories
+                                2000.0
                             </td>
 
-                            <td class="px-16 py-4">
-                                9
+                            <td class="px-6 py-4 ">
+                                24/07/2023
                             </td>
                             <td class="px-6 py-4">
-                                24/07/2023
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
-                        <tr class=" hover:bg-gray-200 border-b border-gray-500">
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Magic Mouse 2
+                                Kyaw Swarr Myo
                             </th>
                             <td class="px-6 py-4">
-                                #101
+                                Bank deposit
                             </td>
                             <td class="px-6 py-4">
-                                Accessories
+                                2000.0
                             </td>
 
-                            <td class="px-16 py-4">
-                                9
-                            </td>
-                            <td class="px-6 py-4">
+                            <td class="px-6 py-4 ">
                                 24/07/2023
                             </td>
-
-                        </tr>
-                        <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Magic Mouse 2
-                            </th>
                             <td class="px-6 py-4">
-                                #101
-                            </td>
-                            <td class="px-6 py-4">
-                                Accessories
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
-                            <td class="px-16 py-4">
-                                9
-                            </td>
-                            <td class="px-6 py-4">
-                                24/07/2023
-                            </td>
                         </tr>
                     </tbody>
                 </table>
