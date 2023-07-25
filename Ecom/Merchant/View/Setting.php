@@ -17,18 +17,9 @@ include "./sidebar.php"
 </head>
 
 <body>
-<<<<<<< Updated upstream
     <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
         <div class=" pl-2">
             <p>2023/July/24 - 4:04 PM</p>
-=======
-    <div class="ml-60 m-5 flex justify-between">
-        <p class="text-black mt-2">2023/July/25 -2:00 PM</p>
-        <div class="flex item space-x-5">
-            <ion-icon name="moon" class="mt-2"></ion-icon>
-            <ion-icon name="notifications" class="mt-2"></ion-icon>
-            <img src="./resources/img/Mask group.png" alt="png" class="w-10">
->>>>>>> Stashed changes
         </div>
         <div>
             <ul class="flex space-x-5 items-center pr-3">
