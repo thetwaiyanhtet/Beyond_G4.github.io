@@ -9,12 +9,12 @@ module.exports = {
         'text2' : '#7132D7'
 
       },
-      fontFamily:{
-        'philosopher' : ['Philosopher', 'sans-serif'],
-        'poppins':['Poppins', 'sans-serif'],
-        'Playfair Display': ['Playfair Display', 'serif'],
-        'PlayfairSC': ['Playfair Display SC', 'serif']
-      }
+      fontFamily: {
+        philosopher: ["Philosopher", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        playfairDisplay: ["Playfair Display", "serif"],
+        PlayfairSC: ["Playfair Display SC", "serif"],
+      },
     },
   },
   plugins: []
