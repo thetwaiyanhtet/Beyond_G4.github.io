@@ -41,8 +41,6 @@ include "./sidebar.php";
                 <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 
          font-poppins text-white ">Order reports</button>
             </div>
-
-            <button class="p-2 border border-[#1366D9] rounded-lg mr-7">Export to CSV</button>
         </div>
         <div class="flex  items-center ml-[55%] mt-3">
             <p class="text-2xl font-semibold mr-3">Order report
