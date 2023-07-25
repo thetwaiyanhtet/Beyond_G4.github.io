@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="flex justify-around items-center">
+    <div class="flex justify-evenly items-center">
         <div>
             <img src="../View/resources/img/welcome.png" alt="" class=" w-fit">
         </div>
