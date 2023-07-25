@@ -17,15 +17,26 @@ include "./sidebar.php"
 </head>
 
 <body>
-    <div class="ml-60 m-5 flex justify-between">
-        <p class="text-black mt-2">2023/July/25 -2:00 PM</p>
-        <div class="flex space-x-5">
-            <ion-icon name="moon" class="mt-2"></ion-icon>
-            <ion-icon name="notifications" class="mt-2"></ion-icon>
-            <img src="./resources/img/Mask group.png" alt="png" class="w-10">
+    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
+        <div class=" pl-2">
+            <p>2023/July/24 - 4:04 PM</p>
         </div>
-    </div>
-    <hr>
+        <div>
+            <ul class="flex space-x-5 items-center pr-3">
+                <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
+                <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
+                <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
+            </ul>
+        </div>
+    </header>
+    <!-- <div class="ml-60 m-5 flex justify-between border-solid border-b-2 pb-3 w-">
+        <p class="text-black mt-2">2023/July/25 -2:00 PM</p>
+        <div class="flex space-x-5 justify-center items-center">
+            <ion-icon name="moon" class="mt-2 text-xl"></ion-icon>
+            <ion-icon name="notifications" class="mt-2 text-xl"></ion-icon>
+            <img src="./resources/img/Mask group.png" alt="png" class="w-[50px]">
+        </div>
+    </div> -->
     <p class="font-poppins text-sm ml-60 mt-2">Setting</p>
     <p class="underline text-text2 ml-64 mt-5">Account</p>
     <p class="font-philosopher font-light ml-72 text-base mt-2">logo</p>
@@ -72,16 +83,16 @@ include "./sidebar.php"
             <label for="" class="ml-64 text-sm">Old Password</label>
             <input type="text" name="" id="" class="w-72 p-2 border border-solid ml-64 rounded-md mt-2 font-medium" placeholder="Please enter old password">
         </div>
-       <div class="flex">
-       <div class="flex flex-col">
-            <label for="" class="text-sm ml-64">New Password</label>
-            <input type="text" name="" id="" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium ml-64" placeholder="Please enter New password">
+        <div class="flex">
+            <div class="flex flex-col">
+                <label for="" class="text-sm ml-64">New Password</label>
+                <input type="text" name="" id="" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium ml-64" placeholder="Please enter New password">
+            </div>
+            <div class="flex flex-col">
+                <label for="" class="text-sm mt-2 ml-64">Confirm New Password</label>
+                <input type="text" name="" id="" class="w-96 p-2 border border-solid rounded-md mt-2 font-medium ml-64" placeholder="Please re-enter the password to confirm">
+            </div>
         </div>
-        <div class="flex flex-col">
-            <label for="" class="text-sm mt-2 ml-64">Confirm New Password</label>
-            <input type="text" name="" id="" class="w-96 p-2 border border-solid rounded-md mt-2 font-medium ml-64" placeholder="Please re-enter the password to confirm">
-        </div>
-       </div>
     </form>
     <button class="w-28 p-2 bg-text1 ml-64 rounded-lg mb-2 text-white hover:text-black hover:bg-white hover:border border-black ">Update</button>
     <button class="w-28 p-2 bg-text1 rounded-lg text-white hover:text-black hover:border border-black  mb-2 hover:bg-white">Reset</button>

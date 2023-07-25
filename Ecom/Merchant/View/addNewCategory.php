@@ -18,7 +18,7 @@ include "./sidebar.php"
 
 <body>
     <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-20 flex justify-between items-center">
+        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>2023/July/24 - 4:04 PM</p>
             </div>
