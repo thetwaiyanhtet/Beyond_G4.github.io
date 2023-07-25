@@ -26,13 +26,13 @@ include "./sidebar.php"
                 <ul class="flex space-x-5 items-center pr-3">
                     <li><ion-icon name="moon-outline"></ion-icon></li>
                     <li><ion-icon name="notifications-outline"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
+                    <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
                 </ul>
             </div>
         </header>
         <section>
-            <p class=" p-3">Inventory > Product Details</p>
-            <div class=" flex justify-center p-5">
+            <p class=" p-3">Inventory > <span class=" font-semibold">Product Details</span></p>
+            <div class=" flex justify-center px-5 py-1">
                 <div class=" w-screen h-full bg-slate-200 rounded-lg p-5 shadow-xl">
                     <div class=" flex justify-between items-center">
                         <h1 class=" text-lg font-bold">Addidas Jac</h1>

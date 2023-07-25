@@ -28,13 +28,13 @@ include "./sidebar.php";
                 <ul class="flex space-x-5 items-center pr-3">
                     <li><ion-icon name="moon-outline"></ion-icon></li>
                     <li><ion-icon name="notifications-outline"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
+                    <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
                 </ul>
             </div>
         </header>
         <section>
             <p class=" p-3">Inventory</p>
-            <div class=" flex-col justify-center p-5">
+            <div class=" flex-col justify-center px-5 py-1">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Overall Inventory</h1>
                     <!-- <div class=" grid grid-cols-4 text-center">
@@ -453,7 +453,7 @@ include "./sidebar.php";
                                         <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
                                     </td>
                                 </tr>
-                                <tr class=" hover:bg-gray-200 ">
+                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                         Magic Mouse 2
                                     </th>

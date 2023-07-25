@@ -18,7 +18,7 @@ include "./sidebar.php"
 
 <body>
     <main class=" ml-56 h-screen">
-        <header class=" border-red-600 border-b-2 h-20 flex justify-between items-center">
+        <header class=" border-gray-300 border-b-2 h-20 flex justify-between items-center">
             <div class=" pl-2">
                 <p>2023/July/24 - 4:04 PM</p>
             </div>
@@ -32,7 +32,7 @@ include "./sidebar.php"
         </header>
         <section>
             <p class=" p-3">Inventory > Product Details</p>
-            <div class=" flex justify-center p-5">
+            <div class=" flex justify-center px-5 py-1">
                 <div class=" w-screen h-full bg-slate-200 rounded-lg p-5 shadow-xl">
                     <h1 class=" text-lg font-bold font-philosopher">Add New Category</h1>
                     <div class=" grid grid-cols-2">
@@ -54,7 +54,7 @@ include "./sidebar.php"
             </div>
 
         </section>
-        
+
     </main>
 </body>
 

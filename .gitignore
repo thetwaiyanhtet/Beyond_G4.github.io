@@ -5,3 +5,6 @@
 ./Ecom/User/package-lock.json
 ./Ecom/Merchant/package-lock.json
 ./Ecom/Merchant/node_modules
+.Merchant/View/resources/lib/tailwind/output.css
+.Merchant/View/node_modules
+.Merchant/package-lock.json
