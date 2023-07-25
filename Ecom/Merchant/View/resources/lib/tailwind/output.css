@@ -584,8 +584,8 @@ video {
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
+.relative {
+  position: relative;
 }
 
 .relative {
@@ -608,6 +608,7 @@ video {
   top: 20%;
 }
 
+<<<<<<< Updated upstream
 .left-80 {
   left: 20rem;
 }
@@ -620,6 +621,8 @@ video {
   top: 3.5rem;
 }
 
+=======
+>>>>>>> Stashed changes
 .z-40 {
   z-index: 40;
 }
@@ -665,6 +668,7 @@ video {
   margin-right: -1rem;
 }
 
+<<<<<<< Updated upstream
 .mx-\[3\%\] {
   margin-left: 3%;
   margin-right: 3%;
@@ -675,6 +679,8 @@ video {
   margin-right: auto;
 }
 
+=======
+>>>>>>> Stashed changes
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -799,6 +805,7 @@ video {
   margin-top: 1.5rem;
 }
 
+<<<<<<< Updated upstream
 .mb-\[1\%\] {
   margin-bottom: 1%;
 }
@@ -815,6 +822,8 @@ video {
   margin-right: 1rem;
 }
 
+=======
+>>>>>>> Stashed changes
 .flex {
   display: flex;
 }
@@ -897,10 +906,13 @@ video {
 
 .h-screen {
   height: 100vh;
+<<<<<<< Updated upstream
 }
 
 .h-4 {
   height: 1rem;
+=======
+>>>>>>> Stashed changes
 }
 
 .min-h-screen {
@@ -1028,6 +1040,7 @@ video {
   width: 100vw;
 }
 
+<<<<<<< Updated upstream
 .w-40 {
   width: 10rem;
 }
@@ -1040,6 +1053,8 @@ video {
   width: 1rem;
 }
 
+=======
+>>>>>>> Stashed changes
 .min-w-\[160px\] {
   min-width: 160px;
 }
@@ -1415,6 +1430,7 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+<<<<<<< Updated upstream
 .bg-blue-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
@@ -1424,6 +1440,8 @@ video {
   fill: currentColor;
 }
 
+=======
+>>>>>>> Stashed changes
 .p-1 {
   padding: 0.25rem;
 }
@@ -1580,6 +1598,7 @@ video {
   padding-top: 1.25rem;
 }
 
+<<<<<<< Updated upstream
 .pr-16 {
   padding-right: 4rem;
 }
@@ -1588,6 +1607,8 @@ video {
   padding-top: 0.5rem;
 }
 
+=======
+>>>>>>> Stashed changes
 .text-left {
   text-align: left;
 }
@@ -1660,11 +1681,14 @@ video {
   line-height: 1rem;
 }
 
+<<<<<<< Updated upstream
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
+=======
+>>>>>>> Stashed changes
 .font-bold {
   font-weight: 700;
 }
@@ -1941,6 +1965,7 @@ video {
   text-decoration-line: underline;
 }
 
+<<<<<<< Updated upstream
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1970,6 +1995,8 @@ video {
   }
 }
 
+=======
+>>>>>>> Stashed changes
 @media (min-width: 1024px) {
   .lg\:px-4 {
     padding-left: 1rem;
