@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       colors:{
         'text1' : '#314755',
-        'btn'  : '#CCCCCC'
+        'btn'   : '#CCCCCC',
+        'text2' : '#7132D7'
+
       },
       fontFamily: {
         philosopher: ["Philosopher", "sans-serif"],
@@ -15,5 +17,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: []
 };

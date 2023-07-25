@@ -26,8 +26,8 @@ include "./sidebar.php";
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-3">
-                    <li><ion-icon name="moon-outline"></ion-icon></li>
-                    <li><ion-icon name="notifications-outline"></ion-icon></li>
+                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
+                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
                 </ul>
             </div>
