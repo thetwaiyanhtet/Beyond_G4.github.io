@@ -29,14 +29,6 @@ include "./sidebar.php"
             </ul>
         </div>
     </header>
-    <!-- <div class="ml-60 m-5 flex justify-between border-solid border-b-2 pb-3 w-">
-        <p class="text-black mt-2">2023/July/25 -2:00 PM</p>
-        <div class="flex space-x-5 justify-center items-center">
-            <ion-icon name="moon" class="mt-2 text-xl"></ion-icon>
-            <ion-icon name="notifications" class="mt-2 text-xl"></ion-icon>
-            <img src="./resources/img/Mask group.png" alt="png" class="w-[50px]">
-        </div>
-    </div> -->
     <p class="font-poppins text-sm ml-60 mt-2">Setting</p>
     <p class="underline text-text2 ml-64 mt-5">Account</p>
     <p class="font-philosopher font-light ml-72 text-base mt-2">logo</p>
