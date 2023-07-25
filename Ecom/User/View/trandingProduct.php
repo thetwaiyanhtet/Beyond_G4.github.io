@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./resources/lib/tailwind/output.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="./resources/lib/tailwind/output.css?id=<?=time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -71,7 +71,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -92,7 +92,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -115,7 +115,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -136,7 +136,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -157,7 +157,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -174,21 +174,21 @@
             </div>
         </div>
 </div>
-        <div class="flex justify-evenly text-center pt-12">
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
-            <div class="w-[70px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+        <div class="flex justify-evenly text-center pt-5 md:pt-12">
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Furniture</div>
+            <div class="w-[50px] text-[5px] lg:text-lg lg:w-[127px] lg:h-[33px] flex items-center justify-center rounded-xl border border-transparent bg-[#E5E5E5]">Clothes</div>
         </div>
 
-<div class="flex justify-around font-poppins pt-12 pl-12 pr-12 lg:pl-0 lg:pr-0 space-x-3">
+<div class="flex justify-around font-poppins pt-5 md:pt-12 pl-12 pr-12 lg:pl-0 lg:pr-0 space-x-3">
         <div>
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -209,7 +209,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -230,7 +230,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -253,7 +253,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -274,7 +274,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">
@@ -295,7 +295,7 @@
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
+                <p class="font-semibold text-[7px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
                 <div class="flex space-x-1 lg:space-x-2">

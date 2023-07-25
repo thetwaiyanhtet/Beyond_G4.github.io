@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body class="mt-3 font-poppins">
+<body class="mt-3 font-poppins ">
 
     <nav class=" flex items-center justify-between mx-[3%]">
         <span class="flex items-center mb-[1%]">
@@ -25,7 +25,7 @@
         </span>
     </nav>
 
-    <main class="relative w-screen h-screen rounded-tl-[35px] rounded-tr-[35px] bg-purple-300">
+    <main class="relative w-full h-screen rounded-tl-[35px] rounded-tr-[35px] bg-purple-300">
 
         <div class=" absolute lg:top-[15%] lg:left-[35%] top-[15%] left-[7%] md:w-[450px] md:h-[420px] w-[360px] h-[520px] bg-white bg-opacity-50 rounded-lg shadow-2xl z-50">
             <div class=" flex-col md:space-y-6 space-y-4 p-5">
@@ -49,7 +49,7 @@
                 </div>
                 <input type="checkbox"> <span>Set as Default</span>
             </div>
-            <div class=" flex space-x-3 float-right mr-5 mt-3 mb-5 md:mb-0">
+            <div class=" flex space-x-3 float-right mr-5 mt-3 mb-5 ">
                 <button class="flex justify-center items-center w-20 px-4 py-2 bg-white rounded-md text-black font-philosopher">Cancel</button>
                 <button class="flex justify-center items-center w-20 px-4 py-2 bg-white rounded-md text-black font-philosopher">Sent</button>
             </div>

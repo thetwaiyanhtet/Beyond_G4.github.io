@@ -52,28 +52,9 @@
             <input type="search" name="q" class="py-2 text-sm w-72 text-white bg-gray-200 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..." autocomplete="off">
         </div>
     </div>
-    <div class="flex justify-around w-screen">
+    <div class="flex ml-3 justify-around w-screen">
         <div class="  flex flex-col justify-center mb-10 ">
-            <div class="w-[100%] max-lg:w-[100%]   border border-[#f3f5f768] flex flex-col justify-center items-center
-         bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
-                <img src="../View/resources/img/crop.png" alt="" class="w-16 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
-                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
-                <div class="flex space-x-1 lg:space-x-0 pb-5">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                </div>
-            </div>
-            <div class="flex border w-[100%] max-lg:w-[100%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
-                <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
-                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
-            </div>
-        </div>
-        <div class="  flex flex-col justify-center mb-10 ">
-            <div class="w-[100%] max-lg:w-[60%]   border border-[#f3f5f768] flex flex-col justify-center items-center
+            <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/crop.png" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
                 <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
@@ -86,13 +67,13 @@
                     <img src="../View/resources/img/star.svg" alt="">
                 </div>
             </div>
-            <div class="flex border w-[100%] max-lg:w-[60%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
+            <div class="flex border w-[100%] max-lg:w-[80%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
                 <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
                 <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
             </div>
         </div>
         <div class="  flex flex-col justify-center mb-10 ">
-            <div class="w-[100%] max-lg:w-[60%]   border border-[#f3f5f768] flex flex-col justify-center items-center
+            <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/crop.png" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
                 <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
@@ -105,35 +86,35 @@
                     <img src="../View/resources/img/star.svg" alt="">
                 </div>
             </div>
-            <div class="flex border w-[100%] max-lg:w-[60%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
+            <div class="flex border w-[100%] max-lg:w-[80%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
+                <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+        <div class="  flex flex-col justify-center mb-10 ">
+            <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/crop.png" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-0 pb-5">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border w-[100%] max-lg:w-[80%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
                 <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
                 <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
             </div>
         </div>
     </div>
 
-    <div class="flex justify-around w-screen">
+    <div class="flex ml-3 justify-around w-screen">
         <div class="  flex flex-col justify-center mb-10 ">
-            <div class="w-[100%] max-lg:w-[60%]   border border-[#f3f5f768] flex flex-col justify-center items-center
-         bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
-                <img src="../View/resources/img/crop.png" alt="" class="w-16 lg:w-60 transition-all duration-200 hover:scale-110">
-                <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
-                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
-                <div class="flex space-x-1 lg:space-x-0 pb-5">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                    <img src="../View/resources/img/star.svg" alt="">
-                </div>
-            </div>
-            <div class="flex border w-[100%] max-lg:w-[60%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
-                <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
-                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
-            </div>
-        </div>
-        <div class="  flex flex-col justify-center mb-10 ">
-            <div class="w-[100%] max-lg:w-[60%]   border border-[#f3f5f768] flex flex-col justify-center items-center
+            <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/crop.png" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
                 <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
@@ -146,13 +127,32 @@
                     <img src="../View/resources/img/star.svg" alt="">
                 </div>
             </div>
-            <div class="flex border w-[100%] max-lg:w-[60%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
+            <div class="flex border w-[100%] max-lg:w-[80%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
+                <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
+            </div>
+        </div>
+        <div class="  flex flex-col justify-center mb-10 ">
+            <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
+         bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
+                <img src="../View/resources/img/crop.png" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
+                <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
+                <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
+                <div class="flex space-x-1 lg:space-x-0 pb-5">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                    <img src="../View/resources/img/star.svg" alt="">
+                </div>
+            </div>
+            <div class="flex border w-[100%] max-lg:w-[80%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
                 <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
                 <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
             </div>
         </div>
         <div class=" flex flex-col justify-center mb-10 ">
-            <div class="w-[100%] max-lg:w-[60%]   border border-[#f3f5f768] flex flex-col justify-center items-center
+            <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
                 <img src="../View/resources/img/crop.png" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
                 <p class="font-semibold text-[9px] max-md:text-sm">Crop Top</p>
@@ -165,13 +165,29 @@
                     <img src="../View/resources/img/star.svg" alt="">
                 </div>
             </div>
-            <div class="flex border w-[100%] max-lg:w-[60%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
+            <div class="flex border w-[100%] max-lg:w-[80%]  cursor-pointer border-[#517ca868] items-center justify-center p-3 rounded-bl-md shadow-lg rounded-br-md space-x-1  lg:space-x-3">
                 <p class="font-bold text-center text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
                 <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
             </div>
         </div>
     </div>
-
+    <p class="text-2xl text-center mb-5">Contact Info</p>
+    <div class="flex justify-center">
+        <div class="flex flex-col  font-semibold mb-8 font-Playfair Display">
+            <div class="flex   space-x-8">
+                <p>Email</p>
+                <p>gymshark123@gmail.com</p>
+            </div>
+            <div class="flex   space-x-8">
+                <p>Phone</p>
+                <p>+95123456789</p>
+            </div>
+            <div class="flex   space-x-8">
+                <p>Address</p>
+                <p>Tarmwe,Yangon</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

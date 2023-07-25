@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body class="mt-3 font-poppins overflow-hidden">
+<body class="mt-3 font-poppins">
 
     <nav class=" flex items-center justify-between mx-[3%]">
         <span class="flex items-center">
