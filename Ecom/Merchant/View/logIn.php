@@ -37,13 +37,15 @@
                     <div>
                     <input type="checkbox" name="" id="">Remember me
                     </div>                
-                    <a href="#" class=" font-poppins font-medium text-sm underline text-[#1366D9]">Forget password</a>
+                    <a href="./forgetPassword.php" class=" font-poppins font-medium text-sm underline text-[#1366D9]">Forget password</a>
                 </div>
             </div>
             
+            <a href="./dashboard.php">
             <button class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center 
             font-PlayfairSC text-white">Sign in</button>
-            <div class=" text-center text-[#667085]">Don’t have an account? <a href="#" class="text-[#1366D9]" >Sign up</a></div>
+            </a>
+            <div class=" text-center text-[#667085]">Don’t have an account? <a href="./signUp.php" class="text-[#1366D9]" >Sign up</a></div>
         </div>
     </div>
 </body>

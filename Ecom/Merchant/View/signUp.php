@@ -39,9 +39,11 @@
                 <div class="text-[#667085]">Must be at least 8 characters.</div>
             </div>
             
+            <a href="./ChoosePlan.php">
             <button class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center 
             font-PlayfairSC text-white">Get Started</button>
-            <div class=" text-center text-[#667085]">Already have an account? <a href="#" class="text-[#1366D9]" >Log in</a></div>
+            </a>
+            <div class=" text-center text-[#667085]">Already have an account? <a href="./logIn.php" class="text-[#1366D9]" >Log in</a></div>
         </div>
     </div>
 </body>

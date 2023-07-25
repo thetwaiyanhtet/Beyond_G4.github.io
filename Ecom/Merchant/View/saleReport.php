@@ -72,9 +72,17 @@ include "./sidebar.php";
                             <th scope="col" class="px-6 py-3">
                                 Category
                             </th>
-
+                            <th scope="col" class="px-6 py-3">
+                                buying Price
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                selling price
+                            </th>
                             <th scope="col" class="px-6 py-3">
                                 quantity sold
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Total price
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 date
@@ -93,9 +101,18 @@ include "./sidebar.php";
                             <td class="px-6 py-4">
                                 Laptop
                             </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                $1100
+                            </td>
 
                             <td class="px-16 py-4 ">
                                 9
+                            </td>
+                            <td class="px-16 py-4 ">
+                                $9900
                             </td>
                             <td class="px-6 py-4">
                                 24/07/2023
@@ -112,9 +129,18 @@ include "./sidebar.php";
                             <td class="px-6 py-4">
                                 Laptop Pc
                             </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                $1100
+                            </td>
 
                             <td class="px-16 py-4">
                                 9
+                            </td>
+                            <td class="px-16 py-4 ">
+                                $9900
                             </td>
                             <td class="px-6 py-4">
                                 24/07/2023
@@ -131,9 +157,18 @@ include "./sidebar.php";
                             <td class="px-6 py-4">
                                 Accessories
                             </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                $1100
+                            </td>
 
                             <td class="px-16 py-4">
                                 9
+                            </td>
+                            <td class="px-16 py-4 ">
+                                $9900
                             </td>
                             <td class="px-6 py-4">
                                 24/07/2023
@@ -150,9 +185,18 @@ include "./sidebar.php";
                             <td class="px-6 py-4">
                                 Accessories
                             </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                $1100
+                            </td>
 
                             <td class="px-16 py-4">
                                 9
+                            </td>
+                            <td class="px-16 py-4 ">
+                                $9900
                             </td>
                             <td class="px-6 py-4">
                                 24/07/2023
@@ -169,9 +213,18 @@ include "./sidebar.php";
                             <td class="px-6 py-4">
                                 Accessories
                             </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                $1100
+                            </td>
 
                             <td class="px-16 py-4">
                                 9
+                            </td>
+                            <td class="px-16 py-4 ">
+                                $9900
                             </td>
                             <td class="px-6 py-4">
                                 24/07/2023
@@ -188,9 +241,18 @@ include "./sidebar.php";
                             <td class="px-6 py-4">
                                 Accessories
                             </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                $1100
+                            </td>
 
                             <td class="px-16 py-4">
                                 9
+                            </td>
+                            <td class="px-16 py-4 ">
+                                $9900
                             </td>
                             <td class="px-6 py-4">
                                 24/07/2023
@@ -207,9 +269,18 @@ include "./sidebar.php";
                             <td class="px-6 py-4">
                                 Accessories
                             </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                $1100
+                            </td>
 
                             <td class="px-16 py-4">
                                 9
+                            </td>
+                            <td class="px-16 py-4 ">
+                                $9900
                             </td>
                             <td class="px-6 py-4">
                                 24/07/2023
