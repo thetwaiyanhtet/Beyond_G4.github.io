@@ -20,15 +20,15 @@ include "./sidebar.php";
 
 <body>
     <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-20 flex justify-between items-center">
+        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>2023/July/24 - 4:04 PM</p>
             </div>
             <div>
-                <ul class="flex space-x-5 items-center pr-3">
+                <ul class="flex space-x-5 items-center pr-5">
                     <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
+                    <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
                 </ul>
             </div>
         </header>
@@ -484,7 +484,7 @@ include "./sidebar.php";
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="flex justify-between items-center py-2 px-3">
+                        <div class="flex justify-between items-center py-2 pt-5 px-3">
                             <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
                             <div>Page 1 of 10</div>
                             <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Next</button></div>
