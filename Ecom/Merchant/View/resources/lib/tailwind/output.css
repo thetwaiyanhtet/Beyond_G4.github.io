@@ -891,6 +891,10 @@ video {
   height: 500px;
 }
 
+.h-\[82px\] {
+  height: 82px;
+}
+
 .h-auto {
   height: auto;
 }
@@ -901,10 +905,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[82px\] {
-  height: 82px;
 }
 
 .min-h-screen {
@@ -1042,10 +1042,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[50px\] {
-  width: 50px;
 }
 
 .min-w-\[160px\] {
