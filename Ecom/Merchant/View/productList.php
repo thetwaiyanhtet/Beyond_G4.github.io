@@ -157,7 +157,7 @@ include "./sidebar.php";
                         </div>
                     </div>
 
-                    <div class="relative overflow-x-auto py-3">
+                    <div class="relative overflow-x-auto py-5">
                         <table class="w-full text-sm text-left text-gray-500 ">
                             <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                                 <tr>
