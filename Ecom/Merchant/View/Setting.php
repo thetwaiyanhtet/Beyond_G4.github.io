@@ -19,22 +19,27 @@ include "./sidebar.php"
 <body>
 <<<<<<< Updated upstream
     <header class=" border-gray-300 border-b-2 h-[59px] flex justify-between items-center ml-56">
-        <div class="pl-2">
-=======
-    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
-        <div class=" pl-2">
->>>>>>> Stashed changes
-            <p>2023/July/24 - 4:04 PM</p>
-        </div>
-        <div>
-            <ul class="flex space-x-5 items-center pr-3">
-                <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
-                <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
-                <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
-            </ul>
-        </div>
-    </header>
+            <div class="pl-2">
+                <p>2023/July/24 - 4:04 PM</p>
+            </div>
+            <div>
+                <ul class="flex space-x-5 items-center pr-3">
+                    <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
+                    <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
+                    <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
+                </ul>
+            </div>
+        </header>
     <div class="ml-64">
+        
+        <!-- <div class="ml-60 m-5 flex justify-between border-solid border-b-2 pb-3 w-">
+        <p class="text-black mt-2">2023/July/25 -2:00 PM</p>
+        <div class="flex space-x-5 justify-center items-center">
+            <ion-icon name="moon" class="mt-2 text-xl"></ion-icon>
+            <ion-icon name="notifications" class="mt-2 text-xl"></ion-icon>
+            <img src="./resources/img/Mask group.png" alt="png" class="w-[50px]">
+        </div>
+    </div> -->
         <p class="font-poppins text-sm mt-2">Setting</p>
         <p class="underline text-text2  mt-5">Account</p>
         <p class="font-philosopher font-light text-base mt-2">logo</p>
@@ -79,7 +84,7 @@ include "./sidebar.php"
         <form action="" class="w-full h-auto relative">
             <div class="flex flex-col">
                 <label for="" class=" text-sm">Old Password</label>
-                <input type="text" name="" id="" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium" placeholder="Please enter old password">
+                <input type="text" name="" id="" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium placeholder: " placeholder=" Please enter old password">
             </div>
             <div class="absolute right-[250px] top-0">
                 <div class="flex-col">

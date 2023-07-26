@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode : ['class','[data-mode="dark"]'],
   content: ["./View/*.{html,js,php}"],
   theme: {
     extend: {
@@ -23,19 +22,6 @@ module.exports = {
         'poppins':['Poppins', 'sans-serif'],
         'Playfair Display': ['Playfair Display', 'serif'],
         'PlayfairSC': ['Playfair Display SC', 'serif']
-      },
-      styles: {
-        '.sr-only': {
-          position: 'absolute',
-          width: '1px',
-          height: '1px',
-          padding: '0',
-          margin: '-1px',
-          overflow: 'hidden',
-          clip: 'rect(0, 0, 0, 0)',
-          'white-space': 'nowrap',
-          'border-width': '0',
-        },
       },
     },
   },

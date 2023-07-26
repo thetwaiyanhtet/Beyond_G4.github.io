@@ -25,7 +25,7 @@ include "./sidebar.php";
                 <p>2023/July/24 - 4:04 PM</p>
             </div>
             <div>
-                <ul class="flex space-x-5 items-center pr-3">
+                <ul class="flex space-x-5 items-center pr-5">
                     <li><ion-icon name="moon-outline"></ion-icon></li>
                     <li><ion-icon name="notifications-outline"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="30px"></li>
