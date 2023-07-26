@@ -21,7 +21,7 @@ include "./adminsidebar.php";
     <main class=" ml-72 pt-10 font-Inter">
         <p class="font-bold text-lg">“Customer Name” Profile</p>
         <div class=" flex justify-center pr-5 py-6">
-            <div class=" w-screen h-full rounded-lg p-5 border border-black shadow-md">
+            <div class=" w-screen h-full rounded-lg p-5 border border-gray-400 shadow-md">
                 <h1 class=" text-lg font-bold ">Customer Information</h1>
                 <div class=" flex-col space-y-3 w-full py-4 text-lg font-bold">
                     <div class=" flex">
@@ -44,7 +44,7 @@ include "./adminsidebar.php";
         </div>
 
         <div class=" flex justify-center pr-5 py-3">
-            <div class="flex w-full h-full rounded-lg p-5 border border-black shadow-md space-x-20 text-lg">
+            <div class="flex w-full h-full rounded-lg p-5 border border-gray-400 shadow-md space-x-20 text-lg">
                 <div class=" w-full h-full  rounded-lg pt-7 pb-7 pl-6 pr-6 shadow-xl border border-gray-400">
                     <div class=" flex justify-around items-center space-x-5 p-3">
                         <div class="w-[80px] h-[80px] bg-[#2535A1] flex items-center justify-center rounded-lg">
@@ -82,7 +82,7 @@ include "./adminsidebar.php";
         </div>
         <!-- 3rd section -->
         <div class=" flex justify-center pr-5 py-3">
-            <div class="flex flex-col w-full rounded-lg  border border-black shadow-md text-lg">
+            <div class="flex flex-col w-full rounded-lg  border border-gray-400 shadow-md text-lg">
                 <p class="text-lg font-bold p-5 border border-b-black h-14">All purchased products</p>
 
                 <div class="flex justify-between p-5">
@@ -155,7 +155,7 @@ include "./adminsidebar.php";
 
         <!-- 4th section -->
         <div class=" flex justify-center pr-5 py-3">
-        <div class=" w-full rounded-lg p-2 shadow-xl border-2 border-blue-950 mt-3  ">
+        <div class=" w-full rounded-lg p-2 shadow-xl border border-gray-400 mt-3  ">
         <p class="text-2xl font-bold p-3 ">Recent Orders</p>
             <div class="relative overflow-x-auto py-3">
                 <table class="w-full text-sm text-left text-gray-500 ">
