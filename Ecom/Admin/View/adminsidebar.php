@@ -26,7 +26,7 @@
             <ul class="flex space-x-5 items-center pr-5 text-white">
                 <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                 <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                <li><img src="./resources/lib/img/amazfit.png" alt="..." width="40px"></li>
+                <li><img src="./resources/img/amazfit.png" alt="..." width="40px"></li>
                 <li class=" font-medium">John Derek</li>
             </ul>
         </div>
