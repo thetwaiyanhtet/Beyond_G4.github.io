@@ -19,7 +19,7 @@
     <div>
     <div class="flex items-center justify-between bg-blue-600 w-full fixed z-40 h-[80px]">
         <div class="flex items-center pl-4">
-            <img class="w-20" src="./resources/lib/img/logo.png" alt="">
+            <img class="w-20" src="./resources/img/logo.png" alt="">
             <span class=" text-2xl font-bold text-white">Beyond</span>
         </div>
         <div>
