@@ -16,13 +16,8 @@
     <!-- component -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-<<<<<<< Updated upstream
-
-    <div class="flex items-center justify-between bg-blue-600 w-full  z-40 h-[80px]">
-=======
     <div>
     <div class="flex items-center justify-between bg-blue-600 w-full fixed z-40 h-[80px]">
->>>>>>> Stashed changes
         <div class="flex items-center pl-4">
             <img class="w-20" src="./resources/lib/img/logo.png" alt="">
             <span class=" text-2xl font-bold text-white">Beyond</span>
