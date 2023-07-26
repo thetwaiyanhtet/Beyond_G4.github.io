@@ -16,7 +16,9 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-   
+   <main class=" ml-64 mt-20">
+    <p>Update Profile and Passwod</p>
+   </main>
 </body>
 
 </html>

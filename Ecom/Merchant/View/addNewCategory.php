@@ -31,7 +31,7 @@ include "./sidebar.php"
             </div>
         </header>
         <section>
-            <p class=" p-3">Inventory > Product Details</p>
+            <p class=" p-3">Inventory > <span class=" font-bold">Add New Category</span></p>
             <div class=" flex justify-center px-5 py-1">
                 <div class=" w-screen h-full bg-slate-200 rounded-lg p-5 shadow-xl">
                     <h1 class=" text-lg font-bold font-philosopher">Add New Category</h1>
@@ -46,7 +46,7 @@ include "./sidebar.php"
                         </div>
                         <div class=" p-3 py-4">
                             <p class=" text-base font-semibold pb-4">Description</p>
-                            <textarea cols="50" rows="5" class=" rounded-md"></textarea>
+                            <textarea cols="50" rows="5" class=" rounded-md outline-none indent-2 p-2"></textarea>
                         </div>
                     </div>
                     <button class="btn float-right">Save</button>
