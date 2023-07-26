@@ -2063,6 +2063,10 @@ video {
   text-align: start;
 }
 
+.indent-2 {
+  text-indent: 0.5rem;
+}
+
 .font-PlayfairSC {
   font-family: Playfair Display SC, serif;
 }
