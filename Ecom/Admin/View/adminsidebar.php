@@ -16,17 +16,22 @@
     <!-- component -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
+<<<<<<< Updated upstream
 
-    <div class="flex items-center justify-between bg-blue-600 w-full  fixed  z-40 h-[80px]">
+    <div class="flex items-center justify-between bg-blue-600 w-full  z-40 h-[80px]">
+=======
+    <div>
+    <div class="flex items-center justify-between bg-blue-600 w-full fixed z-40 h-[80px]">
+>>>>>>> Stashed changes
         <div class="flex items-center pl-4">
-            <img class="w-20" src="./resources/lib/img/logo.png" alt="">
+            <img class="w-20" src="./resources/img/logo.png" alt="">
             <span class=" text-2xl font-bold text-white">Beyond</span>
         </div>
         <div>
             <ul class="flex space-x-5 items-center pr-5 text-white">
                 <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                 <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                <li><img src="./resources/lib/img/amazfit.png" alt="..." width="40px"></li>
+                <li><img src="./resources/img/amazfit.png" alt="..." width="40px"></li>
                 <li class=" font-medium">John Derek</li>
             </ul>
         </div>

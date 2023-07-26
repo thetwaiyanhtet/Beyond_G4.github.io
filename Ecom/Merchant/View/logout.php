@@ -21,34 +21,35 @@ include "./sidebar.php";
 <body>
     <main class=" ml-56 h-screen relative">
 
-        <section class="fixed left-[45%] top-[35%] border bg-gray-200 rounded-md shadow-lg w-60 p-5">
+        <section class="fixed left-[45%] top-[35%] border bg-gray-300 rounded-md shadow-lg w-60 p-5">
             <div>
-                <div>
-                    <p>Log out of your account?</p>
+                <div class=" border-b-2 border-gray-500">
+                    <p class="pb-3">Log out of your account?</p>
                 </div>
                 <div class=" flex justify-center items-center space-x-5 pt-3">
-                    <p class=" text-blue-500">Cancel</p>
+                    <p class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
                     <p class=" text-red-500">Log out</p>
                 </div>
             </div>
         </section>
 
-        <div class="">
-            <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center blur-3xl">
-                <div class=" pl-2">
-                    <p>2023/July/24 - 4:04 PM</p>
-                </div>
-                <div>
-                    <ul class="flex space-x-5 items-center pr-5">
-                        <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
-                        <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                        <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
-                    </ul>
-                </div>
-            </header>
+
+        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+            <div class=" pl-2">
+                <p>2023/July/24 - 4:04 PM</p>
+            </div>
+            <div>
+                <ul class="flex space-x-5 items-center pr-5">
+                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
+                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
+                    <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
+                </ul>
+            </div>
+        </header>
+        <div class=" blur-sm">
             <section>
                 <p class=" p-3">Dashboard</p>
-                <div class=" flex justify-center px-5 py-2 space-x-4 blur-lg">
+                <div class=" flex justify-center px-5 py-2 space-x-4">
                     <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                         <h1 class=" text-lg font-bold font-philosopher pb-5">Sales Overview</h1>
                         <div class=" flex justify-between pb-3">
@@ -116,7 +117,7 @@ include "./sidebar.php";
                     </div>
                 </div>
 
-                <div class=" flex justify-center px-5 py-2 space-x-4 blur-lg">
+                <div class=" flex justify-center px-5 py-2 space-x-4 ">
                     <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                         <h1 class=" text-lg font-bold font-philosopher pb-5">Customer Reviews</h1>
                         <div class=" flex justify-between pb-3">
@@ -262,7 +263,7 @@ include "./sidebar.php";
                     </div>
                 </div>
 
-                <div class=" flex justify-center px-5 py-2 space-x-4 blur-lg">
+                <div class=" flex justify-center px-5 py-2 space-x-4 ">
                     <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                         <h1 class=" text-lg font-bold font-philosopher pb-5">Top Selling Stocks</h1>
                         <div class=" flex-col justify-between pb-5">
@@ -362,7 +363,7 @@ include "./sidebar.php";
                     </div>
                 </div>
 
-                <div class=" flex justify-center px-5 py-2 space-x-4 blur-lg">
+                <div class=" flex justify-center px-5 py-2 space-x-4">
                     <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                         <div class="flex justify-between items-center">
                             <h1 class=" text-lg font-bold font-philosopher">Sales & Profits</h1>
