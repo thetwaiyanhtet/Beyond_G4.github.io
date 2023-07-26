@@ -7,12 +7,15 @@
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
-<body>
+<body class=" font-poppins">
     <!-- component -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
@@ -32,7 +35,7 @@
             </div>
         </div>
 
-        <div class="bg-white font-sans fixed  min-h-screen border shadow-xl text-ellipsis flex justify-around">
+        <div class="bg-white font-poppins fixed  min-h-screen border shadow-xl text-ellipsis flex justify-around">
             <div class="flex flex-col sm:flex-row sm:justify-around">
                 <div class="w-64 h-screen ">
                     <nav class=" mt-28">
@@ -146,7 +149,7 @@
                             </button>
                         </div>
                         <div x-data="{ open: false }">
-                            <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                            <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none setting">
                                 <span class="flex items-center ">
                                     <ion-icon class="h-5 w-5" name="settings-outline"></ion-icon>
                                     <span class="mx-4 font-medium">Setting</span>
@@ -162,7 +165,7 @@
 
                             <div x-show="open" class="bg-gray-100">
                                 <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Service and Contact</a>
-                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Update Profile</a>
+                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white updateProfile" href="#">Update Profile</a>
                                 <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Update Logo and Name</a>
                                 <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Term and Condition</a>
                                 <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">FAQs</a>
