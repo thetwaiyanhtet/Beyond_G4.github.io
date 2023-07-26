@@ -9,7 +9,7 @@ include "./sidebar.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
+    <title>Dashboard</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
@@ -216,9 +216,7 @@ include "./sidebar.php";
                 <div class=" w-full h-full space-y-4  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-6">Trending Products</h1>
                     <div class=" flex-col justify-between pb-3">
-                        <div class=" flex justify-center">
-                            <img src="./resources/img/pieChart.png" alt="...">
-                        </div>
+                            <img src="./resources/img/pieChart.png" alt="..." class=" mx-auto">
                     </div>
 
                     <div class=" flex justify-around py-4">
