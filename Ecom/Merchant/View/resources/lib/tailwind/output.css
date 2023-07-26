@@ -656,10 +656,6 @@ video {
   top: 20%;
 }
 
-.top-\[30\%\] {
-  top: 30%;
-}
-
 .top-\[35\%\] {
   top: 35%;
 }
@@ -680,6 +676,10 @@ video {
   clear: both;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .m-10 {
   margin: 2.5rem;
 }
@@ -692,6 +692,10 @@ video {
   margin: 0.5rem;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -702,14 +706,6 @@ video {
 
 .m-auto {
   margin: auto;
-}
-
-.m-1 {
-  margin: 0.25rem;
-}
-
-.m-3 {
-  margin: 0.75rem;
 }
 
 .-mx-4 {
@@ -819,6 +815,10 @@ video {
   margin-right: 0.25rem;
 }
 
+.mr-14 {
+  margin-right: 3.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -847,6 +847,10 @@ video {
   margin-top: 0.125rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -873,14 +877,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mr-14 {
-  margin-right: 3.5rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
 }
 
 .block {
@@ -947,8 +943,20 @@ video {
   height: 1.25rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
 .h-6 {
   height: 1.5rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-80 {
@@ -965,6 +973,10 @@ video {
 
 .h-\[350px\] {
   height: 350px;
+}
+
+.h-\[390px\] {
+  height: 390px;
 }
 
 .h-\[40px\] {
@@ -999,6 +1011,10 @@ video {
   height: 670px;
 }
 
+.h-\[730px\] {
+  height: 730px;
+}
+
 .h-\[80px\] {
   height: 80px;
 }
@@ -1017,26 +1033,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-56 {
-  height: 14rem;
-}
-
-.h-64 {
-  height: 16rem;
-}
-
-.h-8 {
-  height: 2rem;
-}
-
-.h-\[390px\] {
-  height: 390px;
-}
-
-.h-\[730px\] {
-  height: 730px;
 }
 
 .min-h-screen {
@@ -1155,6 +1151,10 @@ video {
   width: 360px;
 }
 
+.w-\[400px\] {
+  width: 400px;
+}
+
 .w-\[450px\] {
   width: 450px;
 }
@@ -1195,6 +1195,10 @@ video {
   width: 850px;
 }
 
+.w-\[900px\] {
+  width: 900px;
+}
+
 .w-\[98\%\] {
   width: 98%;
 }
@@ -1214,14 +1218,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[900px\] {
-  width: 900px;
 }
 
 .min-w-\[160px\] {
@@ -1614,6 +1610,11 @@ video {
   background-color: rgb(243 246 255 / var(--tw-bg-opacity));
 }
 
+.bg-bg-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1637,6 +1638,11 @@ video {
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .bg-btn {
@@ -1694,6 +1700,11 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
 .bg-slate-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
@@ -1718,6 +1729,7 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+<<<<<<< Updated upstream
 .bg-bg-color {
   --tw-bg-opacity: 1;
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
@@ -1738,6 +1750,8 @@ video {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+=======
+>>>>>>> Stashed changes
 .fill-current {
   fill: currentColor;
 }
