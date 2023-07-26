@@ -17,8 +17,13 @@ include "./sidebar.php"
 </head>
 
 <body>
+<<<<<<< Updated upstream
     <header class=" border-gray-300 border-b-2 h-[59px] flex justify-between items-center ml-56">
         <div class="pl-2">
+=======
+    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
+        <div class=" pl-2">
+>>>>>>> Stashed changes
             <p>2023/July/24 - 4:04 PM</p>
         </div>
         <div>
