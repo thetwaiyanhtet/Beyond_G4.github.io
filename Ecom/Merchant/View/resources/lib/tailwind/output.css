@@ -1703,6 +1703,14 @@ video {
   padding-right: 1rem;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pr-7 {
+  padding-right: 1.75rem;
+}
+
 .pt-14 {
   padding-top: 3.5rem;
 }
