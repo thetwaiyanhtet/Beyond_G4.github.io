@@ -15,25 +15,32 @@ include "./sidebar.php"
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
+<style>
+    * {
+        outline: 1px solid red;
+    }
+</style>
 
 <body>
+    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <div class="pl-2">
+            <p>2023/July/24 - 4:04 PM</p>
+        </div>
+        <div>
+            <ul class="flex space-x-5 items-center pr-3">
+                <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
+                <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
+                <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
+            </ul>
+        </div>
+    </header>
+    <p class="m-5">Chat Box</p>
     <main class="ml-56 w-auto h-screen relative">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class="pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-3">
-                    <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
-                    <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
-                </ul>
-            </div>
-        </header>
-        <p class="m-5">Chat Box</p>
+
+       
 
         <!--Customer-->
-        <div class="w-[320px] h-[480px] border border-solid m-5 bg-gray-400 rounded-lg space-y-3">
+        <div class=" w-[325px] h-[480px] border border-solid m-5 bg-gray-400 rounded-lg space-y-3">
             <p class="m-5 font-bold font-poppins text-2xl">Customers</p>
             <div class="border border-solid w-52 h-10 rounded-lg m-5 bg-black border-black">
                 <ion-icon name="search-outline" class="pl-2 pt-2 text-white"></ion-icon>
@@ -107,7 +114,7 @@ include "./sidebar.php"
             </div>
         </div>
         <!--Admin-->
-        <div class="w-[320px] h-[150px] border border-solid m-5 bg-gray-400 rounded-lg">
+        <div class="w-[325px] h-[150px] border border-solid m-5 bg-gray-400 rounded-lg">
             <p class="m-5 font-bold font-poppins text-2xl">Admin</p>
 
             <div class=" w-[320px] h-12 flex justify-around space-x-2">
@@ -165,14 +172,9 @@ include "./sidebar.php"
             <div class="w-[850px] h-[100px] bg-text-bg absolute bottom-0">
                 <input type='text' class="w-[650px] h-10 rounded-xl bg-[#1E1F25] border-[#1E1F25] text-text3 border border-solid text-center focus:outline-none absolute top-7 left-20" placeholder="Add to text"></input>
                 <img src="./resources/img/Shape.png" alt="send" class="w-4 absolute top-10 left-[750px]">
-
             </div>
 
         </div>
-
-
-
-
 
     </main>
 </body>

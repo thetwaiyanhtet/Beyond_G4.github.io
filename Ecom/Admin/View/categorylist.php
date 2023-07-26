@@ -14,13 +14,13 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class="  ml-60 h-screen  w-[80%]">
+    <main class="  ml-60 h-screen pt-20  w-[80%]">
     
         <div class="ml-10">
             <p class=" text-2xl font-bold">Myanmar Chest</p>
             <div class=" flex items-center mt-5">
                 <span class="text-xl">Search : </span>
-                <input class="bg-gray-300 ml-3 w-52 rounded-lg h-8" type="search" name="" id="">
+                <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8" type="search" name="" id="">
             </div>
             <div class="border shadow-2xl mt-10 rounded-xl">
             <div class="  p-5">
@@ -28,11 +28,11 @@ include "./adminsidebar.php";
                 <div class="flex justify-around">
                     <div class="space-y-3 mt-5">
                         <p>Category</p>
-                        <input class=" border rounded-md cursor-text h-8 w-72" type="text">
+                        <input class=" outline-none border rounded-md cursor-text h-8 w-72" type="text">
                     </div>
                     <div class="flex flex-col justify-start space-y-3 mt-5">
                         <p>Description</p>
-                        <textarea class="border" id="text" name="text" rows="4" cols="50">
+                        <textarea class="border outline-none" id="text" name="text" rows="4" cols="50">
 </textarea>
                     </div>
                 </div>
