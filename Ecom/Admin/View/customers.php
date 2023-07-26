@@ -17,9 +17,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-<main class=" ml-72 h-screen">
-    Hello
-</main>
+<p class="ml-72">Hello</p>
 
 </body>
 </html>
