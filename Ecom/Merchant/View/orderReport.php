@@ -56,6 +56,8 @@ include "./sidebar.php";
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
         </div>
+
+        
         <div class=" w-[98%] rounded-lg p-2 shadow-xl border-2 border-blue-950 mt-3 ">
             <div class="relative overflow-x-auto py-3">
                 <table class="w-full text-sm text-left text-gray-500 ">

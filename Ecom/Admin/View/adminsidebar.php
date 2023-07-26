@@ -16,8 +16,13 @@
     <!-- component -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div>
+<<<<<<< Updated upstream
+
     <div class="flex items-center justify-between bg-blue-600 w-full  z-40 h-[80px]">
+=======
+    <div>
+    <div class="flex items-center justify-between bg-blue-600 w-full fixed z-40 h-[80px]">
+>>>>>>> Stashed changes
         <div class="flex items-center pl-4">
             <img class="w-20" src="./resources/lib/img/logo.png" alt="">
             <span class=" text-2xl font-bold text-white">Beyond</span>
@@ -35,7 +40,7 @@
     <div class="bg-white font-sans fixed  min-h-screen border shadow-xl text-ellipsis flex justify-around">
         <div class="flex flex-col sm:flex-row sm:justify-around">
             <div class="w-64 h-screen ">
-                <nav class=" mt-10">
+                <nav class=" mt-28">
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600  focus:outline-none">
                             <span class="flex items-center">
@@ -45,14 +50,25 @@
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600  focus:outline-none">
+                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600  focus:outline-none">
                             <span class="flex items-center">
-                                <ion-icon class="h-5 w-5" name="file-tray-stacked-outline"></ion-icon>
+                                <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Category</span>
                             </span>
-                        </button>
-                    </div>
 
+                            <span>
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
+                                    <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </button>
+
+                        <div x-show="open" class="bg-gray-100">
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Category List</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Add Category</a>
+                        </div>
+                    </div>
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600  focus:outline-none">
                             <span class="flex items-center">
@@ -169,7 +185,7 @@
             </div>
         </div>
     </div>
-    </div>
+
 
 
 </body>
