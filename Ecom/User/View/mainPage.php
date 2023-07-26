@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
@@ -20,8 +27,8 @@
     <nav class="bg-gradient-to-r from-fuchsia-300 to-purple-500  border-gray-200 dark:bg-gray-900 ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
-                <img src="./resources/img/logo.png" class="mr-3 h-8" alt="beyond Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Beyond</span>
+                <img src="./resources/img/logo.png" class="mr-3 h-10" alt="beyond Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Beyond</span>
             </a>
             <div class="flex items-center md:order-2">
                 <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
@@ -51,11 +58,23 @@
                 </div>
                 <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
             </div>
+
+
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+
+
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
@@ -71,15 +90,16 @@
             </div>
         </div>
     </nav>
-    <div class="search_area flex justify-end items-center w-full h-14 md:h-20 bg-gradient-to-r from-fuchsia-200 to-purple-300 pr-4">
+    <!-- <div class="search_area flex justify-end items-center w-full h-14 md:h-20 bg-gradient-to-r from-fuchsia-200 to-purple-300 pr-4">
         <div class="flex items-center justify-evenly lg:w-[380px] h-[31px] lg:h-[44px] border border-[#f3f5f761] rounded-md bg-[#F3F5F7] shadow-md">
             <ion-icon name="search-outline" class="lg:w-[25px] lg:h-[25px] pl-2"></ion-icon>
             <input type="text" placeholder="Search" class="bg-[#F3F5F7] outline-none w-[120px] lg:w-[200px] pl-2">
             <ion-icon name="mic-outline" class="lg:w-[25px] lg:h-[25px] pr-2"></ion-icon>
-        </div>
+        </div> -->
     </div>
     <div>
-        <img src="./resources/img/home_hero/Banner_1.png" alt="" class="w-full">
+        <img src="./resources/img/home_hero/Banner_1.png" alt="" class="w-full 
+        h-auto">
     </div>
     <a href=""></a>
     <!-- product -->
@@ -87,7 +107,7 @@
         <div class="my-2">
             <div class="w-[121px] lg:w-[300px] h-[145px] lg:h-[320px]  border border-[#f3f5f768] flex flex-col justify-center items-center
          bg-gradient-to-t from-[#f5edf8] - to-[#c2aaca7e] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
-                <img src="../View/resources/img/camera.png" alt="" class="w-20 lg:w-60 transition-all duration-200 hover:scale-110">
+                <img src="../View/resources/img/camera.png" alt="" class="w-20 md:w-60 transition-all duration-200 hover:scale-110">
                 <p class="font-semibold text-[9px] lg:text-base">Joystick Game Controller</p>
                 <p class="text-xs lg:text-base  text-[#637381]">E Spot</p>
                 <p class=" font-extrabold text-xs lg:text-2xl">$999.00</p>
@@ -275,7 +295,9 @@
     <div>
         <img src="./resources/img/home_hero/shop_bg.gif" alt="" class="w-full">
     </div>
+    <script src="./toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
 </body>
 
 </html>

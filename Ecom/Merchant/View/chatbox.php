@@ -15,14 +15,10 @@ include "./sidebar.php"
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
-<style>
-    * {
-        outline: 1px solid red;
-    }
-</style>
+
 
 <body>
-    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
         <div class="pl-2">
             <p>2023/July/24 - 4:04 PM</p>
         </div>
@@ -34,22 +30,22 @@ include "./sidebar.php"
             </ul>
         </div>
     </header>
-    <p class="m-5">Chat Box</p>
-    <main class="ml-56 w-auto h-screen relative">
+    <p class="m-5 ml-64">Chat Box</p>
+    <main class="ml-56 w-auto h-auto relative">
 
-       
+
 
         <!--Customer-->
-        <div class=" w-[325px] h-[480px] border border-solid m-5 bg-gray-400 rounded-lg space-y-3">
-            <p class="m-5 font-bold font-poppins text-2xl">Customers</p>
-            <div class="border border-solid w-52 h-10 rounded-lg m-5 bg-black border-black">
+        <div class=" w-[325px] h-[480px] border border-solid m-5 bg-gray-200 rounded-lg space-y-3">
+
+            <div class="border border-solid w-64 h-10 rounded-lg m-5 bg-black border-black">
                 <ion-icon name="search-outline" class="pl-2 pt-2 text-white"></ion-icon>
                 <input type="text" placeholder="Search" class="pl-2 bg-transparent focus:outline-none text-white">
             </div>
             <div class=" w-[320px] h-12 flex justify-around space-x-2">
                 <img src="./resources/img/Mask group (1).png" alt="c1" class="h-10 ml-2">
                 <div class="w-44 h-16">
-                    <p class=" font-poppins text-base">Customer1</p>
+                    <p class=" font-poppins text-base">Admin</p>
                     <p class="font-poppins text-sm">Hello</p>
                 </div>
                 <div class="w-18">
@@ -114,7 +110,7 @@ include "./sidebar.php"
             </div>
         </div>
         <!--Admin-->
-        <div class="w-[325px] h-[150px] border border-solid m-5 bg-gray-400 rounded-lg">
+        <!-- <div class="w-[325px] h-[150px] border border-solid m-5 bg-gray-200 rounded-lg">
             <p class="m-5 font-bold font-poppins text-2xl">Admin</p>
 
             <div class=" w-[320px] h-12 flex justify-around space-x-2">
@@ -129,10 +125,10 @@ include "./sidebar.php"
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!--ChatBox-->
-        <div class="w-[850px] h-[670px] border border-solid bg-gray-400 absolute top-36 rounded-lg left-96">
-            <div class="w-[845px] h-[80px] border-solid border-b-2 border-gray-900">
+        <div class="w-[600px] h-[480px] border border-solid bg-gray-200 absolute top-0 rounded-lg left-96">
+            <div class="w-[600px] h-[80px] border-solid border-b-2 border-gray-900">
                 <div class="flex space-x-2 m-10">
                     <img src="./resources/img/Group 1000004118.png" alt="" class="h-12">
                     <p class="mt-2 text-xl font-bold">Customer1</p>
@@ -169,9 +165,9 @@ include "./sidebar.php"
             </div>
 
             <!--TextBox-->
-            <div class="w-[850px] h-[100px] bg-text-bg absolute bottom-0">
-                <input type='text' class="w-[650px] h-10 rounded-xl bg-[#1E1F25] border-[#1E1F25] text-text3 border border-solid text-center focus:outline-none absolute top-7 left-20" placeholder="Add to text"></input>
-                <img src="./resources/img/Shape.png" alt="send" class="w-4 absolute top-10 left-[750px]">
+            <div class="w-[600px] h-[80px] bg-text-bg absolute bottom-0 rounded-b-lg">
+                <input type='text' class="w-[500px] h-10 rounded-xl bg-[#1E1F25] border-[#1E1F25] text-text3 border border-solid text-center focus:outline-none absolute top-7 left-10" placeholder="Add to text"></input>
+                <img src="./resources/img/Shape.png" alt="send" class="w-4 absolute top-10 left-[550px]">
             </div>
 
         </div>
