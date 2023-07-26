@@ -14,12 +14,15 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <!-- component -->
-<div class="bg-white p7 float-right rounded w-[70%] space-y-5">
+    <div class=" ml-72 pt-20 ">
+        <p class="text-black font-bold text-2xl">Update Banner</p>
+        </div>
+        <div class="m-3 border w-[77%] p-5 rounded-lg float-right ml-10 text-center shadow-2xl">
+<div class="bg-white p7 flex flex-col float-left  items-center  rounded w-[100%] space-y-5">
     <div class="flex items-center">
         <p>Banner 1</p>
         <p class=" ml-10 mr-10">-</p>
-<div x-data="dataFileDnD()" class="relative w-[70%] flex flex-col p-4 text-gray-400 border border-black rounded">
+<div x-data="dataFileDnD()" class="relative w-[100%] flex flex-col p-4 text-gray-400 border border-black rounded">
     <div x-ref="dnd"
         class="relative flex flex-col text-gray-400 border border-black border-dashed rounded cursor-pointer">
         <input accept="*" type="file" multiple
@@ -94,7 +97,7 @@ include "./adminsidebar.php";
 <div class="flex items-center">
         <p>Banner 2</p>
         <p class=" ml-10 mr-10">-</p>
-<div x-data="dataFileDnD()" class="relative w-[70%] flex flex-col p-4 text-gray-400 border border-black rounded">
+<div x-data="dataFileDnD()" class="relative w-[100%] flex flex-col p-4 text-gray-400 border border-black rounded">
     <div x-ref="dnd"
         class="relative flex flex-col text-gray-400 border border-black border-dashed rounded cursor-pointer">
         <input accept="*" type="file" multiple
@@ -169,7 +172,7 @@ include "./adminsidebar.php";
 <div class="flex items-center">
         <p>Banner 3</p>
         <p class=" ml-10 mr-10">-</p>
-<div x-data="dataFileDnD()" class="relative w-[70%] flex flex-col p-4 text-gray-400 border border-black rounded">
+<div x-data="dataFileDnD()" class="relative w-[100%] flex flex-col p-4 text-gray-400 border border-black rounded">
     <div x-ref="dnd"
         class="relative flex flex-col text-gray-400 border border-black border-dashed rounded cursor-pointer">
         <input accept="*" type="file" multiple
@@ -241,7 +244,12 @@ include "./adminsidebar.php";
     </template>
 </div>
 </div>
+<div class=" float-right">
+<button class="bg-blue-600 px-4 rounded-md py-1">Save</button>
 </div>
+</div>
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="https://unpkg.com/create-file-list"></script>
