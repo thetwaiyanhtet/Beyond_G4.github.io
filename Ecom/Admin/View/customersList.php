@@ -12,13 +12,14 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/customers.css">
 </head>
 
 <body>
-    <main class=" ml-72 mt-24 py-5">
+    <main class=" ml-72 mt-24">
         <div class=" px-5 space-y-3">
-            <p class=" text-xl font-semibold font-philosopher">Customer List</p>
+            <p class=" text-[30px] font-semibold font-Inter">Customer List</p>
 
             <section class=" py-3">
                 <div class=" flex justify-start items-center space-x-3">
