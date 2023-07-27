@@ -13,7 +13,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body class="mt-3 font-poppins overflow-hidden">
+<body class="mt-3 font-poppins overflow-x-auto">
     <section class=" flex items-center justify-between mx-[3%]">
         <span class="flex items-center  my-[1%]">
             <img class=" w-12 lg:w-20" src="../View/resources/img/logo.png" alt="">
@@ -91,7 +91,7 @@
                 </div>
                 <div>
                     <div class="w-[180px] md:w-[202px] h-[100px] md:h-[113px] bg-[#FDFDFD] rounded-tl-md rounded-tr-md ml-5 md:ml-0">
-                        <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-[136px] h-[30px] font-bold">Order Summary</div>
+                        <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-[136px] h-[30px] font-bold text-[10px] md:text-[15px]">Order Summary</div>
                         <div class="flex item py-[4%]">
                             <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
                             <p class="ml-[44px] font-bold text-xs md:text-sm">1456</p>
@@ -115,7 +115,7 @@
                 </div>
             </div>
         </section>
-        <ion-icon class=" lg:text-7xl absolute left-[2%] md:left-[4%] top-[80%] lg:top-[75%] cursor-pointer max-md:text-6xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>
+        <ion-icon class=" lg:text-7xl absolute left-[1%] md:left-[4%] top-[90%] lg:top-[75%] cursor-pointer max-md:text-6xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>
     </section>
 
 </body>

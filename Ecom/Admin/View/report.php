@@ -19,12 +19,12 @@ include "./adminsidebar.php";
     <main class="  ml-60 h-screen pt-20  w-[80%] font-Inter">
     
         <div class="ml-16">
-            <p class=" text-2xl font-bold py-3">Report</p>
+            <p class=" text-xl font-bold font-philosopher py-3">Report</p>
             
             <div class="border shadow-md mt-5 rounded-xl border-gray-200">
             <div class="p-5">
-                <p class="font-semibold text-[25px]">Export to CSV</p>
-                <div class="flex justify-evenly p-7 font-medium text-[20px]">
+                <p class="font-semibold text-lg">Export to CSV</p>
+                <div class="flex justify-evenly p-7 font-medium text-lg">
                     <div class="flex flex-col space-y-12">
                         <button class=" py-2 px-8 rounded-lg text-white flex items-center justify-center 
                         bg-blue-600">Order List</button>

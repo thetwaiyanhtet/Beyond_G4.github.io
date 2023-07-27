@@ -1,10 +1,10 @@
 .merchant{
-    background-color:#2535A1;
+    background-color: #2535A1;
     color: white;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-.merchantProfile{
+.merchantList{
     color:#2535A1;
     font-weight: bold;
 }

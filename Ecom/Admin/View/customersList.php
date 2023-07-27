@@ -17,11 +17,11 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class=" ml-72 mt-24">
+    <main id="main" class=" ml-72 mt-24">
         <div class=" px-5 space-y-3">
-            <p class=" text-[30px] font-semibold font-Inter">Customer List</p>
+            <p class=" text-xl font-semibold font-philosopher ml-5">Customer List</p>
 
-            <section class=" py-3">
+            <section class=" py-3 ml-5">
                 <div class=" flex justify-start items-center space-x-3">
                     <p>Search : </p>
                     <input type="text" class="border rounded-md indent-1 px-2 py-1 outline-none bg-gray-300">
@@ -52,7 +52,7 @@ include "./adminsidebar.php";
                     <tbody>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                               John
+                                John
                             </th>
                             <td class="px-6 py-4">
                                 Mail Sample
@@ -67,11 +67,11 @@ include "./adminsidebar.php";
                                 <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
                                 <img src="./resources/img/bin.svg" alt="">
                             </td>
-                            
+
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                               John
+                                John
                             </th>
                             <td class="px-6 py-4">
                                 Mail Sample
@@ -83,14 +83,14 @@ include "./adminsidebar.php";
                                 09123456789
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
-                            <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
+                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
                                 <img src="./resources/img/bin.svg" alt="">
                             </td>
-                            
+
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                               John
+                                John
                             </th>
                             <td class="px-6 py-4">
                                 Mail Sample
@@ -102,14 +102,14 @@ include "./adminsidebar.php";
                                 09123456789
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
-                            <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
+                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
                                 <img src="./resources/img/bin.svg" alt="">
                             </td>
-                            
+
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                               John
+                                John
                             </th>
                             <td class="px-6 py-4">
                                 Mail Sample
@@ -121,14 +121,14 @@ include "./adminsidebar.php";
                                 09123456789
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
-                            <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
+                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
                                 <img src="./resources/img/bin.svg" alt="">
                             </td>
-                            
+
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                               John
+                                John
                             </th>
                             <td class="px-6 py-4">
                                 Mail Sample
@@ -140,10 +140,10 @@ include "./adminsidebar.php";
                                 09123456789
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
-                            <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
+                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
                                 <img src="./resources/img/bin.svg" alt="">
                             </td>
-                            
+
                         </tr>
                     </tbody>
                 </table>

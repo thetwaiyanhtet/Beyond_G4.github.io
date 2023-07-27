@@ -6,11 +6,12 @@ module.exports = {
       fontFamily: {
         philosopher: ["Philosopher", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
-        Inter: ["Inter", "sans-serif"],
         },
         colors:{
               'bcolor' : '#D9D9D9',
-              'table' : '#2535A1'
+              'table'  : '#2535A1',
+              'bgcolor2' : '#7D6C56',
+              'bgcolor3' : '#87A6F5'
             },
     },
   },
