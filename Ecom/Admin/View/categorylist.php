@@ -11,17 +11,18 @@ include "./adminsidebar.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./resources/css/categoryList.css">
 
 </head>
 
 <body>
     <main id="main" class="ml-60 h-screen pt-20  w-[80%]">
     
-        <div class="ml-10">
-            <p class=" text-2xl ml-5 font-bold">Category List</p>
-            <div class=" flex items-center mt-5">
+        <div class="ml-10 pr-10 pb-5">
+            <p class=" text-xl ml-5 font-bold">Category List</p>
+            <div class=" flex items-center mt-5 ml-5">
                 <span class="text-xl">Search : </span>
-                <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8" type="search" name="" id="">
+                <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8 indent-2" type="search" name="" id="">
             </div>
             <div class="border shadow-2xl mt-10 rounded-xl">
             <div class="  p-5">
@@ -29,16 +30,16 @@ include "./adminsidebar.php";
                 <div class="flex justify-around">
                     <div class="space-y-3 mt-5">
                         <p>Category</p>
-                        <input class=" outline-none border rounded-md cursor-text h-8 w-72" type="text">
+                        <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text">
                     </div>
                     <div class="flex flex-col justify-start space-y-3 mt-5">
                         <p>Description</p>
-                        <textarea class="border outline-none" id="text" name="text" rows="4" cols="50">
+                        <textarea class="border outline-none indent-2" id="text" name="text" rows="4" cols="50">
 </textarea>
                     </div>
                 </div>
             </div>
-            <button class="py-1 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
+            <button class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
         
         <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
             <div class="container">
@@ -51,8 +52,6 @@ include "./adminsidebar.php";
                                         <th class="
                            w-1/6
                            min-w-[160px]
-                           text-lg
-                           font-semibold
                            text-white
                            py-0
                            lg:py-2
@@ -65,21 +64,17 @@ include "./adminsidebar.php";
                                         <th class="
                            w-1/6
                            min-w-[160px]
-                           text-lg
-                           font-semibold
                            text-white
                            py-0
                            lg:py-2
                            px-3
                            lg:px-4
                            ">
-                                            Creat By 
+                                            Create By 
                                         </th>
                                         <th class="
                            w-1/6
                            min-w-[160px]
-                           text-lg
-                           font-semibold
                            text-white
                            py-0
                            lg:py-2
@@ -91,8 +86,6 @@ include "./adminsidebar.php";
                                         <th class="
                            w-1/6
                            min-w-[160px]
-                           text-lg
-                           font-semibold
                            text-white
                            py-0
                            lg:py-2

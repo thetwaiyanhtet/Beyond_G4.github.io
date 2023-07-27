@@ -17,22 +17,26 @@
 </head>
 
 <body class=" font-poppins overflow-x-hidden">
-<style>
-    #sidebar, #navbar, #navs {
-        -webkit-transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
-        transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
-    }
+    <style>
+        #sidebar,
+        #navbar,
+        #navs {
+            -webkit-transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
+            transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
+        }
 
-    #sidebar.show, #havbar.show, #navs {
-        transform: translateX(0);
-    }
-</style>
+        #sidebar.show,
+        #havbar.show,
+        #navs {
+            transform: translateX(0);
+        }
+    </style>
     <!-- component -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
     <div id="navbar" class="flex items-center justify-between bg-table w-full fixed top-0 left-0 z-40 h-[80px]">
         <div class="flex items-center pl-4">
-            <img class="w-20" src="./resources/img/logo1.png" alt="">
+            <img class="w-20" src="./resources/img/logo.png" alt="...">
             <span class=" text-2xl font-bold text-white">Beyond</span>
         </div>
         <div>
@@ -50,33 +54,34 @@
             <div id="navs" class="w-64  h-screen ">
                 <nav class=" mt-28">
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white  focus:outline-none">
-                            <span class="flex items-center">
-                                <ion-icon class="h-5 w-5" name="home-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Dashboard</span>
-                            </span>
-                        </button>
-                    </div>
-                    <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
-                            <span class="flex items-center">
-                                <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Category</span>
-                            </span>
+                        <a href="#">
+                            <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white  focus:outline-none">
+                                <span class="flex items-center">
+                                    <ion-icon class="h-5 w-5" name="home-outline"></ion-icon>
+                                    <span class="mx-4 font-medium">Dashboard</span>
+                                </span>
+                            </button>
+                        </a>
+                    </div>              
+                        <div x-data="{ open: false }">
+                            <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none category">
+                                <span class="flex items-center">
+                                    <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
+                                    <span class="mx-4 font-medium">Category</span>
+                                </span>
 
-                            <span>
-                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
-                                    <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </span>
-                        </button>
-
-                        <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Category List</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Add Category</a>
-                        </div>
-                    </div>
+                                <span>
+                                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
+                                        <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div x-show="open" class="bg-gray-100">
+                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white categoryList" href="./categorylist.php">Category List</a>
+                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white addCategory" href="./addcategory.php">Add Category</a>
+                            </div>
+                        </div>    
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none merchant">
                             <span class="flex items-center ">
@@ -93,7 +98,7 @@
                         </button>
 
                         <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white merchantProfile" href="#">Merchant List and Profile</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white merchantList" href="./merchant_list.php">Merchant List and Profile</a>
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Merchant Approve</a>
                         </div>
                     </div>
@@ -122,21 +127,21 @@
                         </button>
 
                         <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white productList" href="#">Products List</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white productDetails" href="#">Products Details</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white productList" href="./productList.php">Products List</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white productDetails" href="./productDetails.php">Products Details</a>
                         </div>
                     </div>
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                             <span class="flex items-center">
-                                <box-icon name='package'></box-icon>
+                                <box-icon name='package' class=""></box-icon>
                                 <span class="mx-4 font-medium">Order Lists</span>
                             </span>
                         </button>
                     </div>
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
-                            <span class="flex items-center">
+                            <span class="flex items-center space-x-3">
                                 <ion-icon class="h-5 w-5" name="chatbubble-ellipses-outline"></ion-icon>
                                 <span clbg-blue-600ass="mx-4 font-medium">Chat Box</span>
                             </span>
@@ -175,10 +180,11 @@
 
                         <div x-show="open" class="bg-gray-100">
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Service and Contact</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white updateProfile" href="#">Update Profile</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white updateLogoName" href="#">Update Logo and Name</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Term and Condition</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">FAQs</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white updateProfile" href="./updateProfileNPassword.php">Update Profile</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white updateLogoName" href="./updatelogoAndName.php">Update Logo and Name</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white updateBanners" href="./updatebanner.php">Update Banners</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white termNCondition" href="./terms&cond.php">Term and Condition</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="">FAQs</a>
                         </div>
                     </div>
                     <div x-data="{ open: false }">

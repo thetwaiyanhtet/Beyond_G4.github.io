@@ -1,10 +1,10 @@
-.merchant{
-    background-color:#2535A1;
+.setting{
+    background-color: #2535A1;
     color: white;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-.merchantProfile{
+.termNCondition{
     color:#2535A1;
     font-weight: bold;
 }

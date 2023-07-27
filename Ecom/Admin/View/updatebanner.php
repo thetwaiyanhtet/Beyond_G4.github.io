@@ -11,11 +11,12 @@ include "./adminsidebar.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./resources/css/updateBanners.css">
 </head>
 
 <body>
     <div class=" ml-72 pt-20 ">
-        <p class="text-black font-bold text-2xl">Update Banner</p>
+        <p class="text-black font-bold text-xl">Update Banner</p>
         </div>
         <div class="m-3 border w-[77%] p-5 rounded-lg float-right ml-10 text-center shadow-2xl">
 <div class="bg-white p7 flex flex-col float-left  items-center  rounded w-[100%] space-y-5">
@@ -244,8 +245,8 @@ include "./adminsidebar.php";
     </template>
 </div>
 </div>
-<div class=" float-right">
-<button class="bg-blue-600 px-4 rounded-md py-1">Save</button>
+<div class=" float-right ml-96">
+<button class="bg-blue-600 px-4 rounded-md py-2 text-white">Save</button>
 </div>
 </div>
 </div>
