@@ -30,9 +30,9 @@
     <!-- component -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div id="navbar" class="flex items-center justify-between bg-blue-600 w-full fixed top-0 left-0 z-40 h-[80px]">
+    <div id="navbar" class="flex items-center justify-between bg-table w-full fixed top-0 left-0 z-40 h-[80px]">
         <div class="flex items-center pl-4">
-            <img class="w-20" src="./resources/img/logo.png" alt="">
+            <img class="w-20" src="./resources/img/logo1.png" alt="">
             <span class=" text-2xl font-bold text-white">Beyond</span>
         </div>
         <div>
@@ -50,7 +50,7 @@
             <div id="navs" class="w-64  h-screen ">
                 <nav class=" mt-28">
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white  focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white  focus:outline-none">
                             <span class="flex items-center">
                                 <ion-icon class="h-5 w-5" name="home-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Dashboard</span>
@@ -58,7 +58,7 @@
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                             <span class="flex items-center">
                                 <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Category</span>
@@ -73,12 +73,12 @@
                         </button>
 
                         <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Category List</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Add Category</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Category List</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Add Category</a>
                         </div>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none merchant">
+                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none merchant">
                             <span class="flex items-center ">
                                 <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Merchant</span>
@@ -93,12 +93,12 @@
                         </button>
 
                         <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white merchantProfile" href="#">Merchant List and Profile</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Merchant Approve</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white merchantProfile" href="#">Merchant List and Profile</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Merchant Approve</a>
                         </div>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none customer">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none customer">
                             <span class="flex items-center">
                                 <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Customer</span>
@@ -107,7 +107,7 @@
                     </div>
 
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none products">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none products">
                             <span class="flex items-center">
                                 <box-icon type='logo' name='product-hunt'></box-icon>
                                 <span class="mx-4 font-medium">Products</span>
@@ -122,12 +122,12 @@
                         </button>
 
                         <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white productList" href="#">Products List</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white productDetails" href="#">Products Details</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white productList" href="#">Products List</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white productDetails" href="#">Products Details</a>
                         </div>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                             <span class="flex items-center">
                                 <box-icon name='package'></box-icon>
                                 <span class="mx-4 font-medium">Order Lists</span>
@@ -135,15 +135,15 @@
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                             <span class="flex items-center">
                                 <ion-icon class="h-5 w-5" name="chatbubble-ellipses-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Chat Box</span>
+                                <span clbg-blue-600ass="mx-4 font-medium">Chat Box</span>
                             </span>
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                             <span class="flex items-center">
                                 <ion-icon class="h-5 w-5" name="star-half-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Review and Rating</span>
@@ -151,7 +151,7 @@
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none report">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none report">
                             <span class="flex items-center">
                                 <box-icon type='solid' name='report'></box-icon>
                                 <span class="mx-4 font-medium">Report</span>
@@ -159,7 +159,7 @@
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none setting">
+                        <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none setting">
                             <span class="flex items-center ">
                                 <ion-icon class="h-5 w-5" name="settings-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Setting</span>
@@ -174,15 +174,15 @@
                         </button>
 
                         <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Service and Contact</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white updateProfile" href="#">Update Profile</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white updateLogoName" href="#">Update Logo and Name</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Term and Condition</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">FAQs</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Service and Contact</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white updateProfile" href="#">Update Profile</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white updateLogoName" href="#">Update Logo and Name</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">Term and Condition</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white" href="#">FAQs</a>
                         </div>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                             <span class="flex items-center">
                                 <ion-icon class="h-5 w-5" name="log-in-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Logout</span>
@@ -195,8 +195,8 @@
         </div>
     </div>
     <button id="btnSidebarToggler" type="button" class=" bg-gray-200 hover:bg-gray-300 rounded-full border shadow-xl fixed p-1 left-60 top-20 text-xl ">
-        <ion-icon id="navClosed" class="h-6 bg-blue-600 rounded-full m-1 -mb-1 text-white w-6" name="chevron-back-outline"></ion-icon>
-        <ion-icon id="navOpen" class="h-6 bg-blue-600 rounded-full m-1 hidden -mb-1 text-white w-6" name="chevron-forward-outline"></ion-icon>
+        <ion-icon id="navClosed" class="h-6 bg-table rounded-full m-1 -mb-1 text-white w-6" name="chevron-back-outline"></ion-icon>
+        <ion-icon id="navOpen" class="h-6 bg-table rounded-full m-1 hidden -mb-1 text-white w-6" name="chevron-forward-outline"></ion-icon>
     </button>
 
 
