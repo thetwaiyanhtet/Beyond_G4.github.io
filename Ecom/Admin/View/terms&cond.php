@@ -16,7 +16,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class=" ml-72 pt-20 h-screen">
+    <main class=" ml-72 pt-20 h-screen" id="main">
         <p class="m-5">Terms and Conditions</p>
         <div class="ml-10 w-[870px] h-[620px] border border-solid bg-bcolor">
             <ol class="list-decimal ml-10">
