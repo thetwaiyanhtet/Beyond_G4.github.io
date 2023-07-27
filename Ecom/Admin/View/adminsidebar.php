@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div x-data="{ open: false }">
-                            <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                            <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none merchant">
                                 <span class="flex items-center ">
                                     <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
                                     <span class="mx-4 font-medium">Merchant</span>
@@ -83,7 +83,7 @@
                             </button>
 
                             <div x-show="open" class="bg-gray-100">
-                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Merchant List and Profile</a>
+                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white merchantProfile" href="#">Merchant List and Profile</a>
                                 <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Merchant Approve</a>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                         </div>
 
                         <div x-data="{ open: false }">
-                            <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                            <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none products">
                                 <span class="flex items-center">
                                     <box-icon type='logo' name='product-hunt'></box-icon>
                                     <span class="mx-4 font-medium">Products</span>
@@ -112,7 +112,7 @@
                             </button>
 
                             <div x-show="open" class="bg-gray-100">
-                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Products List</a>
+                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white productList" href="#">Products List</a>
                                 <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Products Details</a>
                             </div>
                         </div>
