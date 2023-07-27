@@ -30,7 +30,7 @@ include "./adminsidebar.php";
 
             <section class="border-2 border-gray-400 rounded-lg shadow-lg p-2">
                 <table class="w-full text-sm text-left text-gray-500">
-                    <thead class="text-xs uppercase bg-blue-600 text-white border rounded-lg">
+                    <thead class="text-xs uppercase bg-table text-white border rounded-lg">
                         <tr>
                             <th scope="col" class="px-6 py-3">
                                 Product Image
