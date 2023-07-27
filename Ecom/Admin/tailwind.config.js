@@ -9,6 +9,10 @@ module.exports = {
         playfairDisplay: ["Playfair Display", "serif"],
         PlayfairSC: ["Playfair Display SC", "serif"],
         Inter: ["Inter", "sans-serif"],
+        },
+        colors:{
+              'bcolor' : '#D9D9D9',
+              'table' : '#2535A1'
             },
     },
   },

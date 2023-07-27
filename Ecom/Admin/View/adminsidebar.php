@@ -16,7 +16,7 @@
     <script src="./resources/js/sidebar.js" defer></script>
 </head>
 
-<body class=" font-poppins">
+<body class=" font-poppins overflow-x-hidden">
 <style>
     #sidebar, #navbar, #navs {
         -webkit-transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
