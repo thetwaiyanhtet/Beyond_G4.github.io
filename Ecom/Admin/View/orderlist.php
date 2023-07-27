@@ -16,7 +16,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class=" ml-72 mt-24 py-5">
+    <main class="ml-72 mt-24 py-5" id="main">
         <div class=" px-5 space-y-3">
             <p class=" text-xl font-semibold font-poppins">Order list</p>
 
