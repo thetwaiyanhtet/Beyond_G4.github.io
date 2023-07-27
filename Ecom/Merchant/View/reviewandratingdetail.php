@@ -741,7 +741,7 @@
                     <span>Camera</span>
                     </div>
                     <div class=" border-t-2 border-blue-500 py-3">
-                        <button class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button>
+                       <a href="./review and rating.php"> <button class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></a>
                     </div>
                 </div>
             </div>

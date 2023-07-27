@@ -13,7 +13,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="./sidebar.js" defer></script>
+    <script src="./resources/js/sidebar.js" defer></script>
 </head>
 
 <body class=" font-poppins">
@@ -50,7 +50,7 @@
     <div id="sidebar" class="bg-white font-poppins fixed top-0 min-h-screen border shadow-xl text-ellipsis flex justify-around overflow-y-auto">
         <div class="flex flex-col sm:flex-row relative sm:justify-around">
             <div id="navs" class="w-64  h-screen ">
-                <nav class=" mt-8">
+                <nav class=" mt-28">
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white  focus:outline-none">
                             <span class="flex items-center">
