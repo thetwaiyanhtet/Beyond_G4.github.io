@@ -19,50 +19,50 @@ include "./adminsidebar.php";
         <p class="m-5 font-poppins text-xl font-bold">Order Details</p>
         <div class="flex justify-around">
             <!--Order Details-->
-            <div class=" w-64 h-56 border border-solid drop-shadow-lg rounded-lg">
+            <div class=" w-64 h-56 border-2 border-solid shadow-lg rounded-lg">
                 <p class="m-2">Order Details</p>
                 <hr>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/cart.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold">Shop Kit</p>
+                    <p>Shop Kit</p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/schdule.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold">July 16 , 2023 </p>
+                    <p>July 16 , 2023 </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/bulid.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold">July 16 , 2023 </p>
+                    <p>July 16 , 2023 </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/car.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold">July 16 , 2023 </p>
+                    <p>July 16 , 2023 </p>
                 </div>
             </div>
             <!--Customer Details-->
-            <div class=" w-64 h-56 border border-solid drop-shadow-lg rounded-lg">
+            <div class=" w-64 h-56 border border-solid shadow-lg rounded-lg">
                 <p class="m-2">Customer Details</p>
                 <hr>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/people.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold">Derek Kyaw</p>
+                    <p>Derek Kyaw</p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/email.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold">Email Sample </p>
+                    <p>Email Sample </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/phone.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold"> 09-123456789</p>
+                    <p> 09-123456789</p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/home.png" alt="cart" class="w-[26px]">
-                    <p class="font-bold"> Lanmadaw, Yangon</p>
+                    <p> Lanmadaw, Yangon</p>
                 </div>
             </div>
         </div>
         <!--Address list-->
-        <table class="mt-5 h-32 drop-shadow-lg w-[90%]">
+        <table class="mt-5 h-32 shadow-lg w-[90%]">
             <thead>
                 <tr>
                     <td class="border border-slate-40 p-2">Payment Address</td>
@@ -80,7 +80,7 @@ include "./adminsidebar.php";
         </table>
         <!---Product list-->
            <table class="w-[90%] text-sm text-left text-white mt-5">
-                <thead class="text-xs text-white uppercase bg-blue-700">
+                <thead class="text-xs text-white uppercase bg-table">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             Product name

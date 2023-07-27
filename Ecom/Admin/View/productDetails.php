@@ -2,7 +2,6 @@
 include "./adminsidebar.php";
 ?>
 
-
 <!doctype html>
 <html>
 
@@ -16,7 +15,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class="ml-60 h-screen pt-20  w-[80%] font-Inter">
+    <main id="main" class="ml-60 h-screen pt-20  w-[80%] font-Inter">
 
         <div class=" ml-16">
             <p class=" text-2xl font-bold py-3">Products Details</p>
@@ -31,7 +30,7 @@ include "./adminsidebar.php";
                     </div>
                 </div>
                 <div class=" ml-40">
-                    <div class=" flex-col space-y-3 w-full py-4 text-lg font-bold">
+                    <div class=" flex-col space-y-3 w-full py-4 text-lg">
                         <div class=" flex">
                             <p class="w-40">Merchant Name</p>
                             <p class="w-32">-</p>

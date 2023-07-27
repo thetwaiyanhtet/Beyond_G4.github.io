@@ -67,13 +67,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -88,13 +90,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -109,13 +113,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-yellow-500 text-white w-3/5 text-center rounded-md">
+                                Pending
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -130,13 +136,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -151,13 +159,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-yellow-500 text-white w-3/5 text-center rounded-md">
+                                Pending
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -172,13 +182,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -193,13 +205,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -214,13 +228,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -235,13 +251,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>
@@ -256,13 +274,15 @@ include "./sidebar.php"
                             12.4.2023
                         </td>
                         <td class="px-6 py-4">
-                            Complete
+                            <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                Complete
+                            </div>
                         </td>
                         <td class="px-6 py-4">
                             Bank Deposit
                         </td>
                         <td class="px-6 py-4">
-                            <input type="button" value="View">
+                            <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
                         </td>
 
                     </tr>

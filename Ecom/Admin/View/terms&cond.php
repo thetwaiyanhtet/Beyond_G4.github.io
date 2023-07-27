@@ -13,6 +13,7 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/termnCondition.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@ include "./adminsidebar.php";
                 <li class="m-3">Governing Law: This section will outline the jurisdiction under which the terms and conditions of the site are governed, as well as any applicable dispute resolution procedures.
                 </li>
             </ol>
-           <input type="text" class="mt-5 ml-16 mb-4 w-[700px] h-10 bg-bcolor rounded-md">
+           <input type="text" class="mt-5 ml-16 mb-4 w-[700px] h-10 bg-bcolor rounded-md outline-none indent-2">
            <button type="button" class="rounded-md bg-blue-800 text-white w-24 p-2">Update</button>
 
         </div>

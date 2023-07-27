@@ -31,10 +31,274 @@ include "./sidebar.php"
             </div>
         </header>
         <section>
-            <p class=" p-3">Orders</p>
-            <div class=" flex justify-center p-5">
+            <p class=" p-3">Transaction</p>
+            <div class="relative overflow-x-auto">
+                <table class="text-sm w-full text-left text-gray-500 m-auto">
+                    <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                NO
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                CUSTOMER
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                DATE
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                TOTAL
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                METHOD
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                STATUS
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                ACTION
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="" checked>
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
+                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                1
+                            </th>
+                            <td class="px-6 py-4">
+                                Steve Rogers
+                            </td>
+                            <td class="px-6 py-4">
+                                12-04-2023
+                            </td>
+                            <td class="px-6 py-4">
+                                $2564
+                            </td>
+                            <td class="px-6 py-4">
+                                M-BANKING
+                            </td>
+                            <td class="px-6 py-4">
+                                Approved
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        </tr>
 
-            </div>
+                    </tbody>
+                </table>
+                <div class="flex justify-between items-center py-2 pt-5 px-3">
+                    <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
+                    <div>Page 1 of 10</div>
+                    <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Next</button></div>
+                </div>
+                </div>
         </section>
     </main>
 </body>
