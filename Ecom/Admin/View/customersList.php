@@ -23,7 +23,7 @@ include "./adminsidebar.php";
             <section class=" py-3">
                 <div class=" flex justify-start items-center space-x-3">
                     <p>Search : </p>
-                    <input type="text" class="border border-gray-400 rounded-md shadow-md indent-1 px-2 py-1 outline-none">
+                    <input type="text" class="border rounded-md indent-1 px-2 py-1 outline-none bg-gray-300">
                 </div>
             </section>
 

@@ -59,7 +59,8 @@ include "./adminsidebar.php";
             </section>
 
             <section class="border border-gray-400 rounded-lg shadow-lg p-3">
-                <div class=" w-[50%] mx-auto space-y-6">
+                <p class=" font-semibold">Change Password</p>
+                <div class=" w-[50%] mx-auto space-y-6 pt-3">
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Current Password</p>
                         <p>-</p>

@@ -153,7 +153,7 @@
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none report">
                             <span class="flex items-center">
                                 <box-icon type='solid' name='report'></box-icon>
                                 <span class="mx-4 font-medium">Report</span>
