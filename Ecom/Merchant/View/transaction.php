@@ -7,7 +7,7 @@ include "./sidebar.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>Transaction</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
@@ -23,7 +23,7 @@ include "./sidebar.php"
                 <p>2023/July/24 - 4:04 PM</p>
             </div>
             <div>
-                <ul class="flex space-x-5 items-center pr-3">
+                <ul class="flex space-x-5 items-center pr-5">
                     <li><ion-icon name="moon-outline"></ion-icon></li>
                     <li><ion-icon name="notifications-outline"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
@@ -31,9 +31,9 @@ include "./sidebar.php"
             </div>
         </header>
         <section>
-            <p class=" p-3">Inventory > Product Details</p>
+            <p class=" p-3">Orders</p>
             <div class=" flex justify-center p-5">
-                
+
             </div>
         </section>
     </main>

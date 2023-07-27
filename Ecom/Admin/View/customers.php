@@ -15,6 +15,7 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/customers.css">
 </head>
 
 <body>
@@ -48,7 +49,7 @@ include "./adminsidebar.php";
                 <div class=" w-full h-full  rounded-lg pt-7 pb-7 pl-6 pr-6 shadow-xl border border-gray-400">
                     <div class=" flex justify-around items-center space-x-5 p-3">
                         <div class="w-[80px] h-[80px] bg-[#2535A1] flex items-center justify-center rounded-lg">
-                            <img src="./resources/lib/img/cart.svg" alt="..." class=" w-14">
+                            <img src="./resources/img/cart.svg" alt="..." class=" w-14">
                         </div>
                         <div class="">
                             <p class=" font-semibold ">Orders</p>
@@ -59,7 +60,7 @@ include "./adminsidebar.php";
                 <div class=" w-full h-full  rounded-lg pt-7 pb-7 pl-6 pr-6 shadow-xl border border-gray-400">
                     <div class=" flex justify-around items-center space-x-5 p-3">
                         <div class="w-[80px] h-[80px] bg-[#45D953] flex items-center justify-center rounded-lg">
-                            <img src="./resources/lib/img/cart.svg" alt="..." class=" w-14">
+                            <img src="./resources/img/cart.svg" alt="..." class=" w-14">
                         </div>
                         <div class="">
                             <p class=" font-semibold ">Purchased</p>
@@ -70,7 +71,7 @@ include "./adminsidebar.php";
                 <div class=" w-full h-full  rounded-lg pt-7 pb-7 pl-6 pr-6 shadow-xl border border-gray-400">
                     <div class=" flex justify-around items-center space-x-5 p-3">
                         <div class="w-[80px] h-[80px] bg-[#2097F6] flex items-center justify-center rounded-lg">
-                            <img src="./resources/lib/img/cart.svg" alt="..." class=" w-14">
+                            <img src="./resources/img/cart.svg" alt="..." class=" w-14">
                         </div>
                         <div class="">
                             <p class=" font-semibold ">Amount</p>
@@ -87,7 +88,7 @@ include "./adminsidebar.php";
 
                 <div class="flex justify-between p-5">
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
@@ -95,7 +96,7 @@ include "./adminsidebar.php";
                     </div>
 
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
@@ -103,14 +104,14 @@ include "./adminsidebar.php";
                     </div>
 
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
                         </div>
                     </div>
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
@@ -119,7 +120,7 @@ include "./adminsidebar.php";
                 </div>
                 <div class="flex justify-between p-5">
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
@@ -127,7 +128,7 @@ include "./adminsidebar.php";
                     </div>
 
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
@@ -135,14 +136,14 @@ include "./adminsidebar.php";
                     </div>
 
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
                         </div>
                     </div>
                     <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/lib/img/admin shirt.png" alt="..." class="w-full">
+                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
                         <div class="">
                             <p class=" font-semibold ">Casual Shirt</p>
                             <p class=" opacity-60">$195.00</p>
