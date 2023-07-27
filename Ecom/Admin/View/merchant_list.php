@@ -12,11 +12,11 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/customers.css">
+    <link rel="stylesheet" href="./resources/css/merchantProfile.css">
 </head>
 
 <body>
-    <main class=" ml-72 mt-24 py-5">
+    <main id="main" class=" ml-72 mt-24 py-5">
         <div class=" px-5 space-y-3">
             <p class=" text-xl font-semibold font-philosopher">Merchant List</p>
             <section class=" py-3">
@@ -27,7 +27,7 @@ include "./adminsidebar.php";
             </section>
             <section class="p-2">
                 <table class="w-full text-sm text-left text-gray-500 border-collapse border border-black border-solid">
-                    <thead class="text-xs uppercase bg-blue-600 text-white border">
+                    <thead class="text-xs uppercase bg-table text-white border">
                         <tr>
                             <th scope="col" class="px-6 py-3">
                                 Email
