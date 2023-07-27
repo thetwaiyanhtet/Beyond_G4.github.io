@@ -16,9 +16,9 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class="  ml-60 h-screen pt-20  w-[80%] font-Inter">
+    <main class="ml-60 h-screen pt-20  w-[80%] font-Inter">
 
-        <div class="ml-10">
+        <div class=" ml-16">
             <p class=" text-2xl font-bold py-3">Products Details</p>
 
             <div class="py-10 w-full flex">
