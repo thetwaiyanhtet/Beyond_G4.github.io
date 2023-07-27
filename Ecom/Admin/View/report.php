@@ -21,7 +21,7 @@ include "./adminsidebar.php";
         <div class="ml-16">
             <p class=" text-2xl font-bold py-3">Report</p>
             
-            <div class="border shadow-2xl mt-5 rounded-xl border-gray-300">
+            <div class="border shadow-md mt-5 rounded-xl border-gray-200">
             <div class="p-5">
                 <p class="font-semibold text-[25px]">Export to CSV</p>
                 <div class="flex justify-evenly p-7 font-medium text-[20px]">
