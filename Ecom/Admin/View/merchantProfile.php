@@ -17,7 +17,7 @@
 
  <body>
      <main class=" ml-72 mt-24">
-         <div class=" px-5 space-y-5">
+         <div class=" px-5 space-y-5 pb-3">
              <p class=" text-xl font-semibold font-philosopher">"Merchant Name" Profile</p>
 
              <section class=" border border-gray-400 rounded-lg shadow-lg p-3 h-44 relative">
@@ -81,9 +81,73 @@
                      </div>
                  </section>
              </div>
+
+
+             <section class="border border-gray-400 rounded-lg shadow-lg p-5 w-full">
+                 <p class=" font-semibold">All Products</p>
+                 <div class=" flex flex-wrap justify-between space-y-10 p-5">
+                    
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56 mt-10">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                     <div class=" flex-col space-y-2 border border-gray-400 rounded-md w-56">
+                         <img src="./resources/img/shirt.png" alt="...">
+                         <div class="pl-3 pb-2">
+                             <p>Casual Shirt</p>
+                             <p>$199</p>
+                         </div>
+                     </div>
+                 </div>
+
+             </section>
+
          </div>
-
-
      </main>
  </body>
 
