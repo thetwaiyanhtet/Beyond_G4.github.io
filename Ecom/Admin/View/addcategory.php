@@ -17,7 +17,7 @@ include "./adminsidebar.php";
     <main id="main" class="  ml-60 h-screen pt-20  w-[80%]">
     
         <div class="ml-10">
-            <p class=" text-2xl font-bold">Myanmar Chest</p>
+            <p class=" text-2xl font-bold font-philosopher">Myanmar Chest</p>
             <div class=" flex items-center mt-5">
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 ml-3 w-52 outline-none rounded-lg h-8" type="search" name="" id="">
