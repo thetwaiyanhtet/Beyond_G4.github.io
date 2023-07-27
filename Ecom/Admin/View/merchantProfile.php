@@ -31,32 +31,56 @@
                  </div>
              </section>
 
-             <section class="border border-gray-400 rounded-lg shadow-lg p-3">
-                 <div class=" pl-10">
-                     <p class=" font-semibold text-lg">Current Business Plan</p>
-                     <div class=" w-[30%] space-y-2 pt-3">
-                         <div class=" flex justify-between">
-                             <p class=" w-20">Plan</p>
-                             <p>-</p>
-                             <p class=" w-40">Enterprise</p>
-                         </div>
-                         <div class=" flex justify-between">
-                             <p class=" w-20">Start Date</p>
-                             <p>-</p>
-                             <p class=" w-40">July 27, 2023</p>
-                         </div>
-                         <div class=" flex justify-between">
-                             <p class=" w-20">End Date</p>
-                             <p>-</p>
-                             <p class=" w-40">Jan 27, 2024</p>
+             <div class=" flex space-x-5 ">
+                 <section class="border border-gray-400 rounded-lg shadow-lg p-3 w-[40%]">
+                     <div class=" pl-10">
+                         <p class=" font-semibold text-lg ">Current Business Plan</p>
+                         <div class=" w-full space-y-2 pt-3">
+                             <div class=" flex justify-between">
+                                 <p class=" w-20">Plan</p>
+                                 <p>-</p>
+                                 <p class=" w-40">Enterprise</p>
+                             </div>
+                             <div class=" flex justify-between">
+                                 <p class=" w-20">Start Date</p>
+                                 <p>-</p>
+                                 <p class=" w-40">July 27, 2023</p>
+                             </div>
+                             <div class=" flex justify-between">
+                                 <p class=" w-20">End Date</p>
+                                 <p>-</p>
+                                 <p class=" w-40">Jan 27, 2024</p>
+                             </div>
                          </div>
                      </div>
-                 </div>
-             </section>
+                 </section>
 
-             <section class="border border-gray-400 rounded-lg shadow-lg p-3">
-
-             </section>
+                 <section class="border border-gray-400 rounded-lg shadow-lg p-5 w-full">
+                     <div class=" flex justify-around">
+                         <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
+                             <img src="./resources/img/order.png" alt="...">
+                             <div class=" font-semibold text-center">
+                                 <p>Orders</p>
+                                 <p>166</p>
+                             </div>
+                         </div>
+                         <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
+                             <img src="./resources/img/purchased.png" alt="...">
+                             <div class=" font-semibold text-center">
+                                 <p>Products</p>
+                                 <p>5060</p>
+                             </div>
+                         </div>
+                         <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
+                             <img src="./resources/img/instock.png" alt="...">
+                             <div class=" font-semibold text-center">
+                                 <p>In-Stock</p>
+                                 <p>128</p>
+                             </div>
+                         </div>
+                     </div>
+                 </section>
+             </div>
          </div>
 
 

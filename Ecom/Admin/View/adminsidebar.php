@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="bg-white font-poppins fixed top-0 min-h-screen border shadow-xl text-ellipsis flex justify-around">
+        <div class="bg-white font-poppins fixed top-0 min-h-screen border shadow-xl text-ellipsis flex justify-around overflow-y-auto">
             <div class="flex flex-col sm:flex-row sm:justify-around">
                 <div class="w-64 h-screen ">
                     <nav class=" mt-28">
