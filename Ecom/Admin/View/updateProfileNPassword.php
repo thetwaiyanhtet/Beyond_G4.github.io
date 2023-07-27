@@ -16,7 +16,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class=" ml-72 mt-24">
+    <main id="main" class=" ml-72 mt-24">
         <div class=" px-5 space-y-5">
             <p class=" text-xl font-semibold font-philosopher">Update Profile and Passwod</p>
 

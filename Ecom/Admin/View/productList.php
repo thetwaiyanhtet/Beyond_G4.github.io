@@ -13,17 +13,18 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/products.css">
+    
 </head>
 
 <body>
-    <main class=" ml-72 mt-24 py-5">
+    <main id="main" class=" ml-72 mt-24 py-5">
         <div class=" px-5 space-y-3">
             <p class=" text-xl font-semibold font-philosopher">Product List</p>
 
             <section class=" py-3">
                 <div class=" flex justify-start items-center space-x-3">
                     <p>Search : </p>
-                    <input type="text" class="border border-gray-400 rounded-md shadow-md indent-1 px-2 py-1 outline-none">
+                    <input type="text" class=" bg-gray-300 rounded-md shadow-md indent-1 px-2 py-1 outline-none">
                 </div>
             </section>
 
