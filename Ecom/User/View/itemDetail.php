@@ -35,7 +35,12 @@
                     illo provident a exercitationem sunt.
                 </p>
                 <h3 class="flex justify-start items-center gap-2 font-philosopher">
-                    <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center ">H</div> H&M
+                    <a href="./storepage.php">
+                        <div class=" flex items-center space-x-3">
+                            <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center ">H</div> 
+                            <p>H&M</p>
+                        </div>
+                    </a>
                 </h3>
                 <h1 class=" font-philosopher">$749</h1>
                 <div class="flex space-x-3">
