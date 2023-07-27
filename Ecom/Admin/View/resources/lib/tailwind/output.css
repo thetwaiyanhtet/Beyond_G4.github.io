@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -191,6 +191,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
@@ -338,6 +342,14 @@ ul,
 menu {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
   padding: 0;
 }
 
@@ -675,14 +687,6 @@ video {
   margin-left: 0.75rem;
 }
 
-.ml-40 {
-  margin-left: 10rem;
-}
-
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
 .ml-60 {
   margin-left: 15rem;
 }
@@ -711,10 +715,6 @@ video {
   margin-top: 6rem;
 }
 
-.mt-28 {
-  margin-top: 7rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -727,8 +727,44 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
+.-mb-1 {
+  margin-bottom: -0.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.ml-40 {
+  margin-left: 10rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .ml-0 {
   margin-left: 0px;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .block {
@@ -957,6 +993,10 @@ video {
 
 .table-auto {
   table-layout: auto;
+}
+
+.border-collapse {
+  border-collapse: collapse;
 }
 
 .-translate-y-2\/3 {
@@ -1191,6 +1231,10 @@ video {
 
 .border-l {
   border-left-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
 }
 
 .border-dashed {
