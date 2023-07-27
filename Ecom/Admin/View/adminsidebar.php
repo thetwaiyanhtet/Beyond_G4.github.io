@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-blue-600 hover:text-white focus:outline-none customer">
                             <span class="flex items-center">
                                 <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Customer</span>
@@ -125,7 +125,7 @@
 
                         <div x-show="open" class="bg-gray-100">
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white productList" href="#">Products List</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Products Details</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white productDetails" href="#">Products Details</a>
                         </div>
                     </div>
                     <div x-data="{ open: false }">
@@ -178,7 +178,7 @@
                         <div x-show="open" class="bg-gray-100">
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Service and Contact</a>
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white updateProfile" href="#">Update Profile</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Update Logo and Name</a>
+                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white updateLogoName" href="#">Update Logo and Name</a>
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">Term and Condition</a>
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-blue-500 hover:text-white" href="#">FAQs</a>
                         </div>
