@@ -14,7 +14,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class="  ml-60 h-screen pt-20  w-[80%]">
+    <main id="main" class="  ml-60 h-screen pt-20  w-[80%]">
     
         <div class="ml-10">
             <p class=" text-2xl font-bold">Myanmar Chest</p>

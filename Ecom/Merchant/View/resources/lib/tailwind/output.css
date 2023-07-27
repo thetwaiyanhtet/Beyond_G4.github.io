@@ -715,6 +715,11 @@ video {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .-ml-\[30\%\] {
   margin-left: -30%;
 }
@@ -1005,6 +1010,26 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[81px\] {
+  height: 81px;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-\[20\%\] {
+  height: 20%;
+}
+
+.h-\[18\%\] {
+  height: 18%;
+}
+
+.h-\[15\%\] {
+  height: 15%;
 }
 
 .min-h-screen {

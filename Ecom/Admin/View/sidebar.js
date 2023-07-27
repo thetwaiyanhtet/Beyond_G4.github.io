@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnSidebarToggler = document.getElementById("btnSidebarToggler");
   const navClosed = document.getElementById("navClosed");
   const navOpen = document.getElementById("navOpen");
+  const main = document.getElementById("main");
 
   btnSidebarToggler.addEventListener("click", (e) => {
     e.preventDefault();
@@ -12,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     btnSidebarToggler.classList.toggle("left-60");
     navClosed.classList.toggle("hidden");
     navOpen.classList.toggle("hidden");
+    main.classList.toggle("ml-0");
+    main.classList.toggle("w-screen");
   });
 
-  sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
+ 
 });
