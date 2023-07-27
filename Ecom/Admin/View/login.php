@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="./dashboard.php">
                 <button class="w-[360px] h-[44px] rounded-lg bg-yellow-500 flex items-center justify-center font-playfairDisplay text-white text-lg shadow-xl">Login</button>
             </a>
         </div>
