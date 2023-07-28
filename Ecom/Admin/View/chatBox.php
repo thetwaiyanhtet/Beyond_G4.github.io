@@ -18,7 +18,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class=" ml-[265px] py-5 mt-10" id="main">
+    <main class="ml-72 py-5 mt-24" id="main">
         <div class="flex">
             <div class="w-96 h-[750px] border border-solid">
                 <div class="border border-solid w-64 h-10 rounded-lg bg-bcolor m-5">

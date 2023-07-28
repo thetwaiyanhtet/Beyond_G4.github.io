@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  darkMode: 'media',
   content: ["./View/*.{html,js,php}"],
   theme: {
     extend: {
@@ -25,6 +24,10 @@ module.exports = {
         'Playfair Display': ['Playfair Display', 'serif'],
         'PlayfairSC': ['Playfair Display SC', 'serif']
       },
+      backgroundImage: {
+        'noise_bg': ['url(./resources/img/noise.svg)'],
+        'linear_dark': ['linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%)'] 
+      }
     },
   },
   plugins: []
