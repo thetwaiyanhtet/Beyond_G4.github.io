@@ -16,7 +16,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class="  ml-60 h-screen pt-20  w-[80%] font-poppins">
+    <main class="  ml-60 h-screen pt-20  w-[80%] font-Inter">
     
         <div class="ml-16">
             <p class=" text-xl font-bold font-philosopher py-3">Report</p>

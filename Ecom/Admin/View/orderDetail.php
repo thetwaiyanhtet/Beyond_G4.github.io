@@ -15,8 +15,8 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main id="main" class="ml-72 pt-20 pb-5">
-        <p class="m-5 font-poppins text-xl font-bold ml-10">Order Details</p>
+    <main class="ml-72 pt-20" id="main">
+        <p class="mt-10 font-poppins text-xl font-bold">Order Details</p>
         <div class="flex justify-around">
             <!--Order Details-->
             <div class=" w-64 h-56 border-2 border-solid shadow-lg rounded-lg">
