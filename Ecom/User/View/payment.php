@@ -17,20 +17,6 @@
 </head>
 
 <body>
-<style>
-      
-  #front.hidden {
-    transform: perspective(1000px) rotateY(-180deg);
-    transform: perspective(1000px) rotateY(0deg);
-  }
-
-  #back-show {
-    transform: perspective(1000px) rotateY(0deg);
-    transform: perspective(1000px) rotateY(180deg);
-  }
-
-
-    </style>
 
     <!-- component -->
     <div class="h-full w-full py-16">
@@ -52,11 +38,11 @@
                                     <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm">Delivery</p>
                                 </div>
                             </div>
-                           
+
                             <div class=" bg-gray-200 h-10 w-10 rounded-full border shadow flex items-center justify-center">
                                 <ion-icon class="text-3xl" name="cart-outline"></ion-icon>
                             </div>
-                            
+
                         </div>
 
                         <div class="w-1/3 flex justify-between bg-btn-color h-3 items-center relative">
@@ -66,10 +52,10 @@
                                 </div>
                             </div>
                             <a href="./deliver.php">
-                            <div class="bg-gray-200 h-10 w-10 rounded-full shadow flex items-center justify-center -ml-2">
-                                <ion-icon class="text-3xl" name="car-outline"></ion-icon>
-                            </div>
-                            </a> 
+                                <div class="bg-gray-200 h-10 w-10 rounded-full shadow flex items-center justify-center -ml-2">
+                                    <ion-icon class="text-3xl" name="car-outline"></ion-icon>
+                                </div>
+                            </a>
                             <div class="w-1/5 bg-gray-200 h-3 flex items-center relative">
                                 <div class="bg-gray-200 h-10 w-10 rounded-full shadow flex items-center justify-center -mr-3 relative">
                                     <ion-icon class="text-3xl" name="card-outline"></ion-icon>
@@ -122,7 +108,7 @@
                             <div class="flexbox flex">
                                 <div class="inputBox flex flex-col items-start pl-3">
                                     <span>expire MM</span>
-                                    <input id="expMonth"  type="number" min="1" max="12" maxlength="2" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color">
+                                    <input id="expMonth" type="number" min="1" max="12" maxlength="2" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color">
                                 </div>
                                 <div class="inputBox flex flex-col items-start ">
                                     <span>expire YY</span>
@@ -141,40 +127,41 @@
                             </div>
                         </div>
                     </div>
-
-                    <div  class="card-container w-1/2  max-lg:w-11/12 max-lg:- m-5 max-lg:mt-20 rounded-md bg-gray-500 ">
-                        <div id="front"  class="  inset-0 ">
-                            <div class="image flex mt-2 justify-around">
-                                <img src="./resources/img/chip.png" class="chip w-16 h-10">
-                                <img src="./resources/img/visa.png" class="w-20 h-8" alt="">
-                            </div>
-                            <div id="cardno" class="card-number-box font-bold text-gray-300 tracking-wide m-5 mt-10">**** **** **** ****</div>
-                            <div class="flex justify-between">
-                                <div class="box m-5 mt-16">
-                                    <span>Card holder</span>
-                                    <div id="cardholder" class="card-holder-name">_</div>
+                    
+                        <div id="flipper" class="card-container w-1/2  max-lg:w-11/12 max-lg:- m-5 max-lg:mt-20 rounded-md bg-gray-500 ">
+                            <div id="front" class="  inset-0 ">
+                                <div class="image flex mt-2 justify-around">
+                                    <img src="./resources/img/chip.png" class="chip w-16 h-10">
+                                    <img src="./resources/img/visa.png" class="w-20 h-8" alt="">
                                 </div>
-                                <div class="box m-5 mt-16">
-                                    <span>Expires</span>
-                                    <div class="expiration">
-                                        <span id="expmonth" class="exp-month">MM</span>
-                                        <span>/</span>
-                                        <span id="expyear" class="exp-year">YY</span>
+                                <div id="cardno" class="card-number-box font-bold text-gray-300 tracking-wide m-5 mt-10">**** **** **** ****</div>
+                                <div class="flex justify-between">
+                                    <div class="box m-5 mt-16">
+                                        <span>Card holder</span>
+                                        <div id="cardholder" class="card-holder-name">_</div>
+                                    </div>
+                                    <div class="box m-5 mt-16">
+                                        <span>Expires</span>
+                                        <div class="expiration">
+                                            <span id="expmonth" class="exp-month">MM</span>
+                                            <span>/</span>
+                                            <span id="expyear" class="exp-year">YY</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <div id="cvvs" class="back hidden transform-front">
-                            <div class="stripe"></div>
-                            <div class="box flex flex-col p-5 justify-center mt-16">
-                                <span id="cvvi" class="text-2xl font-bold">Cvv</span>
-                                <div id="cvvpw"  class="cvv-box w-[100%] pl-3 items-center h-10 rounded-md bg-white py-2"></div>
+                            <div id="cvvs" class="back hidden transform-front">
+                                <div class="stripe"></div>
+                                <div class="box flex flex-col p-5 justify-center mt-16">
+                                    <span id="cvvi" class="text-2xl font-bold">Cvv</span>
+                                    <div id="cvvpw" class="cvv-box w-[100%] pl-3 items-center h-10 rounded-md bg-white py-2"></div>
+                                </div>
+                                <img src="image/visa.png" alt="">
                             </div>
-                            <img src="image/visa.png" alt="">
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -195,9 +182,9 @@
             </div>
         </div>
         <div class="absolute -bottom-20 mr-10 max-lg:right-3  right-0 max-lg:-bottom-20">
-        <a href="./confirmation.php"> <button class=" text-white  py-2 px-7 rounded-md bg-[#314755]" >Next Step ></button></a> 
-            </div>
+            <a href="./confirmation.php"> <button class=" text-white  py-2 px-7 rounded-md bg-[#314755]">Next Step ></button></a>
         </div>
+    </div>
     </div>
 </body>
 

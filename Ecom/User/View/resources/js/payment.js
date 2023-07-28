@@ -16,12 +16,17 @@ document.getElementById('cvv').addEventListener('mouseenter',(e)=>{
     document.getElementById('front').classList.add('hidden');
     document.getElementById('cvvs').classList.add('show');
     document.getElementById('cvvs').classList.remove('hidden');
+    document.getElementById('front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.getElementById('front').style.transition = 'transform 0.5s';
+    document.getElementById('cvvs').style.transform = 'perspective(1000px) rotateY(0deg)';
 });
 
 document.getElementById('cvv').addEventListener('mouseleave',(e)=>{
     console.log("chit lar");
     document.getElementById('front').classList.remove('hidden');
-    
+    document.getElementById('cvvs').style.transform = 'perspective(1000px) rotateY(180deg)';
+    document.getElementById('cvvs').style.transition = 'transform 0.5s';
+    document.getElementById('front').style.transform = 'perspective(1000px) rotateY(0deg)';
     document.getElementById('cvvs').classList.add('hidden');
     
 });
