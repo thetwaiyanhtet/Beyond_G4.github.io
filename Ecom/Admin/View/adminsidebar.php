@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none orderList">
                             <span class="flex items-center">
                                 <box-icon name='package' class=""></box-icon>
                                 <span class="mx-4 font-medium">Order Lists</span>
@@ -140,7 +140,7 @@
                         </button>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none chatBox">
                             <span class="flex items-center space-x-3">
                                 <ion-icon class="h-5 w-5" name="chatbubble-ellipses-outline"></ion-icon>
                                 <span clbg-blue-600ass="mx-4 font-medium">Chat Box</span>
