@@ -43,14 +43,12 @@ include "./sidebar.php";
          font-poppins text-white ">Order reports</button>
             </div>
         </div>
-        <div class="flex  items-center ml-[55%] mt-3">
+        <div class="flex  items-center ml-[75%] mt-3">
             <span class="flex p-1 border rounded-lg">
-                <img src="../View/resources/img/calendar.svg" alt="">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
             <span>-</span>
             <span class="flex p-1 border rounded-lg">
-                <img src="../View/resources/img/calendar.svg" alt="">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
         </div>
