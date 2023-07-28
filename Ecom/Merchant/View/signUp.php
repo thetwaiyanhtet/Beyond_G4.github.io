@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class=" font-poppins">
     <div class="flex justify-evenly items-center">
         <div>
             <img src="../View/resources/img/welcome.png" alt="" class=" w-fit">
@@ -27,15 +27,15 @@
             
             <div class="text-[#667085]">
                 <div>Name*</div>
-                <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none">
+                <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="merchant###">
             </div>
             <div class="text-[#667085]">
                 <div>Email*</div>
-                <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none">
+                <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="merchant***@mail.com">
             </div>
             <div class="text-[#667085] pb-4">
                 <div>Password*</div>
-                <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none">
+                <input type="password" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="********">
                 <div class="text-[#667085]">Must be at least 8 characters.</div>
             </div>
             
@@ -43,7 +43,7 @@
             <button class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center 
             font-PlayfairSC text-white">Get Started</button>
             </a>
-            <div class=" text-center text-[#667085]">Already have an account? <a href="./logIn.php" class="text-[#1366D9]" >Log in</a></div>
+            <div class=" text-center text-[#667085]">Already have an account? <a href="./logIn.php" class="text-[#1366D9] hover:underline" >Log in</a></div>
         </div>
     </div>
 </body>
