@@ -154,14 +154,6 @@
                         </a>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
-                            <span class="flex items-center">
-                                <ion-icon class="h-5 w-5" name="star-half-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Review and Rating</span>
-                            </span>
-                        </button>
-                    </div>
-                    <div x-data="{ open: false }">
                         <a href="./report.php">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none report">
                             <span class="flex items-center">
