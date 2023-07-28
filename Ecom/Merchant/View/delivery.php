@@ -8,10 +8,10 @@ include "./sidebar.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./resources/css/delivery.css">
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@ include "./sidebar.php";
                 </ul>
             </div>
         </header>
-        <div class="flex justify-between mt-6 font-philosopher font-semibold text-2xl">
+        <div class="flex justify-between mt-6 font-semibold text-xl">
             Delivery
         </div>
         <div class="flex justify-evenly max-lg:ml -ml-[30%] mt-3">
@@ -103,7 +103,7 @@ include "./sidebar.php";
                                 Royal Express
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#" class="font-medium text-white  hover:underline">
+                                <a href="./deliveryviewdetail.php" class="font-medium text-white  hover:underline">
                                     <button class=" bg-blue-600 py-1 px-3 rounded-md">View details</button>
                                 </a>
                             </td>

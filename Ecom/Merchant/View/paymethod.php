@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Method</title>
-    <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <ion-icon name="arrow-back-outline" class="m-2 text-3xl"></ion-icon>
-    <ion-icon name="close-circle-outline" class="float-right m-2 text-3xl"></ion-icon>
+<body class=" font-poppins">
+    <a href="./ChoosePlan.php"><ion-icon name="arrow-back-outline" class="m-2 text-4xl p-3"></ion-icon></a>
+    <ion-icon name="close-circle-outline" class="float-right m-2 text-4xl p-3"></ion-icon>
     <div class="flex  justify-around space-x-5">
         <!--Payment Method-->
         <div class="flex flex-col">
@@ -37,31 +36,31 @@
                 </div>
                 <div class="clear-both m-5">
                     <p>Cardholder Name</p>
-                    <input type="text" name="user" placeholder="user" class=" w-[340px] border border-solid border-black rounded-md p-1 m-2">
+                    <input type="text" name="user" placeholder="user" class=" w-[340px] border border-solid border-black rounded-md p-1 m-2 outline-none">
                     <div class="flex justify-between">
                         <div>
                             <label>Card Number</label><br>
-                            <input type="text" name="user" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2">
+                            <input type="text" name="user" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2 outline-none">
                         </div>
                         <div>
                             <label>Date</label><br>
-                            <input type="text" name="user" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2" placeholder="03/23">
+                            <input type="text" name="user" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" placeholder="03/23">
                         </div>
                         <div>
                             <label>CVV</label><br>
-                            <input type="text" name="user" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2">
+                            <input type="text" name="user" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none">
                         </div>
                     </div>
                     <ion-icon name="lock-closed-outline" class="mt-2"></ion-icon>
                     <span>Your transition is secure with SSL encryption.</span><br>
                     <ion-icon name="alert-circle" class="mt-2"></ion-icon>
                     <span>Credit card payment may take up to 24h to be proceed.</span><br>
-                    <input type="checkbox" name="" id="" class="mt-2">
+                    <input type="checkbox" name="" id="" class="mt-2 outline-none">
                     <span>Save my payment details for future transactions</span><br>
                 </div>
                 <p class=" w-94  border border-solid border-black"></p>
                 <div class="float-left inline-flex m-4">
-                    <input type="radio" name="Credit" class="form-checkbox w-6 h-6">
+                    <input type="radio" name="Credit" class="form-checkbox w-6 h-6 outline-none">
                     <p class="ml-2 font-poppins">Kpay</p>
                 </div>
                 <div class="float-right inline-flex m-4">
@@ -96,12 +95,12 @@
                     <p>Subtotal</p>
                     <p>$21.29</p>
                 </div>
-                <button class=" w-28 border border-solid border-black rounded-md bg-text1 text-white hover:text-black hover:bg-white p-1 m-2 ml-40">Play Now</button>
+                <a href="./paymentsfl.php"> <button class=" w-28 border border-solid border-black rounded-md bg-text1 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button></a>
 
             </div>
 
         </div>
-        
+
     </div>
 </body>
 

@@ -12,6 +12,7 @@ include "./sidebar.php";
     <title>Product List</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./resources/css/inventory.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,51 +34,10 @@ include "./sidebar.php";
             </div>
         </header>
         <section>
-            <p class=" p-3">Inventory</p>
+            <p class=" p-3 font-semibold">Inventory</p>
             <div class=" flex-col justify-center px-5 py-1">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Overall Inventory</h1>
-                    <!-- <div class=" grid grid-cols-4 text-center">
-                        <div class=" border-r-2 border-blue-950 pl-12 text-start ">
-                            <p>Category</p>
-                            <p class=" font-bold">10</p>
-                            <p class=" text-sm"></p>
-                        </div>
-                        <div class=" border-r-2 border-blue-950 pl-12 text-start ">
-                            <p>Total Products</p>
-                            <div class=" font-bold flex justify-between">
-                                <p>404</p>
-                                <p>$1500</p>
-                            </div>
-                            <div class="flex justify-between text-sm">
-                                <p>Last 7 Days</p>
-                                <p>Revenue</p>
-                            </div>
-                        </div>
-                        <div class=" border-r-2 border-blue-950 pl-12 text-start">
-                            <p>Top Selling</p>
-                            <div class=" font-bold flex justify-between">
-                                <p>10</p>
-                                <p>$250</p>
-                            </div>
-                            <div class="flex justify-between text-sm">
-                                <p>Last 7 Days</p>
-                                <p>Cost</p>
-                            </div>
-                        </div>
-                        <div class="pl-12 text-start">
-                            <p>Low Stocks</p>
-                            <div class=" font-bold flex justify-between">
-                                <p>10</p>
-                                <p>4</p>
-                            </div>
-                            <div class="flex justify-between text-sm">
-                                <p>Ordered</p>
-                                <p>Out of Stock</p>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <div class=" flex justify-between pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
@@ -151,9 +111,9 @@ include "./sidebar.php";
                     <div class="flex justify-between items-center">
                         <p class="">Products</p>
                         <div class="flex space-x-3">
-                            <button class="btn">Add Product</button>
-                            <button class="btn">Add Category</button>
-                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3">Download All</button>
+                            <a href="./addNewProduct.php"><button class="btn">Add Product</button></a>
+                            <a href="./addNewCategory.php"><button class="btn">Add Category</button></a>
+                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:bg-[#1366D9] hover:text-white">Download All</button>
                         </div>
                     </div>
 

@@ -13,8 +13,9 @@ include "./sidebar.php"
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./resources/css/reviewNRating.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -28,7 +29,7 @@ include "./sidebar.php"
                 <ul class="flex space-x-5 items-center pr-3">
                     <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
+                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>

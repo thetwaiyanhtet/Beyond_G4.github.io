@@ -16,12 +16,13 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/logout.css">
 </head>
 
 <body>
     <main class=" ml-56 h-screen relative">
 
-        <section class="fixed left-[45%] top-[35%] border bg-gray-300 rounded-md shadow-lg w-60 p-5">
+        <section class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white">
             <div>
                 <div class=" border-b-2 border-gray-500">
                     <p class="pb-3">Log out of your account?</p>
