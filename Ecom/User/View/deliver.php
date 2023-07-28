@@ -30,7 +30,7 @@
                                 <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm ">Cart</p>
                             </div>
                         </div>
-                        <div class="w-1/3 bg-button-color h-3 flex items-center relative">
+                        <div class="w-1/3 bg-[#314755] h-3 flex items-center relative">
                             <div class="absolute right-0 -mr-2">
                                 <div class="relative px-2 py-1 rounded mt-20 -mr-12">
                                     <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm">Delivery</p>
@@ -124,11 +124,11 @@
                         <p class="mb-5">$260</p>
                     </div>
                 </div>
-
-
-            </div>
-            <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <button class=" text-white py-1 px-5 rounded-md bg-button-color">Next Step ></button>
+            
+           
+        </div>
+        <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
+                <button class=" text-white py-1 px-5 rounded-md bg-button-color" >Next Step ></button>
             </div>
         </div>
 

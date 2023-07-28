@@ -36,9 +36,11 @@
                                     <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm">Delivery</p>
                                 </div>
                             </div>
+                           
                             <div class=" bg-gray-200 h-10 w-10 rounded-full border shadow flex items-center justify-center">
                                 <ion-icon class="text-3xl" name="cart-outline"></ion-icon>
                             </div>
+                            
                         </div>
 
                         <div class="w-1/3 flex justify-between bg-btn-color h-3 items-center relative">
@@ -47,9 +49,11 @@
                                     <p tabindex="0" class="focus:outline-none  text-xl font-semibold max-lg:text-sm">Card</p>
                                 </div>
                             </div>
+                            <a href="./deliver.php">
                             <div class="bg-gray-200 h-10 w-10 rounded-full shadow flex items-center justify-center -ml-2">
                                 <ion-icon class="text-3xl" name="car-outline"></ion-icon>
                             </div>
+                            </a> 
                             <div class="w-1/5 bg-gray-200 h-3 flex items-center relative">
                                 <div class="bg-gray-200 h-10 w-10 rounded-full shadow flex items-center justify-center -mr-3 relative">
                                     <ion-icon class="text-3xl" name="card-outline"></ion-icon>
@@ -116,7 +120,7 @@
 
                                 </div>
                             </div>
-                            <div class="flex text-center align-middle justify-center rounded-md m-1/2 ml-2 w-1/5 mt-10 bg-btn-color">
+                            <div class="flex text-center align-middle justify-center rounded-md m-1/2 ml-2 w-1/5 mt-10 bg-[#314755]">
                                 <input type="submit" value="submit" class=" text-white px-10 py-2  submit-btn">
                             </div>
                         </div>
@@ -173,7 +177,7 @@
             </div>
         </div>
         <div class="absolute -bottom-20 mr-10 max-lg:right-3  right-0 max-lg:-bottom-20">
-                <button class=" text-white  py-2 px-7 rounded-md bg-btn-color" >Next Step ></button>
+        <a href="./confirmation.php"> <button class=" text-white  py-2 px-7 rounded-md bg-[#314755]" >Next Step ></button></a> 
             </div>
         </div>
     </div>

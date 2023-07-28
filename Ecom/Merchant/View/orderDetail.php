@@ -8,6 +8,7 @@ include "./sidebar.php"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Detail</title>
+    <link rel="stylesheet" href="./resources/css/order.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -33,7 +34,7 @@ include "./sidebar.php"
         <div class="flex justify-between">
             <div class="flex m-2">
                 <img src="./resources/img/fluent_people-32-filled.png" alt="" class="h-8">
-                <p class="m-2">Order Details</p>
+                <p class="m-2 font-semibold">Order Details</p>
             </div>
             <div class="m-2">
                 <input type="checkbox" name="" id="">
@@ -42,7 +43,7 @@ include "./sidebar.php"
         </div>
         <div class="flex justify-between">
             <!--Order Details-->
-            <div class="w-96 h-56 border border-solid drop-shadow-xl m-5 ml-10">
+            <div class="w-96 h-56 border border-solid shadow-xl m-5 ml-10 rounded-lg">
                 <p class="m-2">Order Details</p>
                 <hr>
                 <div class="m-2">
@@ -53,7 +54,7 @@ include "./sidebar.php"
                 </div>
             </div>
             <!--Delivery-->
-            <div class="w-96 h-64 border border-solid drop-shadow-xl m-4">
+            <div class="w-96 h-64 border border-solid shadow-xl m-4 rounded-lg">
                 <p class="m-2">Delivery Address</p>
                 <hr>
                 <div class="m-2">
@@ -67,7 +68,7 @@ include "./sidebar.php"
             </div>
         </div>
         <!--Product Summary-->
-        <div class="w-[900px] h-[390px] border border-solid drop-shadow-xl ml-10">
+        <div class="w-[900px] h-[390px] border border-solid shadow-xl ml-10 rounded-lg">
             <p class="m-5">Product Summary</p>
             <table class="table-auto w-full">
                 <thead>
@@ -121,11 +122,8 @@ include "./sidebar.php"
                 <p class="m-1 mr-14"> = $1515.00</p>
             </div>
         </div>
-        <button class="w-32 rounded-md bg-blue-700 p-2 m-5 float-right">Deliver</button>
-        <button class="w-32 rounded-md bg-slate-300 p-2 m-5 float-right">Cancel</button>
-
-
-
+        <button class="w-32 rounded-md bg-blue-700 p-2 m-5 float-right text-white">Deliver</button>
+        <button class=" w-24 rounded-md p-2 m-5 float-right">Cancel</button>
     </main>
 
 

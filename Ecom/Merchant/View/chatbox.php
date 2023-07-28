@@ -11,6 +11,7 @@ include "./sidebar.php"
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./resources/css/chatbox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -26,11 +27,11 @@ include "./sidebar.php"
             <ul class="flex space-x-5 items-center pr-3">
                 <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
                 <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
-                <li><img src="./resources/img/amazfit.png" alt="..." width="50px"></li>
+                <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
             </ul>
         </div>
     </header>
-    <p class="m-5 ml-64">Chat Box</p>
+    <p class="m-5 ml-64 font-semibold">Chat Box</p>
     <main class="ml-56 w-auto h-auto relative">
 
 

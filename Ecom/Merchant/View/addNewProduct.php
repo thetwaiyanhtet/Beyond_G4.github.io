@@ -10,6 +10,7 @@ include "./sidebar.php"
     <title>Add New Product</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./resources/css/inventory.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +32,7 @@ include "./sidebar.php"
             </div>
         </header>
         <section>
-            <p class=" p-3">Inventory > <span class=" font-semibold">New Product</span></p>
+            <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">New Product</span></p>
             <div class=" flex justify-center px-5 py-1">
                 <div class=" w-screen h-full bg-slate-200 rounded-lg px-24 py-5 shadow-xl">
                     <div class=" pb-5">

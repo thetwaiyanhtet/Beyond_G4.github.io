@@ -16,6 +16,7 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/report.css">
 </head>
 
 <body>
@@ -44,17 +45,12 @@ include "./sidebar.php";
 
             <button class="p-2 border border-[#1366D9] rounded-lg mr-7  transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
         </div>
-        <div class="flex  items-center ml-[56%] mt-3">
-            <p class="text-2xl font-semibold mr-3">Sale report
-            <h3 class="text-[#756e6ef7] mr-3">for</h3>
-            </p>
-            <span class="flex p-1 border rounded-lg">
-                <img src="../View/resources/img/calendar.svg" alt="">
+        <div class="flex items-center ml-[75%] mt-3">
+            <span class="flex p-1 border rounded-lg"> 
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
             <span>-</span>
             <span class="flex p-1 border rounded-lg">
-                <img src="../View/resources/img/calendar.svg" alt="">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
         </div>
