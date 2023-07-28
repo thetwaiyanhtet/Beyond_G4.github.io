@@ -65,7 +65,7 @@ include "./adminsidebar.php";
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
                                 <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
+                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
                             </td>
 
                         </tr>
@@ -84,7 +84,7 @@ include "./adminsidebar.php";
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
                                 <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
+                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
                             </td>
 
                         </tr>
@@ -103,7 +103,7 @@ include "./adminsidebar.php";
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
                                 <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
+                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
                             </td>
 
                         </tr>
@@ -122,7 +122,7 @@ include "./adminsidebar.php";
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
                                 <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
+                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
                             </td>
 
                         </tr>
@@ -141,17 +141,29 @@ include "./adminsidebar.php";
                             </td>
                             <td class="px-6 py-4 flex space-x-3">
                                 <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
+                                <img id="del2" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
             </section>
         </div>
-
-
+        <div id="delhid" class=" absolute top-20 mt-40 ml-60 hidden">
+                <?php
+                include "./deldetepo-up.php";
+                ?>
+            </div>
     </main>
+    <script>
+        document.getElementById('del').addEventListener('click', (e) => {
+            document.getElementById('delhid').classList.add('show');
+            document.getElementById('delhid').classList.remove('hidden');
+        })
+        document.getElementById('no').addEventListener('click', (e) => {
+            document.getElementById('delhid').classList.add('hidden');
+            document.getElementById('delhid').classList.remove('show');
+        })
+    </script>
 </body>
 
 </html>

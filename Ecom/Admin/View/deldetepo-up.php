@@ -13,14 +13,14 @@
 <body  class="flex justify-center h-screen  items-center ">
     <div class="w-96 border rounded-xl shadow-xl">
         <div class=" bg-blue-600 rounded-xl rounded-b-none">
-        <img class="py-9 px-16 " src="./resources/img/delete.png" alt="">
+        <img class="py-3 px-16 " src="./resources/img/delete.png" alt="">
         </div>
-        <div class="flex flex-col items-center space-y-5 mt-5 justify-center">
+        <div class="flex flex-col items-center bg-white  space-y-5 justify-center">
             <p class="Font-bold text-3xl">Delete</p>
             <p>Sure you want to delete?</p>
             <div class="space-x-5 pb-10">
-                <button class="bg-blue-600 rounded-lg px-7 py-2 shadow-2xl" >Delete</button>
-                <button class=" border rounded-lg bg-slate-400 px-7 py-2 shadow-xl">No</button>
+                <button id="yes" class="bg-blue-600 rounded-lg px-7 py-2 shadow-2xl" >Delete</button>
+                <button id="no" class=" border rounded-lg bg-slate-400 px-7 py-2 shadow-xl">No</button>
             </div>
         </div>
     </div>
