@@ -44,9 +44,6 @@ include "./sidebar.php";
             </div>
         </div>
         <div class="flex  items-center ml-[55%] mt-3">
-            <p class="text-2xl font-semibold mr-3">Order report
-            <h3 class="text-[#756e6ef7] mr-3">for</h3>
-            </p>
             <span class="flex p-1 border rounded-lg">
                 <img src="../View/resources/img/calendar.svg" alt="">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
