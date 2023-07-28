@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -28,7 +28,7 @@
                                 <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm ">Cart</p>
                             </div>
                         </div>
-                        <div class="w-1/3 bg-button-color h-3 flex items-center relative">
+                        <div class="w-1/3 bg-[#314755] h-3 flex items-center relative">
                             <div class="absolute right-0 -mr-2">
                                 <div class="relative px-2 py-1 rounded mt-20 -mr-12">
                                     <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm">Delivery</p>
@@ -106,30 +106,29 @@
                     <div class="mr-10 text-xl max-lg:text-sm font-semibold">
                         <p class="mb-5">Subtotal</p>
                         <p class="mb-5 ">Delivery Fee</p>
-                       
+
                     </div>
                     <div class="flex flex-col max-lg:text-base items-end text-xl font-semibold">
                         <p class="mb-5">$250</p>
                         <p class="mb-5">$10</p>
-                       
+
                     </div>
                 </div>
                 <div class="flex mt-5 max-lg:text-sm justify-between text-xl font-semibold">
                     <div>
-                    <p class="mb-5">Total Amount</p>
+                        <p class="mb-5">Total Amount</p>
                     </div>
                     <div>
-                    <p class="mb-5">$260</p>
+                        <p class="mb-5">$260</p>
                     </div>
                 </div>
-            
-           
-        </div>
-        <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <button class=" text-white py-1 px-5 rounded-md bg-button-color" >Next Step ></button>
+            </div>
+            <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
+              <a href="./payment.php">  <button class=" text-white py-1 px-5 rounded-md font-PlayfairSC bg-[#314755]">Next Step ></button>
+                </a>
             </div>
         </div>
-        
+
     </div>
 
 </body>

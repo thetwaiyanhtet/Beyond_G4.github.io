@@ -13,11 +13,11 @@
 <body class="mt-3 overflow-hidden">
   <section class="w-screen h-screen flex justify-center align-middle items-center">
      <section class="flex flex-col items-center">
-      <ion-icon class="text-9xl text-green " name="checkmark-circle-outline"></ion-icon>
+      <ion-icon class="text-9xl " name="checkmark-circle-outline"></ion-icon>
       <p class="font-bold text-3xl max-md:text-xl ">Congratulation</p>
       <p class="font-bold text-3xl max-md:text-xl ">Your order is accepted.</p>
       <p class="font-bold text-xl max-md:text-xl mt-10 ">Thanks you for your order.</p>
-      <button class="rounded-md border shadow-lg p-2 bg-gray-100 mt-8 ">Go back to your home page</button>
+      <a href="./homepage.php"><button class="rounded-md border shadow-lg p-2 bg-gray-100 mt-8 ">Go back to your home page</button></a>
      </section>
 </section>
 </body>
