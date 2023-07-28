@@ -14,9 +14,10 @@
 </head>
 
 <body class="mt-3 font-poppins overflow-hidden">
+    <a href="./history.php"><ion-icon name="arrow-back-outline" class="text-2xl"></ion-icon></a>
     <section class=" flex items-center justify-between mx-[3%]">
         <span class="flex items-center  my-[1%]">
-            <img class=" w-16 lg:w-20" src="../View/resources/img/logo.png" alt="">
+            <img class=" h-10 lg:w-20" src="../View/resources/img/logo.png" alt="">
             <p class="text-2xl lg:text-4xl ml-[1%] max-md:text-2xl font-philosopher font-bold ">Beyond</p>
         </span>
         <span>
@@ -57,7 +58,7 @@
                 </div>
             </div>
         </section>
-        <ion-icon class=" lg:text-7xl absolute left-[5%] top-[80%] lg:top-[75%] cursor-pointer max-md:text-6xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>
+        <!-- <a href="./history.php"> <ion-icon class=" lg:text-7xl absolute left-[5%] top-[80%] lg:top-[75%] cursor-pointer max-md:text-6xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon></a> -->
     </section>
 
 </body>

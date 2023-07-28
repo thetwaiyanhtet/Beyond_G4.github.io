@@ -20,7 +20,7 @@
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
 
             <div class="flex items-center">
-                <img class="w-7 lg:w-14" src="../View/resources/img/logo.png" alt="">
+                <a href="./mainPage.php"><img class="w-7 lg:w-14" src="../View/resources/img/logo.png" alt=""></a>
                 <span class="self-center text-xl lg:text-2xl font-semibold whitespace-nowrap dark:text-white font-philosopher">Beyond</span>
             </div>
 
@@ -39,10 +39,10 @@
         </div>
     </nav>
 
-    <img class="h-auto w-screen" src="../View/resources/img/Tranding product image.png" alt="image description">
+    <img class=" mx-auto h-auto w-[90%]" src="../View/resources/img/Tranding product image.png" alt="image description">
     <ion-icon class="text-3xl lg:text-6xl cursor-pointer max-md:text-6xl max-md:left-8 max-md:bottom-24 pt-4" name="caret-back-outline"></ion-icon>
     <div class="flex items-center space-x-2 lg:space-x-4">
-        <p class=" ml-4 lg:ml-0 font-philosopher Display font-semibold text-2xl lg:text-4xl ">Trending Products</p>
+        <p class=" pl-5 lg:ml-0 font-philosopher Display font-semibold text-2xl lg:text-4xl ">Trending Products</p>
         <img src="../View/resources/img/fire.svg" alt="" class=" w-[40px] h-[40px]">
     </div>
     <div class="flex justify-around font-poppins pt-12 pl-12 pr-12 lg:pl-0 lg:pr-0 space-x-3">

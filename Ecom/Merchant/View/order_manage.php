@@ -32,7 +32,7 @@ include "./sidebar.php"
             </div>
         </header>
         <section class="p-5">
-            <p class=" p-3 text-xl font-semibold">Orders</p>
+            <p class=" pb-3 text-lg font-semibold">Orders</p>
             <div class="relative overflow-x-auto py-5 px-5 rounded-lg shadow-xl border-2 border-blue-950">
                 <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">

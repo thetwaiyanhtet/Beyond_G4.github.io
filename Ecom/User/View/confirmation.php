@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <l<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
@@ -28,7 +28,7 @@
                                 <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm ">Cart</p>
                             </div>
                         </div>
-                        <div class="w-1/3 bg-button-color h-3 flex items-center relative">
+                        <div class="w-1/3 bg-[#314755] h-3 flex items-center relative">
                             <div class="absolute right-0 -mr-2">
                                 <div class="relative px-2 py-1 rounded mt-20 -mr-12">
                                     <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm">Delivery</p>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="w-1/3 flex justify-between bg-button-color h-3 items-center relative">
+                        <div class="w-1/3 flex justify-between bg-[#314755] h-3 items-center relative">
                             <div class="absolute right-0 -mr-2">
                                 <div class="relative  px-2 py-1 rounded mt-20 -mr-3">
                                     <p tabindex="0" class="focus:outline-none  text-xl font-semibold max-lg:text-sm">Card</p>
@@ -56,7 +56,7 @@
 
                         </div>
 
-                        <div class=" w-1/3 flex h-3 bg-button-color items-center justify-end relative">
+                        <div class=" w-1/3 flex h-3 bg-[#314755] items-center justify-end relative">
                             <div class="bg-gray-200 h-10 w-10 rounded-full shadow flex items-center justify-center">
                                 <ion-icon class="text-3xl " name="checkmark-circle-outline"></ion-icon>
                             </div>
@@ -83,13 +83,13 @@
                 <div class="mt-5 font-semibold max-lg:text-sm ">
                     <p>Hnin Eain Latt</p>
                     <p>324 Tang Noug, Kawthaung</p>
-                    <span class="border-b-2 border-button-color pb-2">hninaeinlatt438@gmail.com</span>
+                    <span class="border-b-2 border-[#314755] pb-2">hninaeinlatt438@gmail.com</span>
                 </div>
                 <div class="flex align-middle items-center mt-5">
-                    <span class="border-b-2 border-button-color font-bold mb-5 pb-3">Royal Express</span>
+                    <span class="border-b-2 border-[#314755] font-bold mb-5 pb-3">Royal Express</span>
                     <p class=" text-xs">(Expected delivery on 30/07/23)</p>
                 </div>
-                <button class="px-4 py-3 mt-2 bg-button-color rounded-md flex justify-center items-center">
+                <button class="px-4 py-3 mt-2 bg-[#314755] rounded-md flex justify-center items-center">
                     <label class="flex text-white space-x-2">
                         <input type="radio" name="deli" class="form-checkbox w-6 h-6  ">
                         <span>Credit Card</span>
@@ -97,8 +97,8 @@
                 </button>
             </div>
             <div class="flex flex-col max-lg:hidden  font-poppins">
-                <p class=" border-b-4 border-button-color pb-5 text-3xl text-center max-lg:text-xl font-bold">Your order</p>
-                <div class="flex mt-10 border-b-4 border-button-color  justify-center items-center">
+                <p class=" border-b-4 border-[#314755] pb-5 text-3xl text-center max-lg:text-xl font-bold">Your order</p>
+                <div class="flex mt-10 border-b-4 border-[#314755]  justify-center items-center">
                     <div class="mb-10 ">
                         <img class="w-32" src="./resources/img/cart shopping.png" alt="">
                     </div>
@@ -122,11 +122,9 @@
                         <p class="mb-5">$260</p>
                     </div>
                 </div>
-
-
             </div>
             <div class="absolute max-lg:hidden -bottom-10 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <button class=" text-white py-1 px-5 rounded-md bg-button-color">Next Step ></button>
+            <a href="./orderConfirm.php"> <button class=" text-white py-1 px-5 rounded-md font-PlayfairSC bg-[#314755]">Confirm Order</button></a> 
             </div>
         </div>
 

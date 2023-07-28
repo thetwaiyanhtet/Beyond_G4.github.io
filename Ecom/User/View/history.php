@@ -14,10 +14,13 @@
 </head>
 
 <body class="mt-3 font-poppins overflow-hidden">
+    <a href="./profileMenu.php"><ion-icon name="arrow-back-outline" class="text-2xl"></ion-icon></a>
     <section class=" flex items-center justify-between mx-[3%]">
         <span class="flex items-center  my-[1%]">
-            <img class=" w-20" src="../View/resources/img/logo.png" alt="">
-            <p class="text-3xl ml-[1%] max-md:text-2xl font-philosopher font-bold ">Beyond</p>
+            <a href="./mainPage.php">
+                <img class="h-10" src="../View/resources/img/logo.png" alt="">
+            </a>
+            <p class="text-2xl ml-[1%] max-md:text-2xl font-philosopher font-bold ">Beyond</p>
         </span>
         <span>
             <ion-icon class="text-4xl lg:text-4xl float-right " name="person-circle-outline"></ion-icon>
@@ -53,15 +56,15 @@
                     <p class="text-xs lg:text-xl text-white lg:font-semibold">Total Price</p>
                     <p class="text-xs lg:text-xl text-white mt-3 lg:mt-9 lg:font-semibold">$200</p>
                 </div>
-                <button class="w-[38px] lg:w-[113px] h-[16px] lg:h-[40px] rounded-md font-philosopher bg-[#eeeeeeae]
-                 text-black text-xs lg:text-3xl lg:mt-9 mt-5 ">view</button>
+                <a href="./historyDetail.php"> <button type="button" class="w-[38px] lg:w-[113px] h-[16px] lg:h-[40px] rounded-md font-philosopher bg-[#eeeeeeae]
+                 text-black text-xs lg:text-3xl lg:mt-9 mt-5 ">view</button></a>
             </div>
         </div>
 
         <div class="absolute mt-8 lg:mt-0 w-[362px] lg:w-[1043px] h-[103px] lg:h-[154px] bg-[#AC8CE0] border border-1 border-black top-[38%] lg:top-[55%] left-[9%] lg:left-[17%]"></div>
         <div class="absolute mt-8 lg:mt-0 w-[362px] lg:w-[1043px] h-[103px] lg:h-[154px] bg-[#AC8CE0] border border-1 border-black top-[36%] lg:top-[53%] left-[8%] lg:left-[16%]"></div>
         <div class="absolute mt-8 lg:mt-0 w-[362px] lg:w-[1043px] h-[103px] lg:h-[154px] bg-[#AC8CE0] border border-1 border-black top-[34%] lg:top-[51%] left-[7%] lg:left-[15%]">
-        <div class="flex justify-evenly mt-7 lg:mt-8 ">
+            <div class="flex justify-evenly mt-7 lg:mt-8 ">
                 <div class="flex items-center">
                     <img class=" w-10 lg:w-24 " src="../View/resources/img/gymshark.png" alt="">
                     <span class="hidden lg:block text-3xl font-semibold">Gymshark</span>
@@ -82,15 +85,15 @@
                     <p class="text-xs lg:text-xl text-white lg:font-semibold">Total Price</p>
                     <p class="text-xs lg:text-xl text-white mt-3 lg:mt-9 lg:font-semibold">$200</p>
                 </div>
-                <button class="w-[38px] lg:w-[113px] h-[16px] lg:h-[40px] rounded-md font-philosopher bg-[#eeeeeeae]
-                 text-black text-xs lg:text-3xl lg:mt-9 mt-5">view</button>
+                <a href="./historyDetail.php"> <button type="button" class="w-[38px] lg:w-[113px] h-[16px] lg:h-[40px] rounded-md font-philosopher bg-[#eeeeeeae]
+                 text-black text-xs lg:text-3xl lg:mt-9 mt-5">view</button></a>
             </div>
         </div>
-
-
+        <!-- <a href="./profileMenu.php">
         <ion-icon
             class=" lg:text-6xl absolute left-[5%] top-[65%] md:top-[72%] cursor-pointer max-md:text-7xl max-md:left-8 max-md:bottom-24"
             name="caret-back-outline"></ion-icon>
+        </a> -->
     </section>
 
 </body>

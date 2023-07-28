@@ -10,10 +10,13 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 
 <body class=" bg-violet-200 font-philosopher letter relative overflow-hidden outline-dashed">
+    <a href="./mainPage.php"><ion-icon name="arrow-back-outline" class="text-2xl"></ion-icon></a>
     <main class=" min-h-screen flex items-center justify-center">
 
         <div class="lg:flex justify-center items-center lg:space-x-5 lg:w-[800px] w-[380px] h-min-screen bg-transparent border shadow-2xl lg:py-10 lg:px-20 py-5 px-16 rounded-3xl z-50">
@@ -55,32 +58,32 @@
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
-           <a href="./Wishlist.php">
-           <div class=" settingBar">
-                <img src="./resources/img/heart-line.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                <p class=" uppercase">wishlist</p>
-                <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
-            </div>
-           </a>
-           <a href="./history.php">
-           <div class=" settingBar">
-                <img src="./resources/img/history.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                <p class=" uppercase">history</p>
-                <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
-            </div>
-           </a>
-           <a href="./orderNotification.php">
-           <div class=" settingBar">
-                <img src="./resources/img/notifications-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                <p class=" uppercase">notification</p>
-                <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
-            </div>
-           </a>
+            <a href="./Wishlist.php">
+                <div class=" settingBar">
+                    <img src="./resources/img/heart-line.svg" alt="..." class=" lg:w-[30px] w-[20px]">
+                    <p class=" uppercase">wishlist</p>
+                    <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
+                </div>
+            </a>
+            <a href="./history.php">
+                <div class=" settingBar">
+                    <img src="./resources/img/history.svg" alt="..." class=" lg:w-[30px] w-[20px]">
+                    <p class=" uppercase">history</p>
+                    <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
+                </div>
+            </a>
+            <a href="./orderNotification.php">
+                <div class=" settingBar">
+                    <img src="./resources/img/notifications-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
+                    <p class=" uppercase">notification</p>
+                    <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
+                </div>
+            </a>
         </div>
 
         </div>
 
-        <div class=" absolute bottom-[10px] lg:left-[220px] left-2 col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
+        <!-- <div class=" absolute bottom-[10px] lg:left-[220px] left-2 col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div> -->
         <img src="./resources/img/bg.png" alt="..." class=" absolute lg:-right-44 bottom-0 lg:w-[600px] w-96">
     </main>
 </body>

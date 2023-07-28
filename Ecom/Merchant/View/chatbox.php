@@ -33,9 +33,6 @@ include "./sidebar.php"
     </header>
     <p class="m-5 ml-64 font-semibold">Chat Box</p>
     <main class="ml-56 w-auto h-auto relative">
-
-
-
         <!--Customer-->
         <div class=" w-[325px] h-[480px] border border-solid m-5 bg-gray-200 rounded-lg space-y-3">
 
@@ -128,15 +125,15 @@ include "./sidebar.php"
 
         </div> -->
         <!--ChatBox-->
-        <div class="w-[600px] h-[480px] border border-solid bg-gray-200 absolute top-0 rounded-lg left-96">
-            <div class="w-[600px] h-[80px] border-solid border-b-2 border-gray-900">
-                <div class="flex space-x-2 m-10">
+        <div class="w-[930px] h-[480px] border border-solid bg-gray-200 absolute top-0 rounded-lg left-[360px]">
+            <div class="w-[930px] h-[70px] border-solid border-b-2 border-gray-900">
+                <div class="flex items-center space-x-2 p-3">
                     <img src="./resources/img/Group 1000004118.png" alt="" class="h-12">
                     <p class="mt-2 text-xl font-bold">Customer1</p>
                 </div>
             </div>
             <!--Customer Text-->
-            <div class="flex space-x-2 m-5">
+            <div class="flex space-x-2 p-3">
                 <img src="./resources/img/Mask group (1).png" alt="customer" class="h-10">
                 <div>
                     <span>Customer</span>
@@ -166,9 +163,9 @@ include "./sidebar.php"
             </div>
 
             <!--TextBox-->
-            <div class="w-[600px] h-[80px] bg-text-bg absolute bottom-0 rounded-b-lg">
-                <input type='text' class="w-[500px] h-10 rounded-xl bg-[#1E1F25] border-[#1E1F25] text-text3 border border-solid text-center focus:outline-none absolute top-7 left-10" placeholder="Add to text"></input>
-                <img src="./resources/img/Shape.png" alt="send" class="w-4 absolute top-10 left-[550px]">
+            <div class="w-[930px] h-[80px] bg-text-bg absolute bottom-0 rounded-b-lg">
+                <input type='text' class="w-[830px] h-10 rounded-xl bg-[#1E1F25] border-[#1E1F25] text-text3 border border-solid indent-2 focus:outline-none absolute top-7 left-10" placeholder="Add to text"></input>
+                <img src="./resources/img/Shape.png" alt="send" class="w-4 absolute top-10 right-7">
             </div>
 
         </div>
