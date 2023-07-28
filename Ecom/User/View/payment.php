@@ -12,10 +12,26 @@
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./resources/js/payment.js" defer></script>
     <title>Delivery</title>
 </head>
 
 <body>
+<style>
+      
+  #front.hidden {
+    transform: perspective(1000px) rotateY(-180deg);
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  #back-show {
+    transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1000px) rotateY(180deg);
+  }
+
+
+    </style>
+
     <!-- component -->
     <div class="h-full w-full py-16">
         <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
@@ -94,67 +110,69 @@
             <div class="bg-gray-200 w-11/12 h-96 max-lg:h-1/2 shadow-lg">
                 <div class="  flex max-lg:flex-col ">
                     <div class=" m-5 h-64 w-1/2 max-lg:w-11/12">
-                        <div class="h-96">
+                        <div id="input_canva" class="h-96">
                             <div class="inputBox flex flex-col items-start px-3">
                                 <span>Card number</span>
-                                <input type="text" maxlength="16" class=" h-10 w-11/12 border-b-2 border-btn-color ">
+                                <input id="cardNo" type="number" maxlength="16" class="outline-none h-10 w-11/12 border-b-2 border-btn-color ">
                             </div>
                             <div class="inputBox flex flex-col items-start px-3 ">
                                 <span>Card holder</span>
-                                <input type="text" class="card-holder-input h-10 w-11/12 border-b-2 border-btn-color">
+                                <input id="cardHolder" type="text" class="card-holder-input outline-none h-10 w-11/12 border-b-2 border-btn-color">
                             </div>
                             <div class="flexbox flex">
                                 <div class="inputBox flex flex-col items-start pl-3">
                                     <span>expire MM</span>
-                                    <input type="text" class="card-holder-input h-10 w-2/3 border-b-2 border-btn-color">
+                                    <input id="expMonth"  type="number" min="1" max="12" maxlength="2" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color">
                                 </div>
                                 <div class="inputBox flex flex-col items-start ">
                                     <span>expire YY</span>
-                                    <input type="text" class="card-holder-input h-10 w-2/3 border-b-2 border-btn-color ">
+                                    <input id="expYear" type="number" max="2030" min="2023" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color ">
                                 </div>
                                 <div class="inputBox">
                                     <span>CVV</span>
-                                    <input type="text" maxlength="4" class="card-holder-input h-10 w-2/3 border-b-2 border-btn-color " placeholder="only 4 digit">
+                                    <input id="cvv" type="text" maxlength="4" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color " placeholder="only 4 digit">
                                 </div>
                                 <div class="items-start">
 
                                 </div>
                             </div>
                             <div class="flex text-center align-middle justify-center rounded-md m-1/2 ml-2 w-1/5 mt-10 bg-[#314755]">
-                                <input type="submit" value="submit" class=" text-white px-10 py-2  submit-btn">
+                                <input type="submit" value="Submit" class=" cursor-pointer text-white px-10 py-2  submit-btn">
                             </div>
                         </div>
                     </div>
 
-                    <div class="card-container w-1/2  max-lg:w-11/12 max-lg:- m-5 max-lg:mt-20 rounded-md bg-gray-500 ">
-                        <div class="front">
+                    <div  class="card-container w-1/2  max-lg:w-11/12 max-lg:- m-5 max-lg:mt-20 rounded-md bg-gray-500 ">
+                        <div id="front"  class="  inset-0 ">
                             <div class="image flex mt-2 justify-around">
                                 <img src="./resources/img/chip.png" class="chip w-16 h-10">
                                 <img src="./resources/img/visa.png" class="w-20 h-8" alt="">
                             </div>
-                            <div class="card-number-box m-5 mt-10">**** **** **** ****</div>
+                            <div id="cardno" class="card-number-box font-bold text-gray-300 tracking-wide m-5 mt-10">**** **** **** ****</div>
                             <div class="flex justify-between">
                                 <div class="box m-5 mt-16">
                                     <span>Card holder</span>
-                                    <div class="card-holder-name">_</div>
+                                    <div id="cardholder" class="card-holder-name">_</div>
                                 </div>
                                 <div class="box m-5 mt-16">
                                     <span>Expires</span>
                                     <div class="expiration">
-                                        <span class="exp-month">MM</span>
-                                        <span class="exp-year">YY</span>
+                                        <span id="expmonth" class="exp-month">MM</span>
+                                        <span>/</span>
+                                        <span id="expyear" class="exp-year">YY</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="back hidden">
+
+                        <div id="cvvs" class="back hidden transform-front">
                             <div class="stripe"></div>
-                            <div class="box">
-                                <span>cvv</span>
-                                <div class="cvv-box"></div>
-                                <img src="image/visa.png" alt="">
+                            <div class="box flex flex-col p-5 justify-center mt-16">
+                                <span id="cvvi" class="text-2xl font-bold">Cvv</span>
+                                <div id="cvvpw"  class="cvv-box w-[100%] pl-3 items-center h-10 rounded-md bg-white py-2"></div>
                             </div>
+                            <img src="image/visa.png" alt="">
                         </div>
                     </div>
                 </div>
