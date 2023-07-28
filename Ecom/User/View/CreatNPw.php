@@ -8,12 +8,15 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display:wght@500&family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <ion-icon name="chevron-back-outline" class="m-5 font-semibold"></ion-icon>
+    <a href="./Verify.php"><ion-icon name="chevron-back-outline" class="m-5 font-semibold"></ion-icon></a>
     <div class="flex flex-col items-center">
-        <p class="font-poppins font-medium text-xl">Create New Password</p>
+        <p class="font-philosopher font-medium text-xl">Create New Password</p>
         <img src="./resources/img/forget.png" class="mt-10">
         <p class="text-center font-poppins font-medium mt-5">Your New Password Must Be Different from <br>
             Previously Used Password.</p>

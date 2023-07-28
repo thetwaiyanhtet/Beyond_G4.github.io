@@ -9,6 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <script>
+        // Add event listener to the button
+        document.getElementById('refreshBtn').addEventListener('click', function() {
+            // Reload the current page
+            location.reload();
+        });
+    </script>
 </head>
 
 <body class=" bg-background-404">
@@ -22,14 +29,15 @@
         </span>
     </nav>
     <div class="flex flex-col items-center m-10 justify-center">
-    <img src="./resources/img/500.png" alt="404">
+        <img src="./resources/img/500.png" alt="404">
         <div class="font-PlayfairSC m-5">
             <p class="font-PlayfairSC text-4xl text-center">UN HO!!</p>
             <p class="text-center md:text-base text-sm">Something went wrong at our end.Don't worry, it's not you_ it's us. Sorry about that.</p><br><br>
-           <div class="flex justify-center w-screen"> <button class="w-56 h-14 rounded-xl border border-solid text-text-color bg-white"><img src="./resources/img/Vector.png" class="w-5 inline">REFRESH THE PAGE</button></div>
+            <div class="flex justify-center w-screen"><button type="button" class="w-56 h-14 rounded-xl border border-solid text-text-color bg-white"  id="refreshBtn"><img src="./resources/img/Vector.png" class="w-5 inline">REFRESH THE PAGE</button></div>
         </div>
-        
+
     </div>
+
 </body>
 
 </html>

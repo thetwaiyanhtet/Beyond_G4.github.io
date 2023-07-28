@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display:wght@500&family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body class="mt-3 font-poppins">
@@ -26,40 +26,40 @@
     </nav>
     <main class=" bg-purple-300 min-h-screen rounded-tl-[35px] rounded-tr-[35px]">
         <div class=" text-white my-5 ml-8">
-            <p class=" text-2xl mb-3">My Profile</p>
-            <p>Manage and protect your account</p>
+            <p class=" font-philosopher text-3xl m-3">My Profile</p>
+            <p class=" font-poppins">Manage and protect your account</p>
         </div>
         <section class=" lg:grid lg:grid-cols-5">
             <div class=" col-start-1 col-span-3 space-y-5 lg:w-[700px] lg:mx-20 mx-10">
-                <div class=" grid grid-cols-2 justify-around">
+                <div class=" grid grid-cols-2 justify-around font-poppins">
                     <p class=" text-white text-start lg:text-xl text-sm">Username</p>
                     <input type="text" placeholder="Username" class="profileInputBox col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
-                    <p class=" text-white text-start lg:text-xl text-sm">Name</p>
+                    <p class="font-poppins text-white text-start lg:text-xl text-sm">Name</p>
                     <input type="text" placeholder="Name" class="profileInputBox col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
-                    <p class=" text-white text-start lg:text-xl text-sm">Email</p>
+                    <p class="font-poppins text-white text-start lg:text-xl text-sm">Email</p>
                     <input type="text" placeholder="user****@mail.com" class="profileInputBox col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
-                    <p class=" text-white text-start lg:text-xl text-sm">Phone Number</p>
+                    <p class="font-poppins text-white text-start lg:text-xl text-sm">Phone Number</p>
                     <input type="text" placeholder="09********" class="profileInputBox col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
-                    <p class=" lg:text-xl text-sm text-white">Gender</p>
+                    <p class="font-poppins lg:text-xl text-sm text-white">Gender</p>
                     <div>
                         <input type="radio" id="male" name="gender">
-                        <label for="male" class=" lg:text-base text-sm">Male</label>
+                        <label for="male" class=" lg:text-base text-sm font-poppins">Male</label>
                         <input type="radio" id="female" name="gender">
-                        <label for="female" class=" lg:text-base text-sm">Female</label>
+                        <label for="female" class=" lg:text-base text-sm font-poppins">Female</label>
                         <input type="radio" id="other" name="gender">
-                        <label for="other" class=" lg:text-base text-sm">Other</label>
+                        <label for="other" class=" lg:text-base text-sm font-poppins">Other</label>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 items-center justify-center">
-                    <p class=" text-white lg:text-xl text-sm">Date of Birth</p>
+                    <p class=" text-white lg:text-xl text-sm font-poppins">Date of Birth</p>
                     <input type="date" class=" lg:w-72 w-44 lg:p-3 p-2 rounded-lg lg:text-base text-sm">
                 </div>
             </div>
@@ -72,8 +72,10 @@
         </section>
 
         <section class="flex justify-center space-x-6 lg:float-right lg:my-20 lg:mr-48 my-3 mr-7 lg:mt-0 mt-12">
-            <button class=" font-PlayfairSC lg:px-3 lg:py-3 px-2 py-2 bg-white rounded-lg">Add Address</button>
-            <button class=" font-PlayfairSC lg:px-4 lg:py-3 px-3 py-2 bg-white rounded-lg">Save</button>
+            <a href="./address.php">
+                <button class=" font-Playfair Display lg:px-3 lg:py-3 px-2 py-2 bg-white rounded-lg">Add Address</button>
+            </a>
+            <button class=" font-Playfair Display lg:px-4 lg:py-3 px-3 py-2 bg-white rounded-lg">Save</button>
         </section>
 
     </main>

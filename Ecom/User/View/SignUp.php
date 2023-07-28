@@ -7,13 +7,14 @@
     <title>SignUp</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display:wght@500&family=Poppins:wght@200&display=swap" rel="stylesheet">
+  
 </head>
 
 <body>
     <img src="./resources/img/logo.png" alt="logo" class="w-24 m-2">
-    <p class=" font-poppins text-4xl text-center">Sign Up</p>
+    <p class=" font-philosopher text-4xl text-center">Sign Up</p>
 
     <section class="relative">
     <div class="flex flex-col items-center z-10">
@@ -25,15 +26,17 @@
                 <input class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 font-poppins drop-shadow-md bg-blend-normal" placeholder="Full Name"></input>
                 <input class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 font-poppins drop-shadow-md bg-blend-normal" placeholder="Email"></input>
                 <input class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 font-poppins drop-shadow-md bg-blend-normal" placeholder="Password"></input>
-                <button class="text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6">Log in</button>
-                <p class="underline font-poppins text-text-color text-center p-2 ml-18 md:block hidden">Terms and Conditions</p>
+                <a href="./login.php">
+                    <button type="button" class="text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display">Log in</button>
+                </a>
+                <p class="underline font-poppins text-text-color text-center p-2 ml-18 md:block hidden font-Playfair Display">Terms and Conditions</p>
             </div>
         </div>
         </div>
         <div class="flex flex-col items-center mt-3 md:hidden">
-            <p class="font-poppins p-2">Already have an account ?</p>
-            <a href="./login.php" class=" text-blue-700 underline font-poppins p-2">Login</a>
-            <p class="underline font-poppins text-text-color text-center p-2">Terms and Conditions</p>
+            <p class="font-poppins p-2 font-Playfair Display">Already have an account ?</p>
+            <a href="./login.php" class=" text-blue-700 underline font-Playfair Display p-2">Login</a>
+            <p class="underline font-poppins text-text-color text-center p-2 font-Playfair Display">Terms and Conditions</p>
         </div>
     </section>
 </body>
