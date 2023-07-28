@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class=" font-poppins">
     <a href="./signUp.php"><ion-icon name="arrow-back-outline" class="m-2 text-4xl p-3"></ion-icon></a>
     <a href="./dashboard.php"><ion-icon name="close-circle-outline" class="float-right m-2 text-4xl p-3"></ion-icon></a>
     <p class=" font-poppins text-center text-2xl">Choose Your Plan</p>
