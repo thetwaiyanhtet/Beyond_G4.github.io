@@ -20,7 +20,7 @@
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
 
             <div class="flex items-center">
-                <img class="w-7 lg:w-14" src="../View/resources/img/logo.png" alt="">
+                <a href="./mainPage.php"><img class="w-7 lg:w-14" src="../View/resources/img/logo.png" alt=""></a>
                 <span class="self-center text-xl lg:text-2xl font-semibold whitespace-nowrap dark:text-white font-philosopher">Beyond</span>
             </div>
 

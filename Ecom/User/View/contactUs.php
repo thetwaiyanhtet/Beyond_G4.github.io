@@ -8,14 +8,16 @@
   <title>Contact Us</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body class="bg-white lg:bg-[#DDD4FF] relative overflow-hidden">
   <section class="lg:absolute lg:top-[15px] lg:left-[35px] flex justify-between items-center">
-    <img class=" w-16 ml-5  lg:w-24" src="../View/resources/img/logo.png" />
+    <a href="./mainPage.php"><img class=" w-16 ml-5  lg:w-24" src="../View/resources/img/logo.png" /></a>
     <span><ion-icon class=" w-20 lg:w-36 h-14 lg:h-20 lg:hidden" name="menu-outline"></ion-icon></span>
   </section>
   <section class="hidden lg:block">
@@ -43,7 +45,7 @@
     </div>
     <section>
       <div class="lg:absolute h-screen w-full left-[620px] top-0 bg-white rounded-tl-[50px] rounded-bl-[50px]">
-        <div class= "my-[20%] lg:my-[6%]">
+        <div class="my-[20%] lg:my-[6%]">
           <span class="font-bold text-[36px] mx-[10%] lg:mx-[2%]">Contact Us</span>
           <p class="font-medium  text-[15px] lg:text-[20px] my-[9%] lg:my-[2%] w-[350px] lg:w-[500px]  mx-[10%] lg:mx-[2%]">Feel free to contact us any time.We will get back
             to you as soon as we can!</p>
