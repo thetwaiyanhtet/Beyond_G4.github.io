@@ -19,7 +19,7 @@ include "./adminsidebar.php";
     <main id="main" class="ml-60 h-screen pt-20  w-[80%]">
     
         <div class="ml-10 pr-10 pb-5">
-            <p class=" text-xl ml-5 font-bold">Category List</p>
+            <p class=" text-xl ml-5 font-bold font-philosopher pt-10">Category List</p>
             <div class=" flex items-center mt-5 ml-5">
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8 indent-2" type="search" name="" id="">

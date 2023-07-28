@@ -18,7 +18,7 @@
  <body>
      <main id="main" class=" ml-72 mt-24">
          <div class=" px-5 space-y-5 pb-3">
-             <p class=" text-xl font-semibold font-philosopher ml-5">"Merchant Name" Profile</p>
+             <p class=" text-xl font-semibold font-philosopher">"Merchant Name" Profile</p>
 
              <section class=" border border-gray-400 rounded-lg shadow-lg p-3 h-44 relative">
                  <div class=" bg-violet-300 rounded-md w-auto border h-20"></div>

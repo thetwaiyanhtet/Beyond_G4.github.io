@@ -12,7 +12,7 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/merchantProfile.css">
+    <link rel="stylesheet" href="./resources/css/merchantApprove.css">
 </head>
 
 <body>
@@ -25,9 +25,9 @@ include "./adminsidebar.php";
                     <input type="text" class="border rounded-md indent-1 px-2 py-1 outline-none bg-gray-300">
                 </div>
             </section>
-            <section class="p-2">
-                <table class="w-full text-sm text-gray-500 border-collapse border border-black border-solid text-center ">
-                    <thead class="text-xs uppercase bg-table text-white border">
+            <section class="border-2 border-gray-400 rounded-lg shadow-lg  p-2">
+                <table class="w-full text-sm text-gray-500 border-collapse text-center">
+                    <thead class="text-xs uppercase bg-table text-white border rounded-tl-md rounded-tr-md">
                         <tr>
                             <th scope="col" class="px-6 py-3">
                                 Email

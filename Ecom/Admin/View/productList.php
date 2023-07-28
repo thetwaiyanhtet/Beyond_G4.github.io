@@ -71,7 +71,7 @@ include "./adminsidebar.php";
                                 100
                             </td>
                             <td class="px-6 py-2 ">
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
                             </td>
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -91,7 +91,7 @@ include "./adminsidebar.php";
                                 100
                             </td>
                             <td class="px-6 py-2 ">
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
                             </td>
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -111,7 +111,7 @@ include "./adminsidebar.php";
                                 100
                             </td>
                             <td class="px-6 py-2">
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
                             </td>
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -131,7 +131,7 @@ include "./adminsidebar.php";
                                 100
                             </td>
                             <td class="px-6 py-2 ">
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
                             </td>
                         </tr>
                         <tr class=" hover:bg-gray-200">
@@ -151,7 +151,7 @@ include "./adminsidebar.php";
                                 100
                             </td>
                             <td class="px-6 py-2 ">
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
                             </td>
                         </tr>
 

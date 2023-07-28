@@ -19,7 +19,7 @@ include "./adminsidebar.php";
 <body>
     <main id="main" class=" ml-72 mt-24">
         <div class=" px-5 space-y-3">
-            <p class=" text-xl font-semibold font-philosopher ml-5">Customer List</p>
+            <p class=" text-xl font-semibold font-philosopher ">Customer List</p>
 
             <section class=" py-3 ml-5">
                 <div class=" flex justify-start items-center space-x-3">

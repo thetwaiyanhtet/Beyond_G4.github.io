@@ -21,11 +21,11 @@
             </div>
             <div class=" pt-5">
                 <div>Email Address*</div>
-                <input type="text" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-xl" placeholder="Enter your email">
+                <input type="text" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="Enter your email">
             </div>
             <div class="pb-4">
                 <div>Password*</div>
-                <input type="text" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-xl" placeholder="********">
+                <input type="text" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="********">
                 <div class=" flex justify-between pt-4">
                     <div>
                         <input type="checkbox">Remember me
