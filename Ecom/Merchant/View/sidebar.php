@@ -12,6 +12,10 @@
 </head>
 
 <body class=" font-poppins">
+
+  
+
+
   <!-- component -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
   <div class="fixed top-0 left-0 z-40 min-h-screen text-ellipsis flex justify-around">
@@ -42,7 +46,7 @@
             <span class="text-sm font-medium">Transaction</span>
           </a>
         </li>
-        
+
         <li class=" w-52">
           <a href="./order_manage.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white order">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class='bx bx-package'></i></span>
@@ -77,26 +81,26 @@
         <li class=" w-52">
           <a href="./ChoosePlan.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"></span>
-            <button class=" bg-gray-300 px-4 py-1 rounded-lg">Upgrade Plan</button>
+            <button class=" bg-gray-200 px-4 py-1 rounded-md text-black">Upgrade Plan</button>
           </a>
         </li>
-        <li class=" w-52">
+        <li class=" w-52 mt-3">
           <a href="./Setting.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white setting">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class='bx bx-cog'></i></span>
             <span class="text-sm font-medium">Setting</span>
           </a>
         </li>
         <li class=" w-52">
-          <a href="./logout.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white logout">
+          <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white logout">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class="bx bx-log-out"></i></span>
-            <span class="text-sm font-medium">Logout</span>
+            <span id="logoutButton" class="text-sm font-medium">Logout</span>
           </a>
         </li>
       </ul>
     </div>
-    
+
   </div>
- 
+
 
 
 </body>
