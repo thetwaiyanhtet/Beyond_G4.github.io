@@ -18,7 +18,7 @@ include "./adminsidebar.php";
 <body>
     <main class="ml-72 mt-24 py-5" id="main">
         <div class=" px-5 space-y-3">
-            <p class=" text-xl font-semibold font-poppins">Order list</p>
+            <p class=" text-xl font-semibold font-philosopher">Order list</p>
 
             <section class=" py-3">
                 <div class=" flex justify-start items-center space-x-3">

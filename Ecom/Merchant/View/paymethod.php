@@ -65,7 +65,7 @@
                     <p class="ml-2 font-poppins">Kpay</p>
                 </div>
                 <div class="float-right inline-flex m-4">
-                    <img src="./resources/img/Kpay.png" alt="VISA" class="h-5">
+                    <img src="./resources/img/Kpay.png" alt="VISA" class=" w-12">
                 </div>
             </div>
         </div>

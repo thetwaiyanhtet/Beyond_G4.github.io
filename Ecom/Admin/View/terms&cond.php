@@ -18,8 +18,8 @@ include "./adminsidebar.php";
 
 <body>
     <main class=" ml-72 pt-20 h-screen" id="main">
-        <p class=" mt-5 ml-14">Terms and Conditions</p>
-        <div class="ml-10 w-[870px] h-[620px] border border-solid bg-bcolor">
+        <p class=" mt-5 font-philosopher font-bold text-xl pb-3">Terms and Conditions</p>
+        <div class="ml-10 w-[870px] h-[620px] border border-solid bg-bcolor rounded-lg">
             <ol class="list-decimal ml-10">
                 <li class="m-3">Acceptance of Terms: This section will outline that by using the website, the user agrees to be bound by the terms and conditions of the site.
                 </li>

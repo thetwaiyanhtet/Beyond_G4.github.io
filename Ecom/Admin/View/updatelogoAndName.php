@@ -18,7 +18,7 @@ include "./adminsidebar.php";
     <main class="  ml-60 h-screen pt-20  w-[80%]">
     
         <div class="ml-16">
-            <p class=" text-xl font-bold py-3">Update Logo and Business Name</p>
+            <p class=" text-xl font-bold py-3 font-philosopher">Update Logo and Business Name</p>
             
             <div class="border shadow-2xl mt-5 rounded-xl border-gray-300">
             <div class="p-5">

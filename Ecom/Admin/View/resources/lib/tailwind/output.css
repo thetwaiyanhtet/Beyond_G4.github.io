@@ -672,10 +672,6 @@ video {
   margin: 1.25rem;
 }
 
-.m-12 {
-  margin: 3rem;
-}
-
 .-mx-4 {
   margin-left: -1rem;
   margin-right: -1rem;
@@ -788,6 +784,10 @@ video {
   margin-left: 1%;
 }
 
+.ml-\[265px\] {
+  margin-left: 265px;
+}
+
 .mr-10 {
   margin-right: 2.5rem;
 }
@@ -844,14 +844,13 @@ video {
   margin-top: 1.25rem;
 }
 
+<<<<<<< Updated upstream
 .ml-0 {
   margin-left: 0px;
 }
 
-.ml-12 {
-  margin-left: 3rem;
-}
-
+=======
+>>>>>>> Stashed changes
 .block {
   display: block;
 }

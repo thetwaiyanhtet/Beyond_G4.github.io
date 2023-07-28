@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-col items-center space-y-5 mt-5 justify-center">
             <p class="Font-bold text-3xl">Delete</p>
-            <p>Sure you want to delete</p>
+            <p>Sure you want to delete?</p>
             <div class="space-x-5 pb-10">
                 <button class="bg-blue-600 rounded-lg px-7 py-2 shadow-2xl" >Delete</button>
                 <button class=" border rounded-lg bg-slate-400 px-7 py-2 shadow-xl">No</button>

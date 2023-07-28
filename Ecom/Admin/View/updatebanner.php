@@ -16,7 +16,7 @@ include "./adminsidebar.php";
 
 <body>
     <div class=" ml-72 pt-20 ">
-        <p class="text-black font-bold text-xl">Update Banner</p>
+        <p class="text-black font-bold text-xl font-philosopher pt-3">Update Banner</p>
         </div>
         <div class="m-3 border w-[77%] p-5 rounded-lg float-right ml-10 text-center shadow-2xl">
 <div class="bg-white p7 flex flex-col float-left  items-center  rounded w-[100%] space-y-5">

@@ -11,10 +11,11 @@ include "./adminsidebar.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../View/resources/css/dashboard.css">
 </head>
 
 <body>
-    <main id="main" class=" ml-72 h-screen mt-28  w-[80%]">
+    <main id="main" class=" ml-64 h-screen mt-28  w-[80%]">
         <div class="flex justify-around flex-wrap">
             <div class=" relative  border w-52 rounded-lg shadow-xl">
                 <div class="h-full  absolute rounded-tl-lg rounded-bl-lg left-0 w-2 bg-blue-600"></div>

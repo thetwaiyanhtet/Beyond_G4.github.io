@@ -12,12 +12,13 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../View/resources/css/orderlist.css">
 </head>
 
 <body>
     <main class="ml-72 pt-20" id="main">
-        <p class="mt-10 font-poppins text-xl font-bold">Order Details</p>
-        <div class="flex justify-around">
+        <p class=" font-philosopher text-xl font-bold pt-5">Order Details</p>
+        <div class="flex justify-around pt-10">
             <!--Order Details-->
             <div class=" w-64 h-56 border-2 border-solid shadow-lg rounded-lg">
                 <p class="m-2">Order Details</p>
@@ -146,10 +147,10 @@ include "./adminsidebar.php";
                         <td class="px-6 py-4">
                            
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 font-bold">
                            Total
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-6 py-4 font-bold">
                             $4550.00
                         </td>
                     </tr>

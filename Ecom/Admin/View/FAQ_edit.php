@@ -12,11 +12,11 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/setting.css">
+    <link rel="stylesheet" href="./resources/css/faq.css">
 </head>
 
 <body>
-    <main id="main" class=" ml-72 mt-24 py-5 font-poppins">
+    <main id="main" class=" ml-72 mt-24 font-poppins">
         <div class=" px-5 space-y-3">
             <p class=" text-xl font-semibold font-philosopher">FAQs</p>
             
