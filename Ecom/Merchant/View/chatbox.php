@@ -23,7 +23,7 @@ include "./sidebar.php"
         <div class="pl-2">
             <p>2023/July/24 - 4:04 PM</p>
         </div>
-        <div>
+        <div class=" pr-2">
             <ul class="flex space-x-5 items-center pr-3">
                 <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
                 <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
