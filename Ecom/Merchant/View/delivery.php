@@ -19,7 +19,7 @@ include "./sidebar.php";
 </head>
 
 <body>
-    <main class=" ml-56 h-screen">
+    <main class=" ml-56 h-screen relative">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>2023/July/24 - 4:04 PM</p>
@@ -81,11 +81,10 @@ include "./sidebar.php";
                                 <th scope="col" class="px-6 py-3">
                                     Action
                                 </th>
-
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     Kyaw Swarr Myo
                                 </th>
@@ -103,13 +102,10 @@ include "./sidebar.php";
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="./deliveryviewdetail.php" class="font-medium text-white  hover:underline">
-                                        <button class=" bg-blue-600 py-1 px-3 rounded-md">View details</button>
-                                    </a>
+                                    <div id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</div>
                                 </td>
-
                             </tr>
-                            <tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     Kyaw Swarr Myo
                                 </th>
@@ -127,13 +123,10 @@ include "./sidebar.php";
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-white  hover:underline">
-                                        <button class=" bg-blue-600 py-1 px-3 rounded-md">View details</button>
-                                    </a>
+                                    <a href="#" id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</a>
                                 </td>
-
                             </tr>
-                            <tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     Kyaw Swarr Myo
                                 </th>
@@ -151,13 +144,10 @@ include "./sidebar.php";
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-white  hover:underline">
-                                        <button class=" bg-blue-600 py-1 px-3 rounded-md">View details</button>
-                                    </a>
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
                                 </td>
-
                             </tr>
-                            <tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     Kyaw Swarr Myo
                                 </th>
@@ -175,13 +165,10 @@ include "./sidebar.php";
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-white  hover:underline">
-                                        <button class=" bg-blue-600 py-1 px-3 rounded-md">View details</button>
-                                    </a>
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
                                 </td>
-
                             </tr>
-                            <tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     Kyaw Swarr Myo
                                 </th>
@@ -199,13 +186,10 @@ include "./sidebar.php";
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-white  hover:underline">
-                                        <button class=" bg-blue-600 py-1 px-3 rounded-md">View details</button>
-                                    </a>
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
                                 </td>
-
                             </tr>
-                            <!-- <tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     Kyaw Swarr Myo
                                 </th>
@@ -223,15 +207,96 @@ include "./sidebar.php";
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-white  hover:underline">
-                                        <button class=" bg-blue-600 py-1 px-3 rounded-md">View details</button>
-                                    </a>
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                </td>
+                            </tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    Kyaw Swarr Myo
+                                </th>
+                                <td class="px-6 py-4">
+                                    Bank deposit
+                                </td>
+                                <td class="px-6 py-4">
+                                    24/07/2023
                                 </td>
 
-                            </tr> -->
+                                <td class="px-6 py-4 ">
+                                    2000.0
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    Royal Express
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                </td>
+                            </tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    Kyaw Swarr Myo
+                                </th>
+                                <td class="px-6 py-4">
+                                    Bank deposit
+                                </td>
+                                <td class="px-6 py-4">
+                                    24/07/2023
+                                </td>
+
+                                <td class="px-6 py-4 ">
+                                    2000.0
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    Royal Express
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                </td>
+                            </tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    Kyaw Swarr Myo
+                                </th>
+                                <td class="px-6 py-4">
+                                    Bank deposit
+                                </td>
+                                <td class="px-6 py-4">
+                                    24/07/2023
+                                </td>
+
+                                <td class="px-6 py-4 ">
+                                    2000.0
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    Royal Express
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                </td>
+                            </tr>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    Kyaw Swarr Myo
+                                </th>
+                                <td class="px-6 py-4">
+                                    Bank deposit
+                                </td>
+                                <td class="px-6 py-4">
+                                    24/07/2023
+                                </td>
+
+                                <td class="px-6 py-4 ">
+                                    2000.0
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    Royal Express
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
-                    <div class="flex justify-between items-center py-2 px-3">
+                    <div class="flex justify-between items-center py-2 px-3 pt-5">
                         <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
                         <div>Page 1 of 10</div>
                         <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
@@ -240,6 +305,57 @@ include "./sidebar.php";
             </div>
         </div>
 
+        <div id="detailPopup" class=" max-lg:left-40 space-y-3 absolute top-[30%] left-[35%] p-4 shadow-lg rounded-md bg-gray-300 hidden">
+            <div>
+                <span>Customer Name : </span>
+                <span>user</span>
+            </div>
+            <div>
+                <span>Address : </span>
+                <span>Ahlone, Yangon</span>
+            </div>
+            <div>
+                <span>Phone No : </span>
+                <span>09-123456789</span>
+            </div>
+            <div>
+                <span>Order Date : </span>
+                <span>12/07/2023</span>
+            </div>
+            <div>
+                <span>Total Price :</span>
+                <span>$200</span>
+            </div>
+            <div>
+                <span>Delivery Service : </span>
+                <span>Royal Express</span>
+            </div>
+            <div>
+                <span>Delivery Charges : </span>
+                <span>$20</span>
+            </div>
+            <div>
+                <span>Total Amount : </span>
+                <span>$220</span>
+            </div>
+            <a href="./delivery.php"> <button id="cancelButton" class="bg-blue-500 text-white py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
+        </div>
+
+        <script>
+            // Get references to the popup and buttons
+            const detailPopup = document.getElementById("detailPopup");
+            const popupButton = document.getElementById("popupButton");
+            const cancelButton = document.getElementById("cancelButton");
+
+            // Function to toggle the visibility of the popup and blur the background
+            function toggleDetailPopup() {
+                detailPopup.classList.toggle("hidden");
+            }
+
+            // Attach click event listeners to the logout button and cancel button
+            popupButton.addEventListener("click", toggleDetailPopup);
+            cancelButton.addEventListener("click", toggleDetailPopup);
+        </script>
     </main>
 </body>
 

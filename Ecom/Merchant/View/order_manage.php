@@ -69,7 +69,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
                                     Complete
                                 </div>
                             </td>
@@ -77,7 +77,7 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <a href="./orderDetail.php"><button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button></a>
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -92,7 +92,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
                                     Complete
                                 </div>
                             </td>
@@ -100,7 +100,8 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -115,7 +116,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-yellow-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
                                     Pending
                                 </div>
                             </td>
@@ -123,7 +124,8 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -138,7 +140,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
                                     Complete
                                 </div>
                             </td>
@@ -146,7 +148,8 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -161,7 +164,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-yellow-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
                                     Pending
                                 </div>
                             </td>
@@ -169,7 +172,8 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -184,15 +188,16 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
-                                    Complete
+                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
+                                    Pending
                                 </div>
                             </td>
                             <td class="px-6 py-4">
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -207,7 +212,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
                                     Complete
                                 </div>
                             </td>
@@ -215,7 +220,8 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -230,7 +236,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-green-400  w-3/5 text-center rounded-md pr-5">
                                     Complete
                                 </div>
                             </td>
@@ -238,7 +244,8 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -253,15 +260,15 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
-                                    Complete
+                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
+                                    Pending
                                 </div>
                             </td>
                             <td class="px-6 py-4">
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
@@ -276,7 +283,7 @@ include "./sidebar.php"
                                 12.4.2023
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-green-500 text-white w-3/5 text-center rounded-md">
+                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
                                     Complete
                                 </div>
                             </td>
@@ -284,7 +291,8 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">View</button>
+
+                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
