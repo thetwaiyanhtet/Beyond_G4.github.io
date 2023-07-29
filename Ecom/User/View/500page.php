@@ -11,13 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-    <script>
-        // Add event listener to the button
-        document.getElementById('refreshBtn').addEventListener('click', function() {
-            // Reload the current page
-            location.reload();
-        });
-    </script>
 </head>
 
 <body class=" bg-background-404">

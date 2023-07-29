@@ -11,6 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
 <body>
@@ -93,21 +102,21 @@
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:border-gray-700">
                     <li>
-                        <a href="./mainPage.php" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500 font-bold" aria-current="page">Home</a>
+                        <a href="./mainPage.php" class=" font-poppins block py-2 pl-3 pr-4 text-gray-900 bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500 font-bold" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="./aboutUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">About Us</a>
+                        <a href="./aboutUs.php" class=" font-poppins block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">About Us</a>
                     </li>
                     <li>
-                        <a href="./contactUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">Contact</a>
+                        <a href="./contactUs.php" class=" font-poppins block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!--Title-->
-    <p class="font-poppins underline text-center mt-5 m-2 text-2xl">About Us</p>
-    <p class="mt-10 text-2xl font-thin text-center font-PlayfairSC">Our Project Overview And Story</p>
+    <p class=" font-PlayfairSC underline text-center mt-5 m-2 text-2xl">About Us</p>
+    <p class="mt-10 text-2xl font-PlayfairSC text-center ">Our Project Overview And Story</p>
     <div class="md:flex m-5 md:justify-evenly">
         <img src="./resources/img/logo2.png" alt="logo" class="md:m-0 m-auto md:w-auto w-56">
         <p class="text-justify font-poppins md:w-96 mt-10 md:text-base text-sm">At Beyond, we are a tight-knit team of five dedicated individuals who share a common passion for transforming your shopping experience. Our mission is to go above and beyond to exceed your expectations and bring joy to your life.<br>
@@ -116,7 +125,7 @@
     <div class="md:flex md:justify-evenly">
         <div>
             <p class="md:text-xl text-lg font-PlayfairSC text-center">CURATED SELECTION</p>
-            <p class="text-justify md:w-72 md:mt-5 md:text-base text-sm p-3">
+            <p class=" font-poppins text-justify md:w-72 md:mt-5 md:text-base text-sm p-3">
                 As we launch, our team of product enthusiasts has carefully curated a diverse range of items, spanning fashion, home decor, tech gadgets, and more. Each product has been chosen with utmost care, meeting our high standards of quality and innovation.</p>
         </div>
         <div>
@@ -124,11 +133,11 @@
         </div>
         <div>
             <p class="md:text-xl text-lg font-PlayfairSC text-center">OUR CORE VALUES</p>
-            <p class="text-justify md:w-72 md:mt-5  md:text-base text-sm p-3">Integrity, innovation, and your satisfaction are at the core of our values. As a small team, we take pride in offering personalized attention to every detail of your shopping journey.</p>
+            <p class="text-justify md:w-72 md:mt-5  md:text-base text-sm p-3 font-p">Integrity, innovation, and your satisfaction are at the core of our values. As a small team, we take pride in offering personalized attention to every detail of your shopping journey.</p>
         </div>
     </div>
     <p class="md:text-xl text-lg font-PlayfairSC text-center m-5">EMPOWERING MERCHANTS</p>
-    <p class="md:ml-5 m-2 text-center  md:text-base text-sm ">
+    <p class="m-auto  text-center  md:text-base text-sm md:w-1/2 w-3/4 font-poppins">
         While we are starting our journey, we are also excited to empower merchants and creators by providing them with a platform to showcase their unique creations. Together, we can build a community that celebrates creativity and craftsmanship.
     </p>
     <p class="md:text-xl text-lg font-PlayfairSC text-center m-3">MEET OUT TEAM</p>
@@ -150,12 +159,14 @@
         </div>
     </div>
     <p class="md:text-xl text-lg font-PlayfairSC text-center m-3">BEYOND'S PROMISE</p>
-    <p class="font-PlayfairSC p-4 text-centermd:text-base text-sm ">At Beyond, we promise to deliver a seamless and enjoyable shopping experience for you. Our user-friendly website ensures that browsing and discovering products is effortless, while our attentive customer support is always here to assist you. As a small team, we love connecting with our customers on a personal level. If you have any questions, feedback, or inquiries, feel free to contact us:</p>
+    <p class=" font-poppins p-4 text-center md:text-base text-sm m-auto md:w-1/2 w-3/4">At Beyond, we promise to deliver a seamless and enjoyable shopping experience for you. Our user-friendly website ensures that browsing and discovering products is effortless, while our attentive customer support is always here to assist you. As a small team, we love connecting with our customers on a personal level. If you have any questions, feedback, or inquiries, feel free to contact us:</p>
     <div class="flex flex-col items-center">
         <span class="font-bold">Email:Beyond@gmail.com</span><br>
         <span class="font-bold">Phone:092322198322</span>
     </div>
-    <p class="font-PlayfairSC m-5 text-center  md:text-base text-sm ">Thank you for being part of Beyond's inaugural launch. Together, let's go beyond the ordinary and create memorable experiences through exceptional products.</p>
+    <p class=" font-poppins m-5 text-center  md:text-base text-sm ">Thank you for being part of Beyond's inaugural launch. Together, let's go beyond the ordinary and create memorable experiences through exceptional products.</p>
+    <script src="./resources/js/toggle.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
 
 </html>
