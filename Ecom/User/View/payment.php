@@ -96,34 +96,36 @@
             <div class="bg-gray-200 w-11/12 h-96 max-lg:h-1/2 shadow-lg">
                 <div class="  flex max-lg:flex-col ">
                     <div class=" m-5 h-64 w-1/2 max-lg:w-11/12">
-                        <div id="input_canva" class="h-96">
-                            <div class="inputBox flex flex-col items-start px-3">
+                        <div id="input_canva" class="h-80 bg-white px-3 space-y-3">
+                            <div class=" flex flex-col items-start ">
                                 <span>Card number</span>
-                                <input id="cardNo" type="number" maxlength="16" class="outline-none h-10 w-11/12 border-b-2 border-btn-color ">
+                                <input id="cardNo" type="number" maxlength="16" class="outline-none h-10 w-full border-b-2 border-btn-color ">
                             </div>
-                            <div class="inputBox flex flex-col items-start px-3 ">
+                            <div class="  flex flex-col items-start ">
                                 <span>Card holder</span>
-                                <input id="cardHolder" type="text" class="card-holder-input outline-none h-10 w-11/12 border-b-2 border-btn-color">
+                                <input id="cardHolder" type="text" class="outline-none bg-transparent h-10 w-full border-b-2 border-btn-color">
                             </div>
-                            <div class="flexbox flex">
-                                <div class="inputBox flex flex-col items-start pl-3">
+                            <div class="flexbox flex justify-between">
+                                <div class=" flex flex-col items-start ">
                                     <span>expire MM</span>
-                                    <input id="expMonth" type="number" min="1" max="12" maxlength="2" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color">
+                                    <input id="expMonth" type="number" min="1" max="12" maxlength="2" class="outline-none h-10 w-[100%] border-b-2 border-btn-color">
                                 </div>
-                                <div class="inputBox flex flex-col items-start ">
+                                <div class=" flex flex-col items-start ">
                                     <span>expire YY</span>
-                                    <input id="expYear" type="number" max="2030" min="2023" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color ">
+                                    <input id="expYear" type="number" max="2030" min="2023" class="outline-none h-10 w-[100%] border-b-2 border-btn-color ">
                                 </div>
-                                <div class="inputBox">
+                                <div class=" flex flex-col -mr-24 ml-5 items-start">
                                     <span>CVV</span>
-                                    <input id="cvv" type="text" maxlength="4" class="card-holder-input outline-none h-10 w-2/3 border-b-2 border-btn-color " placeholder="only 4 digit">
+                                    <input id="cvv" type="text" maxlength="4" class="outline-none h-10 w-[70%]   border-b-2 border-btn-color " placeholder="only 4 digit">
                                 </div>
                                 <div class="items-start">
 
                                 </div>
                             </div>
-                            <div class="flex text-center align-middle justify-center rounded-md m-1/2 ml-2 w-1/5 mt-10 bg-[#314755]">
+                            <div class="flex justify-center items-center">
+                            <div class="flex rounded-md m-1/2 ml-2 text-center justify-center items-center w-1/5  mt-10 bg-[#314755]">
                                 <input type="submit" value="Submit" class=" cursor-pointer text-white px-10 py-2  submit-btn">
+                            </div>
                             </div>
                         </div>
                     </div>
