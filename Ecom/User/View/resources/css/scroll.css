@@ -6,3 +6,9 @@
     .hide-scroll-bar::-webkit-scrollbar {
       display: none;
     }
+.sec{
+   overflow-y: scroll;
+}
+.sec::-webkit-scrollbar {
+    display: none;
+}
