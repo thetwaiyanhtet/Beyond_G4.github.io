@@ -33,56 +33,57 @@ include "./sidebar.php"
         </header>
         <section>
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">New Product</span></p>
-            <div class=" flex justify-center px-5 py-1">
-                <div class=" w-screen h-full bg-slate-200 rounded-lg px-24 py-5 shadow-xl">
-                    <div class=" pb-5">
-                        <h1 class=" text-lg font-bold font-philosopher">New Product</h1>
-                    </div>
-                    <div>
-                        <ul class=" flex space-x-3">
-                            <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
-                            </li>
-                            <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
-                            </li>
-                            <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
-                            </li>
-                            <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
-                            </li>
-                            <li>
-                                <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
-                            </li>
-                        </ul>
-                    </div>
+            <form action="">
+                <div class=" flex justify-center px-5 py-1">
+                    <div class=" w-screen h-full rounded-lg px-24 py-3 shadow-xl border-2 border-blue-950">
+                        <div class=" pb-5">
+                            <h1 class=" text-lg font-bold font-philosopher">New Product</h1>
+                        </div>
+                        <div>
+                            <ul class=" flex space-x-3">
+                                <li>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                </li>
+                                <li>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                </li>
+                                <li>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                </li>
+                                <li>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                </li>
+                                <li>
+                                    <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class=" flex justify-between pt-5">
-                        <div class="flex-col space-y-5">
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Product Name</p>
+                        <div class=" flex justify-between pt-5">
+                            <div class="flex-col space-y-5">
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Product Name</p>
+                                    </div>
+                                    <div><input type="text" class="inputBox" placeholder="Enter Product Name"></div>
                                 </div>
-                                <div><input type="text" class="inputBox" placeholder="Enter Product Name"></div>
-                            </div>
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Product ID</p>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Product ID</p>
+                                    </div>
+                                    <div><input type="text" class="inputBox" placeholder="#001"></div>
                                 </div>
-                                <div><input type="text" class="inputBox"></div>
-                            </div>
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Category</p>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Category</p>
+                                    </div>
+                                    <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
+                                            <option value="1">Clothing</option>
+                                            <option value="2">Electronic</option>
+                                            <option value="3">Furniture</option>
+                                        </select></div>
                                 </div>
-                                <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
-                                        <option value="1">Clothing</option>
-                                        <option value="2">Electronic</option>
-                                        <option value="3">Furniture</option>
-                                    </select></div>
-                            </div>
-                            <!-- <div class=" flex justify-between space-x-10 items-center">
+                                <!-- <div class=" flex justify-between space-x-10 items-center">
                                 <div>
                                     <p>Colors</p>
                                 </div>
@@ -129,44 +130,49 @@ include "./sidebar.php"
                                     </div>
                                 </div>
                             </div> -->
-                        </div>
+                            </div>
 
-                        <div class="flex-col space-y-5">
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Buying Price</p>
+                            <div class="flex-col space-y-5">
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Buying Price</p>
+                                    </div>
+                                    <div><input type="text" class=" inputBox"></div>
                                 </div>
-                                <div><input type="text" class=" inputBox"></div>
-                            </div>
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Selling Price</p>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Selling Price</p>
+                                    </div>
+                                    <div><input type="text" class="inputBox"></div>
                                 </div>
-                                <div><input type="text" class="inputBox"></div>
-                            </div>
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Quantity</p>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Quantity</p>
+                                    </div>
+                                    <div><input type="text" class="inputBox"></div>
                                 </div>
-                                <div><input type="text" class="inputBox"></div>
-                            </div>
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Date</p>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Date</p>
+                                    </div>
+                                    <div class=" w-[203px]"><input type="date" class="inputBox w-44"></div>
                                 </div>
-                                <div class=" w-[203px]"><input type="date" class="inputBox w-44"></div>
-                            </div>
-                            <div class=" flex justify-between space-x-10">
-                                <div>
-                                    <p>Description</p>
+                                <div class=" flex justify-between space-x-10">
+                                    <div>
+                                        <p>Description</p>
+                                    </div>
+                                    <div><textarea cols="23" rows="3" class="inputBox"></textarea></div>
                                 </div>
-                                <div><textarea cols="23" rows="3" class="inputBox"></textarea></div>
                             </div>
+                        </div>
+                        <div class=" justify-end space-x-3 flex pt-4">
+                            <button class="btn">Discard</button>
+                            <button class=" btn">Add Product</button>
                         </div>
                     </div>
-
                 </div>
-            </div>
+            </form>
+
         </section>
     </main>
 </body>

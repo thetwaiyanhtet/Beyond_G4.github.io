@@ -56,10 +56,10 @@ include "./sidebar.php";
         </div>
 
         <div class=" p-5">
-            <div class="p-3 rounded-lg shadow-xl border-2 bg-gray-200 mt-3 border-blue-950">
+            <div class="p-3 rounded-lg shadow-xl border-2  mt-3 border-blue-950">
                 <div class="relative overflow-x-auto py-3">
                     <table class="w-full text-sm text-left text-gray-500 ">
-                        <thead class="text-xs font-philosopher text-gray-900 uppercase border-b-2 border-gray-400 ">
+                        <thead class="text-xs text-gray-900 uppercase bg-blue-200 ">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
                                     Customer Name

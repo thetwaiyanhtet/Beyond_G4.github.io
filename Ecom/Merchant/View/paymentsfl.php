@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <div class="w-80 h-[500px] border border-solid drop-shadow-lg m-auto mt-20">
+    <div class="w-80 h-[500px] border border-solid rounded-md shadow-lg m-auto mt-20">
         <img src="./resources/img/Confirm Icon.png" alt="" class="w-28 m-auto mt-16">
         <p class="font-poppins font-semibold m-16 ml-20">Payment successful</p>
         <a href="./dashboard.php">
-            <button class="w-28 border border-solid rounded-md bg-text1 p-2 text-white hover:text-black hover:bg-white ml-24 mt-14 font-philosopher">Get Started</button>
+            <button class=" shadow-md w-28 border border-solid rounded-md bg-blue-600 p-2 text-white hover:text-black hover:bg-white ml-24 mt-14 font-philosopher">Get Started</button>
         </a>
     </div>
 </body>

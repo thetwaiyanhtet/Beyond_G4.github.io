@@ -51,7 +51,7 @@ include "./sidebar.php";
             </div>
         </header>
         <section>
-            <p class=" p-3 font-semibold">Dashboard</p>
+            <p class=" p-3 font-semibold text-lg">Dashboard</p>
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Sales Overview</h1>
