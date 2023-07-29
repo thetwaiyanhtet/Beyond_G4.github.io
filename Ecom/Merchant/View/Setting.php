@@ -18,7 +18,7 @@ include "./sidebar.php"
 </head>
 
 <body>
-    <<<<<<< Updated upstream <header class=" border-gray-300 border-b-2 h-[59px] flex justify-between items-center ml-56">
+     <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
         <div class="pl-2">
             <p>2023/July/24 - 4:04 PM</p>
         </div>
@@ -40,14 +40,14 @@ include "./sidebar.php"
             <img src="./resources/img/Mask group.png" alt="png" class="w-[50px]">
         </div>
     </div> -->
-            <p class="font-poppins text-sm mt-2">Setting</p>
+            <p class="font-poppins mt-2 font-semibold text-xl">Setting</p>
             <p class="underline text-text2  mt-5">Account</p>
             <p class="font-philosopher font-light text-base mt-2">logo</p>
             <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 m-2">
                 <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5">
                 <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
             </div>
-            <div class="w-[80%]  border border-solid border-gray-400"></div>
+            <div class="w-[80%]  border border-solid border-gray-400 my-5"></div>
             <form action="">
                 <div class="flex space-x-20 mt-2">
                     <div class="flex flex-col">

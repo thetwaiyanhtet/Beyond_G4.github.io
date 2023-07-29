@@ -82,7 +82,7 @@ include "./sidebar.php"
                                     Approved
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="" checked>
+                                    <input type="checkbox" name="" id="" checked class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -105,7 +105,7 @@ include "./sidebar.php"
                                     Pendng
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -128,7 +128,7 @@ include "./sidebar.php"
                                     Approved
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -151,7 +151,7 @@ include "./sidebar.php"
                                     Pending
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -174,7 +174,7 @@ include "./sidebar.php"
                                     Approved
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -197,7 +197,7 @@ include "./sidebar.php"
                                     Pending
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -220,7 +220,7 @@ include "./sidebar.php"
                                     Approved
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -243,7 +243,7 @@ include "./sidebar.php"
                                     Pending
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -266,7 +266,7 @@ include "./sidebar.php"
                                     Approved
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
@@ -289,7 +289,7 @@ include "./sidebar.php"
                                     Pending
                                 </td>
                                 <td class="px-6 py-4">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id="" class=" w-10">
                                 </td>
                             </tr>
 

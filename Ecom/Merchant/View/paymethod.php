@@ -95,7 +95,7 @@
                     <p>Subtotal</p>
                     <p>$21.29</p>
                 </div>
-                <a href="./paymentsfl.php"> <button class=" w-28 border border-solid border-black rounded-md bg-text1 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button></a>
+                <a href="./paymentsfl.php"> <button class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button></a>
 
             </div>
 

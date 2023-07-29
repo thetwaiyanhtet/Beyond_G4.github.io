@@ -31,7 +31,7 @@ include "./sidebar.php"
             </ul>
         </div>
     </header>
-    <p class="m-5 ml-64 font-semibold">Chat Box</p>
+    <p class="m-5 ml-64 font-semibold text-lg">Chat Box</p>
     <main class="ml-56 w-auto h-auto relative">
         <!--Customer-->
         <div class=" w-[325px] h-[480px] border border-solid m-5 bg-gray-200 rounded-lg space-y-3">
