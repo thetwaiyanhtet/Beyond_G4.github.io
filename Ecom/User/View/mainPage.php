@@ -309,25 +309,15 @@
         </div>
         </div>
 
-        <a href="./trandingProduct.php" class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-my-purple1 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group float-right m-2">
-            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-            </span>
-            <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
-            <span class="relative invisible ">View All</span>
-        </a>
-        <!--End of Trending product section  -->
-        <!-- Banner 2 -->
-        <div>
-            <img src="./resources/img/home_hero/Banner_2_upt.png" alt="" class="w-full">
-        </div>
-        <!--End of Banner 2 -->
-        <!-- All Product session start -->
-        <div class="pdt inline-flex m-2">
-            <h1 class="m-4 text-2xl font-extrabold text-white dark:text-black md:text-3xl "><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-bold">All Product</span></h1>
-        </div>
+        <div class="flex overflow-x-scroll pb-3 hide-scroll-bar">
+            <div class="flex flex-nowrap ">
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <a href="./Wishlist.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                <a href="./userCart.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
 
         <!--All Product-->
         <div>
@@ -353,13 +343,15 @@
 
                         </div>
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                               <a href="./Wishlist.php"> <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                               <a href="./userCart.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
+                            
 
                                 </div>
                             </div>
