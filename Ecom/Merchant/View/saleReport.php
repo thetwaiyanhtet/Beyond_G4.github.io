@@ -259,7 +259,7 @@ include "./sidebar.php";
                             </tr>
                         </tbody>
                     </table>
-                    <div class="flex justify-between items-center py-2 px-3">
+                    <div class="flex justify-between items-center py-2 px-3 pt-5">
                         <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
                         <div>Page 1 of 10</div>
                         <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Next</button></div>

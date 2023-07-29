@@ -269,7 +269,7 @@ include "./sidebar.php";
                         <span>Total Amount : </span>
                         <span>$220</span>
                     </div>
-                    <a href="./delivery.php"> <button class="bg-blue-400 py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
+                    <a href="./delivery.php"> <button class="bg-blue-500 text-white py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
                 </div>
             </div>
 

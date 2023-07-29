@@ -59,7 +59,7 @@ include "./sidebar.php"
                            lg:py-2
                            px-3
                            lg:px-4
-                           border-l border-transparent rounded-tl-md
+                            rounded-tl-md
                            ">
                                                     Customer Name
                                                 </th>
@@ -125,8 +125,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            "> Kyaw Swar Phyo
                                                 </td>
                                                 <td class="
@@ -136,7 +136,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Nikon 950 Full HD Plus
                                                 </td>
@@ -146,8 +146,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -164,7 +164,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Good Quality
                                                 </td>
@@ -174,11 +174,11 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -189,8 +189,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            ">
                                                     Han Myo Htun
                                                 </td>
@@ -201,7 +201,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Outwear & Coats
                                                 </td>
@@ -211,8 +211,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -229,7 +229,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     This product is no longer needed
                                                 </td>
@@ -239,11 +239,11 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -254,8 +254,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            "> Kyaw Swar Phyo
                                                 </td>
                                                 <td class="
@@ -265,7 +265,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Nikon 950 Full HD Plus
                                                 </td>
@@ -275,8 +275,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -293,7 +293,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Good Quality
                                                 </td>
@@ -303,11 +303,11 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -318,8 +318,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            ">
                                                     Han Myo Htun
                                                 </td>
@@ -330,7 +330,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Outwear & Coats
                                                 </td>
@@ -340,8 +340,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -358,7 +358,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     This product is no longer needed
                                                 </td>
@@ -368,11 +368,11 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -383,8 +383,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            "> Kyaw Swar Phyo
                                                 </td>
                                                 <td class="
@@ -394,7 +394,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Nikon 950 Full HD Plus
                                                 </td>
@@ -404,8 +404,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -422,7 +422,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Good Quality
                                                 </td>
@@ -432,11 +432,11 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -447,8 +447,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            ">
                                                     Han Myo Htun
                                                 </td>
@@ -459,7 +459,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Outwear & Coats
                                                 </td>
@@ -469,8 +469,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -487,7 +487,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     This product is no longer needed
                                                 </td>
@@ -497,11 +497,11 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -512,8 +512,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            "> Kyaw Swar Phyo
                                                 </td>
                                                 <td class="
@@ -523,7 +523,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Nikon 950 Full HD Plus
                                                 </td>
@@ -533,8 +533,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -551,7 +551,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Good Quality
                                                 </td>
@@ -561,11 +561,11 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -576,8 +576,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
+                           
+                           border-b  border-gray-500
                            ">
                                                     Han Myo Htun
                                                 </td>
@@ -588,7 +588,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     Outwear & Coats
                                                 </td>
@@ -598,8 +598,8 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -616,7 +616,7 @@ include "./sidebar.php"
                            py-5
                            px-2
                            bg-white
-                           border-b border-[#E8E8E8]
+                           border-b border-gray-500
                            ">
                                                     This product is no longer needed
                                                 </td>
@@ -626,11 +626,141 @@ include "./sidebar.php"
                            text-base
                            py-5
                            px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
+                           
+                           border-b border-gray-500
                            ">
                                                     <button>
-                                                        <a class="bg-gray-300 py-2 px-3 rounded-md" href="./reviewandratingdetail.php">View details</a>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           
+                           border-b  border-gray-500
+                           ">
+                                                    Han Myo Htun
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           bg-white
+                           border-b border-gray-500
+                           ">
+                                                    Outwear & Coats
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           
+                           border-b border-gray-500
+                           ">
+                                                    <div>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star'></i>
+                                                    </div>
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           bg-white
+                           border-b border-gray-500
+                           ">
+                                                    This product is no longer needed
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           
+                           border-b border-gray-500
+                           ">
+                                                    <button>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           
+                           border-b  border-gray-500
+                           ">
+                                                    Han Myo Htun
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           bg-white
+                           border-b border-gray-500
+                           ">
+                                                    Outwear & Coats
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           
+                           border-b border-gray-500
+                           ">
+                                                    <div>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star'></i>
+                                                    </div>
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           bg-white
+                           border-b border-gray-500
+                           ">
+                                                    This product is no longer needed
+                                                </td>
+                                                <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           
+                           border-b border-gray-500
+                           ">
+                                                    <button>
+                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -643,8 +773,54 @@ include "./sidebar.php"
                     </div>
                 </section>
                 <!-- ====== Table Section End -->
+                <div class="flex justify-between items-center py-2 px-3 pt-5">
+                    <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
+                    <div>Page 1 of 10</div>
+                    <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
+                </div>
             </div>
         </section>
+        <div id="detailPopup" class="hidden">
+            <div class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
+                <img src="./resources/img/camera.png" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
+                <div class=" p-3 space-y-3">
+                    <p class=" font-semibold">Nikon 950 Full HD Plus </p>
+                    <p>
+                        <i class='bx bx-star text-yellow-500'></i>
+                        <i class='bx bx-star text-yellow-500'></i>
+                        <i class='bx bx-star text-yellow-500'></i>
+                        <i class='bx bx-star text-yellow-500'></i>
+                        <i class='bx bx-star'></i>
+                        <span>/</span>
+                        <span>Kyaw Swar Phyo</span>
+                    </p>
+                    <p class=" text-gray-500">Good Quality!!</p>
+                    <div>
+                        <span class=" text-gray-500 pt-5">Category : </span>
+                        <span>Camera</span>
+                    </div>
+                    <div class=" border-t-2 border-blue-500 py-3">
+                        <div><button id="cancelButton" class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Get references to the popup and buttons
+            const detailPopup = document.getElementById("detailPopup");
+            const popupButton = document.getElementById("popupButton");
+            const cancelButton = document.getElementById("cancelButton");
+
+            // Function to toggle the visibility of the popup and blur the background
+            function toggleDetailPopup() {
+                detailPopup.classList.toggle("hidden");
+            }
+
+            // Attach click event listeners to the logout button and cancel button
+            popupButton.addEventListener("click", toggleDetailPopup);
+            cancelButton.addEventListener("click", toggleDetailPopup);
+        </script>
 
     </main>
 </body>

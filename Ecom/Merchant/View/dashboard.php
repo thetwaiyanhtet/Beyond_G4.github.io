@@ -18,26 +18,11 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
 </head>
 
 <body>
     <main id="screen" class=" ml-56 h-screen">
-
-        <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden">
-            <div>
-                <div class=" border-b-2 border-gray-500">
-                    <p class="pb-3">Log out of your account?</p>
-                </div>
-                <div class=" flex justify-center items-center space-x-5 pt-3">
-                    <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
-                    <a href="./logIn.php">
-                        <p class=" text-red-500">Log out</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>2023/July/24 - 4:04 PM</p>
@@ -122,7 +107,7 @@ include "./sidebar.php";
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Customer Reviews</h1>
-                    <div class=" flex justify-between pb-3">
+                    <div class=" flex space-x-3 items-center pb-3">
                         <div class=" flex">
                             <img src="./resources/img/noto_star.png" alt="...">
                             <img src="./resources/img/noto_star.png" alt="...">
@@ -220,7 +205,7 @@ include "./sidebar.php";
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950">
                         <div class=" flex justify-center items-center space-x-3 pb-3 pt-3">
-                            <img src="./resources/img/dollar.svg" alt="..." width="30px">
+                            <ion-icon name="wallet-outline" class=" text-3xl"></ion-icon>
                             <h1 class=" text-lg font-bold font-philosopher">Current Plan</h1>
                         </div>
                         <hr>
@@ -386,6 +371,20 @@ include "./sidebar.php";
                     <div class=" flex-col justify-between py-3">
                         <img src="./resources/img/orderChart.png" alt="...">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden">
+            <div>
+                <div class=" border-b-2 border-gray-500">
+                    <p class="pb-3">Log out of your account?</p>
+                </div>
+                <div class=" flex justify-center items-center space-x-5 pt-3">
+                    <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
+                    <a href="./logIn.php">
+                        <p class=" text-red-500">Log out</p>
+                    </a>
                 </div>
             </div>
         </section>
