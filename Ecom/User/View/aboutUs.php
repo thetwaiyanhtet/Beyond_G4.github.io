@@ -141,21 +141,26 @@
         While we are starting our journey, we are also excited to empower merchants and creators by providing them with a platform to showcase their unique creations. Together, we can build a community that celebrates creativity and craftsmanship.
     </p>
     <p class="md:text-xl text-lg font-PlayfairSC text-center m-3">MEET OUT TEAM</p>
-    <div class="md:flex  items-center justify-center space-x-5 m-5">
-        <div class="w-[180px] h-[160px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/p1.png" alt="p1" class="rounded-full">
+    <div class="flex  items-center justify-center md:space-x-5 space-x-2 m-5">
+        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team5.png" alt="p1" class=" rounded-3xl md:h-28 h-20 m-auto">
+            <p class="font-PlayfairSC md:text-base text-sm font-bold md:mt-4 mt-2 text-center">Thet Wai Yan Htet</p>
         </div>
-        <div class="w-[180px] h-[160px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/p2.png" alt="p2" class="rounded-full">
+        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team3.png" alt="p2" class=" rounded-3xl md:h-24 m-auto">
+            <p class="font-PlayfairSC md:text-base text-xs font-bold md:mt-4 mt-2 ">Kyaw Sawr lynn</p>
         </div>
-        <div class="w-[180px] h-[160px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/p3.png" alt="p3" class="rounded-full">
+        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team1.png" alt="p3" class=" rounded-3xl md:h-[100px] m-auto">
+            <p class="font-PlayfairSC md:text-base  font-bold md:mt-4 mt-2  text-center">Nyan Win Myo</p>
         </div>
-        <div class="w-[180px] h-[160px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/p5.png" alt="p4"class="rounded-full" >
+        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team4.png" alt="p4" class=" rounded-3xl md:h-24 m-auto">
+            <p class="w-24 font-PlayfairSC md:text-base text-sm font-bold md:mt-4 mt-2  text-center">Yunn Shwe Yi Win</p>
         </div>
-        <div class="w-[180px] h-[160px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/p4.png" alt="p5" class="rounded-full">
+        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team2.png" alt="p5" class="rounded-3xl md:h-24 m-auto">
+            <p class="w-24 font-PlayfairSC md:text-base text-sm font-bold md:mt-4 mt-2  text-center">Hnin Eain latt</p>
         </div>
     </div>
     <p class="md:text-xl text-lg font-PlayfairSC text-center m-3">BEYOND'S PROMISE</p>
