@@ -20,15 +20,15 @@ include "./sidebar.php";
 
 <body>
     <main class=" ml-60 h-screen">
-        <header class=" border-gray-300 border-b-2 h-20 flex justify-between items-center">
+    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>2023/July/24 - 4:04 PM</p>
             </div>
             <div>
-                <ul class="flex space-x-5 items-center pr-3">
-                    <li><ion-icon name="moon-outline"></ion-icon></li>
-                    <li><ion-icon name="notifications-outline"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="30px"></li>
+                <ul class="flex space-x-5 items-center pr-5">
+                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
+                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
+                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
