@@ -17,10 +17,27 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 
 <body>
-    <main class=" ml-56 h-screen">
+    <main id="screen" class=" ml-56 h-screen">
+
+        <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden">
+            <div>
+                <div class=" border-b-2 border-gray-500">
+                    <p class="pb-3">Log out of your account?</p>
+                </div>
+                <div class=" flex justify-center items-center space-x-5 pt-3">
+                    <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
+                    <a href="./logIn.php">
+                        <p class=" text-red-500">Log out</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>2023/July/24 - 4:04 PM</p>
@@ -119,28 +136,28 @@ include "./sidebar.php";
                     <p class=" text-sm opacity-50">Overall rating of Customers' Reviews</p>
                     <div class=" flex-col space-y-5 pt-3">
                         <div class=" flex space-x-3 items-center font-semibold">
-                            <p>Excellent</p>
+                            <p class=" w-28">Excellent</p>
                             <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p>35</p>
+                            <p class=" w-10">35</p>
                         </div>
                         <div class=" flex space-x-3 items-center font-semibold">
-                            <p>Good</p>
+                            <p class=" w-28">Good</p>
                             <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p>25</p>
+                            <p class=" w-10">25</p>
                         </div>
                         <div class=" flex space-x-3 items-center font-semibold">
-                            <p>Average</p>
+                            <p class=" w-28">Average</p>
                             <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p>15</p>
+                            <p class=" w-10">15</p>
                         </div>
                         <div class=" flex space-x-3 items-center font-semibold">
-                            <p>Poor</p>
+                            <p class=" w-28">Poor</p>
                             <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p>05</p>
+                            <p class=" w-10">05</p>
                         </div>
                     </div>
-                    <div class=" flex justify-center pt-3">
-                        <button class=" px-20 py-2 rounded-3xl bg-transparent border-2 border-gray-500">See All</button>
+                    <div class=" flex justify-center pt-5">
+                        <button class=" px-20 py-2 rounded-3xl bg-transparent border-2 border-gray-500 hover:text-white hover:bg-[#1366D9]">See All</button>
                     </div>
                 </div>
 
@@ -207,17 +224,21 @@ include "./sidebar.php";
                             <h1 class=" text-lg font-bold font-philosopher">Current Plan</h1>
                         </div>
                         <hr>
-                        <div class=" text-center py-5">
-                            <p>Professional</p>
-                            <p>Professional</p>
-                            <p>Professional</p>
+                        <div class=" flex-col items-center text-center py-3">
+                            <p class=" font-semibold text-lg">Professional</p>
+                            <div class=" flex space-x-2 pt-3">
+                                <p>Time : Left</p>
+                                <p><span class=" font-semibold">5</span> Months & <span class=" font-semibold">28</span> Days</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=" w-full h-full space-y-4  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                    <h1 class=" text-lg font-bold font-philosopher pb-6">Trending Products</h1>
-                    <div class=" flex-col justify-between pb-3">
-                            <img src="./resources/img/pieChart.png" alt="..." class=" mx-auto">
+                    <h1 class=" text-lg font-bold font-philosopher pb-3">Trending Products</h1>
+                    <div class=" flex-col justify-between pb-0">
+                        <div class=" w-44 mx-auto">
+                            <canvas id="donut-chart"></canvas>
+                        </div>
                     </div>
 
                     <div class=" flex justify-around py-4">
@@ -350,17 +371,17 @@ include "./sidebar.php";
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <div class="flex justify-between items-center">
                         <h1 class=" text-lg font-bold font-philosopher">Sales & Profits</h1>
-                        <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2"><ion-icon name="calendar-clear-outline"></ion-icon> Weekly</button>
+                        <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:text-white hover:bg-blue-500"><ion-icon name="calendar-clear-outline"></ion-icon> Weekly</button>
                     </div>
-                    <div class=" flex-col justify-between py-3">
-                        <img src="./resources/img/saleChart.png" alt="...">
+                    <div class=" w-[700px] flex-col justify-between py-3">
+                        <canvas class="p-10" id="chartLine"></canvas>
                     </div>
                 </div>
 
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <div class="flex justify-between items-center">
                         <h1 class=" text-lg font-bold font-philosopher">Order Chart</h1>
-                        <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2"><ion-icon name="calendar-clear-outline"></ion-icon> Weekly</button>
+                        <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:text-white hover:bg-blue-500"><ion-icon name="calendar-clear-outline"></ion-icon> Weekly</button>
                     </div>
                     <div class=" flex-col justify-between py-3">
                         <img src="./resources/img/orderChart.png" alt="...">
@@ -370,5 +391,95 @@ include "./sidebar.php";
         </section>
     </main>
 </body>
+
+<script>
+    // Get references to the popup and buttons
+    const logoutPopup = document.getElementById("logoutPopup");
+    const cancelButton = document.getElementById("cancelButton");
+    const logoutButton = document.getElementById("logoutButton");
+
+    // Function to toggle the visibility of the popup and blur the background
+    function toggleLogoutPopup() {
+        logoutPopup.classList.toggle("hidden");
+    }
+
+    // Attach click event listeners to the logout button and cancel button
+    logoutButton.addEventListener("click", toggleLogoutPopup);
+    cancelButton.addEventListener("click", toggleLogoutPopup);
+
+
+    // <!-- Chart line -->
+    const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    const data = {
+        labels: labels,
+        datasets: [{
+                label: "",
+                backgroundColor: "#F294C4",
+                borderColor: "#F294C4",
+                data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
+            },
+            // Add a new dataset for the second line
+            {
+                label: "",
+                backgroundColor: "#5143D1",
+                borderColor: "#5143D1",
+                data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
+            },
+
+        ],
+    };
+
+    const configLineChart = {
+        type: "line",
+        data,
+        options: {},
+    };
+
+    var chartLine = new Chart(
+        document.getElementById("chartLine"),
+        configLineChart
+    );
+
+
+    // Get the canvas element
+    var canvas = document.getElementById('donut-chart');
+
+    // Set the chart data
+    var data1 = {
+        labels: ['Jeans', 'Shoes', 'T-Shirts', 'EarBuds'],
+        datasets: [{
+            label: 'Trending Products',
+            data: [60, 10, 33, 2],
+            backgroundColor: [
+                '#9179DD',
+                '#D92828',
+                '#01CBA3',
+                '#3C0A8D',
+            ],
+            hoverOffset: 4
+        }]
+    };
+
+    // Set the chart options
+    var options = {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        aspectRatio: 1,
+        cutout: '50%',
+        animation: {
+            animateRotate: false
+        }
+    };
+
+    // Create the chart
+    var chart = new Chart(canvas, {
+        type: 'doughnut',
+        data: data1,
+        options: options
+    });
+</script>
 
 </html>

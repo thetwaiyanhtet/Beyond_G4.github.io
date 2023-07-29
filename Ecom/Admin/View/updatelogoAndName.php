@@ -39,12 +39,28 @@ include "./adminsidebar.php";
                 </div>
             </div>
             <div class="py-10 pl-[90%] w-full">
-            <button class="py-2 px-4 text-white rounded-md bg-blue-600">Update</button>
+            <button id="update" class="py-2 px-4 text-white rounded-md bg-blue-600">Update</button>
             </div>
             
         
       
         </div>
+        <div id="delhid" class=" absolute top-20 mt-40 ml-60 hidden">
+                <?php
+                include "./savepop-up.php";
+                ?>
+            </div>
+    </main>
+    <script>
+        document.getElementById('update').addEventListener('click', (e) => {
+            document.getElementById('delhid').classList.add('show');
+            document.getElementById('delhid').classList.remove('hidden');
+        })
+        document.getElementById('no').addEventListener('click', (e) => {
+            document.getElementById('delhid').classList.add('hidden');
+            document.getElementById('delhid').classList.remove('show');
+        })
+    </script>
     </main>
 </body>
 

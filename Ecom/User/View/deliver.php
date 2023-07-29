@@ -36,9 +36,11 @@
                                     <p tabindex="0" class="focus:outline-none text-xl font-semibold max-lg:text-sm">Delivery</p>
                                 </div>
                             </div>
+                            <a href="./cart2.php">
                             <div class=" bg-gray-200 h-10 w-10 rounded-full border shadow flex items-center justify-center">
                                 <ion-icon class="text-3xl" name="cart-outline"></ion-icon>
                             </div>
+                            </a>
                         </div>
 
                         <div class="w-1/3 flex justify-between bg-gray-200 h-3 items-center relative">

@@ -15,9 +15,9 @@ include "./adminsidebar.php";
 
 </head>
 
-<body>
+<body class=" relative">
     <main id="main" class="ml-60 h-screen pt-20  w-[80%]">
-    
+
         <div class="ml-10 pr-10 pb-5">
             <p class=" text-xl ml-5 font-bold font-philosopher pt-10">Category List</p>
             <div class=" flex items-center mt-5 ml-5">
@@ -25,31 +25,31 @@ include "./adminsidebar.php";
                 <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8 indent-2" type="search" name="" id="">
             </div>
             <div class="border shadow-2xl mt-10 rounded-xl">
-            <div class="  p-5">
-                <p class="font-bold text-xl">Edit Categories</p>
-                <div class="flex justify-around">
-                    <div class="space-y-3 mt-5">
-                        <p>Category</p>
-                        <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text">
-                    </div>
-                    <div class="flex flex-col justify-start space-y-3 mt-5">
-                        <p>Description</p>
-                        <textarea class="border outline-none indent-2" id="text" name="text" rows="4" cols="50">
+                <div class="  p-5">
+                    <p class="font-bold text-xl">Edit Categories</p>
+                    <div class="flex justify-around">
+                        <div class="space-y-3 mt-5">
+                            <p>Category</p>
+                            <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text">
+                        </div>
+                        <div class="flex flex-col justify-start space-y-3 mt-5">
+                            <p>Description</p>
+                            <textarea class="border outline-none indent-2" id="text" name="text" rows="4" cols="50">
 </textarea>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <button class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
-        
-        <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
-            <div class="container">
-                <div class="flex flex-wrap -mx-4">
-                    <div class="w-full px-4">
-                        <div class="max-w-full overflow-x-auto">
-                            <table class="table-auto w-full">
-                                <thead>
-                                    <tr class="bg-primary text-center">
-                                        <th class="
+                <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
+
+                <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
+                    <div class="container">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-full px-4">
+                                <div class="max-w-full overflow-x-auto">
+                                    <table class="table-auto w-full">
+                                        <thead>
+                                            <tr class="bg-primary text-center">
+                                                <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -59,9 +59,9 @@ include "./adminsidebar.php";
                            lg:px-4
                            border-l border-transparent rounded-tl-md
                            ">
-                                            Category Name
-                                        </th>
-                                        <th class="
+                                                    Category Name
+                                                </th>
+                                                <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -70,9 +70,9 @@ include "./adminsidebar.php";
                            px-3
                            lg:px-4
                            ">
-                                            Create By 
-                                        </th>
-                                        <th class="
+                                                    Create By
+                                                </th>
+                                                <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -81,9 +81,9 @@ include "./adminsidebar.php";
                            px-3
                            lg:px-4
                            ">
-                                            Date
-                                 
-                                        <th class="
+                                                    Date
+
+                                                <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -92,13 +92,13 @@ include "./adminsidebar.php";
                            px-3
                            lg:px-4 rounded-tr-md
                            ">
-                                            Details
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="
+                                                    Details
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -107,8 +107,8 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-l border-[#E8E8E8]
                            "> Fashion
-                                        </td>
-                                        <td class="
+                                                </td>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -117,9 +117,9 @@ include "./adminsidebar.php";
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                                            Admin
-                                        </td>
-                                        <td class="
+                                                    Admin
+                                                </td>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -128,10 +128,10 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                           14/07/2023
-                                        </td>
-                                        
-                                        <td class="
+                                                    14/07/2023
+                                                </td>
+
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -140,13 +140,13 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                            <button>
-                                                <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="
+                                                    <button>
+                                                        <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -155,8 +155,8 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-l border-[#E8E8E8]
                            "> Fashion
-                                        </td>
-                                        <td class="
+                                                </td>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -165,9 +165,9 @@ include "./adminsidebar.php";
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                                            Admin
-                                        </td>
-                                        <td class="
+                                                    Admin
+                                                </td>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -176,10 +176,10 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                           14/07/2023
-                                        </td>
-                                        
-                                        <td class="
+                                                    14/07/2023
+                                                </td>
+
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -188,13 +188,13 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                            <button>
-                                                <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="
+                                                    <button>
+                                                        <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -203,8 +203,8 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-l border-[#E8E8E8]
                            "> Fashion
-                                        </td>
-                                        <td class="
+                                                </td>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -213,9 +213,9 @@ include "./adminsidebar.php";
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                                            Admin
-                                        </td>
-                                        <td class="
+                                                    Admin
+                                                </td>
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -224,10 +224,10 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                           14/07/2023
-                                        </td>
-                                        
-                                        <td class="
+                                                    14/07/2023
+                                                </td>
+
+                                                <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -236,21 +236,36 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                            <button>
-                                                <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                </tbody>
-                            </table>
+                                                    <button>
+                                                        <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
-        </div>
+            <div id="hs" class=" absolute top-20 mt-40 ml-60 hidden">
+                <?php
+                include "./savepop-up.php";
+                ?>
+            </div>
     </main>
+    <script>
+        document.getElementById('update').addEventListener('click', (e) => {
+            document.getElementById('hs').classList.add('show');
+            document.getElementById('hs').classList.remove('hidden');
+        })
+        document.getElementById('no').addEventListener('click', (e) => {
+            document.getElementById('hs').classList.add('hidden');
+            document.getElementById('hs').classList.remove('show');
+        })
+    </script>
 </body>
 
 </html>

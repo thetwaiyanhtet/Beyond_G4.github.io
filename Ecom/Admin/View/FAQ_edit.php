@@ -16,12 +16,55 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main id="main" class=" ml-72 mt-24 font-poppins">
+    <main id="main" class="ml-72 mt-24 font-poppins">
         <div class=" px-5 space-y-3">
             <p class=" text-xl font-semibold font-philosopher">FAQs</p>
-            
+            <div class="h-auto">
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-4">Question1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-8">Answer1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-4">Question1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-8">Answer1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-4">Question1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-8">Answer1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-4">Question1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-8">Answer1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-4">Question1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-8">Answer1</div>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                </div>
+
+
+            </div>
             <section class="p-2">
-               
+
             </section>
         </div>
     </main>

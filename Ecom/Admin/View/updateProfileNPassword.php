@@ -54,7 +54,7 @@ include "./adminsidebar.php";
                     </div>
                 </div>
                 <div class=" justify-end flex pr-5 py-3">
-                    <button class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md">Update</button>
+                    <button id="updates" class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md">Update</button>
                 </div>
             </section>
 
@@ -84,11 +84,30 @@ include "./adminsidebar.php";
                     </div>
                 </div>
                 <div class=" justify-end flex pr-5 py-3">
-                    <button class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md">Change</button>
+                    <button id="update" class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md">Change</button>
                 </div>
             </section>
         </div>
+        <div id="delhid" class=" absolute top-20 mt-40 ml-60 hidden">
+                <?php
+                include "./savepop-up.php";
+                ?>
+            </div>
 
+    <script>
+        document.getElementById('update').addEventListener('click', (e) => {
+            document.getElementById('delhid').classList.add('show');
+            document.getElementById('delhid').classList.remove('hidden');
+        })
+        document.getElementById('updates').addEventListener('click', (e) => {
+            document.getElementById('delhid').classList.add('show');
+            document.getElementById('delhid').classList.remove('hidden');
+        })
+        document.getElementById('no').addEventListener('click', (e) => {
+            document.getElementById('delhid').classList.add('hidden');
+            document.getElementById('delhid').classList.remove('show');
+        })
+    </script>
 
     </main>
 </body>
