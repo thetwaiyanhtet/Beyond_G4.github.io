@@ -718,12 +718,12 @@ video {
   left: 8%;
 }
 
-.left-\[9\%\] {
-  left: 9%;
+.left-\[88\%\] {
+  left: 88%;
 }
 
-.left-\[92\%\] {
-  left: 92%;
+.left-\[9\%\] {
+  left: 9%;
 }
 
 .right-0 {
@@ -1029,12 +1029,12 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-32 {
-  margin-bottom: 8rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-40 {
+  margin-bottom: 10rem;
 }
 
 .mb-5 {
@@ -3901,6 +3901,10 @@ video {
 
   .md\:mb-10 {
     margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-32 {
+    margin-bottom: 8rem;
   }
 
   .md\:ml-0 {

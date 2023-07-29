@@ -76,7 +76,7 @@
                 <img class=" w-10 pt-3" src="../View/resources/img/logo.png" alt="">
                 <p class="pb-2 lg:text-xl text-white font-philosopher font-bold">Beyond</p>
             </div>
-            <div class="w-[369px] lg:w-[948px] h-[500px] lg:h-[350px] bg-[#D9D9D9] mb-32  shadow-inner flex flex-col-reverse md:flex-row  md:items-center justify-evenly rounded-bl-2xl rounded-br-2xl">
+            <div class="w-[369px] lg:w-[948px] h-[500px] lg:h-[350px] bg-[#D9D9D9] mb-40 md:mb-32  shadow-inner flex flex-col-reverse md:flex-row  md:items-center justify-evenly rounded-bl-2xl rounded-br-2xl">
 
                 <div class="  md:mb-10 mt-3 md:mt-0">
                     <div class="flex justify-evenly font-poppins">
@@ -97,7 +97,7 @@
                         </div>
                         <p>$100</p>
                         <p>$200</p>
-                        <div class="absolute left-[92%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
+                        <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
                     </div>
 
                     <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] border border-transparent
@@ -111,7 +111,7 @@
                         </div>
                         <p>$100</p>
                         <p>$200</p>
-                        <div class="absolute left-[92%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
+                        <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
                     </div>
 
                     <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] 
@@ -125,7 +125,7 @@
                         </div>
                         <p>$100</p>
                         <p>$200</p>
-                        <div class="absolute left-[92%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
+                        <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
                     </div>
 
                     <div class="ml-[240px] block md:hidden">
