@@ -83,6 +83,9 @@ include "./sidebar.php"
                                             <option value="3">Furniture</option>
                                         </select></div>
                                 </div>
+                                <div>
+                                    <input type="color" value="red">
+                                </div>
                                 <!-- <div class=" flex justify-between space-x-10 items-center">
                                 <div>
                                     <p>Colors</p>

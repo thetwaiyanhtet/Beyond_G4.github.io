@@ -34,14 +34,13 @@ include "./sidebar.php"
     <p class="m-5 ml-64 font-semibold text-lg">Chat Box</p>
     <main class="ml-56 w-auto h-auto relative">
         <!--Customer-->
-        <div class=" w-[325px] h-[480px] border border-solid m-5 bg-gray-200 rounded-lg space-y-3">
-
+        <div class=" text-white w-[325px] h-full border border-solid m-3 bg-gradient-to-b from-sky-500 via-gray-300 to-sky-800 rounded-lg space-y-3">
             <div class="border border-solid w-64 h-10 rounded-lg m-5 bg-black border-black">
                 <ion-icon name="search-outline" class="pl-2 pt-2 text-white"></ion-icon>
                 <input type="text" placeholder="Search" class="pl-2 bg-transparent focus:outline-none text-white">
             </div>
-            <div class=" w-[320px] h-12 flex justify-around space-x-2">
-                <img src="./resources/img/Mask group (1).png" alt="c1" class="h-10 ml-2">
+            <div class=" w-[320px] h-[51px] flex justify-around space-x-2 border-b-2 border-gray-500 pb-5">
+                <img src="./resources/img//logo.png" alt="c1" class="h-10 ml-2">
                 <div class="w-44 h-16">
                     <p class=" font-poppins text-base">Admin</p>
                     <p class="font-poppins text-sm">Hello</p>
@@ -106,6 +105,28 @@ include "./sidebar.php"
                     <!-- <div class="w-5 h-5 rounded-full bg-red-700 text-white text-center text-sm m-auto"><span>2</span></div> -->
                 </div>
             </div>
+            <div class=" w-[320px] h-12 flex justify-around space-x-2">
+                <img src="./resources/img/Mask group (1).png" alt="c1" class="h-10 ml-2">
+                <div class="w-44 h-16">
+                    <p class=" font-poppins text-base">Customer1</p>
+                    <p class="font-poppins text-sm">Hello</p>
+                </div>
+                <div class="w-18">
+                    <p class="mr-1">4:30 PM</p>
+                    <!-- <div class="w-5 h-5 rounded-full bg-red-700 text-white text-center text-sm m-auto"><span>2</span></div> -->
+                </div>
+            </div>
+            <div class=" w-[320px] h-12 flex justify-around space-x-2">
+                <img src="./resources/img/Mask group (1).png" alt="c1" class="h-10 ml-2">
+                <div class="w-44 h-16">
+                    <p class=" font-poppins text-base">Customer1</p>
+                    <p class="font-poppins text-sm">Hello</p>
+                </div>
+                <div class="w-18">
+                    <p class="mr-1">4:30 PM</p>
+                    <!-- <div class="w-5 h-5 rounded-full bg-red-700 text-white text-center text-sm m-auto"><span>2</span></div> -->
+                </div>
+            </div>
         </div>
         <!--Admin-->
         <!-- <div class="w-[325px] h-[150px] border border-solid m-5 bg-gray-200 rounded-lg">
@@ -125,7 +146,7 @@ include "./sidebar.php"
 
         </div> -->
         <!--ChatBox-->
-        <div class="w-[930px] h-[480px] border border-solid bg-gray-200 absolute top-0 rounded-lg left-[360px]">
+        <div class=" text-white w-[930px] h-full border border-solid bg-gradient-to-b from-sky-500 via-gray-300 to-sky-800 absolute top-0 rounded-lg left-[360px]">
             <div class="w-[930px] h-[70px] border-solid border-b-2 border-gray-900">
                 <div class="flex items-center space-x-2 p-3">
                     <img src="./resources/img/Group 1000004118.png" alt="" class="h-12">
@@ -138,7 +159,7 @@ include "./sidebar.php"
                 <div>
                     <span>Customer</span>
                     <span class="ml-3 text-xs text-gray-200">10:24 AM</span>
-                    <div class="w-56 h-10 border border-solid bg-black text-white border-black rounded-tr-lg rounded-b-lg text-center p-2 text-sm">
+                    <div class=" mt-2 w-56 h-10 border border-solid bg-black text-white border-black rounded-tr-lg rounded-b-lg text-center p-2 text-sm">
                         Hi, this is items available
                     </div>
                     <div class="w-56 h-10 border border-solid bg-black text-white border-black rounded-tr-lg rounded-b-lg text-center p-2 text-sm mt-2">
@@ -163,9 +184,9 @@ include "./sidebar.php"
             </div>
 
             <!--TextBox-->
-            <div class="w-[930px] h-[80px] bg-text-bg absolute bottom-0 rounded-b-lg">
-                <input type='text' class="w-[830px] h-10 rounded-xl bg-[#1E1F25] border-[#1E1F25] text-text3 border border-solid indent-2 focus:outline-none absolute top-7 left-10" placeholder="Add to text"></input>
-                <img src="./resources/img/Shape.png" alt="send" class="w-4 absolute top-10 right-7">
+            <div class="w-full h-[60px] bg-text-bg absolute bottom-0 rounded-b-lg flex items-center justify-around">
+                <input type='text' class="w-[830px] rounded-xl bg-white border-[#1E1F25] text-text3 border border-solid indent-2 focus:outline-none p-2" placeholder="Add to text"></input>
+                <img src="./resources/img/Shape.png" alt="send" class=" pr-5">
             </div>
 
         </div>
