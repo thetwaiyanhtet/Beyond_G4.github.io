@@ -830,6 +830,10 @@ video {
   right: 1.25rem;
 }
 
+.left-\[92\%\] {
+  left: 92%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -2804,6 +2808,10 @@ video {
   padding-top: 6%;
 }
 
+.pr-\[70\%\] {
+  padding-right: 70%;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3882,6 +3890,10 @@ video {
     top: 11rem;
   }
 
+  .md\:left-\[52\.7\%\] {
+    left: 52.7%;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -4175,6 +4187,14 @@ video {
 
   .md\:pt-12 {
     padding-top: 3rem;
+  }
+
+  .md\:pb-4 {
+    padding-bottom: 1rem;
+  }
+
+  .md\:pr-\[55\%\] {
+    padding-right: 55%;
   }
 
   .md\:text-3xl {
