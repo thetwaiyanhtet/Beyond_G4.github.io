@@ -22,34 +22,8 @@
     </script>
 </head>
 
-<body>
-    <!-- <nav class="w-full h-16 bg-gradient-to-bl from-linear-color2 to-linear-color">
-        <div class="flex flex-wrap items-center justify-between p-2">
-            <a href="" class="flex justify-center p-2">
-                <img src="./resources/img/logo.png" alt="Logo" class="h-8">
-                <span class="font-poppins text-2xl">Beyond</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
-            <div class="md:block hidden">
-                <ul class="flex space-x-10 font-poppins" id="navbar-default">
-                   <a href="./mainPage.php"><li class="hover:text-blue-600">Home</li></a>
-                    <li class="hover:text-blue-600">About us</li>
-                    <a href="./contactUs.php"><li class="hover:text-blue-600">Contact</li></a>
-                </ul>
-            </div>
-            <ul class="flex items-center space-x-5">
-                <li class="md:block hidden"><img src="./resources/img/shopping-cart 2.png" alt="shopping"></li>
-                <li class="md:block hidden"> <img src="./resources/img/noti.png" alt="noti"></li>
-                <li> <img src="./resources/img/pf.png" alt="profile"></li>
+<body class=" dark:bg-black">
 
-            </ul>
-        </div>
-    </nav> -->
     <nav class="bg-gradient-to-r from-fuchsia-300 to-purple-400 dark:bg-linear_dark  border-gray-200 ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
@@ -115,61 +89,61 @@
         </div>
     </nav>
     <!--Title-->
-    <p class=" font-PlayfairSC underline text-center mt-5 m-2 text-2xl">About Us</p>
-    <p class="mt-10 text-2xl font-PlayfairSC text-center ">Our Project Overview And Story</p>
+    <p class=" font-PlayfairSC underline text-center mt-5 m-2 text-2xl text-black dark:text-white">About Us</p>
+    <p class="mt-10 text-2xl font-PlayfairSC text-center text-black dark:text-white">Our Project Overview And Story</p>
     <div class="md:flex m-5 md:justify-evenly">
         <img src="./resources/img/logo2.png" alt="logo" class="md:m-0 m-auto md:w-auto w-56">
-        <p class="text-justify font-poppins md:w-96 mt-10 md:text-base text-sm">At Beyond, we are a tight-knit team of five dedicated individuals who share a common passion for transforming your shopping experience. Our mission is to go above and beyond to exceed your expectations and bring joy to your life.<br>
+        <p class="text-justify font-poppins md:w-96 mt-10 md:text-base text-sm text-black dark:text-white">At Beyond, we are a tight-knit team of five dedicated individuals who share a common passion for transforming your shopping experience. Our mission is to go above and beyond to exceed your expectations and bring joy to your life.<br>
             Beyond was born out of the desire to provide you with a curated selection of lifestyle products that enhance your everyday life. With just five team members, we have built a brand that reflects our shared values and commitment to excellence.</p>
     </div>
     <div class="md:flex md:justify-evenly">
         <div>
-            <p class="md:text-xl text-lg font-PlayfairSC text-center">CURATED SELECTION</p>
-            <p class=" font-poppins text-justify md:w-72 md:mt-5 md:text-base text-sm p-3">
+            <p class="md:text-xl text-lg font-PlayfairSC text-center text-black dark:text-white">CURATED SELECTION</p>
+            <p class=" font-poppins text-justify md:w-72 md:mt-5 md:text-base text-sm p-3 text-black dark:text-white">
                 As we launch, our team of product enthusiasts has carefully curated a diverse range of items, spanning fashion, home decor, tech gadgets, and more. Each product has been chosen with utmost care, meeting our high standards of quality and innovation.</p>
         </div>
         <div>
             <img src="./resources/img/teamphoto.png" alt="" class="md:w-64 w-48 md:m-0 m-auto">
         </div>
         <div>
-            <p class="md:text-xl text-lg font-PlayfairSC text-center">OUR CORE VALUES</p>
-            <p class="text-justify md:w-72 md:mt-5  md:text-base text-sm p-3 font-p">Integrity, innovation, and your satisfaction are at the core of our values. As a small team, we take pride in offering personalized attention to every detail of your shopping journey.</p>
+            <p class="md:text-xl text-lg font-PlayfairSC text-center text-black dark:text-white">OUR CORE VALUES</p>
+            <p class="text-justify md:w-72 md:mt-5  md:text-base text-sm p-3 font-p text-black dark:text-white">Integrity, innovation, and your satisfaction are at the core of our values. As a small team, we take pride in offering personalized attention to every detail of your shopping journey.</p>
         </div>
     </div>
-    <p class="md:text-xl text-lg font-PlayfairSC text-center m-5">EMPOWERING MERCHANTS</p>
-    <p class="m-auto  text-center  md:text-base text-sm md:w-1/2 w-3/4 font-poppins">
+    <p class="md:text-xl text-lg font-PlayfairSC text-center m-5 text-black dark:text-white">EMPOWERING MERCHANTS</p>
+    <p class="m-auto  text-center  md:text-base text-sm md:w-1/2 w-3/4 font-poppins text-black dark:text-white">
         While we are starting our journey, we are also excited to empower merchants and creators by providing them with a platform to showcase their unique creations. Together, we can build a community that celebrates creativity and craftsmanship.
     </p>
-    <p class="md:text-xl text-lg font-PlayfairSC text-center m-3">MEET OUT TEAM</p>
-    <div class="flex  items-center justify-center md:space-x-5 space-x-2 m-5">
-        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/team5.png" alt="p1" class=" rounded-3xl md:h-28 h-20 m-auto">
-            <p class="font-PlayfairSC md:text-base text-sm font-bold md:mt-4 mt-2 text-center">Thet Wai Yan Htet</p>
+    <p class="md:text-xl text-lg font-PlayfairSC text-center m-3 text-black dark:text-white">MEET OUT TEAM</p>
+    <div class="flex  items-center justify-center md:space-x-5 space-x-1 m-5">
+        <div class="md:w-[180px] w-[96px] md:h-[180px] h-[150px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team5.png" alt="p1" class=" rounded-3xl md:h-28 sm:h-20 m-auto">
+            <p class="font-PlayfairSC md:text-base text-xs font-bold md:mt-4 mt-2 text-center">Thet Wai Yan Htet</p>
         </div>
-        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/team3.png" alt="p2" class=" rounded-3xl md:h-24 m-auto">
-            <p class="font-PlayfairSC md:text-base text-xs font-bold md:mt-4 mt-2 ">Kyaw Sawr lynn</p>
+        <div class="md:w-[180px] w-[96px] md:h-[180px] h-[150px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team3.png" alt="p2" class=" rounded-3xl md:h-28 m-auto">
+            <p class="font-PlayfairSC md:text-base text-xs font-bold md:mt-4 mt-2 text-center">Kyaw Sawr lynn</p>
         </div>
-        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/team1.png" alt="p3" class=" rounded-3xl md:h-[100px] m-auto">
-            <p class="font-PlayfairSC md:text-base  font-bold md:mt-4 mt-2  text-center">Nyan Win Myo</p>
+        <div class="md:w-[180px] w-[96px] md:h-[180px] h-[150px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team1.png" alt="p3" class=" rounded-3xl md:h-28 m-auto">
+            <p class="font-PlayfairSC md:text-base text-xs  font-bold md:mt-4 mt-2  text-center">Nyan Win Myo</p>
         </div>
-        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/team4.png" alt="p4" class=" rounded-3xl md:h-24 m-auto">
-            <p class="w-24 font-PlayfairSC md:text-base text-sm font-bold md:mt-4 mt-2  text-center">Yunn Shwe Yi Win</p>
+        <div class="md:w-[180px] w-[96px] md:h-[180px] h-[150px]  rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team4.png" alt="p4" class=" rounded-3xl md:h-28 m-auto">
+            <p class="font-PlayfairSC md:text-base text-xs font-bold md:mt-4 mt-2  text-center">Yunn Shwe Yi Win</p>
         </div>
-        <div class="w-[180px] h-[180px] rounded-lg border border-solid bg-verify-color p-6">
-            <img src="./resources/img/team2.png" alt="p5" class="rounded-3xl md:h-24 m-auto">
-            <p class="w-24 font-PlayfairSC md:text-base text-sm font-bold md:mt-4 mt-2  text-center">Hnin Eain latt</p>
+        <div class="md:w-[180px] w-[96px] md:h-[180px] h-[150px] rounded-lg border border-solid bg-verify-color p-6">
+            <img src="./resources/img/team2.png" alt="p5" class="rounded-3xl md:h-28 m-auto">
+            <p class="font-PlayfairSC md:text-base text-xs font-bold md:mt-4 mt-2  text-center">Hnin Eain latt</p>
         </div>
     </div>
-    <p class="md:text-xl text-lg font-PlayfairSC text-center m-3">BEYOND'S PROMISE</p>
-    <p class=" font-poppins p-4 text-center md:text-base text-sm m-auto md:w-1/2 w-3/4">At Beyond, we promise to deliver a seamless and enjoyable shopping experience for you. Our user-friendly website ensures that browsing and discovering products is effortless, while our attentive customer support is always here to assist you. As a small team, we love connecting with our customers on a personal level. If you have any questions, feedback, or inquiries, feel free to contact us:</p>
-    <div class="flex flex-col items-center">
+    <p class="md:text-xl text-lg font-PlayfairSC text-center m-3 text-black dark:text-white">BEYOND'S PROMISE</p>
+    <p class=" font-poppins p-4 text-center md:text-base text-sm m-auto md:w-1/2 w-3/4 text-black dark:text-white">At Beyond, we promise to deliver a seamless and enjoyable shopping experience for you. Our user-friendly website ensures that browsing and discovering products is effortless, while our attentive customer support is always here to assist you. As a small team, we love connecting with our customers on a personal level. If you have any questions, feedback, or inquiries, feel free to contact us:</p>
+    <div class="flex flex-col items-center text-black dark:text-white">
         <span class="font-bold">Email:Beyond@gmail.com</span><br>
         <span class="font-bold">Phone:092322198322</span>
     </div>
-    <p class=" font-poppins m-5 text-center  md:text-base text-sm ">Thank you for being part of Beyond's inaugural launch. Together, let's go beyond the ordinary and create memorable experiences through exceptional products.</p>
+    <p class=" font-poppins m-5 text-center  md:text-base text-sm text-black dark:text-white">Thank you for being part of Beyond's inaugural launch. Together, let's go beyond the ordinary and create memorable experiences through exceptional products.</p>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
