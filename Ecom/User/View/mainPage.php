@@ -37,10 +37,10 @@
 
                 <div class="flex items-center md:order-2">
                     <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none  rounded-lg text-sm p-2.5">
-                        <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                         </svg>
-                        <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                         </svg>
                     </button>
@@ -309,15 +309,25 @@
         </div>
         </div>
 
-        <div class="flex overflow-x-scroll pb-3 hide-scroll-bar">
-            <div class="flex flex-nowrap ">
-                <div class="inline-block px-3">
-                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                        <div class="relative overflow-hidden">
-                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                <a href="./Wishlist.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
-                                <a href="./userCart.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
+        <a href="./trandingProduct.php" class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-my-purple1 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group float-right m-2">
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </span>
+            <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
+            <span class="relative invisible ">View All</span>
+        </a>
+        <!--End of Trending product section  -->
+        <!-- Banner 2 -->
+        <div>
+            <img src="./resources/img/home_hero/Banner_2_upt.png" alt="" class="w-full">
+        </div>
+        <!--End of Banner 2 -->
+        <!-- All Product session start -->
+        <div class="pdt inline-flex m-2">
+            <h1 class="m-4 text-2xl font-extrabold text-white dark:text-black md:text-3xl "><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-bold">All Product</span></h1>
+        </div>
 
         <!--All Product-->
         <div>
@@ -349,598 +359,598 @@
                         <div class="relative overflow-hidden">
                             <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
                             <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                               <a href="./Wishlist.php"> <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
-                               <a href="./userCart.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
-                            
+                                <a href="./Wishlist.php"> <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                <a href="./userCart.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
 
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
-            <div class="flex overflow-x-scroll pb-3 hide-scroll-bar">
-                <div class="flex flex-nowrap ">
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
+        </div>
+        <div class="flex overflow-x-scroll pb-3 hide-scroll-bar">
+            <div class="flex flex-nowrap ">
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
-                    </div>
 
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
-            <div class="flex overflow-x-scroll pb-3 hide-scroll-bar">
-                <div class="flex flex-nowrap ">
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
+        </div>
+        <div class="flex overflow-x-scroll pb-3 hide-scroll-bar">
+            <div class="flex flex-nowrap ">
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
+
                     </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
 
-                                </div>
                             </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                            <div class="relative overflow-hidden">
-                                <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                    <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-
-                                </div>
-                            </div>
-                            <div class="text-center relative dark:text-white">
-                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                            </div>
-
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                         </div>
-                    </div>
 
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <div class="relative overflow-hidden">
+                            <img class="h-auto w-3/4 md-w-full object-cover m-auto" src="./resources/img/home_hero/game_controller.png" alt="">
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+
+                            </div>
+                        </div>
+                        <div class="text-center relative dark:text-white">
+                            <h2 class="mt-3 text-sm md:text-md capitalize font-bold">JoyStick Game Controller</h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                            <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                            <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
+
+        </div>
         </div>
         <a href="./trandingProduct.php" class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-my-purple1 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group float-right m-2">
             <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
@@ -1113,7 +1123,7 @@
                         <h2 id="accordion-flush-heading-1">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
                                 <span>How can I place an order on Beyond?</span>
-                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
                             </button>
@@ -1128,7 +1138,7 @@
                         <h2 id="accordion-flush-heading-2">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
                                 <span>What payment methods do you accept?</span>
-                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
                             </button>
@@ -1142,7 +1152,7 @@
                         <h2 id="accordion-flush-heading-3">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
                                 <span>What is your return policy?</span>
-                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
                             </button>
@@ -1154,33 +1164,33 @@
 
                             </div>
                         </div>
-                        <h2 id="accordion-flush-heading-3">
-                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                        <h2 id="accordion-flush-heading-4">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
                                 <span>How can I get in touch with your customer support?</span>
-                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                        <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
                             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
                                 <p class="mb-2 text-gray-500 dark:text-gray-400">If you have any questions, concerns, or need assistance, our friendly customer support team is here to help.</p>
 
                                 </ul>
                             </div>
                         </div>
-                        <h2 id="accordion-flush-heading-3">
-                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                                <span>How can I get in touch with your customer support?</span>
-                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <h2 id="accordion-flush-heading-5">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                                <span>Are the products on Beyond authentic and of high quality?
+                                </span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
                             </button>
                         </h2>
-                        <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                        <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
                             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">If you have any questions, concerns, or need assistance, our friendly customer support team is here to help.</p>
-
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, absolutely! At Beyond, we take pride in curating a collection of premium lifestyle products from trusted merchants and brands. We ensure that each item meets our stringent quality standards.</p>
                                 </ul>
                             </div>
                         </div>
@@ -1189,7 +1199,9 @@
             </div>
         </div>
         </div>
-
+        <div class="h-96 bg-black">
+            
+        </div>
 
         <script src="./resources/js/toggle.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
