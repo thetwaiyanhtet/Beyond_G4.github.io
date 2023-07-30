@@ -69,17 +69,6 @@ include "./sidebar.php"
                     <input type="text" name="" id="" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="########" required>
                 </div>
             </div>
-            <p class=" pt-5 text-gray-400 font-philosopher">Optional</p>
-            <div class="flex space-x-20 mt-2">
-                <div class="flex flex-col">
-                    <label for="" class=" text-sm">facebook</label>
-                    <input type="text" name="" id="" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="########">
-                </div>
-                <div class="flex flex-col">
-                    <label for="" class=" text-sm">Instagram</label>
-                    <input type="text" name="" id="" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="########">
-                </div>
-            </div>
         </form>
         <p class="underline text-text2  mt-5">Update Password</p>
         <form action="" class="w-full h-auto relative pt-3">
