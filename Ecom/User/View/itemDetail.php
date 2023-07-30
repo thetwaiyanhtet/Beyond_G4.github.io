@@ -183,7 +183,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 
 
-        <div id="chatBoxPopup" class="flex flex-col items-center justify-center w-screen min-h-screen text-gray-800 p-10 fixed top-[1%] left-[2%] z-50 ">
+        <div id="chatBoxPopup" class=" flex flex-col items-center justify-center w-[600px] h-full text-gray-800 p-10 fixed top-[1%] left-[33%] z-50 ">
             <div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">
                 <div class="flex flex-col flex-grow h-0 p-4 overflow-auto">
                     <div class="flex w-full mt-2 space-x-3 max-w-xs">
@@ -288,7 +288,6 @@
             }
 
             // Attach click event listeners to the logout button and cancel button
-            chatBoxPopup.addEventListener("click", toggleLogoutPopup);
             chatBoxButton.addEventListener("click", toggleLogoutPopup);
         </script>
 </body>

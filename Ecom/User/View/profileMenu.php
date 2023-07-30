@@ -36,9 +36,9 @@
     <main class=" min-h-screen flex items-center justify-center">
 
         <div class="lg:flex justify-center items-center lg:space-x-5 lg:w-[800px] w-[380px] h-min-screen bg-transparent border shadow-2xl lg:py-10 lg:px-20 py-5 px-16 rounded-3xl z-50 dark:border-black">
-
-            <div class=" font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-7 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
-                <img src="./resources/img/bille.png" alt="..." class=" w-16 rounded-lg mt-5">
+            <div class=" relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-7 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
+                <div class=" fixed top-[25%] rounded-tl-md rounded rounded-tr-md border bg-gray-500 w-60 h-20"></div>
+                <img src="./resources/img/bille.png" alt="..." class=" w-16 rounded-lg pt-7 z-50">
                 <div class="text-center">
                     <p class=" text-2xl font-philosopher dark:text-white">NAME</p>
                     <p class="dark:text-white">Username</p>
@@ -99,7 +99,7 @@
 
         </div>
 
-        <!-- <div class=" absolute bottom-[10px] lg:left-[220px] left-2 col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div> -->
+        <!-- <div class=" absolute bottom-10 lg:left-[220px] left-2 col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div> -->
         <img src="./resources/img/bg.png" alt="..." class=" absolute lg:-right-44 bottom-0 lg:w-[600px] w-96">
     </main>
     <script src="./resources/js/toggle.js" defer></script>
