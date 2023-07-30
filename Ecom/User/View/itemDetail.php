@@ -89,8 +89,8 @@
         </header>
         <div class="grid grid-cols-6">
             <div class="lg:block hidden absolute bottom-[90px] left-[220px] col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
-            <div class=" fixed lg:right-[50px] right-[20px] bottom-10 col-start-5 ml-36 w-14 h-14 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
         </div>
+        <div id="chatBoxButton" class=" w-14 h-14 fixed lg:right-[50px] right-[20px] bottom-10 col-start-5 ml-36 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
 
         <main class="flex justify-center">
             <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
@@ -181,6 +181,116 @@
         </main>
         <script src="./resources/js/toggle.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
+
+        <div id="chatBoxPopup" class="flex flex-col items-center justify-center w-screen min-h-screen text-gray-800 p-10 fixed top-[1%] left-[2%] z-50 ">
+            <div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">
+                <div class="flex flex-col flex-grow h-0 p-4 overflow-auto">
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                        <div>
+                            <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+                        <div>
+                            <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+                        <div>
+                            <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                        <div>
+                            <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+                        <div>
+                            <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+                        <div>
+                            <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+                        <div>
+                            <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                        <div>
+                            <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                    </div>
+                    <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+                        <div>
+                            <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
+                                <p class="text-sm">Lorem ipsum dolor sit.</p>
+                            </div>
+                            <span class="text-xs text-gray-500 leading-none">2 min ago</span>
+                        </div>
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-300 p-4 flex items-center justify-around">
+                    <input class="flex items-center h-10 md:w-96 w-64 rounded px-3 text-sm focus:outline-none" type="text" placeholder="Type your message…">
+                    <img src="./resources/img/send.png" alt="sent" class="h-5">
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Get references to the popup and buttons
+            const chatBoxPopup = document.getElementById("chatBoxPopup");
+            const chatBoxButton = document.getElementById("chatBoxButton");
+
+            // Function to toggle the visibility of the popup and blur the background
+            function toggleLogoutPopup() {
+                chatBoxPopup.classList.toggle("hidden");
+            }
+
+            // Attach click event listeners to the logout button and cancel button
+            chatBoxPopup.addEventListener("click", toggleLogoutPopup);
+            chatBoxButton.addEventListener("click", toggleLogoutPopup);
+        </script>
 </body>
 
 </html>
