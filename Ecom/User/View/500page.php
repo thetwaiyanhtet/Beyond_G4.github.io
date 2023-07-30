@@ -14,9 +14,9 @@
 </head>
 
 <body class=" bg-background-404">
-    <nav class=" flex items-center justify-between mx-[3%]">
+    <nav class=" flex items-center justify-between mx-[3%] mt-10">
         <span class="flex items-center mb-[1%]">
-            <img class="w-16" src="./resources/img/logo.png" alt="...">
+            <img class="h-10" src="./resources/img/logo.png" alt="...">
             <p class="text-3xl ml-[1%] max-md:text-2xl font-philosopher ">Beyond</p>
         </span>
         <span>
