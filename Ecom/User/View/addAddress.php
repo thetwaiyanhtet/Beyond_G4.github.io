@@ -71,7 +71,33 @@
 
     <main class="relative w-full h-screen rounded-tl-[35px] rounded-tr-[35px] bg-purple-300 bg-gradient-to-tl from-[#d5a0e6] - to-[#9f80f4] dark:bg-linear_dark">
 
-        
+        <div class=" absolute lg:top-[15%] lg:left-[35%] top-[15%] left-[7%] md:w-[450px] md:h-[420px] w-[360px] h-[520px] bg-white bg-opacity-50 rounded-lg shadow-2xl z-50">
+            <div class="flex-col md:space-y-6 space-y-4 p-5">
+                <div class="lg:flex lg:justify-around justify-center items-center md:space-x-5 md:space-y-0 space-y-3">
+                    <input type="text" placeholder="Name" class=" inputBox focus:outline-none rounded-md">
+                    <input type="text" placeholder="Phone" class=" inputBox focus:outline-none rounded-md">
+                </div>
+                <div class=" lg:flex justify-around items-center">
+                    <input type="text" placeholder="Building,Street etc.." class=" inputBox focus:outline-none rounded-md">
+                </div>
+                <div class=" lg:flex lg:justify-around justify-center items-center md:space-x-5 md:space-y-0 space-y-3">
+                    <input type="text" placeholder="City" class=" inputBox focus:outline-none rounded-md">
+                    <input type="text" placeholder="Division/State" class=" inputBox focus:outline-none rounded-md">
+                </div>
+            </div>
+            <div class=" flex-col ml-6 space-y-3">
+                <h2 class=" font-bold">Type</h2>
+                <div class=" ml-5">
+                    <span class=" w-auto bg-white text-black p-1  rounded-md dark:rounded-md  mr-2 text-sm">Home</span>
+                    <span class=" w-auto bg-white text-black p-1 rounded-md text-sm">Work</span>
+                </div>
+                <div><input type="checkbox"> <span class="text-md">Set as Default</span></div>
+            </div>
+            <div class=" flex space-x-3 float-right mr-5 mt-3 mb-5 ">
+                <button class="flex justify-center items-center w-20 px-4 py-2 bg-white rounded-md text-black font-Playfair Display">Cancel</button>
+                <button class="flex justify-center items-center w-20 px-4 py-2 bg-white rounded-md text-black font-Playfair Display">Sent</button>
+            </div>
+        </div>
 
         <div class=" flex justify-between items-center">
             <h1 class=" md:text-3xl text-xl ml-10 mt-10 font-bold  font-philosopher dark:text-white">My Address</h1>

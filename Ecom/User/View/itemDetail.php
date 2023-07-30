@@ -90,7 +90,7 @@
         <div class="grid grid-cols-6">
             <div class="lg:block hidden absolute bottom-[90px] left-[220px] col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
         </div>
-        <div id="chatBoxButton" class=" w-14 h-14 fixed lg:right-[50px] right-[20px] bottom-10 col-start-5 ml-36 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
+        <div id="chatBoxButton" class=" w-14 h-14 fixed lg:right-[50px] right-[10px] bottom-10 col-start-5 ml-36 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
 
         <main class="flex justify-center">
             <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
@@ -182,8 +182,8 @@
         <script src="./resources/js/toggle.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 
-
-        <div id="chatBoxPopup" class=" hidden flex flex-col items-center justify-center w-[600px] h-full text-gray-800 p-10 fixed top-[1%] left-[33%] z-50 ">
+         <!-- chatbox popup -->
+        <div id="chatBoxPopup" class=" hidden flex flex-col items-center justify-center md:w-[600px] w-[380px] h-full text-gray-800 p-10 fixed top-[1%] md:left-[33%] left-0 z-50 ">
             <div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">
                 <div class="flex flex-col flex-grow h-0 p-4 overflow-auto">
                     <div class="flex w-full mt-2 space-x-3 max-w-xs">
@@ -270,24 +270,23 @@
                 </div>
 
                 <div class="bg-gray-300 p-4 flex items-center justify-around">
-                    <input class="flex items-center h-10 md:w-96 w-64 rounded px-3 text-sm focus:outline-none" type="text" placeholder="Type your message…">
+                    <input class="flex items-center h-10 md:w-96 w-60 rounded px-3 text-sm focus:outline-none" type="text" placeholder="Type your message…">
                     <img src="./resources/img/send.png" alt="sent" class="h-5">
                 </div>
             </div>
         </div>
-
 
         <script>
             // Get references to the popup and buttons
             const chatBoxPopup = document.getElementById("chatBoxPopup");
             const chatBoxButton = document.getElementById("chatBoxButton");
 
-            // Function to toggle the visibility of the popup and blur the background
+            // Function to toggle the visibility of the popup 
             function toggleLogoutPopup() {
                 chatBoxPopup.classList.toggle("hidden");
             }
 
-            // Attach click event listeners to the logout button and cancel button
+            // Attach click event listeners to the chatbox button 
             chatBoxButton.addEventListener("click", toggleLogoutPopup);
         </script>
         
