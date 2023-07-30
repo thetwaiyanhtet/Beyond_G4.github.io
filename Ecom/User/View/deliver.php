@@ -129,8 +129,9 @@
             
            
         </div>
-        <div class="absolute bottom-0 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <button class=" text-white py-1 px-5 rounded-md bg-button-color" >Next Step ></button>
+        <div class="absolute bottom-0 right-5 mr-8 max-lg:-bottom-10 max-lg:right-5">
+               <a href="./payment.php"><button class=" text-white py-1 px-5 rounded-md bg-[#314755] " >Next Step ></button>
+               </a> 
             </div>
         </div>
 

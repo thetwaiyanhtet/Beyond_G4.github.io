@@ -77,7 +77,7 @@ include "./sidebar.php"
                                 Bank Deposit
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
+                                <a href="./orderDetail.php" class="font-medium text-blue-600  hover:underline">View</a>
                             </td>
 
                         </tr>
