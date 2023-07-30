@@ -78,7 +78,7 @@
             <div class=" col-start-1 col-span-3 space-y-5 lg:w-[700px] lg:mx-20 mx-10">
                 <div class=" grid grid-cols-2 justify-around font-poppins">
                     <p class=" text-white text-start lg:text-xl text-sm">Username</p>
-                    <input type="text" placeholder="Username" class="profileInputBox col-start-2">
+                    <input type="text" placeholder="Username" class="profileInputBox  col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
                     <p class="font-poppins text-white text-start lg:text-xl text-sm">Name</p>
