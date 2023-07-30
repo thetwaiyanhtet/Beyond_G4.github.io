@@ -18,7 +18,7 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class=" ml-[265px] py-5 mt-20" id="main">
+    <main class=" ml-[256px] py-5 mt-20" id="main">
         <div class="flex">
             <div class="w-96 h-[700px] border border-solid">
                 <div class="border border-solid w-64 h-10 rounded-lg bg-bcolor m-5">
@@ -69,7 +69,7 @@ include "./adminsidebar.php";
                     </div>
                 </div>
             </div>
-
+            <!--Chat-->
             <div class="w-[800px] h-[700px] border border-solid">
                 <div class="flex space-x-3 space-y-5 w-56 h-20">
                     <img src="./resources/img/Ellipse 132.png" alt="" class="h-10 mt-5 m-2">
@@ -77,7 +77,7 @@ include "./adminsidebar.php";
                 </div>
                 <hr>
                 <!--Merchant Text-->
-                <div class="flex space-x-2 m-5">
+                <div class="flex space-x-2 m-2 h-64 ">
                     <img src="./resources/img/Ellipse 132.png" alt="customer" class="h-10 mt-11">
                     <div>
                         <div class=" w-20 h-auto border border-solid bg-table rounded-md text-white p-2 text-center">Hello</div>
@@ -92,7 +92,7 @@ include "./adminsidebar.php";
                     </div>
                 </div>
                 <!--Admin Text -->
-                <div class="float-right">
+                <div class="float-right h-64">
                     <div class="flex space-x-2 m-5">
                         <div>
                             <div class=" w-20 h-auto border border-solid bg-table rounded-md text-white p-2 text-center ml-64 mb-2">Hello</div>
@@ -108,11 +108,10 @@ include "./adminsidebar.php";
                         <img src="./resources/img/Ellipse 132.png" alt="customer" class="h-10 mt-40">
                     </div>
                 </div>
-                <input type='text' class="w-[700px] rounded-xl bg-bcolor border border-solid focus:outline-none ml-14 p-3"></input>
-                <img src="./resources/img/fluent_send-32-filled.png" alt="send" class=" w-5 inline-flex m-2" >
+                <input type='text' class="w-[700px] rounded-xl bg-bcolor border border-solid focus:outline-none p-3 ml-10 mt-5"></input>
+                <img src="./resources/img/fluent_send-32-filled.png" alt="send" class=" w-5 inline-flex m-2">
 
             </div>
-        </div>
 
     </main>
 </body>
