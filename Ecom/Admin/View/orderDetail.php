@@ -17,10 +17,10 @@ include "./adminsidebar.php";
 
 <body>
     <main class="ml-72 pt-20" id="main">
-        <p class=" font-philosopher text-xl font-bold pt-5">Order Details</p>
-        <div class="flex justify-around pt-10">
+        <p class=" font-philosopher text-xl font-bold pt-14">Order Details</p>
+        <div class="flex item-center justify-center pt-10 ">
             <!--Order Details-->
-            <div class=" w-64 h-56 border-2 border-solid shadow-lg rounded-lg">
+            <div class=" w-64 h-56 border-2 border-solid shadow-lg rounded-lg mr-10">
                 <p class="m-2">Order Details</p>
                 <hr>
                 <div class="flex space-x-2 m-4">
@@ -63,7 +63,7 @@ include "./adminsidebar.php";
             </div>
         </div>
         <!--Address list-->
-        <table class="mt-5 h-32 shadow-lg w-[90%]">
+        <table class="mt-5 h-32 shadow-lg w-[60%] mx-auto">
             <thead>
                 <tr>
                     <td class="border border-slate-40 p-2">Payment Address</td>
@@ -80,7 +80,7 @@ include "./adminsidebar.php";
             </tbody>
         </table>
         <!---Product list-->
-           <table class="w-[90%] text-sm text-left text-white mt-5">
+           <table class="w-[90%] text-sm text-left text-white m-5">
                 <thead class="text-xs text-white uppercase bg-table">
                     <tr>
                         <th scope="col" class="px-6 py-3">

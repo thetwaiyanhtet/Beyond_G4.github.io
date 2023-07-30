@@ -13,13 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
-<body class="mt-3 font-poppins ">
+<body class="mt-3 font-poppins dark:bg-black ">
     <a href="./address.php"><ion-icon name="arrow-back-outline" class="text-2xl"></ion-icon></a>
 
     <nav>
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
                 <img src="./resources/img/logo.png" class="mr-3 h-10" alt="beyond Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
@@ -34,7 +42,7 @@
                         <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 ml-4" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <img class="w-8 h-8 rounded-full" src="./resources/img/bille.png" alt="user photo">
                 </button>
@@ -64,26 +72,26 @@
     <main class="relative w-full h-screen rounded-tl-[35px] rounded-tr-[35px] bg-purple-300 bg-gradient-to-tl from-[#d5a0e6] - to-[#9f80f4] dark:bg-linear_dark">
 
         <div class=" absolute lg:top-[15%] lg:left-[35%] top-[15%] left-[7%] md:w-[450px] md:h-[420px] w-[360px] h-[520px] bg-white bg-opacity-50 rounded-lg shadow-2xl z-50">
-            <div class=" flex-col md:space-y-6 space-y-4 p-5">
-                <div class=" lg:flex lg:justify-around justify-center items-center lg:space-x-5 lg:space-y-0 space-y-4">
-                    <input type="text" placeholder="Name" class=" inputBox focus:outline-none">
-                    <input type="text" placeholder="Phone" class=" inputBox focus:outline-none">
+            <div class="flex-col md:space-y-6 space-y-4 p-5">
+                <div class="lg:flex lg:justify-around justify-center items-center md:space-x-5 md:space-y-0 space-y-3">
+                    <input type="text" placeholder="Name" class=" inputBox focus:outline-none rounded-md">
+                    <input type="text" placeholder="Phone" class=" inputBox focus:outline-none rounded-md">
                 </div>
                 <div class=" lg:flex justify-around items-center">
-                    <input type="text" placeholder="Building,Street etc.." class=" inputBox focus:outline-none">
+                    <input type="text" placeholder="Building,Street etc.." class=" inputBox focus:outline-none rounded-md">
                 </div>
-                <div class=" lg:flex lg:justify-around justify-center items-center lg:space-x-5 lg:space-y-0 space-y-4">
-                    <input type="text" placeholder="City" class=" inputBox focus:outline-none">
-                    <input type="text" placeholder="Division/State" class=" inputBox focus:outline-none">
+                <div class=" lg:flex lg:justify-around justify-center items-center md:space-x-5 md:space-y-0 space-y-3">
+                    <input type="text" placeholder="City" class=" inputBox focus:outline-none rounded-md">
+                    <input type="text" placeholder="Division/State" class=" inputBox focus:outline-none rounded-md">
                 </div>
             </div>
-            <div class=" flex-col ml-6 space-y-5">
+            <div class=" flex-col ml-6 space-y-3">
                 <h2 class=" font-bold">Type</h2>
                 <div class=" ml-5">
-                    <span class=" w-auto bg-white text-black p-1 rounded-md mr-2">Home</span>
-                    <span class=" w-auto bg-white text-black p-1 rounded-md">Work</span>
+                    <span class=" w-auto bg-white text-black p-1  rounded-md dark:rounded-md  mr-2 text-sm">Home</span>
+                    <span class=" w-auto bg-white text-black p-1 rounded-md text-sm">Work</span>
                 </div>
-                <input type="checkbox"> <span>Set as Default</span>
+                <div><input type="checkbox"> <span class="text-md">Set as Default</span></div>
             </div>
             <div class=" flex space-x-3 float-right mr-5 mt-3 mb-5 ">
                 <button class="flex justify-center items-center w-20 px-4 py-2 bg-white rounded-md text-black font-Playfair Display">Cancel</button>
@@ -92,8 +100,8 @@
         </div>
 
         <div class=" flex justify-between items-center">
-            <h1 class=" lg:text-3xl text-base ml-10 mt-10 font-bold  font-philosopher">My Address</h1>
-            <div class=" flex justify-center items-center text-white shadow-2xl border-black w-[250px bg-purple-400 mr-10 mt-10 lg:px-5 px-2 lg:py-3 py-2">
+            <h1 class=" md:text-3xl text-xl ml-10 mt-10 font-bold  font-philosopher dark:text-white">My Address</h1>
+            <div class=" flex justify-center items-center text-white shadow-2xl border-black w-[250px bg-purple-500 mr-10 mt-10 lg:px-5 px-2 lg:py-3 py-2">
                 <span><ion-icon name="add-outline" class=" lg:text-2xl text-base"></ion-icon></span><button class=" lg:text-lg text-xs"> Add Address</button>
             </div>
         </div>
@@ -102,10 +110,10 @@
                 <img src="../View/resources/img/location.png" alt="...">
             </div>
         </div>
-        <!-- <a href="./address.php">
-        <ion-icon class="text-5xl absolute left-14 bottom-20 cursor-pointer max-md:text-3xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>
-        </a> -->
+
     </main>
+    <script src="./resources/js/toggle.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
 
 </html>

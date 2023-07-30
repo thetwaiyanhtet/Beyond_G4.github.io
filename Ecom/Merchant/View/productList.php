@@ -112,7 +112,6 @@ include "./sidebar.php";
                         <p class="">Products</p>
                         <div class="flex space-x-3">
                             <a href="./addNewProduct.php"><button class="btn">Add Product</button></a>
-                            <a href="./addNewCategory.php"><button class="btn">Add Category</button></a>
                             <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:bg-[#1366D9] hover:text-white">Download All</button>
                         </div>
                     </div>

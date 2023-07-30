@@ -42,7 +42,7 @@
                         <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 ml-4" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <img class="w-8 h-8 rounded-full" src="./resources/img/bille.png" alt="user photo">
                 </button>
@@ -67,7 +67,7 @@
                         </li>
                     </ul>
                 </div>
-               
+
     </nav>
     <main class="bg-gradient-to-tl from-[#d5a0e6] - to-[#9f80f4] dark:bg-linear_dark min-h-screen rounded-tl-[35px] rounded-tr-[35px]">
         <div class=" text-white my-5 ml-8">
@@ -78,19 +78,19 @@
             <div class=" col-start-1 col-span-3 space-y-5 lg:w-[700px] lg:mx-20 mx-10">
                 <div class=" grid grid-cols-2 justify-around font-poppins">
                     <p class=" text-white text-start lg:text-xl text-sm">Username</p>
-                    <input type="text" placeholder="Username" class="profileInputBox col-start-2">
+                    <input type="text" placeholder="Username" class="profileInputBox rounded-md col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
                     <p class="font-poppins text-white text-start lg:text-xl text-sm">Name</p>
-                    <input type="text" placeholder="Name" class="profileInputBox col-start-2">
+                    <input type="text" placeholder="Name" class="profileInputBox rounded-md col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
                     <p class="font-poppins text-white text-start lg:text-xl text-sm">Email</p>
-                    <input type="text" placeholder="user****@mail.com" class="profileInputBox col-start-2">
+                    <input type="text" placeholder="user****@mail.com" class="profileInputBox rounded-md col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
                     <p class="font-poppins text-white text-start lg:text-xl text-sm">Phone Number</p>
-                    <input type="text" placeholder="09********" class="profileInputBox col-start-2">
+                    <input type="text" placeholder="09********" class="profileInputBox rounded-md col-start-2">
                 </div>
                 <div class=" grid grid-cols-2">
                     <p class="font-poppins lg:text-xl text-sm text-white">Gender</p>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="grid grid-cols-2 items-center justify-center">
                     <p class=" text-white lg:text-xl text-sm font-poppins">Date of Birth</p>
-                    <input type="date" class=" lg:w-72 w-44 lg:p-3 p-2 rounded-lg lg:text-base text-sm">
+                    <input type="date" class=" lg:w-72 w-66 lg:p-3 p-2 rounded-lg lg:text-base text-sm">
                 </div>
             </div>
 

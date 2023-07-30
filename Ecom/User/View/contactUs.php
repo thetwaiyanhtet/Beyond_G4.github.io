@@ -49,7 +49,7 @@
         </button>
       </div>
       <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
-        <div class="w-[300px] h-[320px] bg-white/10 rounded-lg lg:hidden absolute right-2 mt-2 backdrop-blur-md">
+        <div class="w-[300px] h-[320px] bg-white/10 rounded-lg md:hidden absolute right-2 mt-2 backdrop-blur-md">
           <p class="text-[32px] font-bold my-[10%] mx-[10%] font-poppins">Info</p>
           <span class="flex items-center mx-[10%]">
             <ion-icon class="w-[36px] h-[36px]  dark:text-white" name="mail-open-outline"></ion-icon>
@@ -95,19 +95,19 @@
       </span>
     </div>
     <section>
-      <div class="lg:absolute h-screen w-full left-[620px] top-0 bg-white rounded-tl-[50px] rounded-bl-[50px] dark:bg-black">
+      <div class="lg:absolute h-screen w-full left-[620px] top-0 bg-white rounded-tl-[50px] rounded-bl-[50px] dark:bg-gray-800">
         <div class="my-[20%] lg:my-[6%]">
           <span class="font-bold text-[36px] mx-[10%] lg:mx-[2%] dark:text-white">Contact Us</span>
           <p class="font-medium  text-[15px] lg:text-[20px] my-[9%] lg:my-[2%] w-[350px] lg:w-[500px]  mx-[10%] lg:mx-[2%] dark:text-white">Feel free to contact us any time.We will get back
             to you as soon as we can!</p>
           <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Name</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px]"></div>
+          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
 
           <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Email</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px]"></div>
+          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
 
           <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Message</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px]"></div>
+          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
 
           <div class="absolute top-[67%] lg:top-[83%] left-[27%] lg:left-[20%]">
             <button class="bg-[#314755] rounded-md text-white w-[169px] lg:w-[373px] h-[44px] lg:h-[61px]
