@@ -24,11 +24,12 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class=" dark:bg-black font-poppins">
-    <section class="sec">
-        <nav class="bg-gradient-to-r from-fuchsia-300 to-purple-400 dark:bg-linear_dark  border-gray-200 ">
+<body class="bg-purple-50 dark:bg-color-primary-dark font-poppins hide-scroll-bar scroll-smooth">
+    <section class="sec h-screen">
+        <nav class=" bg-gradient-to-r from-fuchsia-300 to-purple-400 dark:bg-linear_dark  border-gray-200 ">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="./mainPage.php" class="flex items-center">
                     <img src="./resources/img/logo.png" class="mr-3 h-10" alt="beyond Logo" />
@@ -94,13 +95,14 @@
         </nav>
         <div>
             <!-- Banner_1 section -->
-            <img src="./resources/img/home_hero/Banner_1.png" alt="" class="w-full ">
+            <img src="./resources/img/home_hero/Banner_1.png" alt="" class=" w-full ">
         </div>
         <!--Trending product section  -->
-        <div class="flex flex-col m-auto p-auto font-poppins">
-            <h1 class="m-4 text-2xl font-extrabold text-white dark:text-black md:text-3xl "><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-bold">Trending Product</span></h1>
+        <div class=" flex flex-col m-auto p-auto font-poppins ">
 
-            <div class="flex overflow-x-scroll pb-3 hide-scroll-bar">
+            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Product</span></h1>
+            <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
+            <div class="flex overflow-x-scroll pb-3 hide-scroll-bar mt-4">
                 <div class="flex flex-nowrap ">
                     <div class="inline-block px-3">
                         <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
@@ -321,15 +323,17 @@
         <!--End of Trending product section  -->
         <!-- Banner 2 -->
         <div>
-            <img src="./resources/img/home_hero/Banner_2_upt.png" alt="" class="w-full">
+            <img src="./resources/img/home_hero/Banner_2_upt.png" alt="" class=" w-full">
         </div>
         <!--End of Banner 2 -->
         <!-- All Product session start -->
-        <div class="pdt inline-flex m-2">
-            <h1 class="m-4 text-2xl font-extrabold text-white dark:text-black md:text-3xl "><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-bold">All Product</span></h1>
+        <div class=" pdt m-2">
+            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">All Product</span></h1>
+            <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
         </div>
+        <div class="flex justify-center ">
 
-        <!--All Product-->
+        </div>
         <div>
             <div class="flex overflow-x-scroll pb-6 hide-scroll-bar">
                 <div class="flex flex-nowrap ">
@@ -963,163 +967,174 @@
         </a>
 
         <div>
-            <img src="./resources/img/home_hero/Banner_3.png" alt="" class="w-full">
+            <img src="./resources/img/home_hero/Banner_3.png" alt="" class=" w-full">
         </div>
-        <div class="relative">
-            <img src="./resources/img/home_hero/shop_bg.gif" alt="" class=" relative w-full h-screen">
-            <h5 class="absolute top-[8%] left-[5%] text-black font-bold text-lg">Feature Shop
-            </h5>
-            <div class="flex items-center justify-around w-full absolute top-[20%]">
-                <div>
-                    <div class="w-96 h-96 p-4 bg-white rounded-xl shadow-xl z-10">
-                        <div class="relative">
-                            <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
-                            <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
-                        </div>
-                        <div class="px-2 py-1">
-                            <!-- Product Title -->
-                            <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
-                            <div class="flex py-2">
-                                <div class="flex justify-between item-center">
-                                    <div class="flex items-center">
-                                        <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                            4.96
-                                            <span class="text-gray-500 font-normal">(76 reviews)</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-black dark:bg-slate-300 rounded-xl py-4  m-2 flex">
-                                <div>
-                                    <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
-                                </div>
-                                <div class=" text-white w-72">
-                                    <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
-                                    <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                    <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                    <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                    <div class="flex justify-end">
-                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-                                        </div>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl  p-2 text-gray-100 hover:text-blue-900  w-24  float-right" href="#">View Shop</a>
-                        </div>
+        <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Feature Shops</span></h1>
+        <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-10">
+            <!-- Product Card 1 -->
+            <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
+                <div class="w-96 h-full p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
+                    <div class="relative">
+                        <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
+                        <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
                     </div>
-                </div>
-                <div>
-                    <div class="w-96 h-96 p-4 bg-white rounded-xl shadow-xl z-10">
-                        <div class="relative">
-                            <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
-                            <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
+                    <div class="px-2 py-1">
+                        <!-- Product Title -->
+                        <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
+                        <div class="flex py-2">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
+                                        4.96
+                                        <span class="text-gray-500 font-normal">(76 reviews)</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="px-2 py-1">
-                            <!-- Product Title -->
-                            <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
-                            <div class="flex py-2">
-                                <div class="flex justify-between item-center">
-                                    <div class="flex items-center">
-                                        <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                            4.96
-                                            <span class="text-gray-500 font-normal">(76 reviews)</span>
-                                        </p>
+                        <div class="bg-black dark:bg-slate-300 rounded-xl py-4 m-2 flex">
+                            <div>
+                                <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
+                            </div>
+                            <div class="text-white w-72">
+                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
+                                <!-- <del class="text-red-700 text-lg">$999</del> -->
+                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                                <div class="flex justify-end">
+                                    <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                    <div class="">
+                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                                    </div>
+                                    <div class="">
+                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-black dark:bg-slate-300 rounded-xl py-4  m-2 flex">
-                                <div>
-                                    <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
-                                </div>
-                                <div class=" text-white w-72">
-                                    <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
-                                    <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                    <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                    <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                    <div class="flex justify-end">
-                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-                                        </div>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl  p-2 text-gray-100 hover:text-blue-900  w-24  float-right" href="#">View Shop</a>
                         </div>
+                        <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="#">View Shop</a>
                     </div>
-                </div>
-                <div>
-                    <div class="w-96 h-96 p-4 bg-white rounded-xl shadow-xl z-10">
-                        <div class="relative">
-                            <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
-                            <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
-                        </div>
-                        <div class="px-2 py-1">
-                            <!-- Product Title -->
-                            <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
-                            <div class="flex py-2">
-                                <div class="flex justify-between item-center">
-                                    <div class="flex items-center">
-                                        <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                            4.96
-                                            <span class="text-gray-500 font-normal">(76 reviews)</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-black dark:bg-slate-300 rounded-xl py-4  m-2 flex">
-                                <div>
-                                    <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
-                                </div>
-                                <div class=" text-white w-72">
-                                    <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
-                                    <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                    <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                    <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                    <div class="flex justify-end">
-                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-                                        </div>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl  p-2 text-gray-100 hover:text-blue-900  w-24  float-right" href="#">View Shop</a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
+            <!-- Product Card 2 -->
+            <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
+                <div class="w-96 h-full p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
+                    <div class="relative">
+                        <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
+                        <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
+                    </div>
+                    <div class="px-2 py-1">
+                        <!-- Product Title -->
+                        <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
+                        <div class="flex py-2">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
+                                        4.96
+                                        <span class="text-gray-500 font-normal">(76 reviews)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-black dark:bg-slate-300 rounded-xl py-4 m-2 flex">
+                            <div>
+                                <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
+                            </div>
+                            <div class="text-white w-72">
+                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
+                                <!-- <del class="text-red-700 text-lg">$999</del> -->
+                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                                <div class="flex justify-end">
+                                    <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                    <div class="">
+                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                                    </div>
+                                    <div class="">
+                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="#">View Shop</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
+                <div class="w-96 h-full p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
+                    <div class="relative">
+                        <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
+                        <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
+                    </div>
+                    <div class="px-2 py-1">
+                        <!-- Product Title -->
+                        <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
+                        <div class="flex py-2">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
+                                        4.96
+                                        <span class="text-gray-500 font-normal">(76 reviews)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-black dark:bg-slate-300 rounded-xl py-4 m-2 flex">
+                            <div>
+                                <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
+                            </div>
+                            <div class="text-white w-72">
+                                <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
+                                <!-- <del class="text-red-700 text-lg">$999</del> -->
+                                <p class="text-xs mt-2 ml-1 block ">E-spot</p>
+                                <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
+                                <div class="flex justify-end">
+                                    <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
+                                    <div class="">
+                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                                    </div>
+                                    <div class="">
+                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="#">View Shop</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         </div>
 
-        <div class="w-full h-auto py-5">
-            <div class=" w-3/4 m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div>
+         
+            <img src="./resources/img/home_hero/sample_banner.png" alt="" class=" w-full ">
+        </div>
+
+
+        <div class=" w-full h-auto py-5">
+            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
+            <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
+
+            <div class=" w-[80%] m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg">
 
                 <div class="p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-                    <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                    <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg" data-inactive-classes="text-gray-500 dark:text-gray-400">
                         <h2 id="accordion-flush-heading-1">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
                                 <span>How can I place an order on Beyond?</span>
@@ -1199,14 +1214,60 @@
             </div>
         </div>
         </div>
-        <div class="h-96 bg-black">
-            
-        </div>
+        <section id="footer">
+            <div class="relative bg-purple-300 dark:bg-linear_dark dark:text-white">
+                <div class="container py-5 ">
+                    <div class="grid gap-10 md:grid-cols-3 pb-10">
+                        <div class="space-y-6">
+                            <img src="./resources/img/logo.png" class="h-20" alt="beyond Logo" />
+                            <h4 class="font-bold text-lg">About Beyond</h4>
+                            <p class="leading-relaxed"> Discover a curated collection of unique products that transcend the ordinary. Join us as we redefine the art of shopping, delivering seamless journeys that inspire and delight. Unleash the extraordinary with Beyond.</p>
+                            <div class="flex gap-5 items-center">
+                                <p>Follow Us</p>
+                                <i class="fa-brands fa-facebook-f cursor-pointer hover:text-purple-700"></i>
+                                <i class="fa-brands fa-twitter cursor-pointer hover:text-purple-700"></i>
+                                <i class="fa-brands fa-youtube cursor-pointer hover:text-purple-700"></i>
+                                <i class="fa-brands fa-instagram cursor-pointer hover:text-purple-700"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between md:justify-around">
+                            <div class="space-y-6">
+                                <h4 class="font-bold text-lg">Quick Links</h4>
+                                <ul class="space-y-3">
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./mainPage.php">Home</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./aboutUs.php">About us</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./contactUs.php">Contact Us</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./profileMenu.php">Profile</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="#blog">Return policy</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="#blog">Terms and Conditions</a></li>
 
-        <script src="./resources/js/toggle.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
-        </div>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="space-y-6">
+                            <h4 class="font-bold text-lg">Newsletter</h4>
+                            <p class="leading-relaxed">Subscribe With Email And Loads Of News Will Be Sent To You</p>
+                            <div class="flex items-center">
+                                <input type="text" class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
+
+                                <button type="submit" class="px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90 border border-solid bg-slate-900">
+                                    <i class="fa-solid fa-chevron-right text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center pt-10 border-t border-color-gray">
+                        <p>2023 &copy; Beyond. All Rights Reserved.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
     </section>
+    <script src="./resources/js/toggle.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
 
 </html>
