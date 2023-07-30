@@ -63,35 +63,35 @@
                 <div class=" lg:w-[350px] lg:h-[400px] lg:flex-col justify-center items-center flex flex-wrap space-y-3 lg:text-base text-xs lg:space-x-0 space-x-0 font-semibold">
                     <div class=" flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white dark:bg-gray-500 dark:border-gray-500 rounded-xl shadow-xl mt-4 lg:w-[290px] w-[160px]">
                         <img src="./resources/img/manage-accounts.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                        <p class=" uppercase dark:text-white">manage profile</p>
+                        <p class=" w-40 text-center uppercase dark:text-white">manage profile</p>
                         <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                     </div>
             </a>
             <a href="./userCart.php">
                 <div class=" settingBar  dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/cart-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" uppercase dark:text-white">cart</p>
+                    <p class=" w-40 text-center uppercase dark:text-white">cart</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
             <a href="./Wishlist.php">
                 <div class=" settingBar dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/heart-line.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" uppercase dark:text-white">wishlist</p>
+                    <p class=" w-40 text-center uppercase dark:text-white">wishlist</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
             <a href="./history.php">
                 <div class=" settingBar  dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/history.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" uppercase dark:text-white">history</p>
+                    <p class=" w-40 text-center uppercase dark:text-white">history</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
             <a href="./orderNotification.php">
                 <div class=" settingBar  dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/notifications-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" uppercase dark:text-white">notification</p>
+                    <p class=" w-40 text-center uppercase dark:text-white">notification</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
