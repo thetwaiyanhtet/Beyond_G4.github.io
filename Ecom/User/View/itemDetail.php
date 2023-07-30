@@ -290,6 +290,7 @@
             // Attach click event listeners to the logout button and cancel button
             chatBoxButton.addEventListener("click", toggleLogoutPopup);
         </script>
+        
 </body>
 
 </html>

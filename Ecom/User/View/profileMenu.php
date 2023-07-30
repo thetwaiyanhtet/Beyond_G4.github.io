@@ -36,9 +36,9 @@
     <main class=" min-h-screen flex items-center justify-center">
 
         <div class="lg:flex justify-center items-center lg:space-x-5 lg:w-[800px] w-[380px] h-min-screen bg-transparent border shadow-2xl lg:py-10 lg:px-20 py-5 px-16 rounded-3xl z-50 dark:border-black">
-            <div class=" relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-7 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
-                <div class=" fixed top-[25%] rounded-tl-md rounded rounded-tr-md border bg-gray-500 w-60 h-20"></div>
-                <img src="./resources/img/bille.png" alt="..." class=" w-16 rounded-lg pt-7 z-50">
+            <div class=" relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-5 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
+                <span class=" fixed lg:top-[24%] top-[13%] rounded-tl-lg rounded rounded-tr-lg border bg-gray-500 lg:w-[305px] w-[250px] lg:h-[85px] h-[97px] mb-2"></span>
+                <img src="./resources/img/bille.png" alt="..." class=" w-16 rounded-lg z-50">
                 <div class="text-center">
                     <p class=" text-2xl font-philosopher dark:text-white">NAME</p>
                     <p class="dark:text-white">Username</p>
@@ -57,41 +57,41 @@
                         <p class=" col-start-2 dark:text-white">Yangon</p>
                     </div>
                 </div>
-                <button class=" text-black px-5 py-3 lg:text-lg text-base shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
+                <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
             </div>
             <a href="./userProfileEdit.php">
-                <div class=" lg:w-[350px] lg:h-[400px] lg:flex-col justify-center items-center flex flex-wrap space-y-3 lg:text-base text-xs lg:space-x-0 space-x-0 font-semibold">
+                <div class=" lg:w-[350px] lg:h-[400px] lg:flex-col justify-center items-center flex flex-wrap space-y-3 lg:text-base text-xs font-semibold">
                     <div class=" flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white dark:bg-gray-500 dark:border-gray-500 rounded-xl shadow-xl mt-4 lg:w-[290px] w-[160px]">
                         <img src="./resources/img/manage-accounts.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                        <p class=" w-40 text-center uppercase dark:text-white">manage profile</p>
+                        <p class=" lg:w-40 w-20 text-center uppercase dark:text-white">manage profile</p>
                         <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                     </div>
             </a>
             <a href="./userCart.php">
-                <div class=" settingBar  dark:bg-gray-500 dark:border-gray-500 ">
+                <div class=" settingBar lg:mr-0 mr-3 dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/cart-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" w-40 text-center uppercase dark:text-white">cart</p>
+                    <p class=" lg:w-40 w-10 text-center uppercase dark:text-white">cart</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
             <a href="./Wishlist.php">
                 <div class=" settingBar dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/heart-line.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" w-40 text-center uppercase dark:text-white">wishlist</p>
+                    <p class="lg:w-40 w-20 text-center uppercase dark:text-white">wishlist</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
             <a href="./history.php">
-                <div class=" settingBar  dark:bg-gray-500 dark:border-gray-500 ">
+                <div class=" settingBar lg:mr-0 mr-3 dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/history.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" w-40 text-center uppercase dark:text-white">history</p>
+                    <p class=" lg:w-40 w-10 text-center uppercase dark:text-white">history</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
             <a href="./orderNotification.php">
                 <div class=" settingBar  dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/notifications-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
-                    <p class=" w-40 text-center uppercase dark:text-white">notification</p>
+                    <p class=" lg:w-40 w-20 text-center uppercase dark:text-white">notification</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
@@ -100,7 +100,7 @@
         </div>
 
         <!-- <div class=" absolute bottom-10 lg:left-[220px] left-2 col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div> -->
-        <img src="./resources/img/bg.png" alt="..." class=" absolute lg:-right-44 bottom-0 lg:w-[600px] w-96">
+        <img src="./resources/img/bg.png" alt="..." class=" absolute lg:-right-10 bottom-0 w-[700px]">
     </main>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
