@@ -128,23 +128,6 @@ include "./sidebar.php"
                 </div>
             </div>
         </div>
-        <!--Admin-->
-        <!-- <div class="w-[325px] h-[150px] border border-solid m-5 bg-gray-200 rounded-lg">
-            <p class="m-5 font-bold font-poppins text-2xl">Admin</p>
-
-            <div class=" w-[320px] h-12 flex justify-around space-x-2">
-                <img src="./resources/img/Mask group (1).png" alt="c1" class="h-10 ml-2">
-                <div class="w-44 h-16">
-                    <p class=" font-poppins text-base">Customer1</p>
-                    <p class="font-poppins text-sm">Want to Make some changes</p>
-                </div>
-                <div class="w-18">
-                    <p class="mr-1">4:30 PM</p>
-                    <div class="w-5 h-5 rounded-full bg-red-700 text-white text-center text-sm m-auto"><span>2</span></div>
-                </div>
-            </div>
-
-        </div> -->
         <!--ChatBox-->
         <div class=" text-white w-[930px] h-full border border-solid bg-gradient-to-b from-sky-500 via-gray-300 to-sky-800 absolute top-0 rounded-lg left-[360px]">
             <div class="w-[930px] h-[70px] border-solid border-b-2 border-gray-900">
@@ -184,9 +167,14 @@ include "./sidebar.php"
             </div>
 
             <!--TextBox-->
-            <div class="w-full h-[60px] bg-text-bg absolute bottom-0 rounded-b-lg flex items-center justify-around">
+            <!-- <div class="w-full h-[60px] bg-text-bg absolute bottom-0 rounded-b-lg flex items-center justify-around">
                 <input type='text' class="w-[830px] rounded-xl bg-white border-[#1E1F25] text-text3 border border-solid indent-2 focus:outline-none p-2" placeholder="Add to text"></input>
                 <img src="./resources/img/Shape.png" alt="send" class=" pr-5">
+            </div> -->
+
+            <div class="bg-gray-300 p-4 flex items-center justify-around">
+                <input class="flex items-center h-10 md:w-96 w-64 rounded px-3 text-sm focus:outline-none" type="text" placeholder="Type your message…">
+                <img src="./resources/img/send.png" alt="sent" class="h-5">
             </div>
 
         </div>
