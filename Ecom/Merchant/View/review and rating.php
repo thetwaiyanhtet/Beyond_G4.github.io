@@ -17,6 +17,7 @@ include "./sidebar.php"
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
 </head>
 
 <body class=" font-poppins">
@@ -349,7 +350,7 @@ include "./sidebar.php"
                         <span>Camera</span>
                     </div>
                     <div class=" border-t-2 border-blue-500 py-3">
-                        <div><button id="cancelButton" class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></div>
+                        <div><button id="cancelRNRButton" class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></div>
                     </div>
                 </div>
             </div>
@@ -359,7 +360,7 @@ include "./sidebar.php"
             // Get references to the popup and buttons
             const detailPopup = document.getElementById("detailPopup");
             const popupButton = document.getElementById("popupButton");
-            const cancelButton = document.getElementById("cancelButton");
+            const cancelRNRButton = document.getElementById("cancelRNRButton");
 
             // Function to toggle the visibility of the popup and blur the background
             function toggleDetailPopup() {
@@ -368,7 +369,7 @@ include "./sidebar.php"
 
             // Attach click event listeners to the logout button and cancel button
             popupButton.addEventListener("click", toggleDetailPopup);
-            cancelButton.addEventListener("click", toggleDetailPopup);
+            cancelRNRButton.addEventListener("click", toggleDetailPopup);
         </script>
 
     </main>

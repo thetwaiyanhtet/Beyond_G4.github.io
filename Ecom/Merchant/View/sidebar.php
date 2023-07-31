@@ -17,10 +17,6 @@
 </head>
 
 <body class=" font-poppins">
-
-
-
-
   <!-- component -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
   <div class="fixed top-0 left-0 z-40 min-h-screen text-ellipsis flex justify-around">
@@ -105,9 +101,36 @@
     </div>
 
   </div>
-
+  <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">
+    <div>
+      <div class=" border-b-2 border-gray-500">
+        <p class="pb-3">Log out of your account?</p>
+      </div>
+      <div class=" flex justify-center items-center space-x-5 pt-3">
+        <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
+        <a href="./logIn.php">
+          <p class=" text-red-500">Log out</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
 
 </body>
+<script>
+  // Get references to the popup and buttons
+  const logoutPopup = document.getElementById("logoutPopup");
+  const cancelButton = document.getElementById("cancelButton");
+  const logoutButton = document.getElementById("logoutButton");
+
+  // Function to toggle the visibility of the popup and blur the background
+  function toggleLogoutPopup() {
+    logoutPopup.classList.toggle("hidden");
+  }
+
+  // Attach click event listeners to the logout button and cancel button
+  logoutButton.addEventListener("click", toggleLogoutPopup);
+  cancelButton.addEventListener("click", toggleLogoutPopup);
+</script>
 
 </html>

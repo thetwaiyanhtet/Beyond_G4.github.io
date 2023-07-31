@@ -2,7 +2,6 @@
 include "./sidebar.php";
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,30 +17,11 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        /* Add the following CSS */
-        header {
-            position: fixed;
-            top: 0;
-            left: 224px;
-            width: 86%;
-            background-color: white;
-            /* Change this to the desired background color */
-            z-index: 9999;
-            /* This value can be adjusted as needed */
-        }
-
-        main {
-            margin-top: 82px;
-            margin-left: 56px;
-            /* Adjust this margin to create space below the fixed header */
-        }
-
-    </style>
+    <link rel="stylesheet" href="./resources/css/navbar.css">
 </head>
 
 <body>
-    <main id="screen" class=" ml-56 h-screen">
+    <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>July/27/2023 - 4:04 PM</p>
@@ -392,39 +372,10 @@ include "./sidebar.php";
                 </div>
             </div>
         </section>
-
-        <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden">
-            <div>
-                <div class=" border-b-2 border-gray-500">
-                    <p class="pb-3">Log out of your account?</p>
-                </div>
-                <div class=" flex justify-center items-center space-x-5 pt-3">
-                    <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
-                    <a href="./logIn.php">
-                        <p class=" text-red-500">Log out</p>
-                    </a>
-                </div>
-            </div>
-        </section>
     </main>
 </body>
 
 <script>
-    // Get references to the popup and buttons
-    const logoutPopup = document.getElementById("logoutPopup");
-    const cancelButton = document.getElementById("cancelButton");
-    const logoutButton = document.getElementById("logoutButton");
-
-    // Function to toggle the visibility of the popup and blur the background
-    function toggleLogoutPopup() {
-        logoutPopup.classList.toggle("hidden");
-    }
-
-    // Attach click event listeners to the logout button and cancel button
-    logoutButton.addEventListener("click", toggleLogoutPopup);
-    cancelButton.addEventListener("click", toggleLogoutPopup);
-
-
     // <!-- Chart line -->
     const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     const data = {

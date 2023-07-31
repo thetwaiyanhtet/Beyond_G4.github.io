@@ -1,0 +1,17 @@
+/* Add the following CSS */
+header {
+  position: fixed;
+  top: 0;
+  left: 224px;
+  width: 86%;
+  background-color: white;
+  /* Change this to the desired background color */
+  z-index: 9999;
+  /* This value can be adjusted as needed */
+}
+
+main {
+  margin-top: 82px;
+  margin-left: 56px;
+  /* Adjust this margin to create space below the fixed header */
+}

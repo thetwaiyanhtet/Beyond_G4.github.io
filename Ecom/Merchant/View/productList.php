@@ -20,6 +20,8 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
+    
 </head>
 
 <body>
@@ -38,7 +40,7 @@ include "./sidebar.php";
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class=" flex-col justify-center px-5 py-1">
-                <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
+                <div class=" w-full rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Overall Inventory</h1>
                     <div class=" flex justify-between pb-3">
                         <div class=" flex justify-center ">

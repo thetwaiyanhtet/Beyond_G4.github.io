@@ -16,6 +16,8 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
+
 </head>
 
 <body>
@@ -335,14 +337,14 @@ include "./sidebar.php";
                 <span>Total Amount : </span>
                 <span>$220</span>
             </div>
-            <a href="./delivery.php"> <button id="cancelButton" class="bg-blue-500 text-white py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
+            <a href="./delivery.php"> <button id="cancelPopupButton" class="bg-blue-500 text-white py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
         </div>
 
         <script>
             // Get references to the popup and buttons
             const detailPopup = document.getElementById("detailPopup");
             const popupButton = document.getElementById("popupButton");
-            const cancelButton = document.getElementById("cancelButton");
+            const cancelPopupButton = document.getElementById("cancelPopupButton");
 
             // Function to toggle the visibility of the popup and blur the background
             function toggleDetailPopup() {
@@ -351,7 +353,7 @@ include "./sidebar.php";
 
             // Attach click event listeners to the logout button and cancel button
             popupButton.addEventListener("click", toggleDetailPopup);
-            cancelButton.addEventListener("click", toggleDetailPopup);
+            cancelPopupButton.addEventListener("click", toggleDetailPopup);
         </script>
     </main>
 </body>
