@@ -1,5 +1,9 @@
 <?php
-include "./sidebar.php"
+
+session_start();
+$reviewdata = $_SESSION["getReviewandRating"];
+$username = $_SESSION["getUsername"];
+include "./sidebar.php";
 ?>
 
 <!doctype html>
@@ -18,13 +22,14 @@ include "./sidebar.php"
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
+    <script src="./resources/js/dateandtime.js " defer></script>
 </head>
 
 <body class=" font-poppins">
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
+                <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
@@ -69,7 +74,7 @@ include "./sidebar.php"
                                         <tbody>
                                             <tr>
                                                 <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
+                                                    <?= $username[0]["username"] ?>
                                                 </td>
                                                 <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
