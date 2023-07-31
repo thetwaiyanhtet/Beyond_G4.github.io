@@ -1,14 +1,18 @@
-
-        function updateDateTime() {
-            const now = new Date();
-
-            // Get the current time and format it as HH:mm:ss
-            const currentTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-            // Get the current date and format it as YYYY-MM-DD
-            const currentDate = now.toISOString().slice(0, 10);
-
-            document.getElementById('date_time').textContent =currentDate+ " " + currentTime;
-
-        }
-        setInterval(updateDateTime, 1000);
+function updateDateTime() {
+  const now = new Date();
+  console.log(now);
+  const currentTime = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+  
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0");
+  var yyyy = today.getFullYear();
+  today = mm + "/" + dd + "/" + yyyy;
+  document.getElementById("date_time").textContent =
+  today + " - " + currentTime;
+}
+setInterval(updateDateTime, 1000);
