@@ -18,11 +18,30 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+    <style>
+        /* Add the following CSS */
+        header {
+            position: fixed;
+            top: 0;
+            left: 224px;
+            width: 86%;
+            background-color: white;
+            /* Change this to the desired background color */
+            z-index: 9999;
+            /* This value can be adjusted as needed */
+        }
+
+        main {
+            margin-top: 82px;
+            margin-left: 56px;
+            /* Adjust this margin to create space below the fixed header */
+        }
+
+    </style>
 </head>
 
 <body>
-    <main id="screen" class=" ml-56 h-screen relative">
+    <main id="screen" class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p>July/27/2023 - 4:04 PM</p>

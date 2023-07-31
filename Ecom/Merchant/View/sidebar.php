@@ -95,10 +95,10 @@
             <span class="text-sm font-medium">Setting</span>
           </a>
         </li>
-        <li class=" w-52">
+        <li id="logoutButton" class=" w-52">
           <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white logout">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class="bx bx-log-out"></i></span>
-            <span id="logoutButton" class="text-sm font-medium">Logout</span>
+            <span class="text-sm font-medium">Logout</span>
           </a>
         </li>
       </ul>

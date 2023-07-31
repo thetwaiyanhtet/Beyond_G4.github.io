@@ -632,6 +632,10 @@ video {
   z-index: 40;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .float-right {
   float: right;
 }
@@ -842,6 +846,10 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-\[82px\] {
+  margin-top: 82px;
 }
 
 .block {
@@ -1333,10 +1341,6 @@ video {
 
 .whitespace-nowrap {
   white-space: nowrap;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-2xl {
@@ -1861,8 +1865,12 @@ video {
   padding-top: 1.25rem;
 }
 
-.pt-28 {
-  padding-top: 7rem;
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pt-\[82px\] {
+  padding-top: 82px;
 }
 
 .text-left {
