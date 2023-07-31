@@ -1,5 +1,9 @@
 <?php
-//Direct Access
+// echo "<pre>";
+// print_r($_POST);
+
+ini_set('display_errors', 1);
+// //Direct Access
 if(count($_POST) == 0){
     header("Location: ../View/errors/error.php");
 }else{
@@ -47,6 +51,6 @@ if(count($_POST) == 0){
  
     $sql->execute();
 
-    header("Location: ./dashboardController.php");
+    header("Location: ../View/productList.php");
 
 }

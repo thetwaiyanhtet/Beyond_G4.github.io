@@ -7,7 +7,11 @@ $sql = $pdo->prepare(
     "SELECT * FROM m_product;"
 );
 $sql->execute(); //run real sql
-$_SESSION["rooms"] = $sql->fetchAll(PDO::FETCH_ASSOC);
+// $_SESSION["m_product"] = $sql->fetchAll(PDO::FETCH_ASSOC);
+$data=$sql->fetchAll(PDO::FETCH_ASSOC);
+// print_r($data);
+$_SESSION["m_product"]=$data;
+// print_r($_SESSION);
 //DB Connection
 
-header("Location: ../View/dashboard.php");
+// header("Location: ../View/productList.php");
