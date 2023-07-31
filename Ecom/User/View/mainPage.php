@@ -32,12 +32,12 @@
         <nav class=" bg-gradient-to-r from-fuchsia-300 to-purple-400 dark:bg-linear_dark  border-gray-200 ">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="./mainPage.php" class="flex items-center">
-                    <img src="./resources/img/logo.png" class="mr-3 h-10" alt="beyond Logo" />
+                    <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
                 </a>
 
                 <div class="flex items-center md:order-2">
-                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none  rounded-lg text-sm p-2.5">
+                    <button id="theme-toggle" type="button" class="text-gray-900 dark:text-white focus:outline-none  rounded-lg text-sm p-2.5">
                         <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                         </svg>
@@ -95,7 +95,7 @@
         </nav>
         <div>
             <!-- Banner_1 section -->
-            <img src="./resources/img/home_hero/Banner_1.png" alt="" class=" w-full ">
+            <img src="./resources/img/home_hero/Banner_1_upt.png" alt="" class=" w-full ">
         </div>
         <!--Trending product section  -->
         <div class=" flex flex-col m-auto p-auto font-poppins ">
@@ -1122,7 +1122,7 @@
         </div>
 
         <div>
-         
+
             <img src="./resources/img/home_hero/sample_banner.png" alt="" class=" w-full ">
         </div>
 
@@ -1259,6 +1259,7 @@
                     </div>
                     <div class="flex justify-center pt-10 border-t border-color-gray">
                         <p>2023 &copy; Beyond. All Rights Reserved.</p>
+                        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold"><ion-icon name="arrow-up-outline"></ion-icon></button>
                     </div>
                 </div>
 
@@ -1266,6 +1267,23 @@
 
         </section>
     </section>
+    <script>
+        var toTopButton = document.getElementById("to-top-button");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                toTopButton.classList.remove("hidden");
+            } else {
+                toTopButton.classList.add("hidden");
+            }
+        }
+
+        function goToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>

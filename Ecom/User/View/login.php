@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <img src="./resources/img/logo.png" alt="logo" class="w-24 m-2">
+    <img src="./resources/img/logo_slowdown.gif" alt="logo" class="w-24 m-2">
     <p class=" font-philosopher font-semibold text-center text-4xl mb-10">Login</p>
     <img src="./resources/img/Triangle.png" alt="1" class="md:w-72 w-48 scale-125 absolute ml-8 md:bottom-5">
-    
+
     <section class="relative">
-    <div class="float-right w-72 h-96 z-10">
-        <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-40 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
-    </div>
+        <div class="float-right w-72 h-96 z-10">
+            <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-40 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
+        </div>
         <div class="md:w-4/5 w-56 md:h-fit h-96  border-2 border-solid  m-auto rounded-lg drop-shadow-xl bg-transparent z-10">
             <div class="flex md:m-2 md:justify-center space-x-10 z-20">
                 <div class="md:mt-5 mt-10">
@@ -40,7 +40,7 @@
                         <li>Track new orders</li>
                     </ul>
                     <a href="./SignUp.php">
-                    <button class="text-white bg-btn-color rounded-xl h-10 w-48 mt-10 font-Playfair Display">Create New Account</button>
+                        <button class="text-white bg-btn-color rounded-xl h-10 w-48 mt-10 font-Playfair Display">Create New Account</button>
                     </a>
                 </div>
             </div>

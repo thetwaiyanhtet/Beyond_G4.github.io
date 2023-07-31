@@ -22,11 +22,11 @@
 </head>
 
 <body class="mt-3 font-poppins overflow-hidden dark:bg-black">
-<a href="./history.php"><ion-icon name="arrow-back-outline" class="text-2xl dark:text-white"></ion-icon></a>
+    <a href="./history.php"><ion-icon name="arrow-back-outline" class="text-2xl dark:text-white"></ion-icon></a>
     <nav>
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
-                <img src="./resources/img/logo.png" class="mr-3 h-10" alt="beyond Logo" />
+                <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-10" alt="beyond Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
             </a>
 

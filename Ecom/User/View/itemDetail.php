@@ -25,7 +25,7 @@
 <body class=" font-poppins w-full">
     <div>
         <nav class="flex justify-between">
-            <img src="./resources/img/logo.png" alt="..." class="h-10 ml-5 mt-3">
+            <img src="./resources/img/logo_slowdown.gif" alt="..." class="h-10 ml-5 mt-3">
             <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none  rounded-lg text-sm p-2.5 z-30">
                 <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -182,7 +182,7 @@
         <script src="./resources/js/toggle.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 
-         <!-- chatbox popup -->
+        <!-- chatbox popup -->
         <div id="chatBoxPopup" class=" hidden flex flex-col items-center justify-center md:w-[600px] w-[380px] h-full text-gray-800 p-10 fixed top-[1%] md:left-[33%] left-0 z-50 ">
             <div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">
                 <div class="flex flex-col flex-grow h-0 p-4 overflow-auto">
@@ -289,7 +289,7 @@
             // Attach click event listeners to the chatbox button 
             chatBoxButton.addEventListener("click", toggleLogoutPopup);
         </script>
-        
+
 </body>
 
 </html>

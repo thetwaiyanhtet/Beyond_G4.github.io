@@ -28,7 +28,7 @@
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
 
             <div class="flex items-center">
-                <a href="./mainPage.php"><img class="w-7 lg:w-14" src="../View/resources/img/logo.png" alt=""></a>
+                <a href="./mainPage.php"><img class="w-7 lg:w-14" src="./resources/img/logo_slowdown.gif" alt=""></a>
                 <span class="self-center text-xl lg:text-2xl font-semibold whitespace-nowrap dark:text-white font-philosopher">Beyond</span>
             </div>
 
@@ -100,7 +100,9 @@
                 </div>
             </div>
             <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
-               <a href="./userCart.php"><p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p></a>
+                <a href="./userCart.php">
+                    <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                </a>
                 <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
             </div>
         </div>
@@ -121,7 +123,9 @@
                 </div>
             </div>
             <div class="flex border cursor-pointer border-[#f3f5f768] items-center justify-center p-3 rounded-bl-md rounded-br-md shadow-md space-x-1 lg:space-x-3">
-                <a href="./userCart.php"><p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p></a>
+                <a href="./userCart.php">
+                    <p class="font-bold text-[10px] lg:text-xl text-[#A61473]">Add to Cart</p>
+                </a>
                 <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
             </div>
         </div>

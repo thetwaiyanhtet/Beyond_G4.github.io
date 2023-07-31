@@ -28,7 +28,7 @@
     <div class="flex flex-col w-56 bg-blue-600 rounded-r-3xl overflow-hidden">
       <div class="flex items-center justify-center h-20 shadow-md">
         <div class="flex justify-items-center items-center justify-center space-x-3">
-          <img class=" w-16" src="./resources/img/logo.png" alt="...">
+          <img class=" w-16" src="./resources/img/logo_slowdown.gif" alt="...">
           <p class="font-bold text-white text-2xl">Beyond</p>
         </div>
       </div>

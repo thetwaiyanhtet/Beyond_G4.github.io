@@ -31,7 +31,6 @@ module.exports = {
         "color-primary": "#01051e",
         "color-primary-light": "#020726",
         "color-primary-dark": "#010417",
-        
         "color-gray": "#333",
         "color-white": "#fff",
         "color-blob": "#A427DF"
@@ -44,7 +43,7 @@ module.exports = {
       },
       backgroundImage: {
         'noise_bg': ['url(./resources/img/noise.svg)'],
-        'linear_dark': ['linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%)']
+        'linear_dark': ['linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 100%)']
       },
       container: {
         center: true,

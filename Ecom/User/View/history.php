@@ -26,7 +26,7 @@
     <nav>
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
-                <img src="./resources/img/logo.png" class="mr-3 h-10" alt="beyond Logo" />
+                <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-10" alt="beyond Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
             </a>
 
@@ -97,7 +97,7 @@
                     <p class="text-xs lg:text-xl text-white mt-3 lg:mt-9 lg:font-semibold">$200</p>
                 </div>
                 <a href="./historyDetail.php"> <button type="button" class="w-[38px] lg:w-[113px] h-[16px] lg:h-[40px] rounded-md font-philosopher bg-[#eeeeeeae] dark:bg-[#eeeeeeae]
-                 text-black text-xs lg:text-3xl lg:mt-9 mt-5 ">view</button></a>
+                 text-black text-md lg:text-3xl lg:mt-9 mt-5 ">view</button></a>
             </div>
         </div>
 
@@ -126,7 +126,7 @@
                     <p class="text-xs lg:text-xl text-white mt-3 lg:mt-9 lg:font-semibold">$200</p>
                 </div>
                 <a href="./historyDetail.php"> <button type="button" class="w-[38px] lg:w-[113px] h-[16px] lg:h-[40px] rounded-md font-philosopher bg-[#eeeeeeae] dark:bg-[#eeeeeeae]
-                 text-black text-xs lg:text-3xl lg:mt-9 mt-5">view</button></a>
+                 text-black text-md lg:text-3xl lg:mt-9 mt-5">view</button></a>
             </div>
         </div>
     </section>

@@ -21,7 +21,7 @@
         <div class="flex flex-col w-56 bg-blue-600 rounded-r-3xl overflow-hidden">
             <div class="flex items-center justify-center h-20 shadow-md">
                 <div class="flex justify-items-center items-center justify-center space-x-3">
-                    <img class=" w-16" src="./resources/img/logo.png" alt="...">
+                    <img class=" w-16" src="./resources/img/logo_slowdown.gif" alt="...">
                     <p class="font-bold text-white text-2xl">Beyond</p>
                 </div>
             </div>
@@ -738,11 +738,11 @@
                     </p>
                     <p class=" text-gray-500">Good Quality!!</p>
                     <div>
-                    <span class=" text-gray-500 pt-5">Category : </span>
-                    <span>Camera</span>
+                        <span class=" text-gray-500 pt-5">Category : </span>
+                        <span>Camera</span>
                     </div>
                     <div class=" border-t-2 border-blue-500 py-3">
-                       <a href="./review and rating.php"> <button class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></a>
+                        <a href="./review and rating.php"> <button class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></a>
                     </div>
                 </div>
             </div>

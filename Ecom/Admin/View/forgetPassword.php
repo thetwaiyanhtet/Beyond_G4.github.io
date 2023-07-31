@@ -16,7 +16,7 @@
         <div class=" space-y-5 pt-14 shadow-xl p-10 mt-10 rounded-md">
 
             <div class="items-center flex-col justify-center space-y-4">
-                <div><img src="./resources/img/logo.png" alt="..." class=" mx-auto w-20"></div>
+                <div><img src="./resources/img/logo_slowdown.gif" alt="..." class=" mx-auto w-20"></div>
                 <div class=" text-center font-quantico italic font-bold text-3xl text-blue-500 font-philosopher">BEYOND</div>
             </div>
             <div>

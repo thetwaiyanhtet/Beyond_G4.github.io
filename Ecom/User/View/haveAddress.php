@@ -24,10 +24,10 @@
 </head>
 
 <body class="mt-3 font-poppins overflow-hidden dark:bg-black">
-<nav>
+    <nav>
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
-                <img src="./resources/img/logo.png" class="mr-3 h-10" alt="beyond Logo" />
+                <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-10" alt="beyond Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
             </a>
 
@@ -70,9 +70,9 @@
         <div class=" flex justify-between items-center">
             <h1 class=" lg:text-3xl text-base ml-10 mt-10 font-bold dark:text-white">My Address</h1>
             <a href="./addAddress.php">
-            <div class=" flex justify-center items-center text-white shadow-2xl border-black w-[250px bg-purple-500 mr-10 mt-10 lg:px-5 px-2 lg:py-3 py-2">
-                <span><ion-icon name="add-outline" class=" lg:text-2xl text-base"></ion-icon></span><button class=" lg:text-lg text-xs"> Add Address</button>
-            </div>
+                <div class=" flex justify-center items-center text-white shadow-2xl border-black w-[250px bg-purple-500 mr-10 mt-10 lg:px-5 px-2 lg:py-3 py-2">
+                    <span><ion-icon name="add-outline" class=" lg:text-2xl text-base"></ion-icon></span><button class=" lg:text-lg text-xs"> Add Address</button>
+                </div>
             </a>
         </div>
 

@@ -36,7 +36,7 @@
 
     <div id="navbar" class="flex items-center justify-between bg-table w-full fixed top-0 left-0 z-40 h-[80px]">
         <div class="flex items-center pl-4">
-            <img class="w-20" src="./resources/img/logo.png" alt="...">
+            <img class="w-20" src="./resources/img/logo_slowdown.gif" alt="...">
             <span class=" text-2xl font-bold text-white">Beyond</span>
         </div>
         <div>

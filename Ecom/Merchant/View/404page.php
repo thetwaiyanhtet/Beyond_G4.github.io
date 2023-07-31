@@ -18,7 +18,7 @@
 <body class="bg-blue-400">
     <nav class=" flex items-center justify-between mx-[3%]">
         <span class="flex items-center mb-[1%]">
-            <img class="w-16" src="./resources/img/logo.png" alt="...">
+            <img class="w-16" src="./resources/img/logo_slowdown.gif" alt="...">
             <p class="text-3xl ml-[1%] max-md:text-2xl font-philosopher ">Beyond</p>
         </span>
         <span>

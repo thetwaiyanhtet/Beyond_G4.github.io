@@ -11,18 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  
+
 </head>
 
 <body>
-    <img src="./resources/img/logo.png" alt="logo" class="w-24 m-2">
+    <img src="./resources/img/logo_slowdown.gif" alt="logo" class="w-24 m-2">
     <p class=" font-philosopher text-4xl text-center">Sign Up</p>
 
     <section class="relative">
-    <div class="flex flex-col items-center z-10">
-    <img src="./resources/img/Triangle.png" alt="1" class="md:w-64 w-36 absolute left-2/3 top-40 md:scale-100 scale-125">
-    <img src="./resources/img/Triangle-2.png" alt="1" class="md:w-64 w-36 absolute right-2/3 scale-125">
-    </div>
+        <div class="flex flex-col items-center z-10">
+            <img src="./resources/img/Triangle.png" alt="1" class="md:w-64 w-36 absolute left-2/3 top-40 md:scale-100 scale-125">
+            <img src="./resources/img/Triangle-2.png" alt="1" class="md:w-64 w-36 absolute right-2/3 scale-125">
+        </div>
         <div class="md:w-1/2 w-96 md:h-fit h-96 border border-solid  bg-transparent mt-5 rounded-lg  drop-shadow-2xl opacity-75 m-auto z-10">
             <div class="m-5 flex flex-col items-center">
                 <input class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 font-poppins drop-shadow-md bg-blend-normal" placeholder="Full Name"></input>
