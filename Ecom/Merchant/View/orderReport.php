@@ -34,15 +34,14 @@ include "./sidebar.php";
             </div>
         </header>
         <div class="flex justify-between mt-6 pl-5">
-            <div class="flex space-x-3">
+            <div class="flex">
                 <a href="./saleReport.php">
-                    <button class="w-[220px] h-[40px]  rounded-md bg-[#D9D9D9] flex items-center justify-center 
-         font-poppins text-black transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Sale reports</button>
+                    <button class="w-[220px] h-[40px]  rounded-md flex items-center justify-center 
+         font-poppins text-black transition-all duration-200">Sale reports</button>
                 </a>
                 <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 
          font-poppins text-white ">Order reports</button>
             </div>
-            <button class="p-2 border border-[#1366D9] rounded-lg mr-7  transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
         </div>
         <div class="flex  items-center float-right mt-3 pl-5 pb-5 pr-5">
             <span class="flex p-1 border rounded-lg">
@@ -52,6 +51,7 @@ include "./sidebar.php";
             <span class="flex p-1 border rounded-lg">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
+            <button class=" ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
         </div>
 
 
