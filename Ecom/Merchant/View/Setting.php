@@ -20,26 +20,16 @@ include "./sidebar.php"
 <body>
     <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
         <div class="pl-2">
-            <p>2023/July/24 - 4:04 PM</p>
+            <p>July/27/2023 - 4:04 PM</p>
         </div>
         <div>
             <ul class="flex space-x-5 items-center pr-3">
-                <li><ion-icon name="moon-outline" class="text-xl"></ion-icon></li>
                 <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
                 <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
             </ul>
         </div>
     </header>
     <div class="ml-64">
-
-        <!-- <div class="ml-60 m-5 flex justify-between border-solid border-b-2 pb-3 w-">
-        <p class="text-black mt-2">2023/July/25 -2:00 PM</p>
-        <div class="flex space-x-5 justify-center items-center">
-            <ion-icon name="moon" class="mt-2 text-xl"></ion-icon>
-            <ion-icon name="notifications" class="mt-2 text-xl"></ion-icon>
-            <img src="./resources/img/Mask group.png" alt="png" class="w-[50px]">
-        </div>
-    </div> -->
         <p class="font-poppins mt-2 font-semibold text-xl">Setting</p>
         <p class="underline text-text2  mt-5">Account</p>
         <p class="font-philosopher font-light text-base mt-2">Logo</p>

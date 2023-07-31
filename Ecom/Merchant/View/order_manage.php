@@ -21,11 +21,10 @@ include "./sidebar.php"
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center bg-white">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
@@ -66,7 +65,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -89,7 +88,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -113,7 +112,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -137,7 +136,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -161,7 +160,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -185,7 +184,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -209,7 +208,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -233,7 +232,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-400  w-3/5 text-center rounded-md pr-5">
@@ -257,7 +256,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -280,7 +279,7 @@ include "./sidebar.php"
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">

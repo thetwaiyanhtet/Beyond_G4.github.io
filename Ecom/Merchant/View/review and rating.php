@@ -23,11 +23,10 @@ include "./sidebar.php"
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
@@ -47,108 +46,34 @@ include "./sidebar.php"
                             <div class="w-full px-4">
                                 <div class="max-w-full overflow-x-auto">
                                     <table class="table-auto w-full">
-                                        <thead>
-                                            <tr class="bg-primary text-center">
-                                                <th class="
-                           w-1/6
-                           min-w-[160px]
-                           text-lg
-                           font-semibold
-                           text-white
-                           py-0
-                           lg:py-2
-                           px-3
-                           lg:px-4
-                            rounded-tl-md
-                           ">
+                                        <thead class=" text-sm">
+                                            <tr class="bg-blue-200 text-center">
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
                                                     Customer Name
                                                 </th>
-                                                <th class="
-                           w-1/6
-                           min-w-[160px]
-                           text-lg
-                           font-semibold
-                           text-white
-                           py-0
-                           lg:py-2
-                           px-3
-                           lg:px-4
-                           ">
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
                                                     Product Name
                                                 </th>
-                                                <th class="
-                           w-1/6
-                           min-w-[160px]
-                           text-lg
-                           font-semibold
-                           text-white
-                           py-0
-                           lg:py-2
-                           px-3
-                           lg:px-4
-                           ">
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
                                                     Rating
                                                 </th>
-                                                <th class="
-                           w-1/6
-                           min-w-[160px]
-                           text-lg
-                           font-semibold
-                           text-white
-                           py-0
-                           lg:py-2
-                           px-3
-                           lg:px-4
-                           ">
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
                                                     Comments
                                                 </th>
-                                                <th class="
-                           w-1/6
-                           min-w-[160px]
-                           text-lg
-                           font-semibold
-                           text-white
-                           py-0
-                           lg:py-2
-                           px-3
-                           lg:px-4 rounded-tr-md
-                           ">
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
                                                     Details
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           "> Kyaw Swar Phyo
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    Kyaw Swar Phyo
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -157,63 +82,23 @@ include "./sidebar.php"
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Good Quality
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Han Myo Htun
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Outwear & Coats
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -222,62 +107,22 @@ include "./sidebar.php"
                                                         <i class='bx bx-star'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     This product is no longer needed
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           "> Kyaw Swar Phyo
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500"> Kyaw Swar Phyo
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -286,63 +131,23 @@ include "./sidebar.php"
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Good Quality
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Han Myo Htun
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Outwear & Coats
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -351,62 +156,22 @@ include "./sidebar.php"
                                                         <i class='bx bx-star'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     This product is no longer needed
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           "> Kyaw Swar Phyo
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500"> Kyaw Swar Phyo
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -415,63 +180,23 @@ include "./sidebar.php"
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Good Quality
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Han Myo Htun
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Outwear & Coats
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -480,62 +205,22 @@ include "./sidebar.php"
                                                         <i class='bx bx-star'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     This product is no longer needed
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           "> Kyaw Swar Phyo
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500"> Kyaw Swar Phyo
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -544,63 +229,23 @@ include "./sidebar.php"
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Good Quality
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Han Myo Htun
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Outwear & Coats
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -609,63 +254,23 @@ include "./sidebar.php"
                                                         <i class='bx bx-star'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     This product is no longer needed
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Han Myo Htun
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Outwear & Coats
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -674,63 +279,23 @@ include "./sidebar.php"
                                                         <i class='bx bx-star'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     This product is no longer needed
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b  border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Han Myo Htun
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     Outwear & Coats
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
@@ -739,26 +304,10 @@ include "./sidebar.php"
                                                         <i class='bx bx-star'></i>
                                                     </div>
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     This product is no longer needed
                                                 </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           
-                           border-b border-gray-500
-                           ">
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
                                                         <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
                                                     </button>

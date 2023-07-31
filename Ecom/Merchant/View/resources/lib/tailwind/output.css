@@ -596,10 +596,6 @@ video {
   left: 35%;
 }
 
-.left-\[360px\] {
-  left: 360px;
-}
-
 .left-\[45\%\] {
   left: 45%;
 }
@@ -924,10 +920,6 @@ video {
   height: 20rem;
 }
 
-.h-\[150px\] {
-  height: 150px;
-}
-
 .h-\[350px\] {
   height: 350px;
 }
@@ -1152,10 +1144,6 @@ video {
   width: 900px;
 }
 
-.w-\[930px\] {
-  width: 930px;
-}
-
 .w-\[98\%\] {
   width: 98%;
 }
@@ -1175,6 +1163,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .min-w-\[160px\] {
@@ -1631,16 +1627,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-orange-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
-}
-
-.bg-orange-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1655,20 +1641,10 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-indigo-500 {
-  --tw-gradient-from: #6366f1 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(99 102 241 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-sky-500 {
   --tw-gradient-from: #0ea5e9 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(14 165 233 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-10\% {
-  --tw-gradient-from-position: 10%;
 }
 
 .via-gray-300 {
@@ -1676,29 +1652,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), #d1d5db var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
-.via-sky-500 {
-  --tw-gradient-to: rgb(14 165 233 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #0ea5e9 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-30\% {
-  --tw-gradient-via-position: 30%;
-}
-
 .to-cyan-200 {
   --tw-gradient-to: #a5f3fc var(--tw-gradient-to-position);
 }
 
-.to-emerald-500 {
-  --tw-gradient-to: #10b981 var(--tw-gradient-to-position);
-}
-
 .to-sky-800 {
   --tw-gradient-to: #075985 var(--tw-gradient-to-position);
-}
-
-.to-90\% {
-  --tw-gradient-to-position: 90%;
 }
 
 .fill-current {
@@ -1882,12 +1841,12 @@ video {
   padding-top: 5rem;
 }
 
-.pt-3 {
-  padding-top: 0.75rem;
+.pt-28 {
+  padding-top: 7rem;
 }
 
-.pt-36 {
-  padding-top: 9rem;
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .pt-4 {
@@ -1898,8 +1857,8 @@ video {
   padding-top: 1.25rem;
 }
 
-.pt-28 {
-  padding-top: 7rem;
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 
 .text-left {

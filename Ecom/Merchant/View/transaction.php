@@ -21,23 +21,22 @@ include "./sidebar.php"
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
         <section class=" p-5">
+            <p class=" pb-3 font-semibold text-lg">Transaction</p>
             <div class="w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                <p class=" p-3 font-semibold">Transaction</p>
                 <div class="relative overflow-x-auto">
                     <table class="text-sm w-full text-left text-gray-500 m-auto">
-                        <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
-                            <tr>
+                        <thead class="text-xs text-gray-700 uppercase bg-blue-200 font-semibold">
+                            <tr class>
                                 <th scope="col" class="px-6 py-3">
                                     NO
                                 </th>
@@ -70,7 +69,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -93,7 +92,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -116,7 +115,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -139,7 +138,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -162,7 +161,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -185,7 +184,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -208,7 +207,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -231,7 +230,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -254,7 +253,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564
@@ -277,7 +276,7 @@ include "./sidebar.php"
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
-                                    12-04-2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     $2564

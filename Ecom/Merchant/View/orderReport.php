@@ -23,11 +23,10 @@ include "./sidebar.php";
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
@@ -42,6 +41,7 @@ include "./sidebar.php";
                 <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 
          font-poppins text-white ">Order reports</button>
             </div>
+            <button class="p-2 border border-[#1366D9] rounded-lg mr-7  transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
         </div>
         <div class="flex  items-center float-right mt-3 pl-5 pb-5 pr-5">
             <span class="flex p-1 border rounded-lg">
@@ -92,7 +92,7 @@ include "./sidebar.php";
                                 </td>
 
                                 <td class="px-6 py-4 ">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
@@ -111,7 +111,7 @@ include "./sidebar.php";
                                 </td>
 
                                 <td class="px-6 py-4 ">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
@@ -130,7 +130,7 @@ include "./sidebar.php";
                                 </td>
 
                                 <td class="px-6 py-4 ">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
@@ -149,7 +149,7 @@ include "./sidebar.php";
                                 </td>
 
                                 <td class="px-6 py-4 ">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
@@ -168,7 +168,7 @@ include "./sidebar.php";
                                 </td>
 
                                 <td class="px-6 py-4 ">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
@@ -187,7 +187,7 @@ include "./sidebar.php";
                                 </td>
 
                                 <td class="px-6 py-4 ">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>

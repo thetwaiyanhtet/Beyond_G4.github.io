@@ -23,11 +23,10 @@ include "./sidebar.php";
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
@@ -89,7 +88,7 @@ include "./sidebar.php";
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                             <tr class=" border-b  hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     Microsoft Surface Pro
@@ -114,7 +113,7 @@ include "./sidebar.php";
                                     $9900
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                             </tr>
@@ -142,7 +141,7 @@ include "./sidebar.php";
                                     $9900
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                             </tr>
@@ -170,7 +169,7 @@ include "./sidebar.php";
                                     $9900
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                             </tr>
@@ -198,7 +197,7 @@ include "./sidebar.php";
                                     $9900
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                             </tr>
@@ -226,7 +225,7 @@ include "./sidebar.php";
                                     $9900
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                             </tr>
@@ -254,7 +253,7 @@ include "./sidebar.php";
                                     $9900
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
                             </tr>
                         </tbody>

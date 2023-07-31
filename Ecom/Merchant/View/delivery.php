@@ -22,19 +22,16 @@ include "./sidebar.php";
     <main class=" ml-56 h-screen relative">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
-        <div class=" pl-5 pt-3 font-semibold text-lg">
-            Delivery
-        </div>
+        <div class="pl-5 pt-3 font-semibold text-lg">Delivery</div>
         <div class="flex justify-between max-lg:ml mt-3">
             <div class="pt-2 pl-5 relative text-gray-600">
                 <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Search">
@@ -92,7 +89,7 @@ include "./sidebar.php";
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -113,7 +110,7 @@ include "./sidebar.php";
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -134,7 +131,7 @@ include "./sidebar.php";
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -155,7 +152,7 @@ include "./sidebar.php";
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -176,7 +173,7 @@ include "./sidebar.php";
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -194,10 +191,10 @@ include "./sidebar.php";
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -215,10 +212,10 @@ include "./sidebar.php";
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -236,10 +233,10 @@ include "./sidebar.php";
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -257,10 +254,10 @@ include "./sidebar.php";
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
@@ -278,10 +275,10 @@ include "./sidebar.php";
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">

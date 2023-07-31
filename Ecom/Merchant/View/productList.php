@@ -23,18 +23,17 @@ include "./sidebar.php";
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
         <section>
-            <p class=" p-3 font-semibold">Inventory</p>
+            <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class=" flex-col justify-center px-5 py-1">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Overall Inventory</h1>
@@ -171,7 +170,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-green-500">
                                         In-Stock
@@ -200,7 +199,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-yellow-500">
                                         Low-Stock
@@ -229,7 +228,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-red-500">
                                         Out of Stock
@@ -258,7 +257,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-green-500">
                                         In-Stock
@@ -287,7 +286,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-yellow-500">
                                         Low-Stock
@@ -316,7 +315,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-red-500">
                                         Out of Stock
@@ -345,7 +344,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-green-500">
                                         In-Stock
@@ -374,7 +373,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-red-500">
                                         Out of Stock
@@ -403,7 +402,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-red-500">
                                         Out of Stock
@@ -432,7 +431,7 @@ include "./sidebar.php";
                                         9
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                        07/24/2023
                                     </td>
                                     <td class="px-6 py-4 text-yellow-500">
                                         Low-Stock
