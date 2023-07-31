@@ -356,8 +356,9 @@ include "./sidebar.php";
                         <h1 class=" text-lg font-bold font-philosopher">Sales & Profits</h1>
                         <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:text-white hover:bg-blue-500"><ion-icon name="calendar-clear-outline"></ion-icon> Weekly</button>
                     </div>
-                    <div class=" w-[700px] flex-col justify-between py-3">
-                        <canvas class="p-10" id="chartLine"></canvas>
+                    <div class=" w-[700px] flex-col justify-between py-4">
+                        <!-- <canvas class="p-10" id="chartLine"></canvas> -->
+                        <img src="./resources/img/saleChart.png" alt="">
                     </div>
                 </div>
 
@@ -376,37 +377,37 @@ include "./sidebar.php";
 </body>
 
 <script>
-    // <!-- Chart line -->
-    const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    const data = {
-        labels: labels,
-        datasets: [{
-                label: "",
-                backgroundColor: "#F294C4",
-                borderColor: "#F294C4",
-                data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
-            },
-            // Add a new dataset for the second line
-            {
-                label: "",
-                backgroundColor: "#5143D1",
-                borderColor: "#5143D1",
-                data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
-            },
+    // // <!-- Chart line -->
+    // const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    // const data = {
+    //     labels: labels,
+    //     datasets: [{
+    //             label: "",
+    //             backgroundColor: "#F294C4",
+    //             borderColor: "#F294C4",
+    //             data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
+    //         },
+    //         // Add a new dataset for the second line
+    //         {
+    //             label: "",
+    //             backgroundColor: "#5143D1",
+    //             borderColor: "#5143D1",
+    //             data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
+    //         },
 
-        ],
-    };
+    //     ],
+    // };
 
-    const configLineChart = {
-        type: "line",
-        data,
-        options: {},
-    };
+    // const configLineChart = {
+    //     type: "line",
+    //     data,
+    //     options: {},
+    // };
 
-    var chartLine = new Chart(
-        document.getElementById("chartLine"),
-        configLineChart
-    );
+    // var chartLine = new Chart(
+    //     document.getElementById("chartLine"),
+    //     configLineChart
+    // );
 
 
     // Get the canvas element
