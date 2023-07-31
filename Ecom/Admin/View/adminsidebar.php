@@ -67,7 +67,7 @@
                         <div x-data="{ open: false }">
                             <button @click="open = !open"  class="w-full ac  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none catego ">
                                 <span class="flex items-center">
-                                    <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
+                                <ion-icon class=" h-5 w-5 text" name="shapes-outline"></ion-icon>
                                     <span class="mx-4 text font-medium">Category</span>
                                 </span>
 
@@ -117,7 +117,7 @@
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none products">
                             <span class="flex items-center">
-                                <box-icon type='logo' name='product-hunt'></box-icon>
+                            <ion-icon class=" h-5 w-5" name="cube-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Products</span>
                             </span>
 
@@ -138,7 +138,8 @@
                         <a href="./orderlist.php">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none orderList orderList">
                             <span class="flex items-center">
-                                <box-icon name='package' class=""></box-icon>
+                           
+                            <ion-icon class=" h-5 w-5" name="bag-remove-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Order Lists</span>
                             </span>
                         </button>
@@ -147,7 +148,7 @@
                     <div x-data="{ open: false }">
                         <a href="./chatBox.php">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none chatBox">
-                            <span class="flex items-center space-x-3">
+                            <span class="flex items-center space-x-4">
                                 <ion-icon class="h-5 w-5" name="chatbubble-ellipses-outline"></ion-icon>
                                 <span clbg-blue-600ass="mx-4 font-medium">Chat Box</span>
                             </span>
@@ -158,7 +159,7 @@
                         <a href="./report.php">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none report">
                             <span class="flex items-center">
-                                <box-icon type='solid' name='report'></box-icon>
+                            <ion-icon class=" h-5 w-5" name="document-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Report</span>
                             </span>
                         </button>
