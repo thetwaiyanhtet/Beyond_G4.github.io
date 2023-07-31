@@ -25,7 +25,7 @@
       <div class="flex items-center justify-center h-20 shadow-md">
         <div class="flex justify-items-center items-center justify-center space-x-3">
           <img class=" w-16" src="./resources/img/logo_slowdown.gif" alt="...">
-          <p class="font-bold text-white text-2xl">Beyond</p>
+          <p class="font-bold text-white text-2xl font-philosopher italic">Beyond</p>
         </div>
       </div>
       <ul class="flex flex-col py-2">

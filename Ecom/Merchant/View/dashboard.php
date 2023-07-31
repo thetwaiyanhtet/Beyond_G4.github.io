@@ -256,9 +256,9 @@ include "./sidebar.php";
                     <div class=" flex-col justify-between pb-5">
                         <div class="relative overflow-x-auto py-3">
                             <table class="w-[780px] text-sm text-left text-gray-500 ">
-                                <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
+                                <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" class="px-6 py-3 text-start">
                                             Product name
                                         </th>
                                         <th scope="col" class="px-6 py-3">
@@ -272,9 +272,9 @@ include "./sidebar.php";
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class=" text-center">
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4">
@@ -288,7 +288,7 @@ include "./sidebar.php";
                                         </td>
                                     </tr>
                                     <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                             Microsoft Surface Pro
                                         </th>
                                         <td class="px-6 py-4">
@@ -302,7 +302,7 @@ include "./sidebar.php";
                                         </td>
                                     </tr>
                                     <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                             Magic Mouse 2
                                         </th>
                                         <td class="px-6 py-4">

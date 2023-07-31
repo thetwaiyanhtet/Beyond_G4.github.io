@@ -58,9 +58,9 @@ include "./sidebar.php";
             <div class="p-3 rounded-lg shadow-xl border-2  mt-3 border-blue-950">
                 <div class="relative overflow-x-auto py-3">
                     <table class="w-full text-sm text-left text-gray-500 ">
-                        <thead class="text-xs text-gray-900 uppercase bg-blue-200 ">
+                        <thead class="text-xs text-gray-900 uppercase bg-blue-200 text-center ">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-start">
                                     Customer Name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -82,9 +82,9 @@ include "./sidebar.php";
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class=" text-center">
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -97,7 +97,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -105,7 +105,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -118,7 +118,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -126,7 +126,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -139,7 +139,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -147,7 +147,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -160,7 +160,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -168,7 +168,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -181,7 +181,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -189,7 +189,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -202,7 +202,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -210,7 +210,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -223,7 +223,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -231,7 +231,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -244,7 +244,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -252,7 +252,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -265,7 +265,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -273,7 +273,7 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
@@ -286,7 +286,7 @@ include "./sidebar.php";
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">

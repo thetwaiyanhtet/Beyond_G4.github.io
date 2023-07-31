@@ -36,13 +36,13 @@ include "./sidebar.php"
             <div class="w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                 <div class="relative overflow-x-auto">
                     <table class="text-sm w-full text-left text-gray-500 m-auto">
-                        <thead class="text-xs text-gray-700 uppercase bg-blue-200 font-semibold">
+                        <thead class="text-xs text-gray-700 uppercase bg-blue-200 font-semibold text-center">
                             <tr class>
                                 <th scope="col" class="px-6 py-3">
                                     NO
                                 </th>
-                                <th scope="col" class="px-6 py-3">
-                                    CUSTOMER
+                                <th scope="col" class="px-6 py-3 text-start">
+                                    CUSTOMER NAME
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     DATE
@@ -61,12 +61,12 @@ include "./sidebar.php"
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class=" text-center">
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -75,7 +75,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-green-500">
@@ -89,7 +89,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -98,7 +98,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
@@ -112,7 +112,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -121,7 +121,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-green-500">
@@ -135,7 +135,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -144,7 +144,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
@@ -158,7 +158,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -167,7 +167,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-green-500">
@@ -181,7 +181,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -190,7 +190,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
@@ -204,7 +204,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -213,7 +213,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-green-500">
@@ -227,7 +227,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -236,7 +236,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
@@ -250,7 +250,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -259,7 +259,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-green-500">
@@ -273,7 +273,7 @@ include "./sidebar.php"
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     1
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Steve Rogers
                                 </td>
                                 <td class="px-6 py-4">
@@ -282,7 +282,7 @@ include "./sidebar.php"
                                 <td class="px-6 py-4">
                                     $2564
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">

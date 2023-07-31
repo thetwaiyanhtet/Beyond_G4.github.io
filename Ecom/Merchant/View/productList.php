@@ -21,7 +21,7 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
-    
+
 </head>
 
 <body>
@@ -113,24 +113,24 @@ include "./sidebar.php";
                 </div>
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
-                        <p class="">Products</p>
+                        <p class=" font-philosopher font-bold text-lg">Products</p>
                         <div class="flex space-x-3">
                             <a href="./addNewProduct.php"><button class="btn">Add Product</button></a>
-                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:bg-[#1366D9] hover:text-white">Download All</button>
+                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3">Download All</button>
                         </div>
                     </div>
 
                     <div class="relative overflow-x-auto py-5">
                         <table class="w-full text-sm text-left text-gray-500 ">
-                            <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
+                            <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center ">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" class="px-6 py-3 text-start">
                                         Product name
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         Product id
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" class="px-6 py-3 text-start">
                                         Category
                                     </th>
                                     <th scope="col" class="px-6 py-3">
@@ -154,15 +154,15 @@ include "./sidebar.php";
 
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class=" text-center">
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-center">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Laptop
                                     </td>
                                     <td class="px-6 py-4">
@@ -185,13 +185,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Microsoft Surface Pro
                                     </th>
                                     <td class="px-6 py-4">
                                         #201
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Laptop Pc
                                     </td>
                                     <td class="px-6 py-4">
@@ -214,13 +214,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">
@@ -243,13 +243,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">
@@ -272,13 +272,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">
@@ -301,13 +301,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">
@@ -330,13 +330,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">
@@ -359,13 +359,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">
@@ -388,13 +388,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">
@@ -417,13 +417,13 @@ include "./sidebar.php";
                                     </td>
                                 </tr>
                                 <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                         Magic Mouse 2
                                     </th>
                                     <td class="px-6 py-4">
                                         #101
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-start">
                                         Accessories
                                     </td>
                                     <td class="px-6 py-4">

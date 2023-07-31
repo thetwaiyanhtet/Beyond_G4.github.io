@@ -67,7 +67,7 @@ include "./sidebar.php";
                                 <th scope="col" class="px-6 py-3">
                                     Payment By
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 ">
                                     Total amount
                                 </th>
 
@@ -88,17 +88,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
+                                <td class="pl-5 py-4 ">
                                     07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -107,17 +106,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
+                                <td class="pl-5 py-4 ">
                                     07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -126,17 +124,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
+                                <td class="pl-5 py-4 ">
                                     07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -145,17 +142,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
+                                <td class="pl-5 py-4 ">
                                     07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -164,17 +160,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
+                                <td class="pl-5 py-4 ">
                                     07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -183,17 +178,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
+                                <td class="pl-5 py-4 ">
                                     07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                         </tbody>
                     </table>

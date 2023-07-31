@@ -49,10 +49,10 @@ include "./sidebar.php"
                                     <table class="table-auto w-full">
                                         <thead class=" text-sm">
                                             <tr class="bg-blue-200 text-center">
-                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4 text-start">
                                                     Customer Name
                                                 </th>
-                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4 text-start">
                                                     Product Name
                                                 </th>
                                                 <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4">
@@ -68,10 +68,10 @@ include "./sidebar.php"
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
                                                     Kyaw Swar Phyo
                                                 </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
@@ -93,34 +93,10 @@ include "./sidebar.php"
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Han Myo Htun
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
                                                 </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Outwear & Coats
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    This product is no longer needed
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500"> Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
@@ -137,39 +113,15 @@ include "./sidebar.php"
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Han Myo Htun
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
                                                 </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Outwear & Coats
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    This product is no longer needed
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500"> Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
@@ -186,39 +138,15 @@ include "./sidebar.php"
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Han Myo Htun
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
                                                 </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Outwear & Coats
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    This product is no longer needed
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500"> Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
                                                     Nikon 950 Full HD Plus
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
@@ -235,16 +163,16 @@ include "./sidebar.php"
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Han Myo Htun
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
                                                 </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Outwear & Coats
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
+                                                    Nikon 950 Full HD Plus
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
@@ -252,24 +180,24 @@ include "./sidebar.php"
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
                                                     </div>
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    This product is no longer needed
+                                                    Good Quality
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Han Myo Htun
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
                                                 </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Outwear & Coats
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
+                                                    Nikon 950 Full HD Plus
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
@@ -277,24 +205,24 @@ include "./sidebar.php"
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
                                                     </div>
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    This product is no longer needed
+                                                    Good Quality
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Han Myo Htun
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
                                                 </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Outwear & Coats
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
+                                                    Nikon 950 Full HD Plus
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <div>
@@ -302,19 +230,93 @@ include "./sidebar.php"
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
                                                         <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
                                                     </div>
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    This product is no longer needed
+                                                    Good Quality
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
-                                                        <a class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</a>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
                                                     </button>
                                                 </td>
                                             </tr>
-
+                                            <tr>
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
+                                                </td>
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
+                                                    Nikon 950 Full HD Plus
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    <div>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                    </div>
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    Good Quality
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    <button>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
+                                                </td>
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
+                                                    Nikon 950 Full HD Plus
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    <div>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                    </div>
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    Good Quality
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    <button>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                    Kyaw Swar Phyo
+                                                </td>
+                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
+                                                    Nikon 950 Full HD Plus
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    <div>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                    </div>
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    Good Quality
+                                                </td>
+                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
+                                                    <button>
+                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
+                                                    </button>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>

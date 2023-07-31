@@ -37,7 +37,7 @@ include "./sidebar.php"
                 <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                         <tr>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" class="px-6 py-3 text-center">
                                 No
                             </th>
                             <th scope="col" class="px-6 py-3">
@@ -52,14 +52,14 @@ include "./sidebar.php"
                             <th scope="col" class="px-6 py-3">
                                 Payment
                             </th>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" class="px-5 py-3">
                                 Action
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -82,7 +82,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -106,7 +106,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -130,7 +130,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -154,7 +154,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -178,7 +178,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -202,7 +202,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -226,7 +226,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -250,7 +250,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
@@ -273,7 +273,7 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">

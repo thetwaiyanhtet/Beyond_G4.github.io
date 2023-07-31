@@ -57,16 +57,16 @@ include "./sidebar.php";
         <section class=" p-5">
             <div class=" clear-both w-full rounded-lg p-2 shadow-xl border-2 border-blue-950 mt-3 ">
                 <div class="relative overflow-x-auto py-3">
-                    <table class="w-full text-sm text-left text-gray-500 ">
+                    <table class="w-full text-sm text-center text-gray-500 ">
                         <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-start">
                                     Product name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Product id
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-start">
                                     Category
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -90,13 +90,13 @@ include "./sidebar.php";
                         <tbody>
 
                             <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Microsoft Surface Pro
                                 </th>
                                 <td class="px-6 py-4">
                                     #201
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 text-start">
                                     Laptop Pc
                                 </td>
                                 <td class="px-6 py-4">
@@ -115,17 +115,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     07/24/2023
                                 </td>
-
                             </tr>
-                            <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Magic Mouse 2
+                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
+                                    Microsoft Surface Pro
                                 </th>
                                 <td class="px-6 py-4">
-                                    #101
+                                    #201
                                 </td>
-                                <td class="px-6 py-4">
-                                    Accessories
+                                <td class="px-6 py-4 text-start">
+                                    Laptop Pc
                                 </td>
                                 <td class="px-6 py-4">
                                     $999
@@ -143,17 +142,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     07/24/2023
                                 </td>
-
                             </tr>
-                            <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Magic Mouse 2
+                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
+                                    Microsoft Surface Pro
                                 </th>
                                 <td class="px-6 py-4">
-                                    #101
+                                    #201
                                 </td>
-                                <td class="px-6 py-4">
-                                    Accessories
+                                <td class="px-6 py-4 text-start">
+                                    Laptop Pc
                                 </td>
                                 <td class="px-6 py-4">
                                     $999
@@ -171,17 +169,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     07/24/2023
                                 </td>
-
                             </tr>
-                            <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Magic Mouse 2
+                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
+                                    Microsoft Surface Pro
                                 </th>
                                 <td class="px-6 py-4">
-                                    #101
+                                    #201
                                 </td>
-                                <td class="px-6 py-4">
-                                    Accessories
+                                <td class="px-6 py-4 text-start">
+                                    Laptop Pc
                                 </td>
                                 <td class="px-6 py-4">
                                     $999
@@ -199,17 +196,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     07/24/2023
                                 </td>
-
                             </tr>
-                            <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Magic Mouse 2
+                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
+                                    Microsoft Surface Pro
                                 </th>
                                 <td class="px-6 py-4">
-                                    #101
+                                    #201
                                 </td>
-                                <td class="px-6 py-4">
-                                    Accessories
+                                <td class="px-6 py-4 text-start">
+                                    Laptop Pc
                                 </td>
                                 <td class="px-6 py-4">
                                     $999
@@ -227,17 +223,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     07/24/2023
                                 </td>
-
                             </tr>
-                            <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Magic Mouse 2
+                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
+                                    Microsoft Surface Pro
                                 </th>
                                 <td class="px-6 py-4">
-                                    #101
+                                    #201
                                 </td>
-                                <td class="px-6 py-4">
-                                    Accessories
+                                <td class="px-6 py-4 text-start">
+                                    Laptop Pc
                                 </td>
                                 <td class="px-6 py-4">
                                     $999
