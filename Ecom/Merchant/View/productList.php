@@ -1,6 +1,9 @@
 <?php
+session_start();
+$result = $_SESSION["m_product"];
 include "./sidebar.php";
 ?>
+
 
 
 <!DOCTYPE html>

@@ -32,7 +32,7 @@ include "./sidebar.php"
         </header>
         <section>
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">New Product</span></p>
-            <form action="">
+            <form action="../Controller/addNewProductController.php" method="POST">
                 <div class=" flex justify-center px-5 py-1">
                     <div class=" w-screen h-full rounded-lg px-24 py-3 shadow-xl border-2 border-blue-950">
                         <div class=" pb-5">
@@ -64,13 +64,13 @@ include "./sidebar.php"
                                     <div>
                                         <p>Product Name</p>
                                     </div>
-                                    <div><input type="text" class="inputBox" placeholder="Enter Product Name"></div>
+                                    <div><input type="text" name="pname" class="inputBox" placeholder="Enter Product Name"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Product ID</p>
                                     </div>
-                                    <div><input type="text" class="inputBox" placeholder="#001"></div>
+                                    <div><input type="text" name="pid" class="inputBox" placeholder="#001"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
@@ -139,31 +139,31 @@ include "./sidebar.php"
                                     <div>
                                         <p>Buying Price</p>
                                     </div>
-                                    <div><input type="text" class=" inputBox"></div>
+                                    <div><input type="text" name="buyprice" class=" inputBox"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Selling Price</p>
                                     </div>
-                                    <div><input type="text" class="inputBox"></div>
+                                    <div><input type="text" name="sellprice" class="inputBox"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Quantity</p>
                                     </div>
-                                    <div><input type="text" class="inputBox"></div>
+                                    <div><input type="text" name="quantity" class="inputBox"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Date</p>
                                     </div>
-                                    <div class=" w-[203px]"><input type="date" class="inputBox w-44"></div>
+                                    <div class=" w-[203px]"><input type="date" name="date" class="inputBox w-44"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10">
                                     <div>
                                         <p>Description</p>
                                     </div>
-                                    <div><textarea cols="23" rows="3" class="inputBox"></textarea></div>
+                                    <div><textarea cols="23" name="description" rows="3" class="inputBox"></textarea></div>
                                 </div>
                             </div>
                         </div>
