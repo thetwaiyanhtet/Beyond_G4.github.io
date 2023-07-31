@@ -45,14 +45,14 @@ include "./sidebar.php";
                     <div class=" flex justify-between pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
-                                <div>Categories</div>
+                                <div class=" text-violet-600">Categories</div>
                                 <div>10</div>
                                 <div class=" text-sm">Last 7 Days</div>
                             </div>
                         </div>
                         <div class=" flex justify-center ">
                             <div class=" flex-col space-y-3">
-                                <div>Total Products</div>
+                                <div class=" text-sky-500">Total Products</div>
                                 <ul class=" flex justify-between">
                                     <li>
                                         <div>404</div>
@@ -73,7 +73,7 @@ include "./sidebar.php";
                         </div>
                         <div class=" flex justify-center ">
                             <div class=" flex-col space-y-3">
-                                <div>Top Selling</div>
+                                <div class=" text-green-500">Top Selling</div>
                                 <ul class=" flex justify-between">
                                     <li>
                                         <div>10</div>
@@ -92,7 +92,7 @@ include "./sidebar.php";
                         </div>
                         <div class=" flex justify-center ">
                             <div class=" flex-col space-y-3">
-                                <div>Low Stocks</div>
+                                <div class=" text-yellow-500">Low Stocks</div>
                                 <ul class=" flex justify-between ">
                                     <li>
                                         <div>10</div>
@@ -116,7 +116,7 @@ include "./sidebar.php";
                         <p class=" font-philosopher font-bold text-lg">Products</p>
                         <div class="flex space-x-3">
                             <a href="./addNewProduct.php"><button class="btn">Add Product</button></a>
-                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3">Download All</button>
+                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:text-white hover:bg-[#1366D9]">Download All</button>
                         </div>
                     </div>
 
@@ -181,7 +181,7 @@ include "./sidebar.php";
                                         In-Stock
                                     </td>
                                     <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
+                                        <a href="./productDetail.php" class="font-medium text-blue-600  hover:underline">Edit</a>
                                     </td>
                                 </tr>
                                 <tr class=" border-b  hover:bg-gray-200 border-gray-500">

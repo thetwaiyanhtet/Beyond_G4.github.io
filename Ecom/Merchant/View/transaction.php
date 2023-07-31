@@ -102,7 +102,7 @@ include "./sidebar.php"
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
-                                    Pendng
+                                    Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">

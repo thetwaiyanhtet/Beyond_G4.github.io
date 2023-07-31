@@ -140,7 +140,7 @@ include "./sidebar.php";
                         </div>
                     </div>
                     <div class=" flex justify-center pt-5">
-                        <button class=" px-20 py-2 rounded-3xl bg-transparent border-2 border-gray-500 hover:text-white hover:bg-[#1366D9]">See All</button>
+                        <button class=" px-20 py-2 rounded-3xl bg-transparent border-2 border-violet-400 hover:text-white hover:bg-[#1366D9]">See All</button>
                     </div>
                 </div>
 
