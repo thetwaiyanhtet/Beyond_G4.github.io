@@ -7,6 +7,7 @@ $productName = $_SESSION["getProductName"];
 $reviewReview =   $_SESSION["reviewDetail"];
 $detailName = $_SESSION["detailProductName"];
 $detailUsername = $_SESSION["detailUsername"];
+$detailPhoto = $_SESSION["detailProductPhoto"];
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
 ?>
@@ -138,7 +139,7 @@ include "../Controller/reviewandratingController.php";
         </section>
         <div id="detailPopup" class="">
             <div class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
-                <img src="./resources/img/camera.png" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
+                <img src="<?= $detailPhoto[0]["p_one"] ?>" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
                 <div class=" p-3 space-y-3">
                     <p class=" font-semibold"> <?= $detailName[0]['name'] ?> </p>
                     <p class=" text-yellow-500 text-xl">
