@@ -3,8 +3,8 @@
 $hostname = "localhost";
 $port = 3306;
 $dbname = "beyond_db";
-$uname = "root";
-$pwd = "";
+$uname = "doadmin";
+$pwd = "AVNS_8znaub1DRoUGMbF6KKE";
 
 
 //Connection
