@@ -31,9 +31,6 @@ module.exports = {
         "color-primary": "#01051e",
         "color-primary-light": "#020726",
         "color-primary-dark": "#010417",
-        "color-gray": "#333",
-        "color-white": "#fff",
-        "color-blob": "#A427DF"
       },
       fontFamily: {
         'philosopher': ['Philosopher', 'sans-serif'],
@@ -43,7 +40,7 @@ module.exports = {
       },
       backgroundImage: {
         'noise_bg': ['url(./resources/img/noise.svg)'],
-        'linear_dark': ['linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 100%)']
+        'linear_dark': ['linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%)']
       },
       container: {
         center: true,
