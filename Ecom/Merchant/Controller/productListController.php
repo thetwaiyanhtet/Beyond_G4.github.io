@@ -4,7 +4,7 @@ session_start();
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
-    "SELECT * FROM m_product;"
+    "SELECT * FROM m_product where del_flg=0;"
 );
 $sql->execute(); //run real sql
 // $_SESSION["m_product"] = $sql->fetchAll(PDO::FETCH_ASSOC);
