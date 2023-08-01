@@ -1,10 +1,11 @@
 <?php
 
-$hostname = "mysql-db-do-user-14242552-0.b.db.ondigitalocean.com";
-$port = "25060";
-$dbname = "beyond_db";
-$uname = "doadmin";
-$pwd = "AVNS_8znaub1DRoUGMbF6KKE";
+$hostname = "localhost";
+$port = 3306;
+$dbname = "Beyond";
+$uname = "root";
+$pwd = "";
+
 
 //Connection
 $pdo = new PDO(
@@ -15,3 +16,7 @@ $pdo = new PDO(
 
 // set error exc
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+
+?>

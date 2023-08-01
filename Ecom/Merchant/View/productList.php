@@ -10,8 +10,6 @@ $result = $_SESSION["m_product"];
 // print_r($result);
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -185,11 +183,18 @@ $result = $_SESSION["m_product"];
                                     <td class="px-6 py-4">
                                     <?= $product["date"];?>
                                     </td>
+
+                                    <?php if($product["instock"] > 10) {?>
                                     <td class="px-6 py-4 text-green-500">
-                                        
+                                        Instock
                                     </td>
+                                    <?php } else { ?>
+                                        <td class="px-6 py-4 text-red-500">
+                                        Out of stock
+                                    </td>
+                                    <?php } ?>
                                     <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
+                                        <a href="../Controller/editProductController.php?id=<?= $product["id"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
                                     </td>
                                 </tr>
                                 <?php } ?>

@@ -1,5 +1,11 @@
 <?php
-include "./sidebar.php"
+
+session_start();
+$reviewdata = $_SESSION["getReviewandRating"];
+$username = $_SESSION["getUsername"];
+$productName = $_SESSION["getProductName"];
+include "./sidebar.php";
+include "../Controller/reviewandratingController.php";
 ?>
 
 <!doctype html>
@@ -18,13 +24,15 @@ include "./sidebar.php"
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
+    <script src="./resources/js/dateandtime.js " defer></script>
+    <script src="./resources/js/star.js"></script>
 </head>
 
 <body class=" font-poppins">
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
+                <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
@@ -67,24 +75,35 @@ include "./sidebar.php"
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php foreach ($reviewdata as $data ) { ?>
+                                               
                                             <tr>
                                                 <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
+                                                    <?= $username[0]["username"] ?>
                                                 </td>
                                                 <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
+                                                    <?= $productName[0]["name"] ?>
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
+                                                    <div class=" text-yellow-500 text-xl" >
+                                                       <?php
+                                                       if (!function_exists('numberToStars')) {
+                                                        function numberToStars($number) {
+                                                            $roundedNumber = round($number); 
+                                                            $maxStars = 5; 
+                                                            $fullStars = str_repeat('★', $roundedNumber); 
+                                                            $emptyStars = str_repeat('☆', $maxStars - $roundedNumber); 
+                                                            return $fullStars . $emptyStars;
+                                                        }
+                                                      
+                                                        ?>
+                                                       <?php }  ?>
+                                                     <?= numberToStars( $data["rating"]) ?>
+                                                    
                                                     </div>
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
+                                                <?= $data["comment"] ?>
                                                 </td>
                                                 <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                     <button>
@@ -92,231 +111,8 @@ include "./sidebar.php"
                                                     </button>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                    Kyaw Swar Phyo
-                                                </td>
-                                                <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                    Nikon 950 Full HD Plus
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <div>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                        <i class='bx bx-star text-yellow-500'></i>
-                                                    </div>
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    Good Quality
-                                                </td>
-                                                <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                    <button>
-                                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline" href="./reviewandratingdetail.php">View details</div>
-                                                    </button>
-                                                </td>
-                                            </tr>
+                                           
+                                            <?php  } ?>
                                         </tbody>
                                     </table>
                                 </div>

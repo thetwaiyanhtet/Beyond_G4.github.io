@@ -56,7 +56,7 @@
                 <nav class=" mt-28">
                     <div x-data="{ open: false }">
                         <a href="./dashboard.php">
-                            <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white  focus:outline-none dashboard">
+                            <button @click="open = !open" class="w-full flex justify-between my-2 items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white  focus:outline-none dashboard">
                                 <span class="flex items-center">
                                     <ion-icon class="h-5 w-5" name="home-outline"></ion-icon>
                                     <span class="mx-4 font-medium">Dashboard</span>
@@ -65,7 +65,7 @@
                         </a>
                     </div>              
                         <div x-data="{ open: false }">
-                            <button @click="open = !open"  class="w-full ac  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none catego ">
+                            <button @click="open = !open"  class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none catego ">
                                 <span class="flex items-center">
                                 <ion-icon class=" h-5 w-5 text" name="shapes-outline"></ion-icon>
                                     <span class="mx-4 text font-medium">Category</span>

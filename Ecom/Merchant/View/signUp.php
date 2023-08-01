@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!doctype html>
 <html>
 
@@ -18,7 +21,7 @@
         <div>
             <img src="../View/resources/img/welcome.png" alt="" class=" w-fit">
         </div>
-        <form action="">
+        <form action="../Controller/registerController.php" method="post">
             <div class="flex flex-col space-y-4 pt-14">
                 <div class=" text-center items-center flex flex-col justify-center space-y-5">
                     <div><img src="./resources/img/logo_slowdown.gif" alt=""></div>
@@ -27,27 +30,32 @@
                 </div>
                 <div class="text-[#667085]">
                     <div>Name<span class=" text-red-600">*</span></div>
-                    <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="merchant###" required>
+                    <input type="text" name="name" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="merchant###" required>
                 </div>
                 <div class="text-[#667085]">
-                    <div>Email<span class=" text-red-600">*</span></div>
-                    <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="merchant***@mail.com" required>
+                    <div>Email<span class=" text-red-600">*
+                            <?php
+                            echo $_SESSION["registerError"]
+                            ?></span></div>
+                    <input type="text" name="email" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="merchant***@mail.com" required>
                 </div>
                 <div class="text-[#667085] pb-4">
                     <div>Password<span class=" text-red-600">*</span></div>
-                    <input type="password" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="********" required>
+                    <input type="password" name="password" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="********" required>
                     <div class="text-[#667085] pt-2">Must be at least 8 characters.</div>
                 </div>
 
                 <a href="./ChoosePlan.php">
-                    <button class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center 
+                    <button name="register" class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center 
             font-PlayfairSC text-white">Get Started</button>
                 </a>
                 <div class=" text-center text-[#667085]">Already have an account? <a href="./logIn.php" class="text-[#1366D9] hover:underline">Log in</a></div>
             </div>
         </form>
     </div>
+
 </body>
 
 
 </html>
+<?php  $_SESSION["registerError"] = "" ?>
