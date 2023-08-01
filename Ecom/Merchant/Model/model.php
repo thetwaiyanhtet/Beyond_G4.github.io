@@ -2,7 +2,7 @@
 
 $hostname = "localhost";
 $port = 3306;
-$dbname = "Beyond";
+$dbname = "Beyond_db";
 $uname = "root";
 $pwd = "";
 
