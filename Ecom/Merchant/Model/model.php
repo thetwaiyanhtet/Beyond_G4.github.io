@@ -1,10 +1,12 @@
 <?php
 
 $hostname = "localhost";
-$port = 3307;
-$dbname = "shopping_db";
+$port = 3306;
+$dbname = "Beyond";
 $uname = "root";
 $pwd = "";
+
+
 
 //Connection
 $pdo = new PDO("mysql:host=$hostname;port=$port;dbname=$dbname",
@@ -13,3 +15,6 @@ $pdo = new PDO("mysql:host=$hostname;port=$port;dbname=$dbname",
 // set error exc
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+
+?>

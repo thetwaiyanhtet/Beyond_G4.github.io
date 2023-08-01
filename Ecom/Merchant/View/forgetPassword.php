@@ -26,13 +26,15 @@
                 <div><img src="../View/resources/img/forget_password_people image.png" alt=""></div>
                 <div class=" font-poppins font-bold text-2xl w-[340px]">We will send you an email To reset your password.</div>
             </div>
-            <div class="text-[#667085] pt-5">
-                <input type="text" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="User@gmail.com">
-            </div>
-            <a href="./dashboard.php">
-                <button class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center 
+            <form action="../Controller/forgetPasswordController.php" method = "post">
+                <div class="text-[#667085] pt-5">
+                    <input type="text" name="email" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="User@gmail.com">
+                </div>
+                <a>
+                    <button name="resetPw" class="w-[360px] h-[44px] rounded-md bg-[#1366D9] flex items-center justify-center mt-5
             font-PlayfairSC text-white">Get Started</button>
-            </a>
+                </a>
+            </form>
 
         </div>
     </div>

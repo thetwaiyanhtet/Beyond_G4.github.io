@@ -19,9 +19,10 @@
                 <div><img src="./resources/img/logo_slowdown.gif" alt="..." class=" mx-auto w-20"></div>
                 <div class=" text-center font-quantico italic font-bold text-3xl text-blue-500 font-philosopher">BEYOND</div>
             </div>
+            <form action="../Controller/loginController.php" method="post">
             <div class=" pt-5">
                 <div>Email Address*</div>
-                <input type="text" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="Enter your email">
+                <input type="text" name="email" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="Enter your email">
             </div>
             <div class="pb-4">
                 <div>Password*</div>
@@ -37,6 +38,7 @@
             <a href="./dashboard.php">
                 <button class="w-[360px] h-[44px] rounded-lg bg-yellow-500 flex items-center justify-center font-playfairDisplay text-white text-lg shadow-xl">Login</button>
             </a>
+            </form>
         </div>
     </div>
 </body>
