@@ -17,6 +17,19 @@ include "./sidebar.php"
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <script>
+
+        function fetch(){
+            var get=document.getElementById("get1").value;
+            document.getElementById("put1").value=get;
+
+            var get=document.getElementById("get2").value;
+            document.getElementById("put2").value=get;
+
+            var get=document.getElementById("get3").value;
+            document.getElementById("put3").value=get;
+        }
+    </script> -->
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -43,18 +56,38 @@ include "./sidebar.php"
                             <h1 class=" text-lg font-bold font-philosopher">Edit Product</h1>
                         </div>
                         <div>
-                            <ul class=" flex space-x-3">
+                        <ul class=" flex space-x-3">
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_one"] ?>" name="photo1">
+                                    </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_two"] ?>" name="photo2">
+                                    </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_three"] ?>" name="photo3">
+                                    </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_four"] ?>" name="photo4">
+                                    </div>
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
@@ -92,8 +125,23 @@ include "./sidebar.php"
                                             <option value="3">Furniture</option>
                                         </select></div>
                                 </div>
-                                <div>
-                                    <input type="color" value="red">
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div><label>Color 1</label></div>
+                                    <div><input type="color" name="color1" value="<?php echo $productdata[0]["color_1"] ?>">
+                                    <!-- <input type="text" id="put1" name="color1" value="<?php echo $productdata[0]["color_1"] ?>" class="inputBox"></div> -->
+                                </div>
+                                </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div><label>Color 2</label></div>
+                                    <div><input type="color" name="color2" value="<?php echo $productdata[0]["color_2"] ?>">
+                                    <!-- <input type="text" id="put2" name="color2" value="<?php echo $productdata[0]["color_2"] ?>" class="inputBox"></div> -->
+                                </div>
+                                </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div><label>Color 2</label></div>
+                                    <div><input type="color" name="color3" value="<?php echo $productdata[0]["color_3"] ?>">
+                                    <!-- <input type="text" id="put3" name="color3" value="<?php echo $productdata[0]["color_3"] ?>" class="inputBox"></div> -->
+                                </div>
                                 </div>
                                 <!-- <div class=" flex justify-between space-x-10 items-center">
                                 <div>
@@ -173,7 +221,7 @@ include "./sidebar.php"
                                     <div>
                                         <p>Description</p>
                                     </div>
-                                    <div><textarea cols="23" name="description" rows="3" class="inputBox"></textarea></div>
+                                    <div><input type="text" cols="23" name="description" rows="3" value="<?php echo $productdata[0]["description"] ?>" class="inputBox"></input></div>
                                 </div>
                             </div>
                         </div>

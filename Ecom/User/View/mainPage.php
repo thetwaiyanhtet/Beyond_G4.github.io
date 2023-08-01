@@ -27,16 +27,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-purple-50 dark:bg-color-primary-dark font-poppins hide-scroll-bar scroll-smooth">
+<body class=" bg-purple-50 dark:bg-color-primary-dark font-poppins hide-scroll-bar scroll-smooth">
     <section class="sec h-screen">
-        <nav class="bg-gradient-to-r from-fuchsia-300 to-purple-400 dark:bg-linear_dark  border-gray-200 ">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
+            <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="./mainPage.php" class="flex items-center">
                     <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
+                    <span class="text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
                 </a>
 
                 <div class="flex items-center md:order-2">
+                    <ion-icon name="cart-outline" class="text-xl dark:text-white"></ion-icon>
                     <button id="theme-toggle" type="button" class="text-gray-900 dark:text-white focus:outline-none  rounded-lg text-sm p-2.5">
                         <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -60,13 +61,13 @@
                                 <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
                             </li>
                             <li>
-                                <a href="./userCart.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Cart</a>
+                                <a href="./userCart.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
                             </li>
                             <li>
                                 <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</a>
                             </li>
                         </ul>
                     </div>
@@ -95,7 +96,7 @@
         </nav>
         <div>
             <!-- Banner_1 section -->
-            <img src="./resources/img/home_hero/Banner_1_upt.png" alt="" class=" w-full ">
+            <img src="./resources/img/home_hero/Banner_1_upt.png" alt="" class=" w-full pt-16">
         </div>
         <!--Trending product section  -->
         <div class=" flex flex-col m-auto p-auto font-poppins ">
@@ -1127,7 +1128,7 @@
         </div>
 
 
-        <div class=" w-full h-auto py-5">
+        <div class=" w-full h-auto py-5 z-10">
             <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
             <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
 

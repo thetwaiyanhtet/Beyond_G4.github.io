@@ -14,6 +14,20 @@ include "./sidebar.php"
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../View/resources/js/product.js" defer></script>
+    <!-- <script>
+
+        function fetch(){
+            var get=document.getElementById("get1").value;
+            document.getElementById("put1").value=get;
+
+            var get=document.getElementById("get2").value;
+            document.getElementById("put2").value=get;
+
+            var get=document.getElementById("get3").value;
+            document.getElementById("put3").value=get;
+        }
+    </script> -->
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -41,16 +55,36 @@ include "./sidebar.php"
                         <div>
                             <ul class=" flex space-x-3">
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo1">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg1" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo1">
+                                    </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo2">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" name="photo2">
+                                    </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo3">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" name="photo3">
+                                    </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">+</div>
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo4">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" name="photo4">
+                                    </div>
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
@@ -82,8 +116,23 @@ include "./sidebar.php"
                                             <option value="3">Furniture</option>
                                         </select></div>
                                 </div>
-                                <div>
-                                    <input type="color" value="red">
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div><label>Color 1</label></div>
+                                    <div><input type="color" name="color1">
+                                        <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                    </div>
+                                </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div><label>Color 2</label></div>
+                                    <div><input type="color" name="color2">
+                                        <!-- <input type="text" id="put2" name="color2" class="inputBox"></div> -->
+                                    </div>
+                                </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div><label>Color 2</label></div>
+                                    <div><input type="color" name="color3">
+                                        <!-- <input type="text" id="put3" name="color3" class="inputBox"></div> -->
+                                    </div>
                                 </div>
                                 <!-- <div class=" flex justify-between space-x-10 items-center">
                                 <div>
