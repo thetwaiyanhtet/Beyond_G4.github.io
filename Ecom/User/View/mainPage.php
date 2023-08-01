@@ -29,7 +29,7 @@
 
 <body class="bg-purple-50 dark:bg-color-primary-dark font-poppins hide-scroll-bar scroll-smooth">
     <section class="sec h-screen">
-        <nav class=" bg-gradient-to-r from-fuchsia-300 to-purple-400 dark:bg-linear_dark  border-gray-200 ">
+        <nav class="bg-gradient-to-r from-fuchsia-300 to-purple-400 dark:bg-linear_dark  border-gray-200 ">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="./mainPage.php" class="flex items-center">
                     <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
@@ -1259,12 +1259,10 @@
                     </div>
                     <div class="flex justify-center pt-10 border-t border-color-gray">
                         <p>2023 &copy; Beyond. All Rights Reserved.</p>
-                        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold"><ion-icon name="arrow-up-outline"></ion-icon></button>
                     </div>
                 </div>
-
             </div>
-
+            <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold"><ion-icon name="arrow-up-outline"></ion-icon></button>
         </section>
     </section>
     <script>
