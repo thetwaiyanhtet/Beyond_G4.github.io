@@ -1,6 +1,6 @@
 function updateDateTime() {
   const now = new Date();
-  console.log(now);
+
   const currentTime = now.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
