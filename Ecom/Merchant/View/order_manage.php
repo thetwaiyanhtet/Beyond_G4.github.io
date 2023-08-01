@@ -15,17 +15,17 @@ include "./sidebar.php"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
 </head>
 
 <body>
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center bg-white">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
@@ -37,7 +37,7 @@ include "./sidebar.php"
                 <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                         <tr>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" class="px-6 py-3 text-center">
                                 No
                             </th>
                             <th scope="col" class="px-6 py-3">
@@ -52,21 +52,21 @@ include "./sidebar.php"
                             <th scope="col" class="px-6 py-3">
                                 Payment
                             </th>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" class="px-5 py-3">
                                 Action
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -82,14 +82,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -106,14 +106,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -130,14 +130,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -154,14 +154,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -178,14 +178,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -202,14 +202,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
@@ -226,14 +226,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-400  w-3/5 text-center rounded-md pr-5">
@@ -250,14 +250,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
@@ -273,14 +273,14 @@ include "./sidebar.php"
 
                         </tr>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                 1
                             </th>
                             <td class="px-6 py-4">
                                 User
                             </td>
                             <td class="px-6 py-4">
-                                12.4.2023
+                                07/24/2023
                             </td>
                             <td class="px-6 py-4">
                                 <div class="text-green-500  w-3/5 text-center rounded-md pr-5">

@@ -14,6 +14,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="./resources/js/sidebar.js" defer></script>
+   
 </head>
 
 <body class=" font-poppins overflow-x-hidden">
@@ -55,7 +56,7 @@
                 <nav class=" mt-28">
                     <div x-data="{ open: false }">
                         <a href="./dashboard.php">
-                            <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white  focus:outline-none dashboard">
+                            <button @click="open = !open" class="w-full flex justify-between my-2 items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white  focus:outline-none dashboard">
                                 <span class="flex items-center">
                                     <ion-icon class="h-5 w-5" name="home-outline"></ion-icon>
                                     <span class="mx-4 font-medium">Dashboard</span>
@@ -64,22 +65,22 @@
                         </a>
                     </div>              
                         <div x-data="{ open: false }">
-                            <button @click="open = !open" class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none category">
+                            <button @click="open = !open"  class="w-full  flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none catego ">
                                 <span class="flex items-center">
-                                    <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
-                                    <span class="mx-4 font-medium">Category</span>
+                                <ion-icon class=" h-5 w-5 text" name="shapes-outline"></ion-icon>
+                                    <span class="mx-4 text font-medium">Category</span>
                                 </span>
 
                                 <span>
-                                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="h-4 w-4  text " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
                                         <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                 </span>
                             </button>
-                            <div x-show="open" class="bg-gray-100">
-                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white categoryList" href="./categorylist.php">Category List</a>
-                                <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white addCategory" href="./addcategory.php">Add Category</a>
+                            <div x-show="open"  class="bg-gray-100  text-gray-600">
+                                <a  class="py-2 px-16 act block text-sm hover:bg-table hover:text-white categoryl " href="./categorylist.php">Category List</a>
+                                <a  class="py-2 px-16 block text-sm  hover:bg-table hover:text-white categorya " href="./addcategory.php">Add Category</a>
                             </div>
                         </div>    
                     <div x-data="{ open: false }">
@@ -104,10 +105,10 @@
                     </div>
                     <div x-data="{ open: false }">
                         <a href="./customersList.php">
-                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none customer">
-                            <span class="flex items-center">
-                                <ion-icon class="h-5 w-5" name="person-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Customer</span>
+                        <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6  cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none customer">
+                            <span class="flex items-center ">
+                                <ion-icon class="h-5 w-5 text2 " name="person-outline"></ion-icon>
+                                <span class="mx-4 text2 font-medium">Customer</span>
                             </span>
                         </button>
                         </a>
@@ -116,7 +117,7 @@
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none products">
                             <span class="flex items-center">
-                                <box-icon type='logo' name='product-hunt'></box-icon>
+                            <ion-icon class=" h-5 w-5" name="cube-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Products</span>
                             </span>
 
@@ -137,7 +138,8 @@
                         <a href="./orderlist.php">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none orderList orderList">
                             <span class="flex items-center">
-                                <box-icon name='package' class=""></box-icon>
+                           
+                            <ion-icon class=" h-5 w-5" name="bag-remove-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Order Lists</span>
                             </span>
                         </button>
@@ -146,7 +148,7 @@
                     <div x-data="{ open: false }">
                         <a href="./chatBox.php">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none chatBox">
-                            <span class="flex items-center space-x-3">
+                            <span class="flex items-center space-x-4">
                                 <ion-icon class="h-5 w-5" name="chatbubble-ellipses-outline"></ion-icon>
                                 <span clbg-blue-600ass="mx-4 font-medium">Chat Box</span>
                             </span>
@@ -157,7 +159,7 @@
                         <a href="./report.php">
                         <button @click="open = !open" class="w-full flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none report">
                             <span class="flex items-center">
-                                <box-icon type='solid' name='report'></box-icon>
+                            <ion-icon class=" h-5 w-5" name="document-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Report</span>
                             </span>
                         </button>

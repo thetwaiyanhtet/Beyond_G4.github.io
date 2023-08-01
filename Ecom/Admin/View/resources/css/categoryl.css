@@ -1,10 +1,14 @@
-.category{
+.catego{
     background-color: #2535A1;
     color: white;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-.categoryList{
+.categoryl{
     color:#2535A1;
     font-weight: bold;
+}
+
+.text{
+    color: white;
 }

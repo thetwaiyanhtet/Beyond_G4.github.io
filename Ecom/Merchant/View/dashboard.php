@@ -2,7 +2,6 @@
 include "./sidebar.php";
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,25 +17,24 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <link rel="stylesheet" href="./resources/css/navbar.css">
 </head>
 
 <body>
-    <main id="screen" class=" ml-56 h-screen">
+    <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
         <section>
-            <p class=" p-3 font-semibold text-lg">Dashboard</p>
+            <p class=" pt-3 pl-5 font-semibold text-lg">Dashboard</p>
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Sales Overview</h1>
@@ -142,7 +140,7 @@ include "./sidebar.php";
                         </div>
                     </div>
                     <div class=" flex justify-center pt-5">
-                        <button class=" px-20 py-2 rounded-3xl bg-transparent border-2 border-gray-500 hover:text-white hover:bg-[#1366D9]">See All</button>
+                        <button class=" px-20 py-2 rounded-3xl bg-transparent border-2 border-violet-400 hover:text-white hover:bg-[#1366D9]">See All</button>
                     </div>
                 </div>
 
@@ -258,9 +256,9 @@ include "./sidebar.php";
                     <div class=" flex-col justify-between pb-5">
                         <div class="relative overflow-x-auto py-3">
                             <table class="w-[780px] text-sm text-left text-gray-500 ">
-                                <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
+                                <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" class="px-6 py-3 text-start">
                                             Product name
                                         </th>
                                         <th scope="col" class="px-6 py-3">
@@ -274,9 +272,9 @@ include "./sidebar.php";
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class=" text-center">
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4">
@@ -290,7 +288,7 @@ include "./sidebar.php";
                                         </td>
                                     </tr>
                                     <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                             Microsoft Surface Pro
                                         </th>
                                         <td class="px-6 py-4">
@@ -304,7 +302,7 @@ include "./sidebar.php";
                                         </td>
                                     </tr>
                                     <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
                                             Magic Mouse 2
                                         </th>
                                         <td class="px-6 py-4">
@@ -358,8 +356,9 @@ include "./sidebar.php";
                         <h1 class=" text-lg font-bold font-philosopher">Sales & Profits</h1>
                         <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:text-white hover:bg-blue-500"><ion-icon name="calendar-clear-outline"></ion-icon> Weekly</button>
                     </div>
-                    <div class=" w-[700px] flex-col justify-between py-3">
-                        <canvas class="p-10" id="chartLine"></canvas>
+                    <div class=" w-[700px] flex-col justify-between py-4">
+                        <!-- <canvas class="p-10" id="chartLine"></canvas> -->
+                        <img src="./resources/img/saleChart.png" alt="">
                     </div>
                 </div>
 
@@ -374,70 +373,41 @@ include "./sidebar.php";
                 </div>
             </div>
         </section>
-
-        <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden">
-            <div>
-                <div class=" border-b-2 border-gray-500">
-                    <p class="pb-3">Log out of your account?</p>
-                </div>
-                <div class=" flex justify-center items-center space-x-5 pt-3">
-                    <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
-                    <a href="./logIn.php">
-                        <p class=" text-red-500">Log out</p>
-                    </a>
-                </div>
-            </div>
-        </section>
     </main>
 </body>
 
 <script>
-    // Get references to the popup and buttons
-    const logoutPopup = document.getElementById("logoutPopup");
-    const cancelButton = document.getElementById("cancelButton");
-    const logoutButton = document.getElementById("logoutButton");
+    // // <!-- Chart line -->
+    // const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    // const data = {
+    //     labels: labels,
+    //     datasets: [{
+    //             label: "",
+    //             backgroundColor: "#F294C4",
+    //             borderColor: "#F294C4",
+    //             data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
+    //         },
+    //         // Add a new dataset for the second line
+    //         {
+    //             label: "",
+    //             backgroundColor: "#5143D1",
+    //             borderColor: "#5143D1",
+    //             data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
+    //         },
 
-    // Function to toggle the visibility of the popup and blur the background
-    function toggleLogoutPopup() {
-        logoutPopup.classList.toggle("hidden");
-    }
+    //     ],
+    // };
 
-    // Attach click event listeners to the logout button and cancel button
-    logoutButton.addEventListener("click", toggleLogoutPopup);
-    cancelButton.addEventListener("click", toggleLogoutPopup);
+    // const configLineChart = {
+    //     type: "line",
+    //     data,
+    //     options: {},
+    // };
 
-
-    // <!-- Chart line -->
-    const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    const data = {
-        labels: labels,
-        datasets: [{
-                label: "",
-                backgroundColor: "#F294C4",
-                borderColor: "#F294C4",
-                data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
-            },
-            // Add a new dataset for the second line
-            {
-                label: "",
-                backgroundColor: "#5143D1",
-                borderColor: "#5143D1",
-                data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
-            },
-
-        ],
-    };
-
-    const configLineChart = {
-        type: "line",
-        data,
-        options: {},
-    };
-
-    var chartLine = new Chart(
-        document.getElementById("chartLine"),
-        configLineChart
-    );
+    // var chartLine = new Chart(
+    //     document.getElementById("chartLine"),
+    //     configLineChart
+    // );
 
 
     // Get the canvas element

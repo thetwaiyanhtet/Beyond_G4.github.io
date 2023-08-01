@@ -16,25 +16,24 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
+
 </head>
 
 <body>
     <main class=" ml-56 h-screen relative">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
-        <div class=" pl-5 pt-3 font-semibold text-lg">
-            Delivery
-        </div>
+        <div class="pl-5 pt-3 font-semibold text-lg">Delivery</div>
         <div class="flex justify-between max-lg:ml mt-3">
             <div class="pt-2 pl-5 relative text-gray-600">
                 <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Search">
@@ -59,9 +58,9 @@ include "./sidebar.php";
             <div class="p-3 rounded-lg shadow-xl border-2  mt-3 border-blue-950">
                 <div class="relative overflow-x-auto py-3">
                     <table class="w-full text-sm text-left text-gray-500 ">
-                        <thead class="text-xs text-gray-900 uppercase bg-blue-200 ">
+                        <thead class="text-xs text-gray-900 uppercase bg-blue-200 text-center ">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-start">
                                     Customer Name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -83,22 +82,22 @@ include "./sidebar.php";
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class=" text-center">
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -106,20 +105,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -127,20 +126,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -148,20 +147,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -169,20 +168,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
                                     #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -190,20 +189,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -211,20 +210,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -232,20 +231,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -253,20 +252,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -274,20 +273,20 @@ include "./sidebar.php";
                                 </td>
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                     Kyaw Swarr Myo
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    #001
                                 </td>
                                 <td class="px-6 py-4">
-                                    24/07/2023
+                                    07/24/2023
                                 </td>
 
                                 <td class="px-6 py-4 ">
                                     2000.0
                                 </td>
-                                <td class="px-6 py-4 ">
+                                <td class=" pr-2 py-4 ">
                                     Royal Express
                                 </td>
                                 <td class="px-6 py-4">
@@ -338,14 +337,14 @@ include "./sidebar.php";
                 <span>Total Amount : </span>
                 <span>$220</span>
             </div>
-            <a href="./delivery.php"> <button id="cancelButton" class="bg-blue-500 text-white py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
+            <a href="./delivery.php"> <button id="cancelPopupButton" class="bg-blue-500 text-white py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
         </div>
 
         <script>
             // Get references to the popup and buttons
             const detailPopup = document.getElementById("detailPopup");
             const popupButton = document.getElementById("popupButton");
-            const cancelButton = document.getElementById("cancelButton");
+            const cancelPopupButton = document.getElementById("cancelPopupButton");
 
             // Function to toggle the visibility of the popup and blur the background
             function toggleDetailPopup() {
@@ -354,7 +353,7 @@ include "./sidebar.php";
 
             // Attach click event listeners to the logout button and cancel button
             popupButton.addEventListener("click", toggleDetailPopup);
-            cancelButton.addEventListener("click", toggleDetailPopup);
+            cancelPopupButton.addEventListener("click", toggleDetailPopup);
         </script>
     </main>
 </body>

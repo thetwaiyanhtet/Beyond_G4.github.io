@@ -9,18 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
-  <style>
-    body::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="./resources/css/sidebar.css">
 </head>
 
 <body class=" font-poppins">
-
-
-
-
   <!-- component -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
   <div class="fixed top-0 left-0 z-40 min-h-screen text-ellipsis flex justify-around">
@@ -29,7 +21,7 @@
       <div class="flex items-center justify-center h-20 shadow-md">
         <div class="flex justify-items-center items-center justify-center space-x-3">
           <img class=" w-16" src="./resources/img/logo_slowdown.gif" alt="...">
-          <p class="font-bold text-white text-2xl">Beyond</p>
+          <p class="font-bold text-white text-2xl font-philosopher italic">Beyond</p>
         </div>
       </div>
       <ul class="flex flex-col py-2">
@@ -95,19 +87,46 @@
             <span class="text-sm font-medium">Setting</span>
           </a>
         </li>
-        <li class=" w-52">
+        <li id="logoutButton" class=" w-52">
           <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white logout">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class="bx bx-log-out"></i></span>
-            <span id="logoutButton" class="text-sm font-medium">Logout</span>
+            <span class="text-sm font-medium">Logout</span>
           </a>
         </li>
       </ul>
     </div>
 
   </div>
-
+  <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">
+    <div>
+      <div class=" border-b-2 border-gray-500">
+        <p class="pb-3">Log out of your account?</p>
+      </div>
+      <div class=" flex justify-center items-center space-x-5 pt-3">
+        <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
+        <a href="./logIn.php">
+          <p class=" text-red-500">Log out</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
 
 </body>
+<script>
+  // Get references to the popup and buttons
+  const logoutPopup = document.getElementById("logoutPopup");
+  const cancelButton = document.getElementById("cancelButton");
+  const logoutButton = document.getElementById("logoutButton");
+
+  // Function to toggle the visibility of the popup and blur the background
+  function toggleLogoutPopup() {
+    logoutPopup.classList.toggle("hidden");
+  }
+
+  // Attach click event listeners to the logout button and cancel button
+  logoutButton.addEventListener("click", toggleLogoutPopup);
+  cancelButton.addEventListener("click", toggleLogoutPopup);
+</script>
 
 </html>

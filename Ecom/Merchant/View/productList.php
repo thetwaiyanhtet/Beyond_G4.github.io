@@ -1,6 +1,15 @@
 <?php
+// session_start();
+
+// echo "<pre>";
+// print_r($result);
 include "./sidebar.php";
+include "../Controller/productListController.php";
+$result = $_SESSION["m_product"];
+// echo "<pre>";
+// print_r($result);
 ?>
+
 
 
 <!DOCTYPE html>
@@ -17,38 +26,39 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
+
 </head>
 
 <body>
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
         <section>
-            <p class=" p-3 font-semibold">Inventory</p>
+            <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class=" flex-col justify-center px-5 py-1">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Overall Inventory</h1>
                     <div class=" flex justify-between pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
-                                <div>Categories</div>
+                                <div class=" text-violet-600">Categories</div>
                                 <div>10</div>
                                 <div class=" text-sm">Last 7 Days</div>
                             </div>
                         </div>
                         <div class=" flex justify-center ">
                             <div class=" flex-col space-y-3">
-                                <div>Total Products</div>
+                                <div class=" text-sky-500">Total Products</div>
                                 <ul class=" flex justify-between">
                                     <li>
                                         <div>404</div>
@@ -69,7 +79,7 @@ include "./sidebar.php";
                         </div>
                         <div class=" flex justify-center ">
                             <div class=" flex-col space-y-3">
-                                <div>Top Selling</div>
+                                <div class=" text-green-500">Top Selling</div>
                                 <ul class=" flex justify-between">
                                     <li>
                                         <div>10</div>
@@ -88,7 +98,7 @@ include "./sidebar.php";
                         </div>
                         <div class=" flex justify-center ">
                             <div class=" flex-col space-y-3">
-                                <div>Low Stocks</div>
+                                <div class=" text-yellow-500">Low Stocks</div>
                                 <ul class=" flex justify-between ">
                                     <li>
                                         <div>10</div>
@@ -109,24 +119,25 @@ include "./sidebar.php";
                 </div>
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
-                        <p class="">Products</p>
+                        <p class=" font-philosopher font-bold text-lg">Products</p>
                         <div class="flex space-x-3">
                             <a href="./addNewProduct.php"><button class="btn">Add Product</button></a>
-                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:bg-[#1366D9] hover:text-white">Download All</button>
+                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:text-white hover:bg-[#1366D9]">Download All</button>
                         </div>
                     </div>
 
                     <div class="relative overflow-x-auto py-5">
+                    
                         <table class="w-full text-sm text-left text-gray-500 ">
-                            <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
+                            <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center ">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" class="px-6 py-3 text-start">
                                         Product name
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         Product id
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" class="px-6 py-3 text-start">
                                         Category
                                     </th>
                                     <th scope="col" class="px-6 py-3">
@@ -151,298 +162,40 @@ include "./sidebar.php";
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($result as $product) { ?>
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Apple MacBook Pro 17"
+                                    <?= $product["name"];?>
                                     </th>
                                     <td class="px-6 py-4">
-                                        #101
+                                    <?= $product["product_id"];?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        Laptop
+                                        
                                     </td>
                                     <td class="px-6 py-4">
-                                        $999
+                                    <?= $product["buyprice"];?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        $1100
+                                    <?= $product["sellprice"];?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        9
+                                    <?= $product["instock"];?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        24/07/2023
+                                    <?= $product["date"];?>
                                     </td>
                                     <td class="px-6 py-4 text-green-500">
-                                        In-Stock
+                                        
                                     </td>
                                     <td class="px-6 py-4 text-right">
                                         <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
                                     </td>
                                 </tr>
-                                <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Microsoft Surface Pro
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #201
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Laptop Pc
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-yellow-500">
-                                        Low-Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-red-500">
-                                        Out of Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-green-500">
-                                        In-Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-yellow-500">
-                                        Low-Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-red-500">
-                                        Out of Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-green-500">
-                                        In-Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-red-500">
-                                        Out of Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-red-500">
-                                        Out of Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
-                                <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        #101
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $999
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $1100
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        9
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        24/07/2023
-                                    </td>
-                                    <td class="px-6 py-4 text-yellow-500">
-                                        Low-Stock
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
+                        
                         <div class="flex justify-between items-center py-2 pt-5 px-3">
                             <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
                             <div>Page 1 of 10</div>
@@ -451,6 +204,7 @@ include "./sidebar.php";
                     </div>
 
                 </div>
+            </div>
         </section>
     </main>
 </body>

@@ -15,26 +15,26 @@ include "./sidebar.php"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
 </head>
 
 <body>
     <main class="ml-56">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
                 </ul>
             </div>
         </header>
         <div class="flex justify-between">
-            <div class="flex m-2">
+            <div class="flex m-2 items-center">
                 <img src="./resources/img/fluent_people-32-filled.png" alt="" class="h-8">
-                <p class="m-2 font-semibold">Order Details</p>
+                <p class="m-2 font-semibold text-lg">Order Details</p>
             </div>
             <div class="m-2">
                 <input type="checkbox" name="" id="">

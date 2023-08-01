@@ -17,27 +17,27 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/report.css">
+    <!-- <link rel="stylesheet" href="./resources/css/navbar.css"> -->
 </head>
 
 <body>
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>2023/July/24 - 4:04 PM</p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
         </header>
         <div class="flex justify-between mt-6 pl-5">
-            <div class="flex space-x-3">
+            <div class="flex">
                 <a href="./saleReport.php">
-                    <button class="w-[220px] h-[40px]  rounded-md bg-[#D9D9D9] flex items-center justify-center 
-         font-poppins text-black transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Sale reports</button>
+                    <button class="w-[220px] h-[40px]  rounded-md flex items-center justify-center 
+         font-poppins text-black transition-all duration-200">Sale reports</button>
                 </a>
                 <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 
          font-poppins text-white ">Order reports</button>
@@ -51,6 +51,7 @@ include "./sidebar.php";
             <span class="flex p-1 border rounded-lg">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
+            <button class=" ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
         </div>
 
 
@@ -66,7 +67,7 @@ include "./sidebar.php";
                                 <th scope="col" class="px-6 py-3">
                                     Payment By
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 ">
                                     Total amount
                                 </th>
 
@@ -87,17 +88,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
-                                    24/07/2023
+                                <td class="pl-5 py-4 ">
+                                    07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -106,17 +106,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
-                                    24/07/2023
+                                <td class="pl-5 py-4 ">
+                                    07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -125,17 +124,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
-                                    24/07/2023
+                                <td class="pl-5 py-4 ">
+                                    07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -144,17 +142,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
-                                    24/07/2023
+                                <td class="pl-5 py-4 ">
+                                    07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -163,17 +160,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
-                                    24/07/2023
+                                <td class="pl-5 py-4 ">
+                                    07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -182,17 +178,16 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     Bank deposit
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-10 py-4 ">
                                     2000.0
                                 </td>
 
-                                <td class="px-6 py-4 ">
-                                    24/07/2023
+                                <td class="pl-5 py-4 ">
+                                    07/24/2023
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-7 py-4">
                                     <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
-
                             </tr>
                         </tbody>
                     </table>
