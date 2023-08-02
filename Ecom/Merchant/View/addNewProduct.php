@@ -1,4 +1,7 @@
 <?php
+
+include "../Controller/categoryListController.php";
+// print_r($categories);
 include "./sidebar.php"
 ?>
 <!DOCTYPE html>
@@ -112,9 +115,11 @@ include "./sidebar.php"
                                         <p>Category</p>
                                     </div>
                                     <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
-                                            <option value="1">Clothing</option>
-                                            <option value="2">Electronic</option>
-                                            <option value="3">Furniture</option>
+                                        <?php foreach ($categories as $category) { ?>
+                                            <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
+                                            <?php } ?>
+                                            
+                                        
                                         </select></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">

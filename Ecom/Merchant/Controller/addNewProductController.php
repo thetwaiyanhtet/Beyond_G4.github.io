@@ -10,7 +10,7 @@ if(count($_POST) == 0){
    
     $name=$_POST["pname"];
     $pid=$_POST["pid"];
-    // $category=$_POST["category"];
+    $category=$_POST["category"];
     $buyprice=$_POST["buyprice"];
     $sellprice=$_POST["sellprice"];
     $quantity=$_POST["quantity"];
@@ -24,15 +24,14 @@ if(count($_POST) == 0){
     $photo3=$_POST["photo3"];
     $photo4=$_POST["photo4"];
 
-    
 
-   
     include "../Model/model.php";
 
     $sql=$pdo->prepare(
     "INSERT INTO m_product
     ( name,
     product_id,
+    category_id,
     buyprice,
     sellprice,
     instock,
@@ -50,6 +49,7 @@ if(count($_POST) == 0){
     (
         :name,
         :product_id,
+        :category_id,
         :buyprice,
         :sellprice,
         :instock,
@@ -68,6 +68,7 @@ if(count($_POST) == 0){
     );
     $sql->bindValue(":name",$name);
     $sql->bindValue(":product_id",$pid);
+    $sql->bindValue(":category_id",$category);
     $sql->bindValue(":buyprice",$buyprice);
     $sql->bindValue(":sellprice",$sellprice);
     $sql->bindValue(":instock",$quantity);

@@ -1,8 +1,8 @@
 <?php
 
 $hostname = "localhost";
-$port = 3307;
-$dbname = "shopping_db";
+$port = 3306;
+$dbname = "beyond_db";
 $uname = "root";
 $pwd = "";
 
