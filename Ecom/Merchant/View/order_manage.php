@@ -1,5 +1,12 @@
 <?php
-include "./sidebar.php"
+include "./sidebar.php";
+// session_start();
+
+// $result = $_SESSION["orders"];
+// $cusName = $_SESSION["getCusName"];
+// echo "<pre>";
+// print_r($result);
+// echo $cusName;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +14,7 @@ include "./sidebar.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>Orders</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./resources/js/dateandtime.js " defer></script>
@@ -21,7 +28,7 @@ include "./sidebar.php"
 
 <body>
     <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center bg-white">
+        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center bg-white">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -31,7 +38,7 @@ include "./sidebar.php"
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <section class="p-5">
             <p class=" pb-3 text-lg font-semibold">Orders</p>
             <div class="relative overflow-x-auto py-5 px-5 rounded-lg shadow-xl border-2 border-blue-950">
@@ -39,7 +46,7 @@ include "./sidebar.php"
                     <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                         <tr>
                             <th scope="col" class="px-6 py-3 text-center">
-                                No
+                                Order ID
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Customer Name
@@ -59,245 +66,30 @@ include "./sidebar.php"
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
-                                    Complete
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-                                <a href="./orderDetail.php" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
-                                    Complete
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
-                                    Pending
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
-                                    Complete
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
-                                    Pending
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
-                                    Pending
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
-                                    Complete
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-green-400  w-3/5 text-center rounded-md pr-5">
-                                    Complete
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
-                                    Pending
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                1
-                            </th>
-                            <td class="px-6 py-4">
-                                User
-                            </td>
-                            <td class="px-6 py-4">
-                                07/24/2023
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
-                                    Complete
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                Bank Deposit
-                            </td>
-                            <td class="px-6 py-4">
-
-                                <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                            </td>
-
-                        </tr>
-
+                        <?php foreach ($result as $order) { ?>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                                    <?= $order["id"]; ?>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <?= $order[""]; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    07/24/2023
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
+                                        Complete
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    Bank Deposit
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="./orderDetail.php" class="font-medium text-blue-600  hover:underline">View</a>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <div class="flex justify-between items-center py-2 pt-5 px-3">
