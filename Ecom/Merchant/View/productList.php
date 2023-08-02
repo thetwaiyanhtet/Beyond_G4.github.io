@@ -149,7 +149,7 @@ $result = $_SESSION["m_product"];
                                         quantity
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        date
+                                        Create date
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         availablity
@@ -182,7 +182,7 @@ $result = $_SESSION["m_product"];
                                     <?= $product["instock"];?>
                                     </td>
                                     <td class="px-6 py-4">
-                                    <?= $product["date"];?>
+                                    <?= $product["create_date"];?>
                                     </td>
 
                                     <?php if($product["instock"] > 10) {?>
