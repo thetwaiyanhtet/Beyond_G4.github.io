@@ -3,7 +3,7 @@ session_start();
 $productdata = $_SESSION["editproduct"];
 include "../Controller/categoryListController.php";
 // print_r($productdata);
-include "./sidebar.php";
+include "./sidebar.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
