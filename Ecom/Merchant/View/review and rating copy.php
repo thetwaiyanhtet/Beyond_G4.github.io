@@ -89,7 +89,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
 
                                                     <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                        <?= $productName[$j]["name"] ?>
+                                                        <?= $productName[$j]["p_name"] ?>
                                                         <?php $j += 1 ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
@@ -141,10 +141,10 @@ include "../Controller/reviewandratingController.php";
             <div class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
                 <img src="<?= $detailPhoto[0]["p_one"] ?>" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
                 <div class=" p-3 space-y-3">
-                    <p class=" font-semibold"> <?= $detailName[0]['name'] ?> </p>
+                    <p class=" font-semibold"> <?= $detailName[0]['p_name'] ?> </p>
                     <p class=" text-yellow-500 text-xl">
                         <?php
-                        if (!function_exists('numberToStars')) {
+                       
                             function numberToStars($number)
                             {
                                 $roundedNumber = round($number);
@@ -153,10 +153,10 @@ include "../Controller/reviewandratingController.php";
                                 $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
                                 return $fullStars . $emptyStars;
                             }
-
+                            echo numberToStars($reviewReview[0]["rating"]) ;
                         ?>
-                        <?php }  ?>
-                        <?= numberToStars($data["rating"]) ?>
+                        
+                        
                         <span class="text-black">/</span>
                         <span class="text-black"><?= $detailUsername[0]['username'] ?></span>
                     </p>
