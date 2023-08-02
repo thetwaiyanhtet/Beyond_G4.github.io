@@ -11,27 +11,27 @@ require './lib/PHPMailer/src/SMTP.php';
 
 class SendMail
 {
-    public function sendMail($toMail,$subject,$body)
+    public function sendMail($toMail, $subject, $body)
     {
         $mail = new PHPMailer(true);
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                   
-            $mail->isSMTP();                                         
-            $mail->Host       = 'smtp.gmail.com';                    
-            $mail->SMTPAuth   = true;                                  
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
             $mail->Username   = 'sukkies2345@gmail.com';   //<< change   
-            $mail->Password   = 'qylqlcrdhirgvybvd';          //<< change                     
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-            $mail->Port       = 465;                                    
+            $mail->Password   = 'nzefixitrnzytqwx';          //<< change                     
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom('sukkies2345@gmail.com',"beyond"); //<<change
-            $mail->addAddress($toMail);      
+            $mail->setFrom('sukkies2345@gmail.com', "Beyond_g4"); //<<change
+            $mail->addAddress($toMail);
 
             //Content
-            $mail->isHTML(true);                                  
+            $mail->isHTML(true);
             $mail->Subject = $subject;
             $mail->Body    = $body;
             $mail->send();

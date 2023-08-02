@@ -7,6 +7,7 @@ $productName = $_SESSION["getProductName"];
 $reviewReview =   $_SESSION["reviewDetail"];
 $detailName = $_SESSION["detailProductName"];
 $detailUsername = $_SESSION["detailUsername"];
+$detailPhoto = $_SESSION["detailProductPhoto"];
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
 ?>
@@ -115,7 +116,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <button>
-                                                            <a id="popupButton" href="./review and rating copy.php?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
+                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php ?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -136,11 +137,11 @@ include "../Controller/reviewandratingController.php";
                 </div>
             </div>
         </section>
-        <div id="detailPopup" class="hidden">
+        <div id="detailPopup" class="">
             <div class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
-                <img src="./resources/img/camera.png" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
+                <img src="<?= $detailPhoto[0]["p_one"] ?>" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
                 <div class=" p-3 space-y-3">
-                    <p class=" font-semibold"> <?= $detailUsername[0]['username'] ?> </p>
+                    <p class=" font-semibold"> <?= $detailName[0]['name'] ?> </p>
                     <p class=" text-yellow-500 text-xl">
                         <?php
                         if (!function_exists('numberToStars')) {
@@ -156,10 +157,10 @@ include "../Controller/reviewandratingController.php";
                         ?>
                         <?php }  ?>
                         <?= numberToStars($data["rating"]) ?>
-                        <span>/</span>
-                        <span>Kyaw Swar Phyo</span>
+                        <span class="text-black">/</span>
+                        <span class="text-black"><?= $detailUsername[0]['username'] ?></span>
                     </p>
-                    <p class=" text-gray-500">Good Quality!!</p>
+                    <p class=" text-gray-500"><?= $reviewReview[0]["comment"] ?></p>
                     <div>
                         <span class=" text-gray-500 pt-5">Category : </span>
                         <span>Camera</span>
