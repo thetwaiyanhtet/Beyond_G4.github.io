@@ -4,7 +4,7 @@ session_start();
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
-    "SELECT * FROM m_admin_category where del_flg=0;"
+    "SELECT * FROM m_admin_category;"
 );
 $sql->execute(); //run real sql
 

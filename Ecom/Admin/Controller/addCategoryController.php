@@ -15,7 +15,7 @@ if(count($_POST) == 0){
 
     $sql=$pdo->prepare(
     "INSERT INTO m_admin_category
-    ( name,
+    ( c_name,
     description
     )
     VALUES
