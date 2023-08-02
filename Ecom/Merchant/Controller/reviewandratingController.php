@@ -18,7 +18,7 @@ $sqlusername = $pdo->prepare(
     );
 
     $sqlproductName = $pdo->prepare(
-        "SELECT m_product.name
+        "SELECT m_product.p_name
         FROM m_cusreview
         INNER JOIN m_product ON m_cusreview.id = m_product.id
         WHERE m_cusreview.id = '1';
@@ -32,5 +32,6 @@ $sqlproductName->execute();
 
 $_SESSION["getUsername"] = $sqlusername->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["getProductName"] = $sqlproductName->fetchAll(PDO::FETCH_ASSOC);
-
+print_r($_SESSION["getProductName"]);
+print_r($_SESSION["getUsername"]);
 
