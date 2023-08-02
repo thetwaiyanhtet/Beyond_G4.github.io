@@ -3,7 +3,7 @@
 
 // echo "<pre>";
 // print_r($result);
-include "./sidebar.php";
+// include "./sidebar.php";
 include "../Controller/productListController.php";
 $result = $_SESSION["m_product"];
 // echo "<pre>";
@@ -25,14 +25,14 @@ $result = $_SESSION["m_product"];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
-
+    <script src="./resources/js/dateandtime.js " defer></script>
 </head>
 
 <body>
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
+                <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
@@ -192,10 +192,10 @@ $result = $_SESSION["m_product"];
                                             <td class="px-6 py-4 text-yellow-500">
                                                 Low stock
                                             </td>
-                                        <?php } else if($product["instock"] == 0){ ?>
-                                        <td class="px-6 py-4 text-red-500">
-                                            Out of stock
-                                        </td>
+                                        <?php } else if ($product["instock"] == 0) { ?>
+                                            <td class="px-6 py-4 text-red-500">
+                                                Out of stock
+                                            </td>
                                         <?php } ?>
                                         <td class="px-6 py-4 text-right">
                                             <a href="../Controller/editProductController.php?id=<?= $product["id"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
