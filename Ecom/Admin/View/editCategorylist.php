@@ -28,10 +28,10 @@ include "./adminsidebar.php";
 
         <div class="ml-10 pr-10 pb-5">
             <p class=" text-xl ml-5 font-bold font-philosopher pt-10">Category List</p>
-            <div class=" flex items-center mt-5 ml-5">
+            <!-- <div class=" flex items-center mt-5 ml-5">
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8 indent-2" type="search" name="" id="">
-            </div>
+            </div> -->
             <div class="border shadow-2xl mt-10 rounded-xl">
 
                 <form action="../Controller/updateCategoryController.php" method="POST">
@@ -177,7 +177,7 @@ include "./adminsidebar.php";
                 ?>
             </div>
     </main>
-    <script>
+    <!-- <script>
         document.getElementById('update').addEventListener('click', (e) => {
             document.getElementById('hs').classList.add('show');
             document.getElementById('hs').classList.remove('hidden');
@@ -186,7 +186,7 @@ include "./adminsidebar.php";
             document.getElementById('hs').classList.add('hidden');
             document.getElementById('hs').classList.remove('show');
         })
-    </script>
+    </script> -->
 </body>
 
 </html>
