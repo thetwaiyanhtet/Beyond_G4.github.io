@@ -5,10 +5,9 @@ $reviewdata = $_SESSION["getReviewandRating"];
 $username = $_SESSION["getUsername"];
 $productName = $_SESSION["getProductName"];
 $reviewReview =   $_SESSION["reviewDetail"];
-$detailName = $_SESSION["detailProductName"];
-$detailUsername = $_SESSION["detailUsername"];
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
+
 ?>
 
 <!doctype html>
@@ -115,7 +114,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <button>
-                                                            <a id="popupButton" href="./review and rating copy.php?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
+                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php ?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
                                                         </button>
                                                     </td>
                                                 </tr>

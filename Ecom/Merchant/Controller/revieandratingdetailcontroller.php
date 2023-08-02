@@ -1,7 +1,7 @@
 <?php
 session_start();
 $id = $_GET["id"];
-
+echo $id;
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
