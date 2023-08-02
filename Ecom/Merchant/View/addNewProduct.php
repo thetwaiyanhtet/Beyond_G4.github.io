@@ -132,7 +132,7 @@ include "../Controller/categoryListController.php";
                                     </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 2</label></div>
+                                    <div><label>Color 3</label></div>
                                     <div><input type="color" name="color3">
                                         <!-- <input type="text" id="put3" name="color3" class="inputBox"></div> -->
                                     </div>
