@@ -1,5 +1,8 @@
 <?php
 include "./adminsidebar.php";
+include "../Controller/costomerListController.php";
+$result = $_SESSION["customers"];
+
 ?>
 <!doctype html>
 <html>
@@ -7,7 +10,7 @@ include "./adminsidebar.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
+    <title>Customer List</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,114 +53,40 @@ include "./adminsidebar.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                John
-                            </th>
-                            <td class="px-6 py-4">
-                                Mail Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                Address Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                09123456789
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                John
-                            </th>
-                            <td class="px-6 py-4">
-                                Mail Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                Address Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                09123456789
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                John
-                            </th>
-                            <td class="px-6 py-4">
-                                Mail Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                Address Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                09123456789
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                John
-                            </th>
-                            <td class="px-6 py-4">
-                                Mail Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                Address Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                09123456789
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                John
-                            </th>
-                            <td class="px-6 py-4">
-                                Mail Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                Address Sample
-                            </td>
-                            <td class="px-6 py-4">
-                                09123456789
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./customers.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img id="del2" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
-                            </td>
-                        </tr>
+                        <?php foreach ($result as $customer) { ?>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <?= $customer["username"]; ?>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <?= $customer["email"]; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?= $customer["customer_city"]; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?= $customer["phone"]; ?>
+                                </td>
+                                <td class="px-6 py-4 flex space-x-3">
+                                    <a href="./customerDetail.php?id=<?= $customer["id"]; ?>"><img src="./resources/img/eye.svg" alt=""></a>
+                                    <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <div class="flex justify-between items-center py-2 px-3 pt-5">
-                        <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
-                        <div>Page 1 of 10</div>
-                        <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
-                    </div>
+                    <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
+                    <div>Page 1 of 10</div>
+                    <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
+                </div>
             </section>
         </div>
         <div id="delhid" class=" absolute top-20 mt-40 ml-60 hidden">
-                <?php
-                include "./deldetepo-up.php";
-                ?>
-            </div>
+            <?php
+            include "./deldetepo-up.php";
+            ?>
+        </div>
     </main>
     <script>
         document.getElementById('del').addEventListener('click', (e) => {

@@ -1,5 +1,7 @@
 <?php
 include "./adminsidebar.php";
+include "../Controller/customerDetailController.php";
+//print_r($customerDetail);
 ?>
 
 <!doctype html>
@@ -24,23 +26,25 @@ include "./adminsidebar.php";
         <div class=" flex justify-center pr-5 py-6">
             <div class=" w-screen h-full rounded-lg p-5 border border-gray-400 shadow-md">
                 <h1 class="  font-bold font-philosopher">Customer Information</h1>
-                <div class=" flex-col space-y-3 w-full py-4">
-                    <div class=" flex">
-                        <p class=" w-40">Email</p>
-                        <p class=" w-20">-</p>
-                        <p class=" ">Email Smaple</p>
+                
+                    <div class=" flex-col space-y-3 w-full py-4">
+                        <div class=" flex">
+                            <p class=" w-40">Email</p>
+                            <p class=" w-20">-</p>
+                            <p class=" "><?= $customerDetail["email"]; ?></p>
+                        </div>
+                        <div class=" flex">
+                            <p class="w-40">phone</p>
+                            <p class=" w-20">-</p>
+                            <p class=" "><?= $customerDetail["phone"]; ?></p>
+                        </div>
+                        <div class="flex">
+                            <p class="w-40">Address</p>
+                            <p class=" w-20">-</p>
+                            <p class=""><?= $customerDetail["customer_city"]; ?></p>
+                        </div>
                     </div>
-                    <div class=" flex">
-                        <p class="w-40">phone</p>
-                        <p class=" w-20">-</p>
-                        <p class=" ">09-123456789</p>
-                    </div>
-                    <div class="flex">
-                        <p class="w-40">Address</p>
-                        <p class=" w-20">-</p>
-                        <p class="">3 Desert Broom Court,Jersey City,New Jersey,United States.</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
 
