@@ -15,6 +15,7 @@
 </head>
 
 <body class="mt-3 overflow-hidden">
+  
   <section class="w-screen h-screen flex justify-center align-middle items-center">
     <section class="flex flex-col items-center">
       <ion-icon class="text-9xl text-green " name="checkmark-circle-outline"></ion-icon>

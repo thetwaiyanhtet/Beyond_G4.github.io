@@ -1,15 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
-const rotateY = plugin(function ({ addUtilities }) {
-  addUtilities({
-    '.rotate-y-180': {
-      transform: "rotateY(180deg)"
-    },
-    '.-rotate-y-180': {
-      transform: "rotateY(-180deg)"
-    }
-  })
-})
+
 module.exports = {
   darkMode: 'class',
   content: ["./View/*.{html,js,php}"],
@@ -41,15 +31,9 @@ module.exports = {
       backgroundImage: {
         'noise_bg': ['url(./resources/img/noise.svg)'],
         'linear_dark': ['linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%)']
-      },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '20px',
-          md: "50px"
-        }
       }
     },
-    plugins: [rotateY]
+    plugins: [],
+    
   }
 }
