@@ -14,7 +14,6 @@ if(count($_POST) == 0){
     $buyprice=$_POST["buyprice"];
     $sellprice=$_POST["sellprice"];
     $quantity=$_POST["quantity"];
-    $date=$_POST["date"];
     $description=$_POST["description"];
     $color1=$_POST["color1"];
     $color2=$_POST["color2"];
@@ -35,7 +34,6 @@ if(count($_POST) == 0){
     buyprice,
     sellprice,
     instock,
-    date,
     description,
     color_1,
     color_2,
@@ -43,7 +41,9 @@ if(count($_POST) == 0){
     p_one,
     p_two,
     p_three,
-    p_four
+    p_four,
+    create_date,
+    update_date
     )
     VALUES
     (
@@ -53,7 +53,6 @@ if(count($_POST) == 0){
         :buyprice,
         :sellprice,
         :instock,
-        :date,
         :description,
         :color_1,
         :color_2,
@@ -61,7 +60,9 @@ if(count($_POST) == 0){
         :photo1,
         :photo2,
         :photo3,
-        :photo4
+        :photo4,
+        :createDate,
+        :updateDate
 
     )
     "
@@ -72,7 +73,6 @@ if(count($_POST) == 0){
     $sql->bindValue(":buyprice",$buyprice);
     $sql->bindValue(":sellprice",$sellprice);
     $sql->bindValue(":instock",$quantity);
-    $sql->bindValue(":date",$date);
     $sql->bindValue(":description",$description);
     $sql->bindValue(":color_1",$color1);
     $sql->bindValue(":color_2",$color2);
@@ -81,6 +81,9 @@ if(count($_POST) == 0){
     $sql->bindValue(":photo2",$photo2);
     $sql->bindValue(":photo3",$photo3);
     $sql->bindValue(":photo4",$photo4);
+    $sql -> bindValue (":createDate", date("Y-m-d"));
+    $sql -> bindValue (":updateDate", date("Y-m-d"));
+    
  
     $sql->execute();
 

@@ -91,7 +91,7 @@ $result = $_SESSION["m_category"];
                            px-3
                            lg:px-4
                            ">
-                                                    Date
+                                                    Create Date
 
                                                 <th class="
                            w-1/6
