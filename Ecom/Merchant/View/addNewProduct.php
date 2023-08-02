@@ -15,6 +15,7 @@ include "./sidebar.php"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="../View/resources/js/product.js" defer></script>
+    <script src="./resources/js/dateandtime.js " defer></script>
     <!-- <script>
 
         function fetch(){
@@ -35,7 +36,7 @@ include "./sidebar.php"
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
+                <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
@@ -63,7 +64,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
                                         </label>
@@ -71,7 +72,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
                                         </label>
@@ -79,7 +80,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
                                         </label>

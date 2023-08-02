@@ -3,7 +3,7 @@
 
 // echo "<pre>";
 // print_r($result);
-include "./sidebar.php";
+// include "./sidebar.php";
 include "../Controller/productListController.php";
 $result = $_SESSION["m_product"];
 // echo "<pre>";
@@ -25,14 +25,14 @@ $result = $_SESSION["m_product"];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
-
+    <script src="./resources/js/dateandtime.js " defer></script>
 </head>
 
 <body>
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
+                <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
@@ -125,7 +125,7 @@ $result = $_SESSION["m_product"];
                     </div>
 
                     <div class="relative overflow-x-auto py-5">
-                    
+
                         <table class="w-full text-sm text-left text-gray-500 ">
                             <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center ">
                                 <tr>
@@ -160,47 +160,51 @@ $result = $_SESSION["m_product"];
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($result as $product) { ?>
-                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    <?= $product["name"];?>
-                                    </th>
-                                    <td class="px-6 py-4">
-                                    <?= $product["product_id"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["buyprice"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["sellprice"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["instock"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["date"];?>
-                                    </td>
+                                <?php foreach ($result as $product) { ?>
+                                    <tr class=" border-b hover:bg-gray-200 border-gray-500 text-center">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                            <?= $product["name"]; ?>
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            <?= $product["product_id"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
 
-                                    <?php if($product["instock"] > 10) {?>
-                                    <td class="px-6 py-4 text-green-500">
-                                        Instock
-                                    </td>
-                                    <?php } else { ?>
-                                        <td class="px-6 py-4 text-red-500">
-                                        Out of stock
-                                    </td>
-                                    <?php } ?>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="../Controller/editProductController.php?id=<?= $product["id"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["buyprice"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["sellprice"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["instock"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["date"]; ?>
+                                        </td>
+
+                                        <?php if ($product["instock"] > 10) { ?>
+                                            <td class="px-6 py-4 text-green-500">
+                                                Instock
+                                            </td>
+                                        <?php } else if ($product["instock"] < 10) { ?>
+                                            <td class="px-6 py-4 text-yellow-500">
+                                                Low stock
+                                            </td>
+                                        <?php } else if ($product["instock"] == 0) { ?>
+                                            <td class="px-6 py-4 text-red-500">
+                                                Out of stock
+                                            </td>
+                                        <?php } ?>
+                                        <td class="px-6 py-4 text-right">
+                                            <a href="../Controller/editProductController.php?id=<?= $product["id"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
+                                        </td>
+                                    </tr>
                                 <?php } ?>
                             </tbody>
                         </table>
-                        
+
                         <div class="flex justify-between items-center py-2 pt-5 px-3">
                             <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
                             <div>Page 1 of 10</div>

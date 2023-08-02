@@ -13,6 +13,7 @@ include "./sidebar.php"
     <title>Edit Product</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./resources/js/dateandtime.js " defer></script>
     <link rel="stylesheet" href="./resources/css/inventory.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +38,7 @@ include "./sidebar.php"
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
+                <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
@@ -48,15 +49,15 @@ include "./sidebar.php"
         </header>
         <section>
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">Edit Product</span></p>
-           
-                <div class=" flex justify-center px-5 py-1">
-                    <div class=" w-screen h-full rounded-lg px-24 py-3 shadow-xl border-2 border-blue-950">
+
+            <div class=" flex justify-center px-5 py-1">
+                <div class=" w-screen h-full rounded-lg px-24 py-3 shadow-xl border-2 border-blue-950">
                     <form action="../Controller/updateProductController.php" method="POST">
                         <div class=" pb-5">
                             <h1 class=" text-lg font-bold font-philosopher">Edit Product</h1>
                         </div>
                         <div>
-                        <ul class=" flex space-x-3">
+                            <ul class=" flex space-x-3">
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
@@ -66,7 +67,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
                                         </label>
@@ -74,7 +75,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
                                         </label>
@@ -82,7 +83,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
                                         </label>
@@ -128,20 +129,20 @@ include "./sidebar.php"
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color 1</label></div>
                                     <div><input type="color" name="color1" value="<?php echo $productdata[0]["color_1"] ?>">
-                                    <!-- <input type="text" id="put1" name="color1" value="<?php echo $productdata[0]["color_1"] ?>" class="inputBox"></div> -->
-                                </div>
+                                        <!-- <input type="text" id="put1" name="color1" value="<?php echo $productdata[0]["color_1"] ?>" class="inputBox"></div> -->
+                                    </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color 2</label></div>
                                     <div><input type="color" name="color2" value="<?php echo $productdata[0]["color_2"] ?>">
-                                    <!-- <input type="text" id="put2" name="color2" value="<?php echo $productdata[0]["color_2"] ?>" class="inputBox"></div> -->
-                                </div>
+                                        <!-- <input type="text" id="put2" name="color2" value="<?php echo $productdata[0]["color_2"] ?>" class="inputBox"></div> -->
+                                    </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color 2</label></div>
                                     <div><input type="color" name="color3" value="<?php echo $productdata[0]["color_3"] ?>">
-                                    <!-- <input type="text" id="put3" name="color3" value="<?php echo $productdata[0]["color_3"] ?>" class="inputBox"></div> -->
-                                </div>
+                                        <!-- <input type="text" id="put3" name="color3" value="<?php echo $productdata[0]["color_3"] ?>" class="inputBox"></div> -->
+                                    </div>
                                 </div>
                                 <!-- <div class=" flex justify-between space-x-10 items-center">
                                 <div>
@@ -226,17 +227,17 @@ include "./sidebar.php"
                             </div>
                         </div>
                         <div class="mt-6 flex items-center justify-end gap-x-6">
-                <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
-            </div>
-                        </form>
-                        <a href="../Controller/deleteProductController.php?id=<?php echo $productdata[0]["id"] ?>">
-            <div class="mt-6 flex items-center justify-end gap-x-6">
-                <button type="submit" class="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
-            </div>
-                    </div>
+                            <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
+                        </div>
+                    </form>
+                    <a href="../Controller/deleteProductController.php?id=<?php echo $productdata[0]["id"] ?>">
+                        <div class="mt-6 flex items-center justify-end gap-x-6">
+                            <button type="submit" class="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
+                        </div>
                 </div>
-           
-            
+            </div>
+
+
 
         </section>
     </main>

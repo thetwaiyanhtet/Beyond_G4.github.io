@@ -17,6 +17,7 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./resources/js/dateandtime.js " defer></script>
     <link rel="stylesheet" href="./resources/css/navbar.css">
 </head>
 
@@ -24,7 +25,7 @@ include "./sidebar.php";
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
+                <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
