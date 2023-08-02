@@ -6,13 +6,14 @@ if(isset($_POST["register"])){
    $email = $_POST["email"];
    $password = $_POST["password"];
 
+
    //DB connection
    include "../Model/model.php";
 
    //check duplicate email
 
    $sql = $pdo -> prepare(
-    "SELECT * FROM m_admin WHERE email=:email"
+    "SELECT * FROM merchant WHERE email=:email"
    );
    $sql ->bindValue(":email", $email);
    $sql -> execute();
@@ -21,12 +22,11 @@ if(isset($_POST["register"])){
 
    if (count($resultEmail) == 0) {
     $sql = $pdo ->prepare(
-        "INSERT INTO  m_admin
+        "INSERT INTO  merchant
         (
-            username,
+            name,
             email,
             password,
-            p_picture,
             create_date,
             update_date
         )
@@ -34,7 +34,6 @@ if(isset($_POST["register"])){
             :username,
             :email,
             :password,
-            :picture,
             :createDate,
             :updateDate
         )
@@ -42,13 +41,13 @@ if(isset($_POST["register"])){
        );
        $sql -> bindValue (":username", $username);
        $sql -> bindValue (":email", $email);
-       $sql -> bindValue (":password", password_hash($password, PASSWORD_DEFAULT));
-       $sql -> bindValue (":picture", '../View/resources/img/amazfit.png');
+       $sql -> bindValue (":password", password_hash($password, PASSWORD_DEFAULT));;
        $sql -> bindValue (":createDate", date("Y-m-d"));
        $sql -> bindValue (":updateDate", date("Y-m-d"));
        $sql->execute();
-    
        header("Location: ../View/ChoosePlan.php");
+
+       $_SESSION["merchant_ID"] = $email;
    }else {
     $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
     header("Location: ../View/signUp.php");

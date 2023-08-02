@@ -25,9 +25,8 @@ if(isset($_POST["login"])){
       $_SESSION["loginerror"] = "Email or password incorrect!";
       header("Location: ../View/login.php");
     }
-    
    }
-
+   $_SESSION["merchant_ID"] = $email;
    header("Location: ../View/dashboard.php");
 }else{
     header("Location: ../View/404page.php");

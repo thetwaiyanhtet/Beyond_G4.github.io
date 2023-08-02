@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,12 +26,12 @@
             <p class="font-poppins mb-4">Payment Method</p>
             <div class=" w-[700px] h-[420px] border border-solid rounded-lg border-black drop-shadow-2xl">
                 <label class="flex m-5">
-                    <input type="radio" name="PayPal" class="form-checkbox w-6 h-6">
+                    <input type="radio" name="payment" class="form-checkbox w-6 h-6">
                     <p class="mt-0.5 ml-2"><img src="./resources/img/pngwing 1.png" alt="PayPal"></p>
                 </label>
                 <p class=" w-94  border border-solid border-black"></p>
                 <div class="float-left inline-flex m-2">
-                    <input type="radio" name="Credit" class="form-checkbox w-6 h-6">
+                    <input type="radio" name="payment" class="form-checkbox w-6 h-6">
                     <p class="ml-2 font-poppins">Credit or debit card</p>
                 </div>
                 <div class="float-right inline-flex m-2">
@@ -60,7 +64,7 @@
                 </div>
                 <p class=" w-94  border border-solid border-black"></p>
                 <div class="float-left inline-flex m-4">
-                    <input type="radio" name="Credit" class="form-checkbox w-6 h-6 outline-none">
+                    <input type="radio" name="payment" class="form-checkbox w-6 h-6 outline-none">
                     <p class="ml-2 font-poppins">Kpay</p>
                 </div>
                 <div class="float-right inline-flex m-4">
@@ -74,17 +78,43 @@
             <div class=" w-[450px] h-[350px] border border-solid rounded-lg border-black drop-shadow-2xl">
                 <div class="m-2">
                     <span class="font-light">Name:</span>
-                    <span class="font-light">User</span>
+                    <span class="font-light">
+                        <?php
+                        include "../Model/model.php";
+                        $email = $_SESSION["merchant_ID"];
+                        $sql = $pdo->prepare(
+                            "SELECT * from merchant WHERE email = '$email'"
+                        );
+                        $sql->execute();
+                        $row = $sql->fetch(PDO::FETCH_ASSOC);
+                        echo $row["name"];
+                        ?>
+                    </span>
                 </div>
                 <div class="m-2">
                     <span class="font-light">Email</span>
-                    <span class="font-light">user@gmail.com</span>
+                    <span class="font-light">
+                        <?php
+                        echo $row["email"];
+                        ?>
+
+                    </span>
                 </div>
                 <p class=" w-94  border border-solid border-black"></p>
                 <button class=" w-80 h-10 border border-solid border-black text-sm rounded-lg ml-24 m-2"><img src="./resources/img/warning2.png" alt="warning" class="inline-flex mr-2 mb-1">Verify the information before proceeding.</button>
                 <div class="flex justify-between m-4">
                     <p>Basic Subscription</p>
-                    <p>$20.00</p>
+                    <p>
+                        <?php
+                        $selectPlan = $row['plan_id'];
+                        $sql = $pdo->prepare(
+                            "SELECT * from m_plan WHERE id = $selectPlan"
+                        );
+                        $sql ->execute();
+                        $plan =  $sql->fetch(PDO::FETCH_ASSOC);
+                        echo "$".$plan['price'];
+                        ?>
+                    </p>
                 </div>
                 <div class="flex justify-between m-4">
                     <p>Tax</p>
