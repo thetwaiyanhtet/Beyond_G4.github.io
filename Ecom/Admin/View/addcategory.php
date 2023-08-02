@@ -19,10 +19,10 @@ include "./adminsidebar.php";
 
         <div class="ml-10">
             <p class=" text-xl font-bold font-philosopher ml-2 pt-10">Add New Category</p>
-            <div class=" flex items-center mt-5">
+            <!-- <div class=" flex items-center mt-5">
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 ml-3 w-52 outline-none rounded-lg h-8 indent-2" type="search" name="" id="">
-            </div>
+            </div> -->
             <form action="../Controller/addCategoryController.php" method="POST">
                 <div class="border shadow-2xl h-72 mt-10 rounded-xl">
                     <div class="p-5">

@@ -1,5 +1,7 @@
 <?php
 include "./adminsidebar.php";
+include "../Controller/productDetailController.php";
+// print_r($productDetail);
 ?>
 
 <!doctype html>
@@ -34,22 +36,22 @@ include "./adminsidebar.php";
                         <div class=" flex">
                             <p class="w-40">Merchant Name</p>
                             <p class="w-32">-</p>
-                            <p>AI Mobile</p>
+                            <p><?= $productDetail["merchant_id"]; ?></p>
                         </div>
                         <div class=" flex">
                             <p class="w-40">Catagory</p>
                             <p class="w-32">-</p>
-                            <p>Mobile Phone</p>
+                            <p><?= $productDetail["category_id"]; ?></p>
                         </div>
                         <div class="flex">
                             <p class="w-40">Create Date</p>
                             <p class="w-32">-</p>
-                            <p class="">15-07-2023</p>
+                            <p class=""><?= $productDetail["create_date"]; ?></p>
                         </div>
                         <div class="flex">
                             <p class="w-40">Stock</p>
                             <p class="w-32">-</p>
-                            <p class="">12600</p>
+                            <p class=""><?= $productDetail["instock"]; ?></p>
                         </div>
                         <div class="flex">
                             <p class="w-40">Color</p>
@@ -64,12 +66,12 @@ include "./adminsidebar.php";
                         <div class="flex">
                             <p class="w-40">Price</p>
                             <p class="w-32">-</p>
-                            <p class="">$4500</p>
+                            <p class="">$<?= $productDetail["sellprice"]; ?></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="font-semibold text-4xl">iPhone 14 Pro Max</p>
+            <p class="font-semibold text-4xl"><?= $productDetail["name"]; ?></p>
             <div class="flex space-x-4">
                 <div class="flex space-x-2">
                     <img src="./resources/img/star admin.svg" alt="">

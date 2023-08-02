@@ -3,18 +3,17 @@
 if(count($_POST) == 0){
     header("Location: ../View/errors/error.php");
 }else{
-    
+
     $id=$_POST["id"];
     $cname=$_POST["cname"];
     $cdescription=$_POST["cdescription"];
     
-    
-    
+
     include "../Model/model.php";
 
     $sql=$pdo->prepare(
     "UPDATE m_admin_category SET
-        name=:cname,
+        c_name=:cname,
         description=:cdescription
     
         WHERE id=:id;

@@ -5,7 +5,7 @@ include "../Model/model.php";
 
 $sql = $pdo->prepare(
     "SELECT `m_product`.id AS `productID`,`m_product`.name,`m_product`.`product_id`,`m_product`.`category_id`,`m_product`.buyprice,
-    `m_product`.sellprice,`m_product`.instock,`m_product`.date,`m_admin_category`.c_name
+    `m_product`.sellprice,`m_product`.instock,`m_product`.create_date,`m_admin_category`.c_name
      FROM `m_product` 
      LEFT JOIN `m_admin_category`
     ON `m_product`.`category_id`=`m_admin_category`.id WHERE`m_product`.`del_flg`=0"

@@ -1,5 +1,7 @@
 <?php
 include "./adminsidebar.php";
+include '../Controller/productListController.php';
+$result = $_SESSION["products"];
 ?>
 <!doctype html>
 <html>
@@ -13,7 +15,7 @@ include "./adminsidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/products.css">
-    
+
 </head>
 
 <body>
@@ -54,114 +56,35 @@ include "./adminsidebar.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
-                               <img src="./resources/img/smartWatch.png" alt="...">
-                            </th>
-                            <td class="px-6 py-2">
-                                Smart Watch
-                            </td>
-                            <td class="px-6 py-2">
-                                Ai Mobile
-                            </td>
-                            <td class="px-6 py-2">
-                                $399
-                            </td>
-                            <td class="px-6 py-2">
-                                100
-                            </td>
-                            <td class="px-6 py-2 ">
-                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
-                                <img src="./resources/img/iph.png" alt="...">
-                            </th>
-                            <td class="px-6 py-2">
-                                iPhone 14 Pro Max
-                            </td>
-                            <td class="px-6 py-2">
-                                Ai Mobile
-                            </td>
-                            <td class="px-6 py-2">
-                                $399
-                            </td>
-                            <td class="px-6 py-2">
-                                100
-                            </td>
-                            <td class="px-6 py-2 ">
-                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
-                                <img src="./resources/img/dellLaptop.png" alt="...">
-                            </th>
-                            <td class="px-6 py-2">
-                                Dell Laptop
-                            </td>
-                            <td class="px-6 py-2">
-                                Ai Mobile
-                            </td>
-                            <td class="px-6 py-2">
-                                $399
-                            </td>
-                            <td class="px-6 py-2">
-                                100
-                            </td>
-                            <td class="px-6 py-2">
-                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
-                                <img src="./resources/img/keyboard.png" alt="...">
-                            </th>
-                            <td class="px-6 py-2">
-                                Keyboard
-                            </td>
-                            <td class="px-6 py-2">
-                                Ai Mobile
-                            </td>
-                            <td class="px-6 py-2">
-                                $399
-                            </td>
-                            <td class="px-6 py-2">
-                                100
-                            </td>
-                            <td class="px-6 py-2 ">
-                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
-                            </td>
-                        </tr>
-                        <tr class=" hover:bg-gray-200">
-                            <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
-                                <img src="./resources/img/camera.png" alt="...">
-                            </th>
-                            <td class="px-6 py-2">
-                                Camera
-                            </td>
-                            <td class="px-6 py-2">
-                                Ai Mobile
-                            </td>
-                            <td class="px-6 py-2">
-                                $399
-                            </td>
-                            <td class="px-6 py-2">
-                                100
-                            </td>
-                            <td class="px-6 py-2 ">
-                                <a href="./productDetails.php" class="font-medium text-blue-600  hover:underline">View Details</a>
-                            </td>
-                        </tr>
-
+                        <?php foreach ($result as $product) { ?>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
+                                    <img src="./resources/img/smartWatch.png" alt="...">
+                                </th>
+                                <td class="px-6 py-2">
+                                    <?= $product["name"]; ?>
+                                </td>
+                                <td class="px-6 py-2">
+                                    <?= $product["merchant_id"]; ?>
+                                </td>
+                                <td class="px-6 py-2">
+                                    <?= $product["sellprice"]; ?>
+                                </td>
+                                <td class="px-6 py-2">
+                                    <?= $product["instock"]; ?>
+                                </td>
+                                <td class="px-6 py-2 ">
+                                    <a href="./productDetails.php?id=<?= $product["id"]; ?>" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <div class="flex justify-between items-center py-2 px-3 pt-5">
-                        <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
-                        <div>Page 1 of 10</div>
-                        <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
-                    </div>   
+                    <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
+                    <div>Page 1 of 10</div>
+                    <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
+                </div>
             </section>
         </div>
 

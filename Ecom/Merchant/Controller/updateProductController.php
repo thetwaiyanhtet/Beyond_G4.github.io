@@ -12,7 +12,6 @@ if(count($_POST) == 0){
     $buyprice=$_POST["buyprice"];
     $sellprice=$_POST["sellprice"];
     $quantity=$_POST["quantity"];
-    $date=$_POST["date"];
     $description=$_POST["description"];
     $color1=$_POST["color1"];
     $color2=$_POST["color2"];
@@ -33,7 +32,6 @@ if(count($_POST) == 0){
         buyprice=:buyprice,
         sellprice=:sellprice,
         instock=:instock,
-        date=:date,
         description=:description,
         color_1=:color_1,
         color_2=:color_2,
@@ -53,7 +51,6 @@ if(count($_POST) == 0){
     $sql->bindValue(":buyprice",$buyprice);
     $sql->bindValue(":sellprice",$sellprice);
     $sql->bindValue(":instock",$quantity);
-    $sql->bindValue(":date",$date);
     $sql->bindValue(":description",$description);
     $sql->bindValue(":color_1",$color1);
     $sql->bindValue(":color_2",$color2);

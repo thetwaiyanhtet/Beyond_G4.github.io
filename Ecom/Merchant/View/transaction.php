@@ -80,7 +80,7 @@ include "./sidebar.php"
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-green-500">
-                                    Approved
+                                   Approved
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" checked class=" w-10">
@@ -125,8 +125,8 @@ include "./sidebar.php"
                                 <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
-                                <td class="px-6 py-4 text-green-500">
-                                    Approved
+                                <td class="px-6 py-4 text-yellow-500">
+                                   Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">
@@ -171,8 +171,8 @@ include "./sidebar.php"
                                 <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
-                                <td class="px-6 py-4 text-green-500">
-                                    Approved
+                                <td class="px-6 py-4 text-yellow-500">
+                                   Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">
@@ -217,8 +217,8 @@ include "./sidebar.php"
                                 <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
-                                <td class="px-6 py-4 text-green-500">
-                                    Approved
+                                <td class="px-6 py-4 text-yellow-500">
+                                   Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">
@@ -263,8 +263,8 @@ include "./sidebar.php"
                                 <td class="pl-8 py-4">
                                     M-BANKING
                                 </td>
-                                <td class="px-6 py-4 text-green-500">
-                                    Approved
+                                <td class="px-6 py-4 text-yellow-500">
+                                   Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">

@@ -351,14 +351,14 @@ include "./sidebar.php";
                 </div>
             </div>
 
-            <div class=" flex justify-center px-5 py-2 space-x-4">
+            <!-- <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <div class="flex justify-between items-center">
                         <h1 class=" text-lg font-bold font-philosopher">Sales & Profits</h1>
                         <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:text-white hover:bg-blue-500"><ion-icon name="calendar-clear-outline"></ion-icon> Weekly</button>
                     </div>
                     <div class=" w-[700px] flex-col justify-between py-4">
-                        <!-- <canvas class="p-10" id="chartLine"></canvas> -->
+                        <canvas class="p-10" id="chartLine"></canvas>
                         <img src="./resources/img/saleChart.png" alt="">
                     </div>
                 </div>
@@ -372,7 +372,7 @@ include "./sidebar.php";
                         <img src="./resources/img/orderChart.png" alt="...">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
 </body>

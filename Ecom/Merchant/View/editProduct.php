@@ -3,7 +3,7 @@ session_start();
 $productdata = $_SESSION["editproduct"];
 include "../Controller/categoryListController.php";
 // print_r($productdata);
-include "./sidebar.php";
+include "./sidebar.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -214,12 +214,6 @@ include "./sidebar.php";
                                         <p>Quantity</p>
                                     </div>
                                     <div><input type="text" name="quantity" value="<?php echo $productdata[0]["instock"] ?>" class="inputBox"></div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Date</p>
-                                    </div>
-                                    <div class=" w-[203px]"><input type="date" name="date" value="<?php echo $productdata[0]["date"] ?>" class="inputBox w-44"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10">
                                     <div>
