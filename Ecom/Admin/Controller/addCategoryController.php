@@ -16,17 +16,23 @@ if(count($_POST) == 0){
     $sql=$pdo->prepare(
     "INSERT INTO m_admin_category
     ( c_name,
-    description
+    description,
+    create_date,
+    update_date
     )
     VALUES
     (
         :cname,
-        :cdescription  
+        :cdescription,
+        :createDate,
+        :updateDate  
     )
     "
     );
     $sql->bindValue(":cname",$cname);
     $sql->bindValue(":cdescription",$cdescription);
+    $sql -> bindValue (":createDate", date("Y-m-d"));
+    $sql -> bindValue (":updateDate", date("Y-m-d"));
   
  
     $sql->execute();

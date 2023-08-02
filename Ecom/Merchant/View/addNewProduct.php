@@ -132,7 +132,7 @@ include "../Controller/categoryListController.php";
                                     </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 2</label></div>
+                                    <div><label>Color 3</label></div>
                                     <div><input type="color" name="color3">
                                         <!-- <input type="text" id="put3" name="color3" class="inputBox"></div> -->
                                     </div>
@@ -205,12 +205,7 @@ include "../Controller/categoryListController.php";
                                     </div>
                                     <div><input type="text" name="quantity" class="inputBox"></div>
                                 </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Date</p>
-                                    </div>
-                                    <div class=" w-[203px]"><input type="date" name="date" class="inputBox w-44"></div>
-                                </div>
+                                
                                 <div class=" flex justify-between space-x-10">
                                     <div>
                                         <p>Description</p>
@@ -219,8 +214,7 @@ include "../Controller/categoryListController.php";
                                 </div>
                             </div>
                         </div>
-                        <div class=" justify-end space-x-3 flex pt-4">
-                            <button class="btn">Discard</button>
+                        <div class=" justify-end space-x-3 flex pt-4">                   
                             <button class=" btn">Add Product</button>
                         </div>
                     </div>

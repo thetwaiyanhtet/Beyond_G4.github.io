@@ -24,7 +24,7 @@
         <form action="../Controller/registerController.php" method="post">
             <div class="flex flex-col space-y-4 pt-14">
                 <div class=" text-center items-center flex flex-col justify-center space-y-5">
-                    <div><img src="./resources/img/logo_slowdown.gif" alt=""></div>
+                    <div><img src="./resources/img/logo_slowdown.gif" alt="" class=" w-16"></div>
                     <div class=" font-quantico italic font-bold text-3xl text-[#3786FB]">BEYOND</div>
                     <div class=" font-philosopher font-bold text-2xl">Create an account</div>
                 </div>

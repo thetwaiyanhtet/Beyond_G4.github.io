@@ -27,16 +27,16 @@ $result = $_SESSION["m_category"];
 
         <div class="ml-10 pr-10 pb-5">
             <p class=" text-xl ml-5 font-bold font-philosopher pt-10">Category List</p>
-            <div class=" flex items-center mt-5 ml-5">
+            <!-- <div class=" flex items-center mt-5 ml-5">
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8 indent-2" type="search" name="" id="">
-            </div>
+            </div> -->
             <div class="border shadow-2xl mt-10 rounded-xl">
 
             
                 <div class="  p-5">
                     <p class="font-bold text-xl">Edit Categories</p>
-                    <div class="flex justify-around">
+                    <!-- <div class="flex justify-around">
                         <div class="space-y-3 mt-5">
                             <p>Category</p>
                             <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text">
@@ -48,7 +48,7 @@ $result = $_SESSION["m_category"];
                         </div>
                     </div>
                 </div>
-                <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
+                <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button> -->
           
 
                 <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
@@ -91,7 +91,7 @@ $result = $_SESSION["m_category"];
                            px-3
                            lg:px-4
                            ">
-                                                    Date
+                                                    Create Date
 
                                                 <th class="
                            w-1/6
@@ -172,7 +172,7 @@ $result = $_SESSION["m_category"];
                 ?>
             </div>
     </main>
-    <script>
+    <!-- <script>
         document.getElementById('update').addEventListener('click', (e) => {
             document.getElementById('hs').classList.add('show');
             document.getElementById('hs').classList.remove('hidden');
@@ -181,7 +181,7 @@ $result = $_SESSION["m_category"];
             document.getElementById('hs').classList.add('hidden');
             document.getElementById('hs').classList.remove('show');
         })
-    </script>
+    </script> -->
 </body>
 
 </html>
