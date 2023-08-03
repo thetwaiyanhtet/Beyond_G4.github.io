@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,12 +27,18 @@
         </div>
         <div class="md:w-4/5 w-56 md:h-fit h-96  border-2 border-solid  m-auto rounded-lg drop-shadow-xl bg-transparent z-10">
             <div class="flex md:m-2 md:justify-center space-x-10 z-20">
-                <div class="md:mt-5 mt-10">
-                    <input class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="UserName"></input>
-                    <input class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Password"></input>
-                    <a href="./forgetPw.php" class="underline font-poppins md:ml-44 ml-10 md:text-base text-sm mb-8">Forget Password</a>
-                    <button class="text-white bg-btn-color rounded-xl w-32 h-10 ml-10 mt-6 opacity-100">Log in</button>
-                </div>
+                <form action="../Controller/loginController.php" method="post">
+                    <p class="text-red-700 text-center">
+                        <?php
+                        echo  $_SESSION["loginerror"]
+                        ?></p>
+                    <div class="md:mt-5 mt-10">
+                        <input name="email" type="email" class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Email"></input>
+                        <input type="password" name="password" class="border border-solid rounded-lg bg-white md:w-56 w-44 h-12 p-4 ml-3 mb-5 font-poppins drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Password"></input>
+                        <a href="./forgetPw.php" class="underline font-poppins md:ml-36 ml-10 md:text-base text-sm mb-8">Forget Password</a>
+                        <button type="submit" name="login" class="text-white bg-btn-color rounded-xl w-32 h-10 ml-10 mt-6 opacity-100">Log in</button>
+                    </div>
+                </form>
                 <p class="font-poppins font-semibold mt-36 md:block hidden">Or</p>
                 <div class="font-poppins mb-4 pb-10 font-light md:block hidden">
                     <p class="mb-5">New CUSTOMER?</p>
@@ -56,3 +65,6 @@
 </body>
 
 </html>
+<?php
+echo  $_SESSION["loginerror"] = "";
+?></p>

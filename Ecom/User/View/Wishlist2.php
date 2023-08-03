@@ -92,7 +92,7 @@
     </nav>
     <div class="flex flex-wrap mt-4 w-auto h-auto md:space-x-24 ">
         <div class="md:flex flex-col md:m-5 m-2 space-y-5">
-            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Cart</button>
+            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">User Profile</button>
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">WishList</button>
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">History</button>
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>

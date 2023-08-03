@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 if (isset($_POST["payment"])) {
     $selected_payment = $_POST["payment"];
     echo $selected_payment;
-    $merchantEmail = $_SESSION["merchant_ID"];
+    $merchantEmail = $_SESSION["merchant_ID"]; ///carry 
     $selected_plan = $_SESSION["selectedPlan"];
     echo $selected_plan;
     include "../Model/model.php";
