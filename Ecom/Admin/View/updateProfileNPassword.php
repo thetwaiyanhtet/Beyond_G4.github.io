@@ -1,8 +1,18 @@
 <?php
-include "./adminsidebar.php";
+
+session_start();
+$admin = $_SESSION["m_admin"];
+
 ?>
+
 <!doctype html>
 <html>
+
+
+?>;
+<?php include "./adminsidebar.php";?>;
+<?php include "../Controller/updatepasswordController.php" ?>;
+
 
 <head>
     <meta charset="UTF-8">
@@ -64,28 +74,31 @@ include "./adminsidebar.php";
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Current Password</p>
                         <p>-</p>
+                        <form action="../Controller/passwordchangeContoller.php" method="post">
                         <div class="">
-                            <input type="password" value="kyawswar1234" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="password" value="" name="current" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">New Password</p>
                         <p>-</p>
                         <div class="">
-                            <input type="password" value="kyawswarlynn" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="password" value="" name="new"  class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Confirm Password</p>
                         <p>-</p>
                         <div class="">
-                            <input type="password" value="kyawswarlynn" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="password" value="" name="confirm" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
+                   
                 </div>
                 <div class=" justify-end flex pr-5 py-3">
-                    <button id="update" class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md">Change</button>
+                    <button id="update" type="submit" name="updated" value="Change" class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md">Change</button>
                 </div>
+                </form>
             </section>
         </div>
         <div id="delhid" class=" absolute top-20 mt-40 ml-60 hidden">
