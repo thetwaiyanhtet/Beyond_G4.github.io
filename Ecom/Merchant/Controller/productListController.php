@@ -4,7 +4,7 @@ session_start();
 include "../Model/model.php";
 include "../../Merchant/Controller/middleware/loginCheck.php";
 
-$merchantEmail = $_SESSION["merchant_ID"];
+$merchantEmail = $_SESSION["merchant_id"];
 $sql = $pdo->prepare(
     "SELECT `m_product`.id AS `productID`,`m_product`.name,`m_product`.`product_id`,`m_product`.`category_id`,`m_product`.buyprice,
     `m_product`.sellprice,`m_product`.instock,`m_product`.create_date,`m_admin_category`.c_name

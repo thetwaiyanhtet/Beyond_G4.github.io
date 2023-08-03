@@ -109,7 +109,7 @@ include  "../../Admin/Controller/readfaqController.php";
 
             <div>
                 <!-- Banner_1 section -->
-                <img src="./resources/img/home_hero/Banner_1_upt.png" alt="" class="mt-24 rounded-xl">
+                <img src="./resources/img/home_hero/Banner_1_upt.png" alt="" class="mt-16 rounded-xl">
             </div>
             <!--Trending product section  -->
             <div class=" flex flex-col m-auto p-auto font-poppins ">
