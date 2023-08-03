@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,24 +82,13 @@
         </div>
 
         <div class=" mt-5 flex-col space-y-5 lg:w-[600px] w-[380px] justify-center items-center mx-auto lg:text-base text-sm">
-            <div class=" addressCard">
-                <img src="./resources/img/work.png" alt="..." class=" lg:w-[70px] w-11">
-                <p>Tanitayi kawthaung, Zabinice 12 <br>
-                    0921929191 </p>
-                <img src="./resources/img/delivery_map_tracking.png" alt="..." class=" lg:w-[55px] w-11">
-            </div>
-            <div class=" addressCard">
-                <img src="./resources/img/home.png" alt="..." class=" lg:w-[70px] w-11">
-                <p>Tanitayi kawthaung, Zabinice 12 <br>
-                    0921929191 </p>
-                <img src="./resources/img/delivery_map_tracking.png" alt="..." class=" lg:w-[55px] w-11">
-            </div>
-            <div class=" addressCard">
-                <img src="./resources/img/home.png" alt="..." class=" lg:w-[70px] w-11">
-                <p>Tanitayi kawthaung, Zabinice 12 <br>
-                    0921929191 </p>
-                <img src="./resources/img/delivery_map_tracking.png" alt="..." class=" lg:w-[55px] w-11">
-            </div>
+            <?php foreach ($resultA  as $address) { ?>
+                <div class=" addressCard">
+                    <img src="./resources/img/work.png" alt="..." class=" lg:w-[70px] w-11">
+                    <p>Tanitayi kawthaung, Zabinice 12</p>
+                    <img src="./resources/img/delivery_map_tracking.png" alt="..." class=" lg:w-[55px] w-11">
+                </div>
+            <?php } ?>
         </div>
 
         <ion-icon class="text-5xl absolute left-14 bottom-20 cursor-pointer max-md:text-3xl max-md:left-8 max-md:bottom-24" name="caret-back-outline"></ion-icon>

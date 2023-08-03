@@ -17,4 +17,6 @@ $sqlRegions->execute();
 
 $_SESSION["townships"]  = $sqlTwonships->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["regions"]  = $sqlRegions->fetchAll(PDO::FETCH_ASSOC);
-?>
+// print_r($_SESSION["townships"]);
+// print_r($_SESSION["regions"]);
+     ?>

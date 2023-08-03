@@ -1762,6 +1762,10 @@ video {
   width: 57px;
 }
 
+.w-\[60\%\] {
+  width: 60%;
+}
+
 .w-\[60px\] {
   width: 60px;
 }
@@ -3258,6 +3262,11 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3482,7 +3491,6 @@ body * {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  text-indent: 0px;
   font-weight: 600;
 }
 
@@ -3520,10 +3528,9 @@ body * {
 }
 
 .profileInputBox {
-  width: 11rem;
+  width: 10rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  text-indent: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
@@ -3532,9 +3539,14 @@ body * {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .profileInputBox {
     width: 18rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profileInputBox {
     padding: 0.75rem;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -4204,6 +4216,11 @@ body * {
     margin: 2rem;
   }
 
+  .md\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
   .md\:mb-10 {
     margin-bottom: 2.5rem;
   }
@@ -4240,6 +4257,10 @@ body * {
     margin-top: 1.25rem;
   }
 
+  .md\:ml-36 {
+    margin-left: 9rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -4254,6 +4275,10 @@ body * {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-32 {
+    height: 8rem;
   }
 
   .md\:h-5 {
@@ -4365,12 +4390,24 @@ body * {
     width: 600px;
   }
 
+  .md\:w-\[700px\] {
+    width: 700px;
+  }
+
   .md\:w-\[80px\] {
     width: 80px;
   }
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .md\:w-\[60\%\] {
+    width: 60%;
   }
 
   .md\:rotate-180 {
@@ -4478,9 +4515,33 @@ body * {
     padding: 2.5rem;
   }
 
+  .md\:p-3 {
+    padding: 0.75rem;
+  }
+
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .md\:py-3 {
@@ -4507,6 +4568,10 @@ body * {
 
   .md\:pt-12 {
     padding-top: 3rem;
+  }
+
+  .md\:pl-0 {
+    padding-left: 0px;
   }
 
   .md\:text-3xl {

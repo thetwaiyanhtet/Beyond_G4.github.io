@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+
+session_start();   
+
+$faq = $_SESSION["m_faq"];
+include  "../../Admin/Controller/readfaqController.php";
+
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -620,243 +630,83 @@
             </div>
             <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Feature Shops</span></h1>
             <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-10">
-                <!-- Product Card 1 -->
-                <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
-                    <div class="w-96 h-full p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
-                        <div class="relative">
-                            <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
-                            <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
-                        </div>
-                        <div class="px-2 py-1">
-                            <!-- Product Title -->
-                            <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
-                            <div class="flex py-2">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center">
-                                        <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                            4.96
-                                            <span class="text-gray-500 font-normal">(76 reviews)</span>
-                                        </p>
-                                    </div>
-                                </div>
+
+            <div class=" w-[80%] m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg">
+
+                <div class="p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                    <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                        <h2 id="accordion-flush-heading-1">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
+                                <span><?= $faq[0]['question_one'] ?></span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_one'] ?>
+                                </p>
+
                             </div>
-                            <div class="bg-black dark:bg-slate-300 rounded-xl py-4 m-2 flex">
-                                <div>
-                                    <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
-                                </div>
-                                <div class="text-white w-72">
-                                    <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
-                                    <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                    <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                    <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                    <div class="flex justify-end">
-                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-                                        </div>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <h2 id="accordion-flush-heading-2">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                                <span><?= $faq[0]['question_two'] ?></span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_two'] ?></p>
+
+                            </div>
+                        </div>
+                        <h2 id="accordion-flush-heading-3">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                                <span><?= $faq[0]['question_three'] ?></span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_three'] ?></p>
+
+
                             </div>
                             <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="#">View Shop</a>
                         </div>
-
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
-                    <div class="w-96 h-full p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
-                        <div class="relative">
-                            <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
-                            <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
+                        <h2 id="accordion-flush-heading-4">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                                <span><?= $faq[0]['question_four'] ?></span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_four'] ?></p>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="px-2 py-1">
-                            <!-- Product Title -->
-                            <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
-                            <div class="flex py-2">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center">
-                                        <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                            4.96
-                                            <span class="text-gray-500 font-normal">(76 reviews)</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-black dark:bg-slate-300 rounded-xl py-4 m-2 flex">
-                                <div>
-                                    <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
-                                </div>
-                                <div class="text-white w-72">
-                                    <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
-                                    <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                    <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                    <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                    <div class="flex justify-end">
-                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-                                        </div>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="#">View Shop</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
-                    <div class="w-96 h-full p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
-                        <div class="relative">
-                            <img src="./resources/img/gymshark.png" class="max-h-64 object-cover rounded-full ml-2" alt="">
-                            <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
-                        </div>
-                        <div class="px-2 py-1">
-                            <!-- Product Title -->
-                            <div class="text-sm md:text-base font-bold pr-2">Gymshark</div>
-                            <div class="flex py-2">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center">
-                                        <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                            4.96
-                                            <span class="text-gray-500 font-normal">(76 reviews)</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-black dark:bg-slate-300 rounded-xl py-4 m-2 flex">
-                                <div>
-                                    <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
-                                </div>
-                                <div class="text-white w-72">
-                                    <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
-                                    <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                    <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                    <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                    <div class="flex justify-end">
-                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-                                        </div>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="#">View Shop</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <div>
-
-                <img src="./resources/img/home_hero/sample_banner.png" alt="" class=" w-full rounded-xl">
-            </div>
-
-
-            <div class=" w-full h-auto py-5 z-10">
-                <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
-                <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
-
-                <div class=" w-[80%] m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg">
-
-                    <div class="p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-                        <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg" data-inactive-classes="text-gray-500 dark:text-gray-400">
-                            <h2 id="accordion-flush-heading-1">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
-                                    <span>How can I place an order on Beyond?</span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">To place an order, simply browse our curated collection and click on the product you wish to purchase. Add the item to your shopping cart, proceed to checkout, and follow the prompts to complete your order securely.
-                                    </p>
-
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-2">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-                                    <span>What payment methods do you accept?</span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options. Choose the one that suits you best during checkout.</p>
-
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-3">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                                    <span>What is your return policy?</span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">We want you to be completely satisfied with your purchase. If you are not happy with your order, please refer to our return policy ... for detailed information on how to initiate a return or exchange..</p>
-
-
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-4">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
-                                    <span>How can I get in touch with your customer support?</span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">If you have any questions, concerns, or need assistance, our friendly customer support team is here to help.</p>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-5">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-                                    <span>Are the products on Beyond authentic and of high quality?
-                                    </span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, absolutely! At Beyond, we take pride in curating a collection of premium lifestyle products from trusted merchants and brands. We ensure that each item meets our stringent quality standards.</p>
-                                    </ul>
-                                </div>
+                        <h2 id="accordion-flush-heading-5">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                                <span><?= $faq[0]['question_fivre'] ?>
+                                </span>
+                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
+                            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_five'] ?></p>
+                                </ul>
                             </div>
                         </div>
                     </div>

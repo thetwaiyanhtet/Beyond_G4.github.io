@@ -1,34 +1,30 @@
-<?php 
-session_start();
+<?php
 
- //DB connection
- include "../Model/model.php";
+//DB connection
+include "../Model/model.php";
+//include "../View/address.php";
+$str = $_POST["str"];
+$township = $_POST["township"];
+$region = $_POST["region"];
 
-$name = $_POST["pname"];
-$pid = $_POST["pid"];
-$category = $_POST["category"];
-$buyprice = $_POST["buyprice"];
-$sellprice = $_POST["sellprice"];
-$quantity = $_POST["quantity"];
-$description = $_POST["description"];
-$color1 = $_POST["color1"];
-$color2 = $_POST["color2"];
-$color3 = $_POST["color3"];
-$photo1 = $_POST["photo1"];
-$photo2 = $_POST["photo2"];
-$photo3 = $_POST["photo3"];
-$photo4 = $_POST["photo4"];
 
-$sqlTwonships = $pdo->prepare(
-    "INSERT INTO m_customer ;"
+
+$sql = $pdo->prepare(
+    "UPDATE m_customer SET
+        str=:str,
+        township=:township,
+        region=:region,
+        update_date=:update_date
+        WHERE id = 1;
+        "
 );
+$sql->bindValue(":str", $str);
+$sql->bindValue(":township", $township);
+$sql->bindValue(":region", $region);
+$sql->bindValue(":update_date", date("Y-m-d"));
 
-$sqlRegions = $pdo->prepare(
-    "SELECT * FROM m_regions;"
-);
+$sql->execute();
 
-$sqlTwonships->execute();
-$sqlRegions->execute();
+$_SESSION["address"]  = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION["townships"]  = $sqlTwonships->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["regions"]  = $sqlRegions->fetchAll(PDO::FETCH_ASSOC);
+header("Location: ../View/address.php");

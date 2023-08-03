@@ -1,7 +1,9 @@
 <?php
 include "../Controller/addressController.php";
+
 $resultT = $_SESSION["townships"];
 $resultR = $_SESSION["regions"];
+// print_r($resultA = $_SESSION["address"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,6 +86,15 @@ $resultR = $_SESSION["regions"];
                 </div>
             </a>
         </div>
+        <div class=" mt-5 flex-col space-y-5 lg:w-[600px] w-[380px] justify-center items-center mx-auto lg:text-base text-sm">
+            <?php foreach ($resultA  as $address) { ?>
+                <div class=" addressCard">
+                    <img src="./resources/img/work.png" alt="..." class=" lg:w-[70px] w-11">
+                    <p>Tanitayi kawthaung, Zabinice 12</p>
+                    <img src="./resources/img/delivery_map_tracking.png" alt="..." class=" lg:w-[55px] w-11">
+                </div>
+            <?php } ?>
+        </div>
         <div class=" flex justify-center items-center lg:mt-6 mt-16">
             <div class="flex flex-col items-center">
                 <img src="../View/resources/img/location.png" alt="...">
@@ -92,7 +103,7 @@ $resultR = $_SESSION["regions"];
         </div>
 
         <!-- popup add address -->
-        <form action="./address.php" method="post">
+        <form action="../Controller/addAddressController.php" method="post">
             <div id="addAddressPopup" class=" absolute lg:top-[15%] lg:left-[35%] top-[15%] left-[7%] md:w-[450px] md:h-[420px] w-[360px] h-[520px] bg-white bg-opacity-50 rounded-lg shadow-2xl z-50">
                 <div class="flex-col md:space-y-6 space-y-4 p-5">
                     <!-- <div class="lg:flex lg:justify-around justify-center items-center md:space-x-5 md:space-y-0 space-y-3">
@@ -100,15 +111,15 @@ $resultR = $_SESSION["regions"];
                     <input type="text" placeholder="Phone" class=" inputBox focus:outline-none rounded-md">
                 </div> -->
                     <div class=" lg:flex justify-around items-center">
-                        <input type="text" placeholder="Building,Street etc.." class=" inputBox focus:outline-none rounded-md">
+                        <input type="text" placeholder="Building,Street etc.." class=" inputBox focus:outline-none rounded-md" name="str">
                     </div>
                     <div class=" lg:flex lg:justify-around justify-center items-center md:space-x-5 md:space-y-0 space-y-3">
-                        <select name="townships" id="" class=" md:w-[50%] w-[45%] rounded-md">
+                        <select name="township" id="" class=" md:w-[50%] w-[45%] rounded-md">
                             <?php foreach ($resultT as $township) { ?>
                                 <option value="<?= ++$tID ?>"><?= $township["name"]; ?></option>
                             <?php } ?>
                         </select>
-                        <select name="regions" id="" class=" md:w-[50%] w-[45%] rounded-md">
+                        <select name="region" id="" class=" md:w-[50%] w-[45%] rounded-md">
                             <?php foreach ($resultR as $region) { ?>
                                 <option value="<?= ++$rID ?>"><?= $region["name"]; ?></option>
                             <?php } ?>
