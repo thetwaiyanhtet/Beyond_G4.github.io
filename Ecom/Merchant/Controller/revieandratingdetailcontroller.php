@@ -31,7 +31,7 @@ $sqlproductPhoto = $pdo->prepare(
 
 $sqlproductName = $pdo->prepare(
 
-     "SELECT p_name
+     "SELECT name
      FROM m_product  JOIN m_cusreview
      ON m_product.id = m_cusreview.product_id
      WHERE m_cusreview.id =  $id " 

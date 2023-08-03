@@ -17,7 +17,7 @@ $sqlusername = $pdo->prepare(
     );
 
     $sqlproductName = $pdo->prepare(
-        "SELECT m_product.p_name
+        "SELECT m_product.name
         FROM m_cusreview
         LEFT JOIN m_product ON m_cusreview.product_id = m_product.id
         "
