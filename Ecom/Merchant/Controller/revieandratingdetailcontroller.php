@@ -18,7 +18,7 @@ $sqlusername = $pdo->prepare(
     "SELECT username
         FROM m_customer  JOIN m_cusreview
         ON m_customer.id = m_cusreview.customer_id
-        WHERE m_cusreview.id =  $id " //m_cusreview.id = '1' get from user clicked id
+        WHERE m_cusreview.id =  $id "
 );
 
 $sqlproductPhoto = $pdo->prepare(

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 include "../Model/model.php";
 
@@ -23,7 +23,7 @@ $sqlusername = $pdo->prepare(
         "
         );   
 
-$sql->execute();
+
 $sqlusername->execute();
 $sqlproductName->execute();
 
