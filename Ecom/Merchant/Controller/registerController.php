@@ -13,7 +13,7 @@ if(isset($_POST["register"])){
    //check duplicate email
 
    $sql = $pdo -> prepare(
-    "SELECT * FROM merchant WHERE email=:email"
+    "SELECT * FROM m_merchant WHERE email=:email"
    );
    $sql ->bindValue(":email", $email);
    $sql -> execute();
@@ -22,9 +22,9 @@ if(isset($_POST["register"])){
 
    if (count($resultEmail) == 0) {
     $sql = $pdo ->prepare(
-        "INSERT INTO  merchant
+        "INSERT INTO  m_merchant
         (
-            name,
+            m_name,
             email,
             password,
             create_date,
@@ -46,8 +46,6 @@ if(isset($_POST["register"])){
        $sql -> bindValue (":updateDate", date("Y-m-d"));
        $sql->execute();
        header("Location: ../View/ChoosePlan.php");
-
-       $_SESSION["merchant_ID"] = $email;
    }else {
     $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
     header("Location: ../View/signUp.php");
@@ -56,3 +54,5 @@ if(isset($_POST["register"])){
 }else{
     header("Location: ../View/404page.php");
 }
+$_SESSION["merchant_ID"] = $email;
+?>

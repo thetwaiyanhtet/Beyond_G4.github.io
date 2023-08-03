@@ -9,7 +9,7 @@ if(isset($_POST["login"])){
    include "../Model/model.php";
 
    $sql = $pdo ->prepare(
-     "SELECT * FROM m_admin WHERE  email = :email"
+     "SELECT * FROM m_merchant WHERE  email = :email"
    );
    $sql -> bindValue(":email", $email);
    $sql -> execute();

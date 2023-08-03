@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,23 +26,22 @@
         <div class="flex items-center justify-center space-x-10 m-10">
             <!--Card1-->
             <div class="w-64 h-80 border border-solid drop p-4 rounded-lg border-black shadow-xl transition-all duration-100 hover:scale-110 hover:border-red-600">
-                <p  class=" text-center text-lg font-poppins m-2">
+                <p class=" text-center text-lg font-poppins m-2">
                     <?php
-                       include "../Model/model.php";
-                       $sql = $pdo ->prepare(
-                          "SELECT * from m_plan WHERE id = 1"
-                        );
-                        $sql -> execute();
-                        $row = $sql ->fetch(PDO::FETCH_ASSOC);
-                        echo $row["name"];
-                     ?>
+                    include "../Model/model.php";
+                    $sql = $pdo->prepare(
+                        "SELECT * from m_plan WHERE id = 6 "
+                    );
+                    $sql->execute();
+                    $row = $sql->fetch(PDO::FETCH_ASSOC);
+                    echo $row["plan_name"] . ' Plan';
+                    ?>
                 </p>
                 <hr>
                 <span class=" ml-16 text-text1 text-2xl font-semibold">
                     <?php
-                    echo "$".$row["price"];
-                
-                ?><span class="text-sm text-btn">/month</span></span>
+                    echo "$" . $row["price"];
+                    ?><span class="text-sm text-black">/month</span></span>
                 <hr>
                 <ul class=" list-disc m-2 text-gray-600 text-sm space-y-2">
                     <li>sell limit items 50 </li>
@@ -49,15 +51,29 @@
                 </ul>
                 <a href="">
                     <div class=" flex justify-center">
-                        <button type="submit" name="plan" value="<?php $row['id']?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
+                        <button type="submit" name="plan" value="
+                        <?php echo $row['id']
+                        ?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
                     </div>
                 </a>
             </div>
             <!--Card 2-->
             <div class=" text-center w-80 h-[450px] border border-solid drop p-4 rounded-lg shadow-xl transition-all duration-100 hover:scale-110 border-black hover:border-red-600">
-                <p class=" text-center text-lg font-poppins m-2">Professional</p>
+                <p class=" text-center text-lg font-poppins m-2">
+                    <?php
+                    include "../Model/model.php";
+                    $sql = $pdo->prepare(
+                        "SELECT * from m_plan WHERE id = 7 "
+                    );
+                    $sql->execute();
+                    $row = $sql->fetch(PDO::FETCH_ASSOC);
+                    echo $row["plan_name"] . ' Plan';
+                    ?>
+                </p>
                 <hr>
-                <span class=" text-text1 text-2xl font-semibold">$50<span class="text-sm text-btn">/month</span></span>
+                <span class=" text-text1 text-2xl font-semibold"> <?php
+                                                                    echo "$" . $row["price"];
+                                                                    ?><span class="text-sm text-btn">/month</span></span>
                 <hr>
                 <ul class=" list-disc  text-gray-600 text-sm space-y-2 m-2 text-left">
                     <li>unlimited sell limit items </li>
@@ -70,15 +86,28 @@
                 </ul>
                 <a href="">
                     <div class=" flex justify-center">
-                        <button type="submit" name="plan" value="2" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
+                        <button type="submit" name="plan" value="<?php echo $row['id']
+                                                                    ?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
                     </div>
                 </a>
             </div>
             <!--Card 3-->
             <div class="w-64 h-80 border border-solid drop p-4 rounded-lg border-black shadow-xl transition-all duration-100 hover:scale-110 hover:border-red-600">
-                <p class=" text-center text-lg font-poppins m-2">Advanced</p>
+                <p class=" text-center text-lg font-poppins m-2">
+                    <?php
+                    include "../Model/model.php";
+                    $sql = $pdo->prepare(
+                        "SELECT * from m_plan WHERE id = 8"
+                    );
+                    $sql->execute();
+                    $row = $sql->fetch(PDO::FETCH_ASSOC);
+                    echo $row["plan_name"] . ' Plan';
+                    ?>
+                </p>
                 <hr>
-                <span class=" ml-16 text-text1 text-2xl font-semibold">$30<span class="text-sm text-btn">/month</span></span>
+                <span class=" ml-16 text-text1 text-2xl font-semibold"><?php
+                                                                        echo "$" . $row["price"];
+                                                                        ?><span class="text-sm text-btn">/month</span></span>
                 <hr>
                 <ul class=" list-disc m-2 text-gray-600 text-sm space-y-2">
                     <li>sell limit items 100 </li>
@@ -88,7 +117,8 @@
                 </ul>
                 <a href="">
                     <div class=" flex justify-center">
-                        <button type="submit" name="plan" value="3" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
+                        <button type="submit" name="plan" value="<?php echo $row['id']
+                                                                    ?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
                     </div>
                 </a>
             </div>
