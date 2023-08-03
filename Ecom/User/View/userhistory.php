@@ -96,15 +96,39 @@
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">History</button>
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>
         </div>
-        <div class="flex flex-col">
-            <div class=" w-96 h-auto border border-solid border-black bg-gray-500">
-                <di cv>
-
-                </di>
+        <div class="flex">
+            <div class=" md:w-auto w-96 md:h-auto h-44 border border-solid  bg-gray-300 hover:border-l-blue-700 hover:border-l-4 rounded-md md:ml-0 ml-3">
+                <div class="flex justify-between">
+                    <div class=" w-auto md:h-auto h-20 bg-gray-600 rounded-md relative mt-10 m-5">
+                        <div class="image-container flex m-3">
+                            <div class=" md:w-32 w-16 h-auto flex md:flex-wrap">
+                                <img src="./resources/img/photo.png" alt="clothes" class="md:h-20 h-10">
+                                <img src="./resources/img/photo.png" alt="clothes" class=" md:h-20 h-10">
+                                <img src="./resources/img/photo.png" alt="clothes" class="md:h-20 h-10">
+                                <img src="./resources/img/photo.png" alt="clothes" class="md:h-20 h-10">
+                            </div>
+                            <p class=" text-white font-Playfair Display md:ml-5 md:text-lg text-base mt-5">Store Name : Shoppe</p>
+                        </div>
+                    </div>
+                    <div class=" md:m-16 m-5 flex flex-col">
+                        <div class="md:w-26 w-24 md:p-3 p-1 border rounded-md border-solid border-purple-600 inline-flex">
+                            <p class="md:ml-3 md:text-md text-sm">Total </p>
+                            <p class="md:ml-10 ml-5 hover:mt-0 md:text-md text-sm">$200</p>
+                        </div>
+                        <div class="md:w-26 w-24 md:p-3 p-1 border rounded-md border-solid border-purple-600 inline-flex mt-5">
+                            <p class="md:ml-3 md:text-md text-sm">Delivery</p>
+                            <p class="md:ml-5 ml-2 hover:mt-0 md:text-md text-sm">$21</p>
+                        </div>
+                        <div class="w-26 md:p-3 p-1 border rounded-md border-solid border-purple-600 inline-flex mt-5">
+                            <p class="md:ml-3 md:text-md text-sm">Total items</p>
+                            <p class="md:ml-5 ml-2 hover:mt-0 md:text-md text-sm">4</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    <script src="./resources/js/toggle.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+        <script src="./resources/js/toggle.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
 
 </html>
