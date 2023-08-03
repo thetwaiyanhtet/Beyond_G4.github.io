@@ -3,11 +3,7 @@
 include "../Model/model.php";
 // include "../Controller/middleware/loginCheck.php";
 
-<<<<<<< Updated upstream
-$merchantEmail = $_SESSION["merchant_id"];
-=======
 // $merchantEmail = $_SESSION["merchant_ID"];
->>>>>>> Stashed changes
 $sql = $pdo->prepare(
     "SELECT `m_product`.id AS `productID`,
     `m_product`.name,
