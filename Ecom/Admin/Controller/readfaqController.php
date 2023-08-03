@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 //DB Connection
 include "../Model/model.php";
 
@@ -11,6 +11,6 @@ $sql->execute(); //run real sql
 $_SESSION["m_faq"]=$sql->fetchAll(PDO::FETCH_ASSOC);
 
 
-//DB Connection
+
 
 
