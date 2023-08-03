@@ -190,7 +190,7 @@ $result = $_SESSION["m_product"];
                                         Instock
                                     </td>
                                     <?php } else if($product["instock"] < 10 && $product["instock"] >= 1 ){ ?>
-                                        <td class="px-6 py-4 text-red-500">
+                                        <td class="px-6 py-4 text-orange-500">
                                         Low stock
                                     </td>
                                     <?php } else {?>

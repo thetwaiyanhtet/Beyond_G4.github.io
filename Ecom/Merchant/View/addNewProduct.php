@@ -47,7 +47,7 @@ include "../Controller/categoryListController.php";
         </header>
         <section>
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">New Product</span></p>
-            <form action="../Controller/addNewProductController.php" method="POST">
+            <form action="../Controller/addNewProductController.php" method="POST" enctype="multipart/form-data">
                 <div class=" flex justify-center px-5 py-1">
                     <div class=" w-screen h-full rounded-lg px-24 py-3 shadow-xl border-2 border-blue-950">
                         <div class=" pb-5">
@@ -63,30 +63,30 @@ include "../Controller/categoryListController.php";
                                         <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo1">
                                     </div>
                                 </li>
-                                <li>
+                                <!-- <li>
                                 <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" name="photo2">
                                     </div>
-                                </li>
-                                <li>
+                                </li> -->
+                                <!-- <li>
                                 <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" name="photo3">
                                     </div>
-                                </li>
-                                <li>
+                                </li> -->
+                                <!-- <li>
                                 <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" name="photo4">
                                     </div>
-                                </li>
+                                </li> -->
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
                                 </li>

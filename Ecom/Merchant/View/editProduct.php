@@ -53,7 +53,7 @@ include "./sidebar.php"
 
             <div class=" flex justify-center px-5 py-1">
                 <div class=" w-screen h-full rounded-lg px-24 py-3 shadow-xl border-2 border-blue-950">
-                    <form action="../Controller/updateProductController.php" method="POST">
+                    <form action="../Controller/updateProductController.php" method="POST" enctype="multipart/form-data">
                         <div class=" pb-5">
                             <h1 class=" text-lg font-bold font-philosopher">Edit Product</h1>
                         </div>
@@ -62,15 +62,16 @@ include "./sidebar.php"
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg1" alt="">
                                         </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_one"] ?>" name="photo1">
+                                        z
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_one"] ?>" name="photo1">
                                     </div>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_two"] ?>" name="photo2">
                                     </div>
@@ -78,7 +79,7 @@ include "./sidebar.php"
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                            <img src="../View/resources/img/product image.jpg" id="photoim3" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_three"] ?>" name="photo3">
                                     </div>
@@ -86,11 +87,11 @@ include "./sidebar.php"
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_four"] ?>" name="photo4">
                                     </div>
-                                </li>
+                                </li> -->
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
                                 </li>
