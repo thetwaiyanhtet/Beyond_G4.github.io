@@ -117,7 +117,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <button>
-                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["customer_id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
+                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
                                                         </button>
                                                     </td>
                                                 </tr>
