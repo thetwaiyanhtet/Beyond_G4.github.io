@@ -71,7 +71,7 @@ include "../Controller/productDetailController.php";
                     </div>
                 </div>
             </div>
-            <p class="font-semibold text-4xl"><?= $productDetail["name"]; ?></p>
+            <p class="font-semibold text-4xl"><?= $productDetail["p_name"]; ?></p>
             <div class="flex space-x-4">
                 <div class="flex space-x-2">
                     <img src="./resources/img/star admin.svg" alt="">
