@@ -57,13 +57,6 @@
           </a>
         </li>
         <li class=" w-52">
-          <a href="./chatbox.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white chatbox">
-            <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class='bx bx-chat'></i></span>
-            <span class="text-sm font-medium">Chat Box</span>
-            <span class="ml-auto mr-6 text-sm bg-red-100 rounded-full px-3 py-px text-red-500">5</span>
-          </a>
-        </li>
-        <li class=" w-52">
           <a href="./review and rating.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white reviewNRating">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class='bx bx-message-alt-edit'></i></span>
             <span class="text-sm font-medium">Review & Rating</span>

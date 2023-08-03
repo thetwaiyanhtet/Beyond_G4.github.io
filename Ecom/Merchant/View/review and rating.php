@@ -4,11 +4,10 @@ session_start();
 $reviewdata = $_SESSION["getReviewandRating"];
 $username = $_SESSION["getUsername"];
 $productName = $_SESSION["getProductName"];
-$reviewReview =   $_SESSION["reviewDetail"];
-$detailName = $_SESSION["detailProductName"];
-$detailUsername = $_SESSION["detailUsername"];
+// $reviewReview =   $_SESSION["reviewDetail"];
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
+
 ?>
 
 <!doctype html>
@@ -115,7 +114,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <button>
-                                                            <a id="popupButton" href="./review and rating copy.php?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
+                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php ?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -136,41 +135,7 @@ include "../Controller/reviewandratingController.php";
                 </div>
             </div>
         </section>
-        <div id="detailPopup" class="hidden">
-            <div class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
-                <img src="./resources/img/camera.png" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
-                <div class=" p-3 space-y-3">
-                    <p class=" font-semibold"> <?= $detailUsername[0]['username'] ?> </p>
-                    <p class=" text-yellow-500 text-xl">
-                        <?php
-                        if (!function_exists('numberToStars')) {
-                            function numberToStars($number)
-                            {
-                                $roundedNumber = round($number);
-                                $maxStars = 5;
-                                $fullStars = str_repeat('★', $roundedNumber);
-                                $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
-                                return $fullStars . $emptyStars;
-                            }
-
-                        ?>
-                        <?php }  ?>
-                        <?= numberToStars($data["rating"]) ?>
-                        <span>/</span>
-                        <span>Kyaw Swar Phyo</span>
-                    </p>
-                    <p class=" text-gray-500">Good Quality!!</p>
-                    <div>
-                        <span class=" text-gray-500 pt-5">Category : </span>
-                        <span>Camera</span>
-                    </div>
-                    <div class=" border-t-2 border-blue-500 py-3">
-                        <div><button id="cancelRNRButton" class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
         <script>
             // Get references to the popup and buttons
             const detailPopup = document.getElementById("detailPopup");

@@ -37,7 +37,6 @@
 
         <div class="lg:flex justify-center items-center lg:space-x-5 lg:w-[800px] w-[380px] h-min-screen bg-transparent border shadow-2xl lg:py-10 lg:px-20 py-5 px-16 rounded-3xl z-50 dark:border-black">
             <div class=" relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-5 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
-                <span class=" fixed lg:top-[24%] top-[13%] rounded-tl-lg rounded rounded-tr-lg border bg-gray-500 lg:w-[305px] w-[250px] lg:h-[85px] h-[97px] mb-2"></span>
                 <img src="./resources/img/bille.png" alt="..." class=" w-16 rounded-lg z-50">
                 <div class="text-center">
                     <p class=" text-2xl font-philosopher dark:text-white">NAME</p>

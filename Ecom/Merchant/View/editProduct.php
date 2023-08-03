@@ -1,6 +1,7 @@
 <?php
 session_start();
 $productdata = $_SESSION["editproduct"];
+include "../Controller/categoryListController.php";
 // print_r($productdata);
 include "./sidebar.php"
 ?>
@@ -121,9 +122,11 @@ include "./sidebar.php"
                                         <p>Category</p>
                                     </div>
                                     <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
-                                            <option value="1">Clothing</option>
-                                            <option value="2">Electronic</option>
-                                            <option value="3">Furniture</option>
+                                        <?php foreach ($categories as $category) { ?>
+                                            <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
+                                            <?php } ?>
+                                            
+                                        
                                         </select></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
@@ -211,12 +214,6 @@ include "./sidebar.php"
                                         <p>Quantity</p>
                                     </div>
                                     <div><input type="text" name="quantity" value="<?php echo $productdata[0]["instock"] ?>" class="inputBox"></div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Date</p>
-                                    </div>
-                                    <div class=" w-[203px]"><input type="date" name="date" value="<?php echo $productdata[0]["date"] ?>" class="inputBox w-44"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10">
                                     <div>

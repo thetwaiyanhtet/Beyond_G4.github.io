@@ -1,11 +1,12 @@
 <?php
-// session_start();
+session_start();
 
 // echo "<pre>";
 // print_r($result);
-// include "./sidebar.php";
+include "./sidebar.php";
 include "../Controller/productListController.php";
 $result = $_SESSION["m_product"];
+
 // echo "<pre>";
 // print_r($result);
 ?>
@@ -148,7 +149,7 @@ $result = $_SESSION["m_product"];
                                         quantity
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        date
+                                        Create date
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         availablity
@@ -160,47 +161,47 @@ $result = $_SESSION["m_product"];
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($result as $product) { ?>
-                                    <tr class=" border-b hover:bg-gray-200 border-gray-500 text-center">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                            <?= $product["name"]; ?>
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            <?= $product["product_id"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
+                            <?php foreach ($result as $product) { ?>
+                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <?= $product["name"];?>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                    <?= $product["product_id"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["c_name"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["buyprice"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["sellprice"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["instock"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["create_date"];?>
+                                    </td>
 
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["buyprice"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["sellprice"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["instock"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["date"]; ?>
-                                        </td>
-
-                                        <?php if ($product["instock"] > 10) { ?>
-                                            <td class="px-6 py-4 text-green-500">
-                                                Instock
-                                            </td>
-                                        <?php } else if ($product["instock"] < 10) { ?>
-                                            <td class="px-6 py-4 text-yellow-500">
-                                                Low stock
-                                            </td>
-                                        <?php } else if ($product["instock"] == 0) { ?>
-                                            <td class="px-6 py-4 text-red-500">
-                                                Out of stock
-                                            </td>
-                                        <?php } ?>
-                                        <td class="px-6 py-4 text-right">
-                                            <a href="../Controller/editProductController.php?id=<?= $product["id"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                        </td>
-                                    </tr>
+                                    <?php if($product["instock"] > 10) {?>
+                                    <td class="px-6 py-4 text-green-500">
+                                        Instock
+                                    </td>
+                                    <?php } else if($product["instock"] < 10 && $product["instock"] >= 1 ){ ?>
+                                        <td class="px-6 py-4 text-red-500">
+                                        Low stock
+                                    </td>
+                                    <?php } else {?>
+                                        <td class="px-6 py-4 text-red-500">
+                                        Out of Stock
+                                    </td>
+                                    <?php }?>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="../Controller/editProductController.php?id=<?= $product["productID"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
+                                    </td>
+                                </tr>
                                 <?php } ?>
                             </tbody>
                         </table>

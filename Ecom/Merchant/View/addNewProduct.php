@@ -1,5 +1,6 @@
 <?php
-include "./sidebar.php"
+include "./sidebar.php";
+include "../Controller/categoryListController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,6 @@ include "./sidebar.php"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="../View/resources/js/product.js" defer></script>
-    <script src="./resources/js/dateandtime.js " defer></script>
     <!-- <script>
 
         function fetch(){
@@ -36,7 +36,7 @@ include "./sidebar.php"
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
-                <p id="date_time"></p>
+                <p>July/27/2023 - 4:04 PM</p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
@@ -64,7 +64,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
                                         </label>
@@ -72,7 +72,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
                                         </label>
@@ -80,7 +80,7 @@ include "./sidebar.php"
                                     </div>
                                 </li>
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
                                         </label>
@@ -112,9 +112,11 @@ include "./sidebar.php"
                                         <p>Category</p>
                                     </div>
                                     <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
-                                            <option value="1">Clothing</option>
-                                            <option value="2">Electronic</option>
-                                            <option value="3">Furniture</option>
+                                        <?php foreach ($categories as $category) { ?>
+                                            <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
+                                            <?php } ?>
+                                            
+                                        
                                         </select></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
@@ -130,7 +132,7 @@ include "./sidebar.php"
                                     </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 2</label></div>
+                                    <div><label>Color 3</label></div>
                                     <div><input type="color" name="color3">
                                         <!-- <input type="text" id="put3" name="color3" class="inputBox"></div> -->
                                     </div>
@@ -203,12 +205,7 @@ include "./sidebar.php"
                                     </div>
                                     <div><input type="text" name="quantity" class="inputBox"></div>
                                 </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Date</p>
-                                    </div>
-                                    <div class=" w-[203px]"><input type="date" name="date" class="inputBox w-44"></div>
-                                </div>
+                                
                                 <div class=" flex justify-between space-x-10">
                                     <div>
                                         <p>Description</p>
@@ -217,8 +214,7 @@ include "./sidebar.php"
                                 </div>
                             </div>
                         </div>
-                        <div class=" justify-end space-x-3 flex pt-4">
-                            <button class="btn">Discard</button>
+                        <div class=" justify-end space-x-3 flex pt-4">                   
                             <button class=" btn">Add Product</button>
                         </div>
                     </div>

@@ -2,15 +2,16 @@
 //Direct Access
 if(count($_POST) == 0){
     header("Location: ../View/errors/error.php");
-}else{
+}else{ 
+    // echo "<pre>";
+    // print_r($_POST);
     $id=$_POST["id"];
     $name=$_POST["pname"];
     $pid=$_POST["pid"];
-    // $category=$_POST["category"];
+    $category=$_POST["category"];
     $buyprice=$_POST["buyprice"];
     $sellprice=$_POST["sellprice"];
     $quantity=$_POST["quantity"];
-    $date=$_POST["date"];
     $description=$_POST["description"];
     $color1=$_POST["color1"];
     $color2=$_POST["color2"];
@@ -27,10 +28,10 @@ if(count($_POST) == 0){
     "UPDATE m_product SET
         name=:name,
         product_id=:product_id,
+        category_id=:category_id,
         buyprice=:buyprice,
         sellprice=:sellprice,
         instock=:instock,
-        date=:date,
         description=:description,
         color_1=:color_1,
         color_2=:color_2,
@@ -46,10 +47,10 @@ if(count($_POST) == 0){
     );
     $sql->bindValue(":name",$name);
     $sql->bindValue(":product_id",$pid);
+    $sql->bindValue(":category_id",$category);
     $sql->bindValue(":buyprice",$buyprice);
     $sql->bindValue(":sellprice",$sellprice);
     $sql->bindValue(":instock",$quantity);
-    $sql->bindValue(":date",$date);
     $sql->bindValue(":description",$description);
     $sql->bindValue(":color_1",$color1);
     $sql->bindValue(":color_2",$color2);

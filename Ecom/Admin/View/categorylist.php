@@ -1,5 +1,11 @@
 <?php
 include "./adminsidebar.php";
+
+include "../Controller/categoryListController.php";
+$result = $_SESSION["m_category"];
+// echo "<pre>";
+// print_r($result);
+
 ?>
 
 
@@ -11,8 +17,8 @@ include "./adminsidebar.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   
-   <link rel="stylesheet" href="./resources/css/categoryl.css">
+
+    <link rel="stylesheet" href="./resources/css/categoryl.css">
 
 </head>
 
@@ -21,26 +27,29 @@ include "./adminsidebar.php";
 
         <div class="ml-10 pr-10 pb-5">
             <p class=" text-xl ml-5 font-bold font-philosopher pt-10">Category List</p>
-            <div class=" flex items-center mt-5 ml-5">
+            <!-- <div class=" flex items-center mt-5 ml-5">
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8 indent-2" type="search" name="" id="">
-            </div>
+            </div> -->
             <div class="border shadow-2xl mt-10 rounded-xl">
+
+            
                 <div class="  p-5">
                     <p class="font-bold text-xl">Edit Categories</p>
-                    <div class="flex justify-around">
+                    <!-- <div class="flex justify-around">
                         <div class="space-y-3 mt-5">
                             <p>Category</p>
                             <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text">
                         </div>
                         <div class="flex flex-col justify-start space-y-3 mt-5">
                             <p>Description</p>
-                            <textarea class="border outline-none indent-2" id="text" name="text" rows="4" cols="50">
-</textarea>
+                            <input type="text" class="border outline-none indent-2" id="text"  rows="4" cols="50">
+</input>
                         </div>
                     </div>
                 </div>
-                <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
+                <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button> -->
+          
 
                 <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
                     <div class="container">
@@ -82,7 +91,7 @@ include "./adminsidebar.php";
                            px-3
                            lg:px-4
                            ">
-                                                    Date
+                                                    Create Date
 
                                                 <th class="
                            w-1/6
@@ -98,8 +107,9 @@ include "./adminsidebar.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td class="
+                                            <?php foreach ($result as $category) { ?>
+                                                <tr>
+                                                    <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -107,9 +117,9 @@ include "./adminsidebar.php";
                            px-2
                            bg-[#F3F6FF]
                            border-b border-l border-[#E8E8E8]
-                           "> Fashion
-                                                </td>
-                                                <td class="
+                           "> <?= $category["c_name"];?>
+                                                    </td>
+                                                    <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -118,9 +128,9 @@ include "./adminsidebar.php";
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                                                    Admin
-                                                </td>
-                                                <td class="
+                                                        Admin
+                                                    </td>
+                                                    <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -128,11 +138,11 @@ include "./adminsidebar.php";
                            px-2
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
-                           ">
-                                                    14/07/2023
-                                                </td>
+                           "><?= $category["create_date"];?>
+                                                      
+                                                    </td>
 
-                                                <td class="
+                                                    <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -141,108 +151,13 @@ include "./adminsidebar.php";
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                                    <button>
-                                                        <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
-                           "> Fashion
-                                                </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-[#E8E8E8]
-                           ">
-                                                    Admin
-                                                </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
-                           ">
-                                                    14/07/2023
-                                                </td>
+                                                        <button>
+                                                            <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="../Controller/editCategoryController.php?id=<?= $category["id"] ?>"><i class='bx bx-edit'></i></a>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
 
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
-                           ">
-                                                    <button>
-                                                        <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-[#F3F6FF]
-                           border-b border-l border-[#E8E8E8]
-                           "> Fashion
-                                                </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-white
-                           border-b border-[#E8E8E8]
-                           ">
-                                                    Admin
-                                                </td>
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
-                           ">
-                                                    14/07/2023
-                                                </td>
-
-                                                <td class="
-                           text-center text-dark
-                           font-medium
-                           text-base
-                           py-5
-                           px-2
-                           bg-[#F3F6FF]
-                           border-b border-[#E8E8E8]
-                           ">
-                                                    <button>
-                                                        <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="#"><i class='bx bx-edit'></i></a>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -257,7 +172,7 @@ include "./adminsidebar.php";
                 ?>
             </div>
     </main>
-    <script>
+    <!-- <script>
         document.getElementById('update').addEventListener('click', (e) => {
             document.getElementById('hs').classList.add('show');
             document.getElementById('hs').classList.remove('hidden');
@@ -266,7 +181,7 @@ include "./adminsidebar.php";
             document.getElementById('hs').classList.add('hidden');
             document.getElementById('hs').classList.remove('show');
         })
-    </script>
+    </script> -->
 </body>
 
 </html>

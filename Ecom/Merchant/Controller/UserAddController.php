@@ -11,6 +11,7 @@ if (count($_POST) == 0) {
     $gender = $_POST["gender"];
     $mark = $_POST["mark"];
     $phone = $_POST["phone"];
+    
 
     include "../Model/model.php";
 
@@ -44,6 +45,7 @@ if (count($_POST) == 0) {
     $sql->bindValue(":gender", $gender);
     $sql->bindValue(":mark", $mark);
     $sql->bindValue(":phone", $phone);
+    $sql -> bindValue (":updateDate", date("Y-m-d"));
     $sql->execute();
 
     header("Location: ./DashboardController.php");
