@@ -15,7 +15,7 @@ if (isset($_POST["resetPw"])) {
   //check email is exit or not
 
   $sql = $pdo->prepare(
-    "SELECT * FROM m_admin WHERE email=:email"
+    "SELECT * FROM m_merchant WHERE email=:email"
   );
   $sql->bindValue(":email", $email);
   $sql->execute();
