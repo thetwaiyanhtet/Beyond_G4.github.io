@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+
+session_start();   
+
+$faq = $_SESSION["m_faq"];
+include  "../../Admin/Controller/readfaqController.php";
+
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1138,7 +1148,7 @@
                     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg" data-inactive-classes="text-gray-500 dark:text-gray-400">
                         <h2 id="accordion-flush-heading-1">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
-                                <span>How can I place an order on Beyond?</span>
+                                <span><?= $faq[0]['question_one'] ?></span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
@@ -1146,14 +1156,14 @@
                         </h2>
                         <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
                             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">To place an order, simply browse our curated collection and click on the product you wish to purchase. Add the item to your shopping cart, proceed to checkout, and follow the prompts to complete your order securely.
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_one'] ?>
                                 </p>
 
                             </div>
                         </div>
                         <h2 id="accordion-flush-heading-2">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-                                <span>What payment methods do you accept?</span>
+                                <span><?= $faq[0]['question_two'] ?></span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
@@ -1161,13 +1171,13 @@
                         </h2>
                         <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
                             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options. Choose the one that suits you best during checkout.</p>
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_two'] ?></p>
 
                             </div>
                         </div>
                         <h2 id="accordion-flush-heading-3">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                                <span>What is your return policy?</span>
+                                <span><?= $faq[0]['question_three'] ?></span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
@@ -1175,14 +1185,14 @@
                         </h2>
                         <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
                             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">We want you to be completely satisfied with your purchase. If you are not happy with your order, please refer to our return policy ... for detailed information on how to initiate a return or exchange..</p>
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_three'] ?></p>
 
 
                             </div>
                         </div>
                         <h2 id="accordion-flush-heading-4">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
-                                <span>How can I get in touch with your customer support?</span>
+                                <span><?= $faq[0]['question_four'] ?></span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
                                 </svg>
@@ -1190,14 +1200,13 @@
                         </h2>
                         <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
                             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">If you have any questions, concerns, or need assistance, our friendly customer support team is here to help.</p>
-
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_four'] ?></p>
                                 </ul>
                             </div>
                         </div>
                         <h2 id="accordion-flush-heading-5">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-                                <span>Are the products on Beyond authentic and of high quality?
+                                <span><?= $faq[0]['question_fivre'] ?>
                                 </span>
                                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
@@ -1206,7 +1215,7 @@
                         </h2>
                         <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
                             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, absolutely! At Beyond, we take pride in curating a collection of premium lifestyle products from trusted merchants and brands. We ensure that each item meets our stringent quality standards.</p>
+                                <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_five'] ?></p>
                                 </ul>
                             </div>
                         </div>
