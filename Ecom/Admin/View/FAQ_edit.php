@@ -22,43 +22,43 @@ include "./adminsidebar.php";
             <div class="h-auto">
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">Question1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-8">Answer1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">Question1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-8">Answer1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">Question1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-8">Answer1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">Question1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-8">Answer1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">Question1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="2" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="2" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-8">Answer1</div>
-                    <textarea name="Q1" id="q1" cols="100" rows="5" class=" bg-slate-200 p-2"></textarea>
+                    <textarea name="Q1" id="q1" cols="100" rows="5" class="rounded-md bg-slate-200 p-2"></textarea>
                 </div>
                 <button type="button" class="px-5 py-3 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right mb-20">Update</button>
             </div>
