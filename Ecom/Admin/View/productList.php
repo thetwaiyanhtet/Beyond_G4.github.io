@@ -62,7 +62,7 @@ $result = $_SESSION["products"];
                                     <img src="./resources/img/smartWatch.png" alt="...">
                                 </th>
                                 <td class="px-6 py-2">
-                                    <?= $product["name"]; ?>
+                                    <?= $product["p_name"]; ?>
                                 </td>
                                 <td class="px-6 py-2">
                                     <?= $product["merchant_id"]; ?>
