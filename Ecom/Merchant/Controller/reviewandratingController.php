@@ -13,7 +13,6 @@ $sqlusername = $pdo->prepare(
     "SELECT m_customer.username
     FROM m_cusreview
     INNER JOIN m_customer ON m_cusreview.customer_id = m_customer.id
-
     "
     );
 
@@ -21,7 +20,6 @@ $sqlusername = $pdo->prepare(
         "SELECT m_product.p_name
         FROM m_cusreview
         INNER JOIN m_product ON m_cusreview.product_id = m_product.id
-       
         "
         );   
 

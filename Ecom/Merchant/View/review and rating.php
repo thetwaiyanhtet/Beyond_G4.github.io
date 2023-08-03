@@ -5,7 +5,7 @@ $reviewdata = $_SESSION["getReviewandRating"];
 $username = $_SESSION["getUsername"];
 $productName = $_SESSION["getProductName"];
 $reviewReview =   $_SESSION["reviewDetail"];
-include "./sidebar.php";
+//include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
 
 ?>
