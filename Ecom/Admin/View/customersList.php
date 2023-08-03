@@ -62,7 +62,7 @@ $result = $_SESSION["customers"];
                                     <?= $customer["email"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?= $customer["customer_city"]; ?>
+                                    <?= $customer["township"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <?= $customer["phone"]; ?>

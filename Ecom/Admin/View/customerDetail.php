@@ -41,7 +41,7 @@ include "../Controller/customerDetailController.php";
                         <div class="flex">
                             <p class="w-40">Address</p>
                             <p class=" w-20">-</p>
-                            <p class=""><?= $customerDetail["customer_city"]; ?></p>
+                            <p class=""><?= $customerDetail["township"]; ?></p>
                         </div>
                     </div>
                 
