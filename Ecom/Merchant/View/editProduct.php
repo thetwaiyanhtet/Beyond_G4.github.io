@@ -64,7 +64,6 @@ include "./sidebar.php"
                                         <label for="photo">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg1" alt="">
                                         </label>
-                                        z
                                         <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_one"] ?>" name="photo1">
                                     </div>
                                 </li>
