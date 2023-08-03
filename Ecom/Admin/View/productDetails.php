@@ -1,7 +1,7 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/productDetailController.php";
-// print_r($productDetail);
+ print_r($productDetail);
 ?>
 
 <!doctype html>
