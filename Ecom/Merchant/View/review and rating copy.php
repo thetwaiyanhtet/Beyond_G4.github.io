@@ -90,7 +90,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
 
                                                     <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                        <?= $productName[$j]["p_name"] ?>
+                                                        <?= $productName[$j]["name"] ?>
                                                         <?php $j += 1 ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
@@ -117,7 +117,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <button>
-                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["customer_id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
+                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -142,7 +142,7 @@ include "../Controller/reviewandratingController.php";
             <div class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
                 <img src="<?= $detailPhoto[0]["p_one"] ?>" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
                 <div class=" p-3 space-y-3">
-                    <p class=" font-semibold"> <?= $detailName[0]['p_name'] ?> </p>
+                    <p class=" font-semibold"> <?= $detailName[0]['name'] ?> </p>
                     <p class=" text-yellow-500 text-xl">
                         <?php
                        

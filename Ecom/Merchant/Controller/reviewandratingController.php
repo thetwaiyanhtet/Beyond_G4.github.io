@@ -12,14 +12,14 @@ $_SESSION["getReviewandRating"] = $sql->fetchAll(PDO::FETCH_ASSOC);
 $sqlusername = $pdo->prepare(
     "SELECT m_customer.username
     FROM m_cusreview
-    INNER JOIN m_customer ON m_cusreview.customer_id = m_customer.id
+    LEFT JOIN m_customer ON m_cusreview.customer_id = m_customer.id
     "
     );
 
     $sqlproductName = $pdo->prepare(
-        "SELECT m_product.p_name
+        "SELECT m_product.name
         FROM m_cusreview
-        INNER JOIN m_product ON m_cusreview.product_id = m_product.id
+        LEFT JOIN m_product ON m_cusreview.product_id = m_product.id
         "
         );   
 
@@ -30,6 +30,6 @@ $sqlproductName->execute();
 
 $_SESSION["getUsername"] = $sqlusername->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["getProductName"] = $sqlproductName->fetchAll(PDO::FETCH_ASSOC);
-//print_r($_SESSION["getProductName"]);
+
 
 

@@ -87,7 +87,7 @@ include "../Controller/reviewandratingController.php";
                                                     </td>
 
                                                     <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                        <?= $productName[$j]["p_name"] ?>
+                                                        <?= $productName[$j]["name"] ?>
                                                         <?php $j += 1 ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
