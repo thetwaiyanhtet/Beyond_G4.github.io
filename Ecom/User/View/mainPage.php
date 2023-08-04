@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once("../Controller/cartController.php");
 $faq = $_SESSION["m_faq"];
 $banner = $_SESSION["banner"];
