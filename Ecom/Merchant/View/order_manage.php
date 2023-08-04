@@ -1,11 +1,10 @@
 <?php
+include "../Controller/orderController.php";
 include "./sidebar.php";
-// session_start();
 
-// $result = $_SESSION["orders"];
 // $cusName = $_SESSION["getCusName"];
 // echo "<pre>";
-// print_r($result);
+// print_r($orders);
 // echo $cusName;
 ?>
 <!DOCTYPE html>
@@ -66,24 +65,37 @@ include "./sidebar.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($result as $order) { ?>
+                        <?php foreach ($orders as $order) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                     <?= $order["id"]; ?>
                                 </th>
                                 <td class="px-6 py-4">
-                                    <?= $order[""]; ?>
+                                    <?= $order["username"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    07/24/2023
+                                    <?= $order["order_date"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
-                                        Complete
-                                    </div>
+                                    <?php if ($order["payment_status"] == 0) { ?>
+                                        <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
+                                            Pending
+                                        </div>
+                                    <?php } ?>
+                                    <?php if ($order["payment_status"] == 1) { ?>
+                                        <div class="text-green-500  w-3/5 text-center rounded-md pr-5">
+                                            Complete
+                                        </div>
+                                    <?php } ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    Bank Deposit
+                                    <?php if ($order["payment_id"] == 0) { ?>
+                                        Visa
+                                        
+                                    <?php } ?>
+                                    <?php if ($order["payment_id"] == 1) { ?>
+                                        KBZ pay
+                                    <?php } ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <a href="./orderDetail.php" class="font-medium text-blue-600  hover:underline">View</a>
