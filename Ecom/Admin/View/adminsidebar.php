@@ -42,7 +42,7 @@
         </div>
         <div>
             <ul class="flex space-x-5 items-center pr-5 text-white">
-                <li><ion-icon name="moon-outline" class=" text-xl"></ion-icon></li>
+              
                 <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                 <li><img src="./resources/img/amazfit.png" alt="..." width="40px"></li>
                 <li class=" font-medium">John Derek</li>
@@ -120,7 +120,6 @@
                             <ion-icon class=" h-5 w-5" name="cube-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Products</span>
                             </span>
-
                             <span>
                                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>

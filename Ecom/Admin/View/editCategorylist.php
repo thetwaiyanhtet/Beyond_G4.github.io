@@ -48,7 +48,7 @@ include "./adminsidebar.php";
                             </div>
                             <div class="flex flex-col justify-start space-y-3 mt-5">
                                 <p>Description</p>
-                                <input type="text" class="border outline-none indent-2" id="text" rows="4" cols="50" value="<?php echo $categorydata[0]["description"] ?>" name="cdescription">
+                                <input type="text" class="border rounded-md outline-none h-8 w-72 indent-2" id="text" rows="4" cols="50" value="<?php echo $categorydata[0]["description"] ?>" name="cdescription">
                                 </input>
                             </div>
                         </div>

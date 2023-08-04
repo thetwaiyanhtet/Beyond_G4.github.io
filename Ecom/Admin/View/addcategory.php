@@ -34,7 +34,7 @@ include "./adminsidebar.php";
                             </div>
                             <div class="flex flex-col justify-start space-y-3 mt-5">
                                 <p>Description</p>
-                                <input type="text" class="border outline-none indent-2" id="text" name="cdescription" rows="4" cols="50"></input>
+                                <input type="text" class="border h-8 w-72 rounded-md outline-none indent-2" id="text" name="cdescription" rows="4" cols="50"></input>
                             </div>
                         </div>
                     </div>
