@@ -2,6 +2,7 @@
 
 session_start();
 $admin = $_SESSION["m_admin"];
+include "../Controller/updatepasswordController.php";
 
 ?>
 
@@ -9,9 +10,9 @@ $admin = $_SESSION["m_admin"];
 <html>
 
 
-?>;
-<?php include "./adminsidebar.php";?>;
-<?php include "../Controller/updatepasswordController.php" ?>;
+
+
+<?php include "../Controller/updatepasswordController.php" ?>
 
 
 <head>
@@ -23,51 +24,53 @@ $admin = $_SESSION["m_admin"];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/setting.css">
+    <script src="../View/resources/js/admin.js" defer></script>
 </head>
 
 <body>
     <main id="main" class=" ml-72 mt-24">
         <div class=" px-5 space-y-5 pb-5">
             <p class=" text-xl font-semibold font-philosopher">Update Profile and Passwod</p>
-
+            <form action="../Controller/updateprofileController.php" method="post" enctype="multipart/form-data">
             <section class=" border border-gray-400 rounded-lg shadow-lg p-3">
                 <p class=" font-semibold">Update Profile</p>
                 <div class=" w-[50%] mx-auto space-y-6">
-                    <div class=" flex items-center justify-between">
-                        <p class=" w-40">Profile Picture</p>
-                        <p>-</p>
-                        <div class=" flex items-center w-80 border-2 border-dashed border-blue-500 px-20 py-10">
-                            <p>Drop Here</p>
-                            <img src="./resources/img/solar_copy-bold-duotone.png" alt="...">
-                        </div>
+                    <div class=" flex items-center justify-start">
+                        <p class=" w-40">Profile Picture - </p>
+                        <div class=" w-40 h-40    shadow-xl border-2 border-blue-950">
+                        <label for="profile1">
+                            <img class="w-40 h-40" src="<?=($admin[0]['p_picture'])?>" id="profileimg1" alt="">
+                        </label>
+                        <input type="file" class="hidden" id="profile1" accept=".png,.jpeg" name="profile1">
+                    </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Username</p>
-                        <p>-</p>
+                        <p>- </p>
                         <div class="">
-                            <input type="text" value="KyawSwar" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="text" name="username" placeholder="<?= $admin[0]['username'] ?>" class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Email</p>
                         <p>-</p>
                         <div class="">
-                            <input type="text" value="kyawswarlynn.jkfk" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="email" name="email" placeholder="<?= $admin[0]['email'] ?>" class=" border border-gray-400 ml-3 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Phone</p>
                         <p>-</p>
                         <div class="">
-                            <input type="text" value="09-123456789" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="text" name="phone" placeholder="<?= $admin[0]['phone'] ?>" class=" border border-gray-400 rounded-md  ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                 </div>
                 <div class=" justify-end flex pr-5 py-3">
-                    <button id="updates" class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md">Update</button>
+                    <input id="updates" type="submit" value="Update" class=" font-playfairDisplay px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md"></input>
                 </div>
             </section>
-
+            </form>
             <section class="border border-gray-400 rounded-lg shadow-lg p-3">
                 <p class=" font-semibold">Change Password</p>
                 <div class=" w-[50%] mx-auto space-y-6 pt-3">

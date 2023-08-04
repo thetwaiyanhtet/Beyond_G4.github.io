@@ -1,6 +1,5 @@
 <?php
-echo "<pre>";
-print_r($_POST);
+
 include "../Model/model.php";
 
 $bannerone = $_FILES["photo1"]["name"];
@@ -33,4 +32,6 @@ move_uploaded_file($bannerfourtmp,"../../Storage/profile/".$bannerfour))  {
     $sql->bindValue(":banner_four", "../../Storage/profile/".$bannerfour);
     
     $sql->execute();
+
+    header( "Location: ../View/updatebanner.php");
 }
