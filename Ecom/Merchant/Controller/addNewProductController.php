@@ -4,7 +4,6 @@ session_start();
 // print_r($_POST);
 //middleware
 // include "../../Merchant/Controller/middleware/loginCheck.php";
-
 ini_set('display_errors', 1);
 // //Direct Access
 if (count($_POST) == 0) {
