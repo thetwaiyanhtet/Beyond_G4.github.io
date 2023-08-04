@@ -11,7 +11,7 @@ if(isset($_POST["login"])){
    include "../Model/model.php";
 
    $sql = $pdo ->prepare(
-     "SELECT * FROM user_acc WHERE  email = :email"
+     "SELECT * FROM m_customer WHERE  email = :email"
    );
    $sql -> bindValue(":email", $email);
    $sql -> execute();

@@ -14,7 +14,7 @@ if (isset($_POST["register"])) {
     //DB connection
     include "../Model/model.php";
     $sql = $pdo->prepare(
-        "SELECT * FROM user_acc WHERE email=:email"
+        "SELECT * FROM m_customer WHERE email=:email"
     );
     $sql->bindValue(":email", $email);
     $sql->execute();
@@ -23,24 +23,30 @@ if (isset($_POST["register"])) {
 
     if (count($resultEmail) == 0) {
         $sql = $pdo->prepare(
-            "INSERT INTO  user_acc
+            "INSERT INTO  m_customer
     (
         username,
         email,
-        password
+        password,
+        create_date,
+        update_date
     )
     VALUES(
         :username,
         :email,
-        :password
+        :password,
+        :create_date,
+        :update_date
     )
     "
     );
         $sql->bindValue(":username", $username);
         $sql->bindValue(":email", $email);
         $sql->bindValue(":password", password_hash($password, PASSWORD_DEFAULT));
+        $sql->bindValue(":create_date",date('Y-m-d'));
+        $sql->bindValue(":update_date",date('Y-m-d'));
         $sql->execute();
-        $sql->execute();
+        $_SESSION["userEmail"] = $email;
         header("Location: ../View/mainPage.php");
     } else {
         $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
@@ -49,3 +55,4 @@ if (isset($_POST["register"])) {
 } else {
     header("Location: ../View/404page.php");
 }
+?>

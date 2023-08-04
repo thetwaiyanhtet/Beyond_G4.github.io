@@ -24,16 +24,16 @@
         <img src="./resources/img/forget.png" alt="forget" class="md:w-2/12 w-56 mt-5">
         <p class="mt-16 text-center font-semibold text-black">Please Enter Your Email Address To <br>
             Receive a Verification Card </p>
-        <form action="" class="md:mr-20 mr-28 mt-16">
-            <label for="" class="font-poppins font-semibold text-lg text-black ">Email</label><br><br>
-            <input type="email" name="" id="" class="dark:border-black  border-0 border-b-2 border-black shadow-md w-64 outline-none hover:outline-none" placeholder="user@gmail.com">
+        <form action="../Controller/updatePasswordController.php" method="post" class="md:mr-20 mr-28 mt-16">
+            <div class="flex flex-col">
+                <label class="font-poppins font-semibold text-lg text-black">Email</label><br><br>
+                <input type="email" name="userEmail" class="dark:border-black  border-0 border-b-2 border-black shadow-md w-64 outline-none hover:outline-none" placeholder="user@gmail.com">
+                <a href="">
+                    <button type="submit" name="send" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg ml-10">Send</button>
+                </a>
+            </div>
         </form>
-        <a href="./Verify.php">
-            <button type="button" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg">Send</button>
-        </a>
     </div>
-
-
 </body>
 
 </html>

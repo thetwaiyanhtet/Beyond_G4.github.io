@@ -1,5 +1,6 @@
 <?php
-include "./sidebar.php"
+include "./sidebar.php";
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,60 +39,69 @@ include "./sidebar.php"
                     <div>
                         <p class=" text-text2 font-philosopher text-lg font-semibold">Account</p>
                         <p class="font-philosopher font-light text-base mt-2">Logo</p>
-                        <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
-                            <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5">
-                            <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
-                        </div>
-                        <!-- <div class="w-[45%]  border border-solid border-gray-400 my-5"></div> -->
-                        <form action="">
+                        <form action="../Controller/settingController.php" method="post" enctype="multipart/form-data">
+                            <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
+                                <label for="photo1" class="cursor-pointer"> <!-- Add cursor-pointer class to show pointer cursor on hover -->
+                                    <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photo1">
+                                </label>
+                                <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
+                                <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo1">
+                            </div>
+
+                            <!-- <div class="w-[45%]  border border-solid border-gray-400 my-5"></div> -->
                             <div class=" space-y-5 pt-7">
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
-                                        <label for="" class=" text-sm">Shop Name<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="" id="" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="shop###" required>
+                                        <label class=" text-sm">Shop Name<span class=" text-red-600">*</span></label>
+                                        <input type="text" name="shopName" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="shop###" required>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Email<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="" id="" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="#####@mail.com" required>
+                                        <input type="text" name="email" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="#####@mail.com" required>
                                     </div>
                                 </div>
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Phone Number<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="" id="" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="09*******" required>
+                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="09*******" required>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Address<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="" id="" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="########" required>
+                                        <input type="text" name="address" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="########" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="mt-20 pr-10">
-                                <button class="w-28 p-2 mr-2 bg-blue-600  rounded-lg mb-2 text-white hover:text-black hover:bg-white hover:border border-black ">Cancel</button>
-                                <button class="w-28 p-2 bg-blue-600 rounded-lg text-white hover:text-black hover:border border-black  mb-2 hover:bg-white">Save</button>
+                                <button type="submit" name="cancel" class="w-28 p-2 mr-2 bg-blue-600  rounded-lg mb-2 text-white hover:text-black hover:bg-white hover:border border-black ">Cancel</button>
+                                <button type="submit" name="send" class="w-28 p-2 bg-blue-600 rounded-lg text-white hover:text-black hover:border border-black  mb-2 hover:bg-white">Save</button>
                             </div>
                         </form>
                     </div>
                     <div class=" ml-20 pl-20 border-l-2 border-gray-300">
                         <p class=" text-text2 font-philosopher text-lg font-semibold">Update Password</p>
-                        <form action="" class="w-full h-auto  pt-5">
+                        <form action="../Controller/updatePasswordController.php" method="post" class="w-full h-auto  pt-5">
                             <div class=" space-y-3">
                                 <div class="flex flex-col">
-                                    <label for="" class=" text-sm">Old Password<span class=" text-red-600">*</span></label>
-                                    <input type="text" name="" id="" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none " placeholder=" Please enter old password" required>
+                                    <label for="oldPassword" class=" text-sm">Old Password<span class=" text-red-600">*</span></label>
+                                    <span class="text-red-600">
+                                        <?php
+                                        echo  $_SESSION['ERRORMESSAGE']
+                                        ?>
+                                    </span>
+                                    <input type="password" name="oldPassword" id="oldPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none " placeholder=" Please enter old password" required>
                                 </div>
                                 <div class="flex flex-col">
-                                    <label for="" class="text-sm ">New Password<span class=" text-red-600">*</span></label>
-                                    <input type="text" name="" id="" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none" placeholder="Please enter New password" required>
+                                    <label for="newPassword" name="" class="text-sm ">New Password<span class=" text-red-600">*</span></label>
+                                    <input type="password" name="newPassword" id="newPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none" placeholder="Please enter New password" required>
                                 </div>
                                 <div class="flex flex-col">
-                                    <label for="" class="text-sm mt-2 ">Confirm New Password<span class=" text-red-600">*</span></label>
-                                    <input type="text" name="" id="" class="w-72 p-2 border border-solid rounded-md mt-2 font-medium outline-none" placeholder="Please enter again to confirm" required>
+                                    <label for="confirmPassword" class="text-sm mt-2 ">Confirm New Password<span class=" text-red-600">*</span></label>
+                                    <input type="password" name="confirmPassword" id="" class="w-72 p-2 border border-solid rounded-md mt-2 font-medium outline-none" placeholder="Please enter again to confirm" required>
                                 </div>
                             </div>
                             <div class=" mt-[173px]">
-                                <button class="w-28 p-2 mr-2 bg-blue-600  rounded-lg mb-2 text-white hover:text-black hover:bg-white hover:border border-black ">Reset</button>
-                                <button class="w-28 p-2 bg-blue-600 rounded-lg text-white hover:text-black hover:border border-black  mb-2 hover:bg-white">Update</button>
+                                <button type="submit" name="reset" class="w-28 p-2 mr-2 bg-blue-600  rounded-lg mb-2 text-white hover:text-black hover:bg-white hover:border border-black ">Reset</button>
+                                <button type="submit" name="update" class="w-28 p-2 bg-blue-600 rounded-lg text-white hover:text-black hover:border border-black  mb-2 hover:bg-white">Update</button>
                             </div>
                         </form>
                     </div>
