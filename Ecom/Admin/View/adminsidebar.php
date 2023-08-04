@@ -1,4 +1,5 @@
-<?php session_start();
+<?php
+ session_start();
 $admin = $_SESSION["m_admin"]; 
 
 $logoandname = $_SESSION["m_logo"];

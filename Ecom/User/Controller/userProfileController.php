@@ -17,5 +17,5 @@ session_start();
 
     
 
-    header("Location: ../View/userProfileEditUpd.php");
+    //header("Location: ../View/userProfileEditUpd.php");
 ?>
