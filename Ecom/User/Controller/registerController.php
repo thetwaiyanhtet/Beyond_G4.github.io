@@ -14,7 +14,7 @@ if (isset($_POST["register"])) {
     //DB connection
     include "../Model/model.php";
     $sql = $pdo->prepare(
-        "SELECT * FROM user_acc WHERE email=:email"
+        "SELECT * FROM m_customer WHERE email=:email"
     );
     $sql->bindValue(":email", $email);
     $sql->execute();
@@ -23,7 +23,7 @@ if (isset($_POST["register"])) {
 
     if (count($resultEmail) == 0) {
         $sql = $pdo->prepare(
-            "INSERT INTO  user_acc
+            "INSERT INTO  m_customer
     (
         username,
         email,
@@ -39,7 +39,6 @@ if (isset($_POST["register"])) {
         $sql->bindValue(":username", $username);
         $sql->bindValue(":email", $email);
         $sql->bindValue(":password", password_hash($password, PASSWORD_DEFAULT));
-        $sql->execute();
         $sql->execute();
         header("Location: ../View/mainPage.php");
     } else {

@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // DB Connection
 include "../Model/model.php";
@@ -10,5 +9,5 @@ $sql = $pdo->prepare(
 
 $sql->execute(); // real sql run 
 
-$_SESSION["products"]  = $sql->fetchAll(PDO::FETCH_ASSOC);
+$products = $sql->fetchAll(PDO::FETCH_ASSOC);
 // DB Connection
