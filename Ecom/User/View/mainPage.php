@@ -2,6 +2,7 @@
 session_start();
 require_once("../Controller/cartController.php");
 $faq = $_SESSION["m_faq"];
+$banner = $_SESSION["banner"];
 include  "../../Admin/Controller/readfaqController.php";
 ?>
 
@@ -158,6 +159,12 @@ include  "../../Admin/Controller/readfaqController.php";
         </div>
     </nav>
 
+            <div>
+                <!-- Banner_1 section -->
+                <img src="<?= $banner[0]['banner_one_img']  ?>" alt="" class="mt-16 rounded-xl">
+            </div>
+            <!--Trending product section  -->
+            <div class=" flex flex-col m-auto p-auto font-poppins ">
 
 
 
@@ -248,7 +255,7 @@ include  "../../Admin/Controller/readfaqController.php";
             <!--End of Trending product section  -->
             <!-- Banner 2 -->
             <div>
-                <img src="./resources/img/home_hero/Banner_2_upt.png" alt="" class=" w-full rounded-xl">
+                <img src="<?= $banner[0]['banner_two_img']  ?>" alt="" class=" w-full rounded-xl">
             </div>
             <!--End of Banner 2 -->
             <!-- All Product session start -->
@@ -538,7 +545,7 @@ include  "../../Admin/Controller/readfaqController.php";
             </a>
 
             <div>
-                <img src="./resources/img/home_hero/Banner_3.png" alt="" class=" w-full rounded-xl">
+                <img src="<?= $banner[0]['banner_three_img']  ?>" alt="" class=" w-full rounded-xl">
             </div>
             <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Feature Shops</span></h1>
             <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
@@ -690,7 +697,7 @@ include  "../../Admin/Controller/readfaqController.php";
         </section>
         <section class="w-[90%] m-auto">
             <div>
-                <img src="./resources/img/home_hero/sample_banner.png" alt="" class=" w-full rounded-xl">
+                <img src="<?= $banner[0]['banner_four_img']  ?>" alt="" class=" w-full rounded-xl">
             </div>
 
             <div class=" w-full h-auto py-5 z-10">
