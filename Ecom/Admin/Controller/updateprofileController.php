@@ -12,7 +12,7 @@ if (count($_POST) == 0) {
 $profile = $_FILES["profile1"]["name"];
 $profiletmp = $_FILES["profile1"]["tmp_name"];
 
-if (move_uploaded_file($profiletmp,"../../Storage/profile/".$profile)){
+if (move_uploaded_file($profiletmp,"../AdminStorge/admin/".$profile)){
     $sql = $pdo->prepare(
         "UPDATE m_admin SET 
     `username`= :username,
