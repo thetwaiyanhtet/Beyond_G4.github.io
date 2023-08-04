@@ -60,37 +60,37 @@ include "./sidebar.php"
                         <div>
                             <ul class=" flex space-x-3">
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo">
+                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo1">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg1" alt="">
                                         </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_one"] ?>" name="photo1">
+                                        <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_one"] ?>" name="photo1">
                                     </div>
                                 </li>
-                                <!-- <li>
+                                <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo">
+                                        <label for="photo2">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
                                         </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_two"] ?>" name="photo2">
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_two"] ?>" name="photo2">
                                     </div>
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo">
-                                            <img src="../View/resources/img/product image.jpg" id="photoim3" alt="">
+                                        <label for="photo3">
+                                            <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
                                         </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_three"] ?>" name="photo3">
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_three"] ?>" name="photo3">
                                     </div>
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo">
+                                        <label for="photo4">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
                                         </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="<?php echo $productdata[0]["p_four"] ?>" name="photo4">
+                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_four"] ?>" name="photo4">
                                     </div>
-                                </li> -->
+                                </li>
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
                                 </li>
@@ -219,7 +219,7 @@ include "./sidebar.php"
                                     <div>
                                         <p>Description</p>
                                     </div>
-                                    <div><input type="text" cols="23" name="description" rows="3" value="<?php echo $productdata[0]["description"] ?>" class="inputBox"></input></div>
+                                    <div><textarea cols="23" name="description" rows="3"  class="inputBox"><?php echo $productdata[0]["description"] ?></textarea></div>
                                 </div>
                             </div>
                         </div>
