@@ -90,18 +90,18 @@
             </div>
         </div>
     </nav>
-    <section class="">
-        <div class="md:flex flex-col md:m-5 m-2 space-y-5 ">
-            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Cart</button>
-            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">WishList</button>
-            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">History</button>
-            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>
+    <section class="flex flex-wrap w-full mt-24">
+        <div class="md:flex flex-col md:m-5 m-2 space-y-5 w-full md:w-64 ">
+            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2 shadow-md">Cart</button>
+            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2 shadow-md">WishList</button>
+            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2 shadow-md">History</button>
+            <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2 shadow-md">Notification</button>
         </div>
 
-        <div class="">
-            <div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <div class="m-2 w-[100%] md:w-3/4">
+            <div class="w-auto max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <div class="flex items-center justify-between mb-4">
-                    <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h5>
+                    <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Order History</h5>
                     <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                         View all
                     </a>
@@ -111,14 +111,14 @@
                         <li class="py-3 sm:py-4">
                             <div class="flex items-center space-x-4">
                                 <div class="flex-shrink-0">
-                                    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                        Neil Sims
+                                        White Blouse
                                     </p>
                                     <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                        email@windster.com
+                                        From: MONCLER GENIUS
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
@@ -129,72 +129,72 @@
                         <li class="py-3 sm:py-4">
                             <div class="flex items-center space-x-4">
                                 <div class="flex-shrink-0">
-                                    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                        Bonnie Green
+                                        White Blouse
                                     </p>
                                     <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                        email@windster.com
+                                        From: MONCLER GENIUS
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                    $3467
+                                    $320
                                 </div>
                             </div>
                         </li>
                         <li class="py-3 sm:py-4">
                             <div class="flex items-center space-x-4">
                                 <div class="flex-shrink-0">
-                                    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Michael image">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                        Michael Gough
+                                        White Blouse
                                     </p>
                                     <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                        email@windster.com
+                                        From: MONCLER GENIUS
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                    $67
+                                    $320
                                 </div>
                             </div>
                         </li>
                         <li class="py-3 sm:py-4">
                             <div class="flex items-center space-x-4">
                                 <div class="flex-shrink-0">
-                                    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Lana image">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                        Lana Byrd
+                                        White Blouse
                                     </p>
                                     <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                        email@windster.com
+                                        From: MONCLER GENIUS
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                    $367
+                                    $320
                                 </div>
                             </div>
                         </li>
                         <li class="pt-3 pb-0 sm:pt-4">
                             <div class="flex items-center space-x-4">
                                 <div class="flex-shrink-0">
-                                    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                        Thomes Lean
+                                        White Blouse
                                     </p>
                                     <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                        email@windster.com
+                                        From: MONCLER GENIUS
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                    $2367
+                                    $320
                                 </div>
                             </div>
                         </li>

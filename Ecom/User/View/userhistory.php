@@ -89,14 +89,14 @@
             </div>
         </div>
     </nav>
-    <div class="flex flex-wrap mt-4 w-auto h-auto md:space-x-24 ">
+    <div class="flex mt-16 w-auto h-auto md:space-x-24 ">
         <div class="md:flex flex-col md:m-5 m-2 space-y-5">
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Cart</button>
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">WishList</button>
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">History</button>
             <button type="button" class="w-24 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>
         </div>
-        <div class="flex">
+        <div class="">
             <div class=" md:w-auto w-96 md:h-auto h-44 border border-solid  bg-gray-300 hover:border-l-blue-700 hover:border-l-4 rounded-md md:ml-0 ml-3">
                 <div class="flex justify-between">
                     <div class=" w-auto md:h-auto h-20 bg-gray-600 rounded-md relative mt-10 m-5">
