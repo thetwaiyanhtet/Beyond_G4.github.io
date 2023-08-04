@@ -29,7 +29,7 @@ $result = $_SESSION["m_product"];
     <script src="./resources/js/dateandtime.js " defer></script>
 </head>
 
-<body>
+<body class="">
     <main class=" ml-56 h-screen">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">

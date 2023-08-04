@@ -2,7 +2,7 @@
 include "./adminsidebar.php";
 include "../Controller/costomerListController.php";
 $result = $_SESSION["customers"];
-
+print_r($result);
 ?>
 <!doctype html>
 <html>
