@@ -7,7 +7,7 @@ if(isset($_POST["login"])){
    echo $email;
    echo $password;
 
-   //DB connection
+//    //DB connection
    include "../Model/model.php";
 
    $sql = $pdo ->prepare(
@@ -16,18 +16,25 @@ if(isset($_POST["login"])){
    $sql -> bindValue(":email", $email);
    $sql -> execute();
    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+  //  echo "<pre>";
+  //  print_r($result);
    
    if (count($result) == 0) {
     $_SESSION["loginerror"] = "Email not found!";
     header("Location: ../View/login.php");
    }else{
     if (password_verify($password,$result[0]["password"])) {
+      $_SESSION["user_ID"] = $email;
+      // echo($_SESSION["user_ID"]);
       header("Location: ../View/mainPage.php");
     }else {
       $_SESSION["loginerror"] = "Email or password incorrect!";
       header("Location: ../View/login.php");
     }
    }
-}else{
+ 
+}
+
+else{
     header("Location: ../View/404page.php");
 }

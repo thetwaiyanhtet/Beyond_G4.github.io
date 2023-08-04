@@ -1,8 +1,12 @@
 <?php
-include "../Controller/addressController.php";
 
+include "../Controller/addressController.php";
 $resultT = $_SESSION["townships"];
 $resultR = $_SESSION["regions"];
+$userData= $_SESSION["user_data"];
+
+// print_r($userData);
+
 ?>
 
 <!DOCTYPE html>
@@ -120,20 +124,20 @@ $resultR = $_SESSION["regions"];
             <div class=" flex justify-around  w-[60%]">
                 <section div class=" col-start-1 col-span-3 space-y-3 md:w-[700px] w-[380px] md:mx-20 mx-10">
                     <div class="">
-                        <p class="  text-start md:text-lg text-sm">Username</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
+                        <p class="text-start md:text-lg text-sm">Username</p>
+                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="username" value="<?php echo $userData["username"] ?>">
                     </div>
                     <div class="">
                         <p class=" text-start md:text-lg text-sm">Name</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
+                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="name">
                     </div>
                     <div class="">
                         <p class=" text-start md:text-lg text-sm">Email</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
+                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="email" value="<?php echo $userData["email"] ?>">
                     </div>
                     <div class="">
                         <p class=" text-start md:text-lg text-sm">Phone Number</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
+                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="phone_no">
                     </div>
                     <div class=" ">
                         <p class="md:text-lg text-sm ">Gender</p>
@@ -148,7 +152,7 @@ $resultR = $_SESSION["regions"];
                     </div>
                     <div class="">
                         <p class=" md:text-lg text-sm ">Date of Birth</p>
-                        <input type="date" class=" md:w-72 w-66 md:p-3 p-2 rounded-md md:text-base text-sm">
+                        <input type="date" class=" md:w-72 w-66 md:p-3 p-2 rounded-md md:text-base text-sm" name="date">
                     </div>
                 </section>
 
@@ -156,7 +160,7 @@ $resultR = $_SESSION["regions"];
                     <div class=" flex-col space-y-3">
                         <div>
                             <p class="  text-start md:text-lg text-sm">Street</p>
-                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="street">
                         </div>
 
                         <p class="  text-start md:text-lg text-sm">Township</p>

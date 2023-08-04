@@ -832,10 +832,13 @@ video {
 
 .top-20 {
   top: 5rem;
+<<<<<<< Updated upstream
 }
 
 .bottom-14 {
   bottom: 3.5rem;
+=======
+>>>>>>> Stashed changes
 }
 
 .right-3 {
@@ -1814,6 +1817,7 @@ video {
   width: 100vw;
 }
 
+<<<<<<< Updated upstream
 .w-\[85\%\] {
   width: 85%;
 }
@@ -1822,6 +1826,8 @@ video {
   min-width: 0px;
 }
 
+=======
+>>>>>>> Stashed changes
 .max-w-screen-xl {
   max-width: 1280px;
 }
@@ -2678,10 +2684,13 @@ video {
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+<<<<<<< Updated upstream
 }
 
 .bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
+=======
+>>>>>>> Stashed changes
 }
 
 .bg-opacity-50 {
@@ -4534,10 +4543,13 @@ body * {
 
   .md\:w-5 {
     width: 1.25rem;
+<<<<<<< Updated upstream
   }
 
   .md\:w-3\/4 {
     width: 75%;
+=======
+>>>>>>> Stashed changes
   }
 
   .md\:rotate-180 {
