@@ -18,12 +18,12 @@ if(count($_POST) == 0){
     $color3=$_POST["color3"];
     $photo1 = $_FILES["photo1"]["name"];
     $photo1tmp = $_FILES["photo1"]["tmp_name"];
-    $photo2 = $_FILES["photo2"]["name"];
-    $photo1tmp = $_FILES["photo2"]["tmp_name"];
-    $photo3 = $_FILES["photo3"]["name"];
-    $photo1tmp = $_FILES["photo3"]["tmp_name"];
-    $photo4 = $_FILES["photo4"]["name"];
-    $photo1tmp = $_FILES["photo4"]["tmp_name"];
+    // $photo2 = $_FILES["photo2"]["name"];
+    // $photo1tmp = $_FILES["photo2"]["tmp_name"];
+    // $photo3 = $_FILES["photo3"]["name"];
+    // $photo1tmp = $_FILES["photo3"]["tmp_name"];
+    // $photo4 = $_FILES["photo4"]["name"];
+    // $photo1tmp = $_FILES["photo4"]["tmp_name"];
     
     
     include "../Model/model.php";
@@ -40,10 +40,10 @@ if(count($_POST) == 0){
         color_1=:color_1,
         color_2=:color_2,
         color_3=:color_3,
-        p_one=:photo1,
-        p_two=:photo2,
-        p_three=:photo3,
-        p_four=:photo4
+        p_one=:photo1
+        -- p_two=:photo2,
+        -- p_three=:photo3,
+        -- p_four=:photo4
 
         
         WHERE id=:id;
@@ -60,9 +60,9 @@ if(count($_POST) == 0){
     $sql->bindValue(":color_2",$color2);
     $sql->bindValue(":color_3",$color3);
     $sql->bindValue(":photo1","/Storage/product/".$photo1);
-    $sql->bindValue(":photo2","/Storage/product/".$photo2);
-    $sql->bindValue(":photo3","/Storage/product/".$photo3);
-    $sql->bindValue(":photo4","/Storage/product/".$photo4);
+    // $sql->bindValue(":photo2","/Storage/product/".$photo2);
+    // $sql->bindValue(":photo3","/Storage/product/".$photo3);
+    // $sql->bindValue(":photo4","/Storage/product/".$photo4);
     $sql->bindValue(":id",$id);
     $sql->execute();
 

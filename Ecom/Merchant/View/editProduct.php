@@ -67,7 +67,7 @@ include "./sidebar.php"
                                         <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_one"] ?>" name="photo1">
                                     </div>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
@@ -90,7 +90,7 @@ include "./sidebar.php"
                                         </label>
                                         <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_four"] ?>" name="photo4">
                                     </div>
-                                </li>
+                                </li> -->
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
                                 </li>
