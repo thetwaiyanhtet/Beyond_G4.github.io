@@ -28,7 +28,6 @@ $sql->bindValue(":street", $street);
 $sql->bindValue(":updateDate", date("Y-m-d"));
 $sql->bindValue(":email", $userEmail);
 
-echo $userEmail;
 $sql->execute();
 
 $userData = $sql->fetchAll(PDO::FETCH_ASSOC);

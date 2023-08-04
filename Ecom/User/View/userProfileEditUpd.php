@@ -127,7 +127,7 @@ echo "</pre>";
                     <section div class=" col-start-1 col-span-3 space-y-3 md:w-[700px] w-[380px] md:mx-20 mx-10">
                         <div class="">
                             <p class="text-start md:text-lg text-sm">Username</p>
-                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="username" value="<?php echo $userData["username"] ?>">
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="username" >
                         </div>
                         <div class="">
                             <p class=" text-start md:text-lg text-sm">Name</p>
@@ -135,7 +135,7 @@ echo "</pre>";
                         </div>
                         <div class="">
                             <p class=" text-start md:text-lg text-sm">Email</p>
-                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="email" value="<?php echo $userData["email"] ?>">
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="email" >
                         </div>
                         <div class="">
                             <p class=" text-start md:text-lg text-sm">Phone Number</p>
