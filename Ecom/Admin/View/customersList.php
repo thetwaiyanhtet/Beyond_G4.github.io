@@ -1,8 +1,9 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/costomerListController.php";
-$result = $_SESSION["customers"];
-// print_r($result);
+// echo "<pre>";
+// print_r($customers);
+
 ?>
 <!doctype html>
 <html>

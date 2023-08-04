@@ -1,5 +1,5 @@
 <?php
-//include "./adminsidebar.php";
+// include "./adminsidebar.php";
 include "../Controller/customerDetailController.php";
 //print_r($customerDetail);
 ?>
@@ -186,114 +186,25 @@ include "../Controller/customerDetailController.php";
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($orders as $order) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Iphone 14 Pro Max
+                                    <?= $order["name"] ?>
                                 </th>
                                 <td class="px-6 py-4">
-                                    Shop Kit
+                                    <?= $order["m_name"] ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    $4500.00
+                                    <?= $order["total_amt"] ?>
                                 </td>
-
                                 <td class="px-6 py-4 ">
-                                    11 July 2023
+                                    <?= $order["order_date"] ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
                                 </td>
                             </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Iphone 14 Pro Max
-                                </th>
-                                <td class="px-6 py-4">
-                                    Shop Kit
-                                </td>
-                                <td class="px-6 py-4">
-                                    $4500.00
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    11 July 2023
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Iphone 14 Pro Max
-                                </th>
-                                <td class="px-6 py-4">
-                                    Shop Kit
-                                </td>
-                                <td class="px-6 py-4">
-                                    $4500.00
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    11 July 2023
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Iphone 14 Pro Max
-                                </th>
-                                <td class="px-6 py-4">
-                                    Shop Kit
-                                </td>
-                                <td class="px-6 py-4">
-                                    $4500.00
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    11 July 2023
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Iphone 14 Pro Max
-                                </th>
-                                <td class="px-6 py-4">
-                                    Shop Kit
-                                </td>
-                                <td class="px-6 py-4">
-                                    $4500.00
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    11 July 2023
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Iphone 14 Pro Max
-                                </th>
-                                <td class="px-6 py-4">
-                                    Shop Kit
-                                </td>
-                                <td class="px-6 py-4">
-                                    $4500.00
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    11 July 2023
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
-                                </td>
-                            </tr>
+                            <?php }?>
                         </tbody>
                     </table>
 
