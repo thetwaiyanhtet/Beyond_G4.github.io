@@ -2,8 +2,8 @@
 session_start();
 $productdata = $_SESSION["editproduct"];
 include "../Controller/categoryListController.php";
-// print_r($productdata);
-include "./sidebar.php"
+print_r($productdata[0]["p_one"]);
+//include "./sidebar.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,11 +60,11 @@ include "./sidebar.php"
                         <div>
                             <ul class=" flex space-x-3">
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo1">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg1" alt="">
+                                            <img src="../../<?php echo $productdata[0]["p_one"] ?>" id="photoimg1" alt="">
                                         </label>
-                                        <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_one"] ?>" name="photo1">
+                                        <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" value="" name="photo1">
                                     </div>
                                 </li>
                                 <!-- <li>
@@ -122,11 +122,11 @@ include "./sidebar.php"
                                         <p>Category</p>
                                     </div>
                                     <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
-                                        <?php foreach ($categories as $category) { ?>
-                                            <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
+                                            <?php foreach ($categories as $category) { ?>
+                                                <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
                                             <?php } ?>
-                                            
-                                        
+
+
                                         </select></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
@@ -219,7 +219,7 @@ include "./sidebar.php"
                                     <div>
                                         <p>Description</p>
                                     </div>
-                                    <div><textarea cols="23" name="description" rows="3"  class="inputBox"><?php echo $productdata[0]["description"] ?></textarea></div>
+                                    <div><textarea cols="23" name="description" rows="3" class="inputBox"><?php echo $productdata[0]["description"] ?></textarea></div>
                                 </div>
                             </div>
                         </div>

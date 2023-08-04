@@ -1,7 +1,7 @@
 <?php
 include "./adminsidebar.php";
 include '../Controller/productListController.php';
-$result = $_SESSION["products"];
+
 ?>
 <!doctype html>
 <html>
@@ -56,10 +56,10 @@ $result = $_SESSION["products"];
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($result as $product) { ?>
+                        <?php foreach ($products as $product) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
-                                    <img src="" alt="...">
+                                    <img src="../..<?= $product["p_one"] ?>" alt="..." width="50px">
                                 </th>
                                 <td class="px-6 py-2">
                                     <?= $product["name"]; ?>
