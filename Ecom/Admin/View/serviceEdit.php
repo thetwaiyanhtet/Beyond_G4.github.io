@@ -1,5 +1,9 @@
 <?php
+
 include "./adminsidebar.php";
+include "../Controller/contactusController.php";
+$contact = $_SESSION["m_contactus"];
+
 ?>
 <!doctype html>
 <html>
@@ -18,58 +22,36 @@ include "./adminsidebar.php";
 <body>
     <main id="main" class=" ml-72 mt-24 font-poppins">
         <div class=" px-5 space-y-3 shadow-2xl">
-            <p class=" text-xl font-semibold font-philosopher">About, Service and Contact Us</p>
+            <p class=" text-xl font-semibold font-philosopher">Contact Us</p>
 
             <section class="p-2 pb-6">
-                <div class="flex justify-around">
-                    <div class="w-[430px]">
-                        <div class="bg-gray-300 p-4 rounded-lg">
-                            About
-                            <hr class="bg-gray-800">
-                            About pages are personal to you and your company, so the structure of your about page will vary based on what you want to highlight. However, you’ll start with the same writing process. Let’s explore the set-by-step guide to building your about page.
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <input type="text" name="" id="" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
-                            <button type="button" class="px-5 py-2 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right my-2">Update</button>
-                        </div>
-                    </div>
-                    <div class="w-[430px]">
-                        <div class="bg-gray-300 p-4 rounded-lg">
-                            Service
-                            <hr class="bg-gray-800">
-                            About pages are personal to you and your company, so the structure of your about page will vary based on what you want to highlight. However, you’ll start with the same writing process. Let’s explore the set-by-step guide to building your about page.
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <input type="text" name="" id="" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
-                            <button type="button" class="px-5 py-2 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right my-2">Update</button>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="shadow-xl pb-5">
                     <p class="border border-solid border-b-gray-600 p-4 font-bold">Contact Information</p>
                     <div>
-                        <div class="flex justify-around mt-3">
+                        <form action="../Controller/updatecontactusController.php" method="post">
+                        <div class="flex justify-center mt-3">
                             <div class="w-[430px] ">
                                 <div class="flex items-center justify-between">
-                                    <input type="text" name="" id="" placeholder="Jokeemailsample" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
-                                    <button type="button" class="px-5 py-2 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right my-2">Update</button>
+                                    <input type="text" name="email" id="" value="<?= $contact[0]['email'] ?>" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
                                 </div>
                                 <div class="flex items-center justify-between">
-                                    <input type="text" name="" id="" placeholder="9:00-5:00" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
-                                    <button type="button" class="px-5 py-2 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right my-2">Update</button>
+                                    <input type="text" name="time" id="" value="<?= $contact[0]['available_time'] ?>" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
                                 </div>
                             </div>
                             <div class="w-[430px]">
                                 <div class="flex items-center justify-between">
-                                    <input type="text" name="" id="" placeholder="09-123456789" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
-                                    <button type="button" class="px-5 py-2 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right my-2">Update</button>
+                                    <input type="text" name="phone" id="" value="<?= $contact[0]['phone'] ?>" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
+                                  
                                 </div>
                                 <div class="flex items-center justify-between">
-                                    <input type="text" name="" id="" placeholder="Yangon, Myanmar" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
-                                    <button type="button" class="px-5 py-2 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right my-2">Update</button>
+                                    <input type="text" name="address" id="" value="<?= $contact[0]['address'] ?>" class="bg-gray-300 w-3/4 my-2 p-2  rounded-lg">
+                                   
                                 </div>
+                                <input type="submit" value="Update" class="px-5 py-2 mr-5 text-md text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-xl float-right my-2"></input>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </section>

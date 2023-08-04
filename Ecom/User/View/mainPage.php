@@ -161,26 +161,6 @@ include  "../../Admin/Controller/readfaqController.php";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section class="sec h-screen">
         <section class="w-[85%] m-auto">
 
