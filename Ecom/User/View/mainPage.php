@@ -159,12 +159,6 @@ include  "../../Admin/Controller/readfaqController.php";
         </div>
     </nav>
 
-            <div>
-                <!-- Banner_1 section -->
-                <img src="<?= $banner[0]['banner_one_img']  ?>" alt="" class="mt-16 rounded-xl">
-            </div>
-            <!--Trending product section  -->
-            <div class=" flex flex-col m-auto p-auto font-poppins ">
 
 
 
@@ -192,7 +186,7 @@ include  "../../Admin/Controller/readfaqController.php";
 
             <div>
                 <!-- Banner_1 section -->
-                <img src="./resources/img/home_hero/Banner_1_upt.png" alt="" class="rounded-xl mt-24">
+                <img src="<?= $banner[0]['banner_one_img']  ?>" alt="" class="rounded-xl mt-24">
             </div>
             <!--Trending product section  -->
             <div class=" flex flex-col m-auto p-auto font-poppins ">
