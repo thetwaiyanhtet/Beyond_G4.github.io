@@ -1,5 +1,5 @@
 <?php
-include "./adminsidebar.php";
+//include "./adminsidebar.php";
 include "../Controller/customerDetailController.php";
 //print_r($customerDetail);
 ?>
@@ -26,25 +26,25 @@ include "../Controller/customerDetailController.php";
         <div class=" flex justify-center pr-5 py-6">
             <div class=" w-screen h-full rounded-lg p-5 border border-gray-400 shadow-md">
                 <h1 class="  font-bold font-philosopher">Customer Information</h1>
-                
-                    <div class=" flex-col space-y-3 w-full py-4">
-                        <div class=" flex">
-                            <p class=" w-40">Email</p>
-                            <p class=" w-20">-</p>
-                            <p class=" "><?= $customerDetail["email"]; ?></p>
-                        </div>
-                        <div class=" flex">
-                            <p class="w-40">phone</p>
-                            <p class=" w-20">-</p>
-                            <p class=" "><?= $customerDetail["phone"]; ?></p>
-                        </div>
-                        <div class="flex">
-                            <p class="w-40">Address</p>
-                            <p class=" w-20">-</p>
-                            <p class=""><?= $customerDetail["township"]; ?></p>
-                        </div>
+
+                <div class=" flex-col space-y-3 w-full py-4">
+                    <div class=" flex">
+                        <p class=" w-40">Email</p>
+                        <p class=" w-20">-</p>
+                        <p class=" "><?= $customerDetail["email"]; ?></p>
                     </div>
-                
+                    <div class=" flex">
+                        <p class="w-40">phone</p>
+                        <p class=" w-20">-</p>
+                        <p class=" "><?= $customerDetail["phone"]; ?></p>
+                    </div>
+                    <div class="flex">
+                        <p class="w-40">Address</p>
+                        <p class=" w-20">-</p>
+                        <p class=""><?= $customerDetail["name"]; ?></p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -57,7 +57,7 @@ include "../Controller/customerDetailController.php";
                         </div>
                         <div class=" text-center">
                             <p class=" font-semibold ">Orders</p>
-                            <p class=" opacity-60">6</p>
+                            <p class=" text-xl text-blue-500"><?= $orderCount["order_count"] ?></p>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ include "../Controller/customerDetailController.php";
                         </div>
                         <div class=" text-center">
                             <p class=" font-semibold ">Purchased</p>
-                            <p class=" opacity-60">5060</p>
+                            <p class=" text-xl text-blue-500"><?= $orderCount["order_count"] ?></p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ include "../Controller/customerDetailController.php";
                         </div>
                         <div class=" text-center">
                             <p class=" font-semibold ">Amount</p>
-                            <p class=" opacity-60">$1175</p>
+                            <p class=" text-xl text-blue-500"><?= $sumTotalAmount["total_amount_sum"] ?></p>
                         </div>
                     </div>
                 </div>
