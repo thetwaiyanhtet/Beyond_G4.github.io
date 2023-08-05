@@ -4,9 +4,9 @@ include "../Controller/addressController.php";
 $resultT = $_SESSION["townships"];
 $resultR = $_SESSION["regions"];
 $userData = $_SESSION["user_data"];
-echo "<pre>";
-print_r($userData);
-echo "</pre>";
+// echo "<pre>";
+// print_r($userData);
+// echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -125,36 +125,36 @@ echo "</pre>";
                 </div>
                 <div class=" flex justify-around  w-[60%]">
                     <section div class=" col-start-1 col-span-3 space-y-3 md:w-[700px] w-[380px] md:mx-20 mx-10">
-                        <div class="">
+                        <!-- <div class="">
                             <p class="text-start md:text-lg text-sm">Username</p>
                             <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="username" >
-                        </div>
+                        </div> -->
                         <div class="">
                             <p class=" text-start md:text-lg text-sm">Name</p>
-                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="name">
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="name" required>
                         </div>
-                        <div class="">
+                        <!-- <div class="">
                             <p class=" text-start md:text-lg text-sm">Email</p>
                             <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="email" >
-                        </div>
+                        </div> -->
                         <div class="">
                             <p class=" text-start md:text-lg text-sm">Phone Number</p>
-                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="phone_no">
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="phone_no" required>
                         </div>
                         <div class=" ">
                             <p class="md:text-lg text-sm ">Gender</p>
                             <div>
-                                <input type="radio" id="male" name="gender">
+                                <input type="radio" id="male" name="gender" value="0" required>
                                 <label for="male" class=" md:text-base text-sm  dark:text-white">Male</label>
-                                <input type="radio" id="female" name="gender">
+                                <input type="radio" id="female" name="gender" value="1" required>
                                 <label for="female" class=" md:text-base text-sm  dark:text-white">Female</label>
-                                <input type="radio" id="other" name="gender">
+                                <input type="radio" id="other" name="gender" value="2" required>
                                 <label for="other" class=" md:text-base text-sm  dark:text-white">Other</label>
                             </div>
                         </div>
                         <div class="">
                             <p class=" md:text-lg text-sm ">Date of Birth</p>
-                            <input type="date" class=" md:w-72 w-66 md:p-3 p-2 rounded-md md:text-base text-sm" name="dob">
+                            <input type="date" class=" md:w-72 w-66 md:p-3 p-2 rounded-md md:text-base text-sm" name="dob" required>
                         </div>
                     </section>
 
@@ -162,19 +162,19 @@ echo "</pre>";
                         <div class=" flex-col space-y-3">
                             <div>
                                 <p class="  text-start md:text-lg text-sm">Street</p>
-                                <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="street">
+                                <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="street" required>
                             </div>
 
                             <p class="  text-start md:text-lg text-sm">Township</p>
-                            <select name="township" class=" rounded-md profileInputBox">
+                            <select name="township" class=" rounded-md profileInputBox" required>
                                 <?php foreach ($resultT as $township) { ?>
-                                    <option value="<?= ++$tID ?>"><?= $township["name"]; ?></option>
+                                    <option value="<?= ++$tID ?>"><?= $township["t_name"]; ?></option>
                                 <?php } ?>
                             </select>
                             <p class="  text-start md:text-lg text-sm">Region/State</p>
-                            <select name="region" class=" rounded-md profileInputBox">
+                            <select name="region" class=" rounded-md profileInputBox" required>
                                 <?php foreach ($resultR as $region) { ?>
-                                    <option value="<?= ++$rID ?>"><?= $region["name"]; ?></option>
+                                    <option value="<?= ++$rID ?>"><?= $region["r_name"]; ?></option>
                                 <?php } ?>
                             </select>
 
