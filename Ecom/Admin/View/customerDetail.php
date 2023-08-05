@@ -1,9 +1,7 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/customerDetailController.php";
-// echo "<pre>";
-// print_r($customerDetail);
-// print_r($orders);
+
 ?>
 
 <!doctype html>
@@ -70,7 +68,7 @@ include "../Controller/customerDetailController.php";
                         </div>
                         <div class=" text-center">
                             <p class=" font-semibold ">Purchased</p>
-                            <p class=" text-xl text-blue-500"><?= $orderCount["order_count"] ?></p>
+                            <p class=" text-xl text-blue-500"><?= $purchasedCount["purchased_count"] ?></p>
                         </div>
                     </div>
                 </div>

@@ -57,16 +57,15 @@ include "../Controller/productDetailController.php";
                             <p class="w-40">Color</p>
                             <p class="w-32">-</p>
                             <div class="flex space-x-2">
-                                <div class="w-7 h-7 bg-[<?= $productDetail["color_1"]; ?>] rounded-full"></div>
-                                <div class="w-7 h-7 bg-[<?= $productDetail["color_2"]; ?>] rounded-full"></div>
-                                <div class="w-7 h-7 bg-[<?= $productDetail["color_3"]; ?>] rounded-full"></div>
-                                <div class="w-7 h-7 bg-[#E2E4E1] rounded-full"></div>
+                                <div class="w-7 h-7 rounded-full" style="background-color: <?= $productDetail["color_1"]; ?>"></div>
+                                <div class="w-7 h-7 rounded-full" style="background-color: <?= $productDetail["color_2"]; ?>"></div>
+                                <div class="w-7 h-7 rounded-full" style="background-color: <?= $productDetail["color_3"]; ?>"></div>
                             </div>
                         </div>
                         <div class="flex">
                             <p class="w-40">Price</p>
                             <p class="w-32">-</p>
-                            <p class="">$<?= $productDetail["sellprice"]; ?></p>
+                            <p class=""><?= $productDetail["sellprice"]; ?> MMK</p>
                         </div>
                     </div>
                 </div>
