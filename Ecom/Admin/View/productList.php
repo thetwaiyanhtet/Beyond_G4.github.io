@@ -1,8 +1,8 @@
 <?php
-//include "./adminsidebar.php";
+include "./adminsidebar.php";
 include '../Controller/productListController.php';
-echo "<pre>";
-print_r($products);
+// echo "<pre>";
+// print_r($products);
 ?>
 <!doctype html>
 <html>
