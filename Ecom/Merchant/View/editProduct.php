@@ -2,8 +2,8 @@
 session_start();
 $productdata = $_SESSION["editproduct"];
 include "../Controller/categoryListController.php";
-print_r($productdata[0]["p_one"]);
-//include "./sidebar.php"
+// print_r($productdata[0]["p_one"]);
+include "./sidebar.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">

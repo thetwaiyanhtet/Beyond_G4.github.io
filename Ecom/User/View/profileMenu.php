@@ -1,3 +1,8 @@
+<?php
+include "../Controller/userProfileController.php";
+$userData = $_SESSION["user_data"];
+print_r($userData);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,26 +44,27 @@
             <div class=" relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-5 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
                 <img src="./resources/img/bille.png" alt="..." class=" w-16 rounded-lg z-50">
                 <div class="text-center">
-                    <p class=" text-2xl font-philosopher dark:text-white">NAME</p>
-                    <p class="dark:text-white">Username</p>
+                    <p class=" text-xl font-philosopher dark:text-white">NAME</p>
+                    <p class="dark:text-white uppercase text-blue-500"><?php echo $userData["username"] ?></p>
                 </div>
                 <div class=" p-2 flex-col space-y-6 w-full">
                     <div class=" grid grid-cols-2">
                         <p class="dark:text-white">Email</p>
-                        <p class=" col-start-2 dark:text-white">user***@gmail.com</p>
+                        <p class=" col-start-2 dark:text-white"><?php echo $userData["email"] ?></p>
                     </div>
                     <div class=" grid grid-cols-2">
                         <p class="dark:text-white">Ph_no</p>
-                        <p class=" col-start-2 dark:text-white">09*******</p>
+                        <p class=" col-start-2 dark:text-white"><?php echo $userData["phone"] ?></p>
                     </div>
                     <div class=" grid grid-cols-2">
                         <p class="dark:text-white">Current Address</p>
-                        <p class=" col-start-2 dark:text-white">Yangon</p>
+                        <p class=" col-start-2 dark:text-white"><?php echo $userData["township_id"] ?></p>
                     </div>
                 </div>
                 <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
             </div>
-            <a href="./userProfileEdit.php">
+
+            <a href="../Controller/userProfileController.php">
                 <div class=" lg:w-[350px] lg:h-[400px] lg:flex-col justify-center items-center flex flex-wrap space-y-3 lg:text-base text-xs font-semibold">
                     <div class=" flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white dark:bg-gray-500 dark:border-gray-500 rounded-xl shadow-xl mt-4 lg:w-[290px] w-[160px]">
                         <img src="./resources/img/manage-accounts.svg" alt="..." class=" lg:w-[30px] w-[20px]">
@@ -66,6 +72,7 @@
                         <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                     </div>
             </a>
+
             <a href="./userCart.php">
                 <div class=" settingBar lg:mr-0 mr-3 dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/cart-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">

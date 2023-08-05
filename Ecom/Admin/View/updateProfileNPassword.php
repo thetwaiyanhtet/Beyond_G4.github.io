@@ -11,7 +11,7 @@ include "../Controller/updatepasswordController.php";
 
 
 
-
+<?php include "./adminsidebar.php";?>;
 <?php include "../Controller/updatepasswordController.php" ?>
 
 
@@ -48,21 +48,21 @@ include "../Controller/updatepasswordController.php";
                         <p class=" w-40">Username</p>
                         <p>- </p>
                         <div class="">
-                            <input type="text" name="username" placeholder="<?= $admin[0]['username'] ?>" class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="text" name="username" require  value="<?= $admin[0]['username'] ?>" class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Email</p>
                         <p>-</p>
                         <div class="">
-                            <input type="email" name="email" placeholder="<?= $admin[0]['email'] ?>" class=" border border-gray-400 ml-3 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="email" name="email" require value="<?= $admin[0]['email'] ?>" class=" border border-gray-400 ml-3 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Phone</p>
                         <p>-</p>
                         <div class="">
-                            <input type="text" name="phone" placeholder="<?= $admin[0]['phone'] ?>" class=" border border-gray-400 rounded-md  ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="text" name="phone" require value="<?= $admin[0]['phone'] ?>" class=" border border-gray-400 rounded-md  ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                 </div>
@@ -79,21 +79,21 @@ include "../Controller/updatepasswordController.php";
                         <p>-</p>
                         <form action="../Controller/passwordchangeContoller.php" method="post">
                         <div class="">
-                            <input type="password" value="" name="current" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="password" value="" name="current" class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">New Password</p>
                         <p>-</p>
                         <div class="">
-                            <input type="password" value="" name="new"  class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="password" value="" name="new"  class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                     <div class=" flex items-center justify-between">
                         <p class=" w-40">Confirm Password</p>
                         <p>-</p>
                         <div class="">
-                            <input type="password" value="" name="confirm" class=" border border-gray-400 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                            <input type="password" value="" name="confirm" class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                         </div>
                     </div>
                    

@@ -1,3 +1,8 @@
+<?php  include "../../Admin/Controller/contactusController.php";
+$contact = $_SESSION["m_contactus"];
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -53,19 +58,19 @@
           <p class="text-[32px] font-bold my-[10%] mx-[10%] font-poppins">Info</p>
           <span class="flex items-center mx-[10%]">
             <ion-icon class="w-[36px] h-[36px]  dark:text-white" name="mail-open-outline"></ion-icon>
-            <p class="text-[16px] font-medium mx-[7%]  dark:text-white">beyond@gmail.com</p>
+            <p class="text-[16px] font-medium mx-[7%]  dark:text-white"><?= $contact[0]['email'] ?></p>
           </span>
           <span class="flex items-center mx-[10%] my-[6%]">
             <ion-icon class="w-[36px] h-[36px]  dark:text-white" name="call-outline"></ion-icon>
-            <p class="text-[16px] font-medium mx-[7%]  dark:text-white">+9523879001</p>
+            <p class="text-[16px] font-medium mx-[7%]  dark:text-white"><?= $contact[0]['phone'] ?></p>
           </span>
           <span class="flex items-center mx-[10%] my-[6%]">
             <ion-icon class="w-[36px] h-[36px]  dark:text-white" name="business-outline"></ion-icon>
-            <p class="text-[16px] font-medium mx-[7%]  dark:text-white">14 Green-road st.</p>
+            <p class="text-[16px] font-medium mx-[7%]  dark:text-white"><?= $contact[0]['address'] ?></p>
           </span>
           <span class="flex items-center mx-[10%] my-[6%]">
             <ion-icon class="w-[36px] h-[36px]  dark:text-white" name="time-outline"></ion-icon>
-            <p class="text-[16px] font-medium mx-[7%]  dark:text-white">09:00- 05:00</p>
+            <p class="text-[16px] font-medium mx-[7%]  dark:text-white"><?= $contact[0]['available_time'] ?></p>
           </span>
         </div>
       </div>
@@ -79,19 +84,19 @@
       <p class="text-[32px] font-bold my-[10%] mx-[10%] font-poppins">Info</p>
       <span class="flex items-center mx-[10%]">
         <ion-icon class="w-[36px] h-[36px]" name="mail-open-outline"></ion-icon>
-        <p class="text-[16px] font-medium mx-[7%]">beyond@gmail.com</p>
+        <p class="text-[16px] font-medium mx-[7%]"><?= $contact[0]['email'] ?></p>
       </span>
       <span class="flex items-center mx-[10%] my-[6%]">
         <ion-icon class="w-[36px] h-[36px]" name="call-outline"></ion-icon>
-        <p class="text-[16px] font-medium mx-[7%]">+9523879001</p>
+        <p class="text-[16px] font-medium mx-[7%]"><?= $contact[0]['phone'] ?></p>
       </span>
       <span class="flex items-center mx-[10%] my-[6%]">
         <ion-icon class="w-[36px] h-[36px]" name="business-outline"></ion-icon>
-        <p class="text-[16px] font-medium mx-[7%]">14 Green-road st.</p>
+        <p class="text-[16px] font-medium mx-[7%]"><?= $contact[0]['address'] ?></p>
       </span>
       <span class="flex items-center mx-[10%] my-[6%]">
         <ion-icon class="w-[36px] h-[36px]" name="time-outline"></ion-icon>
-        <p class="text-[16px] font-medium mx-[7%]">09:00- 05:00</p>
+        <p class="text-[16px] font-medium mx-[7%]"><?= $contact[0]['available_time'] ?></p>
       </span>
     </div>
     <section>

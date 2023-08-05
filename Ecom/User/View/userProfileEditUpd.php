@@ -1,8 +1,12 @@
 <?php
-include "../Controller/addressController.php";
 
+include "../Controller/addressController.php";
 $resultT = $_SESSION["townships"];
 $resultR = $_SESSION["regions"];
+$userData = $_SESSION["user_data"];
+echo "<pre>";
+print_r($userData);
+echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -97,89 +101,92 @@ $resultR = $_SESSION["regions"];
             </div>
         </div>
     </nav>
-    <div class="flex flex-wrap mt-4 w-auto h-auto md:space-x-24 space-x-16 md:pl-0 pl-5">
-        <div class="md:flex flex-col md:m-5 m-2 space-y-5">
-            <button type="button" class="w-28 border-solid  rounded-md p-2 border-purple-600 border-2">Profile</button>
-            <a href="./Wishlist2.php"><button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">WishList</button></a>
-            <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">History</button>
-            <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>
-        </div>
-        <main class=" flex-wrap flex justify-center dark:bg-linear_dark md:w-[70%] w-[50%] pb-10 md:p-3 p-1">
-            <div class=" my-5 flex-col space-y-3">
-                <div>
-                    <p class=" font-philosopher text-3xl">My Profile</p>
-                    <p>Manage and protect your account</p>
-                </div>
-                <div class=" pt-5">
-                    <div class=" flex-col space-y-3">
-                        <div class=" md:w-32 md:h-32 w-24 h-24 bg-slate-500 rounded-full shadow-lg"></div>
-                        <button class=" md:py-2 md:px-4 py-1 px-2 bg-white rounded-md shadow-md md:text-base text-sm">Select Image</button>
-                    </div>
-                </div>
+    <form action="../Controller/profileUpdateController.php" method="post">
+        <div class="flex flex-wrap mt-4 w-auto h-auto md:space-x-24 space-x-16 md:pl-0 pl-5">
+            <div class="md:flex flex-col md:m-5 m-2 space-y-5">
+                <button type="button" class="w-28 border-solid  rounded-md p-2 border-purple-600 border-2">Profile</button>
+                <a href="./Wishlist2.php"><button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">WishList</button></a>
+                <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">History</button>
+                <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>
             </div>
-            <div class=" flex justify-around  w-[60%]">
-                <section div class=" col-start-1 col-span-3 space-y-3 md:w-[700px] w-[380px] md:mx-20 mx-10">
-                    <div class="">
-                        <p class="  text-start md:text-lg text-sm">Username</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
+
+            <main class=" flex-wrap flex justify-center dark:bg-linear_dark md:w-[70%] w-[50%] pb-10 md:p-3 p-1">
+                <div class=" my-5 flex-col space-y-3">
+                    <div>
+                        <p class=" font-philosopher text-3xl">My Profile</p>
+                        <p>Manage and protect your account</p>
                     </div>
-                    <div class="">
-                        <p class=" text-start md:text-lg text-sm">Name</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
-                    </div>
-                    <div class="">
-                        <p class=" text-start md:text-lg text-sm">Email</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
-                    </div>
-                    <div class="">
-                        <p class=" text-start md:text-lg text-sm">Phone Number</p>
-                        <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
-                    </div>
-                    <div class=" ">
-                        <p class="md:text-lg text-sm ">Gender</p>
-                        <div>
-                            <input type="radio" id="male" name="gender">
-                            <label for="male" class=" md:text-base text-sm  dark:text-white">Male</label>
-                            <input type="radio" id="female" name="gender">
-                            <label for="female" class=" md:text-base text-sm  dark:text-white">Female</label>
-                            <input type="radio" id="other" name="gender">
-                            <label for="other" class=" md:text-base text-sm  dark:text-white">Other</label>
+                    <div class=" pt-5">
+                        <div class=" flex-col space-y-3">
+                            <div class=" md:w-32 md:h-32 w-24 h-24 bg-slate-500 rounded-full shadow-lg"></div>
+                            <button class=" md:py-2 md:px-4 py-1 px-2 bg-white rounded-md shadow-md md:text-base text-sm">Select Image</button>
                         </div>
                     </div>
-                    <div class="">
-                        <p class=" md:text-lg text-sm ">Date of Birth</p>
-                        <input type="date" class=" md:w-72 w-66 md:p-3 p-2 rounded-md md:text-base text-sm">
-                    </div>
-                </section>
-
-                <section>
-                    <div class=" flex-col space-y-3">
-                        <div>
-                            <p class="  text-start md:text-lg text-sm">Street</p>
-                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none">
+                </div>
+                <div class=" flex justify-around  w-[60%]">
+                    <section div class=" col-start-1 col-span-3 space-y-3 md:w-[700px] w-[380px] md:mx-20 mx-10">
+                        <div class="">
+                            <p class="text-start md:text-lg text-sm">Username</p>
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="username" >
                         </div>
-
-                        <p class="  text-start md:text-lg text-sm">Township</p>
-                        <select name="township" class=" rounded-md profileInputBox">
-                            <?php foreach ($resultT as $township) { ?>
-                                <option value="<?= ++$tID ?>"><?= $township["name"]; ?></option>
-                            <?php } ?>
-                        </select>
-                        <p class="  text-start md:text-lg text-sm">Region/State</p>
-                        <select name="region" class=" rounded-md profileInputBox">
-                            <?php foreach ($resultR as $region) { ?>
-                                <option value="<?= ++$rID ?>"><?= $region["name"]; ?></option>
-                            <?php } ?>
-                        </select>
-
-                        <div class=" pt-10 float-right space-x-3">
-                            <button class=" font-Playfair Display md:px-3 md:py-3 px-2 py-2 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Cancel</button>
-                            <button class=" font-Playfair Display md:px-4 md:py-3 px-3 py-2 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Save</button>
+                        <div class="">
+                            <p class=" text-start md:text-lg text-sm">Name</p>
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="name">
                         </div>
-                    </div>
-                </section>
-            </div>
-        </main>
+                        <div class="">
+                            <p class=" text-start md:text-lg text-sm">Email</p>
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="email" >
+                        </div>
+                        <div class="">
+                            <p class=" text-start md:text-lg text-sm">Phone Number</p>
+                            <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="phone_no">
+                        </div>
+                        <div class=" ">
+                            <p class="md:text-lg text-sm ">Gender</p>
+                            <div>
+                                <input type="radio" id="male" name="gender">
+                                <label for="male" class=" md:text-base text-sm  dark:text-white">Male</label>
+                                <input type="radio" id="female" name="gender">
+                                <label for="female" class=" md:text-base text-sm  dark:text-white">Female</label>
+                                <input type="radio" id="other" name="gender">
+                                <label for="other" class=" md:text-base text-sm  dark:text-white">Other</label>
+                            </div>
+                        </div>
+                        <div class="">
+                            <p class=" md:text-lg text-sm ">Date of Birth</p>
+                            <input type="date" class=" md:w-72 w-66 md:p-3 p-2 rounded-md md:text-base text-sm" name="dob">
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class=" flex-col space-y-3">
+                            <div>
+                                <p class="  text-start md:text-lg text-sm">Street</p>
+                                <input type="text" class="profileInputBox rounded-md col-start-2 outline-none" name="street">
+                            </div>
+
+                            <p class="  text-start md:text-lg text-sm">Township</p>
+                            <select name="township" class=" rounded-md profileInputBox">
+                                <?php foreach ($resultT as $township) { ?>
+                                    <option value="<?= ++$tID ?>"><?= $township["name"]; ?></option>
+                                <?php } ?>
+                            </select>
+                            <p class="  text-start md:text-lg text-sm">Region/State</p>
+                            <select name="region" class=" rounded-md profileInputBox">
+                                <?php foreach ($resultR as $region) { ?>
+                                    <option value="<?= ++$rID ?>"><?= $region["name"]; ?></option>
+                                <?php } ?>
+                            </select>
+
+                            <div class=" pt-10 float-right space-x-3">
+                                <button class=" font-Playfair Display md:px-3 md:py-3 px-2 py-2 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Cancel</button>
+                                <button type="submit" class=" font-Playfair Display md:px-4 md:py-3 px-3 py-2 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Save</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+    </form>
     </div>
     <section id="footer">
         <div class="relative bg-purple-300 dark:bg-linear_dark dark:text-white">

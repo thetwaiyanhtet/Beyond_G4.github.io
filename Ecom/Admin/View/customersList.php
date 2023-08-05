@@ -1,8 +1,9 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/costomerListController.php";
-$result = $_SESSION["customers"];
-print_r($result);
+// echo "<pre>";
+// print_r($customers);
+
 ?>
 <!doctype html>
 <html>
@@ -53,7 +54,7 @@ print_r($result);
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($result as $customer) { ?>
+                        <?php foreach ($customers as $customer) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     <?= $customer["username"]; ?>
@@ -62,7 +63,7 @@ print_r($result);
                                     <?= $customer["email"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?= $customer["township"]; ?>
+                                    <?= $customer["name"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <?= $customer["phone"]; ?>
