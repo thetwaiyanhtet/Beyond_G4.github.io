@@ -4,7 +4,7 @@
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
-    "SELECT * from m_cusreview;"
+    "SELECT * from m_cusreview WHERE m_cusreview.merchant_id = '1';"
 );
 $sql->execute();
 $_SESSION["getReviewandRating"] = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -12,7 +12,7 @@ $_SESSION["getReviewandRating"] = $sql->fetchAll(PDO::FETCH_ASSOC);
 $sqlusername = $pdo->prepare(
     "SELECT m_customer.username
     FROM m_cusreview
-    LEFT JOIN m_customer ON m_cusreview.customer_id = m_customer.id
+    LEFT JOIN m_customer ON m_cusreview.customer_id = m_customer.id 
     "
     );
 
