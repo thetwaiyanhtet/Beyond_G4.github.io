@@ -24,24 +24,24 @@ include "../Controller/productDetailController.php";
 
             <div class="py-10 w-full flex">
                 <div class="flex flex-col space-y-4 items-center">
-                    <div><img src="./resources/img/photo1.png" alt=""></div>
+                    <div><img src="../..<?= $productDetail["p_one"] ?>" alt="..." width="100px"></div>
                     <div class="flex space-x-5 justify-between">
-                        <div><img src="./resources/img/photo2.png" alt=""></div>
+                        <!-- <div><img src="./resources/img/photo2.png" alt=""></div>
                         <div><img src="./resources/img/photo3.png" alt=""></div>
-                        <div><img src="./resources/img/photo4.png" alt=""></div>
+                        <div><img src="./resources/img/photo4.png" alt=""></div> -->
                     </div>
                 </div>
                 <div class=" ml-40">
                     <div class=" flex-col space-y-3 w-full py-4 text-lg">
                         <div class=" flex">
-                            <p class="w-40">Merchant Name</p>
+                            <p class="w-40">Store Name</p>
                             <p class="w-32">-</p>
-                            <p><?= $productDetail["merchant_id"]; ?></p>
+                            <p><?= $productDetail["store_name"]; ?></p>
                         </div>
                         <div class=" flex">
                             <p class="w-40">Catagory</p>
                             <p class="w-32">-</p>
-                            <p><?= $productDetail["category_id"]; ?></p>
+                            <p><?= $productDetail["c_name"]; ?></p>
                         </div>
                         <div class="flex">
                             <p class="w-40">Create Date</p>
@@ -57,9 +57,9 @@ include "../Controller/productDetailController.php";
                             <p class="w-40">Color</p>
                             <p class="w-32">-</p>
                             <div class="flex space-x-2">
-                                <div class="w-7 h-7 bg-[#4B4845] rounded-full"></div>
-                                <div class="w-7 h-7 bg-[#5E5566] rounded-full"></div>
-                                <div class="w-7 h-7 bg-[#D4C9B1] rounded-full"></div>
+                                <div class="w-7 h-7 bg-[<?= $productDetail["color_1"]; ?>] rounded-full"></div>
+                                <div class="w-7 h-7 bg-[<?= $productDetail["color_2"]; ?>] rounded-full"></div>
+                                <div class="w-7 h-7 bg-[<?= $productDetail["color_3"]; ?>] rounded-full"></div>
                                 <div class="w-7 h-7 bg-[#E2E4E1] rounded-full"></div>
                             </div>
                         </div>

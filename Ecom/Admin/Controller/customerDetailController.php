@@ -10,10 +10,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     // Prepare the SQL query to select the customer details using the provided ID
     $sql = $pdo->prepare(
-        "SELECT m_customer.id,m_customer.username,m_customer.email,m_customer.phone,m_townships.name 
+        "SELECT m_customer.id,m_customer.username,m_customer.email,m_customer.phone,m_townships.t_name,m_regions.r_name,m_customer.street
         FROM m_customer 
         JOIN m_townships 
         ON m_customer.township_id = m_townships.id 
+        JOIN m_regions
+        ON m_customer.region_id = m_regions.id
         WHERE m_customer.id = :id;");
 
     // Prepare the SQL query to count the number of orders for the provided customer_id
@@ -36,7 +38,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     );
 
     $orderSql = $pdo->prepare(
-        "SELECT m_order.merchant_id,m_order.total_amt,m_order.order_date,m_product.name,m_order.id,m_merchant.m_name
+        "SELECT m_order.merchant_id,m_order.total_amt,m_order.order_date,m_product.name,m_order.id,m_merchant.store_name,m_product.p_one,m_product.sellprice
         FROM m_customer 
         JOIN m_order 
         ON m_customer.id = m_order.customer_id 
@@ -65,7 +67,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $purchasedProduct = $purchasedProductSql->fetch(PDO::FETCH_ASSOC);
     $orders = $orderSql->fetchAll(PDO::FETCH_ASSOC);
 
-     echo "<pre>";
+     //echo "<pre>";
     // print_r($customerDetail);
     // print_r($orderCount);
     // print_r($sumTotalAmount);

@@ -63,7 +63,7 @@ include "../Controller/costomerListController.php";
                                     <?= $customer["email"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?= $customer["name"]; ?>
+                                    <?= $customer["street"]; ?> , <?= $customer["t_name"]; ?> , <?= $customer["r_name"]; ?> 
                                 </td>
                                 <td class="px-6 py-4">
                                     <?= $customer["phone"]; ?>

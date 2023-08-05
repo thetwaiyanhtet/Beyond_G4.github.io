@@ -1,7 +1,9 @@
 <?php
-// include "./adminsidebar.php";
+include "./adminsidebar.php";
 include "../Controller/customerDetailController.php";
-//print_r($customerDetail);
+// echo "<pre>";
+// print_r($customerDetail);
+// print_r($orders);
 ?>
 
 <!doctype html>
@@ -41,7 +43,7 @@ include "../Controller/customerDetailController.php";
                     <div class="flex">
                         <p class="w-40">Address</p>
                         <p class=" w-20">-</p>
-                        <p class=""><?= $customerDetail["name"]; ?></p>
+                        <p class=""> <?= $customerDetail["street"]; ?> , <?= $customerDetail["t_name"]; ?> , <?= $customerDetail["r_name"]; ?> </p>
                     </div>
                 </div>
 
@@ -90,69 +92,16 @@ include "../Controller/customerDetailController.php";
             <div class="flex flex-col w-full rounded-lg  border border-gray-400 shadow-md ">
                 <p class=" font-bold p-5 border border-b-black h-14">All purchased products</p>
 
-                <div class="flex justify-between p-5">
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
+                <div class="flex justify-around p-5">
+                    <?php foreach ($orders as $order) { ?>
+                        <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400 text-center">
+                            <img src="../..<?= $order["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
+                            <div class="pl-3 pb-2 pt-10">
+                                <p class=" font-semibold "><?= $order["name"] ?></p>
+                                <p class=" opacity-60"><?= $order["sellprice"] ?> MMK</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
-                        </div>
-                    </div>
-
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
-                        </div>
-                    </div>
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-between p-5">
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
-                        </div>
-                    </div>
-
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
-                        </div>
-                    </div>
-
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
-                        </div>
-                    </div>
-                    <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400">
-                        <img src="./resources/img/admin shirt.png" alt="..." class="w-full">
-                        <div class="pl-3 pb-2">
-                            <p class=" font-semibold ">Casual Shirt</p>
-                            <p class=" opacity-60">$195.00</p>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -170,7 +119,7 @@ include "../Controller/customerDetailController.php";
                                     Product
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Merchant Name
+                                    Store Name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Amount
@@ -186,25 +135,25 @@ include "../Controller/customerDetailController.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($orders as $order) { ?>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    <?= $order["name"] ?>
-                                </th>
-                                <td class="px-6 py-4">
-                                    <?= $order["m_name"] ?>
-                                </td>
-                                <td class="px-6 py-4">
-                                    <?= $order["total_amt"] ?>
-                                </td>
-                                <td class="px-6 py-4 ">
-                                    <?= $order["order_date"] ?>
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
-                                </td>
-                            </tr>
-                            <?php }?>
+                            <?php foreach ($orders as $order) { ?>
+                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <?= $order["name"] ?>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <?= $order["store_name"] ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <?= $order["total_amt"] ?>
+                                    </td>
+                                    <td class="px-6 py-4 ">
+                                        <?= $order["order_date"] ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
 

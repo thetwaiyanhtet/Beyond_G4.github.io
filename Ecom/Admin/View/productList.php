@@ -1,7 +1,8 @@
 <?php
-include "./adminsidebar.php";
+//include "./adminsidebar.php";
 include '../Controller/productListController.php';
-
+echo "<pre>";
+print_r($products);
 ?>
 <!doctype html>
 <html>
@@ -65,7 +66,7 @@ include '../Controller/productListController.php';
                                     <?= $product["name"]; ?>
                                 </td>
                                 <td class="px-6 py-2">
-                                    <?= $product["merchant_id"]; ?>
+                                    <?= $product["m_name"]; ?>
                                 </td>
                                 <td class="px-6 py-2">
                                     <?= $product["sellprice"]; ?>
@@ -74,7 +75,7 @@ include '../Controller/productListController.php';
                                     <?= $product["instock"]; ?>
                                 </td>
                                 <td class="px-6 py-2 ">
-                                    <a href="./productDetails.php?id=<?= $product["id"]; ?>" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                    <a href="./productDetails.php?id=<?= $product["product_id"]; ?>" class="font-medium text-blue-600  hover:underline">View Details</a>
                                 </td>
                             </tr>
                         <?php } ?>
