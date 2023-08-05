@@ -47,4 +47,5 @@ $_SESSION["detailProductPhoto"] = $sqlproductPhoto->fetchAll(PDO::FETCH_ASSOC);
 
 print_r($_SESSION["detailUsername"]);
 
-header("Location: ../View/review and rating copy.php ");
+header("Location: ../View/reviewandratingcopy.php ");
+
