@@ -1,5 +1,7 @@
 <?php
-include "./sidebar.php"
+include "./sidebar.php";
+include "../Controller/orderDetailController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +22,7 @@ include "./sidebar.php"
 </head>
 
 <body>
-    <main class="ml-56">
+    <main class="ml-56 relative">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
@@ -37,94 +39,98 @@ include "./sidebar.php"
                 <img src="./resources/img/fluent_people-32-filled.png" alt="" class="h-8">
                 <p class="m-2 font-semibold text-lg">Order Details</p>
             </div>
-            <div class="m-2">
-                <input type="checkbox" name="" id="">
-                <label for="">Invoice</label>
-            </div>
         </div>
-        <div class="flex justify-between">
-            <!--Order Details-->
-            <div class="w-96 h-56 border border-solid shadow-xl m-5 ml-10 rounded-lg">
-                <p class="m-2">Order Details</p>
-                <hr>
-                <div class="m-2">
-                    <p class="m-2">Name:User</p>
-                    <p class="m-2">Order Date: 12-04-2023</p>
-                    <p class="m-2">Total Amount: $1500.00</p>
-                    <p class="m-2">Payment:Bank Deposit</p>
+        <form action="./delivery.php" method="post">
+            <div class="flex justify-between w-[55%]">
+                <!--Order Details-->
+                <div class="w-full h-auto border border-solid shadow-xl m-5 ml-10 rounded-lg">
+                    <p class="m-2 font-philosopher font-semibold text-xl">Order Details</p>
+                    <hr>
+                    <div class="m-2">
+                        <p class="m-2">Name : <?= $orderDetails[0]["username"] ?></p>
+                        <p class="m-2">Order Date : <?= $orderDetails[0]["order_date"] ?></p>
+                        <p class="m-2">Total Amount : <?= $orderDetails[0]["total_amt"] ?></p>
+                        <?php if ($orderDetails[0]["payment_id"] == 0) { ?>
+                            <p class="m-2">Payment : Visa </p>
+                        <?php } else if ($orderDetails[0]["payment_id"] == 1) { ?>
+                            <p class="m-2">Payment : KBZ Pay</p>
+                        <?php } ?>
+                    </div>
+                </div>
+                <!--Delivery-->
+                <div class="w-full h-auto border border-solid shadow-xl m-5 rounded-lg">
+                    <p class="m-2 font-philosopher font-semibold text-xl">Delivery Address</p>
+                    <hr>
+                    <div class="m-2">
+                        <p class="m-2">Name : <?= $orderDetails[0]["username"] ?></p>
+                        <p class="m-2">Phone : <?= $orderDetails[0]["phone"] ?></p>
+                        <p class="m-2">Address : <?= $orderDetails[0]["street"] ?></p>
+                        <p class="m-2">City : <?= $orderDetails[0]["t_name"] ?></p>
+                        <p class="m-2">Delivery Services: Royal Express</p>
+                    </div>
                 </div>
             </div>
-            <!--Delivery-->
-            <div class="w-96 h-64 border border-solid shadow-xl m-4 rounded-lg">
-                <p class="m-2">Delivery Address</p>
+            <!--Product Summary-->
+            <div class="w-[1000px] h-[390px] border border-solid shadow-xl ml-10 rounded-lg">
+                <p class="m-5 font-philosopher font-semibold text-xl">Product Summary</p>
+                <table class="table-auto w-full">
+                    <thead class=" text-sm text-gray-700 uppercase bg-blue-200 h-11">
+                        <tr class="text-center">
+                            <th class="text-center px-5">No</th>
+                            <th class="w-40 text-center px-5">Product Name</th>
+                            <th class="w-40 text-center  px-5">Product Image</th>
+                            <th class="w-44 text-center  px-5">Product Quantity</th>
+                            <th class="w-40 text-center  px-5">Product Price</th>
+                            <th class="w-44 text-center  px-5">Product Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class=" text-center">
+                        <?php $productCount = 0; ?>
+                        <?php foreach ($orderDetails as $orderDetail) { ?>
+                            <tr class="border-b">
+                                <td class="py-4"><?= ++$productCount; ?></td>
+                                <td class=" text-left pl-6"><?= $orderDetail["name"] ?></td>
+                                <td><img src="../..<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
+                                <td> <?= $orderDetail["quantity"] ?></td>
+                                <td><?= $orderDetail["sellprice"] ?>MMK</td>
+                                <td><?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?> MMK</td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+
+                </table>
+                <?php
+                // Calculate the sum of ordered products
+                $totalSum = 0;
+                foreach ($orderDetails as $order) {
+                    // Calculate the total amount for each ordered product
+                    $totalAmount = $order['quantity'] * $order['sellprice'];
+                    // Sum up the total amount for all ordered products
+                    $totalSum += $totalAmount;
+                } ?>
+                <div class="flex justify-between">
+                    <p class="m-5">Sub Total</p>
+                    <p class="m-5 mr-9 font-semibold"><?= $totalSum ?> MMK</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="ml-5">Delivery Fee</p>
+                    <p class="m-1 mr-14">$15</p>
+                </div>
                 <hr>
-                <div class="m-2">
-                    <p class="m-2">Name:User</p>
-                    <p class="m-2">Phone: 09587746358</p>
-                    <p class="m-2">Address: Pyay Road</p>
-                    <p class="m-2">City: Yangon</p>
-                    <p class="m-2">Delivery services: Royal Express</p>
-                    <p class="m-2">Delivery charges: $10.00 </p>
+                <div class="flex justify-between pt-4">
+                    <p class="ml-5">Total Amount</p>
+                    <p class="m-1 mr-9 font-semibold"> = <?= $totalSum ?> MMK</p>
                 </div>
             </div>
-        </div>
-        <!--Product Summary-->
-        <div class="w-[900px] h-[390px] border border-solid shadow-xl ml-10 rounded-lg">
-            <p class="m-5">Product Summary</p>
-            <table class="table-auto w-full">
-                <thead>
-                    <tr class="text-center">
-                        <th class="text-center px-5">No</th>
-                        <th class="w-40 text-center px-5">Product Name</th>
-                        <th class="w-40 text-center  px-5">Product Image</th>
-                        <th class="w-44 text-center  px-5">Product Quantity</th>
-                        <th class="w-40 text-center  px-5">Product Price</th>
-                        <th class="w-44 text-center  px-5">Product Subtotal</th>
-                    </tr>
-                <tbody>
-                    <tr class="border-b">
-                        <th class="py-4">1</th>
-                        <th>Samsung</th>
-                        <th></th>
-                        <th>5</th>
-                        <th>$100.00</th>
-                        <th>$500.00</th>
-                    </tr>
-                    <tr class="border-b">
-                        <th class="py-4">2</th>
-                        <th>Samsung</th>
-                        <th></th>
-                        <th>5</th>
-                        <th>$100.00</th>
-                        <th>$500.00</th>
-                    </tr>
-                    <tr class="border-b">
-                        <th class="py-4">3</th>
-                        <th>Samsung</th>
-                        <th></th>
-                        <th>5</th>
-                        <th>$100.00</th>
-                        <th>$500.00</th>
-                    </tr>
-                </tbody>
-                </thead>
-            </table>
-            <div class="flex justify-between">
-                <p class="m-5">Total Amount</p>
-                <p class="m-5 mr-14">$1500</p>
+            <div class=" py-7 absolute left-[52%] flex">
+                <div class="ml-3 items-center flex space-x-2">
+                    <input type="checkbox" id="invoice" class=" w-5 h-5">
+                    <label for="invoice">Invoice</label>
+                </div>
+                <button class=" w-24 rounded-md p-2 ml-6 border border-gray-500 bg-transparent mr-3">Cancel</button>
+                <button type="submit" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button>
             </div>
-            <div class="flex justify-between">
-                <p class="ml-5">Delivery Fee</p>
-                <p class="m-1 mr-14">$15</p>
-            </div>
-            <hr>
-            <div class="flex justify-between">
-                <p class="ml-5">Sub Total</p>
-                <p class="m-1 mr-14"> = $1515.00</p>
-            </div>
-        </div>
-        <button class="w-32 rounded-md bg-blue-700 p-2 m-5 float-right text-white">Deliver</button>
-        <button class=" w-24 rounded-md p-2 m-5 float-right">Cancel</button>
+        </form>
     </main>
 
 

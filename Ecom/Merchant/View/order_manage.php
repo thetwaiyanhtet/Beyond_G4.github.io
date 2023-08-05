@@ -1,10 +1,11 @@
 <?php
 include "../Controller/orderController.php";
-include "./sidebar.php";
+//include "./sidebar.php";
 
 // $cusName = $_SESSION["getCusName"];
-// echo "<pre>";
-// print_r($orders);
+echo "<pre>";
+print_r($orders);
+echo "</pre>";
 // echo $cusName;
 ?>
 <!DOCTYPE html>
@@ -91,14 +92,14 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     <?php if ($order["payment_id"] == 0) { ?>
                                         Visa
-                                        
+
                                     <?php } ?>
                                     <?php if ($order["payment_id"] == 1) { ?>
                                         KBZ pay
                                     <?php } ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="./orderDetail.php" class="font-medium text-blue-600  hover:underline">View</a>
+                                    <a href="./orderDetail.php?id=<?= $order["id"]; ?>" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
                             </tr>
                         <?php } ?>
