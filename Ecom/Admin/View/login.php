@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 
@@ -21,22 +24,29 @@
             </div>
             <form action="../Controller/loginController.php" method="post">
             <div class=" pt-5">
-                <div>Email Address*</div>
+                <div>Email Address*
+                    <?php
+                       if (isset($_SESSION['ErrorMessage'])) {
+                            echo "<p class='text-red-800'>" . $_SESSION['ErrorMessage']. '</p>';
+                            // unset($_SESSION['ErrorMessage']);
+                       }
+                    ?>
+                </div>
                 <input type="text" name="email" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="Enter your email">
             </div>
             <div class="pb-4">
                 <div>Password*</div>
-                <input type="text" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="********">
+                <input type="password" name="password" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="********">
                 <div class=" flex justify-between pt-4">
                     <div>
                         <input type="checkbox">Remember me
                     </div>
-                    <a href="./forgetPassword.php" class=" font-poppins font-medium text-sm underline text-blue-500">Forget password?</a>
+                    <button type="submit" name="forget" href="./forgetPassword.php" class=" font-poppins font-medium text-sm underline text-blue-500">Forget password?</button>
                 </div>
             </div>
 
             <a href="./dashboard.php">
-                <button class="w-[360px] h-[44px] rounded-lg bg-yellow-500 flex items-center justify-center font-playfairDisplay text-white text-lg shadow-xl">Login</button>
+                <button type="submit" name="login" class="w-[360px] h-[44px] rounded-lg bg-yellow-500 flex items-center justify-center font-playfairDisplay text-white text-lg shadow-xl">Login</button>
             </a>
             </form>
         </div>

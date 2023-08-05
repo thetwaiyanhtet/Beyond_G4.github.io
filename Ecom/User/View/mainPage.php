@@ -76,7 +76,7 @@ include  "../../Admin/Controller/readfaqController.php";
                                         <td><?php echo $item["quantity"]; ?></td>
                                         <td><?php echo "$ " . $item["price"]; ?></td>
                                         <td><?php echo "$ " . number_format($item_price, 2); ?></td>
-                                        <td class="text-center"><a href="../Controller/cartController.php?action=remove&code<?php echo $item["code"]; ?>" class="btnRemoveAction"><ion-icon name="trash-outline" alt="Remove Item"></ion-icon></a></td>
+                                        <td class="text-center"><a href="../Controller/cartController.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><ion-icon name="trash-outline" alt="Remove Item"></ion-icon></a></td>
                                     </tr>
                                 <?php
                                     $total_quantity += $item["quantity"];

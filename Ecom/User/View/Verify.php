@@ -25,22 +25,22 @@
         <form action="../Controller/updatePasswordController.php" method="post">
             <div class="flex p-5 ml-4 mt-5">
                 <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4">
-                    <input type="text" name="no1" id="" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
+                    <input type="text" name="number1" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
                 </div>
                 <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4">
-                    <input type="text" name="no2" id="" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
+                    <input type="text" name="number2" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
                 </div>
                 <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4">
-                    <input type="text" name="no3" id="" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
+                    <input type="text" name="number3" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
                 </div>
                 <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4 ">
-                    <input type="text" name="no4" id="" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
+                    <input type="text" name="number4" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
                 </div>
             </div>
             <div class="flex flex-col ml-20">
-            <a href="" class=" text-red-800 underline font-poppins mt-10 ml-6">Resend Code</a>
+            <button type="submit" name="resend" type="submit" class=" text-red-800 underline font-poppins mt-10 mr-10">Resend Code</button>
             <a href="">
-                <button type="submit" name="send" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg ml-2">Send</button>
+                <button type="submit" name="verify" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg mr-10">Send</button>
             </a>
         </div>
         </form>

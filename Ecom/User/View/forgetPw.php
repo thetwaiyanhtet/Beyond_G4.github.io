@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +29,12 @@
             Receive a Verification Card </p>
         <form action="../Controller/updatePasswordController.php" method="post" class="md:mr-20 mr-28 mt-16">
             <div class="flex flex-col">
-                <label class="font-poppins font-semibold text-lg text-black">Email</label><br><br>
-                <input type="email" name="userEmail" class="dark:border-black  border-0 border-b-2 border-black shadow-md w-64 outline-none hover:outline-none" placeholder="user@gmail.com">
+                <label class="font-poppins font-semibold text-lg text-black">Email
+                <?php
+                '<span class=" text-red-600 ">'. $_SESSION['error'] .'</span>'
+                ?>
+                </label> <br><br>
+                <input type="email" name="email" class="dark:border-black  border-0 border-b-2 border-black shadow-md w-64 outline-none hover:outline-none" placeholder="user@gmail.com">
                 <a href="">
                     <button type="submit" name="send" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg ml-10">Send</button>
                 </a>
