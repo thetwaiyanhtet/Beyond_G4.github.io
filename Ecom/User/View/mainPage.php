@@ -1,7 +1,7 @@
 <?php
-session_start();
-require_once("../Controller/cartController.php");
+include "../Controller/cartController.php";
 $faq = $_SESSION["m_faq"];
+include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 include  "../../Admin/Controller/readfaqController.php";
 ?>
@@ -158,9 +158,12 @@ include  "../../Admin/Controller/readfaqController.php";
             </div>
         </div>
     </nav>
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
     <section class="sec h-screen">
         <section class="w-[85%] m-auto">
 
