@@ -1,5 +1,6 @@
 <?php
-include "./sidebar.php";
+//include "./sidebar.php";
+include "../Controller/deliveryController.php";
 ?>
 
 <!doctype html>
@@ -23,7 +24,7 @@ include "./sidebar.php";
 
 <body>
     <main class=" ml-56 h-screen relative">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -33,7 +34,7 @@ include "./sidebar.php";
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <div class="pl-5 pt-3 font-semibold text-lg">Delivery</div>
         <div class="flex justify-between max-lg:ml mt-3">
             <div class="pt-2 pl-5 relative text-gray-600">
@@ -83,217 +84,51 @@ include "./sidebar.php";
                                 </th>
                             </tr>
                         </thead>
+
                         <tbody class=" text-center">
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
+                            <?php
+                            // Associative array to store total sums for each generate_id
+                            $generateIdTotals = array();
 
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</div>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
+                            foreach ($deliveries as $delivery) {
+                                $generate_id = $delivery['generate_id'];
+                                $quantity = $delivery['quantity'];
+                                $unit_price = $delivery['unit_price'];
+                                $total_price = $quantity * $unit_price;
 
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
+                                // Update the total_amt for each generate_id in the associative array
+                                if (isset($generateIdTotals[$generate_id])) {
+                                    $generateIdTotals[$generate_id] += $total_price;
+                                } else {
+                                    $generateIdTotals[$generate_id] = $total_price;
+                                }
+                            }
+                            print_r($generateIdTotals);
+                            foreach ($deliveries as $delivery) { ?>
+                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
+                                        <?= $delivery["username"] ?>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <?= $delivery["generate_id"] ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <?= $delivery["order_date"] ?>
+                                    </td>
 
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    #001
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-
-                                <td class="px-6 py-4 ">
-                                    2000.0
-                                </td>
-                                <td class=" pr-2 py-4 ">
-                                    Royal Express
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View Details</a>
-                                </td>
-                            </tr>
+                                    <td class="px-6 py-4 ">
+                                        <?= $generateIdTotals[$generate_id]  ?>
+                                    </td>
+                                    <td class=" pr-2 py-4 ">
+                                        <?= $delivery["delivery_name"] ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</div>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            
+                            
                         </tbody>
                     </table>
                     <div class="flex justify-between items-center py-2 px-3 pt-5">

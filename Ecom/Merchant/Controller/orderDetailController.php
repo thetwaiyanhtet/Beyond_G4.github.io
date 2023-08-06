@@ -20,7 +20,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         JOIN m_delivery
         ON m_delivery.region_id = m_regions.id
         JOIN m_product
-        ON m_product.product_id = m_order_details.product_id
+        ON m_product.id = m_order_details.product_id
         WHERE m_order.id =:id;"
     );
 

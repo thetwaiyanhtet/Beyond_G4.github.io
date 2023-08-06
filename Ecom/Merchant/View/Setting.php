@@ -42,10 +42,10 @@ session_start();
                         <form action="../Controller/settingController.php" method="post" enctype="multipart/form-data">
                             <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
                                 <label for="photo1" class="cursor-pointer"> <!-- Add cursor-pointer class to show pointer cursor on hover -->
-                                    <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photo1">
+                                <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg">
                                 </label>
                                 <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
-                                <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo1">
+                                <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo">
                             </div>
 
                             <!-- <div class="w-[45%]  border border-solid border-gray-400 my-5"></div> -->

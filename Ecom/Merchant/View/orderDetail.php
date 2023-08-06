@@ -41,6 +41,15 @@ include "../Controller/orderDetailController.php";
             </div>
         </div>
         <form action="./delivery.php" method="post">
+            <?php
+            // Calculate the sum of ordered products
+            $totalSum = 0;
+            foreach ($orderDetails as $order) {
+                // Calculate the total amount for each ordered product
+                $totalAmount = $order['quantity'] * $order['sellprice'];
+                // Sum up the total amount for all ordered products
+                $totalSum += $totalAmount;
+            } ?>
             <div class="flex justify-between w-[55%]">
                 <!--Order Details-->
                 <div class="w-full h-auto border border-solid shadow-xl m-5 ml-10 rounded-lg">
@@ -49,7 +58,7 @@ include "../Controller/orderDetailController.php";
                     <div class="m-2">
                         <p class="m-2">Name : <?= $orderDetails[0]["username"] ?></p>
                         <p class="m-2">Order Date : <?= $orderDetails[0]["order_date"] ?></p>
-                        <p class="m-2">Total Amount : <?= $orderDetails[0]["total_amt"] ?></p>
+                        <p class="m-2">Total Amount : <?= $totalSum ?> MMK</p>
                         <?php if ($orderDetails[0]["payment_id"] == 0) { ?>
                             <p class="m-2">Payment : Visa </p>
                         <?php } else if ($orderDetails[0]["payment_id"] == 1) { ?>
@@ -99,15 +108,7 @@ include "../Controller/orderDetailController.php";
                     </tbody>
 
                 </table>
-                <?php
-                // Calculate the sum of ordered products
-                $totalSum = 0;
-                foreach ($orderDetails as $order) {
-                    // Calculate the total amount for each ordered product
-                    $totalAmount = $order['quantity'] * $order['sellprice'];
-                    // Sum up the total amount for all ordered products
-                    $totalSum += $totalAmount;
-                } ?>
+
                 <div class="flex justify-between">
                     <p class="m-5">Sub Total</p>
                     <p class="m-5 mr-9 font-semibold"><?= $totalSum ?> MMK</p>

@@ -1,5 +1,8 @@
 <?php
 include "./adminsidebar.php";
+include "../Controller/merchantListController.php";
+// print_r($merchantList);
+
 ?>
 <!doctype html>
 <html>
@@ -32,7 +35,7 @@ include "./adminsidebar.php";
                                 Email
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Product
+                               Plan
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Merchant Name
@@ -40,104 +43,44 @@ include "./adminsidebar.php";
                             <th scope="col" class="px-6 py-3">
                                 Create date
                             </th>
-                            <th scope="col" class="px-6 py-3">
+                            <!-- <th scope="col" class="px-6 py-3">
                                 Revenue
-                            </th>
+                            </th> -->
                             <th scope="col" class="px-6 py-3">
                                 Options
                             </th>
                         </tr>
                     </thead>
+                    
+   
                     <tbody>
+                    <?php foreach ($merchantList as $merchantListDetail ) { ?>
                         <tr class=" border-b hover:bg-gray-200 border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Mail Sample
+                                <?= $merchantListDetail["email"]?>
                             </th>
                             <td class="px-6 py-4">
-                                100
+                            <?= $merchantListDetail["plan_name"]?>
                             </td>
                             <td class="px-6 py-4">
-                                AI mobile
+                            <?= $merchantListDetail["m_name"]?>
                             </td>
                             <td class="px-6 py-4">
-                                12-07-2023
+                            <?= $merchantListDetail["create_date"]?>
                             </td>
-                            <td class="px-6 py-4">
+                            <!-- <td class="px-6 py-4">
                                 $12600
-                            </td>
+                            </td> -->
+                            
                             <td class="px-6 py-4 flex space-x-3">
-                                <a href="./merchantProfile.php"><img src="./resources/img/eye.svg" alt=""></a>
+                                <a href="./merchantProfile.php?id=<?= $merchantListDetail["id"]?>"><img src="./resources/img/eye.svg" alt=""></a>
                                 <img src="./resources/img/bin.svg" alt="">
                             </td>
 
                         </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Mail Sample
-                            </th>
-                            <td class="px-6 py-4">
-                                100
-                            </td>
-                            <td class="px-6 py-4">
-                                AI mobile
-                            </td>
-                            <td class="px-6 py-4">
-                                12-07-2023
-                            </td>
-                            <td class="px-6 py-4">
-                                $12600
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./merchantProfile.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Mail Sample
-                            </th>
-                            <td class="px-6 py-4">
-                                100
-                            </td>
-                            <td class="px-6 py-4">
-                                AI mobile
-                            </td>
-                            <td class="px-6 py-4">
-                                12-07-2023
-                            </td>
-                            <td class="px-6 py-4">
-                                $12600
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./merchantProfile.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
-                            </td>
-
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Mail Sample
-                            </th>
-                            <td class="px-6 py-4">
-                                100
-                            </td>
-                            <td class="px-6 py-4">
-                                AI mobile
-                            </td>
-                            <td class="px-6 py-4">
-                                12-07-2023
-                            </td>
-                            <td class="px-6 py-4">
-                                $12600
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./merchantProfile.php"><img src="./resources/img/eye.svg" alt=""></a>
-                                <img src="./resources/img/bin.svg" alt="">
-                            </td>
-
-                        </tr>
+                        <?php } ?>
                     </tbody>
+                    
                 </table>
                 <div class="flex justify-between items-center py-2 px-3 pt-5">
                         <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
