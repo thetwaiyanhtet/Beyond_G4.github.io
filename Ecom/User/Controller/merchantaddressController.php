@@ -4,7 +4,7 @@ session_start();
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
-    "SELECT name,street,township,email FROM m_customer WHERE id = '5';"
+    "SELECT name,street,(SELECT name FORM m_township WHERE m_townships.id = township_id,email FROM m_customer WHERE id = '5';"
 );
 $sql->execute(); //run real sql
 
