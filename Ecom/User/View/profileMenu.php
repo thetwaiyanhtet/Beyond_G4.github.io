@@ -1,7 +1,11 @@
 <?php
+session_start();
 include "../Controller/userProfileController.php";
+
 $userData = $_SESSION["user_data"];
-print_r($userData);
+// echo "<pre>";
+// print_r($userData);
+// echo "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +51,7 @@ print_r($userData);
                     <p class=" text-xl font-philosopher dark:text-white">NAME</p>
                     <p class="dark:text-white uppercase text-blue-500"><?php echo $userData["username"] ?></p>
                 </div>
-                <div class=" p-2 flex-col space-y-6 w-full">
+                <div class=" p-2 flex-col space-y-3 w-full">
                     <div class=" grid grid-cols-2">
                         <p class="dark:text-white">Email</p>
                         <p class=" col-start-2 dark:text-white"><?php echo $userData["email"] ?></p>
@@ -58,13 +62,25 @@ print_r($userData);
                     </div>
                     <div class=" grid grid-cols-2">
                         <p class="dark:text-white">Current Address</p>
-                        <p class=" col-start-2 dark:text-white"><?php echo $userData["township_id"] ?></p>
+                        <p class=" col-start-2 dark:text-white"><?php echo $userData["t_name"]?> , <?php echo $userData["r_name"]?></p>
+                    </div>
+                    <div class=" grid grid-cols-2">
+                        <p class="dark:text-white">Gender</p>
+                        <p class=" col-start-2 dark:text-white">
+                        <?php if($userData["gender"] == 0) {?> Male <?php } ?>
+                        <?php if($userData["gender"] == 1) {?> Female <?php } ?>
+                        <?php if($userData["gender"] == 2) {?> Other <?php } ?>
+                        </p>
+                    </div>
+                    <div class=" grid grid-cols-2">
+                        <p class="dark:text-white">Date of Birth</p>
+                        <p class=" col-start-2 dark:text-white"><?php echo $userData["birthday"] ?></p>
                     </div>
                 </div>
                 <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
             </div>
 
-            <a href="../Controller/userProfileController.php">
+            <a href="./userProfileEditUpd.php">
                 <div class=" lg:w-[350px] lg:h-[400px] lg:flex-col justify-center items-center flex flex-wrap space-y-3 lg:text-base text-xs font-semibold">
                     <div class=" flex justify-around items-center lg:py-4 lg:px-2 py-2 border bg-white dark:bg-gray-500 dark:border-gray-500 rounded-xl shadow-xl mt-4 lg:w-[290px] w-[160px]">
                         <img src="./resources/img/manage-accounts.svg" alt="..." class=" lg:w-[30px] w-[20px]">

@@ -130,11 +130,11 @@ $result = $_SESSION["m_product"];
                         <table class="w-full text-sm text-left text-gray-500 ">
                             <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center ">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3 text-start">
-                                        Product name
-                                    </th>
                                     <th scope="col" class="px-6 py-3">
                                         Product id
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-start">
+                                        Product name
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-start">
                                         Category
@@ -161,47 +161,47 @@ $result = $_SESSION["m_product"];
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($result as $product) { ?>
-                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    <?= $product["name"];?>
-                                    </th>
-                                    <td class="px-6 py-4">
-                                    <?= $product["product_id"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["c_name"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["buyprice"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["sellprice"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["instock"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["create_date"];?>
-                                    </td>
+                                <?php foreach ($result as $product) { ?>
+                                    <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                                            <?= $product["product_id"]; ?>
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            <?= $product["name"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["c_name"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["buyprice"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["sellprice"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["instock"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["create_date"]; ?>
+                                        </td>
 
-                                    <?php if($product["instock"] > 10) {?>
-                                    <td class="px-6 py-4 text-green-500">
-                                        Instock
-                                    </td>
-                                    <?php } else if($product["instock"] < 10 && $product["instock"] >= 1 ){ ?>
-                                        <td class="px-6 py-4 text-orange-500">
-                                        Low stock
-                                    </td>
-                                    <?php } else {?>
-                                        <td class="px-6 py-4 text-red-500">
-                                        Out of Stock
-                                    </td>
-                                    <?php }?>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="../Controller/editProductController.php?id=<?= $product["productID"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
-                                    </td>
-                                </tr>
+                                        <?php if ($product["instock"] > 10) { ?>
+                                            <td class="px-6 py-4 text-green-500">
+                                                Instock
+                                            </td>
+                                        <?php } else if ($product["instock"] < 10 && $product["instock"] >= 1) { ?>
+                                            <td class="px-6 py-4 text-orange-500">
+                                                Low stock
+                                            </td>
+                                        <?php } else { ?>
+                                            <td class="px-6 py-4 text-red-500">
+                                                Out of Stock
+                                            </td>
+                                        <?php } ?>
+                                        <td class="px-6 py-4 text-right">
+                                            <a href="../Controller/editProductController.php?id=<?= $product["productID"] ?>" class="font-medium text-blue-600  hover:underline">Edit</a>
+                                        </td>
+                                    </tr>
                                 <?php } ?>
                             </tbody>
                         </table>

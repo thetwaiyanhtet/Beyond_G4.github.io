@@ -1,3 +1,8 @@
+<?php
+session_start();
+$tot = $_SESSION['carted'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,9 +42,9 @@
                                 </div>
                             </div>
                             <a href="./cart2.php">
-                            <div class=" bg-gray-200 h-10 w-10 rounded-full border shadow flex items-center justify-center">
-                                <ion-icon class="text-3xl" name="cart-outline"></ion-icon>
-                            </div>
+                                <div class=" bg-gray-200 h-10 w-10 rounded-full border shadow flex items-center justify-center">
+                                    <ion-icon class="text-3xl" name="cart-outline"></ion-icon>
+                                </div>
                             </a>
                         </div>
 
@@ -86,21 +91,10 @@
                 <p class=" font-bold text-center ">Select Your Delivery Method</p>
                 <div class="mt-5 font-semibold max-lg:text-sm">
                     <label class="flex items-center space-x-2 mb-5">
-                        <input type="radio" name="deli" class="form-checkbox w-6 h-6  ">
+                        <input type="radio" checked name="deli" class="form-checkbox w-6 h-6  ">
                         <span>Royal Express</span>
                     </label>
-                    <label class="flex items-center space-x-2 mb-5">
-                        <input type="radio" name="deli" class="form-checkbox w-6 h-6 ">
-                        <span>Bee Express</span>
-                    </label>
-                    <label class="flex items-center space-x-2 mb-5">
-                        <input type="radio" name="deli" class="form-checkbox w-6 h-6">
-                        <span>Jack Express</span>
-                    </label>
-                    <label class="flex items-center space-x-2 mb-5">
-                        <input type="radio" name="deli" class="form-checkbox w-6 h-6">
-                        <span>Hello Express</span>
-                    </label>
+
 
                 </div>
             </div>
@@ -113,8 +107,8 @@
 
                     </div>
                     <div class="flex flex-col max-lg:text-base items-end text-xl font-semibold">
-                        <p class="mb-5">$250</p>
-                        <p class="mb-5">$10</p>
+                        <p class="mb-5"><?= $tot['totprice'] ?></p>
+                        <p class="mb-5">$10.00</p>
 
                     </div>
                 </div>
@@ -122,16 +116,23 @@
                     <div>
                         <p class="mb-5">Total Amount</p>
                     </div>
+                    <?php
+                    $totprice = $tot['totprice'];
+                    $numericString = preg_replace("/[^0-9]/", "", $totprice);
+                    $intValue = substr($numericString, 0, -2);
+                    $addedValue = $intValue + 10;
+                     
+                    ?>
                     <div>
-                        <p class="mb-5">$260</p>
+                        <p class="mb-5">$ <?= $addedValue ?>.00</p>
                     </div>
                 </div>
-            
-           
-        </div>
-        <div class="absolute bottom-0 right-5 mr-8 max-lg:-bottom-10 max-lg:right-5">
-               <a href="./payment.php"><button class=" text-white py-1 px-5 rounded-md bg-[#314755] " >Next Step ></button>
-               </a> 
+
+
+            </div>
+            <div class="absolute bottom-0 right-5 mr-8 max-lg:-bottom-10 max-lg:right-5">
+                <a href="./payment.php"><button class=" text-white py-1 px-5 rounded-md bg-[#314755] ">Next Step ></button>
+                </a>
             </div>
         </div>
 
