@@ -40,7 +40,7 @@ include "./sidebar.php";
             <p class=" pb-3 text-lg font-semibold">Orders</p>
             <div class="relative overflow-x-auto py-5 px-5 rounded-lg shadow-xl border-2 border-blue-950">
                 <table class="w-full text-sm text-left text-gray-500 ">
-                    <thead class=" ">
+                    <thead class="text-xs text-gray-700 uppercase bg-blue-200">
                         <tr>
                             <th scope="col" class="px-6 py-3 text-center">
                                 Order ID

@@ -10,7 +10,7 @@ echo($merchantEmail);
 $sql = $pdo->prepare(
     "SELECT `m_product`.id AS `productID`,
     `m_product`.name,
-    `m_product`.`product_id`,
+    `m_product`.`id`,
     `m_product`.`category_id`,
     `m_product`.buyprice,
     `m_product`.sellprice,
