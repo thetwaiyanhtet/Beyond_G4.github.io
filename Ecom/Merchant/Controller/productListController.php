@@ -1,9 +1,12 @@
 <?php
+session_start();
 //DB Connection
 include "../Model/model.php";
 // include "../Controller/middleware/loginCheck.php";
 
-// $merchantEmail = $_SESSION["merchant_ID"];
+$merchantEmail = $_SESSION["merchant_ID"];
+echo($merchantEmail);
+
 $sql = $pdo->prepare(
     "SELECT `m_product`.id AS `productID`,
     `m_product`.name,
@@ -19,9 +22,13 @@ $sql = $pdo->prepare(
 
      LEFT JOIN `m_admin_category`
 
-    ON `m_product`.`category_id`=`m_admin_category`.id WHERE`m_product`.`del_flg`=0"
+    ON `m_product`.`category_id`=`m_admin_category`.id
+    JOIN m_merchant
+    ON m_product.merchant_id=m_merchant.id
+    
+     WHERE`m_product`.`del_flg`=0 and email=:email"
 );
-// $sql->bindValue(":id",$merchantEmail);
+$sql->bindValue(":email",$merchantEmail);
 $sql->execute(); //run real sql
 
 $data=$sql->fetchAll(PDO::FETCH_ASSOC);

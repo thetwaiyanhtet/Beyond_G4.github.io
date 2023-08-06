@@ -97,7 +97,7 @@
                          <img src="../..<?= $productListDetail["p_one"]?>" alt="..." class=" w-full h-52" >
                          <div class="pl-3 pb-2">
                              <p><?= $productListDetail["name"]?></p>
-                             <p><?= $productListDetail["sellprice"]?>"</p>
+                             <p><?= $productListDetail["sellprice"]?></p>
                          </div>
                      </div>
                      <?php } ?>

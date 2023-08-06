@@ -43,10 +43,10 @@ if(move_uploaded_file($phototmp,"../../Storage/profile/".$photo)){
     
     $sql->execute();
     
-    // $userData = $sql->fetchAll(PDO::FETCH_ASSOC);
-    // print_r($userData);
+    // $userDetailData = $sql->fetchAll(PDO::FETCH_ASSOC);
+    // print_r($userDetailData);
     
-    header("Location: ../View/profileMenuShow.php");
+    header("Location: ../View/profileMenu.php");
 }else{
     header("Location: ../View/errors/error.php");
 }
