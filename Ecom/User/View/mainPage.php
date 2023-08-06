@@ -34,9 +34,9 @@ include  "../../Admin/Controller/readfaqController.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class=" bg-purple-50 dark:bg-gray-950 font-poppins hide-scroll-bar scroll-smooth">
-    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
-        <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
+<body class=" bg-purple-50 dark:bg-gray-950 hide-scroll-bar scroll-smooth">
+    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+        <div class=" flex flex-wrap items-center justify-between mx-auto p-4 ">
             <a href="./mainPage.php" class="flex items-center">
                 <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
                 <span class="text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
@@ -47,7 +47,7 @@ include  "../../Admin/Controller/readfaqController.php";
                 <input type="checkbox" name="cart" id="cart" class="hidden peer " />
                 <label for="cart" class="ml-3"><ion-icon name="cart-outline" class="text-2xl mt-2 dark:text-white text-black"></ion-icon>
                 </label>
-                <div id="shopping-cart" class=" invisible peer-checked:visible w-auto bg-white/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-white p-5 absolute z-30 top-20 right-0 rounded-bl-2xl drop-shadow-lg cursor-pointer overflow-y-scroll hide-scroll-bar">
+                <div id="shopping-cart" class="  peer-checked:visible w-auto bg-white/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-white p-5 absolute z-30 top-20 right-0 rounded-bl-2xl drop-shadow-lg cursor-pointer overflow-y-scroll hide-scroll-bar">
                     <div class="font-bold">Your Shopping Cart</div>
 
                     <a id="btnEmpty" href="../Controller/cartController.php?action=empty">Empty Cart</a>
