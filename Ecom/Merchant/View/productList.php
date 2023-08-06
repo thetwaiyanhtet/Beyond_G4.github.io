@@ -167,7 +167,7 @@ $result = $_SESSION["m_product"];
                                     <?= $product["name"];?>
                                     </th>
                                     <td class="px-6 py-4">
-                                    <?= $product["product_id"];?>
+                                    <?= $product["id"];?>
                                     </td>
                                     <td class="px-6 py-4">
                                     <?= $product["c_name"];?>

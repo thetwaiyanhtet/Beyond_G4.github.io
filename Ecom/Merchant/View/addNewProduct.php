@@ -106,7 +106,7 @@ include "../Controller/categoryListController.php";
                                     <div>
                                         <p>Product ID</p>
                                     </div>
-                                    <div><input type="text" name="pid" class="inputBox" placeholder="#001"  >
+                                    <div><input type="text" name="pid" class="inputBox" placeholder="00"  >
                                         <div class=" text-red-800 font-thin"> <?php echo $_SESSION["productIdError"] ?></div>
                                     </div>
                                 </div>

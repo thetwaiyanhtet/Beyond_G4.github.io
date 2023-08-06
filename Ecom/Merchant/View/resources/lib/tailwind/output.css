@@ -592,8 +592,8 @@ video {
   left: 45%;
 }
 
-.left-\[54\%\] {
-  left: 54%;
+.left-\[52\%\] {
+  left: 52%;
 }
 
 .right-0 {
@@ -614,58 +614,6 @@ video {
 
 .top-\[35\%\] {
   top: 35%;
-}
-
-.left-\[56\%\] {
-  left: 56%;
-}
-
-.left-\[58\%\] {
-  left: 58%;
-}
-
-.left-\[60\%\] {
-  left: 60%;
-}
-
-.left-\[64\%\] {
-  left: 64%;
-}
-
-.left-\[65\%\] {
-  left: 65%;
-}
-
-.left-\[6\%\] {
-  left: 6%;
-}
-
-.left-\[62\%\] {
-  left: 62%;
-}
-
-.left-\[61\%\] {
-  left: 61%;
-}
-
-.left-\[5\%\] {
-  left: 5%;
-}
-
-.left-\[55\%\] {
-  left: 55%;
-}
-
-.left-\[52\%\] {
-  left: 52%;
-}
-
-.left-\[53\%\] {
-  left: 53%;
-}
-
-.left-\[51\%\] {
-  left: 51%;
 }
 
 .z-40 {
@@ -800,6 +748,10 @@ video {
   margin-left: 14rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .ml-\[1\%\] {
   margin-left: 1%;
 }
@@ -812,8 +764,16 @@ video {
   margin-right: 0.5rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
+}
+
+.mr-9 {
+  margin-right: 2.25rem;
 }
 
 .mt-0 {
@@ -860,30 +820,6 @@ video {
   margin-top: 173px;
 }
 
-.mr-10 {
-  margin-right: 2.5rem;
-}
-
-.mr-9 {
-  margin-right: 2.25rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
-.mr-5 {
-  margin-right: 1.25rem;
-}
-
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
 .block {
   display: block;
 }
@@ -910,6 +846,10 @@ video {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-11 {
+  height: 2.75rem;
 }
 
 .h-12 {
@@ -1000,22 +940,6 @@ video {
   height: 100vh;
 }
 
-.h-\[490px\] {
-  height: 490px;
-}
-
-.h-11 {
-  height: 2.75rem;
-}
-
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-7 {
-  height: 1.75rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1104,17 +1028,14 @@ video {
   width: 20rem;
 }
 
-<<<<<<< Updated upstream
-=======
 .w-9 {
   width: 2.25rem;
 }
 
-.w-96 {
-  width: 24rem;
+.w-\[1000px\] {
+  width: 1000px;
 }
 
->>>>>>> Stashed changes
 .w-\[120px\] {
   width: 120px;
 }
@@ -1167,10 +1088,6 @@ video {
   width: 780px;
 }
 
-.w-\[900px\] {
-  width: 900px;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1182,18 +1099,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[1000px\] {
-  width: 1000px;
-}
-
-.w-7 {
-  width: 1.75rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .min-w-\[160px\] {
@@ -1737,11 +1642,6 @@ video {
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pb-0 {
