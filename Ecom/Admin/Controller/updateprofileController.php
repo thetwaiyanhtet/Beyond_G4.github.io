@@ -28,6 +28,7 @@ if (move_uploaded_file($profiletmp,"../AdminStorge/admin/".$profile)){
     $sql->bindValue(":profileimg", "../AdminStorge/admin/".$profile);
     
     $sql->execute();
+    
 
     header("Location: ../View/updateProfileNPassword.php");
 }
