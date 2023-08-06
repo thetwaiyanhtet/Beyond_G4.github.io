@@ -88,7 +88,7 @@ $tot = $_SESSION['carted'];
                 <p class=" font-bold text-center ">Checkout Details</p>
                 <div class="mt-5 font-semibold max-lg:text-sm ">
                     <p><?= $addressandname[0]['name'] ?></p>
-                    <p><?= $addressandname[0]['str'] ?></p>
+                    <p><?= $addressandname[0]['street'] ?></p>
                     <span class="border-b-2 border-[#314755] pb-2"><?= $addressandname[0]['email'] ?></span>
                 </div>
                 <div class="flex align-middle items-center mt-5">
