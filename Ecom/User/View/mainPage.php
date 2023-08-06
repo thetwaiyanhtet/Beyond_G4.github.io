@@ -72,13 +72,15 @@ $banner = $_SESSION["banner"];
                                 foreach ($_SESSION["cart_item"] as $index=>$item) {
                                     $item_price = $item["quantity"] * $item["price"];
                                 ?>
-                                <form action="../Controller/checkoutController.php?image=<?php echo $item["image"]; ?>" method="post" enctype="multipart/form-data">
+                                <form action="../Controller/checkoutController.php" method="post" enctype="multipart/form-data">
                                     <tr class="text-left">
-                                        <td><input  name="image_<?= $index ?>" value="<?php echo $item["image"]; ?>" class="cart-item-image" /><input type="text" disabled name="itemname" class=" w-48 bg-transparent border border-transparent outline-none" value="<?php echo $item["name"]; ?>"></td>
+                                    <td hidden ><input type="text" value="<?php echo $item["image"] ?>" hidden name="image_<?= $index ?>" id=""></td>
+                                        <td><img  name="image_<?= $index ?>" src="<?php echo $item["image"] ?>" class="cart-item-image" /><input type="text" readonly name="itemname_<?= $index ?>" class=" w-48 bg-transparent border border-transparent outline-none" value="<?php echo $item["name"]; ?>"></td>
                                         <td ><input type="text" readonly name="code_<?= $index ?>" class="w-20 bg-transparent border border-transparent outline-none" value="<?php echo $item["code"]; ?>"></td>
                                         <td><input type="text" readonly name="quantity_<?= $index ?>" class="w-20 bg-transparent border border-transparent outline-none" value="<?php echo $item["quantity"]; ?>"></td>
                                         <td><input type="text" readonly name="price_<?= $index ?>" class="w-28 bg-transparent border border-transparent outline-none" value=" <?php echo "$ " . $item["price"]; ?>"></td>
                                         <td><input type="text" readonly name="subprice_<?= $index ?>" class="w-28 bg-transparent border border-transparent outline-none" value="<?php echo "$ " . number_format($item_price, 2); ?>" id=""></td>
+                                        
                                         <td class="text-center"><a href="../Controller/cartController.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><ion-icon name="trash-outline" alt="Remove Item"></ion-icon></a></td>
                                     </tr>
                                 <?php

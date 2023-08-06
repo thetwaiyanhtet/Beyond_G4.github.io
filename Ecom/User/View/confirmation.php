@@ -1,11 +1,7 @@
 <?php
 include "../Controller/merchantaddressController.php";
 $addressandname = $_SESSION['m_cusaddress'];
-
-
 $tot = $_SESSION['carted'];
-
-
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +95,7 @@ $tot = $_SESSION['carted'];
                     <span class=" font-bold ">Royal Express</span>
                     <p class=" text-xs">(Expected delivery on <?php
                                                                 $currentDate = new DateTime(); 
-                                                                $currentDate->add(new DateInterval('P4D')); 
+                                                                $currentDate->add(new DateInterval('P3D')); 
                                                                 $newDate = $currentDate->format('d/m/Y'); 
                                                                 echo $newDate;
                                                                 ?>)</p>
@@ -113,22 +109,35 @@ $tot = $_SESSION['carted'];
             </div>
             <div class="flex flex-col max-lg:hidden  font-poppins">
                 <p class=" border-b-4 border-[#314755] pb-5 text-3xl text-center max-lg:text-xl font-bold">Your order</p>
-                <div class="flex mt-10 border-b-4 border-[#314755]  justify-center items-center">
+               <?php
+               $chunks = array_chunk($_SESSION['carted'], 6, true);
+                 $lastIndex = count($chunks) - 1;
+               foreach ($chunks as $index=>$chunk) {
+                if ($index == $lastIndex) {
+                    continue; } ?>  
+                    <form action="../Controller//orderController.php" method="post">        
+                <div class="flex mt-10 border-b-4 border-[#314755]   justify-center items-center">
                     <div class="mb-10 ">
-                        <img class="w-32" src="./resources/img/cart shopping.png" alt="">
+                        <img class="w-32" src="<?= $chunk["image_".$index] ?>" alt="">
                     </div>
-                    <div class=" mx-5 flex flex-col ">
-                        <div class="flex justify-between mb-5">
-                            <span>Dress</span>
+                    <div class=" mx-5 flex flex-col  ">
+                        <div class="flex justify-between mb-5 space-x-5">
+                            <span><?= $chunk["itemname_".$index] ?></span>
                             <span></span>
                         </div>
                         <div>
-                            <span>M</span>
-                            <span>Natural</span>
-                            <span>1pc</span>
+                            <span><?= $chunk["quantity_".$index] ?>pcs</span>
+                            <span> <?= $chunk["price_".$index] ?></span>
                         </div>
                     </div>
                 </div>
+                
+                   ;
+             <?php } 
+               
+               ?>
+
+
                 <div class="flex mt-5 max-lg:text-sm justify-between text-xl font-semibold">
                     <div>
                         <p class="mb-5">Total Amount</p>
@@ -139,8 +148,9 @@ $tot = $_SESSION['carted'];
                 </div>
             </div>
             <div class="absolute max-lg:hidden -bottom-10 right-0 max-lg:-bottom-10 max-lg:right-5">
-                <a href="./orderConfirm.php"> <button class=" text-white py-1 px-5 rounded-md font-PlayfairSC bg-[#314755]">Confirm Order</button></a>
+                <a> <input type="submit" value="Check Out" class=" cursor-pointer text-white py-1 px-5 rounded-md font-PlayfairSC bg-[#314755]"></input></a>
             </div>
+            </form>  
         </div>
 
     </div>
