@@ -67,6 +67,30 @@ include "./sidebar.php"
                                         <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" value="" name="photo1">
                                     </div>
                                 </li>
+                                <li>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo2">
+                                            <img src="../../<?php echo $productdata[0]["p_two"] ?>" id="photoimg2" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" value="" name="photo2">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo3">
+                                            <img src="../../<?php echo $productdata[0]["p_three"] ?>" id="photoimg3" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" value="" name="photo3">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                        <label for="photo4">
+                                            <img src="../../<?php echo $productdata[0]["p_four"] ?>" id="photoimg4" alt="">
+                                        </label>
+                                        <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" value="" name="photo4">
+                                    </div>
+                                </li>
                                 <!-- <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
@@ -130,70 +154,35 @@ include "./sidebar.php"
                                         </select></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 1</label></div>
-                                    <div><input type="color" name="color1" value="<?php echo $productdata[0]["color_1"] ?>">
-                                        <!-- <input type="text" id="put1" name="color1" value="<?php echo $productdata[0]["color_1"] ?>" class="inputBox"></div> -->
-                                    </div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 2</label></div>
-                                    <div><input type="color" name="color2" value="<?php echo $productdata[0]["color_2"] ?>">
-                                        <!-- <input type="text" id="put2" name="color2" value="<?php echo $productdata[0]["color_2"] ?>" class="inputBox"></div> -->
-                                    </div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 2</label></div>
-                                    <div><input type="color" name="color3" value="<?php echo $productdata[0]["color_3"] ?>">
-                                        <!-- <input type="text" id="put3" name="color3" value="<?php echo $productdata[0]["color_3"] ?>" class="inputBox"></div> -->
-                                    </div>
-                                </div>
-                                <!-- <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Colors</p>
-                                </div>
-                                <div>
-                                    <div class=" pb-3">
-                                        <input type="checkbox" class=" w-5 h-5" id="red">
-                                        <label for="red">Red</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="blue">
-                                        <label for="blue">Blue</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="green">
-                                        <label for="green">Green</label>
-                                    </div>
+                                    <div><label>Color</label></div>
                                     <div>
-                                        <input type="checkbox" class=" w-5 h-5" id="yellow">
-                                        <label for="yellow">Yellow</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="black">
-                                        <label for="black">Black</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="white">
-                                        <label for="white">White</label>
+                                        <span><input type="color" name="color1" value="<?php echo $productdata[0]["color_1"] ?>" class=" rounded-full w-9 h-9">
+                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        </span>
+                                        <span><input type="color" name="color2" value="<?php echo $productdata[0]["color_2"] ?>" class=" rounded-full w-9 h-9">
+                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        </span>
+                                        <span><input type="color" name="color3" value="<?php echo $productdata[0]["color_3"] ?>" class=" rounded-full w-9 h-9">
+                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        </span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Sizes</p>
-                                </div>
-                                <div>
-                                    <div class=" pb-3 space-x-1">
-                                        <input type="checkbox" class=" w-5 h-5" id="red">
-                                        <label for="red">XS</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="blue">
-                                        <label for="blue">S</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="green">
-                                        <label for="green">M</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="yellow">
-                                        <label for="yellow">L</label>
-
-                                    </div>
+                                
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <p >Size</p>
                                     <div>
-                                        <input type="checkbox" class=" w-5 h-5" id="black">
-                                        <label for="black">XL</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="white">
-                                        <label for="white">Free Size</label>
+                                        <input type="radio" id="male" name="size1" value="1"  >
+                                        <label for="s" class=" md:text-base text-sm  dark:text-white">S</label>
+                                        <input type="radio" id="female" name="size2" value="1">
+                                        <label for="m" class=" md:text-base text-sm  dark:text-white">M</label>
+                                        <input type="radio" id="other" name="size3" value="1" >
+                                        <label for="L" class=" md:text-base text-sm  dark:text-white">L</label>
+                                        <input type="radio" id="female" name="size4" value="1" >
+                                        <label for="xl" class=" md:text-base text-sm  dark:text-white">XL</label>
+                                        <input type="radio" id="other" name="size5" value="1">
+                                        <label for="2xl" class=" md:text-base text-sm  dark:text-white">2XL</label>
                                     </div>
                                 </div>
-                            </div> -->
                             </div>
 
                             <div class="flex-col space-y-5">

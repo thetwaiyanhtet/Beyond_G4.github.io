@@ -1,9 +1,11 @@
 <?php
-include "../Controller/cartController.php";
+//session_start();
+require_once("../Controller/cartController.php");
+include  "../../User/Controller/bannerController.php";
+include  "../../Admin/Controller/readfaqController.php";
 $faq = $_SESSION["m_faq"];
 include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
-include  "../../Admin/Controller/readfaqController.php";
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +58,8 @@ include  "../../Admin/Controller/readfaqController.php";
                         $total_quantity = 0;
                         $total_price = 0;
                     ?>
-                        <table class="tbl-cart m-4" cellpadding="5" cellspacing="1">
+                    
+                    <table class="tbl-cart m-4" cellpadding="5" cellspacing="1">
                             <tbody>
                                 <tr class="text-left border-b-2 border-b-black dark:border-b-white">
                                     <th class="w-36">Name</th>
@@ -67,15 +70,20 @@ include  "../../Admin/Controller/readfaqController.php";
                                     <th class="w-32">Remove</th>
                                 </tr>
                                 <?php
-                                foreach ($_SESSION["cart_item"] as $item) {
+                                foreach ($_SESSION["cart_item"] as $index => $item) {
+                                    echo $index;
                                     $item_price = $item["quantity"] * $item["price"];
+                                   
                                 ?>
+                                <form action="../Controller/checkoutController.php" method="post" enctype="multipart/form-data">
                                     <tr class="text-left">
-                                        <td><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
-                                        <td><?php echo $item["code"]; ?></td>
-                                        <td><?php echo $item["quantity"]; ?></td>
-                                        <td><?php echo "$ " . $item["price"]; ?></td>
-                                        <td><?php echo "$ " . number_format($item_price, 2); ?></td>
+                                    <td hidden ><input type="text" value="<?php echo $item["image"] ?>" hidden name="image_<?= $index ?>" id=""></td>
+                                        <td><img  name="image_<?= $index ?>" src="<?php echo $item["image"] ?>" class="cart-item-image" /><input type="text" readonly name="itemname_<?= $index ?>" class=" w-48 bg-transparent border border-transparent outline-none" value="<?php echo $item["name"]; ?>"></td>
+                                        <td ><input type="text" readonly name="code_<?= $index ?>" class="w-20 bg-transparent border border-transparent outline-none" value="<?php echo $item["code"]; ?>"></td>
+                                        <td><input type="text" readonly name="quantity_<?= $index ?>" class="w-20 bg-transparent border border-transparent outline-none" value="<?php echo $item["quantity"]; ?>"></td>
+                                        <td><input type="text" readonly name="price_<?= $index ?>" class="w-28 bg-transparent border border-transparent outline-none" value=" <?php echo "$ " . $item["price"]; ?>"></td>
+                                        <td><input type="text" readonly name="subprice_<?= $index ?>" class="w-28 bg-transparent border border-transparent outline-none" value="<?php echo "$ " . number_format($item_price, 2); ?>" id=""></td>
+                                        
                                         <td class="text-center"><a href="../Controller/cartController.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><ion-icon name="trash-outline" alt="Remove Item"></ion-icon></a></td>
                                     </tr>
                                 <?php
@@ -87,11 +95,15 @@ include  "../../Admin/Controller/readfaqController.php";
                                 <tr class=" border-t-2 border-t-black dark:border-t-white">
                                     <td colspan="2" align="right">Total:</td>
                                     <td align="right"><?php echo $total_quantity; ?></td>
-                                    <td align="right" colspan="2"><strong><?php echo "$ " . number_format($total_price, 2); ?></strong></td>
+                                    <td align="right" colspan="2"><strong><input type="text" readonly name="totprice" class="w-28 bg-transparent border border-transparent outline-none" value="<?php echo "$ " . number_format($total_price, 2); ?>" id=""></strong></td>
                                     <td></td>
                                 </tr>
+                                <tr> <td colspan="5" ><input type="submit" value="Check Out" class=" cursor-pointer float-right bg-blue-500 text-white py-1 px-3 rounded-md"></input></td></tr>
+                                </form>
                             </tbody>
+                           
                         </table>
+                       
                     <?php
                     } else {
                     ?>

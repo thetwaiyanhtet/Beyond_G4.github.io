@@ -3,9 +3,7 @@ include "../Controller/orderController.php";
 include "./sidebar.php";
 
 // $cusName = $_SESSION["getCusName"];
-// echo "<pre>";
-// print_r($orders);
-// echo $cusName;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +24,8 @@ include "./sidebar.php";
 </head>
 
 <body>
-    <main class=" ml-56 h-screen">
-        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center bg-white">
+    <main class=" ml-56">
+        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center bg-white">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -37,12 +35,12 @@ include "./sidebar.php";
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
-        </header> -->
+        </header>
         <section class="p-5">
             <p class=" pb-3 text-lg font-semibold">Orders</p>
             <div class="relative overflow-x-auto py-5 px-5 rounded-lg shadow-xl border-2 border-blue-950">
                 <table class="w-full text-sm text-left text-gray-500 ">
-                    <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
+                    <thead class="text-xs text-gray-700 uppercase bg-blue-200">
                         <tr>
                             <th scope="col" class="px-6 py-3 text-center">
                                 Order ID
@@ -91,14 +89,14 @@ include "./sidebar.php";
                                 <td class="px-6 py-4">
                                     <?php if ($order["payment_id"] == 0) { ?>
                                         Visa
-                                        
+
                                     <?php } ?>
                                     <?php if ($order["payment_id"] == 1) { ?>
                                         KBZ pay
                                     <?php } ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="./orderDetail.php" class="font-medium text-blue-600  hover:underline">View</a>
+                                    <a href="./orderDetail.php?id=<?= $order["generate_id"]; ?>" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
                             </tr>
                         <?php } ?>

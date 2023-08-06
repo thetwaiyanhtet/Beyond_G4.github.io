@@ -75,7 +75,7 @@ include '../Controller/productListController.php';
                                     <?= $product["instock"]; ?>
                                 </td>
                                 <td class="px-6 py-2 ">
-                                    <a href="./productDetails.php?id=<?= $product["product_id"]; ?>" class="font-medium text-blue-600  hover:underline">View Details</a>
+                                    <a href="./productDetails.php?id=<?= $product["id"]; ?>" class="font-medium text-blue-600  hover:underline">View Details</a>
                                 </td>
                             </tr>
                         <?php } ?>

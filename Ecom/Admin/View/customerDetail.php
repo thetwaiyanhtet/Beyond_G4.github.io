@@ -1,9 +1,7 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/customerDetailController.php";
-// echo "<pre>";
-// print_r($customerDetail);
-// print_r($orders);
+print_r($purchasedCount);
 ?>
 
 <!doctype html>
@@ -70,7 +68,7 @@ include "../Controller/customerDetailController.php";
                         </div>
                         <div class=" text-center">
                             <p class=" font-semibold ">Purchased</p>
-                            <p class=" text-xl text-blue-500"><?= $orderCount["order_count"] ?></p>
+                            <p class=" text-xl text-blue-500"><?= $purchasedCount["purchased_count"] ?></p>
                         </div>
                     </div>
                 </div>
@@ -93,12 +91,12 @@ include "../Controller/customerDetailController.php";
                 <p class=" font-bold p-5 border border-b-black h-14">All purchased products</p>
 
                 <div class="flex justify-around p-5">
-                    <?php foreach ($orders as $order) { ?>
+                    <?php foreach ($products as $product) { ?>
                         <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400 text-center">
-                            <img src="../..<?= $order["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
+                            <img src="../..<?= $product["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
                             <div class="pl-3 pb-2 pt-10">
-                                <p class=" font-semibold "><?= $order["name"] ?></p>
-                                <p class=" opacity-60"><?= $order["sellprice"] ?> MMK</p>
+                                <p class=" font-semibold "><?= $product["name"] ?></p>
+                                <p class=" opacity-60"><?= $product["unit_price"] ?> MMK</p>
                             </div>
                         </div>
                     <?php } ?>
@@ -137,9 +135,15 @@ include "../Controller/customerDetailController.php";
                         <tbody>
                             <?php foreach ($orders as $order) { ?>
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        <?= $order["name"] ?>
-                                    </th>
+                                    <?php if ($purchasedCount > 1) { ?>
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                            <?= $order["name"]?> ,...
+                                        </th>
+                                    <?php } else if ($purchasedCount == 0) { ?>
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                            <?= $order["name"] ?>
+                                        </th>
+                                    <?php } ?>
                                     <td class="px-6 py-4">
                                         <?= $order["store_name"] ?>
                                     </td>

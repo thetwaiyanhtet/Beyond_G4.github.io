@@ -1,4 +1,5 @@
 <?php
+include "../Controller/orderlistController.php";
 include "./adminsidebar.php";
 ?>
 <!doctype html>
@@ -44,7 +45,7 @@ include "./adminsidebar.php";
                                 Address
                             </th>
                             <th scope="col" class="px-6 py-3">
-                               Amount
+                                Amount
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Date
@@ -55,199 +56,66 @@ include "./adminsidebar.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                                
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                                <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                            <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                            <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                            <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                            <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                            <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                            </td>
-                        </tr>
-                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                Iphone 14 Pro Max
-                            </th>
-                            <td class="px-6 py-4">
-                               Shop Kit
-                            </td>
-                            <td class="px-6 py-4">
-                               Derek Kyaw
-                            </td>
-                            <td class="px-6 py-4">
-                               Lanmadaw, Yangon
-                            </td>
-                            <td class="px-6 py-4">
-                                $4500.00
-                            </td>
-                            <td class="px-6 py-4">
-                                11 July 2023
-                            </td>
-                            <td class="px-6 py-4 flex space-x-3">
-                            <a href="./orderDetail.php"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
-                            </td>
-                        </tr>
-                        
+                        <?php foreach ($results as $result) { ?>
+                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <?php
+                                    $product_id = $result['product_id'];
+                                    $sql = $pdo->prepare("SELECT proudct_name FROM m_orderdetails WHERE product_id =:product_id ");
+                                    $sql->bindValue(":product_id", $product_id);
+                                    $sql->execute();
+                                    $product_name = $sql->fetchColumn();
+                                    echo $product_name;
+                                    ?>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <?php $merchant_id = $result['merchant_id'];
+                                    $sql = $pdo->prepare("SELECT m_name FROM m_merchant WHERE merchant_id =:merchant_id ");
+                                    $sql->bindValue(":merchant_id", $merchant_id);
+                                    $sql->execute();
+                                    $merchant_name = $sql->fetchColumn();
+                                    echo $merchant_name;
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php $customer_id = $result['customer_id'];
+                                    $sql = $pdo->prepare("SELECT username FROM m_customer WHERE customer_id =:customer_id ");
+                                    $sql->bindValue(":customer_id", $customer_id);
+                                    $sql->execute();
+                                    $customer_name = $sql->fetchColumn();
+                                    echo $customer_name;
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php $customer_id = $result['customer_id'];
+                                    $sql = $pdo->prepare("SELECT customer_city FROM m_customer WHERE customer_id =:customer_id ");
+                                    $sql->bindValue(":customer_id", $customer_id);
+                                    $sql->execute();
+                                    $customer_address = $sql->fetchColumn();
+                                    echo $customer_address;
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $result['total_amt'];
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $result['order_date'];
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4 flex space-x-3">
+                                    <a href="./orderDetail.php?id=<?php echo $result['id']; ?>"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
+
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <div class="flex justify-between items-center py-2 px-3 pt-5">
-                        <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
-                        <div>Page 1 of 10</div>
-                        <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
-                    </div>
+                    <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
+                    <div>Page 1 of 10</div>
+                    <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
+                </div>
             </section>
         </div>
 

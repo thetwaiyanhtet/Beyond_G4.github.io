@@ -8,6 +8,9 @@ if (isset($_POST["send"])) {
     $phNo = $_POST['phNo'];
     $address = $_POST['address'];
     $merchant_email = $_SESSION["merchant_ID"];
+    $img = $_FILES['photo']['name'];
+    $imgTmp = $_FILES['photo']['tmp_name'];
+
 
     include "../Model/model.php";
 
@@ -18,12 +21,14 @@ if (isset($_POST["send"])) {
         $merchant_data = $sql->fetch(PDO::FETCH_ASSOC);
         $merchant_id = $merchant_data['id'];
 
-        $sql = $pdo->prepare("UPDATE m_merchant SET store_name=:shopName,email=:email,phone=:phone,address=:address WHERE id=:merchant_id");
+        move_uploaded_file($imgTmp,"../../Storage/profile/".$img);
+        $sql = $pdo->prepare("UPDATE m_merchant SET store_name=:shopName,email=:email,phone=:phone,address=:address, logo=:img WHERE id=:merchant_id");
         $sql->bindValue(":merchant_id", $merchant_id);
         $sql->bindValue(":shopName", $shopName);
         $sql->bindValue(":email", $email);
         $sql->bindValue(":phone", $phNo);
         $sql->bindValue(":address", $address);
+        $sql->bindValue(":img","/Storage/profile/.$img");
         $sql->execute();
 
         // Redirect to a success page after successful update

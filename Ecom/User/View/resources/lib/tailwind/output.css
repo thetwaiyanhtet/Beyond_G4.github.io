@@ -2339,6 +2339,10 @@ video {
   border-style: solid;
 }
 
+.border-dashed {
+  border-style: dashed;
+}
+
 .border-\[\#314755\] {
   --tw-border-opacity: 1;
   border-color: rgb(49 71 85 / var(--tw-border-opacity));
@@ -3338,6 +3342,11 @@ video {
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -4413,10 +4422,6 @@ body * {
     height: 5rem;
   }
 
-  .md\:h-32 {
-    height: 8rem;
-  }
-
   .md\:h-5 {
     height: 1.25rem;
   }
@@ -4681,11 +4686,6 @@ body * {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
   }
 
   .md\:py-3 {

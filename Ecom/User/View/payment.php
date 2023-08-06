@@ -86,7 +86,7 @@
     </div>
     <div class=" font-poppins relative mt-10 mx-auto container">
         <div class="flex justif-center items-center flex-col">
-            <div class="w-11/12 h-10 p-5 flex  bg-btn-color rounded-lg shadow-md">
+            <div class="w-11/12 h-12 p-5 flex  bg-btn-color rounded-lg shadow-md">
                 <label class="flex items-center space-x-2 mb-5">
                     <input type="radio" name="deli" class="form-checkbox w-6 h-6 ">
                     <span class="text-white font-bold">Visa</span>
@@ -96,7 +96,7 @@
             <div class="bg-gray-200 w-11/12 h-96 max-lg:h-1/2 shadow-lg">
                 <div class="  flex max-lg:flex-col ">
                     <div class=" m-5 h-64 w-1/2 max-lg:w-11/12">
-                        <div id="input_canva" class="h-80 bg-white px-3 space-y-3">
+                        <div id="input_canva" class=" h-80 bg-white px-3 py-5 space-y-3">
                             <div class=" flex flex-col items-start ">
                                 <span>Card number</span>
                                 <input id="cardNo" type="number" maxlength="16" class="outline-none h-10 w-full border-b-2 border-btn-color ">
@@ -122,11 +122,7 @@
 
                                 </div>
                             </div>
-                            <div class="flex justify-center items-center">
-                            <div class="flex rounded-md m-1/2 ml-2 text-center justify-center items-center w-1/5  mt-10 bg-[#314755]">
-                                <input type="submit" value="Submit" class=" cursor-pointer text-white px-10 py-2  submit-btn">
-                            </div>
-                            </div>
+                            
                         </div>
                     </div>
                     
@@ -170,13 +166,8 @@
     </div>
     <div class="flex justify-center items-center relative">
         <div class="flex w-[80%]  mt-10">
-            <div class=" bg-btn-color w-1/2 mx-4 pt-3 rounded-md">
-                <label class="flex items-center align-middle rounded-md ml-6 space-x-2 mb-5">
-                    <input type="radio" name="deli" class="form-checkbox w-6 h-6 ">
-                    <span class="text-white font-bold">PayPal</span>
-                </label>
-            </div>
-            <div class=" bg-btn-color w-1/2 mx-3 pt-3 rounded-md">
+  
+            <div class=" bg-btn-color w-full  mx-3 pt-3 rounded-md">
                 <label class="flex items-center rounded-md h-5 space-x-2 ml-5 mb-5">
                     <input type="radio" name="deli" class="form-checkbox w-6 h-6 ">
                     <span class="text-white font-bold">KBZ pay</span>
