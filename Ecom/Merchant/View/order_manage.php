@@ -96,7 +96,7 @@ include "./sidebar.php";
                                     <?php } ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="./orderDetail.php?id=<?= $order["id"]; ?>" class="font-medium text-blue-600  hover:underline">View</a>
+                                    <a href="./orderDetail.php?id=<?= $order["generate_id"]; ?>" class="font-medium text-blue-600  hover:underline">View</a>
                                 </td>
                             </tr>
                         <?php } ?>
