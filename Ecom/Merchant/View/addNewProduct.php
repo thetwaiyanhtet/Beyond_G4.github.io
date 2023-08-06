@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "./sidebar.php";
 include "../Controller/categoryListController.php";
 ?>
@@ -63,30 +64,30 @@ include "../Controller/categoryListController.php";
                                         <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo1">
                                     </div>
                                 </li>
-                                <!-- <li>
+                                <li>
                                 <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" name="photo2">
                                     </div>
-                                </li> -->
-                                <!-- <li>
+                                </li>
+                                <li>
                                 <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" name="photo3">
                                     </div>
-                                </li> -->
-                                <!-- <li>
+                                </li>
+                                <li>
                                 <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" name="photo4">
                                     </div>
-                                </li> -->
+                                </li>
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
                                 </li>
@@ -105,85 +106,52 @@ include "../Controller/categoryListController.php";
                                     <div>
                                         <p>Product ID</p>
                                     </div>
-                                    <div><input type="text" name="pid" class="inputBox" placeholder="#001"></div>
+                                    <div><input type="text" name="pid" class="inputBox" placeholder="#001"  >
+                                        <div class=" text-red-800 font-thin"> <?php echo $_SESSION["productIdError"] ?></div>
+                                    </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Category</p>
                                     </div>
                                     <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
-                                        <?php foreach ($categories as $category) { ?>
-                                            <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
+                                            <?php foreach ($categories as $category) { ?>
+                                                <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
                                             <?php } ?>
-                                            
-                                        
+
+
                                         </select></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 1</label></div>
-                                    <div><input type="color" name="color1">
-                                        <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
-                                    </div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 2</label></div>
-                                    <div><input type="color" name="color2">
-                                        <!-- <input type="text" id="put2" name="color2" class="inputBox"></div> -->
-                                    </div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div><label>Color 3</label></div>
-                                    <div><input type="color" name="color3">
-                                        <!-- <input type="text" id="put3" name="color3" class="inputBox"></div> -->
-                                    </div>
-                                </div>
-                                <!-- <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Colors</p>
-                                </div>
-                                <div>
-                                    <div class=" pb-3">
-                                        <input type="checkbox" class=" w-5 h-5" id="red">
-                                        <label for="red">Red</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="blue">
-                                        <label for="blue">Blue</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="green">
-                                        <label for="green">Green</label>
-                                    </div>
+                                    <div><label>Color</label></div>
                                     <div>
-                                        <input type="checkbox" class=" w-5 h-5" id="yellow">
-                                        <label for="yellow">Yellow</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="black">
-                                        <label for="black">Black</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="white">
-                                        <label for="white">White</label>
+                                        <span><input type="color" name="color1" class=" rounded-full w-9 h-9">
+                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        </span>
+                                        <span><input type="color" name="color2" class=" rounded-full w-9 h-9">
+                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        </span>
+                                        <span><input type="color" name="color3" class=" rounded-full w-9 h-9">
+                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        </span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class=" flex justify-between space-x-10 items-center">
-                                <div>
-                                    <p>Sizes</p>
-                                </div>
-                                <div>
-                                    <div class=" pb-3 space-x-1">
-                                        <input type="checkbox" class=" w-5 h-5" id="red">
-                                        <label for="red">XS</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="blue">
-                                        <label for="blue">S</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="green">
-                                        <label for="green">M</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="yellow">
-                                        <label for="yellow">L</label>
 
-                                    </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <p >Size</p>
                                     <div>
-                                        <input type="checkbox" class=" w-5 h-5" id="black">
-                                        <label for="black">XL</label>
-                                        <input type="checkbox" class=" w-5 h-5" id="white">
-                                        <label for="white">Free Size</label>
+                                        <input type="radio" id="male" name="size1" value="1">
+                                        <label for="s" class=" md:text-base text-sm  dark:text-white">S</label>
+                                        <input type="radio" id="female" name="size2" value="1" >
+                                        <label for="m" class=" md:text-base text-sm  dark:text-white">M</label>
+                                        <input type="radio" id="other" name="size3" value="1" >
+                                        <label for="L" class=" md:text-base text-sm  dark:text-white">L</label>
+                                        <input type="radio" id="female" name="size4" value="1">
+                                        <label for="xl" class=" md:text-base text-sm  dark:text-white">XL</label>
+                                        <input type="radio" id="other" name="size5" value="1">
+                                        <label for="2xl" class=" md:text-base text-sm  dark:text-white">2XL</label>
                                     </div>
                                 </div>
-                            </div> -->
                             </div>
 
                             <div class="flex-col space-y-5">
@@ -191,13 +159,13 @@ include "../Controller/categoryListController.php";
                                     <div>
                                         <p>Buying Price</p>
                                     </div>
-                                    <div><input type="text" name="buyprice" class=" inputBox"></div>
+                                    <div><input type="text" name="buyprice" class=" inputBox" ></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Selling Price</p>
                                     </div>
-                                    <div><input type="text" name="sellprice" class="inputBox"></div>
+                                    <div><input type="text" name="sellprice" class="inputBox" ></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
@@ -205,7 +173,7 @@ include "../Controller/categoryListController.php";
                                     </div>
                                     <div><input type="text" name="quantity" class="inputBox"></div>
                                 </div>
-                                
+
                                 <div class=" flex justify-between space-x-10">
                                     <div>
                                         <p>Description</p>
@@ -214,7 +182,7 @@ include "../Controller/categoryListController.php";
                                 </div>
                             </div>
                         </div>
-                        <div class=" justify-end space-x-3 flex pt-4">                   
+                        <div class=" justify-end space-x-3 flex pt-4">
                             <button class=" btn">Add Product</button>
                         </div>
                     </div>
@@ -226,3 +194,4 @@ include "../Controller/categoryListController.php";
 </body>
 
 </html>
+<?php $_SESSION["productIdError"] = "" ?>

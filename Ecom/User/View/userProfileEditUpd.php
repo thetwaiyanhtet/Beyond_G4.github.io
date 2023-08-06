@@ -26,6 +26,7 @@ $userData = $_SESSION["user_data"];
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
+    <script src="../View/resources/js/product.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -101,7 +102,7 @@ $userData = $_SESSION["user_data"];
             </div>
         </div>
     </nav>
-    <form action="../Controller/profileUpdateController.php" method="post">
+    <form action="../Controller/profileUpdateController.php" method="post" enctype="multipart/form-data">
         <div class="flex flex-wrap mt-4 w-auto h-auto md:space-x-24 space-x-16 md:pl-0 pl-5">
             <div class="md:flex flex-col md:m-5 m-2 space-y-5">
                 <button type="button" class="w-28 border-solid  rounded-md p-2 border-purple-600 border-2">Profile</button>
@@ -118,8 +119,12 @@ $userData = $_SESSION["user_data"];
                     </div>
                     <div class=" pt-5">
                         <div class=" flex-col space-y-3">
-                            <div class=" md:w-32 md:h-32 w-24 h-24 bg-slate-500 rounded-full shadow-lg"></div>
-                            <button class=" md:py-2 md:px-4 py-1 px-2 bg-white rounded-md shadow-md md:text-base text-sm">Select Image</button>
+                            <div class=" w-40 h-40 border border-dashed rounded-full border-gray-400 flex justify-center items-center">
+                                <label for="photo1">
+                                    <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
+                                </label>
+                                <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo">
+                            </div>
                         </div>
                     </div>
                 </div>

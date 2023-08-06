@@ -45,7 +45,7 @@ $userData = $_SESSION["user_data"];
     <main class=" min-h-screen flex items-center justify-center">
 
         <div class="lg:flex justify-center items-center lg:space-x-5 lg:w-[800px] w-[380px] h-min-screen bg-transparent border shadow-2xl lg:py-10 lg:px-20 py-5 px-16 rounded-3xl z-50 dark:border-black">
-            <div class=" relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-5 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
+            <div class="relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-5 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
                 
                 <img src="../..<?= $userData["p_picture"] ?>" alt="..." class=" w-16 rounded-lg z-50">
                 <div class="text-center">

@@ -161,29 +161,29 @@ $result = $_SESSION["m_product"];
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($result as $product) { ?>
-                                    <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                            <?= $product["product_id"]; ?>
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            <?= $product["name"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["c_name"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["buyprice"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["sellprice"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["instock"]; ?>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["create_date"]; ?>
-                                        </td>
+                            <?php foreach ($result as $product) { ?>
+                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    <?= $product["name"];?>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                    <?= $product["product_id"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["c_name"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["buyprice"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["sellprice"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["instock"];?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                    <?= $product["create_date"];?>
+                                    </td>
 
                                         <?php if ($product["instock"] > 10) { ?>
                                             <td class="px-6 py-4 text-green-500">
