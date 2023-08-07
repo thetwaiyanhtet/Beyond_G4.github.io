@@ -1,15 +1,5 @@
 <?php
 
-function generateToken($timestamp)
-{
-    $randomBytes = random_bytes(16);
-    $date = date('Ymd', $timestamp);
-    $token = $date . $timestamp;
-    return $token;
-}
-
-$currentTimestamp = time();
-$token = generateToken($currentTimestamp);
 
 session_start();
 $carted = $_SESSION['carted'];
@@ -31,7 +21,16 @@ $sql = $pdo->prepare(
    )
    VALUES
    (
-       $token,1,1,1,
+    (
+    CONCAT(
+        SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
+        SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
+        SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
+        SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
+        SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
+        SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1)
+    )
+),1,1,1,
        $intValue,
        NOW())
    "
