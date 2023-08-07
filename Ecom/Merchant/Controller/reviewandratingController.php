@@ -4,32 +4,23 @@
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
-    "SELECT * from m_cusreview WHERE m_cusreview.merchant_id = '1';"
+    "SELECT m_cusreview.id,m_product.name,
+    m_customer.username,
+    m_cusreview.comment,
+    m_cusreview.rating
+    FROM
+    m_product JOIN m_cusreview ON m_product.id = m_cusreview.product_id
+    JOIN m_customer ON m_cusreview.customer_id = m_customer.id 
+    WHERE m_cusreview.merchant_id = '1';"
 );
 $sql->execute();
 $_SESSION["getReviewandRating"] = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlusername = $pdo->prepare(
-    "SELECT m_customer.username
-    FROM m_cusreview
-    LEFT JOIN m_customer ON m_cusreview.customer_id = m_customer.id 
-    "
-    );
-
-    $sqlproductName = $pdo->prepare(
-        "SELECT m_product.name
-        FROM m_cusreview
-        LEFT JOIN m_product ON m_cusreview.product_id = m_product.id
-        "
-        );   
 
 
-$sqlusername->execute();
-$sqlproductName->execute();
 
 
-$_SESSION["getUsername"] = $sqlusername->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["getProductName"] = $sqlproductName->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 

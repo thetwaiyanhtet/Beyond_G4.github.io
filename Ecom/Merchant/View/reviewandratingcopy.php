@@ -2,11 +2,7 @@
 
 session_start();
 $reviewdata = $_SESSION["getReviewandRating"];
-$username = $_SESSION["getUsername"];
-$productName = $_SESSION["getProductName"];
-$reviewReview =   $_SESSION["reviewDetail"];
-$detailName = $_SESSION["detailProductName"];
-$detailUsername = $_SESSION["detailUsername"];
+$reviewdetail =   $_SESSION["reviewDetail"];
 $detailPhoto = $_SESSION["detailProductPhoto"];
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
@@ -80,18 +76,14 @@ include "../Controller/reviewandratingController.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $i = 0 ?>
-                                            <?php $j = 0 ?>
-                                            <?php foreach ($reviewdata as $data) { ?>
+                                            <?php foreach ($reviewdata as $index => $data) { ?>
                                                 <tr>
                                                     <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                        <?= $username[$i]["username"] ?>
-                                                        <?php $i += 1 ?>
+                                                        <?= $reviewdata[$index]["username"] ?>
                                                     </td>
 
                                                     <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                        <?= $productName[$j]["name"] ?>
-                                                        <?php $j += 1 ?>
+                                                        <?= $reviewdata[$index]["name"] ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <div class=" text-yellow-500 text-xl">
@@ -108,12 +100,12 @@ include "../Controller/reviewandratingController.php";
 
                                                             ?>
                                                             <?php }  ?>
-                                                            <?= numberToStars($data["rating"]) ?>
+                                                            <?= numberToStars($reviewdata[$index]["rating"]) ?>
 
                                                         </div>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                        <?= $data["comment"] ?>
+                                                        <?= $reviewdata[$index]["comment"] ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <button>
@@ -142,7 +134,7 @@ include "../Controller/reviewandratingController.php";
             <div class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
                 <img src="<?= $detailPhoto[0]["p_one"] ?>" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
                 <div class=" p-3 space-y-3">
-                    <p class=" font-semibold"> <?= $detailName[0]['name'] ?> </p>
+                    <p class=" font-semibold"> <?= $reviewdetail[0]['name']  ?> </p>
                     <p class=" text-yellow-500 text-xl">
                         <?php
                        
@@ -154,17 +146,17 @@ include "../Controller/reviewandratingController.php";
                                 $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
                                 return $fullStars . $emptyStars;
                             }
-                            echo numberToStars($reviewReview[0]["rating"]) ;
+                            echo numberToStars($reviewdetail[0]["rating"]) ;
                         ?>
                         
                         
                         <span class="text-black">/</span>
-                        <span class="text-black"><?= $detailUsername[0]['username'] ?></span>
+                        <span class="text-black"><?= $reviewdetail[0]['username'] ?></span>
                     </p>
-                    <p class=" text-gray-500"><?= $reviewReview[0]["comment"] ?></p>
+                    <p class=" text-gray-500"><?= $reviewdetail[0]["comment"] ?></p>
                     <div>
                         <span class=" text-gray-500 pt-5">Category : </span>
-                        <span>Camera</span>
+                        <span><?= $reviewdetail[0]['c_name'] ?></span>
                     </div>
                     <div class=" border-t-2 border-blue-500 py-3">
                         <div><button id="cancelRNRButton" class="mb-3 text-white rounded-md float-right bg-blue-500 py-1 px-3">Close</button></div>

@@ -797,6 +797,14 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1107,6 +1115,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-60 {
+  width: 15rem;
 }
 
 .min-w-\[160px\] {
@@ -1451,11 +1463,6 @@ video {
 .bg-\[\#D92828\] {
   --tw-bg-opacity: 1;
   background-color: rgb(217 40 40 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#E2E4E1\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 228 225 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#F3F6FF\] {
