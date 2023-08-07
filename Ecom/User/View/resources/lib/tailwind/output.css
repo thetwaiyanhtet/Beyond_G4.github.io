@@ -1514,10 +1514,6 @@ video {
   height: 100vh;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
 .max-h-64 {
   max-height: 16rem;
 }
@@ -1828,10 +1824,6 @@ video {
 
 .min-w-0 {
   min-width: 0px;
-}
-
-.max-w-md {
-  max-width: 28rem;
 }
 
 .max-w-screen-xl {
@@ -4329,10 +4321,6 @@ body * {
     top: 11rem;
   }
 
-  .md\:right-5 {
-    right: 1.25rem;
-  }
-
   .md\:order-1 {
     order: 1;
   }
@@ -4569,10 +4557,6 @@ body * {
 
   .md\:w-auto {
     width: auto;
-  }
-
-  .md\:w-40 {
-    width: 10rem;
   }
 
   .md\:rotate-180 {

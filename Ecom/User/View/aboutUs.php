@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class=" dark:bg-gray-900 font-poppins">
+<body class=" dark:bg-gray-900">
 
-    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600  ">
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
                 <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
@@ -79,7 +79,7 @@
             </div>
 
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:border-gray-700">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:border-gray-700">
                     <li>
                         <a href="./mainPage.php" class="block py-2 pl-3 pr-4 text-purple-800 bg-purple-400 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-purple-500 font-bold" aria-current="page">Home</a>
                     </li>
@@ -95,7 +95,7 @@
     </nav>
 
     <!--Title-->
-    <section class=" m-auto w-3/4 md:w-2/3 ">
+    <section class=" m-auto w-3/4 md:w-2/3 font-poppins">
         <p class=" font-PlayfairSC underline text-center mt-5 m-2 text-2xl text-black dark:text-gray-200">About Us</p>
         <p class="mt-10 text-2xl font-PlayfairSC text-center text-black dark:text-gray-200">Our Project Overview And Story</p>
         <div class="md:flex m-5 md:justify-around">

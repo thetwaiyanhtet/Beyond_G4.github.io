@@ -99,7 +99,7 @@
         </div>
 
         <div class="m-2 w-[100%] md:w-3/4">
-            <div class="w-auto max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <div class="flex items-center justify-between mb-4">
                     <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Order History</h5>
                     <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
@@ -107,13 +107,16 @@
                     </a>
                 </div>
                 <div class="flow-root">
-                    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                        <li class="py-3 sm:py-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="flex-shrink-0">
+                    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700 ">
+                        <li class="py-3 sm:py-4 w-auto">
+                            <div class="flex items-center justify-between space-x-4">
+                                <div class="flex">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
+                                    <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
                                     <img class="w-24 h-24 object-fill scale-150 rounded-full" src="./resources/img/photo.png" alt="image">
                                 </div>
-                                <div class="flex-1 min-w-0">
+                                <div class="flex-col min-w-0">
                                     <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                         White Blouse
                                     </p>
@@ -121,7 +124,7 @@
                                         From: MONCLER GENIUS
                                     </p>
                                 </div>
-                                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                <div class="flex items-center text-base font-semibold text-gray-900 dark:text-white">
                                     $320
                                 </div>
                             </div>
