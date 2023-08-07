@@ -1,6 +1,7 @@
 <?php
 include "../Controller/orderController.php";
-include "./sidebar.php";
+//include "../Controller/searchOrderController.php";
+//include "./sidebar.php";
 
 // $cusName = $_SESSION["getCusName"];
 
@@ -14,7 +15,9 @@ include "./sidebar.php";
     <title>Orders</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./resources/js/dateandtime.js " defer></script>
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
+    <script src="../View/resources/js/searchOrder.js"></script>
+    <script src="./resources/js/dateandtime.js "></script>
     <link rel="stylesheet" href="./resources/css/order.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,12 +40,18 @@ include "./sidebar.php";
             </div>
         </header>
         <section class="p-5">
-            <p class=" pb-3 text-lg font-semibold">Orders</p>
+            <p class=" text-lg font-semibold">Orders</p>
+            <div class=" py-5 w-60">
+                <input type="search" class="inputBox" placeholder="Search Here" id="search">
+            </div>
             <div class="relative overflow-x-auto py-5 px-5 rounded-lg shadow-xl border-2 border-blue-950">
                 <table class="w-full text-sm text-left text-gray-500 ">
-                    <thead class="text-xs text-gray-700 uppercase bg-blue-200">
+                    <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center">
                         <tr>
                             <th scope="col" class="px-6 py-3 text-center">
+                                No
+                            </th>
+                            <th scope="col" class="px-6 py-3">
                                 Order ID
                             </th>
                             <th scope="col" class="px-6 py-3">
@@ -62,19 +71,23 @@ include "./sidebar.php";
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class=" text-center" id="searchResult">
+                        <?php $id = 0 ?>
                         <?php foreach ($orders as $order) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                    <?= $order["generate_id"]; ?>
+                                    <?= $order["id"]; ?>
                                 </th>
+                                <td class="px-6 py-4">
+                                    <?= $order["generate_id"]; ?>
+                                </td>
                                 <td class="px-6 py-4">
                                     <?= $order["username"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <?= $order["order_date"]; ?>
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="pl-20 py-4">
                                     <?php if ($order["payment_status"] == 0) { ?>
                                         <div class="text-yellow-500  w-3/5 text-center rounded-md pr-5">
                                             Pending

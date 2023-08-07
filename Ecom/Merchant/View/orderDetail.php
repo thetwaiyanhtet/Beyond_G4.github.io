@@ -1,6 +1,7 @@
 <?php
 include "../Controller/orderDetailController.php";
-include "./sidebar.php";
+//include "./sidebar.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,10 +71,11 @@ include "./sidebar.php";
                     <p class="m-2 font-philosopher font-semibold text-xl">Delivery Address</p>
                     <hr>
                     <div class="m-2">
-                        <p class="m-2">Name : <?= $orderDetails[0]["username"] ?></p>
+
                         <p class="m-2">Phone : <?= $orderDetails[0]["phone"] ?></p>
                         <p class="m-2">Address : <?= $orderDetails[0]["street"] ?></p>
-                        <p class="m-2">City : <?= $orderDetails[0]["t_name"] ?></p>
+                        <p class="m-2">Township : <?= $orderDetails[0]["t_name"] ?></p>
+                        <p class="m-2">Region/State : <?= $orderDetails[0]["r_name"] ?></p>
                         <p class="m-2">Delivery Services: Royal Express</p>
                     </div>
                 </div>

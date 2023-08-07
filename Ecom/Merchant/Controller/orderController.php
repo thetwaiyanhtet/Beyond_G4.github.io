@@ -1,13 +1,15 @@
 <?php
 session_start();
+
 // DB Connection
 include "../Model/model.php";
+
 $merchantEmail = $_SESSION["merchant_ID"];
 
 $sql = $pdo->prepare(
-    "SELECT *
-    FROM m_order 
-    JOIN m_customer 
+    "SELECT * 
+    FROM m_customer 
+    JOIN m_order 
     ON m_customer.id = m_order.customer_id
     JOIN m_merchant 
     ON m_merchant.id = m_order.merchant_id
@@ -20,8 +22,8 @@ $sql->execute(); // real sql run
 
 $orders = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-// echo "<pre>";
-// print_r($orders);
-// echo "</pre>";
+echo "<pre>";
+print_r($orders);
+echo "</pre>";
 
 

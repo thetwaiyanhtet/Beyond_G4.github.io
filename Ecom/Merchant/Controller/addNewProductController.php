@@ -32,7 +32,7 @@ if (count($_POST) == 0) {
     $photo3 = $_FILES["photo3"]["name"];
     $photo3tmp = $_FILES["photo3"]["tmp_name"];
     $photo4 = $_FILES["photo4"]["name"];
-    $photo4tmp = $_FILES["photo4"]["tmp_name"];
+    $photo4tmp = $_FILES["photo4"]["tmp_name"]  ;
 
 
     include "../Model/model.php";

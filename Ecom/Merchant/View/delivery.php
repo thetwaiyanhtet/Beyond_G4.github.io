@@ -1,5 +1,6 @@
 <?php
-//include "./sidebar.php";
+session_start();
+include "./sidebar.php";
 include "../Controller/deliveryController.php";
 ?>
 
@@ -23,18 +24,18 @@ include "../Controller/deliveryController.php";
 </head>
 
 <body>
-    <main class=" ml-56 h-screen relative">
-        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+    <main class=" ml-56 relative">
+        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
+                    <li><img src="../../<?= $deliveries[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
                 </ul>
             </div>
-        </header> -->
+        </header>
         <div class="pl-5 pt-3 font-semibold text-lg">Delivery</div>
         <div class="flex justify-between max-lg:ml mt-3">
             <div class="pt-2 pl-5 relative text-gray-600">
@@ -62,11 +63,14 @@ include "../Controller/deliveryController.php";
                     <table class="w-full text-sm text-left text-gray-500 ">
                         <thead class="text-xs text-gray-900 uppercase bg-blue-200 text-center ">
                             <tr>
-                                <th scope="col" class="px-6 py-3 text-start">
-                                    Customer Name
+                                <th scope="col" class="px-6 py-3 ">
+                                    No
+                                </th>
+                                <th scope="col" class="px-6 py-3 ">
+                                    Order ID
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Order No
+                                    Customer Name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Order Date
@@ -89,7 +93,7 @@ include "../Controller/deliveryController.php";
                             <?php
                             // Associative array to store total sums for each generate_id
                             $generateIdTotals = array();
-
+                            $id = 0;    
                             foreach ($deliveries as $delivery) {
                                 $generate_id = $delivery['generate_id'];
                                 $quantity = $delivery['quantity'];
@@ -103,14 +107,18 @@ include "../Controller/deliveryController.php";
                                     $generateIdTotals[$generate_id] = $total_price;
                                 }
                             }
-                            print_r($generateIdTotals);
+                            // print_r($generateIdTotals);
                             foreach ($deliveries as $delivery) { ?>
+                            
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                        <?= $delivery["username"] ?>
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
+                                       <?= ++$id; ?>.
                                     </th>
                                     <td class="px-6 py-4">
                                         <?= $delivery["generate_id"] ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <?= $delivery["username"] ?>
                                     </td>
                                     <td class="px-6 py-4">
                                         <?= $delivery["order_date"] ?>
@@ -127,8 +135,8 @@ include "../Controller/deliveryController.php";
                                     </td>
                                 </tr>
                             <?php } ?>
-                            
-                            
+
+
                         </tbody>
                     </table>
                     <div class="flex justify-between items-center py-2 px-3 pt-5">

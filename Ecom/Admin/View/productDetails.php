@@ -1,6 +1,6 @@
 <?php
-include "./adminsidebar.php";
 include "../Controller/productDetailController.php";
+include "./adminsidebar.php";
 
 ?>
 
