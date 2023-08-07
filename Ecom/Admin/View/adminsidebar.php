@@ -1,6 +1,8 @@
 <?php
- session_start();
+ include "../Controller/logoandbusinessController.php";
+ include "../Controller/updatepasswordController.php";
 $admin = $_SESSION["m_admin"]; 
+
 
 $logoandname = $_SESSION["m_logo"];
 ?>
