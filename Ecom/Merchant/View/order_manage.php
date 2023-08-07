@@ -35,7 +35,7 @@ include "./sidebar.php";
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
+                    <li><img src="../../<?= $orders[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
                 </ul>
             </div>
         </header>

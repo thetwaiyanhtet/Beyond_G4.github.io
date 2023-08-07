@@ -13,7 +13,7 @@ $sql = $pdo->prepare(
     ON m_customer.id = m_order.customer_id
     JOIN m_merchant 
     ON m_merchant.id = m_order.merchant_id
-    WHERE m_merchant.email=:email;"
+    WHERE m_merchant.email=:email AND m_order.delivery_status = 0;"
 );
 
 $sql->bindValue(":email",$merchantEmail);

@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include "./sidebar.php";
+include "./sidebar.php";
 include "../Controller/deliveryController.php";
 ?>
 
@@ -37,7 +37,7 @@ include "../Controller/deliveryController.php";
             </div>
         </header>
         <div class="pl-5 pt-3 font-semibold text-lg">Delivery</div>
-        <div class="flex justify-between max-lg:ml mt-3">
+        <div class=" float-right flex justify-between max-lg:ml mt-3">
             <div class=" flex pr-5">
                 <span class="flex p-1 border  rounded-lg">
                     <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
@@ -49,7 +49,7 @@ include "../Controller/deliveryController.php";
             </div>
         </div>
 
-        <div class=" p-5">
+        <div class=" clear-both p-5">
             <div class="p-3 rounded-lg shadow-xl border-2  mt-3 border-blue-950">
                 <div class="relative overflow-x-auto py-3">
                     <table class="w-full text-sm text-left text-gray-500 ">
@@ -83,28 +83,12 @@ include "../Controller/deliveryController.php";
 
                         <tbody class=" text-center">
                             <?php
-                            // Associative array to store total sums for each generate_id
-                            $generateIdTotals = array();
-                            $id = 0;    
-                            foreach ($deliveries as $delivery) {
-                                $generate_id = $delivery['generate_id'];
-                                $quantity = $delivery['quantity'];
-                                $unit_price = $delivery['unit_price'];
-                                $total_price = $quantity * $unit_price;
-
-                                // Update the total_amt for each generate_id in the associative array
-                                if (isset($generateIdTotals[$generate_id])) {
-                                    $generateIdTotals[$generate_id] += $total_price;
-                                } else {
-                                    $generateIdTotals[$generate_id] = $total_price;
-                                }
-                            }
-                            // print_r($generateIdTotals);
+                            $id = 0;
                             foreach ($deliveries as $delivery) { ?>
-                            
+
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
-                                       <?= ++$id; ?>.
+                                        <?= ++$id; ?>.
                                     </th>
                                     <td class="px-6 py-4">
                                         <?= $delivery["generate_id"] ?>
@@ -117,7 +101,7 @@ include "../Controller/deliveryController.php";
                                     </td>
 
                                     <td class="px-6 py-4 ">
-                                        <?= $generateIdTotals[$generate_id]  ?>
+                                        Ks <?= $delivery["total_amt"] ?>
                                     </td>
                                     <td class=" pr-2 py-4 ">
                                         <?= $delivery["delivery_name"] ?>

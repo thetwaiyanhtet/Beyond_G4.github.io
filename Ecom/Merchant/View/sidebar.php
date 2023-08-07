@@ -1,3 +1,6 @@
+<?php
+// include "../Controller/sidebarController.php";
+?>
 <!doctype html>
 <html>
 
@@ -10,6 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./resources/css/sidebar.css">
+  <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./resources/js/dateandtime.js "></script>
 </head>
 
 <body class=" font-poppins">
@@ -88,6 +95,20 @@
         </li>
       </ul>
     </div>
+
+    <!-- <div class=" ml-56">
+      <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <div class=" pl-2">
+          <p id="date_time"></p>
+        </div>
+        <div>
+          <ul class="flex space-x-5 items-center pr-5">
+            <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
+            <li><img src="../../<?= $merchant["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
+          </ul>
+        </div>
+      </header>
+    </div> -->
 
   </div>
   <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">

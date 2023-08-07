@@ -30,7 +30,7 @@ $result = $_SESSION["m_product"];
 </head>
 
 <body class="">
-    <main class=" ml-56 h-screen">
+    <main class=" ml-56">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>

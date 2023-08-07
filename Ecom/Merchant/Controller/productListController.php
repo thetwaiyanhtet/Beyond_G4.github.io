@@ -1,11 +1,10 @@
 <?php
-session_start();
 //DB Connection
 include "../Model/model.php";
 // include "../Controller/middleware/loginCheck.php";
 
 $merchantEmail = $_SESSION["merchant_ID"];
-echo($merchantEmail);
+
 
 $sql = $pdo->prepare(
     "SELECT `m_product`.id AS `productID`,

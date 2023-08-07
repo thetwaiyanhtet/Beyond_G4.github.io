@@ -22,7 +22,7 @@ include "./sidebar.php";
 </head>
 
 <body>
-    <main class=" ml-56 h-screen">
+    <main class=" ml-56">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
@@ -34,7 +34,7 @@ include "./sidebar.php";
                 </ul>
             </div>
         </header>
-        <section>
+        <section class=" pb-3">
             <p class=" pt-3 pl-5 font-semibold text-lg">Dashboard</p>
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">

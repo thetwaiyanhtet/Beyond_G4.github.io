@@ -1,6 +1,6 @@
 <?php
 include "../Controller/orderDetailController.php";
-//include "./sidebar.php";
+include "./sidebar.php";
 
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ include "../Controller/orderDetailController.php";
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="60px"></li>
+                    <li><img src="../../<?= $orderDetails[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
                 </ul>
             </div>
         </header>
@@ -58,7 +58,7 @@ include "../Controller/orderDetailController.php";
                     <div class="m-2">
                         <p class="m-2">Name : <?= $orderDetails[0]["username"] ?></p>
                         <p class="m-2">Order Date : <?= $orderDetails[0]["order_date"] ?></p>
-                        <p class="m-2">Total Amount : <?= $totalSum ?> MMK</p>
+                        <p class="m-2">Total Amount : Ks <?= $totalSum ?></p>
                         <?php if ($orderDetails[0]["payment_id"] == 0) { ?>
                             <p class="m-2">Payment : Visa </p>
                         <?php } else if ($orderDetails[0]["payment_id"] == 1) { ?>
@@ -81,7 +81,7 @@ include "../Controller/orderDetailController.php";
                 </div>
             </div>
             <!--Product Summary-->
-            <div class="w-[1000px] h-[390px] border border-solid shadow-xl ml-10 rounded-lg">
+            <div class="w-[1000px] h-auto border border-solid shadow-xl ml-10 rounded-lg">
                 <p class="m-5 font-philosopher font-semibold text-xl">Product Summary</p>
                 <table class="table-auto w-full">
                     <thead class=" text-sm text-gray-700 uppercase bg-blue-200 h-11">
@@ -98,12 +98,12 @@ include "../Controller/orderDetailController.php";
                         <?php $productCount = 0; ?>
                         <?php foreach ($orderDetails as $orderDetail) { ?>
                             <tr class="border-b">
-                                <td class="py-4"><?= ++$productCount; ?></td>
+                                <td class="py-4"><?= ++$productCount; ?>.</td>
                                 <td class=" text-left pl-6"><?= $orderDetail["name"] ?></td>
-                                <td><img src="../..<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
+                                <td><img src="../../User/View/<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
                                 <td> <?= $orderDetail["quantity"] ?></td>
-                                <td><?= $orderDetail["sellprice"] ?>MMK</td>
-                                <td><?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?> MMK</td>
+                                <td>Ks <?= $orderDetail["sellprice"] ?></td>
+                                <td>Ks <?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -112,16 +112,16 @@ include "../Controller/orderDetailController.php";
 
                 <div class="flex justify-between">
                     <p class="m-5">Sub Total</p>
-                    <p class="m-5 mr-9 font-semibold"><?= $totalSum ?> MMK</p>
+                    <p class="m-5 mr-11 font-semibold">Ks <?= $totalSum ?></p>
                 </div>
                 <div class="flex justify-between">
                     <p class="ml-5">Delivery Fee</p>
-                    <p class="m-1 mr-14">$15</p>
+                    <p class="m-1 mr-11">Ks 3000 </p>
                 </div>
                 <hr>
-                <div class="flex justify-between pt-4">
+                <div class="flex justify-between py-4">
                     <p class="ml-5">Total Amount</p>
-                    <p class="m-1 mr-9 font-semibold"> = <?= $totalSum ?> MMK</p>
+                    <p class="m-1 mr-11 font-semibold"> = Ks <?= $totalSum + 3000 ?></p>
                 </div>
             </div>
             <div class=" py-7 absolute left-[52%] flex">
@@ -134,9 +134,6 @@ include "../Controller/orderDetailController.php";
             </div>
         </form>
     </main>
-
-
-
 </body>
 
 </html>
