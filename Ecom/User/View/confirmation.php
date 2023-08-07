@@ -2,8 +2,6 @@
 include "../Controller/merchantaddressController.php";
 $addressandname = $_SESSION['m_cusaddress'];
 $tot = $_SESSION['carted'];
-echo "<pre>";
-print_r($tot);
 ?>
 
 <!DOCTYPE html>
