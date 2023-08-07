@@ -1,5 +1,10 @@
 <?php
 include "./adminsidebar.php";
+include "../Controller/totalController.php";
+$order = $_SESSION["order"];
+$revenue = $_SESSION["revenue"];
+$merchant = $_SESSION["merchant"];
+$customer = $_SESSION["customer"];
 ?>
 
 
@@ -15,43 +20,43 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main id="main" class=" ml-64 h-screen mt-28  w-[80%]">
-        <div class="flex justify-around flex-wrap">
-            <div class=" relative  border w-52 rounded-lg shadow-xl">
+    <main id="main" class=" ml-72 h-screen mt-20  w-[80%]">
+        <div class="flex justify-evenly flex-wrap">
+            <div class=" relative  border w-48 rounded-lg shadow-xl">
                 <div class="h-full  absolute rounded-tl-lg rounded-bl-lg left-0 w-2 bg-blue-600"></div>
                 <p class="mt-2 p-2 pl-5">Total Orders</p>
                 <div class="flex  p-2 pl-5 items-center  justify-between">
-                    <p class="text-[#3786FB] font-semibold">4805</p>
+                    <p class="text-[#3786FB] font-semibold"><?= $order[0]['COUNT(*)'] ?></p>
                     <div class="h-10 bg-blue-600 w-10 rounded-full ">
                         <i class='bx bxs-cart text-white mt-1 ml-1 text-center text-3xl'></i>
                     </div>
                 </div>
             </div>
-            <div class=" relative  border w-52 rounded-lg shadow-xl">
+            <div class=" relative  border w-48 rounded-lg shadow-xl">
                 <div class="h-full  absolute rounded-tl-lg rounded-bl-lg left-0 w-2 bg-pink-600"></div>
                 <p class="mt-2 p-2 pl-5">Total Revenue</p>
                 <div class="flex  p-2 pl-5 items-center  justify-between">
-                    <p class=" text-pink-600 font-semibold">$12,152</p>
+                    <p class=" text-pink-600 font-semibold">$<?= $revenue[0]['sum_received'] ?></p>
                     <div class="h-10 bg-pink-600 w-10 rounded-full ">
                         <i class='bx bxs-wallet text-white mt-1 ml-1 text-center text-3xl'></i>
                     </div>
                 </div>
             </div>
-            <div class=" relative  border w-52 rounded-lg shadow-xl">
+            <div class=" relative  border w-48 rounded-lg shadow-xl">
                 <div class="h-full  absolute rounded-tl-lg rounded-bl-lg left-0 w-2 bg-green-600"></div>
                 <p class="mt-2 p-2 pl-5">Total Merchant</p>
                 <div class="flex  p-2 pl-5 items-center  justify-between">
-                    <p class=" text-green-600 font-semibold">150</p>
+                    <p class=" text-green-600 font-semibold"><?= $merchant[0]['COUNT(*)'] ?></p>
                     <div class="h-10 bg-green-600 w-10 rounded-full ">
                         <i class='bx bxs-group text-white mt-1 ml-1 text-center text-3xl'></i>
                     </div>
                 </div>
             </div>
-            <div class=" relative  border w-52 rounded-lg shadow-xl">
+            <div class=" relative  border w-48 rounded-lg shadow-xl">
                 <div class="h-full  absolute rounded-tl-lg rounded-bl-lg left-0 w-2 bg-yellow-400"></div>
                 <p class="mt-2 p-2 pl-5">Total Customers</p>
                 <div class="flex  p-2 pl-5 items-center  justify-between">
-                    <p class="text-yellow-400 font-semibold">1.5K</p>
+                    <p class="text-yellow-400 font-semibold"><?= $customer[0]['COUNT(*)'] ?></p>
                     <div class="h-10 bg-yellow-400 w-10 rounded-full ">
                         <i class='bx bxs-group text-white mt-1 ml-1 text-center text-3xl'></i>
                     </div>
@@ -187,8 +192,8 @@ include "./adminsidebar.php";
                 </div>
             </div>
         </div>
-        <div>
-            <div class="shadow-lg rounded-lg w-[100%] h-auto mt-10 overflow-hidden">
+        <div class=" flex justify-center">
+            <div class="shadow-lg rounded-lg w-[90%] h-auto mt-10  overflow-hidden">
                 <div class="py-3 px-5 bg-gray-50 font-semibold">Orders and Customers Overview</div>
                 <div class="flex">
                     <div class="flex items-center text-xs  border border-black rounded-lg w-28 justify-center mx-5">
@@ -251,7 +256,7 @@ include "./adminsidebar.php";
             </script>
         </div>
         </div>
-        <div class="flex justify-between my-5">
+        <div class="flex justify-around mt-5 mb-20">
             <div class=" w-64 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Top Selling Categories</p>
                 <img src="./resources/img/Chart.png" class="px-3 my-3" alt="">
@@ -266,7 +271,7 @@ include "./adminsidebar.php";
                     </div>
                 </div>
             </div>
-            <div class=" w-64 h-auto  border rounded-lg space-y-3 shadow-xl">
+            <div class=" w-60 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Merchant List</p>
                 <div class="flex items-center ml-3 border-b-2 pb-2">
                     <img src="./resources/img/amazfit.png" alt="">
@@ -290,7 +295,7 @@ include "./adminsidebar.php";
                     </div>
                 </div>
             </div>
-            <div class=" w-96 h-auto  border rounded-lg space-y-3 shadow-xl">
+            <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
             <p class="font-semibold px-3 my-3">Quick Actions</p>
                 <div class="flex items-center ml-3 border-b-2 pb-2 space-x-3">
                     <img src="./resources/img/amazfit.png" alt="">
