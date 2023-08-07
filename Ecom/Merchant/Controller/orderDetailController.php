@@ -6,15 +6,16 @@ include "../Model/model.php";
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $selectedOrder = $_GET['id'];
     $merchantEmail = $_SESSION["merchant_ID"];
-
+echo $selectedOrder;
+echo $merchantEmail;
     $sql = $pdo->prepare(
         "SELECT m_customer.username,m_order.order_date,m_order.total_amt,m_order.payment_id,m_customer.phone,m_customer.street,
         m_townships.t_name,m_product.p_one,m_order_details.quantity,m_product.sellprice,m_product.name,m_regions.r_name
-        FROM m_customer
-        JOIN m_order
+        FROM m_order
+        JOIN m_customer
         ON m_order.customer_id = m_customer.id
         JOIN m_order_details 
-        ON m_order_details.order_id = m_order.generate_id
+        ON m_order_details.order_id = m_order.id
         JOIN m_townships
         ON m_townships.id = m_customer.township_id
         JOIN m_regions 
@@ -41,7 +42,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     echo "Invalid customer ID!";
 }
 
-// echo "<pre>";
-// print_r($orderDetails);
-// echo "</pre>";
+echo "<pre>";
+print_r($orderDetails);
+echo "</pre>";
 
