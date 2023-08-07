@@ -1,11 +1,18 @@
 <?php
 session_start();
 $id = $_GET["id"];
-echo $id;
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
-    "SELECT * FROM m_cusreview WHERE id = :id"
+    "SELECT m_cusreview.id,m_product.name,m_admin_category.c_name,
+    m_customer.username,
+    m_cusreview.comment,
+    m_cusreview.rating
+    FROM
+    m_product JOIN m_cusreview ON m_product.id = m_cusreview.product_id
+    JOIN m_customer ON m_cusreview.customer_id = m_customer.id JOIN m_admin_category ON
+    m_product.category_id = m_admin_category.id
+    WHERE m_cusreview.id = :id"
 );
 
 $sql->bindValue(":id", $id);
@@ -14,38 +21,4 @@ $sql->execute();
 $_SESSION["reviewDetail"] = $sql->fetchAll(PDO::FETCH_ASSOC);
 $reviewData = $_SESSION["reviewDetail"];
 
-$sqlusername = $pdo->prepare(
-    "SELECT username
-        FROM m_customer  JOIN m_cusreview
-        ON m_customer.id = m_cusreview.customer_id
-        WHERE m_cusreview.id =  $id "
-);
-
-$sqlproductPhoto = $pdo->prepare(
-    "SELECT p_one
-    FROM m_product  JOIN m_cusreview
-    ON m_product.id = m_cusreview.product_id
-    WHERE m_cusreview.id =  $id "
-   );  
-
-
-$sqlproductName = $pdo->prepare(
-
-     "SELECT name
-     FROM m_product  JOIN m_cusreview
-     ON m_product.id = m_cusreview.product_id
-     WHERE m_cusreview.id =  $id " 
-    );   
-
-$sqlusername->execute();
-$sqlproductName->execute();
-$sqlproductPhoto->execute();
-
-$_SESSION["detailUsername"] = $sqlusername->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["detailProductName"] = $sqlproductName->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["detailProductPhoto"] = $sqlproductPhoto->fetchAll(PDO::FETCH_ASSOC);
-
-print_r($_SESSION["detailUsername"]);
-
 header("Location: ../View/reviewandratingcopy.php ");
-

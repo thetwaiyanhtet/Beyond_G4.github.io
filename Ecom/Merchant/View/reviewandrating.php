@@ -75,18 +75,14 @@ include "../Controller/reviewandratingController.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $i = 0 ?>
-                                            <?php $j = 0 ?>
                                             <?php foreach ($reviewdata as $data) { ?>
                                                 <tr>
                                                     <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
-                                                        <?= $username[$i]["username"] ?>
-                                                        <?php $i += 1 ?>
+                                                        <?= $data["username"] ?>
                                                     </td>
 
                                                     <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
-                                                        <?= $productName[$j]["name"] ?>
-                                                        <?php $j += 1 ?>
+                                                        <?= $data["name"] ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <div class=" text-yellow-500 text-xl">
@@ -111,8 +107,8 @@ include "../Controller/reviewandratingController.php";
                                                         <?= $data["comment"] ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                        <button>
-                                                            <a id="popupButton" href="../Controller/revieandratingdetailcontroller.php ?id=<?= $data["id"] ?>" class="font-medium  hover:underline text-blue-600 ">View details</a>
+                                                        <button  class="font-medium  hover:underline text-blue-600" >
+                                                        <a href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["id"] ?>" class="font-medium text-blue-600  hover:underline">View details</a>
                                                         </button>
                                                     </td>
                                                 </tr>
