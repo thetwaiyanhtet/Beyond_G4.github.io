@@ -37,19 +37,12 @@ if (!empty($_GET["action"])) {
             }
             break;
         case "remove":
-<<<<<<< Updated upstream
             if (!empty($_SESSION["cart_item"])) {
                 foreach ($_SESSION["cart_item"] as $k => $v) {
                     if ($_GET["code"] == $v['code'])
                         unset($_SESSION["cart_item"][$k]);
                     if (empty($_SESSION["cart_item"]))
                         unset($_SESSION["cart_item"]);
-=======
-            if (!empty($_GET["code"]) && !empty($_SESSION["cart_item"])) {
-                $codeToRemove = $_GET["code"];
-                if (isset($_SESSION["cart_item"][$codeToRemove])) {
-                    unset($_SESSION["cart_item"][$codeToRemove]);
->>>>>>> Stashed changes
                 }
                 
             }
@@ -59,10 +52,5 @@ if (!empty($_GET["action"])) {
             unset($_SESSION["cart_item"]);
             break;
     }
-<<<<<<< Updated upstream
   header("location: ../View/mainPage.php");
-=======
-    print_r($_SESSION["cart_item"]);
-    // header("location: ../View/mainPage.php");
->>>>>>> Stashed changes
 }

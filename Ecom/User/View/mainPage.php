@@ -70,10 +70,9 @@ $banner = $_SESSION["banner"];
                                     <th class="w-32">Remove</th>
                                 </tr>
                                 <?php
-                                foreach ($_SESSION["cart_item"] as $index => $item) {
-                                    echo $index;
+                                 $index = 0;
+                                foreach ($_SESSION["cart_item"] as  $item) {
                                     $item_price = $item["quantity"] * $item["price"];
-                                   
                                 ?>
                                 <form action="../Controller/checkoutController.php" method="post" enctype="multipart/form-data">
                                     <tr class="text-left">
@@ -89,6 +88,7 @@ $banner = $_SESSION["banner"];
                                 <?php
                                     $total_quantity += $item["quantity"];
                                     $total_price += ($item["price"] * $item["quantity"]);
+                                    $index +=1;
                                 }
                                 ?>
 
