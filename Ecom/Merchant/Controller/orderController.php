@@ -5,9 +5,9 @@ include "../Model/model.php";
 $merchantEmail = $_SESSION["merchant_ID"];
 
 $sql = $pdo->prepare(
-    "SELECT * 
-    FROM m_customer 
-    JOIN m_order 
+    "SELECT *
+    FROM m_order 
+    JOIN m_customer 
     ON m_customer.id = m_order.customer_id
     JOIN m_merchant 
     ON m_merchant.id = m_order.merchant_id

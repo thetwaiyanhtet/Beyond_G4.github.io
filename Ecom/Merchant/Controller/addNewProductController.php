@@ -37,7 +37,7 @@ if (count($_POST) == 0) {
 
     include "../Model/model.php";
 
-    $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product WHERE product_id = :pid");
+    $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product WHERE code = :pid");
     $checkSql->bindValue(":pid", $pid);
     $checkSql->execute();
     $productIdExists = $checkSql->fetchColumn();
@@ -71,7 +71,7 @@ if (count($_POST) == 0) {
             (
             merchant_id, 
             name,
-            product_id,
+            code,
             category_id,
             buyprice,
             sellprice,
