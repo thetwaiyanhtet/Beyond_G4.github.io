@@ -1,6 +1,6 @@
 <?php
 include "../Controller/orderDetailController.php";
-//include "./sidebar.php";
+include "./sidebar.php";
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ include "../Controller/orderDetailController.php";
 
 <body>
     <main class="ml-56 relative">
-        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -33,7 +33,7 @@ include "../Controller/orderDetailController.php";
                     <li><img src="../../<?= $orderDetails[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
                 </ul>
             </div>
-        </header> -->
+        </header>
         <div class="flex justify-between">
             <div class="flex m-2 items-center">
                 <img src="./resources/img/fluent_people-32-filled.png" alt="" class="h-8">
@@ -58,7 +58,7 @@ include "../Controller/orderDetailController.php";
                     <div class="m-2">
                         <p class="m-2">Name : <?= $orderDetails[0]["username"] ?></p>
                         <p class="m-2">Order Date : <?= $orderDetails[0]["order_date"] ?></p>
-                        <p class="m-2">Total Amount : Ks <?= $totalSum ?></p>
+                        <p class="m-2">Total Amount : $<?= $totalSum + 2 ?></p>
                         <?php if ($orderDetails[0]["payment_id"] == 0) { ?>
                             <p class="m-2">Payment : Visa </p>
                         <?php } else if ($orderDetails[0]["payment_id"] == 1) { ?>
@@ -100,10 +100,10 @@ include "../Controller/orderDetailController.php";
                             <tr class="border-b">
                                 <td class="py-4"><?= ++$productCount; ?>.</td>
                                 <td class=" text-left pl-6"><?= $orderDetail["name"] ?></td>
-                                <td><img src="../../User/View/<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
+                                <td><img src="../../<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
                                 <td> <?= $orderDetail["quantity"] ?></td>
-                                <td>Ks <?= $orderDetail["sellprice"] ?></td>
-                                <td>Ks <?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?></td>
+                                <td>$<?= $orderDetail["sellprice"] ?></td>
+                                <td>$<?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -112,16 +112,16 @@ include "../Controller/orderDetailController.php";
 
                 <div class="flex justify-between">
                     <p class="m-5">Sub Total</p>
-                    <p class="m-5 mr-11 font-semibold">Ks <?= $totalSum ?></p>
+                    <p class="m-5 mr-11 font-semibold">$<?= $totalSum ?></p>
                 </div>
                 <div class="flex justify-between">
                     <p class="ml-5">Delivery Fee</p>
-                    <p class="m-1 mr-11">Ks 3000 </p>
+                    <p class="m-1 mr-11">$2 </p>
                 </div>
                 <hr>
                 <div class="flex justify-between py-4">
                     <p class="ml-5">Total Amount</p>
-                    <p class="m-1 mr-11 font-semibold"> = Ks <?= $totalSum + 3000 ?></p>
+                    <p class="m-1 mr-11 font-semibold"> = $<?= $totalSum + 2 ?></p>
                 </div>
             </div>
             <div class=" py-7 absolute left-[52%] flex">

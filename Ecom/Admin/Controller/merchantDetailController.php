@@ -37,7 +37,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     );
 
     $productCountSql=$pdo->prepare(
-        "SELECT COUNT(product_id) AS product_count
+        "SELECT COUNT(code) AS product_count
         FROM m_product
         JOIN m_merchant
         ON m_product.merchant_id=m_merchant.id
@@ -46,7 +46,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     );
 
     $productListSql=$pdo->prepare(
-        "SELECT m_product.name,m_product.p_one,m_product.sellprice,m_product.product_id
+        "SELECT m_product.name,m_product.p_one,m_product.sellprice,m_product.code
         FROM m_product
         JOIN m_merchant
         ON m_product.merchant_id=m_merchant.id

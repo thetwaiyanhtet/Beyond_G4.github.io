@@ -1,5 +1,5 @@
  <?php
-    include "./adminsidebar.php";
+    //include "./adminsidebar.php";
     include "../Controller/merchantDetailController.php";
     // echo "<pre>";
     // print_r($productList);

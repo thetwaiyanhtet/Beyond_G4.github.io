@@ -22,7 +22,7 @@ if(move_uploaded_file($phototmp,"../../Storage/profile/".$photo)){
         phone = :phone_no,
         birthday = :dob,
         gender = :gender,
-        str = :street,
+        street = :street,
         region_id=:region,
         township_id=:township,
         update_date = :updateDate 

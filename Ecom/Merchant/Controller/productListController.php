@@ -5,7 +5,6 @@ include "../Model/model.php";
 
 $merchantEmail = $_SESSION["merchant_ID"];
 
-
 $sql = $pdo->prepare(
     "SELECT `m_product`.id AS `productID`,
     `m_product`.name,

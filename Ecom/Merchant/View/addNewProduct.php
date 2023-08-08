@@ -88,9 +88,6 @@ include "../Controller/categoryListController.php";
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" name="photo4">
                                     </div>
                                 </li>
-                                <li>
-                                    <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
-                                </li>
                             </ul>
                         </div>
 
@@ -104,7 +101,7 @@ include "../Controller/categoryListController.php";
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
-                                        <p>Product ID</p>
+                                        <p>Code</p>
                                     </div>
                                     <div><input type="text" name="pid" class="inputBox" placeholder="00"  >
                                         <div class=" text-red-800 font-thin"> <?php echo $_SESSION["productIdError"] ?></div>
@@ -141,15 +138,15 @@ include "../Controller/categoryListController.php";
                                     <p >Size</p>
                                     <div>
                                         <input type="radio" id="male" name="size1" value="1">
-                                        <label for="s" class=" md:text-base text-sm  dark:text-white">S</label>
+                                        <label for="s" class=" md:text-base text-sm ">S</label>
                                         <input type="radio" id="female" name="size2" value="1" >
-                                        <label for="m" class=" md:text-base text-sm  dark:text-white">M</label>
+                                        <label for="m" class=" md:text-base text-sm ">M</label>
                                         <input type="radio" id="other" name="size3" value="1" >
-                                        <label for="L" class=" md:text-base text-sm  dark:text-white">L</label>
+                                        <label for="L" class=" md:text-base text-sm  ">L</label>
                                         <input type="radio" id="female" name="size4" value="1">
-                                        <label for="xl" class=" md:text-base text-sm  dark:text-white">XL</label>
+                                        <label for="xl" class=" md:text-base text-sm ">XL</label>
                                         <input type="radio" id="other" name="size5" value="1">
-                                        <label for="2xl" class=" md:text-base text-sm  dark:text-white">2XL</label>
+                                        <label for="2xl" class=" md:text-base text-sm ">2XL</label>
                                     </div>
                                 </div>
                             </div>

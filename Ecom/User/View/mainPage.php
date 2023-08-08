@@ -143,7 +143,7 @@ $banner = $_SESSION["banner"];
                             <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</a>
+                            <a href="./login.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</a>
                         </li>
                     </ul>
                 </div>
@@ -170,12 +170,6 @@ $banner = $_SESSION["banner"];
             </div>
         </div>
     </nav>
-<<<<<<< Updated upstream
-
-
-
-=======
->>>>>>> Stashed changes
     <section class="sec h-screen">
         <section class="w-[85%] m-auto">
 
