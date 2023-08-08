@@ -35,23 +35,23 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         "SELECT COUNT(*) AS purchased_count 
         FROM m_order_details 
         JOIN m_order
-        ON m_order.generate_id = m_order_details.order_id 
+        ON m_order.id = m_order_details.order_id 
         WHERE customer_id = :id;"
     );
 
     $orderSql = $pdo->prepare(
-        "SELECT m_order.merchant_id,m_order.total_amt,m_order.order_date,m_product.name,m_order.generate_id,m_merchant.store_name,m_product.p_one,m_product.sellprice as unit_price
-        FROM m_customer 
-        JOIN m_order 
-        ON m_customer.id = m_order.customer_id 
+        "SELECT m_product.name,m_merchant.store_name,m_order.total_amt,m_order.order_date
+        FROM m_order
+        JOIN m_customer 
+        ON m_customer.id = m_order.customer_id
         JOIN m_order_details
-        ON m_order_details.order_id = m_order.generate_id
-        JOIN m_product 
-        ON m_order_details.product_id = m_product.id
+        ON m_order_details.order_id = m_order.id
+        JOIN m_product
+        ON m_product.id = m_order_details.product_id
         JOIN m_merchant
-        ON m_order.merchant_id = m_merchant.id
-        WHERE customer_id = :id AND generate_id = order_id
-        GROUP BY m_order.generate_id;"
+        ON m_merchant.id = m_order.merchant_id
+        WHERE customer_id = :id
+        GROUP BY m_order.generate_id "
     );
 
     $productsSql = $pdo->prepare(
@@ -60,12 +60,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         JOIN m_order 
         ON m_customer.id = m_order.customer_id 
         JOIN m_order_details
-        ON m_order_details.order_id = m_order.generate_id
+        ON m_order_details.order_id = m_order.id
         JOIN m_product 
         ON m_order_details.product_id = m_product.id
         JOIN m_merchant
         ON m_order.merchant_id = m_merchant.id
-        WHERE customer_id = :id AND generate_id = order_id;"
+        WHERE customer_id = :id;"
     );
 
     $sql->bindValue(":id", $customerId);
@@ -90,11 +90,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $products = $productsSql->fetchAll(PDO::FETCH_ASSOC);
 
     //  echo "<pre>";
-    // // print_r($customerDetail);
-    // // print_r($orderCount);
-    // // print_r($sumTotalAmount);
-    // // print_r($purchasedProduct);
+    // print_r($customerDetail);
+    // print_r($orderCount);
+    // print_r($sumTotalAmount);
+    // print_r($purchasedProduct);
     // print_r($orders);
+    // print_r($products);
+    //print_r($purchasedCount);
+    
 } else {
     // Handle the case when the customer ID is not provided or empty
     echo "Invalid customer ID!";

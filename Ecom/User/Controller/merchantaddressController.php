@@ -13,10 +13,4 @@ WHERE id = '5';
 );
 $sql->execute(); //run real sql
 
-$_SESSION["m_cusaddress"]=$sql->fetchAll(PDO::FETCH_ASSOC);
-
-
-
-
-
-
+$_SESSION["m_cusaddress"] = $sql->fetchAll(PDO::FETCH_ASSOC);

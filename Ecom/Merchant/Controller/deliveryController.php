@@ -19,7 +19,7 @@ $sql = $pdo->prepare(
     ON m_order.customer_id = m_customer.id
     JOIN m_order_details
     ON m_order_details.order_id = m_order.id
-    JOIN m_delivery
+    LEFT JOIN m_delivery
     ON m_delivery.region_id = m_customer.region_id
     JOIN m_product
     ON m_product.id = m_order_details.product_id

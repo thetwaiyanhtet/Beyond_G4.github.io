@@ -20,7 +20,7 @@ $(document).ready(function () {
                             <td class="px-6 py-4">${order.order_date}</td>
                             <td class="px-6 py-4">${order.payment_status}</td>
                             <td class="px-6 py-4">${order.payment_id}</td>
-                            <td class="px-6 py-4"><a href="./orderDetail.php?id=<?= $order["generate_id"];?>">View</a></td>
+                            <td class="px-6 py-4"><a href="./orderDetail.php?id=${order.generate_id}">View</a></td>
             </tr>`
           );  
         }

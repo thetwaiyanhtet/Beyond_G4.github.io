@@ -17,9 +17,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         ON m_order_details.order_id = m_order.id
         JOIN m_townships
         ON m_townships.id = m_customer.township_id
-        JOIN m_regions 
+        LEFT JOIN m_regions 
         ON m_regions.id = m_customer.region_id
-        JOIN m_delivery
+        LEFT JOIN m_delivery
         ON m_delivery.region_id = m_regions.id
         JOIN m_product
         ON m_product.id = m_order_details.product_id
@@ -44,7 +44,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 }
 
 
-// echo "<pre>";
-// print_r($orderDetails);
-// echo "</pre>";
+echo "<pre>";
+print_r($orderDetails);
+echo "</pre>";
 
