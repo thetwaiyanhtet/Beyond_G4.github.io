@@ -22,7 +22,7 @@ include "./sidebar.php";
 
 <body>
     <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -32,7 +32,7 @@ include "./sidebar.php";
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <div class="flex justify-between mt-6 pl-5">
             <div class="flex">
                 <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 

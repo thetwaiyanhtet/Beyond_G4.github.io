@@ -1,6 +1,6 @@
 <?php
 include "../Controller/orderDetailController.php";
-include "./sidebar.php";
+//include "./sidebar.php";
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ include "./sidebar.php";
 
 <body>
     <main class="ml-56 relative">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -33,7 +33,7 @@ include "./sidebar.php";
                     <li><img src="../../<?= $orderDetails[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <div class="flex justify-between">
             <div class="flex m-2 items-center">
                 <img src="./resources/img/fluent_people-32-filled.png" alt="" class="h-8">

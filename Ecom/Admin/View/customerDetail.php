@@ -1,7 +1,7 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/customerDetailController.php";
-print_r($purchasedCount);
+
 ?>
 
 <!doctype html>
@@ -93,7 +93,7 @@ print_r($purchasedCount);
                 <div class="flex justify-around p-5">
                     <?php foreach ($products as $product) { ?>
                         <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400 text-center">
-                            <img src="../..<?= $product["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
+                            <img src="../../User/View<?=$product["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
                             <div class="pl-3 pb-2 pt-10">
                                 <p class=" font-semibold "><?= $product["name"] ?></p>
                                 <p class=" opacity-60"><?= $product["unit_price"] ?> MMK</p>
