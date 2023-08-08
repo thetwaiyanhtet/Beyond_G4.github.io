@@ -3,7 +3,8 @@
 
 session_start();
 $carted = $_SESSION['carted'];
-
+$userEmail = $_SESSION["user_ID"];
+print_r($userEmail);
 ini_set('display_errors', 1);
 $totalamt = $carted["totprice"];
 $numericString = preg_replace("/[^0-9]/", "", $totalamt);
@@ -30,14 +31,17 @@ $sql = $pdo->prepare(
         SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
         SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1)
     )
-),1,1,1,
+),(SELECT id FROM m_customer WHERE email = :email),1,1,
        $intValue,
        NOW())
    "
 );
 
+$sql->bindValue(":email", $userEmail);
+
 // $sql->bindValue(":totalamt",$totalamt);
 $sql->execute();
+
 // header("Location: ../View/orderConfirm.php");
 $chunks = array_chunk($_SESSION['carted'], 6, true);
 $lastIndex = count($chunks) - 1;
@@ -52,7 +56,7 @@ foreach ($chunks as $index => $chunk) {
     $sql = $pdo->prepare(
         "INSERT INTO m_order_details (order_id, product_id, quantity, price_per_unit)
 VALUES
-   ((SELECT MAX(id) FROM m_order), $index+1, $quantit, $intValue);"
+   ((SELECT MAX(id) FROM m_order), $index+2, $quantit, $intValue);"
     );
     $sql->execute();
 };

@@ -1,10 +1,13 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/totalController.php";
+include "../Controller/trendingproductController.php";
 $order = $_SESSION["order"];
 $revenue = $_SESSION["revenue"];
 $merchant = $_SESSION["merchant"];
 $customer = $_SESSION["customer"];
+$trending = $_SESSION["m_trending"];
+$trending_json = json_encode($trending);
 ?>
 
 
@@ -130,11 +133,23 @@ $customer = $_SESSION["customer"];
                     var canvas = document.getElementById('donut-chart');
 
                     // Set the chart data
+                    var trend = <?= $trending_json ?>;
+                    var itemName = [];
+                    var quantity = [];
+                    trend.forEach(function(item, index) {
+                        itemName.push(item.name)
+                        quantity.push(item.total_sales);
+                    });
+                    let arrayAsString = JSON.stringify(itemName);
+
+                    sessionStorage.setItem("itemnamelocal", arrayAsString);
+
+
                     var data1 = {
-                        labels: ['Joker', 'Ballone', 'Hpone Toe', 'Lingerie'],
+                        labels: itemName,
                         datasets: [{
-                            label: 'Trending Products',
-                            data: [60, 10, 33, 2],
+                            label: 'Sold Quantity',
+                            data: quantity,
                             backgroundColor: [
                                 '#9179DD',
                                 '#D92828',
@@ -166,11 +181,17 @@ $customer = $_SESSION["customer"];
                         options: options
                     });
                 </script>
+                <!-- <script>
+                    let retrievedArrayAsString = sessionStorage.getItem("itemnamelocal");
+                    let retrievedArray = JSON.parse(retrievedArrayAsString);
+                    console.log(retrievedArray[0]);
+                    console.log(document.getElementById("oneww").textContent = retrievedArray[0]);;
+                </script>
                 <div class=" text-xs ">
                     <div class="flex justify-center space-x-5 mt-5">
 
                         <span class="flex items-center space-x-5">
-                            <p>Joker</p>
+                            <p id="oneww"></p>
                             <div class="h-5 w-10 rounded-2xl text-white text-center bg-[#9179DD]">60</div>
                         </span>
                         <span class="flex items-center space-x-5">
@@ -189,7 +210,7 @@ $customer = $_SESSION["customer"];
                             <div class="h-5 w-10 rounded-2xl text-white text-center bg-[#3C0A8D]">60</div>
                         </span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class=" flex justify-center">
@@ -296,24 +317,24 @@ $customer = $_SESSION["customer"];
                 </div>
             </div>
             <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
-            <p class="font-semibold px-3 my-3">Quick Actions</p>
+                <p class="font-semibold px-3 my-3">Quick Actions</p>
                 <div class="flex items-center ml-3 border-b-2 pb-2 space-x-3">
                     <img src="./resources/img/amazfit.png" alt="">
-                        <p>Mary Pu Tu</p>
-                        <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
-                        <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
+                    <p>Mary Pu Tu</p>
+                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
+                    <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
                 </div>
                 <div class="flex items-center ml-3 border-b-2 pb-2 space-x-3">
                     <img src="./resources/img/amazfit.png" alt="">
-                        <p>Mary Pu Tu</p>
-                        <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
-                        <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
+                    <p>Mary Pu Tu</p>
+                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
+                    <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
                 </div>
                 <div class="flex items-center ml-3 border-b-2 pb-2 space-x-3">
                     <img src="./resources/img/amazfit.png" alt="">
-                        <p>Mary Pu Tu</p>
-                        <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
-                        <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
+                    <p>Mary Pu Tu</p>
+                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
+                    <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
                 </div>
             </div>
         </div>
