@@ -22,7 +22,8 @@
       <p class="font-bold text-3xl max-md:text-xl ">Congratulation</p>
       <p class="font-bold text-3xl max-md:text-xl ">Your order is accepted.</p>
       <p class="font-bold text-xl max-md:text-xl mt-10 ">Thanks you for your order.</p>
-      <button class="rounded-md border shadow-lg p-2 bg-gray-100 mt-8 ">Go back to your home page</button>
+      <button class="rounded-md border shadow-lg p-2 bg-gray-100 mt-8 ">
+       <a href="../View/mainPage.php"> Go back to your home page</a></button>
     </section>
   </section>
 </body>

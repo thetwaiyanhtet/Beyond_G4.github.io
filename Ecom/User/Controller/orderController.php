@@ -4,7 +4,6 @@
 session_start();
 $carted = $_SESSION['carted'];
 $userEmail = $_SESSION["user_ID"];
-print_r($userEmail);
 ini_set('display_errors', 1);
 $totalamt = $carted["totprice"];
 $numericString = preg_replace("/[^0-9]/", "", $totalamt);
@@ -66,3 +65,5 @@ JOIN m_order_details od ON p.id = od.product_id
 SET p.instock = p.instock - od.quantity
 WHERE od.order_id = (SELECT MAX(id) FROM m_order)");
 $productQuanti->execute();
+
+header("Location: ../../View/orderConfirm.php");
