@@ -27,7 +27,7 @@ session_start();
         <img src="./resources/img/forget.png" alt="forget" class="md:w-2/12 w-56 mt-5">
         <p class="mt-16 text-center font-semibold text-black">Please Enter Your Email Address To <br>
             Receive a Verification Card </p>
-        <form action="../Controller/updatePasswordController.php" method="post" class="md:mr-20 mr-28 mt-16">
+        <form action="../Controller/forgetPwController.php" method="post" class="md:mr-20 mr-28 mt-16">
             <div class="flex flex-col">
                 <label class="font-poppins font-semibold text-lg text-black">Email
                     <?php echo

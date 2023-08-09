@@ -22,7 +22,7 @@
         <img src="./resources/img/verify.png" alt="verify" class="w-56 mt-10 ml-5">
         <p class="text-center font-poppins font-medium mt-5 ml-10">Please Enter The 4 Digit Code Sent To <br>
             user@gmail.com </p>
-        <form action="../Controller/updatePasswordController.php" method="post">
+        <form action="../Controller/verifyController.php" method="post">
             <div class="flex p-5 ml-4 mt-5">
                 <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4">
                     <input type="text" name="number1" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
