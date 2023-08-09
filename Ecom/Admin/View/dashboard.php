@@ -2,12 +2,22 @@
 include "./adminsidebar.php";
 include "../Controller/totalController.php";
 include "../Controller/trendingproductController.php";
+include "../Controller/orderandcustomerController.php";
 $order = $_SESSION["order"];
 $revenue = $_SESSION["revenue"];
 $merchant = $_SESSION["merchant"];
 $customer = $_SESSION["customer"];
 $trending = $_SESSION["m_trending"];
 $trending_json = json_encode($trending);
+$orderchart = $_SESSION["m_order"];
+$order_json = json_encode($orderchart);
+$customerchart = $_SESSION["m_customer"];
+$customer_json = json_encode($customerchart);
+$planchart = $_SESSION["m_plan"];
+$plan_json = json_encode($planchart);
+$lmerchant = $_SESSION["m_lastmerchant"];
+$category = $_SESSION["m_category"];
+$category_json = json_encode($category);
 ?>
 
 
@@ -20,10 +30,12 @@ $trending_json = json_encode($trending);
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../View/resources/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="./resources/js/dashboard.js" defer></script>
 </head>
 
 <body>
-    <main id="main" class=" ml-72 h-screen mt-20  w-[80%]">
+    <main id="main" class=" ml-60 h-screen mt-20  w-[80%]">
         <div class="flex justify-evenly flex-wrap">
             <div class=" relative  border w-48 rounded-lg shadow-xl">
                 <div class="h-full  absolute rounded-tl-lg rounded-bl-lg left-0 w-2 bg-blue-600"></div>
@@ -70,7 +82,7 @@ $trending_json = json_encode($trending);
 
             <div class="shadow-lg rounded-lg w-[61%] h-96 ml-5 mt-10 overflow-hidden">
                 <div class="py-3 px-5 bg-gray-50 font-semibold">Orders and Customers Overview</div>
-                <div class="flex">
+                <!-- <div class="flex">
                     <div class="flex items-center text-xs  border border-black rounded-lg w-28 justify-center mx-5">
                         <i class='bx bxs-circle text-[#F294C4]'></i>
                         <span>Customers</span>
@@ -79,7 +91,7 @@ $trending_json = json_encode($trending);
                         <i class='bx bxs-circle text-[#5143D1]'></i>
                         <span>Orders</span>
                     </div>
-                </div>
+                </div> -->
                 <canvas class="p-10" id="chartLine"></canvas>
             </div>
 
@@ -88,23 +100,40 @@ $trending_json = json_encode($trending);
 
             <!-- Chart line -->
             <script>
-                const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+                var ordertt = <?= $order_json ?>;
+                var orderdate = [];
+                var ordertotal = [];
+                console.log(ordertt);
+                ordertt.forEach(function(item, index) {
+                    orderdate.push(item.order_date)
+                    ordertotal.push(item.total_rows);
+                });
+
+                var customertt = <?= $customer_json ?>;
+                var customerdate = [];
+                var customertotal = [];
+                console.log(customertt);
+                customertt.forEach(function(item, index) {
+                    customerdate.push(item.create_date)
+                    customertotal.push(item.total_rows);
+                });
+
+                const labels = customerdate;
                 const data = {
                     labels: labels,
                     datasets: [{
-                            label: "",
+                            label: "Customer",
                             backgroundColor: "#F294C4",
                             borderColor: "#F294C4",
-                            data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
+                            data: customertotal,
                         },
                         // Add a new dataset for the second line
                         {
-                            label: "",
+                            label: "Order",
                             backgroundColor: "#5143D1",
                             borderColor: "#5143D1",
-                            data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
+                            data: ordertotal,
                         },
-
                     ],
                 };
 
@@ -140,9 +169,6 @@ $trending_json = json_encode($trending);
                         itemName.push(item.name)
                         quantity.push(item.total_sales);
                     });
-                    let arrayAsString = JSON.stringify(itemName);
-
-                    sessionStorage.setItem("itemnamelocal", arrayAsString);
 
 
                     var data1 = {
@@ -181,42 +207,13 @@ $trending_json = json_encode($trending);
                         options: options
                     });
                 </script>
-                <!-- <script>
-                    let retrievedArrayAsString = sessionStorage.getItem("itemnamelocal");
-                    let retrievedArray = JSON.parse(retrievedArrayAsString);
-                    console.log(retrievedArray[0]);
-                    console.log(document.getElementById("oneww").textContent = retrievedArray[0]);;
-                </script>
-                <div class=" text-xs ">
-                    <div class="flex justify-center space-x-5 mt-5">
 
-                        <span class="flex items-center space-x-5">
-                            <p id="oneww"></p>
-                            <div class="h-5 w-10 rounded-2xl text-white text-center bg-[#9179DD]">60</div>
-                        </span>
-                        <span class="flex items-center space-x-5">
-                            <p>Ballone</p>
-                            <div class="h-5 w-10 rounded-2xl text-white text-center bg-[#D92828]">60</div>
-                        </span>
-                    </div>
-                    <div class="flex justify-center space-x-5 mt-5">
-
-                        <span class="flex items-center space-x-3">
-                            <p>Hpone Toe</p>
-                            <div class="h-5 w-10 rounded-2xl text-white text-center bg-[#01CBA3]">60</div>
-                        </span>
-                        <span class="flex items-center space-x-3">
-                            <p>Lingerie</p>
-                            <div class="h-5 w-10 rounded-2xl text-white text-center bg-[#3C0A8D]">60</div>
-                        </span>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class=" flex justify-center">
             <div class="shadow-lg rounded-lg w-[90%] h-auto mt-10  overflow-hidden">
                 <div class="py-3 px-5 bg-gray-50 font-semibold">Orders and Customers Overview</div>
-                <div class="flex">
+                <!-- <div class="flex">
                     <div class="flex items-center text-xs  border border-black rounded-lg w-28 justify-center mx-5">
                         <i class='bx bxs-circle text-[#F86D59]'></i>
                         <span>Pro</span>
@@ -229,50 +226,45 @@ $trending_json = json_encode($trending);
                         <i class='bx bxs-circle text-[#BFCCDF]'></i>
                         <span>Basic</span>
                     </div>
-                </div>
-                <canvas class="p-10 text-center ml-20" id="chartLinea"></canvas>
+                </div> -->
+                <canvas class="p-10 text-center " id="chartLinetwo"></canvas>
             </div>
 
-            <!-- Required chart.js -->
+
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-            <!-- Chart line -->
             <script>
-                const labelsh = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-                const datag = {
-                    labels: labelsh,
+                // Get the canvas element
+                // var canvas = document.getElementById('chartLinetwo');
+
+                var plantt = <?= $plan_json ?>;
+                var totmerchant = [];
+                plantt.forEach(function(item, index) {
+                    totmerchant.push(item.total_merchants)
+                });
+
+                const labels1 = ['1 month', '6 month', '12 month'];
+                const datatot = {
+                    labels: labels1,
                     datasets: [{
-                            labels: "",
-                            backgroundColor: "#F86D59",
-                            borderColor: "#F86D59",
-                            data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
+                            label: "Merchant",
+                            backgroundColor: "#1ee12f",
+                            borderColor: "#1ee12f",
+                            data: totmerchant,
                         },
                         // Add a new dataset for the second line
-                        {
-                            labels: "",
-                            backgroundColor: "#835D6A",
-                            borderColor: "#835D6A",
-                            data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
-                        },
-                        {
-                            labels: "",
-                            backgroundColor: "#BFCCDF",
-                            borderColor: "#BFCCDF",
-                            data: [210, 500, 750, 750, 600, 650, 750, 210, 280, 750, 280],
-                        },
 
                     ],
                 };
 
-                const configLineChartf = {
-                    type: "line",
-                    data,
-                    options: {},
+                const config = {
+                    type: 'line',
+                    data: datatot,
                 };
 
                 var chartLine = new Chart(
-                    document.getElementById("chartLinea"),
-                    configLineChartf
+                    document.getElementById("chartLinetwo"),
+                    config
                 );
             </script>
         </div>
@@ -280,8 +272,61 @@ $trending_json = json_encode($trending);
         <div class="flex justify-around mt-5 mb-20">
             <div class=" w-64 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Top Selling Categories</p>
-                <img src="./resources/img/Chart.png" class="px-3 my-3" alt="">
-                <div class="flex justify-between text-sm">
+                <div class="w-64 h-36">
+                    <canvas id="bar"></canvas>
+                </div>
+                <script>
+
+                //      var cate = <?= $category_json ?>;
+                // var totcategory = [];
+                // var
+                // // cate.forEach(function(item, index) {
+                // // });
+
+                    var dataee = {
+                        labels: ['August'],
+                        datasets: [{
+                                label: 'Bar 1',
+                                data: [3], // Value for the first bar
+                                backgroundColor: 'rgba(75, 192, 192, 0.5)', // Color for the first bar
+                            },
+                            {
+                                label: 'Bar 2',
+                                data: [20], // Value for the second bar
+                                backgroundColor: 'rgba(255, 99, 132, 0.5)', // Color for the second bar
+                            },
+                        ],
+                    };
+
+                    var options = {
+                        scales: {
+                            x: {
+                                stacked: true, // This will stack the bars on top of each other
+                            },
+                            y: {
+                                beginAtZero: true,
+                            },
+                        },
+                    };
+
+
+                    const configee = {
+                        type: 'bar',
+                        data: dataee,
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        },
+                    };
+                    var bar = new Chart(
+                        document.getElementById("bar"),
+                        configee
+                    );
+                </script>
+                <!-- <div class="flex justify-between text-sm">
                     <div class=" border-t-2 border-r-2 py-1 px-6">
                         <p>$45,216</p>
                         <p>Clothing</p>
@@ -290,31 +335,19 @@ $trending_json = json_encode($trending);
                         <p>$35,216</p>
                         <p>Electronic</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class=" w-60 h-auto  border rounded-lg space-y-3 shadow-xl">
-                <p class="font-semibold px-3 my-3">Merchant List</p>
-                <div class="flex items-center ml-3 border-b-2 pb-2">
-                    <img src="./resources/img/amazfit.png" alt="">
-                    <div class="mx-3">
-                        <p>Mary Pu Tu</p>
-                        <p>30 mins</p>
+                <p class="font-semibold px-3 my-3">Recent Registred Merchant</p>
+                <?php foreach ($lmerchant as $index => $value) { ?>
+                    <div class="flex items-center ml-3 border-b-2 pb-2">
+                        <img class="w-20" src="../..<?= $value['logo'] ?>" alt="">
+                        <div class="mx-3">
+                            <p><?= $value['m_name'] ?></p>
+                            <p>30 mins</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-center ml-3 border-b-2 pb-2">
-                    <img src="./resources/img/amazfit.png" alt="">
-                    <div class="mx-3">
-                        <p>Mary Pu Tu</p>
-                        <p>30 mins</p>
-                    </div>
-                </div>
-                <div class="flex items-center ml-3 border-b-2 pb-2">
-                    <img src="./resources/img/amazfit.png" alt="">
-                    <div class="mx-3">
-                        <p>Mary Pu Tu</p>
-                        <p>30 mins</p>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
             <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Quick Actions</p>
