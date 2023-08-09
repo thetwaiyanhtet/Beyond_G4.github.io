@@ -100,26 +100,28 @@ $contact = $_SESSION["m_contactus"];
       </span>
     </div>
     <section>
-      <div class="lg:absolute h-screen w-full left-[620px] top-0 bg-white rounded-tl-[50px] rounded-bl-[50px] dark:bg-gray-800">
+     <form action="../Controller/contactUsController.php" method="post">
+     <div class="lg:absolute h-screen w-full left-[620px] top-0 bg-white rounded-tl-[50px] rounded-bl-[50px] dark:bg-gray-800">
         <div class="my-[20%] lg:my-[6%]">
           <span class="font-bold text-[36px] mx-[10%] lg:mx-[2%] dark:text-white">Contact Us</span>
           <p class="font-medium  text-[15px] lg:text-[20px] my-[9%] lg:my-[2%] w-[350px] lg:w-[500px]  mx-[10%] lg:mx-[2%] dark:text-white">Feel free to contact us any time.We will get back
             to you as soon as we can!</p>
           <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Name</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
+          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" name="name" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
 
           <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Email</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
+          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" name="email" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
 
           <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Message</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
+          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" name="message" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
 
           <div class="absolute top-[67%] lg:top-[83%] left-[27%] lg:left-[20%]">
-            <button class="bg-[#314755] rounded-md text-white w-[169px] lg:w-[373px] h-[44px] lg:h-[61px]
-             font-extrabold lg:font-bold text-[15px] lg:text-[24px] dark:text-white">Send Message</button>
+            <button type="submit" name="send" class="bg-[#314755] rounded-md text-white font-Playfair Display
+              text-base dark:text-white w-32 h-12">Send Message</button>
           </div>
         </div>
       </div>
+     </form>
     </section>
 
   </section>

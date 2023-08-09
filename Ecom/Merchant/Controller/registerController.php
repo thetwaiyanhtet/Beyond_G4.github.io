@@ -1,58 +1,43 @@
 <?php
+ include "../Controller/common/emailFormatCheck.php";
+
 session_start();
 ini_set('display_errors', 1);
-if(isset($_POST["register"])){
-   $username = $_POST["name"];
-   $email = $_POST["email"];
-   $password = $_POST["password"];
+if (isset($_POST["register"])) {
+    $username = $_POST["name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
+    //DB connection
+    include "../Model/model.php";
 
-   //DB connection
-   include "../Model/model.php";
+    //check duplicate email
 
-   //check duplicate email
+    $sql = $pdo->prepare(
+        "SELECT * FROM m_merchant WHERE email=:email"
+    );
+    $sql->bindValue(":email", $email);
+    $sql->execute();
 
-   $sql = $pdo -> prepare(
-    "SELECT * FROM m_merchant WHERE email=:email"
-   );
-   $sql ->bindValue(":email", $email);
-   $sql -> execute();
+    $resultEmail = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-   $resultEmail = $sql -> fetchAll(PDO::FETCH_ASSOC);
+    if (!isValidEmail($email)) {
+        $_SESSION["registerError"] = "Invalid email format. Please enter a valid email address.";
+        header("Location: ../View/signUp.php");
+    } elseif (count($resultEmail) !== 0) {
+        $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
+        header("Location: ../View/signUp.php");
+    } elseif (strlen($password) < 8) { // Corrected password length check
+        $_SESSION["registerError2"] = "Password must be at least 8 characters long.";
+        header("Location: ../View/signUp.php");
+    } else {
+        $_SESSION['merchant_ID'] = $email;
+        $_SESSION['password'] = $password;
+        $_SESSION['merchantName'] = $username;
+        header("Location: ../View/ChoosePlan.php");
+    }
 
-   if (count($resultEmail) == 0) {
-    $sql = $pdo ->prepare(
-        "INSERT INTO  m_merchant
-        (
-            m_name,
-            email,
-            password,
-            create_date,
-            update_date
-        )
-        VALUES(
-            :username,
-            :email,
-            :password,
-            :createDate,
-            :updateDate
-        )
-        "
-       );
-       $sql -> bindValue (":username", $username);
-       $sql -> bindValue (":email", $email);
-       $sql -> bindValue (":password", password_hash($password, PASSWORD_DEFAULT));;
-       $sql -> bindValue (":createDate", date("Y-m-d"));
-       $sql -> bindValue (":updateDate", date("Y-m-d"));
-       $sql->execute();
-       header("Location: ../View/ChoosePlan.php");
-   }else {
-    $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
-    header("Location: ../View/signUp.php");
-   }
-
-}else{
+} else {
     header("Location: ../View/404page.php");
 }
-$_SESSION["merchant_ID"] = $email;
-?>
+

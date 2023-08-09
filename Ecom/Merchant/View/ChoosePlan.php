@@ -19,7 +19,6 @@ session_start();
 
 <body class=" font-poppins bg-gradient-to-r from-blue-200 to-cyan-200">
     <a href=" ./signUp.php"><ion-icon name="arrow-back-outline" class="m-2 text-4xl p-3"></ion-icon></a>
-    <a href="./dashboard.php"><ion-icon name="close-circle-outline" class="float-right m-2 text-4xl p-3"></ion-icon></a>
     <p class=" font-philosopher text-center text-4xl pb-2">Choose Your Plan</p>
     <p class=" font-poppins text-center font-normal">Free for small businesses. Paid for bigger companies.</p>
     <form action="../Controller/planController.php" method="post">

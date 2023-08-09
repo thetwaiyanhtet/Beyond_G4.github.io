@@ -19,18 +19,17 @@ session_start();
 
 <body class=" font-poppins">
     <a href="./ChoosePlan.php"><ion-icon name="arrow-back-outline" class="m-2 text-4xl p-3"></ion-icon></a>
-    <ion-icon name="close-circle-outline" class="float-right m-2 text-4xl p-3"></ion-icon>
     <form action="../Controller/paymentController.php" method="post">
-    <div class="flex justify-center space-x-5">
-        <!--Payment Method-->
+        <div class="flex justify-center space-x-5">
+            <!--Payment Method-->
             <div class="flex flex-col">
                 <p class="font-poppins mb-4">Payment Method</p>
                 <div class=" w-[700px] h-[420px] border border-solid rounded-lg border-black drop-shadow-2xl">
-                    <label class="flex m-5">
+                    <!-- <label class="flex m-5">
                         <input type="radio" name="payment" class="form-checkbox w-6 h-6">
                         <p class="mt-0.5 ml-2"><img src="./resources/img/pngwing 1.png" alt="PayPal"></p>
                     </label>
-                    <p class=" w-94  border border-solid border-black"></p>
+                    <p class=" w-94  border border-solid border-black"></p> -->
                     <div class="float-left inline-flex m-2">
                         <input type="radio" name="payment" value="Credit or debit card" class="form-checkbox w-6 h-6">
                         <p class="ml-2 font-poppins">Credit or debit card</p>
@@ -81,14 +80,8 @@ session_start();
                         <span class="font-light">Name:</span>
                         <span class="font-light">
                             <?php
-                            include "../Model/model.php";
-                            $email = $_SESSION["merchant_ID"];
-                            $sql = $pdo->prepare(
-                                "SELECT * from m_merchant WHERE email = '$email'"
-                            );
-                            $sql->execute();
-                            $row = $sql->fetch(PDO::FETCH_ASSOC);
-                            echo $row["m_name"];
+                            $name =  $_SESSION['merchantName'];
+                            echo $name;
                             ?>
                         </span>
                     </div>
@@ -96,41 +89,55 @@ session_start();
                         <span class="font-light">Email</span>
                         <span class="font-light">
                             <?php
-                            echo ': ' . $row["email"];
+                            $email = $_SESSION["merchant_ID"];
+                            echo ': ' . $email;
                             ?>
 
                         </span>
                     </div>
                     <p class=" w-94  border border-solid border-black"></p>
                     <button class=" w-80 h-10 border border-solid border-black text-sm rounded-lg ml-24 m-2"><img src="./resources/img/warning2.png" alt="warning" class="inline-flex mr-2 mb-1">Verify the information before proceeding.</button>
-                    <div class="flex justify-between">
-                        <p>Basic Subscription</p>
-                        <p>
+                    <div class="flex justify-between m-4">
+                        <p>Plan Method</p>
+                        <p class="">
                             <?php
-                            $selectPlan = $row['plan_id'];
-                            $sql = $pdo->prepare(
-                                "SELECT * from m_plan WHERE id = $selectPlan"
-                            );
+                            $plan = $_SESSION['choosePlan'];
+                            include "../Model/model.php";
+                            $sql = $pdo->prepare("SELECT * FROM m_plan WHERE id=:id");
+                            $sql->bindValue(":id", $plan);
                             $sql->execute();
-                            $plan =  $sql->fetch(PDO::FETCH_ASSOC);
-                            echo "$" . $plan['price'];
+                            
+                            $Data = $sql->fetch(PDO::FETCH_ASSOC); // Fetch a single row as an associative array
+                            
+                            if ($Data) {
+                                echo $Data['plan_name']; // Output the 'plan_name' column value
+                            } else {
+                                echo "No data found";
+                            }
+                            
                             ?>
                         </p>
                     </div>
                     <div class="flex justify-between m-4">
-                        <p>Tax</p>
-                        <p>$1.29</p>
+                        <p>Subscription</p>
+                        <p>
+                        <?php
+                        echo  '$'. $Data['price'];
+                        ?>
+                        </p>
                     </div>
                     <p class=" w-94  border border-solid border-black"></p>
                     <div class="flex justify-between m-4">
                         <p>Subtotal</p>
-                        <p>$21.29</p>
+                        <p> <?php
+                        echo  '$'. $Data['price'];
+                        ?></p>
                     </div>
                     <button class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>
                 </div>
-                </form>
+    </form>
 
-            </div>
+    </div>
 
     </div>
 </body>
