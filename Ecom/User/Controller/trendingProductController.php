@@ -15,8 +15,8 @@ $sql = $pdo->prepare(
 
 $sql->execute();
 $trandingProduct = $sql->fetchAll(PDO::FETCH_ASSOC);
-// echo "<pre>";
-// print_r($trandingProduct);
+//  echo "<pre>";
+//  print_r($trandingProduct);
 
 $AllProductSql = $pdo->prepare(
     "SELECT m_product.id,m_product.name, m_product.description, m_product.sellprice, m_product.p_one
