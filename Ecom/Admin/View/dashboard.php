@@ -272,28 +272,38 @@ $category_json = json_encode($category);
         <div class="flex justify-around mt-5 mb-20">
             <div class=" w-64 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Top Selling Categories</p>
-                <div class="w-64 h-36">
-                    <canvas id="bar"></canvas>
+                <div class="">
+                    <canvas height="400" id="bar"></canvas>
                 </div>
                 <script>
+                    var cate = <?= $category_json ?>;
+                    var totcategory = [];
+                    var categoryquanti = [];
+                    console.log(cate);
+                    cate.forEach(function(item, index) {
+                        totcategory.push(item.c_name);
+                        categoryquanti.push(item.quantity);
+                    });
+                   
+               
+                    var firstValue = totcategory[0].toString();
+                    var secondValue = totcategory[1].toString();
+                    var quantityValue = categoryquanti[0]
+                    var quantitytwoValue = categoryquanti[1]
+                    console.log(quantityValue);
 
-                //      var cate = <?= $category_json ?>;
-                // var totcategory = [];
-                // var
-                // // cate.forEach(function(item, index) {
-                // // });
 
                     var dataee = {
                         labels: ['August'],
                         datasets: [{
-                                label: 'Bar 1',
-                                data: [3], // Value for the first bar
-                                backgroundColor: 'rgba(75, 192, 192, 0.5)', // Color for the first bar
+                                label: firstValue,
+                                data: [quantityValue], 
+                                backgroundColor: '#671ee1', 
                             },
                             {
-                                label: 'Bar 2',
-                                data: [20], // Value for the second bar
-                                backgroundColor: 'rgba(255, 99, 132, 0.5)', // Color for the second bar
+                                label: secondValue,
+                                data: [quantitytwoValue], 
+                                backgroundColor: '#0dcbf2', 
                             },
                         ],
                     };
@@ -326,16 +336,6 @@ $category_json = json_encode($category);
                         configee
                     );
                 </script>
-                <!-- <div class="flex justify-between text-sm">
-                    <div class=" border-t-2 border-r-2 py-1 px-6">
-                        <p>$45,216</p>
-                        <p>Clothing</p>
-                    </div>
-                    <div class="border-t-2  py-1 px-6">
-                        <p>$35,216</p>
-                        <p>Electronic</p>
-                    </div>
-                </div> -->
             </div>
             <div class=" w-60 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Recent Registred Merchant</p>
