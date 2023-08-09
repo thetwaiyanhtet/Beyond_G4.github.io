@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 include "../Model/model.php";
 
 $selectedOrder = $_SESSION["selectedOrder"];

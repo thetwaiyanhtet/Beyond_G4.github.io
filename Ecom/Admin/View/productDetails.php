@@ -65,7 +65,7 @@ include "./adminsidebar.php";
                         <div class="flex">
                             <p class="w-40">Price</p>
                             <p class="w-32">-</p>
-                            <p class=""><?= $productDetail["sellprice"]; ?> MMK</p>
+                            <p class="">$<?= $productDetail["sellprice"]; ?></p>
                         </div>
                     </div>
                 </div>

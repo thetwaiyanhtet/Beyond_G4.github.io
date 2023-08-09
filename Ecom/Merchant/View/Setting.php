@@ -85,7 +85,7 @@ session_start();
                                     <label for="oldPassword" class=" text-sm">Old Password<span class=" text-red-600">*</span></label>
                                     <span class="text-red-600">
                                         <?php
-                                        echo  $_SESSION['ERRORMESSAGE']
+                                        echo  $_SESSION['ERRORMESSAGE2']
                                         ?>
                                     </span>
                                     <input type="password" name="oldPassword" id="oldPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none " placeholder=" Please enter old password" required>

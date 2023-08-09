@@ -1,7 +1,8 @@
 <?php
-session_start();
-include "./sidebar.php";
+
+//include "./sidebar.php";
 include "../Controller/deliveryController.php";
+// include "../Controller/deliveryDetailController.php";
 ?>
 
 <!doctype html>
