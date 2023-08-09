@@ -40,7 +40,9 @@
                     <input type="text" name="email" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="merchant***@mail.com" required>
                 </div>
                 <div class="text-[#667085] pb-4">
-                    <div>Password<span class=" text-red-600">*</span></div>
+                    <div>Password<span class=" text-red-600">* <?php
+                            echo $_SESSION["registerError2"]
+                            ?></span></div>
                     <input type="password" name="password" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="********" required>
                     <div class="text-[#667085] pt-2">Must be at least 8 characters.</div>
                 </div>
@@ -58,4 +60,7 @@
 
 
 </html>
-<?php  $_SESSION["registerError"] = "" ?>
+<?php  $_SESSION["registerError"] = "";
+       $_SESSION["registerError2"] = "";
+
+?>

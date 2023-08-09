@@ -12,7 +12,7 @@ if (isset($_POST['send'])) {
   $sql->execute();
   $DBdata = $sql->fetchAll();
   $DBemail = $DBdata['email'];
-  $_SESSION['eeee'] = $DBemail;
+  $_SESSION['email'] = $DBemail;
   $verify = generateVerificationNumber(4);
   $_SESSION['verificationCode'] = $verify;
   if ($DBdata) {
@@ -29,7 +29,8 @@ if (isset($_POST['send'])) {
   }
 }
 if (isset($_POST['verify'])) {
-  $email =  $_SESSION['email'] ;
+  $email =  $_SESSION['email'];
+  echo $email;
   $userInput = $_POST['number1'] . $_POST['number2'] . $_POST['number3'] . $_POST['number4'];
 
   if ($userInput == $_SESSION['verificationCode']) {
@@ -39,7 +40,8 @@ if (isset($_POST['verify'])) {
 if (isset($_POST['changePw'])) {
   $newPw = $_POST['newPw'];
   $confirmPw = $_POST['confirmPw'];
-  $userEmail = $_SESSION['eeee'];
+  $userEmail = $_SESSION['email'];
+  echo $userEmail;
 
   if ($newPw !== $confirmPw) {
     $_SESSION['ERRORMESSAGE'] = "New password and confirm password do not match.";
