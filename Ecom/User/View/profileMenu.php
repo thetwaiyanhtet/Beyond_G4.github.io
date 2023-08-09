@@ -3,6 +3,7 @@ session_start();
 include "../Controller/userProfileController.php";
 
 $userData = $_SESSION["user_data"];
+$verifyData = $_SESSION["verifyData"];
 // echo "<pre>";
 // print_r($userData);
 // echo "</pre>";
@@ -46,39 +47,71 @@ $userData = $_SESSION["user_data"];
 
         <div class="lg:flex justify-center items-center lg:space-x-5 lg:w-[800px] w-[380px] h-min-screen bg-transparent border shadow-2xl lg:py-10 lg:px-20 py-5 px-16 rounded-3xl z-50 dark:border-black">
             <div class=" relative font-poppins lg:w-[380px] w-[250px] h-[420px] bg-white dark:bg-gray-900 flex flex-col justify-center items-center space-y-5 rounded-lg lg:text-sm lg:p-5 p-2 text-xs">
-                
-                <img src="../..<?= $userData["p_picture"] ?>" alt="..." class=" w-16 rounded-lg z-50">
-                <div class="text-center">
-                    <p class=" text-xl font-philosopher dark:text-white">NAME</p>
-                    <p class="dark:text-white uppercase text-blue-500"><?php echo $userData["username"] ?></p>
-                </div>
-                <div class=" p-2 flex-col space-y-3 w-full">
-                    <div class=" grid grid-cols-2">
-                        <p class="dark:text-white">Email</p>
-                        <p class=" col-start-2 dark:text-white"><?php echo $userData["email"] ?></p>
+                <?php if ($verifyData["verify"] == 0) { ?>
+                    <img src="../../Storage/profile/profile.png ?>" alt="..." class=" w-16 rounded-lg z-50">
+                    <div class="text-center">
+                        <p class=" text-xl font-philosopher dark:text-white">NAME</p>
+                        <p class="dark:text-white uppercase text-blue-500"><?php echo $userData["username"] ?></p>
                     </div>
-                    <div class=" grid grid-cols-2">
-                        <p class="dark:text-white">Ph_no</p>
-                        <p class=" col-start-2 dark:text-white"><?php echo $userData["phone"] ?></p>
+                    <div class=" p-2 flex-col space-y-3 w-full">
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Email</p>
+                            <p class=" col-start-2 dark:text-white"><?php echo $userData["email"] ?></p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Ph_no</p>
+                            <p class=" col-start-2 dark:text-white"></p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Current Address</p>
+                            <p class=" col-start-2 dark:text-white"></p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Gender</p>
+                            <p class=" col-start-2 dark:text-white">
+                           
+                            </p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Date of Birth</p>
+                            <p class=" col-start-2 dark:text-white"></p>
+                        </div>
                     </div>
-                    <div class=" grid grid-cols-2">
-                        <p class="dark:text-white">Current Address</p>
-                        <p class=" col-start-2 dark:text-white"><?php echo $userData["t_name"]?> , <?php echo $userData["r_name"]?></p>
+                    <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
+                <?php } else if ($verifyData["verify"] == 1) { ?>
+                    <img src="../..<?= $userData["p_picture"] ?>" alt="..." class=" w-16 rounded-lg z-50">
+                    <div class="text-center">
+                        <p class=" text-xl font-philosopher dark:text-white">NAME</p>
+                        <p class="dark:text-white uppercase text-blue-500"><?php echo $userData["username"] ?></p>
                     </div>
-                    <div class=" grid grid-cols-2">
-                        <p class="dark:text-white">Gender</p>
-                        <p class=" col-start-2 dark:text-white">
-                        <?php if($userData["gender"] == 0) {?> Male <?php } ?>
-                        <?php if($userData["gender"] == 1) {?> Female <?php } ?>
-                        <?php if($userData["gender"] == 2) {?> Other <?php } ?>
-                        </p>
+                    <div class=" p-2 flex-col space-y-3 w-full">
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Email</p>
+                            <p class=" col-start-2 dark:text-white"><?php echo $userData["email"] ?></p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Ph_no</p>
+                            <p class=" col-start-2 dark:text-white"><?php echo $userData["phone"] ?></p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Current Address</p>
+                            <p class=" col-start-2 dark:text-white"><?php echo $userData["t_name"] ?> , <?php echo $userData["r_name"] ?></p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Gender</p>
+                            <p class=" col-start-2 dark:text-white">
+                                <?php if ($userData["gender"] == 0) { ?> Male <?php } ?>
+                                <?php if ($userData["gender"] == 1) { ?> Female <?php } ?>
+                                <?php if ($userData["gender"] == 2) { ?> Other <?php } ?>
+                            </p>
+                        </div>
+                        <div class=" grid grid-cols-2">
+                            <p class="dark:text-white">Date of Birth</p>
+                            <p class=" col-start-2 dark:text-white"><?php echo $userData["birthday"] ?></p>
+                        </div>
                     </div>
-                    <div class=" grid grid-cols-2">
-                        <p class="dark:text-white">Date of Birth</p>
-                        <p class=" col-start-2 dark:text-white"><?php echo $userData["birthday"] ?></p>
-                    </div>
-                </div>
-                <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
+                    <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
+                <?php } ?>
             </div>
 
             <a href="./userProfileEditUpd.php">

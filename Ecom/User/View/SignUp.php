@@ -34,7 +34,7 @@ session_start();
                     <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 font-poppins drop-shadow-md bg-blend-normal" placeholder="Password"></input>
                     <span class="text-red-500"><?php echo $_SESSION["registerError"]?></span>
                     <a>
-                        <button type="submit" name="register" class="text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display">Log in</button>
+                        <button type="submit" name="register" class="text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display">Get Started</button>
                     </a>
             </form>
             <p class="underline font-poppins text-text-color text-center p-2 ml-18 md:block hidden font-Playfair Display">Terms and Conditions</p>

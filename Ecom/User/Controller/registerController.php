@@ -47,7 +47,7 @@ if (isset($_POST["register"])) {
         $sql->bindValue(":update_date",date('Y-m-d'));
         $sql->execute();
         $_SESSION["userEmail"] = $email;
-        header("Location: ../View/mainPage.php");
+        header("Location: ../View/login.php");
     } else {
         $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
         header("Location: ../View/signUp.php");

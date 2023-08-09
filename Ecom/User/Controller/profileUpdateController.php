@@ -24,6 +24,7 @@ if(move_uploaded_file($phototmp,"../../Storage/profile/".$photo)){
         gender = :gender,
         street = :street,
         region_id=:region,
+        verify=1,
         township_id=:township,
         update_date = :updateDate 
         
