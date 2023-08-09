@@ -29,7 +29,7 @@ if (isset($_POST['update'])) {
                 $sql->bindValue(':newPassword', $hash_newPw);
                 $sql->bindValue(':checkEmail', $checkEmail);
                 $sql->execute();
-                header("Location: '../View/dashboard.php'");
+                header("Location: ../View/dashboard.php");
             }
         } else {
             $_SESSION['ERRORMESSAGE'] = "Incorrect old password";
