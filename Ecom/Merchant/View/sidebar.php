@@ -1,5 +1,5 @@
 <?php
-// include "../Controller/sidebarController.php";
+include "./header.php";
 ?>
 <!doctype html>
 <html>
@@ -96,19 +96,9 @@
       </ul>
     </div>
 
-    <!-- <div class=" ml-56">
-      <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-        <div class=" pl-2">
-          <p id="date_time"></p>
-        </div>
-        <div>
-          <ul class="flex space-x-5 items-center pr-5">
-            <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-            <li><img src="../../<?= $merchant["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
-          </ul>
-        </div>
-      </header>
-    </div> -->
+
+
+
 
   </div>
   <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-sky-300 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">
