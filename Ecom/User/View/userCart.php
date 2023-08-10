@@ -1,7 +1,46 @@
+<?php
+// include ("../Controller/cartConrroller.php");
+require_once("../Controller/newcartController.php");
 
-<?php  
- require_once ("../Controller/newcartController.php");
- print_r($cart);
+
+$placeholers = [];
+foreach ($cart as $item) {
+    $placeholders[] = $item['product_id'];
+}
+
+
+
+ $placeholdersString = implode(',', $placeholders);
+
+$allIdValues = [0];
+if (isset($_POST['id'])) {
+    $idValues = $_POST['id'];
+  //  $allIdValues = array_merge($allIdValues, $idValues);
+    // $string = str_replace(strtoupper($_POST['id']), "", $placeholdersString);
+    // echo $string;  // Output: "Hello, !"
+   // print_r($allIdValues);
+   foreach ($cart as $key => $value) {
+;    if ($value['product_id'] == $_POST["id"]) {
+        unset($value['product_id']);
+     
+    }
+   }
+   print_r($cart);
+    
+    }
+
+
+
+$sql = $pdo->prepare(
+    "SELECT id,p_one,name,sellprice FROM m_product WHERE id IN ($placeholdersString)"
+);
+$sql->execute();
+
+$_SESSION['placeholdcart'] = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+$cartloop = $_SESSION["placeholdcart"];
+
+
 ?>
 <!doctype html>
 <html>
@@ -26,7 +65,7 @@
         }
     </script>
 </head>
-<div id= "session-data">
+<div id="session-data">
 
 </div>
 
@@ -84,29 +123,36 @@
                 <img class=" w-10 pt-3" src="../View/resources/img/logo.png" alt="">
                 <p class="pb-2 lg:text-xl text-white font-philosopher font-bold">Beyond</p>
             </div>
-            <div class="w-[369px] lg:w-[948px] h-[500px] lg:h-[350px] bg-[#D9D9D9] mb-40 md:mb-32  shadow-inner flex flex-col-reverse md:flex-row  md:items-center justify-evenly rounded-bl-2xl rounded-br-2xl">
+            <div class="w-[369px] lg:w-[948px] h-auto lg:h-[350px]  bg-[#D9D9D9] mb-40 md:mb-32  shadow-inner flex flex-col-reverse md:flex-row  md:items-center justify-evenly rounded-bl-2xl rounded-br-2xl">
 
-                <div class="  md:mb-10 mt-3 md:mt-0">
-                    <div class="flex justify-evenly font-poppins">
+                <div class="  md:mb-10 mt-8 md:mt-0  space-x-0">
+                    <div class="flex justify-evenly space-x-10 font-poppins">
                         <p class="font-bold text-[12px] md:text-[16px]">Description</p>
                         <p class="font-bold text-[12px] md:text-[16px]">Name</p>
                         <p class="font-bold text-[12px] md:text-[16px]">Quantity</p>
                         <p class="font-bold text-[12px] md:text-[16px]">Price</p>
                         <p class="font-bold text-[12px] md:text-[16px]">Total</p>
                     </div>
-                    <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px]  md:w-[384px]
-                     md:h-[58px] mt-5 border border-transparent border-t-black border-b-black md:ml-6 font-poppins">
-                        <img class=" w-16" src="../View/resources/img/skirt.png" alt="">
-                        <div class="w-[35px] h-[32px] border border-gray-600 rounded-md flex items-center justify-center">200</div>
-                        <div class="flex w-[60px] md:w-[80px] h-[26px] border border-gray-600 rounded-md items-center justify-evenly">
-                            <p>+</p>
-                            <p>2</p>
-                            <p>-</p>
-                        </div>
-                        <p>$100</p>
-                        <p>$200</p>
-                        <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
-                    </div>
+
+                    <?php $total_price = 0;
+                    foreach ($cartloop as $key => $value) { ?>
+                        <form action="./userCart.php" method="post">
+                            <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px]  md:w-[384px]
+                     md:h-[58px] mt-5 border border-transparent border-t-black border-b-black md:ml-6 font-poppins space-x-16">
+                                <img class=" w-16" src="../..<?= $value['p_one'] ?>" alt="">
+                                <div class="w-[35px] h-[32px]  rounded-md flex items-center justify-center"><?= $value['name'] ?></div>
+                                <div class="flex w-[60px] md:w-[80px] h-[26px]  border-gray-600 rounded-md items-center justify-evenly">
+                                    <input class="w-20 rounded-md" type="number" value="1">
+                                </div>
+                                <p>$<?= $value['sellprice'] ?></p>
+                                <?php $total_price = $total_price + (int)$value["sellprice"]; ?>
+                                <p cl>$<?= $value['sellprice'] ?></p>
+                                <input type="hidden" name="id" value="<?= $value['id'] ?>">
+                                <input type="submit" value="X" class="absolute left-[88%] cursor-pointer md:left-[52.7%] rounded-full  w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center"></input>
+                            </div>
+                        </form>
+                    <?php print_r($_POST['id']);
+                    } ?>
 
                     <!-- <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] border border-transparent
                          border-b-black md:ml-6 font-poppins">
@@ -149,18 +195,18 @@
                         <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-[136px] h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
                         <div class="flex item py-[4%]">
                             <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
-                            <p class="ml-[44px] font-bold text-xs md:text-sm">1456</p>
+                            <p class="ml-[44px] font-bold text-xs md:text-sm"><?= $total_price ?></p>
                         </div>
                         <div class="flex">
                             <p class="ml-[15px] font-bold text-xs md:text-sm">Shipping fee</p>
-                            <p class="ml-[25px] font-bold text-xs md:text-sm">1456</p>
+                            <p class="ml-[25px] font-bold text-xs md:text-sm">10</p>
                         </div>
                     </div>
 
                     <div class="flex w-[180px] md:w-[202px] h-[40px] items-center md:justify-around rounded-bl-md rounded-br-md bg-[#D9D9D9] 
                        border-2 space-x-12 md:space-x-0 ml-5 md:ml-0 font-bold">
                         <p class="text-xs md:text-sm ml-9 md:ml-0">Total</p>
-                        <p class="text-xs md:text-sm">1456</p>
+                        <p class="text-xs md:text-sm"><?= $total_price + 10 ?></p>
                     </div>
                     <div class="ml-[110px] mt-3 hidden md:block">
                         <a href="./cart2.php"><button type="button" class="w-[90px] h-[28px] bg-[#314755] font-bold text-xs rounded-lg text-white">Checkout</button></a>
