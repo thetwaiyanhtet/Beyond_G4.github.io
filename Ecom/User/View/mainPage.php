@@ -56,12 +56,13 @@ $verifyData = $_SESSION["verifyData"];
                  <input type="checkbox" name="cart" id="cart" class="hidden peer " /> 
                  <label for="cart" class="ml-3">
                  <div class="relative  ">
-                    <div class="absolute left-0 top-0  bg-red-500 rounded-full">
+                    <div class="absolute left-0 top-0 pl-2  bg-red-500 rounded-full">
                        
                         <?php 
-                          if (isset($_SESSION['usercart'])) { ?>
-                            $count = count($_SESSION["usercart"]);
-                        echo ' <span class="text-sm text-white p-1">$count</span>'
+                          if (isset($_SESSION['usercart'])) { 
+                            $cc = count($_SESSION['usercart']);
+                            echo $cc;
+                    //    echo ' <span class="text-sm text-white p-1"></span>'?>
                          <?php  }else{
                             echo ' <span class="text-sm text-white p-1">0</span>';
                          }
