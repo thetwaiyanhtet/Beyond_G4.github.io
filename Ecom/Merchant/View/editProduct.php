@@ -3,7 +3,10 @@ session_start();
 $productdata = $_SESSION["editproduct"];
 include "../Controller/categoryListController.php";
 // print_r($productdata[0]["p_one"]);
-include "./sidebar.php"
+include "./sidebar.php";
+// echo "<pre>";
+//  print_r($productdata );
+//  echo "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,7 +150,9 @@ include "./sidebar.php"
                                     </div>
                                     <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
                                             <?php foreach ($categories as $category) { ?>
-                                                <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
+                                              
+                                                <option value="<?= $category["id"] ?>" selected><?= $category["c_name"] ?></option>
+                                                
                                             <?php } ?>
 
 
@@ -170,18 +175,49 @@ include "./sidebar.php"
                                 
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <p >Size</p>
+                                    
                                     <div>
-                                        <input type="radio" id="male" name="size1" value="1"  >
+                                        <?php if($productdata[0]["size_s"] == 1) {?>
+                                        <input type="checkbox" id="male" name="size1" value="1" checked>
                                         <label for="s" class=" md:text-base text-sm  dark:text-white">S</label>
-                                        <input type="radio" id="female" name="size2" value="1">
+                                        <?php }else{?>
+                                            <input type="checkbox" id="male" name="size1" value="1">
+                                        <label for="s" class=" md:text-base text-sm  dark:text-white">S</label>
+                                        <?php }?> 
+                                        
+                                        <?php if($productdata[0]["size_m"] == 1) {?>
+                                        <input type="checkbox" id="female" name="size2" value="1" checked>
                                         <label for="m" class=" md:text-base text-sm  dark:text-white">M</label>
-                                        <input type="radio" id="other" name="size3" value="1" >
+                                        <?php }else{?>
+                                            <input type="checkbox" id="female" name="size2" value="1">
+                                        <label for="m" class=" md:text-base text-sm  dark:text-white">M</label>
+                                        <?php }?>
+
+                                        <?php if($productdata[0]["size_l"] == 1) {?>
+                                        <input type="checkbox" id="other" name="size3" value="1" checked>
                                         <label for="L" class=" md:text-base text-sm  dark:text-white">L</label>
-                                        <input type="radio" id="female" name="size4" value="1" >
+                                        <?php }else{?>
+                                            <input type="checkbox" id="other" name="size3" value="1">
+                                        <label for="L" class=" md:text-base text-sm  dark:text-white">L</label>
+                                        <?php }?>
+                                        
+                                        <?php if($productdata[0]["size_xl"] == 1) {?>
+                                        <input type="checkbox" id="female" name="size4" value="1" checked>
                                         <label for="xl" class=" md:text-base text-sm  dark:text-white">XL</label>
-                                        <input type="radio" id="other" name="size5" value="1">
+                                        <?php }else{?>
+                                            <input type="checkbox" id="female" name="size4" value="1">
+                                        <label for="xl" class=" md:text-base text-sm  dark:text-white">XL</label>
+                                        <?php }?>
+                                        
+                                        <?php if($productdata[0]["size_2xl"] == 1) {?>
+                                        <input type="checkbox" id="other" name="size5" value="1" checked>
                                         <label for="2xl" class=" md:text-base text-sm  dark:text-white">2XL</label>
+                                        <?php }else{?>
+                                            <input type="checkbox" id="other" name="size5" value="1">
+                                        <label for="2xl" class=" md:text-base text-sm  dark:text-white">2XL</label>
+                                        <?php }?>
                                     </div>
+                                   
                                 </div>
                             </div>
 
