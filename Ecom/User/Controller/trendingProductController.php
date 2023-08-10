@@ -10,13 +10,28 @@ $sql = $pdo->prepare(
     LEFT JOIN m_product 
     ON m_product.id = m_order_details.product_id
     GROUP BY m_order_details.product_id, m_product.name, m_product.description, m_product.sellprice, m_product.p_one
-    ORDER BY total_quantity DESC"
+    ORDER BY total_quantity DESC 
+    limit 6"
 );
 
 $sql->execute();
 $trandingProduct = $sql->fetchAll(PDO::FETCH_ASSOC);
 //  echo "<pre>";
 //  print_r($trandingProduct);
+
+$TrendingViewAllsql = $pdo->prepare(
+    "SELECT m_order_details.product_id, m_product.name, m_product.description, m_product.sellprice, m_product.p_one,
+    COUNT(m_order_details.product_id) as product_count, SUM(m_order_details.quantity) as total_quantity
+    FROM m_order_details
+    LEFT JOIN m_product 
+    ON m_product.id = m_order_details.product_id
+    GROUP BY m_order_details.product_id, m_product.name, m_product.description, m_product.sellprice, m_product.p_one
+    ORDER BY total_quantity DESC"
+);
+
+$TrendingViewAllsql->execute();
+$trandingProductViewAll = $TrendingViewAllsql->fetchAll(PDO::FETCH_ASSOC);
+
 
 $AllProductSql = $pdo->prepare(
     "SELECT m_product.id,m_product.name, m_product.description, m_product.sellprice, m_product.p_one

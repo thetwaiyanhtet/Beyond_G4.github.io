@@ -139,7 +139,7 @@ include "./sidebar.php"
                                     <div>
                                         <p>Product ID</p>
                                     </div>
-                                    <div><input type="text" name="pid" value="<?php echo $productdata[0]["product_id"] ?>" class="inputBox" placeholder="#001"></div>
+                                    <div><input type="text" name="pid" value="<?php echo $productdata[0]["code"] ?>" class="inputBox" placeholder="#001"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
