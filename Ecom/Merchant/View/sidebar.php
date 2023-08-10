@@ -90,7 +90,7 @@
         <li id="logoutButton" class=" w-52">
           <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white logout">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class="bx bx-log-out"></i></span>
-            <span class="text-sm font-medium">Logout</span>
+            <span class="text-sm font-medium">Log out</span>
           </a>
         </li>
       </ul>
@@ -111,13 +111,13 @@
     </div> -->
 
   </div>
-  <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-gray-600 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">
+  <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-sky-300 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">
     <div>
-      <div class=" border-b-2 border-gray-500">
-        <p class="pb-3">Log out of your account?</p>
+      <div class=" border-b-2 border-gray-200 text-center">
+        <p class="pb-3">Are you sure to log out of your account?</p>
       </div>
       <div class=" flex justify-center items-center space-x-5 pt-3">
-        <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-500 pr-4">Cancel</p>
+        <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-200 pr-4">Cancel</p>
         <a href="./logIn.php">
           <p class=" text-red-500">Log out</p>
         </a>

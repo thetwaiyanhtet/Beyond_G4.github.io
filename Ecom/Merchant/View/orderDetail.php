@@ -130,7 +130,7 @@ include "./sidebar.php";
                 <label for="invoice">Invoice</label>
             </div>
             <button class=" w-24 rounded-md p-2 ml-6 border border-gray-500 bg-transparent mr-3">Cancel</button>
-            <a href="./delivery.php"><button type="submit" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
+            <a href="../Controller/deliveryController.php"><button type="submit" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
         </div>
 
     </main>
