@@ -231,9 +231,11 @@ $verifyData = $_SESSION["verifyData"];
                                                 <form action="../Controller/newcartController.php" method="post">
                                                     <div class="relative overflow-hidden">
                                                         <input type="hidden" name="image"  value="../../<?php echo $tranding["p_one"]; ?>">
-                                                        <img class="w-32 h-40 m-auto"  src="../../<?php echo $tranding["p_one"]; ?>" alt="">
+                                                        <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
+                                                        <img class="w-32 h-40 m-auto"  src="../../<?php echo $tranding["p_one"]; ?>" alt=""></form>
+                                                       <form action="../Controller/wishlistcart.php" method="post">
                                                         <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                                            <a href="./Wishlist2.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                                          <a href="./Wishlist2.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a> 
                                                             <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
                                                         </div>
                                                     </div>
@@ -248,7 +250,7 @@ $verifyData = $_SESSION["verifyData"];
                                                             <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
                                                         </div>
                                                     </div>
-                                                </form>
+                                                    </form>
                                             </div>
                                         </div>
                                     </div>
