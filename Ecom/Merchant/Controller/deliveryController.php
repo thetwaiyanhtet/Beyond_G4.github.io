@@ -4,6 +4,8 @@ include "../Model/model.php";
 
 $selectedOrder = $_SESSION["selectedOrder"];
 $merchantEmail = $_SESSION["merchant_ID"];
+echo $selectedOrder;
+echo $merchantEmail;
 
 // Update the delivery status
 $setDeliverySql = $pdo->prepare(
@@ -17,7 +19,7 @@ $setDeliverySql->execute();
 
 // Fetch delivery-related data
 $fetchDeliverySql = $pdo->prepare(
-    "SELECT m_customer.username, m_order.generate_id, m_order.order_date, m_order.total_amt, m_delivery.delivery_name, m_order_details.quantity, m_merchant.logo
+    "SELECT m_customer.username, m_order.generate_id, m_order.order_date, m_order.total_amt, m_delivery.delivery_name, m_order_details.quantity,m_order.delivery_status
     FROM m_customer 
     JOIN m_order ON m_order.customer_id = m_customer.id
     JOIN m_order_details ON m_order_details.order_id = m_order.id
@@ -35,5 +37,5 @@ $fetchDeliverySql->execute();
 $_SESSION["deliveries"] = $fetchDeliverySql->fetchAll(PDO::FETCH_ASSOC);
 
 // Redirect to delivery page
-header('Location: ../View/delivery.php');
+//header('Location: ../View/delivery.php');
 ?>

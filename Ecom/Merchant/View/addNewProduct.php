@@ -1,7 +1,8 @@
 <?php
-session_start();
+
 include "./sidebar.php";
 include "../Controller/categoryListController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,18 +35,7 @@ include "../Controller/categoryListController.php";
 </head>
 
 <body>
-    <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class=" pl-2">
-                <p>July/27/2023 - 4:04 PM</p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
-                </ul>
-            </div>
-        </header>
+    <main class=" ml-56">
         <section>
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">New Product</span></p>
             <form action="../Controller/addNewProductController.php" method="POST" enctype="multipart/form-data">
@@ -175,7 +165,7 @@ include "../Controller/categoryListController.php";
                                     <div>
                                         <p>Description</p>
                                     </div>
-                                    <div><textarea cols="23" name="description" rows="3" class="inputBox"></textarea></div>
+                                    <div><textarea cols="23" name="description" rows="5" class="inputBox"></textarea></div>
                                 </div>
                             </div>
                         </div>

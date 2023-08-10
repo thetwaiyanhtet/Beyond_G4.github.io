@@ -1,7 +1,6 @@
 <?php
-include "../Controller/orderDetailController.php";
 include "./sidebar.php";
-
+include "../Controller/orderDetailController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
