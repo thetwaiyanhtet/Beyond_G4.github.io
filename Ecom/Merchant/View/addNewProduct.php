@@ -2,6 +2,7 @@
 
 include "./sidebar.php";
 include "../Controller/categoryListController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

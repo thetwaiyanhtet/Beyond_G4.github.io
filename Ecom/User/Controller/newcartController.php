@@ -2,7 +2,6 @@
 session_start();
 
 include "../Model/model.php";
-echo "<pre>";
 // $id = $_POST['product_id'];
 $carted = [];
 if(isset($_POST['product_id'])){
