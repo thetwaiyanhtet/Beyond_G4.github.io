@@ -1,3 +1,8 @@
+
+<?php  
+ require_once ("../Controller/newcartController.php");
+ print_r($cart);
+?>
 <!doctype html>
 <html>
 
@@ -21,6 +26,9 @@
         }
     </script>
 </head>
+<div id= "session-data">
+
+</div>
 
 <body class="mt-3 font-poppins overflow-x-auto dark:bg-black">
     <a href="./profileMenu.php"><ion-icon name="arrow-back-outline" class="text-2xl text-black dark:text-white"></ion-icon></a>
@@ -81,7 +89,7 @@
                 <div class="  md:mb-10 mt-3 md:mt-0">
                     <div class="flex justify-evenly font-poppins">
                         <p class="font-bold text-[12px] md:text-[16px]">Description</p>
-                        <p class="font-bold text-[12px] md:text-[16px]">Size</p>
+                        <p class="font-bold text-[12px] md:text-[16px]">Name</p>
                         <p class="font-bold text-[12px] md:text-[16px]">Quantity</p>
                         <p class="font-bold text-[12px] md:text-[16px]">Price</p>
                         <p class="font-bold text-[12px] md:text-[16px]">Total</p>
@@ -89,7 +97,7 @@
                     <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px]  md:w-[384px]
                      md:h-[58px] mt-5 border border-transparent border-t-black border-b-black md:ml-6 font-poppins">
                         <img class=" w-16" src="../View/resources/img/skirt.png" alt="">
-                        <div class="w-[35px] h-[32px] border border-gray-600 rounded-md flex items-center justify-center">M</div>
+                        <div class="w-[35px] h-[32px] border border-gray-600 rounded-md flex items-center justify-center">200</div>
                         <div class="flex w-[60px] md:w-[80px] h-[26px] border border-gray-600 rounded-md items-center justify-evenly">
                             <p>+</p>
                             <p>2</p>
@@ -100,7 +108,7 @@
                         <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
                     </div>
 
-                    <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] border border-transparent
+                    <!-- <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] border border-transparent
                          border-b-black md:ml-6 font-poppins">
                         <img class=" w-16" src="../View/resources/img/one string blouse.png" alt="">
                         <div class="w-[35px] h-[32px] border border-gray-600 rounded-md flex items-center justify-center">M</div>
@@ -112,9 +120,9 @@
                         <p>$100</p>
                         <p>$200</p>
                         <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
-                    </div>
+                    </div> -->
 
-                    <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] 
+                    <!-- <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] 
                     border border-transparent md:ml-6 font-poppins">
                         <img class=" w-16" src="../View/resources/img/crop top.png" alt="">
                         <div class="w-[35px] h-[32px] border border-gray-600 rounded-md flex items-center justify-center">M</div>
@@ -126,7 +134,7 @@
                         <p>$100</p>
                         <p>$200</p>
                         <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
-                    </div>
+                    </div> -->
 
                     <div class="ml-[240px] block md:hidden">
                         <a href="./cart2.php">

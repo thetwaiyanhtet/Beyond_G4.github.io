@@ -1,20 +1,25 @@
 <?php
 session_start();
+
 include "../Model/model.php";
 echo "<pre>";
-if(isset($_POST))
+// $id = $_POST['product_id'];
+$carted = [];
+if(isset($_POST['product_id'])){
     if(isset($_SESSION['usercart'])) {
-       // unset($_SESSION['usercart']);
+       //  unset($_SESSION['usercart']);
         $item_array_id = array_column($_SESSION['usercart'],"product_id");
         // $item_array_a = array(
         //     'image' => $_POST['image'],
         //     'product_id' => $_POST['product_id'],
         //     'quantity' => $_POST['quantity']);
             
+          
+
            
-        if (in_array($_POST['product_id'],$item_array_id)) {
-            echo "<script>alert('Product is already added in the cart')</script>";
-            echo "<script> window.location = '../View/mainPage.php'  </script>";
+        if (false) {
+            // echo "<script>alert('Product is already added in the cart')</script>";
+            // echo "<script> window.location = '../View/mainPage.php'  </script>";
             
         } else{
           $count =  count($_SESSION['usercart']);
@@ -37,25 +42,48 @@ if(isset($_POST))
         $_SESSION['usercart'][0] =$item_array;
        // print_r($_SESSION['usercart']);
     }
-  $cart =  $_SESSION['usercart'];
- // print_r($cart);
 
-// foreach ($cart as $index => $value) {
+
+
+
 //     $checkcart = $pdo->prepare(
-//         "SELECT name, p_one, sellprice FROM `m_product` WHERE id = $value[0]['product_id'] "
-//     );
-    
-//     $checkcart->execute();
-//     $lastcheck += $checkcart->fetchAll(PDO::FETCH_ASSOC);
-//     print_r($lastcheck);
+//         "SELECT name, p_one, sellprice FROM `m_product` WHERE id = $id");
+
+//     // Your database connection code here
+// $connection = new mysqli("localhost", "root", "", "beyond_db");
+
+// if ($connection->connect_error) {
+//     die("Connection failed: " . $connection->connect_error);
 // }
 
-// foreach ($cart as $product_id) {
-//     $sqltwo =$pdo-> prepare("SELECT * FROM m_product WHERE id = $product_id");
-   
-//     $sqltwo->execute();
-//         $lastcheck += $sqltwo->fetchAll(PDO::FETCH_ASSOC);
-//         print_r($lastcheck);
+// // Initialize a variable to store combined query results
+// $combined_results = '';
+
+//  // Array of product IDs
+
+// foreach ($cart as $index => $product_id) {
+//     // Construct your SQL query
+//     $ggid = $product_id["product_id"];
+//     $sql = "SELECT name, p_one, sellprice FROM `m_product` WHERE id = $ggid";
+
+//     $result = $connection->query($sql);
     
+
+//     if ($result->num_rows > 0) {
+//         // Fetch and concatenate each row's data to the combined_results variable
+//         while ($row = $result->fetch_assoc()) {
+//             $combined_results .= "Product ID: " . $row["name"] . " | Product Name: " . $row["sellprice"] . " | Product Name: " . $row["p_one"] . "\n";
+//         }
+//     } else {
+//         $combined_results .= "No results found for Product ID: $product_id\n";
+//     }
 // }
+
+// // Close the database connection
+// $connection->close();
+// }
+// // Display the combined results
+}
+
+$cart =  $_SESSION['usercart'];
 
