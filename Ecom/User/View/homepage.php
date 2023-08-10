@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Beyond</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script src="./toggle.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
@@ -14,7 +14,7 @@
 
     <div class="main_bdy z-1 ">
         <div class="left_side">
-            <img src="./resources/img/logo_slowdown.gif" class=" absolute top-0 w-10 md:w-20 m-4 md:m-8" alt="">
+            <img src="./resources/img/logo_slowdown.gif" class=" absolute top-0 w-10 md:w-32 m-4 md:m-8" alt="">
             <div class="absolute top-2/3 md:top-44 left-16 md:left-36 text-xl md:text-4xl italic font-normal md:font-semibold tracking-wide w-2/3 md:w-80">Experience beyond ordinary where shopping meets inspiration</div>
             <div class="btn_s absolute bottom-20 md:bottom-48 left-16 md:left-36 z-20">
                 <a href="./mainPage.php">
@@ -46,11 +46,10 @@
                     </button>
                 </a>
             </div>
-            <img src="./resources/img/home_hero/rating.png" alt="" class="absolute bottom-10 md:bottom-8 left-36 w-48 h-36">
-            <img src="./resources/img/home_hero/Circle.png" alt="" class="absolute top-0 right-0 md:right-10 transform scale-50 md:scale-75">
+            <img src="./resources/img/home_hero/Circle.png" alt="" class="absolute top-0 right-0 md:right-10 transform scale-50 md:scale-75 md:animate-[shake_7000ms_ease-in-out_infinite]">
 
             <div class="right_side absolute top-16 right-0 m-auto md:top-3 md:right-16 flex justify-center">
-                <img src="./resources/img/home_hero/hm_ligt.png" class="h-1/2 md:h-screen w-3/4 md:w-auto" alt="">
+                <img src="./resources/img/home_hero/hm_ligt.png" class="h-1/2 md:h-screen w-3/4 md:w-auto animate-[wiggle_10000ms_ease-in-out_infinite]" alt="">
             </div>
 
         </div>
