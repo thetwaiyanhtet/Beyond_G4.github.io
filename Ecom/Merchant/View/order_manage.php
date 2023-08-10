@@ -17,7 +17,7 @@ include "./sidebar.php";
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="../View/resources/js/searchOrder.js"></script>
-    <script src="./resources/js/dateandtime.js "></script>
+    <script src="./resources/js/dateandtime.js"></script>
     <link rel="stylesheet" href="./resources/css/order.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
