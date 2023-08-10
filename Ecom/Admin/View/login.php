@@ -25,12 +25,11 @@ session_start();
             <form action="../Controller/loginController.php" method="post">
             <div class=" pt-5">
                 <div>Email Address*
-                    <?php
-                       if (isset($_SESSION['ErrorMessage'])) {
-                            echo "<p class='text-red-800'>" . $_SESSION['ErrorMessage']. '</p>';
-                            // unset($_SESSION['ErrorMessage']);
-                       }
-                    ?>
+                    <span class=" text-red-800">
+                        <?php
+                        echo  $_SESSION['ErrorMessage'];
+                        ?>
+                    </span>
                 </div>
                 <input type="text" name="email" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-lg" placeholder="Enter your email">
             </div>
@@ -54,3 +53,6 @@ session_start();
 </body>
 
 </html>
+<?php
+                        echo  $_SESSION['ErrorMessage'] = "";
+                        ?>

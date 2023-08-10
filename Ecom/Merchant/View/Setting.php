@@ -42,7 +42,7 @@ session_start();
                         <form action="../Controller/settingController.php" method="post" enctype="multipart/form-data">
                             <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
                                 <label for="photo1" class="cursor-pointer"> <!-- Add cursor-pointer class to show pointer cursor on hover -->
-                                <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg">
+                                    <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg">
                                 </label>
                                 <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
                                 <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo">
@@ -85,13 +85,26 @@ session_start();
                                     <label for="oldPassword" class=" text-sm">Old Password<span class=" text-red-600">*</span></label>
                                     <span class="text-red-600">
                                         <?php
+<<<<<<< Updated upstream
                                         echo  $_SESSION['ERRORMESSAGE2']
+=======
+                                        echo $_SESSION['ERRORMESSAGE'];
+>>>>>>> Stashed changes
                                         ?>
                                     </span>
                                     <input type="password" name="oldPassword" id="oldPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none " placeholder=" Please enter old password" required>
                                 </div>
                                 <div class="flex flex-col">
                                     <label for="newPassword" name="" class="text-sm ">New Password<span class=" text-red-600">*</span></label>
+                                    <span class="text-red-600">
+                                        <?php
+                                        if (isset($_GET['error'])) {
+                                            $errorMessage = $_GET['error'];
+                                            unset($_GET['error']);
+                                            echo $errorMessage;
+                                        }
+                                        ?>
+                                    </span>
                                     <input type="password" name="newPassword" id="newPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none" placeholder="Please enter New password" required>
                                 </div>
                                 <div class="flex flex-col">
@@ -112,3 +125,7 @@ session_start();
 </body>
 
 </html>
+<?php
+ echo $_SESSION['ERRORMESSAGE'] ="";
+
+?>
