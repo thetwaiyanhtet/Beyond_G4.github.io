@@ -1,7 +1,7 @@
 <?php
 include "../Controller/orderController.php";
 //include "../Controller/searchOrderController.php";
-include "./sidebar.php";
+//include "./sidebar.php";
 
 // $cusName = $_SESSION["getCusName"];
 

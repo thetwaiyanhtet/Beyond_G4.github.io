@@ -1349,10 +1349,6 @@ video {
   height: 0.75rem;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .h-36 {
   height: 9rem;
 }
@@ -5174,12 +5170,12 @@ body * {
     width: 70px;
   }
 
-  .lg\:w-\[800px\] {
-    width: 800px;
-  }
-
   .lg\:w-\[948px\] {
     width: 948px;
+  }
+
+  .lg\:w-\[950px\] {
+    width: 950px;
   }
 
   .lg\:grid-cols-3 {
