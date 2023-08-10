@@ -28,7 +28,7 @@ $storedData = $_SESSION["deliveries"];
 
 <body>
     <main class=" ml-56 relative">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -38,7 +38,7 @@ $storedData = $_SESSION["deliveries"];
                     <li><img src="../../<?= $storedData[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <div class="pl-5 pt-3 font-semibold text-lg">Delivery</div>
         <div class=" float-right flex justify-between max-lg:ml mt-3">
             <div class=" flex pr-5">

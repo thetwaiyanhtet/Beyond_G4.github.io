@@ -1,6 +1,5 @@
 <?php
 // Add input validation and sanitization here if necessary
-session_start();
 
 if (isset($_POST["send"])) {
     $shopName = $_POST['shopName'];

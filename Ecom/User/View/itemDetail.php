@@ -1,3 +1,9 @@
+<?php
+
+include "../Controller/itemDetailsController.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +16,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../../User/View/resources/css/label">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
@@ -37,50 +44,103 @@
         </nav>
         <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
             <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
-                <div>
-                    <img src="./resources/img/image 1.png" alt="...">
+                <div class="flex items-center justify-center">
+                    <img src="../../<?= $ItemDetails[0]["p_one"] ?>" alt="..." class=" w-64 h-64">
                 </div>
                 <div class="flex items-center justify-center space-x-3">
-                    <img src="./resources/img/image 2.png" alt="...">
-                    <img src="./resources/img/image 3.png" alt="...">
+                    <img src="../../<?= $ItemDetails[0]["p_two"] ?>" alt="..." class=" w-24 h-24">
+                    <img src="../../<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-24 h-24">
                 </div>
             </div>
             <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
-                <h2 class="lg:text-4xl text-2xl font-semibold font-philosopher">Wide-leg Pants</h2>
+                <h2 class="lg:text-4xl text-2xl font-semibold font-philosopher"><?= $ItemDetails[0]["name"] ?></h2>
                 <p class=" lg:text-base text-xs">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae pariatur nulla atque nisi magnam deleniti
-                    illo provident a exercitationem sunt.
+                    <?= $ItemDetails[0]["description"] ?>
                 </p>
                 <h3 class="flex justify-start items-center gap-2 font-philosopher">
                     <a href="./storepage.php">
                         <div class=" flex items-center space-x-3">
-                            <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center ">H</div>
-                            <p>H&M</p>
+                            <!-- <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center ">H</div> -->
+                            <p><?= $ItemDetails[0]["m_name"] ?></p>
                         </div>
                     </a>
                 </h3>
-                <h1 class=" font-philosopher">$749</h1>
+                <h1 class=" font-philosopher">$<?= $ItemDetails[0]["sellprice"] ?></h1>
+
+                <!-- Color choose -->
                 <div class="flex space-x-3">
-                    <div class="w-5 h-5 bg-black text-white"></div>
-                    <div class="w-5 h-5 bg-stone-600"></div>
-                    <div class="w-5 h-5 bg-red-600"></div>
-                    <div class="w-5 h-5 bg-blue-800"></div>
-                    <div class="w-5 h-5 bg-green"></div>
+                    <div class="w-5 h-5 rounded-full user-pic active-pic" onclick="showReview()" style="background-color: <?= $ItemDetails[0]["color_1"]; ?>"></div>
+                    <div class="w-5 h-5 rounded-full user-pic" onclick="showReview()" style="background-color: <?= $ItemDetails[0]["color_2"]; ?>"></div>
+                    <div class="w-5 h-5 rounded-full user-pic" onclick="showReview()" style="background-color: <?= $ItemDetails[0]["color_3"]; ?>"></div>
                 </div>
+
+                <script>
+                    const userPics = document.getElementsByClassName('user-pic');
+                    function showReview() {
+                        for (userPic of userPics) {
+                            userPic.classList.remove("active-pic");
+                        }
+                        let i = Array.from(userPics).indexOf(event.target);
+                        userPics[i].classList.add('active-pic');
+                    }
+                </script>
+                <!-- end -->
+
                 <div class="flex space-x-7">
                     <h3>Quantity</h3>
-                    <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1">
+                    <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1" min="1">
                 </div>
-                <div class="flex space-x-16 font-philosopher">
-                    <h3>Size</h3>
-                    <ul class="flex space-x-2">
-                        <li class=" text-red-700">XS</li>
-                        <li>S</li>
-                        <li>M</li>
-                        <li>L</li>
-                        <li>XL</li>
-                    </ul>
-                </div>
+
+                <!-- if size hava data,size select box are shown.If not,nondisplay -->
+                <?php if (
+                    $ItemDetails[0]["size_s"] && $ItemDetails[0]["size_s"] && $ItemDetails[0]["size_s"] &&
+                    $ItemDetails[0]["size_s"] && $ItemDetails[0]["size_s"] == NULL
+                ) { ?>
+                    <div class="flex space-x-16 hidden">
+                        <h3>Size</h3>
+                        <select name="" id="" class=" border  rounded-md outline-none">
+                            <?php if ($ItemDetails[0]["size_s"] == 1) { ?>
+                                <option value="" selected>S</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_m"] == 1) { ?>
+                                <option value="" selected>M</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_l"] == 1) { ?>
+                                <option value="" selected>L</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_xl"] == 1) { ?>
+                                <option value="" selected>XL</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_2xl"] == 1) { ?>
+                                <option value="" selected>2XL</option>
+                            <?php } ?>
+
+                        </select>
+                    </div>
+                <?php } else { ?>
+                    <div class="flex space-x-16 ">
+                        <h3>Size</h3>
+                        <select name="" id="" class=" border  rounded-md outline-none">
+                            <?php if ($ItemDetails[0]["size_s"] == 1) { ?>
+                                <option value="" selected>S</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_m"] == 1) { ?>
+                                <option value="" selected>M</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_l"] == 1) { ?>
+                                <option value="" selected>L</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_xl"] == 1) { ?>
+                                <option value="" selected>XL</option>
+                            <?php } ?>
+                            <?php if ($ItemDetails[0]["size_2xl"] == 1) { ?>
+                                <option value="" selected>2XL</option>
+                            <?php } ?>
+
+                        </select>
+                    </div>
+                <?php } ?>
+                <!-- end -->
                 <div>
                     <button class="btn mr-3">Add To Cart</button>
                     <button class="btn">Add To Wishlist</button>

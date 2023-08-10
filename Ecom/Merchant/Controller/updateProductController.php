@@ -41,7 +41,7 @@ if (count($_POST) == 0) {
         $sql = $pdo->prepare(
             "UPDATE m_product SET
         name=:name,
-        product_id=:product_id,
+        code=:product_id,
         category_id=:category_id,
         buyprice=:buyprice,
         sellprice=:sellprice,

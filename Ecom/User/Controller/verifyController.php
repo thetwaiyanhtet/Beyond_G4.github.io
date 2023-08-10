@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['verify'])) {
-  $email = $_SESSION['userEmail'];
+  $email =  $_SESSION['emailToVerify'];
   $userInput = $_POST['number1'] . $_POST['number2'] . $_POST['number3'] . $_POST['number4'];
   try {
     if ($userInput == $_SESSION['verificationCode']) {
@@ -12,3 +12,4 @@ if (isset($_POST['verify'])) {
     echo "Error: " . $e->getMessage();
   }
 }
+?>

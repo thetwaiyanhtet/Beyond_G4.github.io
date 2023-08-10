@@ -17,6 +17,7 @@
         if ($merchant_data) {
             $passwordDB = $merchant_data['password'];
 
+<<<<<<< Updated upstream
             // Verify the old password using password_verify()
             if (password_verify($oldPassword, $passwordDB)) {
                 if ($newPassword !== $confirmPassword) {
@@ -32,10 +33,27 @@
                     $sql->execute();
                     header("Location: ../View/dashboard.php");
                 }
+=======
+        // Verify the old password using password_verify()
+        if (password_verify($oldPassword, $passwordDB)) {
+            if ($newPassword !== $confirmPassword) {
+                $_SESSION['ERRORMESSAGE'] = "New password and confirm password do not match.";
+                $errorMessage = $_SESSION['ERRORMESSAGE'];
+                header("Location: ../View/Setting.php?error=$errorMessage");
+                exit();
+>>>>>>> Stashed changes
             } else {
                 $_SESSION['ERRORMESSAGE'] = "Incorrect old password";
                 echo $_SESSION['ERRORMESSAGE'];
             }
+<<<<<<< Updated upstream
         }
     }
     ?>
+=======
+        } else {
+            $_SESSION['ERRORMESSAGE'] = "Incorrect old password";
+        }
+    }
+}
+>>>>>>> Stashed changes

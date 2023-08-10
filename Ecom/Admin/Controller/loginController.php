@@ -1,4 +1,5 @@
 <?php
+session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -22,7 +23,7 @@ if (isset($_POST['login'])) {
 
 
     if ($DBemail !== $adminEmail) {
-        $_SESSION['ErrorrMessage'] = "Email not match";
+        $_SESSION['ErrorMessage'] = "Email not match";
         header("Location: ../View/login.php");
         exit();
     }else {

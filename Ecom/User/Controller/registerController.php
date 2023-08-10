@@ -1,4 +1,5 @@
 <?php
+include "../Controller/common/emailFormatCheck.php";
 session_start();
 ini_set('display_errors', 1);
 if (isset($_POST["register"])) {
@@ -10,8 +11,14 @@ if (isset($_POST["register"])) {
         $_SESSION["registerError"] = "Email field cannot be empty.";
         header("Location: ../View/signUp.php");
         exit(); // Stop further execution
-    }
-    //DB connection
+    }elseif(strlen($password) < 8){
+        $_SESSION["registerError"] = "Password must be at least 8 characters long.";
+        header("Location: ../View/signUp.php");
+    }else if (!isValidEmail($email)) {
+        $_SESSION["registerError"] = "Invalid email format. Please enter a valid email address.";
+        header("Location: ../View/signUp.php");
+    }else{
+          //DB connection
     include "../Model/model.php";
     $sql = $pdo->prepare(
         "SELECT * FROM m_customer WHERE email=:email"
@@ -51,6 +58,7 @@ if (isset($_POST["register"])) {
     } else {
         $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
         header("Location: ../View/signUp.php");
+    }
     }
 } else {
     header("Location: ../View/404page.php");
