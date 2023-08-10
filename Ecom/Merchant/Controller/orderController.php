@@ -22,8 +22,8 @@ $sql->execute(); // real sql run
 
 $orders = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-echo "<pre>";
-print_r($orders);
-echo "</pre>";
+// echo "<pre>";
+// print_r($orders);
+// echo "</pre>";
 
 

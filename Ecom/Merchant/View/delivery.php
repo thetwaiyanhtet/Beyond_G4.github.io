@@ -1,8 +1,10 @@
 <?php
+session_start();
+include "./sidebar.php";
 
-//include "./sidebar.php";
-include "../Controller/deliveryController.php";
 // include "../Controller/deliveryDetailController.php";
+
+$storedData = $_SESSION["deliveries"];
 ?>
 
 <!doctype html>
@@ -33,7 +35,7 @@ include "../Controller/deliveryController.php";
             <div>
                 <ul class="flex space-x-5 items-center pr-5">
                     <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="../../<?= $deliveries[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
+                    <li><img src="../../<?= $storedData[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
                 </ul>
             </div>
         </header>
@@ -85,35 +87,60 @@ include "../Controller/deliveryController.php";
                         <tbody class=" text-center">
                             <?php
                             $id = 0;
-                            foreach ($deliveries as $delivery) { ?>
+                            if (isset($storedData)) {
+                                foreach ($storedData as $delivery) { ?>
 
+                                    <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
+                                            <?= ++$id; ?>.
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            <?= $delivery["generate_id"] ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $delivery["username"] ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $delivery["order_date"] ?>
+                                        </td>
+
+                                        <td class="px-6 py-4 ">
+                                            Ks <?= $delivery["total_amt"] ?>
+                                        </td>
+                                        <td class=" pr-2 py-4 ">
+                                            <?= $delivery["delivery_name"] ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</div>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                            <?php } else { ?>
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
-                                        <?= ++$id; ?>.
+                                        
                                     </th>
                                     <td class="px-6 py-4">
-                                        <?= $delivery["generate_id"] ?>
+                                        
                                     </td>
                                     <td class="px-6 py-4">
-                                        <?= $delivery["username"] ?>
+                                        
                                     </td>
                                     <td class="px-6 py-4">
-                                        <?= $delivery["order_date"] ?>
+                                        
                                     </td>
 
                                     <td class="px-6 py-4 ">
-                                        Ks <?= $delivery["total_amt"] ?>
+                                       
                                     </td>
                                     <td class=" pr-2 py-4 ">
-                                        <?= $delivery["delivery_name"] ?>
+                                        
                                     </td>
                                     <td class="px-6 py-4">
-                                        <div id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</div>
+                                        
                                     </td>
                                 </tr>
                             <?php } ?>
-
-
                         </tbody>
                     </table>
                     <div class="flex justify-between items-center py-2 px-3 pt-5">
