@@ -1,6 +1,7 @@
 <?php
 include "./sidebar.php";
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@ session_start();
 </head>
 
 <body>
-    <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
+    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
         <div class="pl-2">
             <p id="date_time"></p>
         </div>
@@ -30,7 +31,7 @@ session_start();
                 <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
             </ul>
         </div>
-    </header> -->
+    </header>
     <div class="ml-56">
         <p class="font-poppins mt-2 font-semibold text-xl pl-5">Setting</p>
         <section class=" p-5">
@@ -39,8 +40,8 @@ session_start();
                     <div>
                         <p class=" text-text2 font-philosopher text-lg font-semibold">Account</p>
                         <div class="flex justify-around ">
-                        <p class="font-philosopher font-light text-base mt-2">Logo</p>
-                        <p class="font-philosopher font-light text-base mt-2">Banner</p>
+                            <p class="font-philosopher font-light text-base mt-2">Logo</p>
+                            <p class="font-philosopher font-light text-base mt-2">Banner</p>
                         </div>
                         <form action="../Controller/settingController.php" method="post" enctype="multipart/form-data">
                             <div class="flex justify-around">
@@ -51,17 +52,14 @@ session_start();
                                     <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
                                     <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo" require>
                                 </div>
-                                <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
-                                    <label for="photo1" class="cursor-pointer"> <!-- Add cursor-pointer class to show pointer cursor on hover -->
+                                <!-- <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
+                                    <label for="photo1" class="cursor-pointer"> 
                                         <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg">
                                     </label>
                                     <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
                                     <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo" require>
-                                </div>
-
+                                </div> -->
                             </div>
-
-                            <!-- <div class="w-[45%]  border border-solid border-gray-400 my-5"></div> -->
                             <div class=" space-y-5 pt-7">
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
@@ -76,12 +74,6 @@ session_start();
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Phone Number<span class=" text-red-600">*</span>
-                                            <span class="text-red-600">
-                                                <?php
-                                                echo $_SESSION['error'];
-                                                echo  var_dump($_SESSION['error']);
-                                                ?>
-                                            </span>
 
                                         </label>
                                         <input type="text" name="phNo" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="09*******" required>
@@ -104,22 +96,14 @@ session_start();
                             <div class=" space-y-3">
                                 <div class="flex flex-col">
                                     <label for="oldPassword" class=" text-sm">Old Password<span class=" text-red-600">*</span>
-                                        <p class="text-red-500">
-                                            <?php
-                                            $_SESSION['message2'];
-                                            echo $_SESSION["message2"];
-                                            var_dump($_SESSION['message2']);
-                                            ?></p>
+
                                     </label>
                                     <input type="password" name="oldPassword" id="oldPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none " placeholder=" Please enter old password" required>
                                 </div>
                                 <div class="flex flex-col">
                                     <label for="newPassword" name="" class="text-sm ">New Password<span class=" text-red-600">*</span>
                                         <p class="text-red-500">
-                                            <?php
-                                            echo   $_SESSION['message1'];
-                                            var_dump($_SESSION['message1']);
-                                            ?></p>
+
                                     </label>
                                     <input type="password" name="newPassword" id="newPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none" placeholder="Please enter New password" required>
                                 </div>
