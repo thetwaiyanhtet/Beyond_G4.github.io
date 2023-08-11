@@ -1,3 +1,11 @@
+<?php
+session_start();
+  include "../Controller/wishshowController.php";
+  $wishlist = $_SESSION["wishlist"] ;
+  print_r($wishlist);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,60 +106,18 @@
             <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>
         </div>
         <div class="grid justify-center items-center md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 md:ml-0 ml-5 mb-5">
-            <div class=" w-44 h-auto border border-solid border-black rounded-md">
-                <img src="./resources/img/photo.png" alt="photo" class=" w-24 mx-auto">
+            <?php foreach ($wishlist as $key => $value) { ?>
+                <div class=" w-44 h-auto border border-solid border-black rounded-md">
+                <img src="../..<?= $value['p_one'] ?>" alt="photo" class=" w-24 mx-auto">
                 <div class="text-center">
-                    <p class=" font-poppins">Crop Top</p>
-                    <p class="mt-2 font-poppins text-blue-800">Store Name</p>
+                    <p class=" font-poppins"><?= $value['name'] ?></p>
+                    <p class="mt-2 font-poppins text-blue-800"><?= $value['store_name'] ?></p>
                     <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
                     <p class="m-2 font-poppins underline hover:no-underline">remove</p>
                 </div>
             </div>
-            <div class="w-44 h-auto border border-solid border-black rounded-md ">
-                <img src="./resources/img/photo.png" alt="photo" class=" w-24 mx-auto">
-                <div class="text-center">
-                    <p class=" font-poppins">Crop Top</p>
-                    <p class="mt-2 font-poppins text-blue-800">Store Name</p>
-                    <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <p class="m-2 font-poppins underline">remove</p>
-                </div>
-            </div>
-            <div class="w-44 h-auto border border-solid border-black rounded-md ">
-                <img src="./resources/img/photo.png" alt="photo" class=" w-24 mx-auto">
-                <div class="text-center">
-                    <p class=" font-poppins">Crop Top</p>
-                    <p class="mt-2 font-poppins text-blue-800">Store Name</p>
-                    <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <p class="m-2 font-poppins underline">remove</p>
-                </div>
-            </div>
-            <div class="w-44 h-auto border border-solid border-black rounded-md ">
-                <img src="./resources/img/photo.png" alt="photo" class=" w-24 mx-auto">
-                <div class="text-center">
-                    <p class=" font-poppins">Crop Top</p>
-                    <p class="mt-2 font-poppins text-blue-800">Store Name</p>
-                    <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <p class="m-2 font-poppins underline">remove</p>
-                </div>
-            </div>
-            <div class="w-44 h-auto border border-solid border-black rounded-md ">
-                <img src="./resources/img/photo.png" alt="photo" class=" w-24 mx-auto">
-                <div class="text-center">
-                    <p class=" font-poppins">Crop Top</p>
-                    <p class="mt-2 font-poppins text-blue-800">Store Name</p>
-                    <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <p class="m-2 font-poppins underline">remove</p>
-                </div>
-            </div>
-            <div class="w-44 h-auto border border-solid border-black rounded-md ">
-                <img src="./resources/img/photo.png" alt="photo" class=" w-24 mx-auto">
-                <div class="text-center">
-                    <p class=" font-poppins">Crop Top</p>
-                    <p class="mt-2 font-poppins text-blue-800">Store Name</p>
-                    <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <p class="m-2 font-poppins underline">remove</p>
-                </div>
-            </div>
+          <?php  } ?>
+           
         </div>
     </div>
     <section id="footer">
