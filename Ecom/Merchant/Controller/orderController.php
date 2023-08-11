@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // DB Connection
 include "../Model/model.php";
 

@@ -1,9 +1,6 @@
 <?php
-include "../Controller/orderController.php";
-//include "../Controller/searchOrderController.php";
 include "./sidebar.php";
-
-// $cusName = $_SESSION["getCusName"];
+include "../Controller/orderController.php";
 
 ?>
 <!DOCTYPE html>
@@ -28,17 +25,6 @@ include "./sidebar.php";
 
 <body>
     <main class=" ml-56">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center bg-white">
-            <div class=" pl-2">
-                <p id="date_time"></p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="../../<?= $orders[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
-                </ul>
-            </div>
-        </header>
         <section class="p-5">
             <p class=" text-lg font-semibold">Orders</p>
             <div class=" py-5 w-60">

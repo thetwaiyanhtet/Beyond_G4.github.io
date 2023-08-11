@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>404 Page</title>
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,15 +49,15 @@
         </span>
     </nav>
     <div class="flex flex-wrap justify-around w-full">
-    <div class="w-72 h-56 mt-14">
-        <p class=" font-PlayfairSC md:text-5xl text-3xl md:ml-0 ml-3">OH NO!!</p>
-        <p class=" font-PlayfairSC md:text-5xl text-3xl md:ml-0 ml-3">ERROR<span class="text-sm md:inline block text-center">Page not found</span></p>
-        <a href="./mainPage.php"><button class="w-40 h-10 rounded-xl border border-solid text-text-color bg-white m-5 md:text-base text-sm">Go To Home</button></a>
-    </div>
-    <div>
-    <img src="./resources/img/404.png" alt="404" class="md:h-96 h-64">
-    </div>
-   
+        <div class="w-72 h-56 mt-14">
+            <p class=" font-PlayfairSC md:text-5xl text-3xl md:ml-0 ml-3">OH NO!!</p>
+            <p class=" font-PlayfairSC md:text-5xl text-3xl md:ml-0 ml-3">ERROR<span class="text-sm md:inline block text-center">Page not found</span></p>
+            <a href="./mainPage.php"><button class="w-40 h-10 rounded-xl border border-solid text-text-color bg-white m-5 md:text-base text-sm">Go To Home</button></a>
+        </div>
+        <div>
+            <img src="./resources/img/404.png" alt="404" class="md:h-96 h-64">
+        </div>
+
     </div>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

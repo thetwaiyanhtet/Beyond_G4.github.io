@@ -1,11 +1,9 @@
 <?php
-session_start();
-$reviewdata = $_SESSION["getReviewandRating"];
-$username = $_SESSION["getUsername"];
-$productName = $_SESSION["getProductName"];
-
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
+$reviewdata = $_SESSION["getReviewandRating"];
+
+
 ?>
 
 <!doctype html>
@@ -30,7 +28,7 @@ include "../Controller/reviewandratingController.php";
 
 <body class=" font-poppins">
     <main class=" ml-56">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -40,7 +38,7 @@ include "../Controller/reviewandratingController.php";
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <div class="flex font-semibold pt-3 pl-3">
             <span class="text-2xl pr-3"><i class='bx bx-star'></i></span>
             <span class="text-lg">Review & Rating</span>
@@ -107,8 +105,8 @@ include "../Controller/reviewandratingController.php";
                                                         <?= $data["comment"] ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                        <button  class="font-medium  hover:underline text-blue-600" >
-                                                        <a href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["id"] ?>" class="font-medium text-blue-600  hover:underline">View details</a>
+                                                        <button class="font-medium  hover:underline text-blue-600">
+                                                            <a href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["id"] ?>" class="font-medium text-blue-600  hover:underline">View details</a>
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -129,7 +127,7 @@ include "../Controller/reviewandratingController.php";
                 </div>
             </div>
         </section>
-        
+
         <script>
             // Get references to the popup and buttons
             const detailPopup = document.getElementById("detailPopup");

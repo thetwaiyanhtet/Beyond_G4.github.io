@@ -1,16 +1,15 @@
-<?php  include "../../Admin/Controller/contactusController.php";
+<?php include "../../Admin/Controller/contactusController.php";
 $contact = $_SESSION["m_contactus"];
 ?>
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./resources/lib/tailwind/output.css" rel="stylesheet" />
-  <title>Contact Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+  <title>Beyond</title>
+  <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -29,7 +28,7 @@ $contact = $_SESSION["m_contactus"];
   </script>
 </head>
 
-<body class=" lg:bg-[#DDD4FF] dark:bg-[#DDD4FF] relative overflow-hidden">
+<body class=" bg-purple-300 dark:bg-purple-400 relative overflow-hidden font-poppins">
   <nav>
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="./mainPage.php" class="flex items-center">
@@ -77,11 +76,11 @@ $contact = $_SESSION["m_contactus"];
     </div>
   </nav>
   <section class="hidden lg:block">
-    <div class="w-[57px] h-[49px] bg-[#9448F6] left-[47px] absolute top-[171px] z-50"></div>
+    <div class="w-[57px] h-[49px] bg-[#9448F6] left-[47px] top-[150px] absolute z-50"></div>
   </section>
   <section>
-    <div class="w-[401px] h-[449px] bg-[#F0F0F0] left-[66px] absolute top-[196px] rounded-md hidden lg:block" id="navbar-user">
-      <p class="text-[32px] font-bold my-[10%] mx-[10%] font-poppins">Info</p>
+    <div class="w-[401px] h-[420px] bg-[#F0F0F0] left-[66px] absolute top-[150px] rounded-md hidden lg:block" id="navbar-user">
+      <p class="text-2xl font-bold my-[10%] mx-[10%] font-poppins">Info</p>
       <span class="flex items-center mx-[10%]">
         <ion-icon class="w-[36px] h-[36px]" name="mail-open-outline"></ion-icon>
         <p class="text-[16px] font-medium mx-[7%]"><?= $contact[0]['email'] ?></p>
@@ -100,28 +99,28 @@ $contact = $_SESSION["m_contactus"];
       </span>
     </div>
     <section>
-     <form action="../Controller/contactUsController.php" method="post">
-     <div class="lg:absolute h-screen w-full left-[620px] top-0 bg-white rounded-tl-[50px] rounded-bl-[50px] dark:bg-gray-800">
-        <div class="my-[20%] lg:my-[6%]">
-          <span class="font-bold text-[36px] mx-[10%] lg:mx-[2%] dark:text-white">Contact Us</span>
-          <p class="font-medium  text-[15px] lg:text-[20px] my-[9%] lg:my-[2%] w-[350px] lg:w-[500px]  mx-[10%] lg:mx-[2%] dark:text-white">Feel free to contact us any time.We will get back
-            to you as soon as we can!</p>
-          <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Name</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" name="name" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
+      <form action="../Controller/contactUsController.php" method="post">
+        <div class="lg:absolute h-screen w-full left-[620px] top-0 bg-[#F0F0F0] 
+          rounded-tr-[50px] rounded-bl-none md:rounded-tr-none rounded-tl-[50px] md:rounded-bl-[50px] dark:bg-gray-800">
+          <div class="my-[2%] pt-[6%]">
+            <span class="font-bold text-2xl mx-[10%] lg:mx-[2%] dark:text-white ">Contact Us</span>
+            <p class="text-md my-[9%] lg:my-[2%] w-[350px] lg:w-[500px]  mx-[10%] lg:mx-[2%] dark:text-white">Feel free to contact us any time.We will get back
+              to you as soon as we can!</p>
+            <p class="font-medium text-[15px] mt-[2%] lg:mt-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Name</p>
+            <div class=" mx-[10%] lg:mx-[4%]"><input type="text" name="name" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none bg-[#F0F0F0] dark:rounded-md py-2 "></div>
 
-          <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Email</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" name="email" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
+            <p class="font-medium text-[15px] mt-[2%] lg:mt-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Email</p>
+            <div class=" mx-[10%] lg:mx-[4%]"><input type="text" name="email" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none bg-[#F0F0F0] dark:rounded-md py-2"></div>
 
-          <p class="font-medium text-[15px] my-[2%] lg:my-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Message</p>
-          <div class="my-[3%] lg:my-[2%] mx-[10%] lg:mx-[4%]"><input type="text" name="message" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none dark:rounded-md"></div>
+            <p class="font-medium text-[15px] mt-[2%] lg:mt-[1%]  mx-[10%] lg:mx-[4%] dark:text-white">Message</p>
+            <div class=" mx-[10%] lg:mx-[4%]"><input type="text" name="message" class="border border-b-black border-transparent w-[292px] dark:hover:border-purple-500 focus:outline-none bg-[#F0F0F0] dark:rounded-md py-2"></div>
+            <button type="submit" name="send" class="bg-[#314755] rounded-md text-white font-Playfair Display text-base dark:text-white mx-10 my-5 px-4 py-2">Send Message</button>
+            <!-- <div class="absolute top-[67%] lg:top-[83%] left-[27%] lg:left-[20%]"> -->
 
-          <div class="absolute top-[67%] lg:top-[83%] left-[27%] lg:left-[20%]">
-            <button type="submit" name="send" class="bg-[#314755] rounded-md text-white font-Playfair Display
-              text-base dark:text-white w-32 h-12">Send Message</button>
           </div>
         </div>
-      </div>
-     </form>
+        </div>
+      </form>
     </section>
 
   </section>

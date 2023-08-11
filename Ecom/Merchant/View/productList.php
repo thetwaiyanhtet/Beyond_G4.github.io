@@ -1,14 +1,10 @@
 <?php
-session_start();
-
-// echo "<pre>";
-// print_r($result);
+//session_start();
 include "./sidebar.php";
 include "../Controller/productListController.php";
+
 $result = $_SESSION["m_product"];
 
-// echo "<pre>";
-// print_r($result);
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +27,7 @@ $result = $_SESSION["m_product"];
 
 <body class="">
     <main class=" ml-56">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
+        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
             <div class=" pl-2">
                 <p id="date_time"></p>
             </div>
@@ -41,7 +37,7 @@ $result = $_SESSION["m_product"];
                     <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class=" flex-col justify-center px-5 py-1">
@@ -121,7 +117,7 @@ $result = $_SESSION["m_product"];
                         <p class=" font-philosopher font-bold text-lg">Products</p>
                         <div class="flex space-x-3">
                             <a href="./addNewProduct.php"><button class="btn">Add Product</button></a>
-                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:text-white hover:bg-[#1366D9]">Download All</button>
+                            <!-- <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:text-white hover:bg-[#1366D9]">Download All</button> -->
                         </div>
                     </div>
 
