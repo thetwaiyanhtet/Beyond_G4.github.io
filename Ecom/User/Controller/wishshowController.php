@@ -14,7 +14,7 @@ $sql = $pdo->prepare(
     JOIN m_product p ON w.product_id = p.id;;"
 );
 
-$sql->bindValue(":email", $userEmail);
+//$sql->bindValue(":email", $userEmail);
 
 $sql->execute();
 

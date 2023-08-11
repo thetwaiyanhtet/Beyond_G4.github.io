@@ -72,7 +72,7 @@ $verifyData = $_SESSION["verifyData"];
                             ?>
                         </div>
                         <div class="p-2">
-                            <a href="" class=" cursor-pointer"> <ion-icon name="cart-outline" class="text-2xl mt-2 dark:text-white text-black"></ion-icon></a>
+                            <a href="../View/userCart.php" class=" cursor-pointer"> <ion-icon name="cart-outline" class="text-2xl mt-2 dark:text-white text-black"></ion-icon></a>
                         </div>
                     </div>
                 </label>
@@ -235,13 +235,13 @@ $verifyData = $_SESSION["verifyData"];
                                                         <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
                                                         <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
                                                         <img class="w-32 h-40 m-auto" src="../../<?php echo $tranding["p_one"]; ?>" alt="">
-                                                </form>
-                                                <form action="../Controller/wishlistcart.php" method="post">
+                                                        
                                                     <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                                        <a href="./Wishlist2.php"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                                    <a href="../Controller/wishlistcart.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
                                                         <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
                                                     </div>
                                             </div>
+                                           
                                             <div class="relative dark:text-white ">
                                                 <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-extrabold w-full "><?php echo $tranding["name"]; ?></h2>
                                                 <p class="text-xs mt-2 ml-5 block font-bold"><?php echo $tranding["description"]; ?></p>
