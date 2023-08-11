@@ -117,7 +117,7 @@ $result = $_SESSION["m_product"];
                         <p class=" font-philosopher font-bold text-lg">Products</p>
                         <div class="flex space-x-3">
                             <a href="./addNewProduct.php"><button class="btn">Add Product</button></a>
-                            <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:text-white hover:bg-[#1366D9]">Download All</button>
+                            <!-- <button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 hover:text-white hover:bg-[#1366D9]">Download All</button> -->
                         </div>
                     </div>
 

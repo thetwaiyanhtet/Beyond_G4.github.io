@@ -151,8 +151,7 @@ $cartloop = $_SESSION["placeholdcart"];
                                 <input type="submit" value="X" class="absolute left-[88%] cursor-pointer md:left-[52.7%] rounded-full  w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center"></input>
                             </div>
                         </form>
-                    <?php print_r($_POST['id']);
-                    } ?>
+                    <?php } ?>
 
                     <!-- <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] border border-transparent
                          border-b-black md:ml-6 font-poppins">

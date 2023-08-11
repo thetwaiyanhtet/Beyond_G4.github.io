@@ -16,7 +16,7 @@ $(document).ready(function () {
 
           $("#searchResult").append(
             `<tr class="border-b hover:bg-gray-200 border-gray-500">
-              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">${rowNumber}</th>
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">${rowNumber}.</th>
               <td class="px-6 py-4">${order.generate_id}</td>
               <td class="px-6 py-4">${order.username}</td>
               <td class="px-6 py-4">${order.order_date}</td>

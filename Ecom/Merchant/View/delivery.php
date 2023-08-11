@@ -1,6 +1,7 @@
 <?php
-//include "./sidebar.php";
-session_start();
+include "./sidebar.php";
+include "../Controller/deliveryController.php";
+
 $storedData = $_SESSION["deliveries"];
 ?>
 
@@ -20,7 +21,6 @@ $storedData = $_SESSION["deliveries"];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
-
 </head>
 
 <body>
@@ -137,10 +137,6 @@ $storedData = $_SESSION["deliveries"];
                 </div>
             </div>
         </div>
-<?php print_r($storedData);
-echo $selectedOrder;
-echo $merchantEmail;
-?>
         <div id="detailPopup" class=" max-lg:left-40 space-y-3 absolute top-[30%] left-[35%] p-4 shadow-lg rounded-md bg-gray-300 hidden">
             <div>
                 <span>Customer Name : </span>

@@ -1,12 +1,8 @@
 <?php
-session_start();
-$productdata = $_SESSION["editproduct"];
-include "../Controller/categoryListController.php";
-// print_r($productdata[0]["p_one"]);
 include "./sidebar.php";
-// echo "<pre>";
-//  print_r($productdata );
-//  echo "</pre>";
+include "../Controller/categoryListController.php";
+$productdata = $_SESSION["editproduct"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,18 +35,7 @@ include "./sidebar.php";
 </head>
 
 <body>
-    <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class=" pl-2">
-                <p id="date_time"></p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
-                </ul>
-            </div>
-        </header>
+    <main class=" ml-56 ">
         <section>
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">Edit Product</span></p>
 
