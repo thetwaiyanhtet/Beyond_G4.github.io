@@ -2,34 +2,40 @@
 // include ("../Controller/cartConrroller.php");
 require_once("../Controller/newcartController.php");
 
-
 $placeholers = [];
 foreach ($cart as $item) {
     $placeholders[] = $item['product_id'];
 }
 
+function uniqueAssocArray($array) {
+    $result = array();
+    foreach ($array as $key => $value) {
+        if (!in_array($value, $result)) {
+            $result[$key] = $value;
+            // header("Location: ../View/userCart.php");
+        }
+    }
+    return $result;
+}
+
+$uniqueAssocArray = uniqueAssocArray($placeholders);
+
+ $placeholdersString = implode(',', $uniqueAssocArray);
+// print_r($cart);
 
 
- $placeholdersString = implode(',', $placeholders);
-
-$allIdValues = [0];
 if (isset($_POST['id'])) {
     $idValues = $_POST['id'];
-  //  $allIdValues = array_merge($allIdValues, $idValues);
-    // $string = str_replace(strtoupper($_POST['id']), "", $placeholdersString);
-    // echo $string;  // Output: "Hello, !"
-   // print_r($allIdValues);
+       
    foreach ($cart as $key => $value) {
-;    if ($value['product_id'] == $_POST["id"]) {
-        unset($value['product_id']);
-     
+;    if ($cart[$key]['product_id'] == $_POST["id"]) {
+        unset( $_SESSION['usercart'][$key]);
+        header("Location: ../View/userCart.php");
     }
    }
-   print_r($cart);
+   //print_r($cart);
     
     }
-
-
 
 $sql = $pdo->prepare(
     "SELECT id,p_one,name,sellprice FROM m_product WHERE id IN ($placeholdersString)"

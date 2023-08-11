@@ -120,7 +120,7 @@
         </div>
     </div>
     <section id="footer">
-        <div class="relative bg-purple-300 dark:bg-linear_dark dark:text-white">
+        <div class="relative bg-purple-300 dark:bg-linear_dark mt-20 dark:text-white">
             <div class="container py-5 ">
                 <div class="grid gap-10 md:grid-cols-3 pb-10">
                     <div class="space-y-6">
