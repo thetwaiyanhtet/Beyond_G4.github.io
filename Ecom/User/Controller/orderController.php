@@ -1,5 +1,6 @@
 <?php
-
+echo "<pre>";
+print_r($_POST['psellprice']);
 session_start();
 // $carted = $_SESSION['carted'];
 $userEmail = $_SESSION["user_ID"];

@@ -34,7 +34,7 @@ if (isset($_POST['id'])) {
             header("Location: ../View/userCart.php");
         }
     }
-    //print_r($cart);
+    print_r($cart);
 
 }
 
@@ -141,25 +141,28 @@ $cartloop = $_SESSION["placeholdcart"];
                         <p class="font-bold text-[12px] md:text-[16px]">Total</p>
                     </div>
 
-                    <?php $total_price = 0;
-                    foreach ($cartloop as $key => $value) { ?>
-                        <form action="./userCart.php" method="post">
+                    <?php $total_price = 0; ?>
+                     
+                   <?php foreach ($cartloop as $key => $value) { ?>
+                    <form action="./userCart.php" method="post" >
                             <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px]  md:w-[384px]
                      md:h-[58px] mt-5 border border-transparent border-t-black border-b-black md:ml-6 font-poppins space-x-16">
                                 <img class=" w-16" src="../..<?= $value['p_one'] ?>" alt="">
-                                <div class="w-[35px] h-[32px]  rounded-md flex items-center justify-center"><?= $value['name'] ?></div>
+                                <div name="pname" class="w-[35px] h-[32px]  rounded-md flex items-center justify-center"><?= $value['name'] ?></div>
                                 <div class="flex w-[60px] md:w-[80px] h-[26px]  border-gray-600 rounded-md items-center justify-evenly">
-                                    <input class="w-20 rounded-md iquantity" onchange="subTotal()" min="1" max="100" type="number" value="1">
+                                    <input class="w-20 rounded-md iquantity" name="pquantity" onchange="subTotal()" min="1" max="100" type="number" value="1">
                                 </div>
                                 <p>$<?= $value['sellprice'] ?> </p>
-                                <input type="hidden" class="iprice" value="<?= $value['sellprice'] ?>">
-                                <?php $total_price = $total_price + (int)$value["sellprice"] ?>
+                                <input type="hidden" class="iprice" name="psellprice" value="<?= $value['sellprice'] ?>">
+                               
                                 <p class="itotal"></p>
                                 <input type="hidden" name="id" value="<?= $value['id'] ?>">
+                               
                                 <input type="submit" value="X" class="absolute left-[88%] cursor-pointer md:left-[52.7%] rounded-full  w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center"></input>
+                                
                             </div>
-                        </form>
-                    <?php } ?>
+                            </form>
+                            <?php } ?>
 
                     <div class="ml-[240px] block md:hidden">
                         <a href="./cart2.php">
@@ -187,11 +190,12 @@ $cartloop = $_SESSION["placeholdcart"];
                         <p class="text-xs md:text-sm ml-9 md:ml-0">Total</p>
                         <p class="text-xs md:text-sm" id="delitotal"></p>
                     </div>
+                   
                     <div class="ml-[110px] mt-3 hidden md:block">
-                        <a href="./cart2.php"><button type="button" class="w-[90px] h-[28px] bg-[#314755] font-bold text-xs rounded-lg text-white">Checkout</button></a>
+                       <input type="submit"  class="w-[90px] h-[28px] bg-[#314755] font-bold text-xs rounded-lg text-white">Checkout</input></a>
                         <div class="mt-2"><button class="w-[100px] h-[40px] bg-[#3147558b] font-bold text-xs rounded-lg text-white">Continue Shopping</button></div>
                     </div>
-
+                  
                 </div>
             </div>
         </section>
