@@ -954,6 +954,11 @@ video {
   margin-bottom: 9%;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .-ml-2 {
   margin-left: -0.5rem;
 }
@@ -2779,6 +2784,11 @@ video {
 .py-\[4\%\] {
   padding-top: 4%;
   padding-bottom: 4%;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-10 {
