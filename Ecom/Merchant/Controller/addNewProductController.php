@@ -59,12 +59,12 @@ if (count($_POST) == 0) {
     $merchant_id = $merchant_data['id'];
     echo ($merchant_id);
 
-    if (
-        move_uploaded_file($photo1tmp, "../../Storage/product/" . $photo1) &&
-        move_uploaded_file($photo2tmp, "../../Storage/product/" . $photo2) &&
-        move_uploaded_file($photo3tmp, "../../Storage/product/" . $photo3) &&
-        move_uploaded_file($photo4tmp, "../../Storage/product/" . $photo4)
-    ) {
+   
+        move_uploaded_file($photo1tmp, "../../Storage/product/" . $photo1);
+        move_uploaded_file($photo2tmp, "../../Storage/product/" . $photo2) ;
+        move_uploaded_file($photo3tmp, "../../Storage/product/" . $photo3); 
+        move_uploaded_file($photo4tmp, "../../Storage/product/" . $photo4);
+ 
 
         $sql = $pdo->prepare(
             "INSERT INTO m_product
@@ -145,7 +145,7 @@ if (count($_POST) == 0) {
 
         $sql->execute();
         header("Location: ../View/productList.php");
-    } else {
-        header("Location: ../View/errors/error.php");
-    }
+    // } else {
+    //     header("Location: ../View/errors/error.php");
+    // }
 }

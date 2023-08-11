@@ -1583,10 +1583,6 @@ video {
   width: 300px;
 }
 
-.w-\[30px\] {
-  width: 30px;
-}
-
 .w-\[350px\] {
   width: 350px;
 }
@@ -4898,10 +4894,6 @@ body * {
 
   .lg\:w-\[500px\] {
     width: 500px;
-  }
-
-  .lg\:w-\[50px\] {
-    width: 50px;
   }
 
   .lg\:w-\[55px\] {
