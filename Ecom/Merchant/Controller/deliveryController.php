@@ -1,21 +1,9 @@
 <?php
-session_start();
+// session_start();
 include "../Model/model.php";
 
-$selectedOrder = $_SESSION["selectedOrder"];
 $merchantEmail = $_SESSION["merchant_ID"];
-echo $selectedOrder;
-echo $merchantEmail;
-
-// Update the delivery status
-$setDeliverySql = $pdo->prepare(
-    "UPDATE m_order
-    SET delivery_status = 1
-    WHERE generate_id = :id"
-);
-
-$setDeliverySql->bindValue(":id", $selectedOrder);
-$setDeliverySql->execute();
+// echo $merchantEmail;
 
 // Fetch delivery-related data
 $fetchDeliverySql = $pdo->prepare(
@@ -36,6 +24,4 @@ $fetchDeliverySql->execute();
 // Store fetched data in session
 $_SESSION["deliveries"] = $fetchDeliverySql->fetchAll(PDO::FETCH_ASSOC);
 
-// Redirect to delivery page
-//header('Location: ../View/delivery.php');
 ?>

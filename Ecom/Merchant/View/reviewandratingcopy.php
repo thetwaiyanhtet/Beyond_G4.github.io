@@ -1,11 +1,10 @@
 <?php
-
-session_start();
-$reviewdata = $_SESSION["getReviewandRating"];
-$reviewdetail =   $_SESSION["reviewDetail"];
-$detailPhoto = $_SESSION["detailProductPhoto"];
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
+$reviewdata = $_SESSION["getReviewandRating"];
+$reviewdetail =   $_SESSION["reviewDetail"];
+
+
 // print_r($reviewdata);
 ?>
 
@@ -30,18 +29,7 @@ include "../Controller/reviewandratingController.php";
 </head>
 
 <body class=" font-poppins">
-    <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class=" pl-2">
-                <p id="date_time"></p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
-                </ul>
-            </div>
-        </header>
+    <main class=" ml-56">
         <div class="flex font-semibold pt-3 pl-3">
             <span class="text-2xl pr-3"><i class='bx bx-star'></i></span>
             <span class="text-lg">Review & Rating</span>
@@ -137,19 +125,19 @@ include "../Controller/reviewandratingController.php";
                     <p class=" font-semibold"> <?= $reviewdetail[0]['name']  ?> </p>
                     <p class=" text-yellow-500 text-xl">
                         <?php
-                       
-                            function numberToStars($number)
-                            {
-                                $roundedNumber = round($number);
-                                $maxStars = 5;
-                                $fullStars = str_repeat('★', $roundedNumber);
-                                $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
-                                return $fullStars . $emptyStars;
-                            }
-                            echo numberToStars($reviewdetail[0]["rating"]) ;
+
+                        function numberToStars($number)
+                        {
+                            $roundedNumber = round($number);
+                            $maxStars = 5;
+                            $fullStars = str_repeat('★', $roundedNumber);
+                            $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                            return $fullStars . $emptyStars;
+                        }
+                        echo numberToStars($reviewdetail[0]["rating"]);
                         ?>
-                        
-                        
+
+
                         <span class="text-black">/</span>
                         <span class="text-black"><?= $reviewdetail[0]['username'] ?></span>
                     </p>
