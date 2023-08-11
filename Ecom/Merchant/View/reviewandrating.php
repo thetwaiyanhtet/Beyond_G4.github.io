@@ -28,26 +28,17 @@ $reviewdata = $_SESSION["getReviewandRating"];
 
 <body class=" font-poppins">
     <main class=" ml-56">
-        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class=" pl-2">
-                <p id="date_time"></p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
-                </ul>
-            </div>
-        </header> -->
-        <div class="flex font-semibold pt-3 pl-3">
-            <span class="text-2xl pr-3"><i class='bx bx-star'></i></span>
-            <span class="text-lg">Review & Rating</span>
-        </div>
-
         <section class=" p-5">
-            <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
+            <div class="flex font-semibold">
+                <span class="text-2xl pr-3"><i class='bx bx-star'></i></span>
+                <span class="text-lg">Review & Rating</span>
+            </div>
+            <div class=" pt-4 pb-8 w-60">
+                <input type="search" class="inputBox" placeholder="Search Here" id="search">
+            </div>
+            <div class=" w-full h-full  rounded-lg p-5 shadow-xl border-2 border-blue-950">
                 <!-- ====== Table Section Start -->
-                <section class="bg-white pt-3">
+                <section class="bg-white">
                     <div class="container">
                         <div class="flex flex-wrap -mx-4">
                             <div class="w-full px-4">
