@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
  require_once ("../Controller/newcartController.php");
 
 
@@ -20,4 +20,4 @@ $_SESSION['placeholdcart'] = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 header("Location: ../View/userCart.php");
 
-?>
+?> -->
