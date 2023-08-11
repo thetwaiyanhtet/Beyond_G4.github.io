@@ -57,16 +57,7 @@ $logoandname = $_SESSION["m_logo"];
                 ?>
             </div>
     </main>
-    <script>
-        document.getElementById('update').addEventListener('click', (e) => {
-            document.getElementById('delhid').classList.add('show');
-            document.getElementById('delhid').classList.remove('hidden');
-        })
-        document.getElementById('no').addEventListener('click', (e) => {
-            document.getElementById('delhid').classList.add('hidden');
-            document.getElementById('delhid').classList.remove('show');
-        })
-    </script>
+
     </main>
 </body>
 
