@@ -7,8 +7,6 @@ if (isset($_GET['pid'])) {
     $id = $_GET['pid'];
 }
 
-
-
 $sql = $pdo->prepare(
     "INSERT INTO m_wishlist_items (customer_id, product_id,create_date)
     

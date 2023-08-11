@@ -86,3 +86,5 @@ if(isset($_POST['product_id'])){
 
 $cart =  $_SESSION['usercart'];
 
+header("Location: ../View/mainPage.php");
+

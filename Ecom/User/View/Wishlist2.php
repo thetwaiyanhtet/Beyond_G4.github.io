@@ -1,8 +1,7 @@
 <?php
-session_start();
+
   include "../Controller/wishshowController.php";
-  $wishlist = $_SESSION["wishlist"] ;
-  print_r($wishlist);
+  $wishlist = $uniqueAssocArray;
 ?>
 
 
@@ -113,7 +112,7 @@ session_start();
                     <p class=" font-poppins"><?= $value['name'] ?></p>
                     <p class="mt-2 font-poppins text-blue-800"><?= $value['store_name'] ?></p>
                     <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <p class="m-2 font-poppins underline hover:no-underline">remove</p>
+                    <a href="../Controller/delwishlistitemsController.php?ppid=<?= $value['id'] ?>" class="m-2 font-poppins underline hover:no-underline">remove</a>
                 </div>
             </div>
           <?php  } ?>
