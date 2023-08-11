@@ -7,7 +7,8 @@ foreach ($cart as $item) {
     $placeholders[] = $item['product_id'];
 }
 
-function uniqueAssocArray($array) {
+function uniqueAssocArray($array)
+{
     $result = array();
     foreach ($array as $key => $value) {
         if (!in_array($value, $result)) {
@@ -20,22 +21,22 @@ function uniqueAssocArray($array) {
 
 $uniqueAssocArray = uniqueAssocArray($placeholders);
 
- $placeholdersString = implode(',', $uniqueAssocArray);
+$placeholdersString = implode(',', $uniqueAssocArray);
 // print_r($cart);
 
 
 if (isset($_POST['id'])) {
     $idValues = $_POST['id'];
-       
-   foreach ($cart as $key => $value) {
-;    if ($cart[$key]['product_id'] == $_POST["id"]) {
-        unset( $_SESSION['usercart'][$key]);
-        header("Location: ../View/userCart.php");
+
+    foreach ($cart as $key => $value) {;
+        if ($cart[$key]['product_id'] == $_POST["id"]) {
+            unset($_SESSION['usercart'][$key]);
+            header("Location: ../View/userCart.php");
+        }
     }
-   }
-   //print_r($cart);
-    
-    }
+    //print_r($cart);
+
+}
 
 $sql = $pdo->prepare(
     "SELECT id,p_one,name,sellprice FROM m_product WHERE id IN ($placeholdersString)"
@@ -148,44 +149,17 @@ $cartloop = $_SESSION["placeholdcart"];
                                 <img class=" w-16" src="../..<?= $value['p_one'] ?>" alt="">
                                 <div class="w-[35px] h-[32px]  rounded-md flex items-center justify-center"><?= $value['name'] ?></div>
                                 <div class="flex w-[60px] md:w-[80px] h-[26px]  border-gray-600 rounded-md items-center justify-evenly">
-                                    <input class="w-20 rounded-md" type="number" value="1">
+                                    <input class="w-20 rounded-md iquantity" onchange="subTotal()" min="1" max="100" type="number" value="1">
                                 </div>
-                                <p>$<?= $value['sellprice'] ?></p>
-                                <?php $total_price = $total_price + (int)$value["sellprice"]; ?>
-                                <p cl>$<?= $value['sellprice'] ?></p>
+                                <p>$<?= $value['sellprice'] ?> </p>
+                                <input type="hidden" class="iprice" value="<?= $value['sellprice'] ?>">
+                                <?php $total_price = $total_price + (int)$value["sellprice"] ?>
+                                <p class="itotal"></p>
                                 <input type="hidden" name="id" value="<?= $value['id'] ?>">
                                 <input type="submit" value="X" class="absolute left-[88%] cursor-pointer md:left-[52.7%] rounded-full  w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center"></input>
                             </div>
                         </form>
                     <?php } ?>
-
-                    <!-- <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] border border-transparent
-                         border-b-black md:ml-6 font-poppins">
-                        <img class=" w-16" src="../View/resources/img/one string blouse.png" alt="">
-                        <div class="w-[35px] h-[32px] border border-gray-600 rounded-md flex items-center justify-center">M</div>
-                        <div class="flex w-[60px] md:w-[80px] h-[26px] border border-gray-600 rounded-md items-center justify-evenly">
-                            <p>+</p>
-                            <p>2</p>
-                            <p>-</p>
-                        </div>
-                        <p>$100</p>
-                        <p>$200</p>
-                        <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
-                    </div> -->
-
-                    <!-- <div class="flex items-center text-[12px] md:text-[16px] font-bold justify-evenly w-[361px] md:w-[384px] h-[58px] 
-                    border border-transparent md:ml-6 font-poppins">
-                        <img class=" w-16" src="../View/resources/img/crop top.png" alt="">
-                        <div class="w-[35px] h-[32px] border border-gray-600 rounded-md flex items-center justify-center">M</div>
-                        <div class="flex w-[60px] md:w-[80px] h-[26px] border border-gray-600 rounded-md items-center justify-evenly">
-                            <p>+</p>
-                            <p>2</p>
-                            <p>-</p>
-                        </div>
-                        <p>$100</p>
-                        <p>$200</p>
-                        <div class="absolute left-[88%] md:left-[52.7%] rounded-full w-[20px] h-[20px] bg-[#EBEBEB]  text-[#777777] flex items-center justify-center">x</div>
-                    </div> -->
 
                     <div class="ml-[240px] block md:hidden">
                         <a href="./cart2.php">
@@ -200,18 +174,18 @@ $cartloop = $_SESSION["placeholdcart"];
                         <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-[136px] h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
                         <div class="flex item py-[4%]">
                             <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
-                            <p class="ml-[44px] font-bold text-xs md:text-sm"><?= $total_price ?></p>
+                            <p class="ml-[44px] font-bold text-xs md:text-sm " id="gtotal"></p>
                         </div>
                         <div class="flex">
                             <p class="ml-[15px] font-bold text-xs md:text-sm">Shipping fee</p>
-                            <p class="ml-[25px] font-bold text-xs md:text-sm">10</p>
+                            <p class="ml-[25px] font-bold text-xs md:text-sm">$10</p>
                         </div>
                     </div>
 
                     <div class="flex w-[180px] md:w-[202px] h-[40px] items-center md:justify-around rounded-bl-md rounded-br-md bg-[#D9D9D9] 
                        border-2 space-x-12 md:space-x-0 ml-5 md:ml-0 font-bold">
                         <p class="text-xs md:text-sm ml-9 md:ml-0">Total</p>
-                        <p class="text-xs md:text-sm"><?= $total_price + 10 ?></p>
+                        <p class="text-xs md:text-sm" id="delitotal"></p>
                     </div>
                     <div class="ml-[110px] mt-3 hidden md:block">
                         <a href="./cart2.php"><button type="button" class="w-[90px] h-[28px] bg-[#314755] font-bold text-xs rounded-lg text-white">Checkout</button></a>
@@ -225,7 +199,26 @@ $cartloop = $_SESSION["placeholdcart"];
     </section>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <script>
+        var gt = 0;
+        var iprice = document.getElementsByClassName("iprice");
+        var itotal = document.getElementsByClassName("itotal")
+        var iquantity = document.getElementsByClassName("iquantity");
+        var gtotal = document.getElementById("gtotal");
+        var delitotal = document.getElementById("delitotal");
 
+        function subTotal() {
+            gt = 0;
+            for (let i = 0; i < iprice.length; i++) {
+                itotal[i].innerHTML = "$"+(iprice[i].value) * (iquantity[i].value);
+                gt= gt + (iprice[i].value) * (iquantity[i].value);
+            }
+            gtotal.innerText = "$"+gt;
+            var tot = gt + 10 ;
+            delitotal.innerText = "$" + tot;
+        }
+        subTotal();
+    </script>
 
 
 </body>

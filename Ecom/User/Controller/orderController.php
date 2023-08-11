@@ -1,8 +1,7 @@
 <?php
 
-
 session_start();
-$carted = $_SESSION['carted'];
+// $carted = $_SESSION['carted'];
 $userEmail = $_SESSION["user_ID"];
 ini_set('display_errors', 1);
 $totalamt = $carted["totprice"];
