@@ -1,7 +1,6 @@
 <?php
 include "./sidebar.php";
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +95,12 @@ session_start();
                             <div class=" space-y-3">
                                 <div class="flex flex-col">
                                     <label for="oldPassword" class=" text-sm">Old Password<span class=" text-red-600">*</span>
-
+                                        <p class="text-red-500">
+                                            <?php
+                                            $_SESSION['message2'];
+                                            echo $_SESSION["message2"];
+                                            var_dump($_SESSION['message2']);
+                                            ?></p>
                                     </label>
                                     <input type="password" name="oldPassword" id="oldPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none " placeholder=" Please enter old password" required>
                                 </div>
