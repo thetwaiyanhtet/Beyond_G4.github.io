@@ -1,7 +1,12 @@
 <?php
 
 include "../Controller/itemDetailsController.php";
-
+include "../Controller/overRatingController.php";
+// echo "<pre>";
+// print_r($topComments);
+// echo "Total Customer Count: " . $totalCustomerCount . "<br>";
+// echo "Overall Average Rating: " . $overallAverageRating;
+// echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -76,6 +81,7 @@ include "../Controller/itemDetailsController.php";
 
                 <script>
                     const userPics = document.getElementsByClassName('user-pic');
+
                     function showReview() {
                         for (userPic of userPics) {
                             userPic.classList.remove("active-pic");
@@ -156,86 +162,59 @@ include "../Controller/itemDetailsController.php";
             <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
                 <div class="flex justify-center items-center flex-col space-y-3">
                     <p class=" lg:text-3xl text-lg mt-3">Overall Rating</p>
-                    <h1>4.0</h1>
-                    <div class="flex">
-                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
-                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
-                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
-                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
-                        <img src="./resources/img/star.svg" alt="..." class=" lg:w-[50px] w-[30px]">
+                    <h1><?= number_format($overallAverageRating, 1) ?></h1>
+                    <div class=" text-yellow-500 text-xl">
+                        <?php
+                        if (!function_exists('numberToStars')) {
+                            function numberToStars($number)
+                            {
+                                $roundedNumber = round($number);
+                                $maxStars = 5;
+                                $fullStars = str_repeat('★', $roundedNumber);
+                                $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                                return $fullStars . $emptyStars;
+                            }
+
+                        ?>
+                        <?php }  ?>
+                        <?= numberToStars($overallAverageRating) ?>
+
                     </div>
-                    <p class=" font-philosopher">Based on 23 Reviews</p>
+                    <p class=" font-philosopher">Based on <?= $totalCustomerCount ?> Reviews</p>
                 </div>
 
                 <div class=" w-full lg:flex-col lg:text-base text-sm">
-                    <div class=" lg:flex justify-evenly items-center">
-                        <div class="reviewCard ">
-                            <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
-                                <div class="">
-                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
-                                    <div class=" flex space-x-2">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
-                        </div>
-                        <div class="reviewCard">
-                            <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
-                                <div>
-                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
-                                    <div class=" flex space-x-2">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
-                        </div>
+                    <div class=" lg:flex flex-wrap justify-evenly items-center">
+                        <?php foreach ($topComments as $CustomerReviews) { ?>
+                            <div class="reviewCard flex flex-col ">
+                                <div class="flex">
+                                    <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
+                                    <div class="">
+                                        <h2 class=" font-semibold lg:text-xl text-lg"><?= $CustomerReviews["username"] ?></h2>
+                                        <div class=" text-yellow-500 text-xl">
+                        <?php
+                        if (!function_exists('numberToStars')) {
+                            function numberToStars($number)
+                            {
+                                $roundedNumber = round($number);
+                                $maxStars = 5;
+                                $fullStars = str_repeat('★', $roundedNumber);
+                                $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                                return $fullStars . $emptyStars;
+                            }
+
+                        ?>
+                        <?php }  ?>
+                        <?= numberToStars($CustomerReviews["review_rating"]) ?>
+
                     </div>
-                    <div class=" lg:flex justify-evenly items-center">
-                        <div class="reviewCard">
-                            <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
-                                <div>
-                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
-                                    <div class=" flex space-x-2">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
                                     </div>
                                 </div>
+                                <p class=""><?= $CustomerReviews["comment"] ?></p>
                             </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
-                        </div>
-                        <div class="reviewCard">
-                            <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
-                                <div>
-                                    <h2 class=" font-semibold lg:text-xl text-lg">Ruby Jane</h2>
-                                    <div class=" flex space-x-2">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                        <img src="./resources/img/star.svg" alt="..." width="15px">
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia accusamus tenetur velit, aliquid autem nobis natus ipsam laboriosam unde earum.</p>
-                        </div>
+                        <?php } ?>
                     </div>
+
                 </div>
             </div>
         </main>
