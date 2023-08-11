@@ -26,7 +26,8 @@ module.exports = {
         'philosopher': ['Philosopher', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
         'Playfair Display': ['Playfair Display', 'serif'],
-        'PlayfairSC': ['Playfair Display SC', 'serif']
+        'PlayfairSC': ['Playfair Display SC', 'serif'],
+        'Rhyme': ['BioRhyme', 'serif'],
       },
       backgroundImage: {
         'noise_bg': ['url(./resources/img/noise.svg)'],
