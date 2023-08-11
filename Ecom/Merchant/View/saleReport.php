@@ -21,18 +21,7 @@ include "./sidebar.php";
 </head>
 
 <body>
-    <main class=" ml-56 h-screen">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class=" pl-2">
-                <p id="date_time"></p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
-                </ul>
-            </div>
-        </header>
+    <main class=" ml-56">
         <div class="flex justify-between mt-6 pl-5">
             <div class="flex">
                 <button class="w-[220px] h-[40px]  rounded-md bg-[#1366D9] flex items-center justify-center 
@@ -46,13 +35,13 @@ include "./sidebar.php";
 
         </div>
         <div class="flex items-center float-right mt-3 pr-5 pb-5 ">
-            <span class="flex p-1 border rounded-lg">
+            <!-- <span class="flex p-1 border rounded-lg">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span>
             <span>-</span>
             <span class="flex p-1 border rounded-lg">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
-            </span>
+            </span> -->
             <button class=" ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
         </div>
 

@@ -2,7 +2,7 @@
 include "../Model/model.php";
 
 $merchantEmail = $_SESSION["merchant_ID"];
-echo $merchantEmail;
+// echo $merchantEmail;
 $sql = $pdo->prepare(
     "SELECT m_cusreview.id,m_product.name,m_customer.username,m_cusreview.comment,m_cusreview.rating
     FROM m_product 

@@ -1,13 +1,11 @@
 <?php
-session_start();
 include "../Model/model.php";
 
 // Check if the customer ID is provided as a parameter in the URL
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $selectedOrder = $_GET['id'];
     $merchantEmail = $_SESSION["merchant_ID"];
-echo $selectedOrder;
-echo $merchantEmail;
+
     $sql = $pdo->prepare(
         "SELECT m_customer.username,m_order.order_date,m_order.total_amt,m_order.payment_id,m_customer.phone,m_customer.street,
         m_townships.t_name,m_product.p_one,m_order_details.quantity,m_product.sellprice,m_product.name,m_regions.r_name,m_merchant.logo
