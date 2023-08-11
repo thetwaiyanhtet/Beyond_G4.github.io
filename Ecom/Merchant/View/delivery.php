@@ -14,7 +14,9 @@ $storedData = $_SESSION["deliveries"];
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="./resources/js/dateandtime.js " defer></script>
+    <script src="../View/resources/js/searchDelivery.js"></script>
     <link rel="stylesheet" href="./resources/css/delivery.css">
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,22 +27,13 @@ $storedData = $_SESSION["deliveries"];
 
 <body>
     <main class=" ml-56 relative">
-        <div class="pl-5 pt-3 font-semibold text-lg">Delivery</div>
-        <div class=" float-right flex justify-between max-lg:ml mt-3">
-            <div class=" flex pr-5">
-                <span class="flex p-1 border  rounded-lg">
-                    <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
-                </span>
-                <span class="mt-3">-</span>
-                <span class="flex p-1 border rounded-lg">
-                    <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
-                </span>
+        <section class="p-5">
+            <div class="font-semibold text-lg">Delivery</div>
+            <div class="py-5 w-60">
+                <input type="search" class="inputBox" placeholder="Search Here" id="search">
             </div>
-        </div>
-
-        <div class=" clear-both p-5">
-            <div class="p-3 rounded-lg shadow-xl border-2  mt-3 border-blue-950">
-                <div class="relative overflow-x-auto py-3">
+            <div class="rounded-lg shadow-xl border-2  mt-3 border-blue-950">
+                <div class="relative overflow-x-auto p-5">
                     <table class="w-full text-sm text-left text-gray-500 ">
                         <thead class="text-xs text-gray-900 uppercase bg-blue-200 text-center ">
                             <tr>
@@ -70,12 +63,11 @@ $storedData = $_SESSION["deliveries"];
                             </tr>
                         </thead>
 
-                        <tbody class=" text-center">
+                        <tbody class=" text-center" id="searchResult">
                             <?php
                             $id = 0;
                             if (isset($storedData)) {
                                 foreach ($storedData as $delivery) { ?>
-
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
                                             <?= ++$id; ?>.
@@ -104,26 +96,26 @@ $storedData = $_SESSION["deliveries"];
                             <?php } else { ?>
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
-                                        
+
                                     </th>
                                     <td class="px-6 py-4">
-                                        
+
                                     </td>
                                     <td class="px-6 py-4">
-                                        
+
                                     </td>
                                     <td class="px-6 py-4">
-                                        
+
                                     </td>
 
                                     <td class="px-6 py-4 ">
-                                       
+
                                     </td>
                                     <td class=" pr-2 py-4 ">
-                                        
+
                                     </td>
                                     <td class="px-6 py-4">
-                                        
+
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -136,7 +128,7 @@ $storedData = $_SESSION["deliveries"];
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <div id="detailPopup" class=" max-lg:left-40 space-y-3 absolute top-[30%] left-[35%] p-4 shadow-lg rounded-md bg-gray-300 hidden">
             <div>
                 <span>Customer Name : </span>

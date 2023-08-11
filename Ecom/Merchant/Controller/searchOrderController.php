@@ -5,7 +5,6 @@ include "../Model/model.php";
 $merchantEmail = $_SESSION["merchant_ID"];
 $searchName = $_POST["searchText"];
 
-
 $sql =  $pdo->prepare(
     "SELECT m_order.generate_id,m_customer.username,m_order.order_date,m_order.payment_status,m_order.payment_id 
     FROM m_customer 
@@ -14,6 +13,7 @@ $sql =  $pdo->prepare(
     JOIN m_merchant 
     ON m_merchant.id = m_order.merchant_id
     WHERE m_merchant.email=:email
+    AND m_order.delivery_status = 0
     AND m_order.generate_id LIKE :search;
     "
 );
@@ -24,7 +24,6 @@ $sql->bindValue(":email", $merchantEmail);
 $sql->execute();
 
 $orders = $sql->fetchAll(PDO::FETCH_ASSOC);
-// echo "<pre>";
+
 echo json_encode($orders);
 
-// print_r($orders);

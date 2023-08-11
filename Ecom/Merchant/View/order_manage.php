@@ -30,7 +30,7 @@ include "../Controller/orderController.php";
             <div class=" py-5 w-60">
                 <input type="search" class="inputBox" placeholder="Search Here" id="search">
             </div>
-            <div class="relative overflow-x-auto py-5 px-5 rounded-lg shadow-xl border-2 border-blue-950">
+            <div class="relative overflow-x-auto mt-3 p-5 rounded-lg shadow-xl border-2 border-blue-950">
                 <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center">
                         <tr>

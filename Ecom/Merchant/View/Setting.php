@@ -1,6 +1,6 @@
 <?php
 include "./sidebar.php";
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,17 +20,6 @@ session_start();
 </head>
 
 <body>
-    <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center ml-56">
-        <div class="pl-2">
-            <p id="date_time"></p>
-        </div>
-        <div>
-            <ul class="flex space-x-5 items-center pr-3">
-                <li><ion-icon name="notifications-outline" class="text-xl"></ion-icon></li>
-                <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
-            </ul>
-        </div>
-    </header>
     <div class="ml-56">
         <p class="font-poppins mt-2 font-semibold text-xl pl-5">Setting</p>
         <section class=" p-5">
@@ -85,11 +74,7 @@ session_start();
                                     <label for="oldPassword" class=" text-sm">Old Password<span class=" text-red-600">*</span></label>
                                     <span class="text-red-600">
                                         <?php
-<<<<<<< Updated upstream
                                         echo  $_SESSION['ERRORMESSAGE2']
-=======
-                                        echo $_SESSION['ERRORMESSAGE'];
->>>>>>> Stashed changes
                                         ?>
                                     </span>
                                     <input type="password" name="oldPassword" id="oldPassword" class="w-72 p-2 border border-solid  rounded-md mt-2 font-medium outline-none " placeholder=" Please enter old password" required>
