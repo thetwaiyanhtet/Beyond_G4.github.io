@@ -1,7 +1,7 @@
 <?php
 include ("../Model/model.php");
-// require_once("../Controller/newcartController.php");
-session_start();
+ require_once("../Controller/newcartController.php");
+//session_start();
 $cart = $_SESSION['carttle'];
 $placeholers = [];
 foreach ($cart as $item) {

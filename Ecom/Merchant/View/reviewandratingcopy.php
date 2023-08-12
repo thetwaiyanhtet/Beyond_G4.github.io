@@ -26,6 +26,7 @@ $reviewdetail =   $_SESSION["reviewDetail"];
     <link rel="stylesheet" href="./resources/css/navbar.css">
     <script src="./resources/js/dateandtime.js " defer></script>
     <script src="./resources/js/star.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class=" font-poppins">

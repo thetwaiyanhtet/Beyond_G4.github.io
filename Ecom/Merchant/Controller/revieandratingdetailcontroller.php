@@ -21,4 +21,4 @@ $sql->execute();
 $_SESSION["reviewDetail"] = $sql->fetchAll(PDO::FETCH_ASSOC);
 $reviewData = $_SESSION["reviewDetail"];
 
-header("Location: ../View/reviewandratingcopy.php ");
+ header("Location: ../View/reviewandratingcopy.php ");

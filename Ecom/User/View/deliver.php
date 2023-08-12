@@ -1,6 +1,6 @@
 <?php
 session_start();
-$tot = $_SESSION['carted'];
+// $tot = $_SESSION['carted'];
 ?>
 
 <!DOCTYPE html>
