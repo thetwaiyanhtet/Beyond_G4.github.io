@@ -1,11 +1,12 @@
 <?php
 
 
-include "../Controller/common/commonFunction.php";
+// include "../Controller/common/commonFunction.php";
 
 session_start();
 $username = $_POST["username"];
 
+echo $username;
 if (isset($_POST["username"])) {
     $_SESSION["username"] = $username;
 }
@@ -27,7 +28,7 @@ $_SESSION["users"]  = $sql->fetchAll(PDO::FETCH_ASSOC);
 // DB Connection
 
 
-header("Location: ../View/dashboard.php");
+ header("Location: ../View/dashboard.php");
 
 
 
