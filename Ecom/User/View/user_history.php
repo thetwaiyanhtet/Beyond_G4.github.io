@@ -1,7 +1,6 @@
 <?php
 include "../Controller/orderHistoryController.php";
 
-// $rating = $_SESSION["data"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -212,8 +211,7 @@ include "../Controller/orderHistoryController.php";
                                                             </div>
 
                                                             <label for="message"></label>
-                                                            <textarea id="message" name="message" rows="4" class="mb-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500" placeholder="Write your review here..."></textarea>
-
+                                                            <textarea required id="message" name="message" rows="4" class="mb-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500" placeholder="Write your review here..."></textarea>
                                                             <button data-modal-hide="popup-modal" type="submit" class="text-white bg-purple-400  focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                                                                 Submit
                                                             </button>
