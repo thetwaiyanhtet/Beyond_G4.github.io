@@ -95,12 +95,8 @@ include "./header.php";
         </li>
       </ul>
     </div>
-
-
-
-
-
   </div>
+
   <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-sky-300 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">
     <div>
       <div class=" border-b-2 border-gray-200 text-center">
@@ -115,8 +111,8 @@ include "./header.php";
     </div>
   </section>
 
-
 </body>
+
 <script>
   // Get references to the popup and buttons
   const logoutPopup = document.getElementById("logoutPopup");

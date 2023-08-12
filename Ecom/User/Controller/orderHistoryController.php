@@ -48,6 +48,8 @@ $purchasedCount = $purchasedCountSql->fetch(PDO::FETCH_ASSOC);
 $orders = $sql->fetchAll(PDO::FETCH_ASSOC);
 $images = $imgSql->fetchAll(PDO::FETCH_ASSOC);
 
+
+
 $Images = [];
 for ($i=0; $i < count($images) ; $i++) { 
     if(!in_array($images[$i]["generate_id"],$Images))
@@ -69,9 +71,9 @@ for ($i=0; $i < count($Images) ; $i++) {
 
 
 
-echo "<pre>";
-// print_r($orders);
-print_r($imgtmp);
-// print_r($purchasedCount);
-echo "</pre>";
+// echo "<pre>";
+// // print_r($orders);
+// print_r($imgtmp);
+// // print_r($purchasedCount);
+// echo "</pre>";
 ?>
