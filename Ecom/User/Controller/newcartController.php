@@ -61,5 +61,8 @@ $uniqueArray = uniqueAssoc($cartass);
 
 $cart =  $uniqueArray;
 
-// header("Location: ../View/mainPage.php");
+$_SESSION['carttle'] = $cart;
+
+
+ header("Location: ../View/mainPage.php");
 

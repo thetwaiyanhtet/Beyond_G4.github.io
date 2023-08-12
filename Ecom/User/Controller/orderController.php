@@ -1,7 +1,5 @@
 <?php
 
-echo "<pre>";
-print_r($_POST);
 $strquanti = $_POST['quantiarr'];
 session_start();
 $totamt = $_POST['delitotal'];
