@@ -123,21 +123,19 @@ $verifyData = $_SESSION["verifyData"];
                     </a>
                 </div>
 
-            <main class=" flex-wrap flex justify-center dark:bg-linear_dark md:w-[70%] w-[50%] pb-10 md:p-3 p-1">
-                <div class=" my-5 flex-col space-y-3">
-                    <div>
-                        <p class=" font-philosopher text-3xl">My Profile</p>
-                        <p>Manage and protect your account</p>
-                    </div>
-                    <div class=" pt-5">
-                        <div class=" flex-col space-y-3">
-                            <div class=" w-40 h-40 border border-dashed rounded-full border-gray-400 flex justify-center items-center">
-                                <label for="photo1">
-                                    <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
-                                </label>
-                                <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo">
-                            </div>
+                <main class=" dark:bg-gray-800 bg-white px-10 my-5 mx-auto w-[100%] md:w-3/4 md:flex flex-col border border-gray-200 rounded-lg shadow dark:border-gray-700 dark:text-white">
+                    <div class=" my-5  w-[100%] space-y-3">
+                        <div>
+                            <p class=" font-philosopher text-3xl text-center">My Profile</p>
+                            <p class="text-center">Manage and protect your account</p>
                         </div>
+                        <div class=" w-40 h-auto border border-dashed rounded-full border-gray-400 m-auto ">
+                            <label for="photo1">
+                                <img src="../View/resources/img/product_image.png" id="photoimg" alt="" class=" scale-90">
+                            </label>
+                            <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo">
+                        </div>
+
                     </div>
 
                     <div class=" w-full m-auto space-y-4 flex flex-wrap">

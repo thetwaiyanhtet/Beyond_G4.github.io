@@ -16,7 +16,7 @@ $sql = $pdo->prepare(
     JOIN m_product
     ON m_product.id = m_order_details.product_id
     WHERE m_customer.email = :email
-    GROUP BY m_merchant.id
+    GROUP BY m_merchant.id,m_order.generate_id
     "
 );
 
@@ -72,8 +72,8 @@ for ($i=0; $i < count($Images) ; $i++) {
 
 
 // echo "<pre>";
-// // print_r($orders);
-// print_r($imgtmp);
-// // print_r($purchasedCount);
+// print_r($orders);
+// // print_r($imgtmp);
+// // // print_r($purchasedCount);
 // echo "</pre>";
 ?>
