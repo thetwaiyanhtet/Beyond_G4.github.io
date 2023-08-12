@@ -1,5 +1,4 @@
 <?php
-//session_start();
 include "./sidebar.php";
 include "../Controller/productListController.php";
 
@@ -27,17 +26,6 @@ $result = $_SESSION["m_product"];
 
 <body class="">
     <main class=" ml-56">
-        <!-- <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class=" pl-2">
-                <p id="date_time"></p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="./resources/img/amazfit.png" alt="..." width="55px"></li>
-                </ul>
-            </div>
-        </header> -->
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class=" flex-col justify-center px-5 py-1">

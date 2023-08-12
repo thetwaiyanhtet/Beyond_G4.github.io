@@ -14,7 +14,6 @@ $logotmp = $_FILES["logo"]["tmp_name"];
 if (move_uploaded_file($logotmp,"../../Storage/profile/".$logo)) {
   
 
-
     $sql = $pdo->prepare(
         "UPDATE m_logoandname SET 
     `logo`= :logo,
@@ -27,6 +26,8 @@ if (move_uploaded_file($logotmp,"../../Storage/profile/".$logo)) {
     $sql->bindValue(":logo", "../../Storage/profile/".$logo);
     
     $sql->execute();
+    print_r($sql);
 
-    header("Location: ../View/updatelogoAndName.php ");
+
 }}
+header("Location: ../View/updatelogoAndName.php ");

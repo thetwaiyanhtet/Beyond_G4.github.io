@@ -1,7 +1,7 @@
 <?php
 
-  include "../Controller/wishshowController.php";
-  $wishlist = $uniqueAssocArray;
+include "../Controller/wishshowController.php";
+$wishlist = $uniqueAssocArray;
 ?>
 
 
@@ -31,8 +31,8 @@
     </script>
 </head>
 
-<body class=" font-poppins">
-    <nav class=" bg-violet-300 dark:bg-color-primary-dark  w-full z-20 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
+<body class="bg-purple-200 dark:bg-color-primary-dark ">
+    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
                 <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
@@ -40,7 +40,8 @@
             </a>
 
             <div class="flex items-center md:order-2">
-                <ion-icon name="cart-outline" class="text-xl dark:text-white"></ion-icon>
+                <ion-icon name="cart-outline" class="text-xl dark:text-white text-black"></ion-icon>
+
                 <button id="theme-toggle" type="button" class="text-gray-900 dark:text-white focus:outline-none  rounded-lg text-sm p-2.5">
                     <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -57,14 +58,14 @@
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                     <div class="px-4 py-3">
                         <span class="block text-sm text-gray-900 dark:text-white">User's name</span>
-                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@something.com</span>
+                        <span class="block text-xs  text-gray-500 truncate dark:text-gray-400">name@something.com</span>
                     </div>
                     <ul class="py-2" aria-labelledby="user-menu-button">
                         <li>
                             <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
                         </li>
                         <li>
-                            <a href="./userCart.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
+                            <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
                         </li>
                         <li>
                             <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
@@ -85,43 +86,50 @@
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:border-gray-700">
                     <li>
-                        <a href="./mainPage.php" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500 font-bold" aria-current="page">Home</a>
+                        <a href="./mainPage.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-purple-500 md:dark:hover:bg-transparent dark:border-gray-700 font-bold" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="./aboutUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">About Us</a>
+                        <a href="./aboutUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-purple-500 md:dark:hover:bg-transparent dark:border-gray-700 font-bold">About Us</a>
                     </li>
                     <li>
-                        <a href="./contactUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold">Contact</a>
+                        <a href="./contactUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-purple-500 md:dark:hover:bg-transparent dark:border-gray-700 font-bold">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="flex flex-wrap mt-4 w-auto h-auto md:space-x-24 ">
-        <div class="md:flex flex-col md:m-5 m-2 space-y-5">
-            <a href="./userProfileEditUpd.php"><button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Profile</button></a>
-            <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">WishList</button>
-            <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">History</button>
-            <button type="button" class="w-28 border border-solid border-black rounded-md p-2 hover:border-purple-600 hover:border-2">Notification</button>
+    <div class="flex flex-wrap w-auto h-auto  mt-24">
+        <div class="md:flex flex-col m-5 space-y-5 w-[100%] md:w-44">
+            <a href="./userProfileEditUpd.php">
+                <button type="button" class="w-36  bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">Manage Profile</button>
+            </a>
+            <a href="./Wishlist2.php">
+                <button type="button" class="w-36 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">WishList</button>
+            </a>
+            <a href="./user_history.php">
+                <button type="button" class="w-36 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">History</button>
+            </a>
+            <a href="./orderNotification.php"> <button type="button" class="w-36 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">Notification</button>
+            </a>
         </div>
         <div class="grid justify-center items-center md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 md:ml-0 ml-5 mb-5">
             <?php foreach ($wishlist as $key => $value) { ?>
                 <div class=" w-44 h-auto border border-solid border-black rounded-md">
-                <img src="../..<?= $value['p_one'] ?>" alt="photo" class=" w-24 mx-auto">
-                <div class="text-center">
-                    <p class=" font-poppins"><?= $value['name'] ?></p>
-                    <p class="mt-2 font-poppins text-blue-800"><?= $value['store_name'] ?></p>
-                    <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <a href="../Controller/delwishlistitemsController.php?ppid=<?= $value['id'] ?>" class="m-2 font-poppins underline hover:no-underline">remove</a>
+                    <img src="../..<?= $value['p_one'] ?>" alt="photo" class=" w-24 mx-auto">
+                    <div class="text-center">
+                        <p class=" font-poppins"><?= $value['name'] ?></p>
+                        <p class="mt-2 font-poppins text-blue-800"><?= $value['store_name'] ?></p>
+                        <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
+                        <a href="../Controller/delwishlistitemsController.php?ppid=<?= $value['id'] ?>" class="m-2 font-poppins underline hover:no-underline">remove</a>
+                    </div>
                 </div>
-            </div>
-          <?php  } ?>
-           
+            <?php  } ?>
+
         </div>
     </div>
     <section id="footer">
-        <div class="relative bg-purple-300 dark:bg-linear_dark mt-20 dark:text-white">
-            <div class="container py-5 ">
+        <div class="relative bg-purple-300 dark:bg-color-primary-dark dark:text-white border-t border-t-transparent dark:border-t-slate-200">
+            <div class="container pl-12 py-5 ">
                 <div class="grid gap-10 md:grid-cols-3 pb-10">
                     <div class="space-y-6">
                         <img src="./resources/img/logo.png" class="h-20" alt="beyond Logo" />
@@ -154,7 +162,7 @@
                         <h4 class="font-bold text-lg">Newsletter</h4>
                         <p class="leading-relaxed">Subscribe With Email And Loads Of News Will Be Sent To You</p>
                         <div class="flex items-center">
-                            <input type="text" class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
+                            <input type="text" class="w-3/4 text-black bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
 
                             <button type="submit" class="px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90 border border-solid bg-slate-900">
                                 <i class="fa-solid fa-chevron-right text-white"></i>
@@ -167,7 +175,6 @@
                 </div>
             </div>
         </div>
-        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold"><ion-icon name="arrow-up-outline"></ion-icon></button>
     </section>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
