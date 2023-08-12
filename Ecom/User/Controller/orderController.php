@@ -61,10 +61,10 @@ foreach ($carted as $index => $chunk) {
     $sql = $pdo->prepare(
         "INSERT INTO m_order_details (order_id,merchant_id, product_id, quantity, price_per_unit)
 VALUES
-   ((SELECT MAX(id) FROM m_order),$productid,(SELECT merchant_id
+   ((SELECT MAX(id) FROM m_order),(SELECT merchant_id
 FROM m_product
 WHERE m_product.id = $productid
-),$quantity[$index], $productprice)"
+),$productid,$quantity[$index], $productprice)"
     );
     $sql->execute();
 };
@@ -74,5 +74,6 @@ JOIN m_order_details od ON p.id = od.product_id
 SET p.instock = p.instock - od.quantity
 WHERE od.order_id = (SELECT MAX(id) FROM m_order)");
 $productQuanti->execute();
+unset($_SESSION['usercart']);
 
 header("Location: ../View/orderConfirm.php");
