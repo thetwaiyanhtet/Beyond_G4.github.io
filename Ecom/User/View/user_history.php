@@ -21,6 +21,7 @@ include "../Controller/orderHistoryController.php";
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Style the star outline */
         .star-rating label {
@@ -37,14 +38,7 @@ include "../Controller/orderHistoryController.php";
             /* Change to your desired filled star color */
         }
     </style>
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body class="bg-purple-200 dark:bg-color-primary-dark ">
@@ -285,6 +279,12 @@ include "../Controller/orderHistoryController.php";
 
 
     <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
         document.addEventListener("DOMContentLoaded", function() {
             <?php
             if (isset($_SESSION["review_submitted"]) && $_SESSION["review_submitted"]) {
@@ -297,6 +297,7 @@ include "../Controller/orderHistoryController.php";
             }
             ?>
         });
+
 
         const starLabels = document.querySelectorAll('.star-rating label');
         //const starCountDisplay = document.getElementById('star-count');
