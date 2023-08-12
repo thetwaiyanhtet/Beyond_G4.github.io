@@ -74,5 +74,6 @@ JOIN m_order_details od ON p.id = od.product_id
 SET p.instock = p.instock - od.quantity
 WHERE od.order_id = (SELECT MAX(id) FROM m_order)");
 $productQuanti->execute();
+unset($_SESSION['usercart']);
 
 header("Location: ../View/orderConfirm.php");
