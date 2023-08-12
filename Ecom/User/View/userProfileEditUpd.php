@@ -135,6 +135,7 @@ $verifyData = $_SESSION["verifyData"];
                             </label>
                             <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo">
                         </div>
+
                     </div>
             </div>
 
