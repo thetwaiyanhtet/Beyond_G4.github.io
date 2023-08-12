@@ -123,21 +123,21 @@ $verifyData = $_SESSION["verifyData"];
                     </div>
             </a>
 
-            <a href="./userCart.php">
+            <a href="">
                 <div class=" settingBar lg:mr-0 mr-3 dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/cart-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
                     <p class=" lg:w-40 w-10 text-center uppercase dark:text-white">cart</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
-            <a href="./Wishlist.php">
+            <a href="./Wishlist2.php">
                 <div class=" settingBar dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/heart-line.svg" alt="..." class=" lg:w-[30px] w-[20px]">
                     <p class="lg:w-40 w-20 text-center uppercase dark:text-white">wishlist</p>
                     <ion-icon name="chevron-forward-outline" class=" lg:text-2xl text-base"></ion-icon>
                 </div>
             </a>
-            <a href="./history.php">
+            <a href="./user_history.php">
                 <div class=" settingBar lg:mr-0 mr-3 dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/history.svg" alt="..." class=" lg:w-[30px] w-[20px]">
                     <p class=" lg:w-40 w-10 text-center uppercase dark:text-white">history</p>

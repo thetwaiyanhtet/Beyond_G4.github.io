@@ -123,61 +123,59 @@ $verifyData = $_SESSION["verifyData"];
                     </a>
                 </div>
 
-            <main class=" flex-wrap flex justify-center dark:bg-linear_dark md:w-[70%] w-[50%] pb-10 md:p-3 p-1">
-                <div class=" my-5 flex-col space-y-3">
-                    <div>
-                        <p class=" font-philosopher text-3xl">My Profile</p>
-                        <p>Manage and protect your account</p>
-                    </div>
-                    <div class=" pt-5">
-                        <div class=" flex-col space-y-3">
-                            <div class=" w-40 h-40 border border-dashed rounded-full border-gray-400 flex justify-center items-center">
-                                <label for="photo1">
-                                    <img src="../View/resources/img/product image.jpg" id="photoimg" alt="">
-                                </label>
-                                <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo">
-                            </div>
+                <main class=" dark:bg-gray-800 bg-white px-10 my-5 mx-auto w-[100%] md:w-3/4 md:flex flex-col border border-gray-200 rounded-lg shadow dark:border-gray-700 dark:text-white">
+                    <div class=" my-5  w-[100%] space-y-3">
+                        <div>
+                            <p class=" font-philosopher text-3xl text-center">My Profile</p>
+                            <p class="text-center">Manage and protect your account</p>
+                        </div>
+                        <div class=" w-40 h-auto border border-dashed rounded-full border-gray-400 m-auto ">
+                            <label for="photo1">
+                                <img src="../View/resources/img/product_image.png" id="photoimg" alt="" class=" scale-90">
+                            </label>
+                            <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo">
                         </div>
                     </div>
+            </div>
 
-                    <div class=" w-full m-auto space-y-4 flex flex-wrap">
-                        <div class="space-y-3 w-3/5 m-auto">
-                            <input type="text" placeholder="Username" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="username">
+            <div class=" w-full m-auto space-y-4 flex flex-wrap">
+                <div class="space-y-3 w-3/5 m-auto">
+                    <input type="text" placeholder="Username" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="username">
 
-                            <input type="text" placeholder="Name" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="name" required>
+                    <input type="text" placeholder="Name" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="name" required>
 
-                            <input type="text" placeholder="Email" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="email">
+                    <input type="text" placeholder="Email" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="email">
 
-                            <input type="text" placeholder="Phone Number" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="phone_no" required>
+                    <input type="text" placeholder="Phone Number" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="phone_no" required>
 
-                            <p class="text-xs pl-2 inline font-bold text-gray-500">Date of Birth - </p>
-                            <input type="date" class="rounded-md  w-40 text-gray-900 border border-gray-300 dark:text-white  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="dob" required>
+                    <p class="text-xs pl-2 inline font-bold text-gray-500">Date of Birth - </p>
+                    <input type="date" class="rounded-md  w-40 text-gray-900 border border-gray-300 dark:text-white  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="dob" required>
 
-                            <input type="text" placeholder="Street" class="profileInputBox  w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="street" required>
+                    <input type="text" placeholder="Street" class="profileInputBox  w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="street" required>
 
 
-                            <p class="text-xs pl-2 pr-4 inline font-bold text-gray-500">Township - </p>
-                            <select name="township" class=" profileInputBox w-32 rounded-md  text-gray-900 dark:text-white  border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
-                                <?php foreach ($resultT as $township) { ?>
-                                    <option value="<?= ++$tID ?>"><?= $township["t_name"]; ?></option>
-                                <?php } ?>
-                            </select> 
+                    <p class="text-xs pl-2 pr-4 inline font-bold text-gray-500">Township - </p>
+                    <select name="township" class=" profileInputBox w-32 rounded-md  text-gray-900 dark:text-white  border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
+                        <?php foreach ($resultT as $township) { ?>
+                            <option value="<?= ++$tID ?>"><?= $township["t_name"]; ?></option>
+                        <?php } ?>
+                    </select>
 
-                            <p class="text-xs pl-2 inline font-bold text-gray-500">Region/State - </p>
-                            <select name="region" class="profileInputBox rounded-md w-32 text-gray-900 dark:text-white  border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
-                                <?php foreach ($resultR as $region) { ?>
-                                    <option value="<?= ++$rID ?>"><?= $region["r_name"]; ?></option>
-                                <?php } ?>
-                            </select><br>
+                    <p class="text-xs pl-2 inline font-bold text-gray-500">Region/State - </p>
+                    <select name="region" class="profileInputBox rounded-md w-32 text-gray-900 dark:text-white  border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
+                        <?php foreach ($resultR as $region) { ?>
+                            <option value="<?= ++$rID ?>"><?= $region["r_name"]; ?></option>
+                        <?php } ?>
+                    </select><br>
 
-                            <div class="space-x-3 pb-3 float-right ">
-                                <button type="submit" class=" text-white bg-purple-500 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800 shadow-md ">Save</button>
-                                <button class="  text-white bg-red-500 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600  dark:focus:ring-red-800 shadow-md ">Cancel</button>
-                            </div>
-                        </div>
-
+                    <div class="space-x-3 pb-3 float-right ">
+                        <button type="submit" class=" text-white bg-purple-500 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800 shadow-md ">Save</button>
+                        <button class="  text-white bg-red-500 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600  dark:focus:ring-red-800 shadow-md ">Cancel</button>
                     </div>
-                </main>
+                </div>
+
+            </div>
+            </main>
             </div>
         </form>
     </section>
