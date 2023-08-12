@@ -150,10 +150,10 @@ $cartloop = $_SESSION["placeholdcart"];
                                 <img class=" w-16" src="../..<?= $value['p_one'] ?>" alt="">
                                 <div name="pname" class="w-[35px] h-[32px]  rounded-md flex items-center justify-center"><?= $value['name'] ?></div>
                                 <div class="flex w-[60px] md:w-[80px] h-[26px]  border-gray-600 rounded-md items-center justify-evenly">
-                                    <input class="w-20 rounded-md iquantity" name="pquantity" onchange="subTotal()" min="1" max="100" type="number" value="1">
+                                    <input class="w-16 rounded-md iquantity" name="pquantity" onchange="subTotal()" min="1" max="100" type="number" value="1">
                                 </div>
                                 <p>$<?= $value['sellprice'] ?> </p>
-                                <input type="hidden" class="iprice" name="psellprice" value="<?= $value['sellprice'] ?>">
+                                <input type="hidden" class="iprice " name="psellprice" value="<?= $value['sellprice'] ?>">
                                
                                 <p class="itotal"></p>
                                 <input type="hidden" name="id" value="<?= $value['id'] ?>">
@@ -173,29 +173,31 @@ $cartloop = $_SESSION["placeholdcart"];
 
                 </div>
                 <div>
+                    <form action="../Controller/orderController.php" method="post">
                     <div class="w-[180px] md:w-[202px] h-[100px] md:h-[113px] bg-[#FDFDFD] rounded-tl-md rounded-tr-md ml-5 md:ml-0">
                         <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-[136px] h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
                         <div class="flex item py-[4%]">
                             <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
-                            <p class="ml-[44px] font-bold text-xs md:text-sm " id="gtotal"></p>
+                            <input readonly class="ml-[44px] font-bold text-xs w-[60px] md:text-sm " id="gtotal" name="stotal"></input>
+                            <input type="hidden" name="quantiarr" id="quantiarray" >
                         </div>
                         <div class="flex">
                             <p class="ml-[15px] font-bold text-xs md:text-sm">Shipping fee</p>
-                            <p class="ml-[25px] font-bold text-xs md:text-sm">$10</p>
+                            <div class="ml-[25px] font-bold text-xs md:text-sm" name="name">$10</div>
                         </div>
                     </div>
 
                     <div class="flex w-[180px] md:w-[202px] h-[40px] items-center md:justify-around rounded-bl-md rounded-br-md bg-[#D9D9D9] 
                        border-2 space-x-12 md:space-x-0 ml-5 md:ml-0 font-bold">
                         <p class="text-xs md:text-sm ml-9 md:ml-0">Total</p>
-                        <p class="text-xs md:text-sm" id="delitotal"></p>
+                        <input readonly class="text-xs md:text-sm w-[60px] bg-transparent" id="delitotal" name="delitotal">
                     </div>
                    
                     <div class="ml-[110px] mt-3 hidden md:block">
-                       <input type="submit"  class="w-[90px] h-[28px] bg-[#314755] font-bold text-xs rounded-lg text-white">Checkout</input></a>
+                       <input type="submit"  class="w-[90px] h-[28px] bg-slate-600 font-bold text-xs text-black cursor-pointer rounded-lg " value="Checkout" >
                         <div class="mt-2"><button class="w-[100px] h-[40px] bg-[#3147558b] font-bold text-xs rounded-lg text-white">Continue Shopping</button></div>
                     </div>
-                  
+                    </form>
                 </div>
             </div>
         </section>
@@ -205,21 +207,28 @@ $cartloop = $_SESSION["placeholdcart"];
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     <script>
         var gt = 0;
+        var quanti = [];
         var iprice = document.getElementsByClassName("iprice");
         var itotal = document.getElementsByClassName("itotal")
         var iquantity = document.getElementsByClassName("iquantity");
         var gtotal = document.getElementById("gtotal");
         var delitotal = document.getElementById("delitotal");
+        var quantiarray = document.getElementById("quantiarray");
 
         function subTotal() {
             gt = 0;
+            quanti = [];
             for (let i = 0; i < iprice.length; i++) {
                 itotal[i].innerHTML = "$"+(iprice[i].value) * (iquantity[i].value);
                 gt= gt + (iprice[i].value) * (iquantity[i].value);
+                quanti.push(iquantity[i].value);
+                
             }
-            gtotal.innerText = "$"+gt;
+            gtotal.value = "$"+gt;
             var tot = gt + 10 ;
-            delitotal.innerText = "$" + tot;
+            delitotal.value = "$" + tot;
+            quantiarray.value = quanti;
+          
         }
         subTotal();
     </script>

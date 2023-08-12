@@ -8,7 +8,9 @@ $pwd = "";
 
 //Connection
 $pdo = new PDO(
-    "mysql:host=$hostname;port=$port;dbname=$dbname",
+    "mysql:host=$hostname;
+    port=$port;
+    dbname=$dbname",
     $uname,
     $pwd
 );
