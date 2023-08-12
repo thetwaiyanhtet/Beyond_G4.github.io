@@ -18,6 +18,7 @@ if (isset($_POST["send"])) {
         $sql->execute();
         $merchant_data = $sql->fetch(PDO::FETCH_ASSOC);
         $merchant_id = $merchant_data['id'];
+        echo $merchant_id;
 
         if (preg_match($pattern, $phNo)) {
             move_uploaded_file($imgTmp,"../../Storage/profile/".$img);
@@ -30,22 +31,20 @@ if (isset($_POST["send"])) {
             $sql->bindValue(":img", "/Storage/profile/" . $img);
             $sql->execute();
     
-            // Redirect to a success page after successful update
             header("Location: ../View/Setting.php");
             exit();
         }else{
             $_SESSION['error'] = "Invalid Phone format";
-            // echo $_SESSION['error'];
+             echo $_SESSION['error'];
             header("Location: ../View/Setting.php");
         }
     } catch (PDOException $e) {
         // Handle database errors here
         echo "Database Error: " . $e->getMessage();
-        // header("Location: ../View/error_page.html");
+         header("Location: ../View/404page.html");
         exit();
     }
 } else {
-    // Redirect to a 404 page if the form was not submitted
     header("Location: ../View/Setting.php");
     exit();
 }

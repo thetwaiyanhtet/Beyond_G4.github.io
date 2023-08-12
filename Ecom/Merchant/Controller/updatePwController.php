@@ -15,8 +15,8 @@ if(isset($_POST['update'])){
     $merchantInfo = $sql->fetch(PDO::FETCH_ASSOC);  
     $merchantPw = $merchantInfo['password']; 
     if(password_verify($oldPassword,$merchantPw)){
-       if (strlen($newPassword) && strlen($confirmPassword) < 8 ) {
-        $_SESSION["message1"] = "Password must be a least 8 character long";
+       if (strlen($newPassword) < 8 ) {
+        $_SESSION["message"] = "Password must be a least 8 character long";
             header("Location: ../View/Setting.php");
        }elseif ($newPassword == $confirmPassword) {
         $update = $pdo ->prepare("UPDATE m_merchant SET password = :password WHERE email=:email");
@@ -25,11 +25,11 @@ if(isset($_POST['update'])){
         $update->execute();
         header("Location: ../View/loading.php");
        }else{
-        $_SESSION["message1"]= "New Password and confirm password don't match";
+        $_SESSION["message"]= "New Password and confirm password don't match";
         header("Location: ../View/Setting.php");
        }
     }else{
-        $_SESSION["message2"] = "Old password was wrong";
+        $_SESSION["message1"] = "Old password was wrong";
         header("Location: ../View/Setting.php");
     }
   }
