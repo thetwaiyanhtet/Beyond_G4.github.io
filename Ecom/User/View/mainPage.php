@@ -381,7 +381,7 @@ $verifyData = $_SESSION["verifyData"];
                                     </div>
                                 </div>
                             </div> -->
-                                <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="#">View Shop</a>
+                                <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="./storepage.php?id=<?= $latestShop['id'] ?>">View Shop</a>
                             </div>
 
                         </div>
