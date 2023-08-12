@@ -61,10 +61,10 @@ foreach ($carted as $index => $chunk) {
     $sql = $pdo->prepare(
         "INSERT INTO m_order_details (order_id,merchant_id, product_id, quantity, price_per_unit)
 VALUES
-   ((SELECT MAX(id) FROM m_order),$productid,(SELECT merchant_id
+   ((SELECT MAX(id) FROM m_order),(SELECT merchant_id
 FROM m_product
 WHERE m_product.id = $productid
-),$quantity[$index], $productprice)"
+),$productid,$quantity[$index], $productprice)"
     );
     $sql->execute();
 };
