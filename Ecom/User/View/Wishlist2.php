@@ -1,7 +1,7 @@
 <?php
 
-  include "../Controller/wishshowController.php";
-  $wishlist = $uniqueAssocArray;
+include "../Controller/wishshowController.php";
+$wishlist = $uniqueAssocArray;
 ?>
 
 
@@ -58,14 +58,14 @@
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                     <div class="px-4 py-3">
                         <span class="block text-sm text-gray-900 dark:text-white">User's name</span>
-                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@something.com</span>
+                        <span class="block text-xs  text-gray-500 truncate dark:text-gray-400">name@something.com</span>
                     </div>
                     <ul class="py-2" aria-labelledby="user-menu-button">
                         <li>
                             <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
                         </li>
                         <li>
-                            <a href="./userCart.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
+                            <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
                         </li>
                         <li>
                             <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
@@ -98,33 +98,33 @@
             </div>
         </div>
     </nav>
-    <div class="flex flex-wrap mt-4 w-auto h-auto md:space-x-24 ">
-        <div class="md:flex flex-col md:m-5 m-auto space-y-5 w-[100%] md:w-44 ">
-            <a href="./profileMenu.php">
-                <button type="button" class="w-32 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold">Profile</button>
+    <div class="flex flex-wrap w-auto h-auto  mt-24">
+        <div class="md:flex flex-col m-5 space-y-5 w-[100%] md:w-44">
+            <a href="./userProfileEditUpd.php">
+                <button type="button" class="w-36  bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">Manage Profile</button>
             </a>
             <a href="./Wishlist2.php">
-                <button type="button" class="w-32 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold">WishList</button>
+                <button type="button" class="w-36 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">WishList</button>
             </a>
             <a href="./user_history.php">
-                <button type="button" class="w-32 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold">History</button>
+                <button type="button" class="w-36 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">History</button>
             </a>
-            <a href="./orderNotification.php"> <button type="button" class="w-32 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold">Notification</button>
+            <a href="./orderNotification.php"> <button type="button" class="w-36 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">Notification</button>
             </a>
         </div>
         <div class="grid justify-center items-center md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 md:ml-0 ml-5 mb-5">
             <?php foreach ($wishlist as $key => $value) { ?>
                 <div class=" w-44 h-auto border border-solid border-black rounded-md">
-                <img src="../..<?= $value['p_one'] ?>" alt="photo" class=" w-24 mx-auto">
-                <div class="text-center">
-                    <p class=" font-poppins"><?= $value['name'] ?></p>
-                    <p class="mt-2 font-poppins text-blue-800"><?= $value['store_name'] ?></p>
-                    <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
-                    <a href="../Controller/delwishlistitemsController.php?ppid=<?= $value['id'] ?>" class="m-2 font-poppins underline hover:no-underline">remove</a>
+                    <img src="../..<?= $value['p_one'] ?>" alt="photo" class=" w-24 mx-auto">
+                    <div class="text-center">
+                        <p class=" font-poppins"><?= $value['name'] ?></p>
+                        <p class="mt-2 font-poppins text-blue-800"><?= $value['store_name'] ?></p>
+                        <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 font-poppins">add-$79</button>
+                        <a href="../Controller/delwishlistitemsController.php?ppid=<?= $value['id'] ?>" class="m-2 font-poppins underline hover:no-underline">remove</a>
+                    </div>
                 </div>
-            </div>
-          <?php  } ?>
-           
+            <?php  } ?>
+
         </div>
     </div>
     <section id="footer">
