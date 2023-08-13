@@ -1,9 +1,7 @@
 <?php
-
-$strquanti = $_POST['quantiarr'];
 session_start();
-$totamt = $_POST['delitotal'];
-
+$strquanti = $_SESSION['quantity'];
+$totamt = $_SESSION['delitotalamt'];
 $carted = $_SESSION["placeholdcart"];
 $userEmail = $_SESSION["user_ID"];
 ini_set('display_errors', 1);

@@ -1,6 +1,10 @@
 <?php
 session_start();
-// $tot = $_SESSION['carted'];
+$totalamount = $_POST['stotal'];
+$delitotalamt = $_POST['delitotal'];
+$_SESSION['totalamount'] = $_POST['stotal'];
+$_SESSION['delitotalamt'] = $_POST['delitotal'];
+$_SESSION['quantity']   = $_POST['quantiarr'];
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +111,7 @@ session_start();
 
                     </div>
                     <div class="flex flex-col max-lg:text-base items-end text-xl font-semibold">
-                        <p class="mb-5"><?= $tot['totprice'] ?></p>
+                        <p class="mb-5"><?= $totalamount  ?>.00</p>
                         <p class="mb-5">$10.00</p>
 
                     </div>
@@ -116,15 +120,15 @@ session_start();
                     <div>
                         <p class="mb-5">Total Amount</p>
                     </div>
-                    <?php
-                    $totprice = $tot['totprice'];
-                    $numericString = preg_replace("/[^0-9]/", "", $totprice);
-                    $intValue = substr($numericString, 0, -2);
-                    $addedValue = $intValue + 10;
+                    <!-- <?php
+                    // $totprice = $tot['totprice'];
+                    // $numericString = preg_replace("/[^0-9]/", "", $totprice);
+                    // $intValue = substr($numericString, 0, -2);
+                    // $addedValue = $intValue + 10;
                      
-                    ?>
+                    ?> -->
                     <div>
-                        <p class="mb-5">$ <?= $addedValue ?>.00</p>
+                        <p class="mb-5"><?= $delitotalamt?>.00</p>
                     </div>
                 </div>
 

@@ -1,7 +1,9 @@
 <?php
-include "../Controller/merchantaddressController.php";
+session_start();
 $addressandname = $_SESSION['m_cusaddress'];
-$tot = $_SESSION['carted'];
+$tot = $_SESSION["placeholdcart"];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -110,25 +112,22 @@ $tot = $_SESSION['carted'];
             <div class="flex flex-col max-lg:hidden  font-poppins">
                 <p class=" border-b-4 border-[#314755] pb-5 text-3xl text-center max-lg:text-xl font-bold">Your order</p>
                 <?php
-                $chunks = array_chunk($_SESSION['carted'], 6, true);
-                $lastIndex = count($chunks) - 1;
-                foreach ($chunks as $index => $chunk) {
-                    if ($index == $lastIndex) {
-                        continue;
-                    } ?>
-                    <form action="../Controller//orderController.php" method="post">
+                
+                foreach ($_SESSION["placeholdcart"] as $index => $chunk) { ?>
+                   
+                    <form action="../Controller/orderController.php" method="post">
                         <div class="flex mt-10 border-b-4 border-[#314755]   justify-center items-center">
                             <div class="mb-10 ">
-                                <img class="w-32" src="<?= $chunk["image_" . $index] ?>" alt="">
+                                <img class="w-32" src="../..<?= $chunk["p_one"] ?>" alt="">
                             </div>
                             <div class=" mx-5 flex flex-col  ">
                                 <div class="flex justify-between mb-5 space-x-5">
-                                    <span><?= $chunk["itemname_" . $index] ?></span>
+                                    <span><?= $chunk["name"] ?></span>
                                     <span></span>
                                 </div>
                                 <div>
-                                    <span><?= $chunk["quantity_" . $index] ?>pcs</span>
-                                    <span> <?= $chunk["price_" . $index] ?></span>
+                                    <!-- <span><?= $chunk["quantity_" . $index] ?>pcs</span> -->
+                                    <span> $<?= $chunk["sellprice"] ?></span>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +143,7 @@ $tot = $_SESSION['carted'];
                             <p class="mb-5">Total Amount</p>
                         </div>
                         <div>
-                            <p class="mb-5"><?= $tot['totprice'] ?></p>
+                            <p class="mb-5"><?=$_SESSION['delitotalamt']?></p>
                         </div>
                     </div>
             </div>

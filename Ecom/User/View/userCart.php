@@ -82,11 +82,11 @@ if (!empty($cartass)) {
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+    <!-- <style>
         * {
             outline: 1px solid red;
         }
-    </style>
+    </style> -->
 </head>
 <div id="session-data">
 
@@ -238,12 +238,12 @@ if (!empty($cartass)) {
 
 
                             <div class="bg-purple-300 dark:bg-purple-500 w-[100%] md:w-1/4 rounded-lg">
-                                <form action="../Controller/orderController.php" method="post">
+                                <form action="../View/deliver.php" method="post">
                                     <div class="">
                                         <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-[136px] h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
                                         <div class="flex item py-[4%]">
                                             <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
-                                            <input readonly class="ml-[44px] font-bold text-xs w-[60px] md:text-sm " id="gtotal" name="stotal"></input>
+                                            <input readonly class="ml-[44px] font-bold text-xs w-[60px] md:text-sm bg-transparent " id="gtotal" name="stotal"></input>
                                             <input type="hidden" name="quantiarr" id="quantiarray">
                                         </div>
                                         <div class="flex">
@@ -252,14 +252,14 @@ if (!empty($cartass)) {
                                         </div>
                                     </div>
 
-                                    <div class="flex h-[40px] items-center md:justify-around border-2 space-x-12 md:space-x-0  font-bold">
+                                    <div class="flex h-[40px] items-center md:justify-around mt-2  border-t-2 space-x-12 md:space-x-0  font-bold">
                                         <p class="text-xs md:text-sm ml-9 md:ml-0">Total</p>
                                         <input readonly class="text-xs md:text-sm w-[60px] bg-transparent" id="delitotal" name="delitotal">
                                     </div>
 
                                     <div class="ml-[110px] mt-3">
                                         <input type="submit" class="w-[90px] h-[28px] bg-slate-600 font-bold text-xs text-black cursor-pointer rounded-lg " value="Checkout">
-                                        <div class="mt-2"><button class="w-[100px] h-[40px] bg-[#3147558b] font-bold text-xs rounded-lg text-white">Continue Shopping</button></div>
+                                        <div class="m-2 rounded-md flex justify-center bg-[#3147558b]"><a href="./mainPage.php"> <button type="button"  class="w-[100px] h-[40px]  font-bold text-xs rounded-lg text-white">Continue Shopping</button></a></div>
                                     </div>
                                 </form>
                             </div>
