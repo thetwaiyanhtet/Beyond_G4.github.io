@@ -295,17 +295,18 @@ $verifyData = $_SESSION["verifyData"];
             <div>
                 <div class="flex overflow-y-scroll pb-6 h-96">
                 <div class="flex flex-wrap w-full  justify-around">
+                    <!-- <form action="../Controller/newcartController.php" method="post"> -->
                         <?php foreach ($AllProduct as $productDetail) { ?>
                             <div class="inline p-3">
                                 <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                                <!-- <form action="../Controller/newcartController.php" method="post"> -->
+                                <form action="../Controller/newcartController.php" method="post">
                                 <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                         <div class="w-56 m-auto p-2 h-44">
                                             <img class="w-40 h-40 m-auto" src="../../<?= $productDetail["p_one"] ?>" alt="">
                                         </div>
                                         <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                         <a href="../Controller/wishlistcart.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
-                                            <a href="../View/itemDetail.php?pid=<?= $productDetail["id"]; ?>"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
+                                            <a href="../View/itemDetail.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
 
                                         </div>
                                     </div>
@@ -318,7 +319,7 @@ $verifyData = $_SESSION["verifyData"];
                                     </div>
 
                                 </div>
-                                <!-- </form> -->
+                                </form>
                             </div>
                         <?php } ?>
                     </div>
