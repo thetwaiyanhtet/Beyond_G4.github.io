@@ -40,7 +40,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     );
 
     $orderSql = $pdo->prepare(
-        "SELECT m_product.name,m_merchant.store_name,m_order.total_amt,m_order.order_date
+        "SELECT m_product.name,m_merchant.store_name,m_order.total_amt,m_order.order_date,m_order_details.delivery_status
         FROM m_order
         JOIN m_customer 
         ON m_customer.id = m_order.customer_id
@@ -49,13 +49,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         JOIN m_product
         ON m_product.id = m_order_details.product_id
         JOIN m_merchant
-        ON m_merchant.id = m_order.merchant_id
+        ON m_merchant.id = m_order_details.merchant_id
         WHERE customer_id = :id
         GROUP BY m_order.generate_id "
     );
 
     $productsSql = $pdo->prepare(
-        "SELECT m_order.merchant_id,m_order.total_amt,m_order.order_date,m_product.name,m_order.generate_id,m_merchant.store_name,m_product.p_one,m_product.sellprice as unit_price
+        "SELECT m_order_details.merchant_id,m_order.total_amt,m_order.order_date,m_product.name,m_order.generate_id,m_merchant.store_name,m_product.p_one,m_product.sellprice as unit_price
         FROM m_customer 
         JOIN m_order 
         ON m_customer.id = m_order.customer_id 
@@ -64,7 +64,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         JOIN m_product 
         ON m_order_details.product_id = m_product.id
         JOIN m_merchant
-        ON m_order.merchant_id = m_merchant.id
+        ON m_order_details.merchant_id = m_merchant.id
         WHERE customer_id = :id;"
     );
 

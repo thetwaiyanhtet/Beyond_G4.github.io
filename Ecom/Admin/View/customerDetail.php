@@ -127,7 +127,7 @@ include "../Controller/customerDetailController.php";
                                     Date
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Shipping Status
+                                    Delivery Status
                                 </th>
 
                             </tr>
@@ -154,7 +154,11 @@ include "../Controller/customerDetailController.php";
                                         <?= $order["order_date"] ?>
                                     </td>
                                     <td class="px-6 py-4">
+                                        <?php if($order["delivery_status"] == 1) { ?>
                                         <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
+                                        <?php } elseif($order["delivery_status"] == 0){ ?>
+                                        <div class="w-[103px] h-[10px] bg-[#f3a13d] rounded-lg"></div>
+                                        <?php }?>
                                     </td>
                                 </tr>
                             <?php } ?>
