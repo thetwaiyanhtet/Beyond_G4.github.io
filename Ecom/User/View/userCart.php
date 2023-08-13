@@ -192,7 +192,7 @@ if (!empty($_SESSION['carttle'])) {
                         <div class=" h-auto bg-purple-200 dark:bg-color-primary-dark dark:text-white rounded-lg flex flex-wrap w-[100%]">
 
                             <div class=" w-[100%] md:w-3/4">
-                                <div class="flex justify-evenly space-x-14 py-2">
+                                <div class="flex justify-around space-x-16 py-2">
                                     <p class="font-semibold text-[12px] md:text-[16px]">Description</p>
                                     <p class="font-semibold text-[12px] md:text-[16px]">Name</p>
                                     <p class="font-semibold text-[12px] md:text-[16px]">Quantity</p>
