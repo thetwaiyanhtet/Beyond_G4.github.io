@@ -50,11 +50,11 @@ include "../Controller/overRatingController.php";
         <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
             <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
                 <div class="flex items-center justify-center">
-                    <img src="../../<?= $ItemDetails[0]["p_one"] ?>" alt="..." class=" w-64 h-64">
+                    <img src="../../<?= $ItemDetails[0]["p_three"] ?>" alt="..." class=" w-64 h-64">
                 </div>
                 <div class="flex items-center justify-center space-x-3">
-                    <img src="../../<?= $ItemDetails[0]["p_two"] ?>" alt="..." class=" w-24 h-24">
-                    <img src="../../<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-24 h-24">
+                    <img src="../../<?= $ItemDetails[0]["p_two"] ?>" alt="..." class=" w-20 h-20">
+                    <img src="../../<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-20 h-20">
                 </div>
             </div>
             <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">

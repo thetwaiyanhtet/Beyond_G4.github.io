@@ -1,3 +1,6 @@
+<?php
+include "../Controller/storePageController.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
