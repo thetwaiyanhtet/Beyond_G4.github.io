@@ -13,7 +13,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./resources/js/payment.js" defer></script>
-    <title>Delivery</title>
+    <title>Payment</title>
 </head>
 
 <body>
@@ -84,11 +84,12 @@
         </div>
 
     </div>
+    <form action="./confirmation.php" method="post">
     <div class=" font-poppins relative mt-10 mx-auto container">
         <div class="flex justif-center items-center flex-col">
             <div class="w-11/12 h-12 p-5 flex  bg-btn-color rounded-lg shadow-md">
                 <label class="flex items-center space-x-2 mb-5">
-                    <input type="radio" name="deli" class="form-checkbox w-6 h-6 ">
+                    <input type="radio" name="deli" value="0" class="form-checkbox w-6 h-6 ">
                     <span class="text-white font-bold">Visa</span>
                 </label>
             </div>
@@ -169,7 +170,7 @@
   
             <div class=" bg-btn-color w-full  mx-3 pt-3 rounded-md">
                 <label class="flex items-center rounded-md h-5 space-x-2 ml-5 mb-5">
-                    <input type="radio" name="deli" class="form-checkbox w-6 h-6 ">
+                    <input type="radio" name="deli" value="1" class="form-checkbox w-6 h-6 ">
                     <span class="text-white font-bold">KBZ pay</span>
                 </label>
             </div>
@@ -178,6 +179,7 @@
             <a href="./confirmation.php"> <button class=" text-white  py-2 px-7 rounded-md bg-[#314755]">Next Step ></button></a>
         </div>
     </div>
+    </form>
     </div>
 </body>
 

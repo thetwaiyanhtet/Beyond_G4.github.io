@@ -1,9 +1,9 @@
-<?php
+<!-- <?php
 //print_r($_POST);
-session_start();
-$_SESSION['carted'] = $_POST;
+// session_start();
+// $strquanti = $_POST['quantiarr'];
+// $totamt = $_POST['delitotal'];
+// header('Location: ../View/deliver.php');
 
-header('Location: ../View/deliver.php');
 
-
-?>
+?> -->
