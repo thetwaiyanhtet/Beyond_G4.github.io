@@ -29,9 +29,8 @@ $result = $_SESSION["m_product"];
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class=" flex-col justify-center px-5 py-1">
-                <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                    <h1 class=" text-lg font-bold font-philosopher pb-5">Overall Inventory</h1>
-                    <div class=" flex justify-between pb-3">
+                <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950"> -->        
+                    <!-- <div class=" flex justify-between pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" text-violet-600">Categories</div>
@@ -98,8 +97,8 @@ $result = $_SESSION["m_product"];
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
                         <p class=" font-philosopher font-bold text-lg">Products</p>

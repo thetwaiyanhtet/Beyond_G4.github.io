@@ -1,5 +1,17 @@
 <?php
 include "./sidebar.php";
+
+include "../../User/Controller/trendingProductController.php";
+include "../Controller/DashboardShowController.php";
+$review = $_SESSION["reviewCustomers"];
+$review_json = json_encode($review);
+$trending=$_SESSION["trandingProduct"];
+$trending_json = json_encode($trending);
+// echo "<pre>";
+// print_r($trending_json);
+// echo "</pre>";
+
+
 ?>
 
 <!DOCTYPE html>
@@ -28,17 +40,17 @@ include "./sidebar.php";
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Sales Overview</h1>
-                    <div class=" flex justify-between pb-3">
+                    <div class=" flex justify-evenly pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Sales.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>$832</p>
+                                    <p>$<?= $result["totalSales"] ?></p>
                                     <p>Sales</p>
                                 </div>
                             </div>
                         </div>
-                        <div class=" flex justify-center ">
+                        <!-- <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Revenue.png" alt="..."></div>
                                 <div class=" flex space-x-5">
@@ -46,12 +58,12 @@ include "./sidebar.php";
                                     <p>Revenue</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Profit.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>$868</p>
+                                    <p>$<?= $profit ?></p>
                                     <p>Profit</p>
                                 </div>
                             </div>
@@ -60,7 +72,7 @@ include "./sidebar.php";
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Cost.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>$12300</p>
+                                    <p>$<?= $result["totalCost"] ?></p>
                                     <p>Cost</p>
                                 </div>
                             </div>
@@ -75,7 +87,7 @@ include "./sidebar.php";
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Quantity.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>800</p>
+                                    <p><?= $result["quantityOnHand"] ?></p>
                                     <p class=" text-sm">Quantity in Hand</p>
                                 </div>
                             </div>
@@ -84,7 +96,7 @@ include "./sidebar.php";
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Categories.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>21</p>
+                                    <p><?= $result["NumberOfCategories"] ?></p>
                                     <p class=" text-sm">Number of Categories</p>
                                 </div>
                             </div>
@@ -94,43 +106,112 @@ include "./sidebar.php";
             </div>
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                    <h1 class=" text-lg font-bold font-philosopher pb-5">Customer Reviews</h1>
-                    <div class=" flex space-x-3 items-center pb-3">
-                        <div class=" flex">
-                            <img src="./resources/img/noto_star.png" alt="...">
-                            <img src="./resources/img/noto_star.png" alt="...">
-                            <img src="./resources/img/noto_star.png" alt="...">
-                            <img src="./resources/img/noto_star.png" alt="...">
-                            <img src="./resources/img/noto_star.png" alt="...">
+                    <h1 class=" text-lg font-bold font-philosopher pb-1">Customer Reviews</h1>
+                    <div class=" flex space-x-3 items-center ">
+                        <div class=" text-yellow-500 text-xl">
+                            <?php
+                            if (!function_exists('numberToStars')) {
+                                function numberToStars($number)
+                                {
+                                    $roundedNumber = round($number);
+                                    $maxStars = 5;
+                                    $fullStars = str_repeat('★', $roundedNumber);
+                                    $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                                    return $fullStars . $emptyStars;
+                                }
+
+                            ?>
+                            <?php }  ?>
+                            <?= numberToStars($averageReview["review_rating"]) ?>
+
                         </div>
-                        <p class=" font-semibold text-lg">5</p>
+                        <p class=" font-semibold text-lg"><?= $averageReview["review_rating"] ?></p>
                         <p>Out of Stars</p>
                     </div>
                     <p class=" text-sm opacity-50">Overall rating of Customers' Reviews</p>
-                    <div class=" flex-col space-y-5 pt-3">
-                        <div class=" flex space-x-3 items-center font-semibold">
-                            <p class=" w-28">Excellent</p>
-                            <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p class=" w-10">35</p>
-                        </div>
-                        <div class=" flex space-x-3 items-center font-semibold">
-                            <p class=" w-28">Good</p>
-                            <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p class=" w-10">25</p>
-                        </div>
-                        <div class=" flex space-x-3 items-center font-semibold">
-                            <p class=" w-28">Average</p>
-                            <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p class=" w-10">15</p>
-                        </div>
-                        <div class=" flex space-x-3 items-center font-semibold">
-                            <p class=" w-28">Poor</p>
-                            <div class=" h-3 w-full bg-green-500 rounded-lg"></div>
-                            <p class=" w-10">05</p>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                    <div class=" flex-col justify-between pt-2">
+                        <div class=" w-44 mx-auto">
+                            <canvas id="donut-chart2"></canvas>
                         </div>
                     </div>
-                    <div class=" flex justify-center pt-5">
-                        <button class=" px-20 py-2 rounded-3xl bg-transparent border-2 border-violet-400 hover:text-white hover:bg-[#1366D9]">See All</button>
+
+                    <script>
+                        // Get the canvas element
+                        var canvas2 = document.getElementById('donut-chart2');
+
+                        // Set the chart data
+                        var trend = <?= $review_json ?>;
+                        console.log(trend);
+                        var itemName = [];
+                        var quantity = [];
+                        trend.forEach(function(item, index) {
+                            itemName.push(item.rating)
+                            quantity.push(item.review_count);
+                        });
+
+
+                        var data2 = {
+                            labels: itemName,
+                            datasets: [{
+                                label: 'Customer Reviews',
+                                data: quantity,
+                                backgroundColor: [
+                                    '#F40C0C',
+                                    '#F4DC0C',
+                                    '#01CBA3',
+                                    '#0C4AF4',
+                                    '#28E307'
+                                ],
+                                hoverOffset: 4
+                            }]
+                        };
+
+                        // Set the chart options
+                        var options2 = {
+                            plugins: {
+                                legend: {
+                                    display: true
+                                }
+                            },
+                            aspectRatio: 1,
+                            cutout: '50%',
+                            animation: {
+                                animateRotate: true
+                            }
+                        };
+
+                        // Create the chart
+                        var chart = new Chart(canvas2, {
+                            type: 'doughnut',
+                            data: data2,
+                            options: options2
+                        });
+                    </script>
+
+
+                    <div class=" flex space-x-2 pt-6 pb-6">
+                        <div>
+                            <p>Worst=1</p>
+
+                        </div>
+                        <div>
+                            <p>Poor=2</p>
+
+                        </div>
+                        <div>
+                            <p>Normal=3</p>
+
+                        </div>
+                        <div>
+                            <p>Good=4</p>
+
+                        </div>
+                        <div>
+                            <p>Excellent=5</p>
+
+                        </div>
                     </div>
                 </div>
 
@@ -143,12 +224,16 @@ include "./sidebar.php";
                         <hr>
                         <div class=" flex justify-between pb-3 space-x-5 p-3">
                             <div>
-                                <p class=" font-semibold">150</p>
+                                <?php if($deliveryCounts[0]["delivery_status"] == 0) { ?>
+                                <p class=" font-semibold"><?= $deliveryCounts[0]["product_count"] ?></p>
                                 <p>Processing</p>
+                                <?php } ?>
                             </div>
                             <div>
-                                <p class=" font-semibold">75</p>
+                            <?php if($deliveryCounts[1]["delivery_status"] == 1) { ?>
+                                <p class=" font-semibold"><?= $deliveryCounts[1]["product_count"] ?></p>
                                 <p>Processed</p>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -160,21 +245,12 @@ include "./sidebar.php";
                         <hr>
                         <div class=" flex justify-center">
                             <div class=" flex-col justify-between pb-3 p-3 space-y-2">
-                                <div class=" flex space-x-5 pl-1">
-                                    <p>1</p>
-                                    <img src="./resources/img/Profile.png" alt="...">
-                                    <p>Kyaw Gyi</p>
-                                </div>
-                                <div class=" flex space-x-5">
-                                    <p>2</p>
-                                    <img src="./resources/img/Profile.png" alt="...">
-                                    <p>Mi Chaw</p>
-                                </div>
-                                <div class=" flex space-x-5">
-                                    <p>3</p>
-                                    <img src="./resources/img/Profile.png" alt="...">
-                                    <p>Toke Gyi</p>
-                                </div>
+                                <?php foreach ($topCustomers as $topCus) { ?>
+                                    <div class=" flex space-x-5 pl-1">
+                                        <img src="../../<?= $topCus["p_picture"] ?>" alt="..." class=" w-6 h-6 rounded-full">
+                                        <p><?= $topCus["username"] ?></p>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -188,7 +264,7 @@ include "./sidebar.php";
                         </div>
                         <hr>
                         <div class=" text-center py-6">
-                            <p>$215456</p>
+                            <p>$<?= $totalProfit?></p>
                         </div>
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950">
@@ -198,10 +274,10 @@ include "./sidebar.php";
                         </div>
                         <hr>
                         <div class=" flex-col items-center text-center py-3">
-                            <p class=" font-semibold text-lg">Professional</p>
-                            <div class=" flex space-x-2 pt-3">
-                                <p>Time : Left</p>
-                                <p><span class=" font-semibold">5</span> Months & <span class=" font-semibold">28</span> Days</p>
+                            <p class=" font-semibold text-lg pt-1"><?= $planName ?></p>
+                            <div class=" flex space-x-5 p-4">
+                                <p>Days Left:</p>
+                                <p><spantrendingdonut-chart class=" font-semibold"><?= $daysRemaining ?> days</p>
                             </div>
                         </div>
                     </div>
@@ -209,33 +285,85 @@ include "./sidebar.php";
                 <div class=" w-full h-full space-y-4  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-3">Trending Products</h1>
                     <div class=" flex-col justify-between pb-0">
-                        <div class=" w-44 mx-auto">
+                        <div class=" w-52 mx-auto">
                             <canvas id="donut-chart"></canvas>
                         </div>
                     </div>
 
-                    <div class=" flex justify-around py-4">
-                        <div class=" flex-col space-y-3">
-                            <div class=" flex space-x-10">
-                                <p>Jeans</p>
-                                <p>60</p>
-                            </div>
-                            <div class=" flex justify-between">
-                                <p>T-Shirts</p>
-                                <p>33</p>
-                            </div>
-                        </div>
+                    <script>
+                        // Get the canvas element
+                        var canvas = document.getElementById('donut-chart');
 
-                        <div class=" flex-co space-y-3">
-                            <div class=" flex space-x-10">
-                                <p>Shoes</p>
-                                <p>40</p>
-                            </div>
-                            <div class=" flex justify-between">
-                                <p>EarBuds</p>
-                                <p>9</p>
+                        // Set the chart data
+                        var trend1 = <?= $trending_json ?>;
+                        console.log(trend1);
+                        var itemName1 = [];
+                        var quantity1 = [];
+                        trend1.forEach(function(item, index) {
+                            itemName1.push(item.name)
+                            quantity1.push(item.product_count);
+                        });
+
+                        // Set the chart data
+                        var data1 = {
+                            labels: itemName1,
+                            datasets: [{
+                                label: 'Trending Products',
+                                data: quantity1,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)',
+                                    'rgba(255, 205, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(75, 152, 172, 0.2)',
+                                    'rgba(75, 232, 142, 0.2)'
+
+                                ],
+                                borderColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(255, 159, 64)',
+                                    'rgb(255, 205, 86)',
+                                    'rgb(75, 192, 192)',
+                                    'rgb(65, 155, 76)',
+                                    'rgb(59, 182, 82)'
+
+                                ],
+                                borderWidth: 1
+                            }]
+                        };
+
+                        // Set the chart options
+                        var options = {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            aspectRatio: 1,
+                            cutout: '50%',
+                            animation: {
+                                animateRotate: true
+                            }
+                        };
+
+                        // Create the chart
+                        var chart = new Chart(canvas, {
+                            type: 'bar',
+                            data: data1,
+                            options: options
+                        });
+                        // ..............................................................................
+                    </script>
+
+                    <div class=" flex justify-around pt-4 pb-4">
+                        <?php foreach($trending as $trendindProduct) {?>
+                        <div class=" flex-col space-y-3">
+                            <div class=" flex space-x-2">
+                                <p><?= $trendindProduct["name"] ?> :</p>
+                                <p><?= $trendindProduct["product_count"] ?></p>
                             </div>
                         </div>
+                        <?php } ?>   
                     </div>
                 </div>
             </div>
@@ -263,48 +391,22 @@ include "./sidebar.php";
                                     </tr>
                                 </thead>
                                 <tbody class=" text-center">
-                                    <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
-                                            Apple MacBook Pro 17"
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            19
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            12
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            $1499
-                                        </td>
-                                    </tr>
-                                    <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
-                                            Microsoft Surface Pro
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            30
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            15
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            $1199
-                                        </td>
-                                    </tr>
-                                    <tr class=" hover:bg-gray-200 border-b border-gray-500">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
-                                            Magic Mouse 2
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            20
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            13
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            $199
-                                        </td>
-                                    </tr>
+                                    <?php foreach ($topSellingProducts as $topSelling) { ?>
+                                        <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start">
+                                                <?= $topSelling["name"] ?>
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <?= $topSelling["total_sold"] ?>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <?= $topSelling["instock"] ?>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <?= $topSelling["sellprice"] ?>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -312,31 +414,19 @@ include "./sidebar.php";
                 </div>
 
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                    <h1 class=" text-lg font-bold font-philosopher pb-4">Low Quantity Stocks</h1>
-                    <div class=" flex justify-between items-center pb-3">
-                        <img src="./resources/img/amazfit t-rex2.png" alt="...">
-                        <div class="">
-                            <p class=" font-semibold text-lg">Amazfit T-rex-2</p>
-                            <p class=" opacity-60">Remaining Qty : 10 Units</p>
+                    <h1 class=" text-lg font-bold font-philosopher pb-5">Low Quantity Stocks</h1>
+                    <?php foreach ($lowQuantity as $lowQuantityStock) { ?>
+                        <div class=" flex justify-between items-center pb-3 space-y-4">
+                            <img src="../../<?= $lowQuantityStock["p_one"] ?>" alt="..." class=" w-12 h-12 ">
+                            <div class="">
+                                <p class=" font-semibold text-lg"><?= $lowQuantityStock["name"] ?></p>
+                                <p class=" opacity-60">Remaining Qty : <?= $lowQuantityStock["instock"] ?> Units</p>
+                            </div>
+                            <p class=" rounded-2xl p-1 text-red-500 bg-red-300 border w-12 text-center hover:underline">Low</p>
                         </div>
-                        <p class=" rounded-2xl p-1 text-red-500 bg-red-300 border w-12 text-center hover:underline">Low</p>
-                    </div>
-                    <div class=" flex justify-between items-center pb-3">
-                        <img src="./resources/img/amazfit t-rex2.png" alt="...">
-                        <div class="">
-                            <p class=" font-semibold text-lg">Amazfit T-rex-2</p>
-                            <p class=" opacity-60">Remaining Qty : 10 Units</p>
-                        </div>
-                        <p class=" rounded-2xl p-1 text-red-500 bg-red-300 border w-12 text-center hover:underline">Low</p>
-                    </div>
-                    <div class=" flex justify-between items-center pb-3">
-                        <img src="./resources/img/amazfit t-rex2.png" alt="...">
-                        <div class="">
-                            <p class=" font-semibold text-lg">Amazfit T-rex-2</p>
-                            <p class=" opacity-60">Remaining Qty : 10 Units</p>
-                        </div>
-                        <p class=" rounded-2xl p-1 text-red-500 bg-red-300 border w-12 text-center hover:underline">Low</p>
-                    </div>
+                    <?php } ?>
+
+
                 </div>
             </div>
 
@@ -366,79 +456,6 @@ include "./sidebar.php";
     </main>
 </body>
 
-<script>
-    // // <!-- Chart line -->
-    // const labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    // const data = {
-    //     labels: labels,
-    //     datasets: [{
-    //             label: "",
-    //             backgroundColor: "#F294C4",
-    //             borderColor: "#F294C4",
-    //             data: [210, 820, 720, 325, 50, 500, 550, 560, 950, 450],
-    //         },
-    //         // Add a new dataset for the second line
-    //         {
-    //             label: "",
-    //             backgroundColor: "#5143D1",
-    //             borderColor: "#5143D1",
-    //             data: [210, 270, 750, 750, 600, 650, 750, 210, 280, 750, 280],
-    //         },
 
-    //     ],
-    // };
-
-    // const configLineChart = {
-    //     type: "line",
-    //     data,
-    //     options: {},
-    // };
-
-    // var chartLine = new Chart(
-    //     document.getElementById("chartLine"),
-    //     configLineChart
-    // );
-
-
-    // Get the canvas element
-    var canvas = document.getElementById('donut-chart');
-
-    // Set the chart data
-    var data1 = {
-        labels: ['Jeans', 'Shoes', 'T-Shirts', 'EarBuds'],
-        datasets: [{
-            label: 'Trending Products',
-            data: [60, 10, 33, 2],
-            backgroundColor: [
-                '#9179DD',
-                '#D92828',
-                '#01CBA3',
-                '#3C0A8D',
-            ],
-            hoverOffset: 4
-        }]
-    };
-
-    // Set the chart options
-    var options = {
-        plugins: {
-            legend: {
-                display: false
-            }
-        },
-        aspectRatio: 1,
-        cutout: '50%',
-        animation: {
-            animateRotate: false
-        }
-    };
-
-    // Create the chart
-    var chart = new Chart(canvas, {
-        type: 'doughnut',
-        data: data1,
-        options: options
-    });
-</script>
 
 </html>

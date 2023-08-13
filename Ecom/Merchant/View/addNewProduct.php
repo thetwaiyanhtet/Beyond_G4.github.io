@@ -127,15 +127,15 @@ include "../Controller/categoryListController.php";
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <p >Size</p>
                                     <div>
-                                        <input type="radio" id="male" name="size1" value="1">
+                                        <input type="checkbox" id="male" name="size1" value="1">
                                         <label for="s" class=" md:text-base text-sm ">S</label>
-                                        <input type="radio" id="female" name="size2" value="1" >
+                                        <input type="checkbox" id="female" name="size2" value="1" >
                                         <label for="m" class=" md:text-base text-sm ">M</label>
-                                        <input type="radio" id="other" name="size3" value="1" >
+                                        <input type="checkbox" id="other" name="size3" value="1" >
                                         <label for="L" class=" md:text-base text-sm  ">L</label>
-                                        <input type="radio" id="female" name="size4" value="1">
+                                        <input type="checkbox" id="female" name="size4" value="1">
                                         <label for="xl" class=" md:text-base text-sm ">XL</label>
-                                        <input type="radio" id="other" name="size5" value="1">
+                                        <input type="checkbox" id="other" name="size5" value="1">
                                         <label for="2xl" class=" md:text-base text-sm ">2XL</label>
                                     </div>
                                 </div>
