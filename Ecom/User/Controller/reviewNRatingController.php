@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reviewText = $_POST["message"];
 
     $getDataSql = $pdo->prepare(
-        "SELECT m_customer.id AS customer_id,m_order.merchant_id,m_order_details.product_id
+        "SELECT m_customer.id AS customer_id,m_order_details.merchant_id,m_order_details.product_id
         FROM m_order
         JOIN m_order_details
         ON m_order_details.order_id = m_order.id

@@ -23,7 +23,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         JOIN m_product
         ON m_product.id = m_order_details.product_id
         JOIN m_merchant
-        ON m_merchant.id = m_order.merchant_id
+        ON m_merchant.id = m_order_details.merchant_id
         WHERE m_order.generate_id =:id AND m_merchant.email=:email;"
  
     );
