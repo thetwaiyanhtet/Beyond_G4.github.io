@@ -6,7 +6,6 @@ include "./common/generatePwFunction.php";
 if (isset($_POST["resetPw"])) {
 
   $email = $_POST["email"];
-  echo $email;
 
 
   //DB connection
@@ -20,12 +19,11 @@ if (isset($_POST["resetPw"])) {
   $sql->bindValue(":email", $email);
   $sql->execute();
 
-  $rowCount = $sql->rowCount();
-
-  if ($rowCount > 0) {
+  $merchant = $sql ->fetch();
+  if ($merchant) {
     $tokenPw = generateRandomPassword();
     $sql = $pdo->prepare(
-      "UPDATE m_admin SET password = :token WHERE email =:email"
+      "UPDATE m_merchant SET password = :token WHERE email =:email"
     );
     $sql->bindValue(":token", password_hash($tokenPw, PASSWORD_DEFAULT));
     $sql->bindValue(":email", $email);

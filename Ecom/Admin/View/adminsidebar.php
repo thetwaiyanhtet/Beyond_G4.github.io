@@ -108,7 +108,7 @@ $logoandname = $_SESSION["m_logo"];
 
                         <div x-show="open" class="bg-gray-100">
                             <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white merchantList" href="./merchant_list.php">Merchant List and Profile</a>
-                            <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white merchantApprove" href="./merchant_approve.php">Merchant Approve</a>
+                            <!-- <a class="py-2 px-16 block text-sm text-gray-600 hover:bg-table hover:text-white merchantApprove" href="./merchant_approve.php">Merchant Approve</a> -->
                         </div>
                     </div>
                     <div x-data="{ open: false }">
