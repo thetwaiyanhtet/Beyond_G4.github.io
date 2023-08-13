@@ -26,9 +26,22 @@ include "./adminsidebar.php";
                 <div class="flex flex-col space-y-4 items-center">
                     <div><img src="../..<?= $productDetail["p_one"] ?>" alt="..." width="100px"></div>
                     <div class="flex space-x-5 justify-between">
-                        <!-- <div><img src="./resources/img/photo2.png" alt=""></div>
-                        <div><img src="./resources/img/photo3.png" alt=""></div>
-                        <div><img src="./resources/img/photo4.png" alt=""></div> -->
+                        <?php if (!empty($productDetail["p_two"])) { ?>
+                            <div><img src="../..<?= $productDetail["p_two"] ?>" alt="..." width="100px"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>
+                        <?php if (!empty($productDetail["p_three"])) { ?>
+                            <div><img src="../..<?= $productDetail["p_three"] ?>" alt="..." width="100px"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>
+                        <?php if (!empty($productDetail["p_four"])) { ?>
+                            <div><img src="../..<?= $productDetail["p_four"] ?>" alt="..." width="100px"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>
+
                     </div>
                 </div>
                 <div class=" ml-40">
@@ -51,7 +64,7 @@ include "./adminsidebar.php";
                         <div class="flex">
                             <p class="w-40">Stock</p>
                             <p class="w-32">-</p>
-                            <p class=""><?= $productDetail["instock"]; ?></p>
+                            <p class=""><?= $productDetail["instock"]; ?> Units</p>
                         </div>
                         <div class="flex">
                             <p class="w-40">Color</p>

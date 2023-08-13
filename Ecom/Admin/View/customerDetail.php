@@ -148,9 +148,9 @@ include "../Controller/customerDetailController.php";
                                         <?= $order["store_name"] ?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <?= $order["total_amt"] ?>
+                                        $ <?= $order["total_amt"] ?>
                                     </td>
-                                    <td class="px-6 py-4 ">
+                                    <td class="pr-6 py-4 ">
                                         <?= $order["order_date"] ?>
                                     </td>
                                     <td class="px-6 py-4">
