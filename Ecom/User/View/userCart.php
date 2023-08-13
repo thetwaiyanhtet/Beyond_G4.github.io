@@ -1,10 +1,11 @@
 <?php
 
-//   session_start();
-require_once("../Controller/newcartController.php");
+   session_start();
+// require_once("../Controller/newcartController.php");
+require_once "../Model/model.php";
 // echo "</pre>";
 // print_r($_SESSION['usercart']);
-if (!empty($cartass)) {
+if (!empty($_SESSION['carttle'])) {
         
    
     //session_start();
@@ -37,7 +38,7 @@ if (!empty($cartass)) {
 
         foreach ($cart as $key => $value) {;
             if ($cart[$key]['product_id'] == $_POST["id"]) {
-                unset($_SESSION['usercart'][$key]);
+                unset($_SESSION['carttle'][$key]);
                 header("Location: ../View/userCart.php");
             }
         }
@@ -178,7 +179,7 @@ if (!empty($cartass)) {
         </div>
 
         <div class="my-5 w-[100%] md:w-3/4 ">
-            <?php if (!empty($_SESSION['usercart'])) { ?>
+            <?php if (!empty($_SESSION['carttle'])) { ?>
 
 
                 <div class="w-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -271,6 +272,7 @@ if (!empty($cartass)) {
                 <div class="w-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex items-center justify-between mb-4">
                     Empty Cart
+                    <?php unset($_SESSION['usercart']) ?>
                     </div>
                 </div>
             <?php  } ?>

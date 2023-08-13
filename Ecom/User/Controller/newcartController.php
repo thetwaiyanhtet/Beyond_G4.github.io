@@ -64,5 +64,5 @@ $cart =  $uniqueArray;
 $_SESSION['carttle'] = $cart;
 
 
- //header("Location: ../View/mainPage.php");
+ header("Location: ../View/mainPage.php");
 
