@@ -302,7 +302,7 @@ $verifyData = $_SESSION["verifyData"];
                                         <img class="w-32 h-40 m-auto" src="../../<?= $productDetail["p_one"] ?>" alt="">
                                         <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                             <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                            <button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
+                                            <a href="../View/itemDetail.php?pid=<?= $productDetail["id"]; ?>"><button class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
 
                                         </div>
                                     </div>
