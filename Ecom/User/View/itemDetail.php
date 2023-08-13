@@ -2,11 +2,7 @@
 
 include "../Controller/itemDetailsController.php";
 include "../Controller/overRatingController.php";
-// echo "<pre>";
-// print_r($topComments);
-// echo "Total Customer Count: " . $totalCustomerCount . "<br>";
-// echo "Overall Average Rating: " . $overallAverageRating;
-// echo "</pre>";
+ini_set('display_errors', 1);
 ?>
 
 <!DOCTYPE html>

@@ -17,7 +17,7 @@ $sql = $pdo->prepare(
 $sql->execute();
 $_SESSION["trandingProduct"] = $sql->fetchAll(PDO::FETCH_ASSOC);
 //  echo "<pre>";
-//  print_r($trandingProduct);
+//  print_r($_SESSION["trandingProduct"]);
 
 $TrendingViewAllsql = $pdo->prepare(
     "SELECT m_order_details.product_id, m_product.name, m_product.description, m_product.sellprice, m_product.p_one,
