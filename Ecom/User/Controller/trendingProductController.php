@@ -15,9 +15,9 @@ $sql = $pdo->prepare(
 );
 
 $sql->execute();
-$trandingProduct = $sql->fetchAll(PDO::FETCH_ASSOC);
+$_SESSION["trandingProduct"] = $sql->fetchAll(PDO::FETCH_ASSOC);
 //  echo "<pre>";
-//  print_r($trandingProduct);
+//  print_r($_SESSION["trandingProduct"]);
 
 $TrendingViewAllsql = $pdo->prepare(
     "SELECT m_order_details.product_id, m_product.name, m_product.description, m_product.sellprice, m_product.p_one,
@@ -42,7 +42,7 @@ $AllProductSql = $pdo->prepare(
 $AllProductSql->execute();
 $AllProduct = $AllProductSql->fetchAll(PDO::FETCH_ASSOC);
 // echo "<pre>";
-// print_r($AllProduct);
+//  print_r($AllProduct);
 
 $FeatureShopSql = $pdo->prepare(
     "SELECT m_merchant.logo, m_merchant.m_name,m_merchant.id

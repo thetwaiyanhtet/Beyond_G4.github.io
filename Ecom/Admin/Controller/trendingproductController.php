@@ -14,5 +14,7 @@ $sql = $pdo->prepare(
 $sql->execute(); //run real sql
 
 $_SESSION["m_trending"]=$sql->fetchAll(PDO::FETCH_ASSOC);
+// echo $_SESSION["m_trending"];
+
 
 

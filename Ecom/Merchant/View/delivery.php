@@ -2,7 +2,6 @@
 include "./sidebar.php";
 include "../Controller/deliveryController.php";
 
-$storedData = $_SESSION["deliveries"];
 ?>
 
 <!doctype html>
@@ -66,8 +65,8 @@ $storedData = $_SESSION["deliveries"];
                         <tbody class=" text-center" id="searchResult">
                             <?php
                             $id = 0;
-                            if (isset($storedData)) {
-                                foreach ($storedData as $delivery) { ?>
+                            if (isset($deliveries)) {
+                                foreach ($deliveries as $delivery) { ?>
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
                                             <?= ++$id; ?>.
