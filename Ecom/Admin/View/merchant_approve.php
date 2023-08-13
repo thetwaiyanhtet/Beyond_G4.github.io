@@ -1,5 +1,5 @@
-<?php
-include "./adminsidebar.php";
+<!-- <?php
+// include "./adminsidebar.php";
 ?>
 <!doctype html>
 <html>
@@ -192,4 +192,4 @@ include "./adminsidebar.php";
     </main>
 </body>
 
-</html>
+</html> -->

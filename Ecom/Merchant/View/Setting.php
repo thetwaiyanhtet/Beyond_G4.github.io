@@ -33,18 +33,18 @@ include "./sidebar.php";
                         <form action="../Controller/settingController.php" method="post" enctype="multipart/form-data">
                             <div class="flex justify-around">
                                 <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
-                                    <label for="photo1" class="cursor-pointer"> <!-- Add cursor-pointer class to show pointer cursor on hover -->
-                                        <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg">
+                                    <label for="photo5" class="cursor-pointer"> <!-- Add cursor-pointer class to show pointer cursor on hover -->
+                                        <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg5">
                                     </label>
                                     <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
-                                    <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo" require>
+                                    <input type="file" class="hidden" id="photo5" accept=".png,.jpeg" name="photo5" require>
                                 </div>
                                 <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
-                                    <label for="photo1" class="cursor-pointer">
-                                        <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg">
+                                    <label for="photo6" class="cursor-pointer">
+                                        <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg6">
                                     </label>
                                     <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
-                                    <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" name="photo" require>
+                                    <input type="file" class="hidden" id="photo6" accept=".png,.jpeg" name="photo6" require>
                                 </div>
                             </div>
                             <div class=" space-y-5 pt-7">
