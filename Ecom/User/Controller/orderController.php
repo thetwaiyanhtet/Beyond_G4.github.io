@@ -5,7 +5,6 @@ session_start();
 $totamt = $_POST['delitotal'];
 
 $carted = $_SESSION["placeholdcart"];
-print_r($carted);
 $userEmail = $_SESSION["user_ID"];
 ini_set('display_errors', 1);
 
