@@ -19,8 +19,8 @@ session_start();
         <div class=" space-y-5 pt-14 shadow-xl p-10 mt-10 rounded-md">
 
             <div class="items-center flex-col justify-center space-y-4">
-                <!-- <div><img src="<?= $logoandname[0]['logo']  ?>" alt="..." class=" mx-auto w-20"></div> -->
-                <!-- <div class=" text-center font-quantico italic font-bold text-3xl text-blue-500 font-philosopher"><?= $logoandname[0]['business_name']  ?></div> -->
+                <div><img src="<?= $logoandname[0]['logo']  ?>" alt="..." class=" mx-auto w-20"></div>
+                <div class=" text-center font-quantico italic font-bold text-3xl text-blue-500 font-philosopher"><?= $logoandname[0]['business_name']  ?></div>
             </div>
             <form action="../Controller/loginController.php" method="post">
             <div class=" pt-5">
