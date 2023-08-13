@@ -144,39 +144,36 @@ $verifyData = $_SESSION["verifyData"];
                 </div>
                 <div class="flow-root">
                     <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700 ">
-                        <?php foreach ($orders as $order) { ?>
-
+                        <?php foreach ($ordertmp as $order) { ?>
                             <li class="py-3 sm:py-4 w-auto my-5 pt-3">
-
                                 <div class="flex items-center justify-between space-x-4">
-                                    <?php foreach ($imgtmp as $img) { ?>
-                                        <div class="flex">
-                                            <?php foreach ($img as $inner) { ?>
-                                                <?php $imageURL = $inner['p_one']; ?>
-                                                <img class="w-14 object-fill scale-150 rounded-full" src="../..<?= $imageURL ?>" alt="...">
-                                            <?php } ?>
-                                        </div>
-                                    <?php } ?>
+
+                                    <div class="flex">
+                                        <?php foreach ($order as $img) { ?>
+                                            <img class="w-14 object-fill scale-150 rounded-full" src="../..<?= $img["p_one"] ?>" alt="...">
+                                        <?php } ?>
+                                    </div>
+
                                     <div class="flex-col min-w-0">
                                         <?php if ($purchasedCount > 1) { ?>
                                             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                <?= $order["name"] ?>,...
+                                                <?= $order[0]["name"] ?>,...
                                             </p>
                                         <?php } else if ($purchasedCount == 0) { ?>
                                             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                <?= $order["name"] ?>
+                                                <?= $order[0]["name"] ?>
                                             </p>
                                         <?php } ?>
                                         <p class="text-sm text-gray-500 truncate dark:text-gray-400 ">
-                                            From: <?= $order["store_name"] ?>
+                                            From: <?= $order[0]["store_name"] ?>
                                         </p>
                                     </div>
                                     <div class="flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        $ <?= $order["total_amt"] ?>
+                                        $ <?= $order[0]["total_amt"] ?>
                                     </div>
 
                                     <div>
-                                        <button data-modal-target="popup-modal" data-order-id="<?= $order['generate_id']; ?>" data-modal-toggle="popup-modal" class="rating-button block text-white bg-purple-400 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800" type="button">
+                                        <button data-modal-target="popup-modal" data-order-id="<?= $order[0]['generate_id']; ?>" data-modal-toggle="popup-modal" class="rating-button block text-white bg-purple-400 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800" type="button">
                                             Rate Your Satisfaction
                                         </button>
                                         <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">

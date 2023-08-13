@@ -1,9 +1,9 @@
 $(document).ready(function () {
-  // Create a new <style> element and append it to the <head> section
+  // Create a new style element and append it to the head section
   const styleElement = document.createElement("style");
   document.head.appendChild(styleElement);
 
-  // Add CSS rules to the <style> element to underline when hover
+  // Add CSS rules to the style element to underline when hover
   styleElement.innerHTML = `
     .view-link:hover {
       color: blue;
