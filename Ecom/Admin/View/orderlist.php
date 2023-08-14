@@ -1,5 +1,5 @@
 <?php
-include "../Controller/orderlistController.php";
+// include "../Controller/orderlistController.php";
 include "./adminsidebar.php";
 ?>
 <!doctype html>

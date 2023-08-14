@@ -7,6 +7,9 @@ if (isset($_POST['login'])) {
     $adminEmail = $_POST['email'];
     $password = $_POST['password'];
 
+    echo $adminEmail;
+    echo $password;
+
 
     include "../Model/model.php";
     $sql = $pdo->prepare(
@@ -16,18 +19,14 @@ if (isset($_POST['login'])) {
     $sql->execute();
     $result = $sql->fetch();
     $DBemail = $result['email'];
-    $DBpassword = $result['password'];
-    echo $DBemail;
-    print_r($DBpassword).'<br>';
-    echo $password;
-
+    $DBpassword = $result['login_password'];
 
     if ($DBemail !== $adminEmail) {
         $_SESSION['ErrorMessage'] = "Email not match";
         header("Location: ../View/login.php");
         exit();
     }else {
-        if ($DBpassword == $password) {
+        if (password_verify($password,$DBpassword)) {
             header("Location: ../View/dashboard.php");
             exit();
         } else {

@@ -9,9 +9,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <script>
         setTimeout(function() {
-            window.location.href = "../View/Setting.php";  
-        }, 2000); 
-        setTimeout(function() {
             window.location.href = "../View/dashboard.php";  
         }, 2000);
     </script>

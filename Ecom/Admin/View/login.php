@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../Controller/logoandbusinessController.php";
 ?>
 <!doctype html>
 <html>
@@ -19,8 +20,8 @@ session_start();
         <div class=" space-y-5 pt-14 shadow-xl p-10 mt-10 rounded-md">
 
             <div class="items-center flex-col justify-center space-y-4">
-                <div><img src="<?= $logoandname[0]['logo']  ?>" alt="..." class=" mx-auto w-20"></div>
-                <div class=" text-center font-quantico italic font-bold text-3xl text-blue-500 font-philosopher"><?= $logoandname[0]['business_name']  ?></div>
+                <div><img src="../AdminStorge/admin/<?php echo $admin['p_picture']?> " class=" mx-auto w-20"></div>
+                <div class="text-center font-quantico italic font-bold text-2xl text-blue-500 font-philosopher"><?php echo $admin['username']; ?> </div>
             </div>
             <form action="../Controller/loginController.php" method="post">
             <div class=" pt-5">
@@ -40,7 +41,9 @@ session_start();
                     <div>
                         <input type="checkbox">Remember me
                     </div>
-                    <button type="submit" name="forget" href="./forgetPassword.php" class=" font-poppins font-medium text-sm underline text-blue-500">Forget password?</button>
+                  <a href="./updatePassword.php" class="underline text-sm">
+                   Forget password?</button>
+                </a>
                 </div>
             </div>
 

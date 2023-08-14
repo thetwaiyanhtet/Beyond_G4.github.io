@@ -6,21 +6,12 @@ include "./common/generatePwFunction.php";
 if (isset($_POST["resetPw"])) {
 
   $email = $_POST["email"];
-
-
-  //DB connection
   include "../Model/model.php";
-
-  //check email is exit or not
-
-  $sql = $pdo->prepare(
-    "SELECT * FROM m_merchant WHERE email=:email"
-  );
+  $sql = $pdo->prepare("SELECT email FROM m_merchant WHERE email=:email");
   $sql->bindValue(":email", $email);
   $sql->execute();
-
-  $merchant = $sql ->fetch();
-  if ($merchant) {
+  $DBemail = $sql->fetchColumn();
+  if ($DBemail) {
     $tokenPw = generateRandomPassword();
     $sql = $pdo->prepare(
       "UPDATE m_merchant SET password = :token WHERE email =:email"
@@ -37,10 +28,11 @@ if (isset($_POST["resetPw"])) {
       "reset password",
       $tokenPw
     );
+    header("Location: ../View/loading.php");
   } else {
-    echo "Email does not exit in database";
+   $_SESSION['error'] = "Email isn't mot match";
+   header("Location: ../View/forgetPassword.php");
   }
-  header("Location: ../View/dashboard.php");
 } else {
   header("Location: ../View/404page.php");
 }
