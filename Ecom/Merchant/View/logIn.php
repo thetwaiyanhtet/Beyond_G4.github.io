@@ -31,7 +31,9 @@
                 </div>
 
                 <div class="text-[#667085]">
-                    <div>Email<span class=" text-red-600">* <?php echo $_SESSION["loginerror"]
+                    <div>Email<span class=" text-red-600">* <?php if ($_SESSION["loginerror"]) {
+                       echo $_SESSION["loginerror"];
+                    }
                     ?></span></div>
                     <input type="text" name="email" class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="Enter your email" required>
                 </div>

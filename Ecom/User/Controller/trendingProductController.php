@@ -46,7 +46,7 @@ $AllProduct = $AllProductSql->fetchAll(PDO::FETCH_ASSOC);
 //  echo "</pre>";
 
 $FeatureShopSql = $pdo->prepare(
-    "SELECT m_merchant.logo, m_merchant.m_name,m_merchant.id
+    "SELECT m_merchant.logo, m_merchant.m_name,m_merchant.id,m_merchant.store_name
     FROM m_merchant 
     ORDER BY create_date DESC
     LIMIT 3"

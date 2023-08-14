@@ -354,7 +354,7 @@ $verifyData = $_SESSION["verifyData"];
                             </div>
                             <div class="px-2 py-1">
                                 <!-- Product Title -->
-                                <div class="text-sm md:text-base font-bold pr-2"><?= $latestShop["m_name"] ?></div>
+                                <div class="text-sm md:text-base font-bold pr-2"><?= $latestShop["store_name"] ?></div>
                                 <div class="flex py-2">
                                     <div class="flex justify-between items-center">
                                         <div class="flex items-center">
