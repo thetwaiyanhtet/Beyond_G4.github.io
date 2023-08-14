@@ -97,15 +97,16 @@ include "./header.php";
     </div>
   </div>
 
-  <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-sky-300 rounded-md shadow-lg w-60 p-5 text-white hidden z-50">
+  <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-neutral-500 rounded-md p-5 shadow-lg w-60 text-white hidden z-50">
     <div>
       <div class=" border-b-2 border-gray-200 text-center">
+        <p class="pb-3 text-xl">Log Out</p>
         <p class="pb-3">Are you sure to log out of your account?</p>
       </div>
-      <div class=" flex justify-center items-center space-x-5 pt-3">
-        <p id="cancelButton" class=" text-blue-500 border-r-2 border-gray-200 pr-4">Cancel</p>
+      <div class=" flex justify-center items-center space-x-5 p-5 bg-slate-500">
+        <p id="cancelButton" class="border-r-2 border-gray-200 pr-4">Cancel</p>
         <a href="./logIn.php">
-          <p class=" text-red-500">Log out</p>
+          <p class=" text-white bg-red-500">Log out</p>
         </a>
       </div>
     </div>

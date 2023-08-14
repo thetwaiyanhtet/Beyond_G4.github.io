@@ -32,7 +32,7 @@ $result = $_SESSION["m_product"];
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class="pl-5 pt-1 w-60">
-                <input type="search" class="inputBox" placeholder="Search Here" id="search">
+                <input type="text" class="inputBox text-xs" id="search" placeholder="Search by Name,ID,or category...">
             </div>
             <div class=" flex-col justify-center px-5 py-1">
                 <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950"> -->        

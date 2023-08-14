@@ -7,9 +7,11 @@ $selectedOrder = $_SESSION["selectedOrder"];
 
 // Update the delivery status
 $setDeliverySql = $pdo->prepare(
-    "UPDATE m_order
+    "UPDATE m_order_details
+    JOIN m_order
+    ON m_order.id = m_order_details.order_id
     SET delivery_status = 1
-    WHERE generate_id = :id"
+    WHERE m_order.generate_id = :id"
 );
 
 $setDeliverySql->bindValue(":id", $selectedOrder);

@@ -31,6 +31,8 @@ $data=$sql->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION["m_product"]=$data;
 
+// echo "<pre>";
+// print_r($data);
 //DB Connection
 
 // header("Location: ../View/productList.php");
