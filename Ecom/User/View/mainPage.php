@@ -1,6 +1,7 @@
 <?php
-session_start();
-// require_once("../Controller/cartController.php");
+
+include "../Controller/newcartController.php";
+include "../Controller/wishlistcart.php";
 include "../Controller/trendingProductController.php";
 include  "../../User/Controller/bannerController.php";
 include  "../../Admin/Controller/readfaqController.php";
@@ -103,7 +104,7 @@ $verifyData = $_SESSION["verifyData"];
                                 foreach ($_SESSION["cart_item"] as  $item) {
                                     $item_price = $item["quantity"] * $item["price"];
                                 ?>
-                                    <form action="../Controller/checkoutController.php" method="post" enctype="multipart/form-data">
+                                    <form action="./mainPage.php" method="post" enctype="multipart/form-data">
                                         <tr class="text-left">
                                             <td hidden><input type="text" value="<?php echo $item["image"] ?>" hidden name="image_<?= $index ?>" id=""></td>
                                             <td><img name="image_<?= $index ?>" src="<?php echo $item["image"] ?>" class="cart-item-image" /><input type="text" readonly name="itemname_<?= $index ?>" class=" w-48 bg-transparent border border-transparent outline-none" value="<?php echo $item["name"]; ?>"></td>
@@ -230,14 +231,14 @@ $verifyData = $_SESSION["verifyData"];
                                         <!-- <form method="post" action="../Controller/cartController.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>"> -->
                                         <div class="mx-4">
                                             <div class="h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                                                <form action="../Controller/newcartController.php" method="post">
+                                                <form action="./mainPage.php" method="post">
                                                 <div class="relative overflow-hidden bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                                         <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
                                                         <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
                                                         <img class="w-32 h-40 m-auto" src="../../<?php echo $tranding["p_one"]; ?>" alt="">
                                                         
                                                     <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                                    <a href="../Controller/wishlistcart.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                                    <a href="./mainPage.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
                                                         
                                                     <a href="../View/itemDetail.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
                                                     </div>
@@ -299,13 +300,13 @@ $verifyData = $_SESSION["verifyData"];
                         <?php foreach ($AllProduct as $productDetail) { ?>
                             <div class="inline p-3">
                                 <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                                <form action="../Controller/newcartController.php" method="post">
+                                <form action="./mainPage.php" method="post">
                                 <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                         <div class="w-56 m-auto p-2 h-44">
                                             <img class="w-40 h-40 m-auto" src="../../<?= $productDetail["p_one"] ?>" alt="">
                                         </div>
                                         <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                        <a href="../Controller/wishlistcart.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                        <a href="./mainPage.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
                                             <a href="../View/itemDetail.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
 
                                         </div>
@@ -315,7 +316,8 @@ $verifyData = $_SESSION["verifyData"];
                                         <!-- <del class="text-red-700 text-lg">$999</del> -->
                                         <p class="text-xs mt-2 ml-5 block "><?= $productDetail["description"] ?></p>
                                         <p class="text-md font-bold mt-2 ml-5 block ">$<?= $productDetail["sellprice"] ?></p>
-                                        <button type="button" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                                        <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                                        <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
                                     </div>
 
                                 </div>

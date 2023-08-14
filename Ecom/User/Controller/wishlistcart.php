@@ -1,11 +1,12 @@
 <?php
-session_start();
+// session_start();
 //DB Connection
+if (isset($_GET['pid'])) {
 include "../Model/model.php";
 $userEmail = $_SESSION["user_ID"];
-if (isset($_GET['pid'])) {
+
     $id = $_GET['pid'];
-}
+
 
 $sql = $pdo->prepare(
     "INSERT INTO m_wishlist_items (customer_id, product_id,create_date)
@@ -19,5 +20,5 @@ VALUES ((SELECT id FROM m_customer WHERE email = '$userEmail'),:id,(SELECT CURRE
  $sql->execute(); //run real sql
 
  $_SESSION["m_wish"] = $sql->fetchAll(PDO::FETCH_ASSOC);
-
- header("Location: ../View/mainPage.php");
+}
+//  header("Location: ../View/mainPage.php");

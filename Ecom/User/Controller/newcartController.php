@@ -26,7 +26,7 @@ if (isset($_POST['product_id'])) {
         );
         $_SESSION['usercart'][0] = $item_array;
     }
-}
+
 
 function uniqueAssoc($array)
 {
@@ -45,6 +45,6 @@ $uniqueArray = uniqueAssoc($cartass);
 $cart =  $uniqueArray;
 
 $_SESSION['carttle'] = $cart;
+}
 
-
-header("Location: ../View/mainPage.php");
+// header("Location: ../View/mainPage.php");
