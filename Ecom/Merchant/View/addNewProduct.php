@@ -49,7 +49,7 @@ include "../Controller/categoryListController.php";
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo1">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg1" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg1" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo1">
                                     </div>
@@ -57,7 +57,7 @@ include "../Controller/categoryListController.php";
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg2" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" name="photo2">
                                     </div>
@@ -65,7 +65,7 @@ include "../Controller/categoryListController.php";
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg3" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" name="photo3">
                                     </div>
@@ -73,7 +73,7 @@ include "../Controller/categoryListController.php";
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg4" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" name="photo4">
                                     </div>

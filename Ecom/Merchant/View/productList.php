@@ -35,8 +35,8 @@ $result = $_SESSION["m_product"];
                 <input type="search" class="inputBox" placeholder="Search Here" id="search">
             </div>
             <div class=" flex-col justify-center px-5 py-1">
-                <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                    <div class=" flex justify-between pb-3">
+                <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950"> -->        
+                    <!-- <div class=" flex justify-between pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" text-violet-600">Categories</div>
@@ -103,8 +103,8 @@ $result = $_SESSION["m_product"];
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div> -->
+                    </div> -->
+                <!-- </div> -->
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
                         <p class=" font-philosopher font-bold text-lg">Products</p>

@@ -150,7 +150,11 @@ if (count($_POST) == 0) {
         $sql->bindValue(":updateDate", date("Y-m-d"));
 
         $sql->execute();
-        header("Location: ../View/productList.php");
+        echo"
+        <script>alert('Added Successfully');document.location.href= '../View/productList.php';</script>
+        ";
+
+        
     // } else {
     //     header("Location: ../View/errors/error.php");
     // }

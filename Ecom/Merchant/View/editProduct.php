@@ -2,6 +2,9 @@
 include "./sidebar.php";
 include "../Controller/categoryListController.php";
 $productdata = $_SESSION["editproduct"];
+// echo "<pre>";
+// print_r($categories);
+//  echo "</pre>";
 
 ?>
 <!DOCTYPE html>
@@ -18,6 +21,7 @@ $productdata = $_SESSION["editproduct"];
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../View/resources/js/product.js" defer></script>
     <!-- <script>
 
         function fetch(){
@@ -48,17 +52,20 @@ $productdata = $_SESSION["editproduct"];
                         <div>
                             <ul class=" flex space-x-3">
                                 <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class="w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+
                                         <label for="photo1">
-                                            <img src="../../<?php echo $productdata[0]["p_one"] ?>" id="photoimg1" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg1" alt="">
                                         </label>
-                                        <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" value="" name="photo1">
+
+                                        <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" value="" name="photo1">
                                     </div>
+
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
-                                            <img src="../../<?php echo $productdata[0]["p_two"] ?>" id="photoimg2" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg2" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" value="" name="photo2">
                                     </div>
@@ -66,7 +73,10 @@ $productdata = $_SESSION["editproduct"];
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
-                                            <img src="../../<?php echo $productdata[0]["p_three"] ?>" id="photoimg3" alt="">
+
+
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg3" alt="">
+
                                         </label>
                                         <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" value="" name="photo3">
                                     </div>
@@ -74,35 +84,14 @@ $productdata = $_SESSION["editproduct"];
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
-                                            <img src="../../<?php echo $productdata[0]["p_four"] ?>" id="photoimg4" alt="">
+
+
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg4" alt="">
+
                                         </label>
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" value="" name="photo4">
                                     </div>
                                 </li>
-                                <!-- <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo2">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
-                                        </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_two"] ?>" name="photo2">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo3">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
-                                        </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_three"] ?>" name="photo3">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo4">
-                                            <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
-                                        </label>
-                                        <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" value="../..<?php echo $productdata[0]["p_four"] ?>" name="photo4">
-                                    </div>
-                                </li> -->
                                 <li>
                                     <div class=" w-20 h-20 flex justify-center items-center text-blue-500">Upload images</div>
                                 </li>
@@ -135,12 +124,10 @@ $productdata = $_SESSION["editproduct"];
                                     </div>
                                     <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
                                             <?php foreach ($categories as $category) { ?>
-                                              
+
                                                 <option value="<?= $category["id"] ?>" selected><?= $category["c_name"] ?></option>
-                                                
+
                                             <?php } ?>
-
-
                                         </select></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
@@ -157,52 +144,52 @@ $productdata = $_SESSION["editproduct"];
                                         </span>
                                     </div>
                                 </div>
-                                
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <p >Size</p>
-                                    
-                                    <div>
-                                        <?php if($productdata[0]["size_s"] == 1) {?>
-                                        <input type="checkbox" id="male" name="size1" value="1" checked>
-                                        <label for="s" class=" md:text-base text-sm ">S</label>
-                                        <?php }else{?>
-                                            <input type="checkbox" id="male" name="size1" value="1">
-                                        <label for="s" class=" md:text-base text-sm  ">S</label>
-                                        <?php }?> 
-                                        
-                                        <?php if($productdata[0]["size_m"] == 1) {?>
-                                        <input type="checkbox" id="female" name="size2" value="1" checked>
-                                        <label for="m" class=" md:text-base text-sm  ">M</label>
-                                        <?php }else{?>
-                                            <input type="checkbox" id="female" name="size2" value="1">
-                                        <label for="m" class=" md:text-base text-sm  ">M</label>
-                                        <?php }?>
 
-                                        <?php if($productdata[0]["size_l"] == 1) {?>
-                                        <input type="checkbox" id="other" name="size3" value="1" checked>
-                                        <label for="L" class=" md:text-base text-sm  ">L</label>
-                                        <?php }else{?>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <p>Size</p>
+
+                                    <div>
+                                        <?php if ($productdata[0]["size_s"] == 1) { ?>
+                                            <input type="checkbox" id="male" name="size1" value="1" checked>
+                                            <label for="s" class=" md:text-base text-sm ">S</label>
+                                        <?php } else { ?>
+                                            <input type="checkbox" id="male" name="size1" value="1">
+                                            <label for="s" class=" md:text-base text-sm  ">S</label>
+                                        <?php } ?>
+
+                                        <?php if ($productdata[0]["size_m"] == 1) { ?>
+                                            <input type="checkbox" id="female" name="size2" value="1" checked>
+                                            <label for="m" class=" md:text-base text-sm  ">M</label>
+                                        <?php } else { ?>
+                                            <input type="checkbox" id="female" name="size2" value="1">
+                                            <label for="m" class=" md:text-base text-sm  ">M</label>
+                                        <?php } ?>
+
+                                        <?php if ($productdata[0]["size_l"] == 1) { ?>
+                                            <input type="checkbox" id="other" name="size3" value="1" checked>
+                                            <label for="L" class=" md:text-base text-sm  ">L</label>
+                                        <?php } else { ?>
                                             <input type="checkbox" id="other" name="size3" value="1">
-                                        <label for="L" class=" md:text-base text-sm  ">L</label>
-                                        <?php }?>
-                                        
-                                        <?php if($productdata[0]["size_xl"] == 1) {?>
-                                        <input type="checkbox" id="female" name="size4" value="1" checked>
-                                        <label for="xl" class=" md:text-base text-sm  ">XL</label>
-                                        <?php }else{?>
+                                            <label for="L" class=" md:text-base text-sm  ">L</label>
+                                        <?php } ?>
+
+                                        <?php if ($productdata[0]["size_xl"] == 1) { ?>
+                                            <input type="checkbox" id="female" name="size4" value="1" checked>
+                                            <label for="xl" class=" md:text-base text-sm  ">XL</label>
+                                        <?php } else { ?>
                                             <input type="checkbox" id="female" name="size4" value="1">
-                                        <label for="xl" class=" md:text-base text-sm  ">XL</label>
-                                        <?php }?>
-                                        
-                                        <?php if($productdata[0]["size_2xl"] == 1) {?>
-                                        <input type="checkbox" id="other" name="size5" value="1" checked>
-                                        <label for="2xl" class=" md:text-base text-sm  ">2XL</label>
-                                        <?php }else{?>
+                                            <label for="xl" class=" md:text-base text-sm  ">XL</label>
+                                        <?php } ?>
+
+                                        <?php if ($productdata[0]["size_2xl"] == 1) { ?>
+                                            <input type="checkbox" id="other" name="size5" value="1" checked>
+                                            <label for="2xl" class=" md:text-base text-sm  ">2XL</label>
+                                        <?php } else { ?>
                                             <input type="checkbox" id="other" name="size5" value="1">
-                                        <label for="2xl" class=" md:text-base text-sm  ">2XL</label>
-                                        <?php }?>
+                                            <label for="2xl" class=" md:text-base text-sm  ">2XL</label>
+                                        <?php } ?>
                                     </div>
-                                   
+
                                 </div>
                             </div>
 

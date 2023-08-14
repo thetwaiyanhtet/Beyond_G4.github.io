@@ -13,7 +13,8 @@ $saleSql = $pdo->prepare(
     ON m_product.merchant_id = m_merchant.id
     JOIN m_admin_category
     ON m_product.category_id=m_admin_category.id
-    WHERE m_merchant.email = :email"
+    WHERE m_merchant.email = :email
+    GROUP BY m_product.category_id"
 );
 
 $saleSql->bindValue(':email', $merchantEmail);
