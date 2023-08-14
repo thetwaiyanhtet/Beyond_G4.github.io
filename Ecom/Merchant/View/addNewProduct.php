@@ -55,7 +55,7 @@ include "../Controller/categoryListController.php";
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg2" alt="">
                                         </label>
@@ -63,7 +63,7 @@ include "../Controller/categoryListController.php";
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg3" alt="">
                                         </label>
@@ -71,7 +71,7 @@ include "../Controller/categoryListController.php";
                                     </div>
                                 </li>
                                 <li>
-                                <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
+                                    <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
                                             <img src="../View/resources/img/product image.jpg" id="photoimg4" alt="">
                                         </label>
@@ -93,8 +93,15 @@ include "../Controller/categoryListController.php";
                                     <div>
                                         <p>Code</p>
                                     </div>
-                                    <div><input type="text" name="pid" class="inputBox" placeholder="00"  >
-                                        <div class=" text-red-800 font-thin"> <?php echo $_SESSION["productIdError"] ?></div>
+                                    <div><input type="text" name="pid" class="inputBox" placeholder="00">
+                                        <div class="text-red-800 font-thin">
+                                            <?php
+                                            if (isset($_SESSION["productIdError"])) {
+                                                echo $_SESSION["productIdError"];
+                                                // unset($_SESSION["productIdError"]); // Clear the error message after displaying it
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
@@ -125,13 +132,13 @@ include "../Controller/categoryListController.php";
                                 </div>
 
                                 <div class=" flex justify-between space-x-10 items-center">
-                                    <p >Size</p>
+                                    <p>Size</p>
                                     <div>
                                         <input type="checkbox" id="male" name="size1" value="1">
                                         <label for="s" class=" md:text-base text-sm ">S</label>
-                                        <input type="checkbox" id="female" name="size2" value="1" >
+                                        <input type="checkbox" id="female" name="size2" value="1">
                                         <label for="m" class=" md:text-base text-sm ">M</label>
-                                        <input type="checkbox" id="other" name="size3" value="1" >
+                                        <input type="checkbox" id="other" name="size3" value="1">
                                         <label for="L" class=" md:text-base text-sm  ">L</label>
                                         <input type="checkbox" id="female" name="size4" value="1">
                                         <label for="xl" class=" md:text-base text-sm ">XL</label>
@@ -146,13 +153,13 @@ include "../Controller/categoryListController.php";
                                     <div>
                                         <p>Buying Price</p>
                                     </div>
-                                    <div><input type="text" name="buyprice" class=" inputBox" ></div>
+                                    <div><input type="text" name="buyprice" class=" inputBox"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Selling Price</p>
                                     </div>
-                                    <div><input type="text" name="sellprice" class="inputBox" ></div>
+                                    <div><input type="text" name="sellprice" class="inputBox"></div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>

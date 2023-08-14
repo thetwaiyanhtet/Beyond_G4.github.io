@@ -1,7 +1,7 @@
 <?php
 
-   session_start();
-// require_once("../Controller/newcartController.php");
+
+ require_once("../Controller/newcartController.php");
 require_once "../Model/model.php";
 // echo "</pre>";
 // print_r($_SESSION['usercart']);
@@ -38,6 +38,7 @@ if (!empty($_SESSION['carttle'])) {
 
         foreach ($cart as $key => $value) {;
             if ($cart[$key]['product_id'] == $_POST["id"]) {
+                unset($_SESSION['usercart'][$key]);
                 unset($_SESSION['carttle'][$key]);
                 header("Location: ../View/userCart.php");
             }
