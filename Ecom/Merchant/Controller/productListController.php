@@ -18,14 +18,11 @@ $sql = $pdo->prepare(
     `m_admin_category`.c_name
 
      FROM `m_product` 
-
      LEFT JOIN `m_admin_category`
-
-    ON `m_product`.`category_id`=`m_admin_category`.id
-    JOIN m_merchant
-    ON m_product.merchant_id=m_merchant.id
-    
-     WHERE`m_product`.`del_flg`=0 and email=:email"
+     ON `m_product`.`category_id`=`m_admin_category`.id
+     JOIN m_merchant
+     ON m_product.merchant_id=m_merchant.id
+     WHERE`m_product`.`del_flg`= 0 and email=:email"
 );
 $sql->bindValue(":email",$merchantEmail);
 $sql->execute(); //run real sql

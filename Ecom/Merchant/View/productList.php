@@ -15,22 +15,28 @@ $result = $_SESSION["m_product"];
     <title>Product List</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
+    <script src="../View/resources/js/searchProduct.js"></script>
+    <script src="./resources/js/dateandtime.js " defer></script>
     <link rel="stylesheet" href="./resources/css/inventory.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
-    <script src="./resources/js/dateandtime.js " defer></script>
+
 </head>
 
 <body class="">
     <main class=" ml-56">
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
+            <div class="pl-5 pt-1 w-60">
+                <input type="search" class="inputBox" placeholder="Search Here" id="search">
+            </div>
             <div class=" flex-col justify-center px-5 py-1">
-                <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950"> -->        
-                    <!-- <div class=" flex justify-between pb-3">
+                <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
+                    <div class=" flex justify-between pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" text-violet-600">Categories</div>
@@ -97,8 +103,8 @@ $result = $_SESSION["m_product"];
                                 </ul>
                             </div>
                         </div>
-                    </div> -->
-                <!-- </div> -->
+                    </div>
+                </div> -->
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
                         <p class=" font-philosopher font-bold text-lg">Products</p>
@@ -143,30 +149,30 @@ $result = $_SESSION["m_product"];
 
                                 </tr>
                             </thead>
-                            <tbody>
-                            <?php foreach ($result as $product) { ?>
-                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    <?= $product["name"];?>
-                                    </th>
-                                    <td class="px-6 py-4">
-                                    <?= $product["code"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["c_name"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["buyprice"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["sellprice"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["instock"];?>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                    <?= $product["create_date"];?>
-                                    </td>
+                            <tbody id="searchResult">
+                                <?php foreach ($result as $product) { ?>
+                                    <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                            <?= $product["name"]; ?>
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            <?= $product["id"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["c_name"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["buyprice"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["sellprice"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["instock"]; ?>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <?= $product["create_date"]; ?>
+                                        </td>
 
                                         <?php if ($product["instock"] > 10) { ?>
                                             <td class="px-6 py-4 text-green-500">

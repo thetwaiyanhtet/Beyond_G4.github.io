@@ -28,9 +28,6 @@ include "../Controller/deliveryController.php";
     <main class=" ml-56 relative">
         <section class="p-5">
             <div class="font-semibold text-lg">Delivery</div>
-            <div class="py-5 w-60">
-                <input type="search" class="inputBox" placeholder="Search Here" id="search">
-            </div>
             <div class="rounded-lg shadow-xl border-2  mt-3 border-blue-950">
                 <div class="relative overflow-x-auto p-5">
                     <table class="w-full text-sm text-left text-gray-500 ">

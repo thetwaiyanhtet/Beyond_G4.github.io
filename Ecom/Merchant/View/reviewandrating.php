@@ -2,8 +2,6 @@
 include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
 $reviewdata = $_SESSION["getReviewandRating"];
-
-
 ?>
 
 <!doctype html>
@@ -29,12 +27,9 @@ $reviewdata = $_SESSION["getReviewandRating"];
 <body class=" font-poppins">
     <main class=" ml-56">
         <section class=" p-5">
-            <div class="flex font-semibold">
+            <div class="flex font-semibold pb-2">
                 <span class="text-2xl pr-3"><i class='bx bx-star'></i></span>
                 <span class="text-lg">Review & Rating</span>
-            </div>
-            <div class=" pt-4 pb-8 w-60">
-                <input type="search" class="inputBox" placeholder="Search Here" id="search">
             </div>
             <div class=" w-full h-full  rounded-lg p-5 shadow-xl border-2 border-blue-950">
                 <!-- ====== Table Section Start -->
