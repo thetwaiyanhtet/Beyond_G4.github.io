@@ -9,17 +9,15 @@ if (isset($_POST["send"])) {
     $merchantEmail = $_SESSION["merchant_ID"];
     $img = $_FILES['photo5']['name'];
     $imgTmp = $_FILES['photo5']['tmp_name'];
+    move_uploaded_file($imgTmp, "../../Storage/profile/" . $img);
     $img2 = $_FILES['photo6']['name'];
     $imgTmp2 = $_FILES['photo6']['tmp_name'];
-    $pattern = '/^\d{10}$/';
+    move_uploaded_file($imgTmp2, "../../Storage/profile/" . $img2);
+    $pattern = '/^\d{11}$/';
 
     include "../Model/model.php";
     if (preg_match($pattern, $phNo)) {
-        move_uploaded_file($imgTmp, "../../Storage/profile/" . $img);
-        move_uploaded_file($imgTmp2, "../../Storage/profile/" . $img2);
-        
-        // Assuming $pdo is properly initialized
-        
+
         $sql = $pdo->prepare("UPDATE m_merchant SET store_name=:shopName, slogan=:slogan, phone=:phone, address=:address, logo=:img, banner=:img2 WHERE email=:merchantEmail");
         $sql->bindValue(":merchantEmail", $merchantEmail);
         $sql->bindValue(":shopName", $shopName);
@@ -28,7 +26,6 @@ if (isset($_POST["send"])) {
         $sql->bindValue(":address", $address);
         $sql->bindValue(":img", "/Storage/profile/" . $img);
         $sql->bindValue(":img2", "/Storage/profile/" . $img2);
-    
         if ($sql->execute()) {
             header("Location: ../View/Setting.php");
             exit();
@@ -41,7 +38,7 @@ if (isset($_POST["send"])) {
         $_SESSION['error'] = "Invalid Phone format";
         header("Location: ../View/Setting.php");
         exit();
-    }   
+    }
 } else {
     header("Location: ../View/Setting.php");
     exit();

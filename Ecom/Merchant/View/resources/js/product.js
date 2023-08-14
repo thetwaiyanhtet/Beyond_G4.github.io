@@ -101,6 +101,7 @@ document.getElementById('photo5').onchange = function (evt) {
     
 }
 
+
 document.getElementById('photo6').onchange = function (evt) {
     var tgt = evt.target || window.event.srcElement,
         files = tgt.files;

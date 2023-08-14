@@ -1,5 +1,7 @@
 <?php
 include "./sidebar.php";
+include "../Controller/settingShowDataController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +18,22 @@ include "./sidebar.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/setting.css">
+    <script>
+        function displayUserImage(imgId, inputId) {
+            const imgElement = document.getElementById(imgId);
+            const fileInput = document.getElementById(inputId);
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    imgElement.src = e.target.result; // Update the src attribute with the uploaded image
+                }
+
+                reader.readAsDataURL(fileInput.files[0]); // Read the uploaded image as data URL
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -33,48 +51,48 @@ include "./sidebar.php";
                         <form action="../Controller/settingController.php" method="post" enctype="multipart/form-data">
                             <div class="flex justify-around">
                                 <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
-                                    <label for="photo5" class="cursor-pointer"> <!-- Add cursor-pointer class to show pointer cursor on hover -->
+                                    <label for="photo5" class="cursor-pointer">
+                                        <input type="file" id="photo5" name="photo5" style="display: none;" onchange="displayUserImage('photoimg5', 'photo5')">
                                         <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg5">
+                                        <!-- <img src="<?= '../../'. $logoImagePath ?  $logoImagePath : './resources/img/gallery-add.png'; ?>" alt="photo" class="w-5 m-auto mt-5" id="photoimg5"> -->
                                     </label>
                                     <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
-                                    <input type="file" class="hidden" id="photo5" accept=".png,.jpeg" name="photo5" require>
                                 </div>
                                 <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
                                     <label for="photo6" class="cursor-pointer">
+                                        <input type="file" id="photo6" name="photo6" style="display: none;" onchange="displayUserImage('photoimg6', 'photo6')">
                                         <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg6">
                                     </label>
                                     <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
-                                    <input type="file" class="hidden" id="photo6" accept=".png,.jpeg" name="photo6" require>
                                 </div>
                             </div>
                             <div class=" space-y-5 pt-7">
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
                                         <label class=" text-sm">Shop Name<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="shopName" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="shop###" required>
+                                        <input type="text" name="shopName" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['store_name']) ? $merchant['store_name'] : 'shop###';  ?>" required>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="myTextarea" class=" text-sm">Slogan<span class=" text-red-600">*</span></label>
-                                        <textarea id="myTextarea" name="slogan" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" placeholder="Our store ******" required></textarea>
+                                        <textarea id="myTextarea" name="slogan" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" require><?php echo trim(isset($merchant['slogan']) ) ? $merchant['slogan'] : 'Our store ####'; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Phone Number<span class=" text-red-600">*</span>
-                                        <span class="text-red-600">
-                                            <?php
-                                            if(isset( $_SESSION['error'])){
-                                                echo  $_SESSION['error'];
-                                            }
-                                            ?>
-                                        </span>
-
+                                            <span class="text-red-600">
+                                                <?php
+                                                if (isset($_SESSION['error'])) {
+                                                    echo  $_SESSION['error'];
+                                                }
+                                                ?>
+                                            </span>
                                         </label>
-                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="09*******" required>
+                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : '09*******'; ?>" required>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Address<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="address" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" placeholder="########" required>
+                                        <input type="text" name="address" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['address']) ? $merchant['address'] : '###';  ?>" required>
                                     </div>
                                 </div>
                             </div>
