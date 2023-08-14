@@ -1,6 +1,7 @@
 <?php
 include "./adminsidebar.php";
 include "../Controller/orderDetailController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,49 +29,30 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/cart.png" alt="cart" class="w-[26px]">
                     <p>
                         <?php
-                          $storeName = $merchantInfoDetail['store_name'];
-                          echo $storeName;
+                         echo $orderDetail[0]['store_name'];
                         ?>
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/schdule.png" alt="cart" class="w-[26px]">
                     <p><?php
-                        
+                         echo $orderDetail[0]['order_date'];
                         ?>
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/bulid.png" alt="cart" class="w-[26px]">
                     <p><?php
+                    echo $orderDetail[0]['create_date']
                         ?> 
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/car.png" alt="cart" class="w-[26px]">
-                    <!-- <p><?php
-                        if (isset($_GET['id'])) {
-                            $id = $_GET['id'];
-                            include "../Model/model.php";
-                            $sql = $pdo->prepare("SELECT product_id FROM m_order WHERE id=:id");
-                            $sql->bindValue(":id", $id);
-
-                            if (!$sql->execute()) {
-                                echo "Error executing the query.";
-                            } else {
-                                $productID = $sql->fetchColumn();
-
-                                $sql2 = $pdo->prepare("SELECT delivery FROM m_orderdetails WHERE product_id=:productID");
-                                $sql2->bindValue(":productID", $productID);
-
-                                if (!$sql2->execute()) {
-                                    echo "Error executing the second query.";
-                                } else {
-                                    $delivery = $sql2->fetchColumn();
-                                    echo $delivery;
-                                }
-                            }
-                        } ?> </p> -->
+                    <p>
+                    <?php
+                    echo $orderDetail[0]['delivery_name'];
+                    ?> </p>
                 </div>
             </div>
             <!--Customer Details-->
@@ -81,8 +63,7 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/people.png" alt="cart" class="w-[26px]">
                     <p class="text-sm">
                         <?php
-                         $customerName =  $customerInfoDetail['username'];
-                         echo $customerName;
+                         echo $orderDetail[0]['username']
                         ?>
                     </p>
                 </div>
@@ -90,17 +71,15 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/email.png" alt="cart" class="w-[26px]">
                     <p class="text-sm">
                         <?php
-                          $customerEmail =  $customerInfoDetail['email'];
-                          echo $customerEmail;
+                         echo $orderDetail[0]['email']
                         ?>
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/phone.png" alt="cart" class="w-[26px]">
-                    <p>
+                    <p class="text-sm" >
                         <?php
-                          $customerPhone =  $customerInfoDetail['phone'];
-                          echo $customerPhone;
+                         echo $orderDetail[0]['phone']
                         ?>
                     </p>
                 </div>
@@ -108,7 +87,7 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/home.png" alt="cart" class="h-7">
                     <p class="text-sm">
                         <?php
-                         echo $Region['r_name'].' , ' . $Township['t_name'].' , '.  $customerStreet;
+                       echo $orderDetail[0]['r_name'].$orderDetail[0]['t_name'].$orderDetail[0]['street'];
                         ?>
                     </p>
                 </div>
@@ -151,39 +130,32 @@ include "../Controller/orderDetailController.php";
                 </tr>
             </thead>
             <tbody>
+            <?php foreach ($orderDetail as  $order) {?> 
                     <tr class="border border-b text-black">
+                  
                         <th scope="row" class="px-6 py-4 font-medium  whitespace-nowrap text-black">
                         <?php
-                           $productName = $productInfo['name'];
-                           echo $productName;
+                          echo $order['name'];
                         ?>
                         </th>
                         <td class="px-6 py-4">
                         <?php
-                          $productQu = $getData['quantity'];
-                          echo $productQu;
+                          echo $order['quantity'];
                         ?>
                         </td>
                         <td class="px-6 py-4">
                         <?php
-                         $price = $getData['price_per_unit'];
-                         echo $price;
+                         echo '$'.$order['sellprice']
                         ?>
                         </td>
                         <td class="px-6 py-4">
-                        <!-- <?php
-                        if (isset($_GET['id'])) {
-                            $id = $_GET['id'];
-                            include "../Model/model.php";
-                            $sql = $pdo->prepare("SELECT total_amt FROM m_order WHERE id=:id");
-                            $sql->bindValue(":id", $id);
-                            $sql->execute();
-                            $totalPrice = $sql->fetchColumn();
-                            echo $totalPrice;
-                        }
-                        ?>  -->
+                            <?php
+                              $total = $order['quantity'] * $order['sellprice'];
+                              echo $total;
+                            ?>
                         </td>
                     </tr>
+                    <?php } ?>
                     <tr class="border border-b text-black">
                         <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap ">
 
@@ -195,7 +167,9 @@ include "../Controller/orderDetailController.php";
                             Sub-Total
                         </td>
                         <td class="px-6 py-4">
-                            $4500.00
+                            <?php
+                             echo '$'.$order['total_amt']
+                            ?>
                         </td>
                     </tr>
                     <tr class="border border-b text-black">
@@ -209,17 +183,9 @@ include "../Controller/orderDetailController.php";
                             Delivery Rate
                         </td>
                         <td class="px-6 py-4">
-                        <!-- <?php
-                        if (isset($_GET['id'])) {
-                            $id = $_GET['id'];
-                            include "../Model/model.php";
-                            $sql = $pdo->prepare("SELECT delivery_fee FROM m_order WHERE id=:id");
-                            $sql->bindValue(":id", $id);
-                            $sql->execute();
-                            $deliveryFee = $sql->fetchColumn();
-                            echo '$'. $deliveryFee;
-                        }
-                        ?> -->
+                           <?php
+                           echo '$'.$order['delivery_fees'];
+                           ?>
                         </td>
                     </tr>
                     <tr class="border border-b text-black">
@@ -233,19 +199,10 @@ include "../Controller/orderDetailController.php";
                             Total
                         </td>
                         <td class="px-6 py-4 font-bold">
-                        <!-- <?php
-                        if (isset($_GET['id'])) {
-                            $id = $_GET['id'];
-                            include "../Model/model.php";
-                            $sql = $pdo->prepare("SELECT delivery_fee,total_amt FROM m_order WHERE id=:id");
-                            $sql->bindValue(":id", $id);
-                            $sql->execute();
-                            $Price = $sql->fetch(PDO::FETCH_ASSOC);
-                            $deliveryFee = $Price['delivery_fee'];
-                            $totalPrice = $Price['total_amt'];
-                            echo '$'. $deliveryFee;
-                        }
-                        ?> -->
+                          <?php 
+                          $total = $order['delivery_fees'] + $order['total_amt'];
+                          echo '$'.$total;
+                          ?>
                         </td>
                     </tr>
             </tbody>

@@ -1,5 +1,5 @@
 <?php
-// include "../Controller/orderlistController.php";
+include "../Controller/orderlistController.php";
 include "./adminsidebar.php";
 ?>
 <!doctype html>
@@ -56,44 +56,45 @@ include "./adminsidebar.php";
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($results as  $result) {?>
+                        
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                      <?php
-                                    $product_name = $results['name'];
+                                    $product_name = $result['id'];
                                     echo $product_name;
                                     ?>
                                 </th>
                                 <td class="px-6 py-4">
                                     <?php 
-                                     $name =  $merchantInfo['m_name'];
-                                     echo $name;
+                                     echo $result['m_name'];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">
                                 <?php 
-                                    $name =  $customerInfo['username'];
-                                    echo $name;
+                                    echo $result["username"];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">
                                 <?php 
-                                echo $Region['r_name'].' , ' . $Township['t_name'].' , '.  $customerStreetName;
+                                echo $result['r_name'].' , ' . $result['t_name'].' , '. $result['street'];
                                 ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?php echo $results['total_amt'];
+                                    <?php echo $result['total_amt'];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?php echo $results['order_date'];
+                                    <?php echo $result['order_date'];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4 flex space-x-3">
-                                    <a href="./orderDetail.php?order_id=<?= $results['order_id'] ?>"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
+                                    <a href="./orderDetail.php?id=<?= $result['id'] ?>"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
                                 </td>
                             </tr>
-                       
+                            <?php } ?>
                     </tbody>
+                    
                 </table>
                 <div class="flex justify-between items-center py-2 px-3 pt-5">
                     <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
