@@ -1,8 +1,6 @@
 <?php
 session_start();
 $product=$_GET["id"];
-//  print_r($product);
-
 
 if(!isset($product)){
     header("Location: ../View/errors/error.php");
@@ -15,11 +13,7 @@ if(!isset($product)){
         $sql->execute();
 
         $_SESSION["editproduct"]= $sql->fetchAll(PDO::FETCH_ASSOC);
-        // echo "<pre>";
-        // print_r($_SESSION["editproduct"]);
-        
-
-        
+    
         header("Location: ../View/editProduct.php");
     
 }
