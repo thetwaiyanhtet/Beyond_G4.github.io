@@ -13,7 +13,6 @@ include "../Controller/orderController.php";
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
-    <script src="../View/resources/js/searchOrder.js"></script>
     <script src="./resources/js/dateandtime.js"></script>
     <link rel="stylesheet" href="./resources/css/order.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
@@ -27,9 +26,6 @@ include "../Controller/orderController.php";
     <main class=" ml-56">
         <section class="p-5">
             <p class=" text-lg font-semibold">Orders</p>
-            <div class=" py-5 w-60">
-                <input type="search" class="inputBox" placeholder="Search Here" id="search">
-            </div>
             <div class="relative overflow-x-auto mt-3 p-5 rounded-lg shadow-xl border-2 border-blue-950">
                 <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center">
@@ -57,7 +53,7 @@ include "../Controller/orderController.php";
                             </th>
                         </tr>
                     </thead>
-                    <tbody class=" text-center" id="searchResult">
+                    <tbody class=" text-center">
                         <?php $id = 0 ?>
                         <?php foreach ($orders as $order) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
