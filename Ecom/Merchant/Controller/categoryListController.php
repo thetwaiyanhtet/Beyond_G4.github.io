@@ -2,7 +2,9 @@
 
     include "../Model/model.php";
     $sql=$pdo->prepare(
-        "SELECT * FROM m_admin_category"
+        "SELECT * 
+        FROM m_admin_category
+      "
         );
         
         $sql->execute();

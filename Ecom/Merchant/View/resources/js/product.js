@@ -122,3 +122,5 @@ document.getElementById('photo6').onchange = function (evt) {
     }
     
 }
+
+
