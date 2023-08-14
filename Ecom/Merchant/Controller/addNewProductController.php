@@ -60,11 +60,10 @@ if (count($_POST) == 0) {
 
     $sql = $pdo->prepare("SELECT id FROM m_merchant WHERE email = :email");
     $sql->bindValue(':email', $merchantEmail);
-    echo $merchantEmail;
+  
     $sql->execute();
     $merchant_data = $sql->fetch(PDO::FETCH_ASSOC);
-    $merchant_id = $merchant_data['id'];
-    echo ($merchant_id);
+    $merchant_id = $merchant_data['id']; 
 
    
         move_uploaded_file($photo1tmp, "../../Storage/product/" . $photo1);
