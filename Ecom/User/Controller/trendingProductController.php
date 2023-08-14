@@ -43,6 +43,7 @@ $AllProductSql->execute();
 $AllProduct = $AllProductSql->fetchAll(PDO::FETCH_ASSOC);
 // echo "<pre>";
 //  print_r($AllProduct);
+//  echo "</pre>";
 
 $FeatureShopSql = $pdo->prepare(
     "SELECT m_merchant.logo, m_merchant.m_name,m_merchant.id
