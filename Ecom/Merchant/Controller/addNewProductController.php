@@ -37,16 +37,23 @@ if (count($_POST) == 0) {
 
     include "../Model/model.php";
 
-    $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product WHERE code = :pid");
-    $checkSql->bindValue(":pid", $pid);
-    $checkSql->execute();
-    $productIdExists = $checkSql->fetchColumn();
-
-    if ($productIdExists) {
-        // Category name already exists, handle accordingly (display error message, redirect, etc.)
-        $_SESSION["productIdError"] = "*ProductId is already exist!";
-        header("Location: ../View/addNewProduct.php");
-        exit;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $pid = $_POST["pid"];
+        
+        // Prepare and execute SQL to check if product ID exists
+        $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product WHERE code = :pid");
+        $checkSql->bindValue(":pid", $pid);
+        $checkSql->execute();
+        $productIdExists = $checkSql->fetchColumn();
+    
+        if ($productIdExists) {
+            // Set the error message in the session
+            $_SESSION["productIdError"] = "*ProductId is already exist!";
+            
+            // Redirect to the same page
+            header("Location: ../View/addNewProduct.php");
+            exit;
+        }
     }
 
 

@@ -114,10 +114,10 @@ $result = $_SESSION["m_product"];
                             <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center ">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
-                                        Product id
+                                        Product Name
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-start">
-                                        Product name
+                                        Product Id
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-start">
                                         Category
@@ -150,7 +150,7 @@ $result = $_SESSION["m_product"];
                                     <?= $product["name"];?>
                                     </th>
                                     <td class="px-6 py-4">
-                                    <?= $product["id"];?>
+                                    <?= $product["code"];?>
                                     </td>
                                     <td class="px-6 py-4">
                                     <?= $product["c_name"];?>
