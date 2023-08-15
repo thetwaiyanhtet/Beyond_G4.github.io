@@ -96,7 +96,7 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Categories.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p><?= $result["NumberOfCategories"] ?></p>
+                                    <p><?= $totalCategoryCount?></p>
                                     <p class=" text-sm">Number of Categories</p>
                                 </div>
                             </div>
