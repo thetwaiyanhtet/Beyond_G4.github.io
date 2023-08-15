@@ -27,7 +27,7 @@ if (isset($_POST['update'])) {
         $mail = new SendMail();
         $mail->sendMail(
           $email,
-          "Admin reset password",
+          "reset password",
           $tokenPw
         );
         header("Location: ../View/loading.php");

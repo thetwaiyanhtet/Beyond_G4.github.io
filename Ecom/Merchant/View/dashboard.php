@@ -1,6 +1,7 @@
 <?php
 include "./sidebar.php";
 
+
 include "../../User/Controller/trendingProductController.php";
 include "../Controller/DashboardShowController.php";
 $review = $_SESSION["reviewCustomers"];

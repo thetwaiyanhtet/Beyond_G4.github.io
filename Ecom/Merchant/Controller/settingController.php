@@ -27,7 +27,8 @@ if (isset($_POST["send"])) {
         $sql->bindValue(":img", "/Storage/profile/" . $img);
         $sql->bindValue(":img2", "/Storage/profile/" . $img2);
         if ($sql->execute()) {
-            header("Location: ../View/Setting.php");
+          
+        header("Location: ../View/Setting.php");
             exit();
         } else {
             $_SESSION['error'] = "Failed to update merchant information.";

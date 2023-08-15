@@ -1,6 +1,7 @@
 <?php
 include "../Controller/headerController.php";
 $data = $_SESSION["verifyData"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

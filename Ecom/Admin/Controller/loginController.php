@@ -6,35 +6,36 @@ error_reporting(E_ALL);
 if (isset($_POST['login'])) {
     $adminEmail = $_POST['email'];
     $password = $_POST['password'];
-
-    echo $adminEmail;
-    echo $password;
-
+    
+    $hash = 'beyond';
+    $hashpaswprd = password_hash($hash,PASSWORD_DEFAULT);
+    echo $hashpaswprd;
 
     include "../Model/model.php";
     $sql = $pdo->prepare(
         "SELECT * FROM m_admin WHERE email=:email"
     );
-    $sql->bindValue(':email', $adminEmail, PDO::PARAM_STR);
+    $sql->bindValue(':email', $adminEmail);
     $sql->execute();
     $result = $sql->fetch();
-    $DBemail = $result['email'];
-    $DBpassword = $result['login_password'];
+    if ($result) {
+        $DBemail = $result['email'];
+        $DBpassword = $result['login_password'];
 
-    if ($DBemail !== $adminEmail) {
-        $_SESSION['ErrorMessage'] = "Email not match";
-        header("Location: ../View/login.php");
-        exit();
-    }else {
-        if (password_verify($password,$DBpassword)) {
+        // echo $password . '<pre></pre>';
+        // echo $DBpassword . '<pre></pre>';
+
+        if (password_verify($password, $DBpassword)) {
             header("Location: ../View/dashboard.php");
-            exit();
         } else {
-            $_SESSION["ErrorMessage"] = "Email or password incorrect!";
+            $_SESSION['ErrorMessage'] = "Password isn't match";
             header("Location: ../View/login.php");
-            exit(); // Add exit() to stop further execution of the script
         }
-    }
+      
+    } else {
+        $_SESSION['ErrorMessage'] = "Email not exit";
+        header("Location: ../View/login.php");
+    } 
 }else{
     header("Location: ../View/404page.php");
     exit();

@@ -3,7 +3,7 @@
 session_start();
 $admin = $_SESSION["m_admin"];
 include "../Controller/updatepasswordController.php";
-
+echo $admin;
 ?>
 
 <!doctype html>
