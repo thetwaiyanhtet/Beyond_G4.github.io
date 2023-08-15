@@ -1,10 +1,10 @@
 <?php
  include "../Controller/logoandbusinessController.php";
  include "../Controller/updatepasswordController.php";
-$admin = $_SESSION["m_admin"]; 
-
-
-$logoandname = $_SESSION["m_logo"];
+$admin = $_SESSION["adminInfo"]; 
+// echo "<pre>";
+// print_r($admin);
+// $logoandname = $_SESSION["m_logo"];
 ?>
 <!doctype html>
 <html>
@@ -45,15 +45,15 @@ $logoandname = $_SESSION["m_logo"];
 
     <div id="navbar" class="flex items-center justify-between bg-table w-full fixed top-0 left-0 z-40 h-[80px]">
         <div class="flex items-center pl-4">
-            <img class="w-20" src="<?= $logoandname[0]['logo']  ?>" alt="...">
-            <span class=" text-2xl font-bold text-white"><?= $logoandname[0]['business_name']  ?></span>
+            <!-- <img class="w-20" src="<?= $logoandname[0]['logo']  ?>" alt="..."> -->
+            <!-- <span class=" text-2xl font-bold text-white"><?= $logoandname[0]['business_name']  ?></span> -->
         </div>
         <div>
             <ul class="flex space-x-5 items-center pr-5 text-white">
               
                 <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                <li><img src="<?= $admin[0]['p_picture']?>" alt="..." width="40px"></li>
-                <li class=" font-medium"><?= $admin[0]['username']?></li>
+                <li><img src="<?=$admin['p_picture']?>" alt="..." width="40px"></li>
+                <li class=" font-medium"><?= $admin['username']?></li>
             </ul>
         </div>
     </div>

@@ -18,12 +18,10 @@ if (isset($_POST['login'])) {
     $sql->bindValue(':email', $adminEmail);
     $sql->execute();
     $result = $sql->fetch();
+    
     if ($result) {
         $DBemail = $result['email'];
         $DBpassword = $result['login_password'];
-
-        // echo $password . '<pre></pre>';
-        // echo $DBpassword . '<pre></pre>';
 
         if (password_verify($password, $DBpassword)) {
             header("Location: ../View/dashboard.php");
@@ -31,7 +29,7 @@ if (isset($_POST['login'])) {
             $_SESSION['ErrorMessage'] = "Password isn't match";
             header("Location: ../View/login.php");
         }
-      
+      $_SESSION["adminInfo"] = $result;
     } else {
         $_SESSION['ErrorMessage'] = "Email not exit";
         header("Location: ../View/login.php");
