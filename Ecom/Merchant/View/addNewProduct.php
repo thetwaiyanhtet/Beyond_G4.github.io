@@ -98,7 +98,7 @@ include "../Controller/categoryListController.php";
                                             <?php
                                             if (isset($_SESSION["productIdError"])) {
                                                 echo $_SESSION["productIdError"];
-                                                // unset($_SESSION["productIdError"]); // Clear the error message after displaying it
+                                              
                                             }
                                             ?>
                                         </div>

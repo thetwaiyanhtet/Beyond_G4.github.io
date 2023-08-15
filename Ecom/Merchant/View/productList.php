@@ -35,76 +35,7 @@ $result = $_SESSION["m_product"];
                 <input type="text" class="inputBox text-xs" id="search" placeholder="Search by Name,ID,or category...">
             </div>
             <div class=" flex-col justify-center px-5 py-1">
-                <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950"> -->        
-                    <!-- <div class=" flex justify-between pb-3">
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col justify-center space-y-3">
-                                <div class=" text-violet-600">Categories</div>
-                                <div>10</div>
-                                <div class=" text-sm">Last 7 Days</div>
-                            </div>
-                        </div>
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col space-y-3">
-                                <div class=" text-sky-500">Total Products</div>
-                                <ul class=" flex justify-between">
-                                    <li>
-                                        <div>404</div>
-                                    </li>
-                                    <li>
-                                        <div>$2500</div>
-                                    </li>
-                                </ul>
-                                <ul class=" flex space-x-5 text-sm">
-                                    <li>
-                                        <div>Last 7 Days</div>
-                                    </li>
-                                    <li>
-                                        <div>Revenue</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col space-y-3">
-                                <div class=" text-green-500">Top Selling</div>
-                                <ul class=" flex justify-between">
-                                    <li>
-                                        <div>10</div>
-                                    </li>
-                                    <li>$500</li>
-                                </ul>
-                                <ul class=" flex space-x-5 text-sm">
-                                    <li>
-                                        <div>Last 7 Days</div>
-                                    </li>
-                                    <li>
-                                        <div>Cost</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col space-y-3">
-                                <div class=" text-yellow-500">Low Stocks</div>
-                                <ul class=" flex justify-between ">
-                                    <li>
-                                        <div>10</div>
-                                    </li>
-                                    <li>4</li>
-                                </ul>
-                                <ul class=" flex space-x-5 text-sm">
-                                    <li>
-                                        <div>Ordered</div>
-                                    </li>
-                                    <li>
-                                        <div>Out of Stock</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-                <!-- </div> -->
+                
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
                         <p class=" font-philosopher font-bold text-lg">Products</p>
