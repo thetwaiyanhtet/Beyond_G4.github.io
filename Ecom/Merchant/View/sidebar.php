@@ -17,6 +17,7 @@ include "./header.php";
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./resources/js/dateandtime.js "></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class=" font-poppins">
@@ -97,37 +98,52 @@ include "./header.php";
     </div>
   </div>
 
-  <section id="logoutPopup" class="fixed left-[45%] top-[35%] border bg-neutral-500 rounded-md p-5 shadow-lg w-60 text-white hidden z-50">
-    <div>
-      <div class=" border-b-2 border-gray-200 text-center">
-        <p class="pb-3 text-xl">Log Out</p>
-        <p class="pb-3">Are you sure to log out of your account?</p>
-      </div>
-      <div class=" flex justify-center items-center space-x-5 p-5 bg-slate-500">
-        <p id="cancelButton" class="border-r-2 border-gray-200 pr-4">Cancel</p>
-        <a href="./logIn.php">
-          <p class=" text-white bg-red-500">Log out</p>
-        </a>
-      </div>
-    </div>
-  </section>
+  <script>
+    // Add an event listener to the logout button
+    document.getElementById('logoutButton').addEventListener('click', function() {
+      // Display the Swal confirmation dialog with custom styling
+      Swal.fire({
+        title: 'Are you sure?',
+        text: 'You will be logged out.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, logout',
+        backdrop: false, // Disable the backdrop blur effect
+      }).then((result) => {
+        // If the user confirms the logout
+        if (result.isConfirmed) {
+          // Perform the logout action (e.g., redirect to logout page or execute a logout function)
+          // Replace the following line with your actual logout code
+          window.location.href = 'login.php';
+        }
+      });
+    });
 
+    
+    //WebSocket Connection
+    const socket = new WebSocket('ws://your-backend-url'); // Replace with your actual WebSocket URL
+
+    socket.addEventListener('open', (event) => {
+      console.log('WebSocket connection established.');
+    });
+
+    socket.addEventListener('message', (event) => {
+      const notificationData = JSON.parse(event.data);
+      // Display notification to the user using your preferred UI component (e.g., SweetAlert, toast message, etc.)
+      // Example: Show a SweetAlert notification
+      Swal.fire({
+        title: 'New Order Completed!',
+        text: `Order ID: ${notificationData.orderId}`,
+        icon: 'success',
+      });
+    });
+
+    socket.addEventListener('close', (event) => {
+      console.log('WebSocket connection closed.');
+    });
+  </script>
 </body>
-
-<script>
-  // Get references to the popup and buttons
-  const logoutPopup = document.getElementById("logoutPopup");
-  const cancelButton = document.getElementById("cancelButton");
-  const logoutButton = document.getElementById("logoutButton");
-
-  // Function to toggle the visibility of the popup and blur the background
-  function toggleLogoutPopup() {
-    logoutPopup.classList.toggle("hidden");
-  }
-
-  // Attach click event listeners to the logout button and cancel button
-  logoutButton.addEventListener("click", toggleLogoutPopup);
-  cancelButton.addEventListener("click", toggleLogoutPopup);
-</script>
 
 </html>
