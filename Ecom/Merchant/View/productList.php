@@ -1,9 +1,10 @@
 <?php
-include "./sidebar.php";
+//include "./sidebar.php";
 include "../Controller/productListController.php";
 
-$result = $_SESSION["m_product"];
-
+$productData = $_SESSION["m_product"];
+                        // echo "<pre>";
+                        // print_r($result);
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +82,7 @@ $result = $_SESSION["m_product"];
                                 </tr>
                             </thead>
                             <tbody id="searchResult">
-                                <?php foreach ($result as $product) { ?>
+                                <?php echo "<pre>"; echo count($productData); print_r($productData); foreach ($productData as $product) { ?>
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             <?= $product["name"]; ?>
@@ -131,6 +132,7 @@ $result = $_SESSION["m_product"];
                             <div>Page 1 of 10</div>
                             <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Next</button></div>
                         </div>
+                        <?php  ?>
                     </div>
 
                 </div>
