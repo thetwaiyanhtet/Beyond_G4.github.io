@@ -29,7 +29,7 @@ if ($verify_data["verify"] == 0) {
   $_SESSION["user_data"] = $sql->fetch(PDO::FETCH_ASSOC);
   // print_r($_SESSION["user_data"]);
 
-} else if($verify_data["verify"] == 1) {
+} else if ($verify_data["verify"] == 1) {
   $sql = $pdo->prepare(
     "SELECT m_customer.username,m_regions.r_name,m_townships.t_name,m_customer.birthday,m_customer.email,m_customer.phone,m_customer.gender,m_customer.p_picture
           FROM m_customer
