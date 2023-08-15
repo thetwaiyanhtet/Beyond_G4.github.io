@@ -1,6 +1,9 @@
 <?php
+// session_start();
+ $merchantEmail = $_SESSION["merchant_ID"];
 include "../Model/model.php";
-$sql = $pdo->prepare("SELECT * From m_merchant");
+$sql = $pdo->prepare("SELECT * From m_merchant WHERE email = :email");
+$sql->bindValue(':email', $merchantEmail);
 $sql->execute();
 $merchantInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 foreach($merchantInfo as $merchant){
