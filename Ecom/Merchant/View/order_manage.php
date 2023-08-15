@@ -46,7 +46,7 @@ include "../Controller/orderController.php";
                                 Payment Status
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Payment
+                                PaymentE
                             </th>
                             <th scope="col" class="px-5 py-3">
                                 Action
@@ -54,11 +54,11 @@ include "../Controller/orderController.php";
                         </tr>
                     </thead>
                     <tbody class=" text-center">
-                        <?php $id = 0 ?>
-                        <?php foreach ($orders as $order) { ?>
+                        <?php $count = ($currentPage - 1) * $itemsPerPage ?>
+                        <?php foreach ($paginatedData as $order) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                    <?= ++$id ?>.
+                                    <?= ++$count ?>.
                                 </th>
                                 <td class="px-6 py-4">
                                     <?= $order["generate_id"]; ?>
@@ -97,10 +97,24 @@ include "../Controller/orderController.php";
                         <?php } ?>
                     </tbody>
                 </table>
-                <div class="flex justify-between items-center py-2 pt-5 px-3">
-                    <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
-                    <div>Page 1 of 10</div>
-                    <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Next</button></div>
+
+                <div class="flex justify-center items-end pt-5">
+                    <nav aria-label="Page navigation example">
+                        <ul class=" flex space-x-3 pagination justify-content-center">
+                            <?php if ($currentPage > 1) { ?>
+                                <li class="page-item p-2 border rounded-md border-gray-500"><a class="page-link hover:underline" href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
+                            <?php } else { ?>
+                                <li class="page-item disabled p-2 border rounded-md border-gray-500"><a class="page-link hover:underline opacity-50">Previous</a></li>
+                            <?php } ?>
+                            <?php for ($i = 1; $i <= ceil(count($data) / $itemsPerPage); $i++) { ?>
+                                <li class="page-item p-2 rounded-md px-3 <?= $i === $currentPage ? 'active font-semibold bg-blue-500 text-white' : '' ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                            <?php } ?>
+                            <?php if ($startIndex + $itemsPerPage < count($data)) { ?><a class="page-link p-2 border rounded-md border-gray-500 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
+                            <?php } else { ?>
+                                <li class="page-item disabled p-2 border rounded-md border-gray-500"><a class="page-link opacity-50 hover:underline">Next</a></li>
+                            <?php } ?>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>

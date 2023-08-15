@@ -60,6 +60,6 @@ $(document).ready(function () {
   });
 
   // Initial search on page load
-  searchProducts();
+  // searchProducts();
   
 });
