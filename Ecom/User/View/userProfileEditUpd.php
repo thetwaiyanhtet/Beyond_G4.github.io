@@ -144,11 +144,11 @@ $verifyData = $_SESSION["verifyData"];
 
             <div class=" w-full m-auto space-y-4 flex flex-wrap">
                 <div class="space-y-3 w-3/5 m-auto">
-                    <input type="text" placeholder="Username" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="username">
+                    <!-- <input type="text" placeholder="Username" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="username"> -->
 
                     <input type="text" placeholder="Name" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="name" required>
 
-                    <input type="text" placeholder="Email" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="email">
+                    <!-- <input type="text" placeholder="Email" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="email"> -->
 
                     <input type="text" placeholder="Phone Number" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="phone_no" required>
 

@@ -4,6 +4,7 @@
 include "../Model/model.php";
 
 $merchantEmail = $_SESSION["merchant_ID"];
+// echo $merchantEmail;
 
 $saleSql = $pdo->prepare(
     "SELECT SUM(m_product.sellprice) as totalSales, SUM(m_product.buyprice) as totalCost,
@@ -13,8 +14,7 @@ $saleSql = $pdo->prepare(
     ON m_product.merchant_id = m_merchant.id
     JOIN m_admin_category
     ON m_product.category_id=m_admin_category.id
-    WHERE m_merchant.email = :email
-    GROUP BY m_product.category_id"
+    WHERE m_merchant.email = :email"
 );
 
 $saleSql->bindValue(':email', $merchantEmail);
@@ -32,6 +32,25 @@ $profit = $totalSales - $totalCost;
 // print_r($result);
 // echo "Profit: $profit<br>";
 // echo "</pre>";
+
+
+$categoryCountSql = $pdo->prepare(
+    "SELECT COUNT(DISTINCT m_product.category_id) AS category_count
+    FROM m_product
+    JOIN m_merchant ON m_product.merchant_id = m_merchant.id
+    JOIN m_admin_category ON m_product.category_id = m_admin_category.id
+    WHERE m_merchant.email = :email"
+);
+
+$categoryCountSql->bindValue(':email', $merchantEmail);
+
+$categoryCountSql->execute();
+$categoryCountResult = $categoryCountSql->fetch(PDO::FETCH_ASSOC);
+
+$totalCategoryCount = $categoryCountResult['category_count'];
+
+// echo "Total distinct category count: " . $totalCategoryCount;
+
 
 $averageReviewSql = $pdo->prepare(
     "SELECT ROUND(AVG(m_cusreview.rating), 1) as review_rating

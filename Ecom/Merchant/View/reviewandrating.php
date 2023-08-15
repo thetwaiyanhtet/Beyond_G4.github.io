@@ -42,6 +42,9 @@ $reviewdata = $_SESSION["getReviewandRating"];
                                         <thead class=" text-sm">
                                             <tr class="bg-blue-200 text-center">
                                                 <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4 text-start">
+                                                    No
+                                                </th>
+                                                <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4 text-start">
                                                     Customer Name
                                                 </th>
                                                 <th class="w-1/6 min-w-[160px] py-0 lg:py-2 px-3 lg:px-4 text-start">
@@ -59,12 +62,15 @@ $reviewdata = $_SESSION["getReviewandRating"];
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach ($reviewdata as $data) { ?>
+                                            <?php $count = ($currentPage - 1) * $itemsPerPage ?>
+                                            <?php foreach ($paginatedData as $data) { ?>
                                                 <tr>
+                                                    <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
+                                                        <?= ++$count ?>.
+                                                    </td>
                                                     <td class="text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500 text-start">
                                                         <?= $data["username"] ?>
                                                     </td>
-
                                                     <td class=" text-start text-dark font-medium text-sm py-5 pl-4 border-b border-gray-500">
                                                         <?= $data["name"] ?>
                                                     </td>
@@ -106,10 +112,23 @@ $reviewdata = $_SESSION["getReviewandRating"];
                     </div>
                 </section>
                 <!-- ====== Table Section End -->
-                <div class="flex justify-between items-center py-2 px-3 pt-5">
-                    <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
-                    <div>Page 1 of 10</div>
-                    <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
+                <div class="flex justify-center items-end pt-5">
+                    <nav aria-label="Page navigation example">
+                        <ul class=" flex space-x-3 pagination justify-content-center">
+                            <?php if ($currentPage > 1) { ?>
+                                <li class="page-item p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link " href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
+                            <?php } else { ?>
+                                <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link  opacity-50">Previous</a></li>
+                            <?php } ?>
+                            <?php for ($i = 1; $i <= ceil(count($reviewdata) / $itemsPerPage); $i++) { ?>
+                                <li class="page-item p-2 rounded-md px-3 <?= $i === $currentPage ? 'active font-semibold bg-blue-500 text-white' : '' ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                            <?php } ?>
+                            <?php if ($startIndex + $itemsPerPage < count($reviewdata)) { ?><a class="page-link p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
+                            <?php } else { ?>
+                                <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50">Next</a></li>
+                            <?php } ?>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>

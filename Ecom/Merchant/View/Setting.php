@@ -50,13 +50,13 @@ include "../Controller/settingShowDataController.php";
                         </div>
                         <form action="../Controller/settingController.php" method="post" enctype="multipart/form-data">
                             <div class="flex justify-around">
-                                <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
+                                <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3 flex justify-center items-center">
                                     <label for="photo5" class="cursor-pointer">
                                         <input type="file" id="photo5" name="photo5" style="display: none;" onchange="displayUserImage('photoimg5', 'photo5')">
-                                        <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg5">
+                                        <img src="./resources/img/gallery-add.png" alt="photo" class="" id="photoimg5">
                                         <!-- <img src="<?= '../../'. $logoImagePath ?  $logoImagePath : './resources/img/gallery-add.png'; ?>" alt="photo" class="w-5 m-auto mt-5" id="photoimg5"> -->
                                     </label>
-                                    <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
+                                    <!-- <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p> -->
                                 </div>
                                 <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
                                     <label for="photo6" class="cursor-pointer">

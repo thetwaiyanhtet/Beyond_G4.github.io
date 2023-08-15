@@ -32,80 +32,11 @@ $result = $_SESSION["m_product"];
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class="pl-5 pt-1 w-60">
-                <input type="text" class="inputBox text-xs" id="search" placeholder="Search by Name,ID,or category...">
+                <input type="search" class="inputBox text-xs" id="search" placeholder="Search by Name,ID,or category...">
             </div>
             <div class=" flex-col justify-center px-5 py-1">
-                <!-- <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950"> -->        
-                    <!-- <div class=" flex justify-between pb-3">
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col justify-center space-y-3">
-                                <div class=" text-violet-600">Categories</div>
-                                <div>10</div>
-                                <div class=" text-sm">Last 7 Days</div>
-                            </div>
-                        </div>
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col space-y-3">
-                                <div class=" text-sky-500">Total Products</div>
-                                <ul class=" flex justify-between">
-                                    <li>
-                                        <div>404</div>
-                                    </li>
-                                    <li>
-                                        <div>$2500</div>
-                                    </li>
-                                </ul>
-                                <ul class=" flex space-x-5 text-sm">
-                                    <li>
-                                        <div>Last 7 Days</div>
-                                    </li>
-                                    <li>
-                                        <div>Revenue</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col space-y-3">
-                                <div class=" text-green-500">Top Selling</div>
-                                <ul class=" flex justify-between">
-                                    <li>
-                                        <div>10</div>
-                                    </li>
-                                    <li>$500</li>
-                                </ul>
-                                <ul class=" flex space-x-5 text-sm">
-                                    <li>
-                                        <div>Last 7 Days</div>
-                                    </li>
-                                    <li>
-                                        <div>Cost</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class=" flex justify-center ">
-                            <div class=" flex-col space-y-3">
-                                <div class=" text-yellow-500">Low Stocks</div>
-                                <ul class=" flex justify-between ">
-                                    <li>
-                                        <div>10</div>
-                                    </li>
-                                    <li>4</li>
-                                </ul>
-                                <ul class=" flex space-x-5 text-sm">
-                                    <li>
-                                        <div>Ordered</div>
-                                    </li>
-                                    <li>
-                                        <div>Out of Stock</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-                <!-- </div> -->
-                <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
+
+                <div class=" w-full h-[600px]  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
                         <p class=" font-philosopher font-bold text-lg">Products</p>
                         <div class="flex space-x-3">
@@ -115,7 +46,6 @@ $result = $_SESSION["m_product"];
                     </div>
 
                     <div class="relative overflow-x-auto py-5">
-
                         <table class="w-full text-sm text-left text-gray-500 ">
                             <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center ">
                                 <tr>
@@ -150,7 +80,7 @@ $result = $_SESSION["m_product"];
                                 </tr>
                             </thead>
                             <tbody id="searchResult">
-                                <?php foreach ($result as $product) { ?>
+                                <?php foreach ($paginatedData as $product) { ?>
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             <?= $product["name"]; ?>
@@ -195,11 +125,25 @@ $result = $_SESSION["m_product"];
                             </tbody>
                         </table>
 
-                        <div class="flex justify-between items-center py-2 pt-5 px-3">
-                            <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
-                            <div>Page 1 of 10</div>
-                            <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Next</button></div>
+                        <div class="flex justify-center items-end pt-5">
+                            <nav aria-label="Page navigation example">
+                                <ul class=" flex space-x-3 pagination justify-content-center">
+                                    <?php if ($currentPage > 1) { ?>
+                                        <li class="page-item p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link " href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
+                                    <?php } else { ?>
+                                        <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50">Previous</a></li>
+                                    <?php } ?>
+                                    <?php for ($i = 1; $i <= ceil(count($data) / $itemsPerPage); $i++) { ?>
+                                        <li class="page-item p-2 rounded-md px-3 <?= $i === $currentPage ? 'active font-semibold bg-blue-500 text-white' : '' ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                                    <?php } ?>
+                                    <?php if ($startIndex + $itemsPerPage < count($data)) { ?><a class="page-link p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
+                                    <?php } else { ?>
+                                        <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50 ">Next</a></li>
+                                    <?php } ?>
+                                </ul>
+                            </nav>
                         </div>
+
                     </div>
 
                 </div>
