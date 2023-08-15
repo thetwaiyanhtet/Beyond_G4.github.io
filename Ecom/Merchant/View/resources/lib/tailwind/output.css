@@ -863,16 +863,8 @@ video {
   height: 2.25rem;
 }
 
-.h-\[192px\] {
-  height: 192px;
-}
-
 .h-\[350px\] {
   height: 350px;
-}
-
-.h-\[360px\] {
-  height: 360px;
 }
 
 .h-\[40px\] {
@@ -933,6 +925,14 @@ video {
 
 .h-\[600px\] {
   height: 600px;
+}
+
+.h-\[192px\] {
+  height: 192px;
+}
+
+.h-\[360px\] {
+  height: 360px;
 }
 
 .min-h-screen {
