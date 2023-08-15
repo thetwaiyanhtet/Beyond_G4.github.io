@@ -4,7 +4,7 @@
 include "../Model/model.php";
 
 $merchantEmail = $_SESSION["merchant_ID"];
-echo $merchantEmail;
+// echo $merchantEmail;
 
 $saleSql = $pdo->prepare(
     "SELECT SUM(m_product.sellprice) as totalSales, SUM(m_product.buyprice) as totalCost,

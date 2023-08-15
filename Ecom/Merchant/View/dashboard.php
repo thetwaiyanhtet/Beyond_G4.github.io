@@ -1,16 +1,16 @@
 <?php
+// session_start();
 include "./sidebar.php";
 
 include "../../User/Controller/trendingProductController.php";
 include "../Controller/DashboardShowController.php";
 $review = $_SESSION["reviewCustomers"];
 $review_json = json_encode($review);
-$trending=$_SESSION["trandingProduct"];
+$trending = $_SESSION["trandingProductGraph"];
 $trending_json = json_encode($trending);
 // echo "<pre>";
 // print_r($trending_json);
 // echo "</pre>";
-
 
 ?>
 
@@ -45,7 +45,11 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Sales.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>$<?= $result["totalSales"] ?></p>
+                                    <?php if (!$result["totalSales"] == 0) { ?>
+                                        <p>$<?= $result["totalSales"] ?></p>
+                                    <?php } else { ?>
+                                        <p>$ 0</p>
+                                    <?php } ?>
                                     <p>Sales</p>
                                 </div>
                             </div>
@@ -72,7 +76,11 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Cost.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>$<?= $result["totalCost"] ?></p>
+                                <?php if (!$result["totalCost"] == 0) { ?>
+                                        <p>$<?= $result["totalCost"] ?></p>
+                                    <?php } else { ?>
+                                        <p>$ 0</p>
+                                    <?php } ?>
                                     <p>Cost</p>
                                 </div>
                             </div>
@@ -87,7 +95,11 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Quantity.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p><?= $result["quantityOnHand"] ?></p>
+                                    <?php if (!$result["quantityOnHand"] == 0) { ?>
+                                        <p><?= $result["quantityOnHand"] ?></p>
+                                    <?php } else { ?>
+                                        <p>0</p>
+                                    <?php } ?>
                                     <p class=" text-sm">Quantity in Hand</p>
                                 </div>
                             </div>
@@ -96,7 +108,7 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Categories.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p><?= $totalCategoryCount?></p>
+                                    <p><?= $totalCategoryCount ?></p>
                                     <p class=" text-sm">Number of Categories</p>
                                 </div>
                             </div>
@@ -222,22 +234,35 @@ $trending_json = json_encode($trending);
                             <h1 class=" text-lg font-bold font-philosopher">Delivery</h1>
                         </div>
                         <hr>
-                        <div class=" flex justify-between pb-3 space-x-5 p-3">
-                            <div>
-                                <?php if($deliveryCounts[0]["delivery_status"] == 0) { ?>
-                                <p class=" font-semibold"><?= $deliveryCounts[0]["product_count"] ?></p>
-                                <p>Processing</p>
-                                <?php } ?>
+                        <?php if (!count($deliveryCounts) == 0) { ?>
+                            <div class=" flex justify-between pb-3 space-x-5 p-3">
+                                <div>
+                                    <?php if ($deliveryCounts[0]["delivery_status"] == 0) { ?>
+                                        <p class=" font-semibold"><?= $deliveryCounts[0]["product_count"] ?></p>
+                                        <p>Processing</p>
+                                    <?php } ?>
+                                </div>
+                                <div>
+                                    <?php if ($deliveryCounts[1]["delivery_status"] == 1) { ?>
+                                        <p class=" font-semibold"><?= $deliveryCounts[1]["product_count"] ?></p>
+                                        <p>Processed</p>
+                                    <?php } ?>
+                                </div>
                             </div>
-                            <div>
-                            <?php if($deliveryCounts[1]["delivery_status"] == 1) { ?>
-                                <p class=" font-semibold"><?= $deliveryCounts[1]["product_count"] ?></p>
-                                <p>Processed</p>
-                                <?php } ?>
+                        <?php } else { ?>
+                            <div class=" flex justify-between pb-3 space-x-5 p-3">
+                                <div>
+                                    <p class=" font-semibold">0</p>
+                                    <p>Processing</p>
+                                </div>
+                                <div>
+                                    <p class=" font-semibold">0</p>
+                                    <p>Processed</p>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
-                    <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950">
+                    <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950 h-[192px]">
                         <div class=" flex justify-center items-center space-x-3 pb-3 pt-3">
                             <img src="./resources/img/person-heart-outline.svg" alt="..." width="30px">
                             <h1 class=" text-lg font-bold font-philosopher">Top Customers</h1>
@@ -264,7 +289,7 @@ $trending_json = json_encode($trending);
                         </div>
                         <hr>
                         <div class=" text-center py-6">
-                            <p>$<?= $totalProfit?></p>
+                            <p>$<?= $totalProfit ?></p>
                         </div>
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950">
@@ -282,7 +307,7 @@ $trending_json = json_encode($trending);
                         </div>
                     </div>
                 </div>
-                <div class=" w-full h-full space-y-4  rounded-lg p-3 shadow-xl border-2 border-blue-950">
+                <div class=" w-full h-[360px] space-y-4  rounded-lg p-3 shadow-xl border-2 border-blue-950">
                     <h1 class=" text-lg font-bold font-philosopher pb-3">Trending Products</h1>
                     <div class=" flex-col justify-between pb-0">
                         <div class=" w-52 mx-auto">
@@ -356,14 +381,14 @@ $trending_json = json_encode($trending);
                     </script>
 
                     <div class=" flex justify-around pt-4 pb-4">
-                        <?php foreach($trending as $trendindProduct) {?>
-                        <div class=" flex-col space-y-3">
-                            <div class=" flex space-x-2">
-                                <p><?= $trendindProduct["name"] ?> :</p>
-                                <p><?= $trendindProduct["product_count"] ?></p>
+                        <?php foreach ($trending as $trendingProduct) { ?>
+                            <div class=" flex-col space-y-3">
+                                <div class=" flex space-x-2">
+                                    <p><?= $trendingProduct["name"] ?> :</p>
+                                    <p><?= $trendingProduct["product_count"] ?></p>
+                                </div>
                             </div>
-                        </div>
-                        <?php } ?>   
+                        <?php } ?>
                     </div>
                 </div>
             </div>

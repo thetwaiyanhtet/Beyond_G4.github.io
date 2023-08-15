@@ -122,13 +122,16 @@ $productdata = $_SESSION["editproduct"];
                                     <div>
                                         <p>Category</p>
                                     </div>
-                                    <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
+                                    <div>
+                                        <select name="category" class="w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md">
                                             <?php foreach ($categories as $category) { ?>
-
-                                                <option value="<?= $category["id"] ?>" selected><?= $category["c_name"] ?></option>
-
+                                                <option value="<?= $category["id"] ?>" <?= $category["id"] == $productdata[0]["category_id"] ? 'selected' : '' ?>>
+                                                    <?= $category["c_name"] ?>
+                                                </option>
                                             <?php } ?>
-                                        </select></div>
+                                        </select>
+                                    </div>
+
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color</label></div>
