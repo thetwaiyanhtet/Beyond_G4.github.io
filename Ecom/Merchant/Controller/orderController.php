@@ -20,7 +20,7 @@ $sql->execute();
 $orders = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 // Pagination Parameters
-$itemsPerPage = 1; // Number of items to display per page
+$itemsPerPage = 7; // Number of items to display per page
 $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1; // Current page number
 $startIndex = ($currentPage - 1) * $itemsPerPage; // Calculate the starting index of items for the current page
 
