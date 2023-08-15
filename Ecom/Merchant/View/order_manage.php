@@ -102,16 +102,16 @@ include "../Controller/orderController.php";
                     <nav aria-label="Page navigation example">
                         <ul class=" flex space-x-3 pagination justify-content-center">
                             <?php if ($currentPage > 1) { ?>
-                                <li class="page-item p-2 border rounded-md border-gray-500"><a class="page-link hover:underline" href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
+                                <li class="page-item p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link " href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
                             <?php } else { ?>
-                                <li class="page-item disabled p-2 border rounded-md border-gray-500"><a class="page-link hover:underline opacity-50">Previous</a></li>
+                                <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link  opacity-50">Previous</a></li>
                             <?php } ?>
-                            <?php for ($i = 1; $i <= ceil(count($data) / $itemsPerPage); $i++) { ?>
+                            <?php for ($i = 1; $i <= ceil(count($orders) / $itemsPerPage); $i++) { ?>
                                 <li class="page-item p-2 rounded-md px-3 <?= $i === $currentPage ? 'active font-semibold bg-blue-500 text-white' : '' ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
                             <?php } ?>
-                            <?php if ($startIndex + $itemsPerPage < count($data)) { ?><a class="page-link p-2 border rounded-md border-gray-500 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
+                            <?php if ($startIndex + $itemsPerPage < count($orders)) { ?><a class="page-link p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
                             <?php } else { ?>
-                                <li class="page-item disabled p-2 border rounded-md border-gray-500"><a class="page-link opacity-50 hover:underline">Next</a></li>
+                                <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50">Next</a></li>
                             <?php } ?>
                         </ul>
                     </nav>

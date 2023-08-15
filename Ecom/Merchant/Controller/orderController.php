@@ -1,11 +1,8 @@
 <?php
-session_start();
+
 include "../Model/model.php";
 
 $merchantEmail = $_SESSION["merchant_ID"];
-
-$currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-$itemsPerPage = 1; // Number of items to display per page
 
 $sql = $pdo->prepare(
     "SELECT m_order.generate_id, m_customer.username, m_order.order_date, m_order.payment_status, m_order.payment_id
