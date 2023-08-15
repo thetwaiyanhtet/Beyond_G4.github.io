@@ -93,7 +93,7 @@ include "../Controller/customerDetailController.php";
                 <div class="flex justify-around p-5">
                     <?php foreach ($products as $product) { ?>
                         <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400 text-center">
-                            <img src="../../<?=$product["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
+                            <img src="../../<?= $product["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
                             <div class="pl-3 pb-2 pt-10">
                                 <p class=" font-semibold "><?= $product["name"] ?></p>
                                 <p class=" opacity-60">$<?= $product["unit_price"] ?></p>
@@ -137,7 +137,7 @@ include "../Controller/customerDetailController.php";
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                     <?php if ($purchasedCount > 1) { ?>
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                            <?= $order["name"]?> ,...
+                                            <?= $order["name"] ?> ,...
                                         </th>
                                     <?php } else if ($purchasedCount == 0) { ?>
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -153,12 +153,12 @@ include "../Controller/customerDetailController.php";
                                     <td class="pr-6 py-4 ">
                                         <?= $order["order_date"] ?>
                                     </td>
-                                    <td class="px-6 py-4">
-                                        <?php if($order["delivery_status"] == 1) { ?>
-                                        <div class="w-[103px] h-[10px] bg-[#45D953] rounded-lg"></div>
-                                        <?php } elseif($order["delivery_status"] == 0){ ?>
-                                        <div class="w-[103px] h-[10px] bg-[#f3a13d] rounded-lg"></div>
-                                        <?php }?>
+                                    <td class="px-6 py-4 pl-10">
+                                        <?php if ($order["delivery_status"] == 1) { ?>
+                                            <div class="w-[80px] h-[10px] bg-[#45D953] rounded-lg"></div>
+                                        <?php } elseif ($order["delivery_status"] == 0) { ?>
+                                            <div class="w-[80px] h-[10px] bg-[#f3a13d] rounded-lg"></div>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                             <?php } ?>

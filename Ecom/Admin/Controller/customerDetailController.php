@@ -37,7 +37,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         JOIN m_order
         ON m_order.id = m_order_details.order_id 
         WHERE customer_id = :id;"
-
+    );
 
     $orderSql = $pdo->prepare(
         "SELECT m_product.name,m_merchant.store_name,m_order.total_amt,m_order.order_date,m_order_details.delivery_status

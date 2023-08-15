@@ -61,12 +61,12 @@ include "../Controller/deliveryController.php";
 
                         <tbody class=" text-center" id="searchResult">
                             <?php
-                            $id = 0;
-                            if (isset($deliveries)) {
-                                foreach ($deliveries as $delivery) { ?>
+                            $count = ($currentPage - 1) * $itemsPerPage; 
+                            if (isset($paginatedData)) {
+                                foreach ($paginatedData as $delivery) { ?>
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  ">
-                                            <?= ++$id; ?>.
+                                            <?= ++$count; ?>.
                                         </th>
                                         <td class="px-6 py-4">
                                             <?= $delivery["generate_id"] ?>
@@ -117,10 +117,23 @@ include "../Controller/deliveryController.php";
                             <?php } ?>
                         </tbody>
                     </table>
-                    <div class="flex justify-between items-center py-2 px-3 pt-5">
-                        <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
-                        <div>Page 1 of 10</div>
-                        <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
+                    <div class="flex justify-center items-end pt-5">
+                        <nav aria-label="Page navigation example">
+                            <ul class=" flex space-x-3 pagination justify-content-center">
+                                <?php if ($currentPage > 1) { ?>
+                                    <li class="page-item  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link " href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
+                                <?php } else { ?>
+                                    <li class="page-item disabled  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50">Previous</a></li>
+                                <?php } ?>
+                                <?php for ($i = 1; $i <= ceil(count($deliveries) / $itemsPerPage); $i++) { ?>
+                                    <li class="page-item p-2 rounded-md px-3 <?= $i === $currentPage ? 'active font-semibold bg-blue-500 text-white' : '' ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                                <?php } ?>
+                                <?php if ($startIndex + $itemsPerPage < count($deliveries)) { ?><a class="page-link  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
+                                <?php } else { ?>
+                                    <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50 ">Next</a></li>
+                                <?php } ?>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

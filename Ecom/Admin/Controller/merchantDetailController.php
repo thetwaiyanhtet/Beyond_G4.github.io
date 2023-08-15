@@ -19,11 +19,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     );
 
     $orderCountSql=$pdo->prepare(
-        "SELECT COUNT(merchant_id) AS order_count
+        "SELECT COUNT(generate_id) AS order_count
         FROM m_order
+        JOIN m_order_details
+        ON m_order_details.order_id = m_order.id
         JOIN m_merchant
-        ON m_order.merchant_id=m_merchant.id
-        WHERE m_merchant.id=:id;
+        ON m_order_details.merchant_id=m_merchant.id
+        WHERE m_merchant.id=:id
+        GROUP BY m_order.generate_id;
         "
     );
 
@@ -53,10 +56,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         WHERE m_merchant.id=:id;
         "
     );
-
-
-    
-
 
     $sql->bindValue(":id",$merchantId);
     $orderCountSql->bindValue(":id",$merchantId);
