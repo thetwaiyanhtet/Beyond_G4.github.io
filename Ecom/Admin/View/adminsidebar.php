@@ -1,7 +1,7 @@
 <?php
- include "../Controller/logoandbusinessController.php";
- include "../Controller/updatepasswordController.php";
-$admin = $_SESSION["adminInfo"]; 
+include "../Controller/logoandbusinessController.php";
+include "../Controller/updatepasswordController.php";
+$admin = $_SESSION["adminInfo"];
 // echo "<pre>";
 // print_r($admin);
 // $logoandname = $_SESSION["m_logo"];
@@ -22,7 +22,7 @@ $admin = $_SESSION["adminInfo"];
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="./resources/js/sidebar.js" defer></script>
-   
+
 </head>
 
 <body class=" font-poppins overflow-x-hidden">
@@ -50,10 +50,10 @@ $admin = $_SESSION["adminInfo"];
         </div>
         <div>
             <ul class="flex space-x-5 items-center pr-5 text-white">
-              
+
                 <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                <li><img src="<?=$admin['p_picture']?>" alt="..." width="40px"></li>
-                <li class=" font-medium"><?= $admin['username']?></li>
+                <li><img src="<?= $admin['p_picture'] ?>" alt="..." width="40px"></li>
+                <li class=" font-medium"><?= $admin['username'] ?></li>
             </ul>
         </div>
     </div>
@@ -71,26 +71,26 @@ $admin = $_SESSION["adminInfo"];
                                 </span>
                             </button>
                         </a>
-                    </div>              
-                        <div x-data="{ open: false }">
-                            <button @click="open = !open"  class="w-full  flex justify-between my-2 items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none catego ">
-                                <span class="flex items-center">
+                    </div>
+                    <div x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full  flex justify-between my-2 items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none catego ">
+                            <span class="flex items-center">
                                 <ion-icon class=" h-5 w-5 text" name="shapes-outline"></ion-icon>
-                                    <span class="mx-4 text font-medium">Category</span>
-                                </span>
+                                <span class="mx-4 text font-medium">Category</span>
+                            </span>
 
-                                <span>
-                                    <svg class="h-4 w-4  text " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
-                                        <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </span>
-                            </button>
-                            <div x-show="open"  class="bg-gray-100  text-gray-600">
-                                <a  class="py-2 px-16 act block text-sm hover:bg-table hover:text-white categoryl " href="./categorylist.php">Category List</a>
-                                <a  class="py-2 px-16 block text-sm  hover:bg-table hover:text-white categorya " href="./addcategory.php">Add Category</a>
-                            </div>
-                        </div>    
+                            <span>
+                                <svg class="h-4 w-4  text " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
+                                    <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="open" class="bg-gray-100  text-gray-600">
+                            <a class="py-2 px-16 act block text-sm hover:bg-table hover:text-white categoryl " href="./categorylist.php">Category List</a>
+                            <a class="py-2 px-16 block text-sm  hover:bg-table hover:text-white categorya " href="./addcategory.php">Add Category</a>
+                        </div>
+                    </div>
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full  flex my-2 justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none merchant">
                             <span class="flex items-center ">
@@ -99,7 +99,7 @@ $admin = $_SESSION["adminInfo"];
                             </span>
 
                             <span>
-                                <svg class="h-4 w-4" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
                                     <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
@@ -113,19 +113,19 @@ $admin = $_SESSION["adminInfo"];
                     </div>
                     <div x-data="{ open: false }">
                         <a href="./customersList.php">
-                        <button @click="open = !open" class="w-full flex my-2 justify-between items-center py-3 px-6  cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none customer">
-                            <span class="flex items-center ">
-                                <ion-icon class="h-5 w-5 text2 " name="person-outline"></ion-icon>
-                                <span class="mx-4 text2 font-medium">Customer</span>
-                            </span>
-                        </button>
+                            <button @click="open = !open" class="w-full flex my-2 justify-between items-center py-3 px-6  cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none customer">
+                                <span class="flex items-center ">
+                                    <ion-icon class="h-5 w-5 text2 " name="person-outline"></ion-icon>
+                                    <span class="mx-4 text2 font-medium">Customer</span>
+                                </span>
+                            </button>
                         </a>
                     </div>
 
                     <div x-data="{ open: false }">
                         <button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none products">
                             <span class="flex items-center">
-                            <ion-icon class=" h-5 w-5" name="cube-outline"></ion-icon>
+                                <ion-icon class=" h-5 w-5" name="cube-outline"></ion-icon>
                                 <span class="mx-4 font-medium">Products</span>
                             </span>
                             <span>
@@ -143,33 +143,33 @@ $admin = $_SESSION["adminInfo"];
                     </div>
                     <div x-data="{ open: false }">
                         <a href="./orderlist.php">
-                        <button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none orderList orderList">
-                            <span class="flex items-center">
-                           
-                            <ion-icon class=" h-5 w-5" name="bag-remove-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Order Lists</span>
-                            </span>
-                        </button>
+                            <button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none orderList orderList">
+                                <span class="flex items-center">
+
+                                    <ion-icon class=" h-5 w-5" name="bag-remove-outline"></ion-icon>
+                                    <span class="mx-4 font-medium">Order Lists</span>
+                                </span>
+                            </button>
                         </a>
                     </div>
                     <div x-data="{ open: false }">
                         <a href="./chatBox.php">
-                        <button @click="open = !open" class="w-full flex my-2 justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none chatBox">
-                            <span class="flex items-center space-x-4">
-                                <ion-icon class="h-5 w-5" name="chatbubble-ellipses-outline"></ion-icon>
-                                <span clbg-blue-600ass="mx-4 font-medium">Chat Box</span>
-                            </span>
-                        </button>
+                            <button @click="open = !open" class="w-full flex my-2 justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none chatBox">
+                                <span class="flex items-center space-x-4">
+                                    <ion-icon class="h-5 w-5" name="chatbubble-ellipses-outline"></ion-icon>
+                                    <span clbg-blue-600ass="mx-4 font-medium">Chat Box</span>
+                                </span>
+                            </button>
                         </a>
                     </div>
                     <div x-data="{ open: false }">
                         <a href="./report.php">
-                        <button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none report">
-                            <span class="flex items-center">
-                            <ion-icon class=" h-5 w-5" name="document-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Report</span>
-                            </span>
-                        </button>
+                            <button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none report">
+                                <span class="flex items-center">
+                                    <ion-icon class=" h-5 w-5" name="document-outline"></ion-icon>
+                                    <span class="mx-4 font-medium">Report</span>
+                                </span>
+                            </button>
                         </a>
                     </div>
                     <div x-data="{ open: false }">
@@ -197,12 +197,12 @@ $admin = $_SESSION["adminInfo"];
                         </div>
                     </div>
                     <div x-data="{ open: false }">
-                        <button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
-                            <span class="flex items-center">
-                                <ion-icon class="h-5 w-5" name="log-in-outline"></ion-icon>
-                                <span class="mx-4 font-medium">Logout</span>
-                            </span>
-                        </button>
+                        <a href="./login.php"><button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
+                                <span class="flex items-center">
+                                    <ion-icon class="h-5 w-5" name="log-in-outline"></ion-icon>
+                                    <span class="mx-4 font-medium">Logout</span>
+                                </span>
+                            </button></a>
                     </div>
                 </nav>
             </div>

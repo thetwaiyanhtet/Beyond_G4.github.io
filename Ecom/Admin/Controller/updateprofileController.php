@@ -1,5 +1,4 @@
 <?php
-
 include "../Model/model.php";
 ini_set('display_errors', 1);
 // //Direct Access
