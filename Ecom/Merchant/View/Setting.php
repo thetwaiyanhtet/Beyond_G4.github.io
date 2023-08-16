@@ -40,7 +40,7 @@ include "../Controller/settingShowDataController.php";
     <div class="ml-56">
         <p class="font-poppins mt-2 font-semibold text-xl pl-5">Setting</p>
         <section class=" p-5">
-            <div class=" clear-both w-full rounded-lg p-5 shadow-xl border-2 border-blue-950">
+            <div class=" clear-both w-full rounded-lg p-3 shadow-xl border-2 border-blue-950">
                 <section class="flex">
                     <div>
                         <p class=" text-text2 font-philosopher text-lg font-semibold">Account</p>
@@ -54,7 +54,7 @@ include "../Controller/settingShowDataController.php";
                                     <label for="photo5" class="cursor-pointer">
                                         <input type="file" id="photo5" name="photo5" style="display: none;" onchange="displayUserImage('photoimg5', 'photo5')">
                                         <img src="./resources/img/gallery-add.png" alt="photo" class="" id="photoimg5">
-                                        <!-- <img src="<?= '../../'. $logoImagePath ?  $logoImagePath : './resources/img/gallery-add.png'; ?>" alt="photo" class="w-5 m-auto mt-5" id="photoimg5"> -->
+                                        <!-- <img src="<?= '../../' . $logoImagePath ?  $logoImagePath : './resources/img/gallery-add.png'; ?>" alt="photo" class="w-5 m-auto mt-5" id="photoimg5"> -->
                                     </label>
                                     <!-- <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p> -->
                                 </div>
@@ -66,15 +66,15 @@ include "../Controller/settingShowDataController.php";
                                     <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
                                 </div>
                             </div>
-                            <div class=" space-y-5 pt-7">
+                            <div class=" space-y-5 pt-5">
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
                                         <label class=" text-sm">Shop Name<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="shopName" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['store_name']) ? $merchant['store_name'] : 'shop###';  ?>" required>
+                                        <input type="text" name="shopName" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['store_name']) ? $merchant['store_name'] : '-----';  ?>" required>
                                     </div>
                                     <div class="flex flex-col">
-                                        <label for="myTextarea" class=" text-sm">Slogan<span class=" text-red-600">*</span></label>
-                                        <textarea id="myTextarea" name="slogan" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" require><?php echo trim(isset($merchant['slogan']) ) ? $merchant['slogan'] : 'Our store ####'; ?></textarea>
+                                        <label for="" class=" text-sm">Address<span class=" text-red-600">*</span></label>
+                                        <input type="text" name="address" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['address']) ? $merchant['address'] : '-----';  ?>" required>
                                     </div>
                                 </div>
                                 <div class="flex space-x-10 mt-2">
@@ -88,15 +88,15 @@ include "../Controller/settingShowDataController.php";
                                                 ?>
                                             </span>
                                         </label>
-                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : '09*******'; ?>" required>
+                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : '-----'; ?>" required>
                                     </div>
                                     <div class="flex flex-col">
-                                        <label for="" class=" text-sm">Address<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="address" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['address']) ? $merchant['address'] : '###';  ?>" required>
+                                        <label for="myTextarea" class=" text-sm">Slogan<span class=" text-red-600">*</span></label>
+                                        <textarea id="myTextarea" name="slogan" cols="30" rows="5" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" require><?php echo trim(isset($merchant['slogan'])) ? $merchant['slogan'] : ''; ?></textarea>    
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-20 pr-10">
+                            <div class="mt-4 pr-10">
                                 <button type="submit" name="cancel" class="w-28 p-2 mr-2 bg-blue-600  rounded-lg mb-2 text-white hover:text-black hover:bg-white hover:border border-black ">Cancel</button>
                                 <button type="submit" name="send" class="w-28 p-2 bg-blue-600 rounded-lg text-white hover:text-black hover:border border-black  mb-2 hover:bg-white">Save</button>
                             </div>
@@ -133,7 +133,7 @@ include "../Controller/settingShowDataController.php";
                                     <input type="password" name="confirmPassword" id="" class="w-72 p-2 border border-solid rounded-md mt-2 font-medium outline-none" placeholder="Please enter again to confirm" required>
                                 </div>
                             </div>
-                            <div class=" mt-[173px]">
+                            <div class=" mt-[195px]">
                                 <button type="submit" name="reset" class="w-28 p-2 mr-2 bg-blue-600  rounded-lg mb-2 text-white hover:text-black hover:bg-white hover:border border-black ">Reset</button>
                                 <button type="submit" name="update" class="w-28 p-2 bg-blue-600 rounded-lg text-white hover:text-black hover:border border-black  mb-2 hover:bg-white">Update</button>
                             </div>
