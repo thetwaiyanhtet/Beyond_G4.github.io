@@ -1,6 +1,4 @@
 <?php
-// session_start();
-//DB connection
 include "../Model/model.php";
 $userEmail = $_SESSION["user_ID"];
 
@@ -10,11 +8,10 @@ $VerifySql = $pdo->prepare(
   WHERE email=:email"
 );
 $VerifySql->bindValue(":email", $userEmail);
-// echo($userEmail);
 $VerifySql->execute();
 $verify_data = $VerifySql->fetch(PDO::FETCH_ASSOC);
 $_SESSION["verifyData"] = $verify_data;
-// print_r($_SESSION["verifyData"]);
+
 
 if ($verify_data["verify"] == 0) {
 
@@ -24,10 +21,8 @@ if ($verify_data["verify"] == 0) {
     WHERE email=:email"
   );
   $sql->bindValue(":email", $userEmail);
-  // echo($userEmail);
   $sql->execute();
   $_SESSION["user_data"] = $sql->fetch(PDO::FETCH_ASSOC);
-  // print_r($_SESSION["user_data"]);
 
 } else if ($verify_data["verify"] == 1) {
   $sql = $pdo->prepare(
@@ -40,19 +35,7 @@ if ($verify_data["verify"] == 0) {
           WHERE email=:email"
   );
   $sql->bindValue(":email", $userEmail);
-  // echo($userEmail);
   $sql->execute();
   $_SESSION["user_data"] = $sql->fetch(PDO::FETCH_ASSOC);
-  // print_r($_SESSION["user_data"]);
 }
 
-
-
-    // $user_id = $user_data['id'];
-    
-
-
-
-    
-
-    // header("Location: ../View/userProfileEditUpd.php");
