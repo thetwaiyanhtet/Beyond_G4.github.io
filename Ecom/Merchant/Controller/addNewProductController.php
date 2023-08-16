@@ -34,6 +34,12 @@ if (count($_POST) == 0) {
     // $photo4 = $_FILES["photo4"]["name"];
     // $photo4tmp = $_FILES["photo4"]["tmp_name"];
 
+    if ($sellprice < $buyprice) {
+        $_SESSION["sellpriceError"] = "*Sell price cannot be less than buy price.";
+        header("Location: ../View/addNewProduct.php");
+        exit;
+    }
+
 
     include "../Model/model.php";
 
@@ -48,16 +54,11 @@ if (count($_POST) == 0) {
         $productIdExists = $checkSql->fetchColumn();
 
         if ($productIdExists) {
-            // Set the error message in the session
             $_SESSION["productIdError"] = "*ProductId is already exist!";
-
-            // Redirect to the same page
             header("Location: ../View/addNewProduct.php");
             exit;
         }
     }
-
-
 
     $sql = $pdo->prepare("SELECT id FROM m_merchant WHERE email = :email");
     $sql->bindValue(':email', $merchantEmail);

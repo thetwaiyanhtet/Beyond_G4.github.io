@@ -46,11 +46,11 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Sales.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <?php if (!$result["totalSales"] == 0) { ?>
-                                        <p>$<?= $result["totalSales"] ?></p>
-                                    <?php } else { ?>
-                                        <p>$ 0</p>
-                                    <?php } ?>
+                                 
+                                 
+                               
+                                        <p>$ <?= $totalProfitSell ?></p>
+                                
                                     <p>Sales</p>
                                 </div>
                             </div>
@@ -77,11 +77,11 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Cost.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                <?php if (!$result["totalCost"] == 0) { ?>
-                                        <p>$<?= $result["totalCost"] ?></p>
-                                    <?php } else { ?>
-                                        <p>$ 0</p>
-                                    <?php } ?>
+                                
+                                       
+                                   
+                                        <p>$ <?= $totalProfitBuy ?></p>
+                                 
                                     <p>Cost</p>
                                 </div>
                             </div>
@@ -429,7 +429,7 @@ $trending_json = json_encode($trending);
                                                 <?= $topSelling["instock"] ?>
                                             </td>
                                             <td class="px-6 py-4">
-                                                <?= $topSelling["sellprice"] ?>
+                                                $<?= $topSelling["sellprice"] ?>
                                             </td>
                                         </tr>
                                     <?php } ?>

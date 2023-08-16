@@ -1,8 +1,18 @@
 <?php
-include "../Model/model.php";
-include "./common/mailSender.php";
-include "./common/generatePwFunction.php";
 //DB Connection
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+include "../Model/model.php";
+include "../Controller/common/passwordGenerate.php";
+
+// include "./common/mailSender.php";
+// include(__DIR__ . '/common/mailSender.php');
+// $filePath = realpath(__DIR__ . '/common/mail');
+// if ($filePath !== false) {
+//     include($filePath);
+// } else {
+//     echo "File not found";
+// }
 
 session_start();
 if (isset($_POST['update'])) {
@@ -15,7 +25,7 @@ if (isset($_POST['update'])) {
     echo $DBemail;
 
     if($DBemail){
-        $tokenPw = generateRandomPassword();
+        $tokenPw = generatePassword();
         $sql = $pdo->prepare(
           "UPDATE m_admin SET login_password = :token WHERE email =:email"
         );
@@ -23,7 +33,8 @@ if (isset($_POST['update'])) {
         $sql->bindValue(":email", $email);
         $sql->execute();
         echo "Successfully update password";
-    
+        
+        include "../Controller/common/mailSender.php";
         //send email 
         $mail = new SendMail();
         $mail->sendMail(

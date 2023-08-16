@@ -9,6 +9,7 @@ require './lib/PHPMailer/src/PHPMailer.php';
 require './lib/PHPMailer/src/SMTP.php';
 
 
+
 class SendMail
 {
     public function sendMail($toMail, $subject, $body)
@@ -40,3 +41,6 @@ class SendMail
         }
     }
 }
+
+
+?>

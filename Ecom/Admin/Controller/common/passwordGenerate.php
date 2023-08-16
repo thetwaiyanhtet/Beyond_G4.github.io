@@ -1,5 +1,5 @@
 <?php
- function generateRandomPassword($length = 12) {
+ function generatePassword($length = 12) {
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.<>?";
     $password = "";
 
