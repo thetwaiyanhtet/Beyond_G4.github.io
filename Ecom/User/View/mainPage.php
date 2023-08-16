@@ -266,7 +266,7 @@ $verifyData = $_SESSION["verifyData"];
                                                     <div class="relative overflow-hidden bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                                         <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
                                                         <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
-                                                        <img class="w-32 h-40 m-auto" src="../../<?php echo $tranding["p_one"]; ?>" alt="">
+                                                        <img class="w-32 h-40 m-auto" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
 
                                                         <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                                             <a href="./mainPage.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
@@ -334,7 +334,7 @@ $verifyData = $_SESSION["verifyData"];
                                     <form action="./mainPage.php" method="post">
                                         <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                             <div class="w-56 m-auto p-2 h-44">
-                                                <img class="w-40 h-40 m-auto" src="../../<?= $productDetail["p_one"] ?>" alt="">
+                                                <img class="w-40 h-40 m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
                                             </div>
                                             <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                                 <a href="./mainPage.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
