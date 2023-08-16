@@ -151,7 +151,7 @@ include "../Controller/orderDetailController.php";
                         <td class="px-6 py-4">
                             <?php
                               $total = $order['quantity'] * $order['sellprice'];
-                              echo $total;
+                              echo '$'. $total;
                             ?>
                         </td>
                     </tr>

@@ -18,6 +18,8 @@ include "../Controller/costomerListController.php";
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/customers.css">
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
+    <script src="../View/resources/js/searchCustomer.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,7 @@ include "../Controller/costomerListController.php";
             <section class=" py-3 ml-5">
                 <div class=" flex justify-start items-center space-x-3">
                     <p>Search : </p>
-                    <input type="text" class="border rounded-md indent-1 px-2 py-1 outline-none bg-gray-300">
+                    <input type="search" id="search" class="border rounded-md indent-1 px-2 py-1 outline-none bg-gray-300" placeholder="By Name">
                 </div>
             </section>
 
@@ -53,7 +55,7 @@ include "../Controller/costomerListController.php";
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="searchResult">
                         <?php foreach ($customers as $customer) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
@@ -63,14 +65,14 @@ include "../Controller/costomerListController.php";
                                     <?= $customer["email"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?= $customer["street"]; ?> , <?= $customer["t_name"]; ?> , <?= $customer["r_name"]; ?> 
+                                    <?= $customer["street"]; ?> , <?= $customer["t_name"]; ?> , <?= $customer["r_name"]; ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <?= $customer["phone"]; ?>
                                 </td>
                                 <td class="px-6 py-4 flex space-x-3">
-                                    <a href="./customerDetail.php?id=<?= $customer["id"]; ?>"><img src="./resources/img/eye.svg" alt=""></a>
-                                    <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="">
+                                    <a href="./customerDetail.php?id=<?= $customer["id"]; ?>"><img src="./resources/img/eye.svg" alt="..."></a>
+                                    <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="...">
                                 </td>
                             </tr>
                         <?php } ?>
