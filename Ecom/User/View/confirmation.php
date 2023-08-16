@@ -1,5 +1,5 @@
 <?php
-session_start();
+include ("../Controller/merchantaddressController.php");
 $addressandname = $_SESSION['m_cusaddress'];
 $tot = $_SESSION["placeholdcart"];
 
