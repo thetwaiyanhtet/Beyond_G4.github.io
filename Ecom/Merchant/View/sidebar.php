@@ -101,47 +101,24 @@ include "./header.php";
   <script>
     // Add an event listener to the logout button
     document.getElementById('logoutButton').addEventListener('click', function() {
-      // Display the Swal confirmation dialog with custom styling
+      // Display the Swal confirmation dialog with custom content
       Swal.fire({
-        title: 'Are you sure?',
-        text: 'You will be logged out.',
-        icon: 'warning',
+        title: '',
+        html: `
+      <div>
+        <img src="../../Storage/monkey.gif" alt="..." class="rounded-md mx-auto" style="max-width: 300px;">
+        <p class="pt-3">Are you sure? You will be logged out.</p> 
+      </div>`,
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes, logout',
         backdrop: false, // Disable the backdrop blur effect
       }).then((result) => {
-        // If the user confirms the logout
         if (result.isConfirmed) {
-          // Perform the logout action (e.g., redirect to logout page or execute a logout function)
-          // Replace the following line with your actual logout code
           window.location.href = 'login.php';
         }
       });
-    });
-
-    
-    //WebSocket Connection
-    const socket = new WebSocket('ws://your-backend-url'); // Replace with your actual WebSocket URL
-
-    socket.addEventListener('open', (event) => {
-      console.log('WebSocket connection established.');
-    });
-
-    socket.addEventListener('message', (event) => {
-      const notificationData = JSON.parse(event.data);
-      // Display notification to the user using your preferred UI component (e.g., SweetAlert, toast message, etc.)
-      // Example: Show a SweetAlert notification
-      Swal.fire({
-        title: 'New Order Completed!',
-        text: `Order ID: ${notificationData.orderId}`,
-        icon: 'success',
-      });
-    });
-
-    socket.addEventListener('close', (event) => {
-      console.log('WebSocket connection closed.');
     });
   </script>
 </body>

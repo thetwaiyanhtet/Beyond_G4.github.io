@@ -13,7 +13,7 @@ if (isset($_POST["send"])) {
         $img = $_FILES['photo5']['name'];
         $imgTmp = $_FILES['photo5']['tmp_name'];
     } else {
-        $img = null; // Set photo to null if no file was uploaded
+        $img = $existingProfile; // Set photo to null if no file was uploaded
         $imgTmp = null;
     }
     move_uploaded_file($imgTmp, "../../Storage/profile/" . $img);
@@ -24,13 +24,39 @@ if (isset($_POST["send"])) {
         $img2 = $_FILES['photo6']['name'];
         $imgTmp2 = $_FILES['photo6']['tmp_name'];
     } else {
-        $img2 = null; // Set photo to null if no file was uploaded
+        $img2 = $existingBanner; // Set photo to null if no file was uploaded
         $imgTmp2 = null;
     }
     move_uploaded_file($imgTmp2, "../../Storage/profile/" . $img2);
     $pattern = '/^\d{11}$/';
 
     include "../Model/model.php";
+
+    $existingProfile = null;
+    $existingBanner = null;
+
+    if (isset($_POST["merchant_ID"]) && !empty($_POST["merchant_ID"])) {
+        $merchantId = $_POST["merchant_ID"];
+
+        // Query to retrieve existing image paths for the product
+        $existingQuery = $pdo->prepare("SELECT logo,banner FROM m_merchant WHERE id = :id");
+        $existingQuery->bindValue(":id", $merchantId);
+        $existingQuery->execute();
+
+        $existingData = $existingQuery->fetch(PDO::FETCH_ASSOC);
+        // echo "<pre>";
+        // print_r($existingData);
+        // echo "</pre>";
+
+        if ($existingData) {
+            $existingProfile = $existingData["logo"];
+            $existingBanner = $existingData["banner"];
+        }
+    }
+
+
+
+
     if (preg_match($pattern, $phNo)) {
 
         $sql = $pdo->prepare("UPDATE m_merchant SET store_name=:shopName, slogan=:slogan, phone=:phone, address=:address, logo=:img, banner=:img2,verify = 1 WHERE email=:merchantEmail");
@@ -40,12 +66,15 @@ if (isset($_POST["send"])) {
         $sql->bindValue(":phone", $phNo);
         $sql->bindValue(":address", $address);
         // $sql->bindValue(":img", "/Storage/profile/" . $img);
-        $sql->bindValue(":img",  $img !== null ? "/Storage/profile/" .  $img : null);
-        // $sql->bindValue(":img2", "/Storage/profile/" . $img2);
-        $sql->bindValue(":img2",  $img2 !== null ? "/Storage/profile/" .  $img2 : null);
+        // $sql->bindValue(":img",  $img !== null ? "/Storage/profile/" .  $img : null);
+        // // $sql->bindValue(":img2", "/Storage/profile/" . $img2);
+        // $sql->bindValue(":img2",  $img2 !== null ? "/Storage/profile/" .  $img2 : null);
+
+        $sql->bindValue(":img", $img !== null ? $img : $existingProfile);
+        $sql->bindValue(":img2", $$img2 !== null ? $img2 : $existingBanner);
         if ($sql->execute()) {
-          
-        header("Location: ../View/Setting.php");
+
+            header("Location: ../View/Setting.php");
             exit();
         } else {
             $_SESSION['error'] = "Failed to update merchant information.";
