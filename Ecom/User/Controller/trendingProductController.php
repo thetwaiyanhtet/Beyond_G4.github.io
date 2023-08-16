@@ -12,7 +12,8 @@ $sql = $pdo->prepare(
     ON m_product.id = m_order_details.product_id
     GROUP BY m_order_details.product_id, m_product.name, m_product.description, m_product.sellprice, m_product.p_one
     ORDER BY total_quantity DESC 
-    limit 6"
+    limit 6
+    "
 );
 
 $sql->execute();
