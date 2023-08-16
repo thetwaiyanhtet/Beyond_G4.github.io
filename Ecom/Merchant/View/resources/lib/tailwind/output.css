@@ -799,10 +799,6 @@ video {
   margin-top: 195px;
 }
 
-.mt-\[173px\] {
-  margin-top: 173px;
-}
-
 .block {
   display: block;
 }
@@ -1074,6 +1070,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .min-w-\[160px\] {
@@ -1718,10 +1722,6 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pt-7 {
-  padding-top: 1.75rem;
 }
 
 .text-left {
