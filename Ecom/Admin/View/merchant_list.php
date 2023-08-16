@@ -35,13 +35,13 @@ include "../Controller/merchantListController.php";
                     <thead class="text-xs uppercase bg-table text-white border rounded-tl-md rounded-tr-md">
                         <tr>
                             <th scope="col" class="px-6 py-3">
+                                Merchant Name
+                            </th>
+                            <th scope="col" class="px-6 py-3">
                                 Email
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Plan
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Merchant Name
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Create date
@@ -54,19 +54,17 @@ include "../Controller/merchantListController.php";
                             </th>
                         </tr>
                     </thead>
-
-
                     <tbody id="searchResult">
                         <?php foreach ($merchantList as $merchantListDetail) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    <?= $merchantListDetail["email"] ?>
+                                    <?= $merchantListDetail["m_name"] ?>
                                 </th>
                                 <td class="px-6 py-4">
-                                    <?= $merchantListDetail["plan_name"] ?>
+                                    <?= $merchantListDetail["email"] ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?= $merchantListDetail["m_name"] ?>
+                                    <?= $merchantListDetail["plan_name"] ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <?= $merchantListDetail["create_date"] ?>
