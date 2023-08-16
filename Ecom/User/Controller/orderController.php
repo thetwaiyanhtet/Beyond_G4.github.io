@@ -18,6 +18,7 @@ $sql = $pdo->prepare(
    ( generate_id,
    customer_id,
    payment_id,
+   payment_status,
    total_amt
    )
    VALUES
@@ -31,7 +32,7 @@ $sql = $pdo->prepare(
         SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
         SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1)
     )
-),(SELECT id FROM m_customer WHERE email = :email),1,
+),(SELECT id FROM m_customer WHERE email = :email),1,1,
        $number);
    "
 );
