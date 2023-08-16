@@ -2,7 +2,9 @@
 
 include "../Controller/itemDetailsController.php";
 include "../Controller/overRatingController.php";
+include "../Controller/newcartController.php";
 ini_set('display_errors', 1);
+
 ?>
 
 <!DOCTYPE html>
@@ -43,14 +45,17 @@ ini_set('display_errors', 1);
                 </svg>
             </button>
         </nav>
+        <form action="./mainPage.php" method="post">
         <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
+        
             <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
                 <div class="flex items-center justify-center">
                     <img src="../../<?= $ItemDetails[0]["p_three"] ?>" alt="..." class=" w-64 h-64">
                 </div>
                 <div class="flex items-center justify-center space-x-3">
                     <img src="../../<?= $ItemDetails[0]["p_two"] ?>" alt="..." class=" w-20 h-20">
-                    <img src="../../<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-20 h-20">
+                    <img  src="../../<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-20 h-20">
+                    <input type="hidden" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                 </div>
             </div>
             <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
@@ -67,7 +72,9 @@ ini_set('display_errors', 1);
                     </a>
                 </h3>
                 <h1 class=" font-philosopher">$<?= $ItemDetails[0]["sellprice"] ?></h1>
-
+                <input type="hidden" name="price" value="<?= $ItemDetails[0]["sellprice"] ?>" >
+                <input type="hidden" name="product_id" value="<?= $id  ?>" >
+               
                 <!-- Color choose -->
                 <div class="flex space-x-3">
                     <div class="w-5 h-5 rounded-full user-pic active-pic" onclick="showReview()" style="background-color: <?= $ItemDetails[0]["color_1"]; ?>"></div>
@@ -144,8 +151,9 @@ ini_set('display_errors', 1);
                 <?php } ?>
                 <!-- end -->
                 <div>
-                    <button class="btn mr-3">Add To Cart</button>
-                    <button class="btn">Add To Wishlist</button>
+                <button type="submit" class="btn mr-3">Add To Cart</button>
+                    </form>
+                    <a href="./mainPage.php?pid=<?= $id  ?>"> <button type="button" class="btn">Add To Wishlist</button></a>
                 </div>
             </div>
         </header>

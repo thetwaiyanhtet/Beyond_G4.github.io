@@ -4,7 +4,7 @@
 include "../Model/model.php";
 if (isset($_GET['pid'])) {
     $id = $_GET['pid'];
-}
+
 
 $sql = $pdo->prepare(
     "SELECT 
@@ -38,7 +38,7 @@ $overallAverageRating = 0; // Initialize with 0 to handle no comments case
 if (count($topComments) > 0) {
     $overallAverageRating = $totalReviewRating / count($topComments);
 }
-
+}
 // ... continue with the rest of your code ...
 
 

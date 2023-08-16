@@ -1,11 +1,11 @@
 <?php
-session_start();
+
 
 // Connect to the database
 include "../Model/model.php";
 if (isset($_GET['pid'])) {
     $id = $_GET['pid'];
-}
+
 
 // Prepare and execute the SQL query
 $sql = $pdo->prepare(
@@ -20,6 +20,7 @@ $sql->bindValue(":id", $id);
 $sql->execute();
 
 $ItemDetails = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
 // echo "<pre>";
 // print_r($ItemDetails);
 // echo "</pre>";
