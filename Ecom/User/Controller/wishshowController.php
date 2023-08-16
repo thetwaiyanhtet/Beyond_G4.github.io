@@ -1,7 +1,7 @@
 <?php
 //DB connection
 //include "../Controller/wishlistcart.php";
-session_start();
+  session_start();
 include "../Model/model.php";
 
 $userEmail = $_SESSION["user_ID"];
@@ -35,4 +35,5 @@ function uniqueAssocArray($array) {
 
 
 $uniqueAssocArray = uniqueAssocArray($_SESSION["wishlist"] );
+
 
