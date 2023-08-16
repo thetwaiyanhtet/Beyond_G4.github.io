@@ -431,7 +431,7 @@ $trending_json = json_encode($trending);
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Low Quantity Stocks</h1>
                     <?php foreach ($lowQuantity as $lowQuantityStock) { ?>
                         <div class=" flex justify-between items-center pb-3 space-y-4">
-                            <img src="../../<?= $lowQuantityStock["p_one"] ?>" alt="..." class=" w-12 h-12 ">
+                            <img src="../../Storage/product/<?= $lowQuantityStock["p_one"] ?>" alt="..." class=" w-12 h-12 ">
                             <div class="">
                                 <p class=" font-semibold text-lg"><?= $lowQuantityStock["name"] ?></p>
                                 <p class=" opacity-60">Remaining Qty : <?= $lowQuantityStock["instock"] ?> Units</p>
