@@ -141,7 +141,7 @@ $verifyData = $_SESSION["verifyData"];
                     <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Order History</h5>
                     <?php
                     if (isset($_SESSION["review_already_submitted"]) && $_SESSION["review_already_submitted"]) {
-                        echo "<p class='error-message font-poppins font-semibold'>You have already submitted a review for that product.</p>";
+                        echo "<p class='error-message font-poppins font-semibold text-red-600'>You have already submitted a review for that product.</p>";
                         unset($_SESSION["review_already_submitted"]);
                     }
                     ?>
