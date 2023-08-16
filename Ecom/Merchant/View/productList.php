@@ -36,7 +36,7 @@ include "../Controller/productListController.php";
             </div>
             <div class=" flex-col justify-center px-5 py-1">
 
-                <div class=" w-full h-[600px]  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
+                <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
                     <div class="flex justify-between items-center">
                         <p class=" font-philosopher font-bold text-lg">Products</p>
                         <div class="flex space-x-3">
