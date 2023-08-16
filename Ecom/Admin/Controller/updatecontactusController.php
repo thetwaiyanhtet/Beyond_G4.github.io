@@ -8,6 +8,7 @@ if(count($_POST) == 0){
     $time=$_POST["time"];
     $phone=$_POST["phone"];
     $address=$_POST["address"];
+    print_r($_POST["phone"]);
     
 
     include "../Model/model.php";
@@ -15,18 +16,18 @@ if(count($_POST) == 0){
     $sql=$pdo->prepare(
     "UPDATE m_admincontactus SET
         address =:address,
-        phone=:phone,
+        phone= $phone,
         email = :email,
         available_time = :time
         WHERE id= 1;
     "
     );
     $sql->bindValue(":address",$address);
-    $sql->bindValue(":phone",$phone);
+    // $sql->bindValue(":phone",$phone);
     $sql->bindValue(":email",$email);
     $sql->bindValue(":time",$time);
     $sql->execute();
 
-   // header("Location: ../View/categorylist.php ");
+ // header("Location: ../View/serviceEdit.php");
 
 }
