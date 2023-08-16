@@ -175,10 +175,10 @@ if (count($_POST) == 0) {
     $sql->bindValue(":size3", $size3);
     $sql->bindValue(":size4", $size4);
     $sql->bindValue(":size5", $size5);
-    $sql->bindValue(":photo1", $photo1 !== null ? "/Storage/product/" . $photo1 : null);
-    $sql->bindValue(":photo2", $photo2 !== null ? "/Storage/product/" . $photo2 : null);
-    $sql->bindValue(":photo3", $photo3 !== null ? "/Storage/product/" . $photo3 : null);
-    $sql->bindValue(":photo4", $photo4 !== null ? "/Storage/product/" . $photo4 : null);
+    $sql->bindValue(":photo1", $photo1 !== null ?  $photo1 : null);
+    $sql->bindValue(":photo2", $photo2 !== null ?  $photo2 : null);
+    $sql->bindValue(":photo3", $photo3 !== null ?  $photo3 : null);
+    $sql->bindValue(":photo4", $photo4 !== null ?  $photo4 : null);
     $sql->bindValue(":createDate", date("Y-m-d"));
     $sql->bindValue(":updateDate", date("Y-m-d"));
 
