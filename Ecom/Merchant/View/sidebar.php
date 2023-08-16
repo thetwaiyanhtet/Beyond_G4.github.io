@@ -115,10 +115,7 @@ include "./header.php";
         confirmButtonText: 'Yes, logout',
         backdrop: false, // Disable the backdrop blur effect
       }).then((result) => {
-        // If the user confirms the logout
         if (result.isConfirmed) {
-          // Perform the logout action (e.g., redirect to logout page or execute a logout function)
-          // Replace the following line with your actual logout code
           window.location.href = 'login.php';
         }
       });
