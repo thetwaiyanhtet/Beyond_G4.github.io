@@ -55,7 +55,13 @@ $productdata = $_SESSION["editproduct"];
                                     <div class="w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
 
                                         <label for="photo1">
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg1" alt="">
+                                            <?php
+                                            if (isset($productdata[0]["p_one"])) {
+                                                echo '<img src="../../' . $productdata[0]["p_one"] . '" id="photoimg1" alt="">';
+                                            } else {
+                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg1" alt="">';
+                                            }
+                                            ?>
                                         </label>
 
                                         <input type="file" class="hidden" id="photo1" accept=".png,.jpeg" value="" name="photo1">
@@ -64,30 +70,42 @@ $productdata = $_SESSION["editproduct"];
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo2">
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg2" alt="">
+                                    <label for="photo2">
+                                            <?php
+                                            if (isset($productdata[0]["p_two"])) {
+                                                echo '<img src="../../' . $productdata[0]["p_two"] . '" id="photoimg2" alt="">';
+                                            } else {
+                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg2" alt="">';
+                                            }
+                                            ?>
                                         </label>
                                         <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" value="" name="photo2">
                                     </div>
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo3">
-
-
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg3" alt="">
-
+                                    <label for="photo3">
+                                            <?php
+                                            if (isset($productdata[0]["p_three"])) {
+                                                echo '<img src="../../' . $productdata[0]["p_three"] . '" id="photoimg3" alt="">';
+                                            } else {
+                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg3" alt="">';
+                                            }
+                                            ?>
                                         </label>
                                         <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" value="" name="photo3">
                                     </div>
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                        <label for="photo4">
-
-
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg4" alt="">
-
+                                    <label for="photo4">
+                                            <?php
+                                            if (isset($productdata[0]["p_four"])) {
+                                                echo '<img src="../../' . $productdata[0]["p_four"] . '" id="photoimg4" alt="">';
+                                            } else {
+                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg4" alt="">';
+                                            }
+                                            ?>
                                         </label>
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" value="" name="photo4">
                                     </div>

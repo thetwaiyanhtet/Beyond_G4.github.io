@@ -53,17 +53,29 @@ include "../Controller/settingShowDataController.php";
                                 <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3 flex justify-center items-center">
                                     <label for="photo5" class="cursor-pointer">
                                         <input type="file" id="photo5" name="photo5" style="display: none;" onchange="displayUserImage('photoimg5', 'photo5')">
-                                        <img src="./resources/img/gallery-add.png" alt="photo" class="" id="photoimg5">
+                                        <?php
+                                            if (isset($merchant["logo"])) {
+                                                echo '<img src="../../' . $merchant["logo"] . '" id="photoimg5" alt="">';
+                                            } else {
+                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg5" alt="">';
+                                            }
+                                            ?>
                                         <!-- <img src="<?= '../../'. $logoImagePath ?  $logoImagePath : './resources/img/gallery-add.png'; ?>" alt="photo" class="w-5 m-auto mt-5" id="photoimg5"> -->
                                     </label>
                                     <!-- <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p> -->
                                 </div>
-                                <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3">
+                                <div class="border border-dashed w-32 h-32 rounded-xl border-gray-800 mt-3 flex justify-center items-center">
                                     <label for="photo6" class="cursor-pointer">
                                         <input type="file" id="photo6" name="photo6" style="display: none;" onchange="displayUserImage('photoimg6', 'photo6')">
-                                        <img src="./resources/img/gallery-add.png" alt="photo" class="w-5 m-auto mt-5" id="photoimg6">
+                                        <?php
+                                            if (isset($merchant["banner"])) {
+                                                echo '<img src="../../' . $merchant["banner"] . '" id="photoimg6" alt="">';
+                                            } else {
+                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg6" alt="">';
+                                            }
+                                            ?>
                                     </label>
-                                    <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p>
+                                    <!-- <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p> -->
                                 </div>
                             </div>
                             <div class=" space-y-5 pt-7">
@@ -88,7 +100,7 @@ include "../Controller/settingShowDataController.php";
                                                 ?>
                                             </span>
                                         </label>
-                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : '09*******'; ?>" required>
+                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : ''?>" placeholder="09*********"  required>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Address<span class=" text-red-600">*</span></label>

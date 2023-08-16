@@ -412,7 +412,7 @@ $trending_json = json_encode($trending);
                                             remaining quantity
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Price
+                                            Price per Unit
                                         </th>
                                     </tr>
                                 </thead>
