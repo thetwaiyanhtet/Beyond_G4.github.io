@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../Controller/logoandbusinessController.php"
+include "../Controller/logoandbusinessController.php";
 ?>
 <!doctype html>
 <html>

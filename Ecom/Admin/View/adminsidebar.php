@@ -53,7 +53,7 @@ $admin = $_SESSION["adminInfo"];
 
                 <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
                 <li><img src="<?= $admin['p_picture'] ?>" alt="..." width="40px"></li>
-                <li class=" font-medium"><?= $admin['username'] ?></li>
+                <!-- <li class=" font-medium"><?= $admin['username'] ?></li> -->
             </ul>
         </div>
     </div>

@@ -1,8 +1,8 @@
 <?php
-// include "./common/mailSender.php";
-// include "./common/generatePwFunction.php";
 //DB Connection
 include "../Model/model.php";
+include "./common/generatePwFunction.php";
+include "./common/mailSender.php";
 session_start();
 if (isset($_POST['update'])) {
     $email =   $_POST['email'];
