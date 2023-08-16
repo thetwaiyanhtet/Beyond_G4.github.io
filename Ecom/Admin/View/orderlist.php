@@ -56,29 +56,29 @@ include "./adminsidebar.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($results as  $result) {?>
-                        
+                        <?php foreach ($paginatedData as  $result) { ?>
+
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                     <?php
+                                    <?php
                                     $product_name = $result['id'];
                                     echo $product_name;
                                     ?>
                                 </th>
                                 <td class="px-6 py-4">
-                                    <?php 
-                                     echo $result['m_name'];
+                                    <?php
+                                    echo $result['m_name'];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                <?php 
+                                    <?php
                                     echo $result["username"];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                <?php 
-                                echo $result['r_name'].' , ' . $result['t_name'].' , '. $result['street'];
-                                ?>
+                                    <?php
+                                    echo $result['r_name'] . ' , ' . $result['t_name'] . ' , ' . $result['street'];
+                                    ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <?php echo $result['total_amt'];
@@ -92,14 +92,27 @@ include "./adminsidebar.php";
                                     <a href="./orderDetail.php?id=<?= $result['id'] ?>"><img src="./resources/img/eye.svg" alt="" class="ml-5"></a>
                                 </td>
                             </tr>
-                            <?php } ?>
+                        <?php } ?>
                     </tbody>
-                    
+
                 </table>
-                <div class="flex justify-between items-center py-2 px-3 pt-5">
-                    <a href="#"><button class=" border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Previous</button></a>
-                    <div>Page 1 of 10</div>
-                    <a href="#"><button class="  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline">Next</button></a>
+                <div class="flex justify-center items-end pt-5">
+                    <nav aria-label="Page navigation example">
+                        <ul class=" flex space-x-3 pagination justify-content-center">
+                            <?php if ($currentPage > 1) { ?>
+                                <li class="page-item p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link " href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
+                            <?php } else { ?>
+                                <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link  opacity-50">Previous</a></li>
+                            <?php } ?>
+                            <?php for ($i = 1; $i <= ceil(count($results) / $itemsPerPage); $i++) { ?>
+                                <li class="page-item p-2 rounded-md px-3 <?= $i === $currentPage ? 'active font-semibold bg-blue-500 text-white' : '' ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                            <?php } ?>
+                            <?php if ($startIndex + $itemsPerPage < count($results)) { ?><a class="page-link p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
+                            <?php } else { ?>
+                                <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50">Next</a></li>
+                            <?php } ?>
+                        </ul>
+                    </nav>
                 </div>
             </section>
         </div>
