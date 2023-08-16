@@ -40,9 +40,9 @@ if (isset($_POST["send"])) {
         $sql->bindValue(":phone", $phNo);
         $sql->bindValue(":address", $address);
         // $sql->bindValue(":img", "/Storage/profile/" . $img);
-        $sql->bindValue(":img",  $img !== null ? "/Storage/product/" .  $img : null);
+        $sql->bindValue(":img",  $img !== null ? "/Storage/profile/" .  $img : null);
         // $sql->bindValue(":img2", "/Storage/profile/" . $img2);
-        $sql->bindValue(":img2",  $img2 !== null ? "/Storage/product/" .  $img2 : null);
+        $sql->bindValue(":img2",  $img2 !== null ? "/Storage/profile/" .  $img2 : null);
         if ($sql->execute()) {
           
         header("Location: ../View/Setting.php");
