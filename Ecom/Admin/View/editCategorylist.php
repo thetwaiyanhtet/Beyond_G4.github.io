@@ -32,7 +32,7 @@ include "./adminsidebar.php";
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 outline-none ml-3 w-52 rounded-lg h-8 indent-2" type="search" name="" id="">
             </div> -->
-            <div class="border shadow-2xl mt-10 rounded-xl">
+            <div class="border shadow-2xl mt-10 rounded-xl relative">
 
                 <form action="../Controller/updateCategoryController.php" method="POST">
                     <div class="  p-5">
@@ -53,11 +53,10 @@ include "./adminsidebar.php";
                             </div>
                         </div>
                     </div>
-                    <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
-                    
+                    <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-36">Update</button>
                 </form>
                 <a href="../View/categorylist.php">
-                    <button id="" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 left-[70%] absolute ">Back</button>
+                    <button id="" class="py-2 px-4  text-white rounded-md bg-blue-600 absolute right-12 top-[157px]">Back</button>
                     </a>
 
                 <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
