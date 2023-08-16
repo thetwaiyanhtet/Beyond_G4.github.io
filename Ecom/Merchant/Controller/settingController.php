@@ -33,7 +33,7 @@ if (isset($_POST["send"])) {
     include "../Model/model.php";
     if (preg_match($pattern, $phNo)) {
 
-        $sql = $pdo->prepare("UPDATE m_merchant SET store_name=:shopName, slogan=:slogan, phone=:phone, address=:address, logo=:img, banner=:img2 WHERE email=:merchantEmail");
+        $sql = $pdo->prepare("UPDATE m_merchant SET store_name=:shopName, slogan=:slogan, phone=:phone, address=:address, logo=:img, banner=:img2,verify = 1 WHERE email=:merchantEmail");
         $sql->bindValue(":merchantEmail", $merchantEmail);
         $sql->bindValue(":shopName", $shopName);
         $sql->bindValue(":slogan", $slogan);

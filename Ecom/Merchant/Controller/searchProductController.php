@@ -24,7 +24,6 @@ $sql = $pdo->prepare(
 $sql->bindValue(":searchText", '%' . $searchText . '%');
 $sql->bindValue(":email", $merchantEmail);
 $sql->execute();
-
 $products = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 echo json_encode($products);
