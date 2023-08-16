@@ -54,7 +54,11 @@ include "./adminsidebar.php";
                         </div>
                     </div>
                     <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button>
+                    
                 </form>
+                <a href="../View/categorylist.php">
+                    <button id="" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 left-[70%] absolute ">Back</button>
+                    </a>
 
                 <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
                     <div class="container">
