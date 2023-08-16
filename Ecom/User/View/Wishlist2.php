@@ -1,7 +1,10 @@
 <?php
 
+
+include "../Controller/newcartController.php";
 include "../Controller/wishshowController.php";
-$wishlist = $uniqueAssocArray;
+// session_start();
+$wishlist =  $uniqueAssocArray;
 ?>
 
 
@@ -115,19 +118,27 @@ $wishlist = $uniqueAssocArray;
             <a href="./orderNotification.php"> <button type="button" class="w-36 border border-solid dark:border-black bg-white dark:bg-gray-800  text-purple-800 dark:text-white rounded-md p-2 dark:hover:ring-purple-800 hover:ring-2 hover:outline-none hover:ring-purple-300  shadow-md font-semibold border-l-4 border-l-purple-900 dark:border-l-purple-400">Notification</button>
             </a>
         </div>
+       
         <div class="grid justify-center items-center md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 md:ml-0 ml-5 mb-5 w-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <?php foreach ($wishlist as $key => $value) { ?>
+                <form action="./Wishlist2.php" method="post">
                 <div class=" w-44 h-auto shadow rounded-md p-2 dark:text-white  bg-purple-300">
                     <div class="h-36 flex justify-center items-center bg-slate-600">
                         <img src="../..<?= $value['p_one'] ?>" alt="photo" class=" w-24">
+                        <input type="hidden" name="image" value="../..<?= $value['p_one'] ?>">
+                        <input type="hidden" name="price" value="<?= $value['sellprice'] ?>">
+                        
                     </div>
                     <div class="text-center">
                         <p class=" "><?= $value['name'] ?></p>
                         <p class="mt-2  text-sm"><?= $value['store_name'] ?></p>
-                        <button type="button" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 ">add-$79</button>
-                        <a href="../Controller/delwishlistitemsController.php?ppid=<?= $value['id'] ?>" class="m-2  underline hover:no-underline">remove</a>
+                       <button type="submit" class=" w-28 border border-solid border-black p-1 rounded-md mt-2 ">add-$<?= $value['sellprice'] ?></button>
+                       
+                       <a href="../Controller/delwishlistitemsController.php?ppid=<?= $value['id'] ?>"> <button type="button" class="m-2  underline hover:no-underline" >remove</button></a>
                     </div>
                 </div>
+                <input type="hidden" name="product_id" value="<?= $value['id'] ?>">
+                </form>
             <?php  } ?>
 
         </div>

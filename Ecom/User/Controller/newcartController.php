@@ -3,6 +3,7 @@ session_start();
 include "../Model/model.php";
 $carted = [];
 if (isset($_POST['product_id']) ) {
+    print_r($_POST['product_id']) ;
     if (isset($_SESSION['usercart'])) {
         // unset($_SESSION['usercart']);
         $item_array_id = array_column($_SESSION['usercart'], "product_id");

@@ -1,6 +1,7 @@
 <?php
 // session_start();
 //DB Connection
+// print_r($_GET("pid"));
 if (isset($_GET['pid'])) {
 include "../Model/model.php";
 $userEmail = $_SESSION["user_ID"];
@@ -20,5 +21,6 @@ VALUES ((SELECT id FROM m_customer WHERE email = '$userEmail'),:id,(SELECT CURRE
  $sql->execute(); //run real sql
 
  $_SESSION["m_wish"] = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 }
 //  header("Location: ../View/mainPage.php");
