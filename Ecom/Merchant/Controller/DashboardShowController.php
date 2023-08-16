@@ -244,8 +244,8 @@ $row = $deliverySql->fetch(PDO::FETCH_ASSOC);
 $totalDeliveryStatus1 = $row['total_delivery_status_1'];
 $totalDeliveryStatus0 = $row['total_delivery_status_0'];
 
-echo "Total Delivery Status 1 (Distinct Order IDs): " . $totalDeliveryStatus1;
-echo "Total Delivery Status 0 (Distinct Order IDs): " . $totalDeliveryStatus0;
+// echo "Total Delivery Status 1 (Distinct Order IDs): " . $totalDeliveryStatus1;
+// echo "Total Delivery Status 0 (Distinct Order IDs): " . $totalDeliveryStatus0;
 
 
 
