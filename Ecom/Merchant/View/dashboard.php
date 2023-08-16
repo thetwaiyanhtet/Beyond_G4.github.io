@@ -68,7 +68,7 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Profit.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>$<?= $profit ?></p>
+                                    <p>$<?= $TotalProfit ?></p>
                                     <p>Profit</p>
                                 </div>
                             </div>
