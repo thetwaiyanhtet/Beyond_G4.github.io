@@ -84,11 +84,11 @@ include "../Controller/settingShowDataController.php";
                                 <div class="flex space-x-10 mt-2">
                                     <div class="flex flex-col">
                                         <label class=" text-sm">Shop Name<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="shopName" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['store_name']) ? $merchant['store_name'] : '-----';  ?>" required>
+                                        <input type="text" name="shopName" class="w-72 p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['store_name']) ? $merchant['store_name'] : '';  ?>" required>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="" class=" text-sm">Address<span class=" text-red-600">*</span></label>
-                                        <input type="text" name="address" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['address']) ? $merchant['address'] : '-----';  ?>" required>
+                                        <input type="text" name="address" class="w-72  p-1 border border-solid  rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['address']) ? $merchant['address'] : '';  ?>" required>
                                     </div>
                                 </div>
                                 <div class="flex space-x-10 mt-2">
@@ -102,7 +102,7 @@ include "../Controller/settingShowDataController.php";
                                                 ?>
                                             </span>
                                         </label>
-                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : '09*******'; ?>" required>
+                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : ''; ?>" placeholder="09********" required>
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="myTextarea" class=" text-sm">Slogan<span class=" text-red-600">*</span></label>
