@@ -382,7 +382,7 @@ $verifyData = $_SESSION["verifyData"];
                     <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
                         <div class=" w-auto h-60 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
                             <div class="relative">
-                                <img src="../../<?= $latestShop["logo"] ?>" class=" w-20 h-20 object-cover rounded-full ml-2" alt="">
+                                <img src="../../Storage/product/<?= $latestShop["logo"] ?>" class=" w-20 h-20 object-cover rounded-full ml-2" alt="">
                                 <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
                             </div>
                             <div class="px-2 py-1">

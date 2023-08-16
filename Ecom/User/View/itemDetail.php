@@ -50,11 +50,11 @@ ini_set('display_errors', 1);
 
                 <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
                     <div class="flex items-center justify-center">
-                        <img src="../../<?= $ItemDetails[0]["p_three"] ?>" alt="..." class=" w-64 h-64">
+                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class=" w-64 h-64">
                     </div>
                     <div class="flex items-center justify-center space-x-3">
-                        <img src="../../<?= $ItemDetails[0]["p_two"] ?>" alt="..." class=" w-20 h-20">
-                        <img src="../../<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-20 h-20">
+                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class=" w-20 h-20">
+                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-20 h-20">
                         <input type="hidden" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                     </div>
                 </div>
@@ -67,7 +67,7 @@ ini_set('display_errors', 1);
                         <a href="./storepage.php">
                             <div class=" flex items-center space-x-3">
                                 <!-- <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center ">H</div> -->
-                                <p><?= $ItemDetails[0]["m_name"] ?></p>
+                                <p><?= $ItemDetails[0]["store_name"] ?></p>
                             </div>
                         </a>
                     </h3>
