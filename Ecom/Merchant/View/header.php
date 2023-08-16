@@ -24,7 +24,7 @@ $data = $_SESSION["verifyData"];
                     <?php if ($data["verify"] == 0) { ?>
                         <li><img src="../../Storage/profile/profile.png ?>" alt="..." class=" rounded-full w-16"></li>
                     <?php } elseif ($data["verify"] == 1) { ?>
-                        <li><img src="../..<?= $merchant_data["logo"]?>" alt="..." class=" rounded-full w-16"></li>
+                        <li><img src="../../Storage/profile/<?= $merchant_data["logo"]?>" alt="..." class=" rounded-full w-16"></li>
                     <?php } ?>
                 </ul>
             </div>

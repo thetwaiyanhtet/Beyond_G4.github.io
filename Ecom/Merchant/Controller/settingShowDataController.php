@@ -12,7 +12,6 @@ foreach($merchantInfo as $merchant){
     $phone = $merchant['phone'];
     $logo = $merchant['logo'];
     $banner = $merchant['banner'];
+    $logoImagePath = $merchant['logo'];
+    $bannerImagePath =$merchant['banner'];
 }
-$logoImagePath = isset($merchant['logo']);
-$bannerImagePath = isset($merchant['banner']);
-?>

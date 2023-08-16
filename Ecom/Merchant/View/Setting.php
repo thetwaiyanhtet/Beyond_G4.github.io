@@ -1,6 +1,8 @@
 <?php
+// session_start();
 include "./sidebar.php";
 include "../Controller/settingShowDataController.php";
+// include "../Controller/settingController.php";
 
 ?>
 <!DOCTYPE html>

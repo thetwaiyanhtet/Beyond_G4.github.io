@@ -7,34 +7,25 @@ if (isset($_POST["send"])) {
     $phNo = $_POST['phNo'];
     $address = $_POST['address'];
     $merchantEmail = $_SESSION["merchant_ID"];
-   
-    
-   
-    
 
     include "../Model/model.php";
 
     $existingProfile = null;
     $existingBanner = null;
 
-    if (isset($_POST["merchant_ID"]) && !empty($_POST["merchant_ID"])) {
-        $merchantId = $_POST["merchant_ID"];
+    // Query to retrieve existing image paths for the product
+    $existingQuery = $pdo->prepare("SELECT logo,banner FROM m_merchant WHERE email = :email");
+    $existingQuery->bindValue(":email", $merchantEmail);
+    $existingQuery->execute();
 
-        // Query to retrieve existing image paths for the product
-        $existingQuery = $pdo->prepare("SELECT logo,banner FROM m_merchant WHERE email = :email");
-        $existingQuery->bindValue(":email", $merchantId);
-        $existingQuery->execute();
+    $existingData = $existingQuery->fetch(PDO::FETCH_ASSOC);
 
-        $existingData = $existingQuery->fetch(PDO::FETCH_ASSOC);
-        // echo "<pre>";
-        // print_r($existingData);
-        // echo "</pre>";
 
-        if ($existingData) {
-            $existingProfile = $existingData["logo"];
-            $existingBanner = $existingData["banner"];
-        }
+    if ($existingData) {
+        $existingProfile = $existingData["logo"];
+        $existingBanner = $existingData["banner"];
     }
+
 
     if (isset($_FILES['photo5']['name']) && !empty($_FILES['photo5']['name'])) {
         $img = $_FILES['photo5']['name'];
@@ -65,10 +56,6 @@ if (isset($_POST["send"])) {
         $sql->bindValue(":slogan", $slogan);
         $sql->bindValue(":phone", $phNo);
         $sql->bindValue(":address", $address);
-        // $sql->bindValue(":img", "/Storage/profile/" . $img);
-        // $sql->bindValue(":img",  $img !== null ? "/Storage/profile/" .  $img : null);
-        // // $sql->bindValue(":img2", "/Storage/profile/" . $img2);
-        // $sql->bindValue(":img2",  $img2 !== null ? "/Storage/profile/" .  $img2 : null);
 
         $sql->bindValue(":img", $img !== null ? $img : $existingProfile);
         $sql->bindValue(":img2", $img2 !== null ? $img2 : $existingBanner);

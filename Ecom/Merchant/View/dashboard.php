@@ -82,7 +82,7 @@ $trending_json = json_encode($trending);
 
                                     <p>$ <?= $totalProfitBuy ?></p>
 
-                                    <p>Cost</p>
+                                    <p>Capital</p>
                                 </div>
                             </div>
                         </div>
