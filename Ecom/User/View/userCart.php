@@ -1,13 +1,13 @@
 <?php
 
 
- require_once("../Controller/newcartController.php");
+require_once("../Controller/newcartController.php");
 require_once "../Model/model.php";
 // echo "</pre>";
 // print_r($_SESSION['usercart']);
 if (!empty($_SESSION['carttle'])) {
-        
-   
+
+
     //session_start();
     $cart = $_SESSION['carttle'];
     $placeholers = [];
@@ -43,11 +43,10 @@ if (!empty($_SESSION['carttle'])) {
                 header("Location: ../View/userCart.php");
             }
         }
-
     }
 
     $sql = $pdo->prepare(
-        "SELECT id,p_one,name,sellprice FROM m_product WHERE id IN ($placeholdersString)"
+        "SELECT id,p_one,name,sellprice,instock FROM m_product WHERE id IN ($placeholdersString)"
     );
     $sql->execute();
 
@@ -213,16 +212,36 @@ if (!empty($_SESSION['carttle'])) {
                                                 </div>
                                                 <div name="pname" class="w-24"><?= $value['name'] ?></div>
 
-                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" name="pquantity" onchange="subTotal()" min="1" max="100" type="number" value="1">
 
+                                              
+                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="quanti" autocomplete="off"  name="pquantity" onchange="subTotal()" oninput="updateQuantity()" min="1" max="<?= $value['instock'] ?>" type="number" value="1">
                                                 <p>$<?= $value['sellprice'] ?> </p>
                                                 <input type="hidden" class="iprice " name="psellprice" value="<?= $value['sellprice'] ?>">
+
 
                                                 <p class="itotal"></p>
                                                 <input type="hidden" name="id" value="<?= $value['id'] ?>">
 
-                                                <input type="submit" value="x" class="cursor-pointer rounded-full font-black bg-[#EBEBEB] flex items-center justify-center"></input>
+                                                <input type="submit" value="x"  class="cursor-pointer rounded-full font-black bg-[#EBEBEB] flex items-center justify-center"></input>
+                                                <script>
+                                                    function updateQuantity() {
+                                                        // Get the in-stock quantity from PHP (you'll need to implement this)
+                                                        var inStockQuantity = <?= $value['instock'] ?>;
 
+                                                        // Get the input field value
+                                                        var inputField = document.getElementById("quanti");
+                                                        var inputValue = parseInt(inputField.value);
+                                                      
+                                                       console.log(inStockQuantity);
+                                                       console.log(inputValue);
+                                                        // Limit the input value to the in-stock quantity
+                                                        if (inputValue > inStockQuantity) {
+                                                            inputField.value = inStockQuantity;
+                                                        } else if (inputValue < 1) {
+                                                            inputField.value = 1;
+                                                        }
+                                                    }
+                                                </script>
                                             </div>
                                         </form>
                                 <?php }
@@ -261,7 +280,7 @@ if (!empty($_SESSION['carttle'])) {
 
                                     <div class="ml-[110px] mt-3">
                                         <input type="submit" class="w-[90px] h-[28px] bg-slate-600 font-bold text-xs text-black cursor-pointer rounded-lg " value="Checkout">
-                                        <div class="m-2 rounded-md flex justify-center bg-[#3147558b]"><a href="./mainPage.php"> <button type="button"  class="w-[100px] h-[40px]  font-bold text-xs rounded-lg text-white">Continue Shopping</button></a></div>
+                                        <div class="m-2 rounded-md flex justify-center bg-[#3147558b]"><a href="./mainPage.php"> <button type="button" class="w-[100px] h-[40px]  font-bold text-xs rounded-lg text-white">Continue Shopping</button></a></div>
                                     </div>
                                 </form>
                             </div>
@@ -272,8 +291,8 @@ if (!empty($_SESSION['carttle'])) {
             <?php } else { ?>
                 <div class="w-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex items-center justify-between mb-4">
-                    Empty Cart
-                    <?php unset($_SESSION['usercart']) ?>
+                        Empty Cart
+                        <?php unset($_SESSION['usercart']) ?>
                     </div>
                 </div>
             <?php  } ?>
