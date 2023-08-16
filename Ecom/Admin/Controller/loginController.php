@@ -7,9 +7,9 @@ if (isset($_POST['login'])) {
     $adminEmail = $_POST['email'];
     $password = $_POST['password'];
     
-    $hash = 'beyond';
-    $hashpaswprd = password_hash($hash,PASSWORD_DEFAULT);
-    echo $hashpaswprd;
+    // $hash = 'beyond';
+    // $hashpaswprd = password_hash($hash,PASSWORD_DEFAULT);
+    // echo $hashpaswprd;
 
     include "../Model/model.php";
     $sql = $pdo->prepare(
