@@ -98,7 +98,6 @@ include "../Controller/categoryListController.php";
                                             <?php
                                             if (isset($_SESSION["productIdError"])) {
                                                 echo $_SESSION["productIdError"];
-                                              
                                             }
                                             ?>
                                         </div>
@@ -149,7 +148,7 @@ include "../Controller/categoryListController.php";
                             </div>
 
                             <div class="flex-col space-y-5">
-                                <div class=" flex justify-between space-x-10 items-center">
+                                <!-- <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Buying Price</p>
                                     </div>
@@ -160,7 +159,31 @@ include "../Controller/categoryListController.php";
                                         <p>Selling Price</p>
                                     </div>
                                     <div><input type="text" name="sellprice" class="inputBox"></div>
+                                </div> -->
+
+                                <div class="flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Buying Price</p>
+                                    </div>
+                                    <div><input type="text" id="buyprice" name="buyprice" class="inputBox"></div>
                                 </div>
+
+                                <div class="flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Selling Price</p>
+                                    </div>
+                                    <div><input type="text" id="sellprice" name="sellprice" class="inputBox">
+                                    </div>
+
+                                </div>
+                                <div class="text-red-800 font-thin ">
+                                    <?php
+                                    if (isset($_SESSION["sellpriceError"])) {
+                                        echo $_SESSION["sellpriceError"];
+                                    }
+                                    ?>
+                                </div>
+
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Quantity</p>

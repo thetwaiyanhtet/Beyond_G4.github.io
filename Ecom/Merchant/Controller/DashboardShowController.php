@@ -33,6 +33,41 @@ $profit = $totalSales - $totalCost;
 // echo "Profit: $profit<br>";
 // echo "</pre>";
 
+$profitSaleSql = $pdo->prepare(
+    "SELECT m_product.sellprice, m_product.buyprice, SUM(instock) as quantityOnHand
+    FROM m_product
+    JOIN m_merchant
+    ON m_product.merchant_id = m_merchant.id
+    WHERE m_merchant.email = :email
+    GROUP BY m_product.sellprice"
+);
+
+$profitSaleSql->bindValue(':email', $merchantEmail);
+
+$profitSaleSql->execute();
+
+$Profitresult = $profitSaleSql->fetchAll(PDO::FETCH_ASSOC);
+
+$totalProfitSell = 0;
+$totalProfitBuy = 0;
+
+foreach ($Profitresult as $row) {
+    $sellPrice = $row['sellprice'];
+    $buyPrice = $row['buyprice'];
+    $quantityOnHand = $row['quantityOnHand'];
+
+    $productProfitSell = $sellPrice * $quantityOnHand;
+    $totalProfitSell += $productProfitSell;
+ 
+    $productProfitBuy = $buyPrice * $quantityOnHand;
+    $totalProfitBuy += $productProfitBuy;
+    $TotalProfit =$totalProfitSell - $totalProfitBuy;
+}
+
+// echo "Total Profit from Selling Price: $totalProfitSell<br>";
+// echo "Total Profit from Buying Price: $totalProfitBuy<br>";
+// echo "Total Profit : $TotalProfit<br>";
+
 
 $categoryCountSql = $pdo->prepare(
     "SELECT COUNT(DISTINCT m_product.category_id) AS category_count

@@ -32,12 +32,55 @@ if (count($_POST) == 0) {
 
     include "../Model/model.php";
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $pid = $_POST["pid"];
+
+        // Prepare and execute SQL to check if product ID exists
+        $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product WHERE code = :pid");
+        $checkSql->bindValue(":pid", $pid);
+        $checkSql->execute();
+        $productIdExists = $checkSql->fetchColumn();
+
+        if ($productIdExists) {
+            $_SESSION["productIdError"] = "*ProductId is already exist!";
+            header("Location: ../View/editProduct.php");
+            exit;
+        }
+    }
+
+    $existingPhoto1 = null;
+    $existingPhoto2 = null;
+    $existingPhoto3 = null;
+    $existingPhoto4 = null;
+
+
+    if (isset($_POST["id"]) && !empty($_POST["id"])) {
+        $productId = $_POST["id"];
+
+        // Query to retrieve existing image paths for the product
+        $existingPhotosQuery = $pdo->prepare("SELECT p_one, p_two, p_three, p_four FROM m_product WHERE id = :id");
+        $existingPhotosQuery->bindValue(":id", $productId);
+        $existingPhotosQuery->execute();
+
+        $existingPhotosData = $existingPhotosQuery->fetch(PDO::FETCH_ASSOC);
+        // echo "<pre>";
+        // print_r($existingPhotosData);
+        // echo "</pre>";
+
+        if ($existingPhotosData) {
+            $existingPhoto1 = $existingPhotosData["p_one"];
+            $existingPhoto2 = $existingPhotosData["p_two"];
+            $existingPhoto3 = $existingPhotosData["p_three"];
+            $existingPhoto4 = $existingPhotosData["p_four"];
+        }
+    }
+
 
     if (isset($_FILES["photo1"]["name"]) && !empty($_FILES["photo1"]["name"])) {
         $photo1 = $_FILES["photo1"]["name"];
         $photo1tmp = $_FILES["photo1"]["tmp_name"];
     } else {
-        $photo1 = null; // Set photo to null if no file was uploaded
+        $photo1 = $existingPhoto1; // Set photo to null if no file was uploaded
         $photo1tmp = null;
     }
 
@@ -45,7 +88,7 @@ if (count($_POST) == 0) {
         $photo2 = $_FILES["photo2"]["name"];
         $photo2tmp = $_FILES["photo2"]["tmp_name"];
     } else {
-        $photo2 = null; // Set photo to null if no file was uploaded
+        $photo2 = $existingPhoto2; // Set photo to null if no file was uploaded
         $photo2tmp = null;
     }
 
@@ -53,7 +96,7 @@ if (count($_POST) == 0) {
         $photo3 = $_FILES["photo3"]["name"];
         $photo3tmp = $_FILES["photo3"]["tmp_name"];
     } else {
-        $photo3 = null; // Set photo to null if no file was uploaded
+        $photo3 = $existingPhoto3; // Set photo to null if no file was uploaded
         $photo3tmp = null;
     }
 
@@ -61,17 +104,17 @@ if (count($_POST) == 0) {
         $photo4 = $_FILES["photo4"]["name"];
         $photo4tmp = $_FILES["photo4"]["tmp_name"];
     } else {
-        $photo4 = null; // Set photo to null if no file was uploaded
+        $photo4 = $existingPhoto4; // Set photo to null if no file was uploaded
         $photo4tmp = null;
     }
 
-        move_uploaded_file($photo1tmp, "../../Storage/product/" . $photo1); 
-        move_uploaded_file($photo2tmp, "../../Storage/product/" . $photo2); 
-        move_uploaded_file($photo3tmp, "../../Storage/product/" . $photo3); 
-        move_uploaded_file($photo4tmp, "../../Storage/product/" . $photo4);
-    
-        $sql = $pdo->prepare(
-            "UPDATE m_product SET
+    move_uploaded_file($photo1tmp, "../../Storage/product/" . $photo1);
+    move_uploaded_file($photo2tmp, "../../Storage/product/" . $photo2);
+    move_uploaded_file($photo3tmp, "../../Storage/product/" . $photo3);
+    move_uploaded_file($photo4tmp, "../../Storage/product/" . $photo4);
+
+    $sql = $pdo->prepare(
+        "UPDATE m_product SET
         name=:name,
         code=:product_id,
         category_id=:category_id,
@@ -95,29 +138,29 @@ if (count($_POST) == 0) {
         
         WHERE id=:id;
     "
-        );
-        $sql->bindValue(":name", $name);
-        $sql->bindValue(":product_id", $pid);
-        $sql->bindValue(":category_id", $category);
-        $sql->bindValue(":buyprice", $buyprice);
-        $sql->bindValue(":sellprice", $sellprice);
-        $sql->bindValue(":instock", $quantity);
-        $sql->bindValue(":description", $description);
-        $sql->bindValue(":color_1", $color1);
-        $sql->bindValue(":color_2", $color2);
-        $sql->bindValue(":color_3", $color3);
-        $sql->bindValue(":size1", $size1);
-        $sql->bindValue(":size2", $size2);
-        $sql->bindValue(":size3", $size3);
-        $sql->bindValue(":size4", $size4);
-        $sql->bindValue(":size5", $size5);
-        $sql->bindValue(":photo1", $photo1 !== null ? "/Storage/product/" . $photo1 : null);
-        $sql->bindValue(":photo2", $photo2 !== null ? "/Storage/product/" . $photo2 : null);
-        $sql->bindValue(":photo3", $photo3 !== null ? "/Storage/product/" . $photo3 : null);
-        $sql->bindValue(":photo4", $photo4 !== null ? "/Storage/product/" . $photo4 : null);
-        $sql->bindValue(":id", $id);
-        $sql->execute();
+    );
+    $sql->bindValue(":name", $name);
+    $sql->bindValue(":product_id", $pid);
+    $sql->bindValue(":category_id", $category);
+    $sql->bindValue(":buyprice", $buyprice);
+    $sql->bindValue(":sellprice", $sellprice);
+    $sql->bindValue(":instock", $quantity);
+    $sql->bindValue(":description", $description);
+    $sql->bindValue(":color_1", $color1);
+    $sql->bindValue(":color_2", $color2);
+    $sql->bindValue(":color_3", $color3);
+    $sql->bindValue(":size1", $size1);
+    $sql->bindValue(":size2", $size2);
+    $sql->bindValue(":size3", $size3);
+    $sql->bindValue(":size4", $size4);
+    $sql->bindValue(":size5", $size5);
 
-        header("Location: ../View/productList.php ");
-    }
+    $sql->bindValue(":photo1", $photo1 !== null ? $photo1 : $existingPhoto1);
+    $sql->bindValue(":photo2", $photo2 !== null ? $photo2 : $existingPhoto2);
+    $sql->bindValue(":photo3", $photo3 !== null ? $photo3 : $existingPhoto3);
+    $sql->bindValue(":photo4", $photo4 !== null ? $photo4 : $existingPhoto4);
+    $sql->bindValue(":id", $id);
+    $sql->execute();
 
+    header("Location: ../View/productList.php ");
+}

@@ -54,10 +54,10 @@ $productdata = $_SESSION["editproduct"];
                                 <li>
                                     <div class="w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
 
-                                        <label for="photo1">
+                                    <label for="photo1">
                                             <?php
                                             if (isset($productdata[0]["p_one"])) {
-                                                echo '<img src="../../' . $productdata[0]["p_one"] . '" id="photoimg1" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_one"] . '" id="photoimg1" alt="">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg1" alt="">';
                                             }
@@ -73,7 +73,7 @@ $productdata = $_SESSION["editproduct"];
                                     <label for="photo2">
                                             <?php
                                             if (isset($productdata[0]["p_two"])) {
-                                                echo '<img src="../../' . $productdata[0]["p_two"] . '" id="photoimg2" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_two"] . '" id="photoimg2" alt="">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg2" alt="">';
                                             }
@@ -87,7 +87,7 @@ $productdata = $_SESSION["editproduct"];
                                     <label for="photo3">
                                             <?php
                                             if (isset($productdata[0]["p_three"])) {
-                                                echo '<img src="../../' . $productdata[0]["p_three"] . '" id="photoimg3" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_three"] . '" id="photoimg3" alt="">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg3" alt="">';
                                             }
@@ -101,7 +101,7 @@ $productdata = $_SESSION["editproduct"];
                                     <label for="photo4">
                                             <?php
                                             if (isset($productdata[0]["p_four"])) {
-                                                echo '<img src="../../' . $productdata[0]["p_four"] . '" id="photoimg4" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_four"] . '" id="photoimg4" alt="">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg4" alt="">';
                                             }
@@ -134,7 +134,15 @@ $productdata = $_SESSION["editproduct"];
                                     <div>
                                         <p>Product ID</p>
                                     </div>
-                                    <div><input type="text" name="pid" value="<?php echo $productdata[0]["code"] ?>" class="inputBox" placeholder="#001"></div>
+                                    <div><input type="text" name="pid" value="<?php echo $productdata[0]["code"] ?>" class="inputBox" placeholder="#001">
+                                    <div class="text-red-800 font-thin">
+                                            <?php
+                                            if (isset($_SESSION["productIdError"])) {
+                                                echo $_SESSION["productIdError"];
+                                            }
+                                            ?>
+                                        </div>
+                                </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>

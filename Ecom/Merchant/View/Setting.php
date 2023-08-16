@@ -55,7 +55,7 @@ include "../Controller/settingShowDataController.php";
                                         <input type="file" id="photo5" name="photo5" style="display: none;" onchange="displayUserImage('photoimg5', 'photo5')">
                                         <?php
                                             if (isset($merchant["logo"])) {
-                                                echo '<img src="../../' . $merchant["logo"] . '" id="photoimg5" alt="">';
+                                                echo '<img src="../../Storage/profile/' . $merchant["logo"] . '" id="photoimg5" alt="">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg5" alt="">';
                                             }
@@ -69,7 +69,7 @@ include "../Controller/settingShowDataController.php";
                                         <input type="file" id="photo6" name="photo6" style="display: none;" onchange="displayUserImage('photoimg6', 'photo6')">
                                         <?php
                                             if (isset($merchant["banner"])) {
-                                                echo '<img src="../../' . $merchant["banner"] . '" id="photoimg6" alt="">';
+                                                echo '<img src="../../Storage/profile/' . $merchant["banner"] . '" id="photoimg6" alt="">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg6" alt="">';
                                             }
