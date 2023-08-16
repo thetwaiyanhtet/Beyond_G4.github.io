@@ -2,7 +2,7 @@
 include "./sidebar.php";
 include "../Controller/productListController.php";
 
-$result = $_SESSION["m_product"];
+// $result = $_SESSION["m_product"];
 
 ?>
 

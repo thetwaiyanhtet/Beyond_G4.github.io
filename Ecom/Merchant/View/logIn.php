@@ -31,7 +31,8 @@
                 </div>
 
                 <div class="text-[#667085]">
-                    <div>Email<span class=" text-red-600">* <?php if ($_SESSION["loginerror"]) {
+                    <div>Email<span class=" text-red-600">* 
+                        <?php if (isset($_SESSION["loginerror"])) {
                        echo $_SESSION["loginerror"];
                     }
                     ?></span></div>

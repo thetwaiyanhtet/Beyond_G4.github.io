@@ -1,4 +1,5 @@
 <?php
+// session_start();
 // DB Connection
 include "../Model/model.php";
 // include "../Controller/middleware/loginCheck.php";

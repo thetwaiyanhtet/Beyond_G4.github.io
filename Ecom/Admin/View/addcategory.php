@@ -31,9 +31,13 @@ session_start();
                         <div class="flex justify-around">
                             <div class="space-y-3 mt-5">
                                 <p>Category</p>
-                                
+
                                 <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="cname">
-                                <div class=" text-red-800 font-thin"> <?php echo $_SESSION["categoryError"]?></div>
+                                <div class=" text-red-800 font-thin">
+                                    <?php if (isset($_SESSION["categoryError"])) {
+                                        echo $_SESSION["categoryError"];
+                                    } ?>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-start space-y-3 mt-5">
                                 <p>Description</p>
@@ -48,4 +52,4 @@ session_start();
 </body>
 
 </html>
-<?php $_SESSION["categoryError"]="" ?>
+<?php $_SESSION["categoryError"] = "" ?>
