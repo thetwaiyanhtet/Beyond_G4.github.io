@@ -60,7 +60,7 @@ include "../Controller/settingShowDataController.php";
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg5" alt="">';
                                             }
                                             ?>
-                                        <!-- <img src="<?= '../../'. $logoImagePath ?  $logoImagePath : './resources/img/gallery-add.png'; ?>" alt="photo" class="w-5 m-auto mt-5" id="photoimg5"> -->
+                                       
                                     </label>
                                     <!-- <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p> -->
                                 </div>
