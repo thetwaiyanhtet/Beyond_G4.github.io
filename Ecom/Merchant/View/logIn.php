@@ -40,10 +40,10 @@
                 </div>
                 <div class="text-[#667085] pb-4">
                     <div>Password<span class=" text-red-600">*</span></div>
-                    <input type="password" name="password"  class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="********" required>
+                    <input type="password" name="password" id="pwd"  class="w-[360px] h-[44px] border-[#d0d5dd67] border-2 rounded-md bg-white outline-none indent-2" placeholder="********" required>
                     <div class="flex justify-between pt-2">
                         <div>
-                            <input type="checkbox" name="" id="">Remember me
+                            <input type="checkbox" name="" id="chk">Show Password
                         </div>
                         <a href="./forgetPassword.php" class=" font-poppins font-medium text-sm hover:underline text-[#1366D9]">Forget password</a>
                     </div>
@@ -59,6 +59,13 @@
     </div>
 </body>
 
+<script>
+    const pwd = document.getElementById("pwd");
+    const chk = document.getElementById("chk");
+    chk.onchange = function(e){
+        pwd.type = chk.checked ? "text" : "password";
+    };
+</script>
 
 </html>
 <?php  $_SESSION["loginerror"] = "" ?>

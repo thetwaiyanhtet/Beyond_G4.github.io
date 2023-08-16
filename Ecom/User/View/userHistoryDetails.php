@@ -1,9 +1,9 @@
 <?php
-include "../Controller/orderHistoryController.php";
+include "../Controller/orderHistoryDetailsController.php";
 $userData = $_SESSION["user_data"];
 $verifyData = $_SESSION["verifyData"];
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,7 @@ $verifyData = $_SESSION["verifyData"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
-    <title>Order History</title>
+    <title>Order History Details</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="../View/resources/js/order.js"></script>
@@ -133,50 +133,86 @@ $verifyData = $_SESSION["verifyData"];
             </a>
         </div>
         <div class="star-rating-display">
-
+            <?php for ($i = 1; $i <= 5; $i++) { ?>
+                <span class="star <?php echo ($i <= $rating) ? 'filled' : ''; ?>"></span>
+            <?php } ?>
         </div>
         <div class="my-5 w-[100%] md:w-3/4 ">
             <div class="w-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <div class="flex items-center justify-between mb-4">
-                    <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Order History</h5>
-                    <?php
-                    if (isset($_SESSION["review_already_submitted"]) && $_SESSION["review_already_submitted"]) {
-                        echo "<p class='error-message font-poppins font-semibold'>You have already submitted a review for that product.</p>";
-                        unset($_SESSION["review_already_submitted"]);
-                    }
-                    ?>
+                    <a href="./user_history.php"><ion-icon name="return-down-back-outline" class=" text-xl"></ion-icon></a>
+                    <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Order Details</h5>
                 </div>
                 <div class="flow-root">
                     <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700 ">
-                        <?php foreach ($ordertmp as $order) { ?>
+                        <?php foreach ($orderDetails as $order) { ?>
                             <li class="py-3 sm:py-4 w-auto my-5 pt-3">
                                 <div class="flex items-center justify-between space-x-4">
                                     <div class="flex">
-                                        <?php foreach ($order as $img) { ?>
-                                            <img class="w-14 object-fill scale-150 rounded-full" src="../..<?= $img["p_one"] ?>" alt="...">
-                                        <?php } ?>
+
+                                        <img class="w-14 object-fill scale-150 rounded-full" src="../..<?= $order["p_one"] ?>" alt="...">
+
+                                        <?php ?>
                                     </div>
 
                                     <div class="flex-col min-w-0">
-                                        <?php if ($purchasedCount > 1) { ?>
-                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                <?= $order[0]["name"] ?>,...
-                                            </p>
-                                        <?php } else if ($purchasedCount == 0) { ?>
-                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                <?= $order[0]["name"] ?>
-                                            </p>
-                                        <?php } ?>
                                         <p class="text-sm text-gray-500 truncate dark:text-gray-400 ">
-                                            From: <?= $order[0]["store_name"] ?>
+                                            <?= $order["name"] ?>
                                         </p>
                                     </div>
                                     <div class="flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        $ <?= $order[0]["total_amt"] ?>
+                                        $ <?= $order["sellprice"] ?>
                                     </div>
-                                    <a href="./userHistoryDetails.php?id=<?= $order[0]['generate_id']; ?>">
-                                        <p class=" hover:underline text-blue-500">View Details</p>
-                                    </a>
+                                    <button data-modal-target="popup-modal" data-order-id="<?= $order['product_id']; ?>" data-modal-toggle="popup-modal" class="rating-button block text-white bg-purple-400 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800" type="button">
+                                        Rate Your Satisfaction
+                                    </button>
+                                    <div>
+                                        <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                            <div class="relative w-full max-w-md max-h-full">
+                                                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                                                        <svg class="w-3 h-3" aria-hidden="true" fill="none" viewBox="0 0 14 14">
+                                                            <path d="M20,2H4C2.9,2,2,2.9,2,4v18l4-4h14c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M13.57,11.57L12,15l-1.57-3.43L7,10l3.43-1.57 L12,5l1.57,3.43L17,10L13.57,11.57z" />
+                                                        </svg>
+                                                        <span class="sr-only">Close modal</span>
+                                                    </button>
+                                                    <div class="p-6 text-center">
+                                                        <form action="../Controller/reviewNRatingController.php" method="post" id="review-form">
+                                                            <!-- Hidden input to store the order ID -->
+                                                            <input type="hidden" name="product_id" id="order-id-input" value="">
+                                                            <svg class=" text-gray-800 dark:text-gray-600 w-12 h-12 mx-auto" viewBox="0 0 24 24">
+                                                                <path d="M20,2H4C2.9,2,2,2.9,2,4v18l4-4h14c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M13.57,11.57L12,15l-1.57-3.43L7,10l3.43-1.57 L12,5l1.57,3.43L17,10L13.57,11.57z" fill="#a1a1a1"></path>
+                                                            </svg>
+                                                            <h3 class=" text-lg font-normal text-gray-800 dark:text-gray-400 pb-2">Share Your Experience</h3>
+                                                            <!-- <p hidden>Selected rating: <span id="star-count">0</span></p> -->
+                                                            <div class="flex items-center space-x-1 justify-center pb-2">
+                                                                <label for="rating">Rating:</label>
+                                                                <div class="star-rating">
+                                                                    <label for="star1" data-rating="1"><ion-icon name="star-outline"></ion-icon></label>
+                                                                    <input type="radio" id="star1" name="rating" value="1" hidden>
+                                                                    <label for="star2" data-rating="2"><ion-icon name="star-outline"></ion-icon></label>
+                                                                    <input type="radio" id="star2" name="rating" value="2" hidden>
+                                                                    <label for="star3" data-rating="3"><ion-icon name="star-outline"></ion-icon></label>
+                                                                    <input type="radio" id="star3" name="rating" value="3" hidden>
+                                                                    <label for="star4" data-rating="4"><ion-icon name="star-outline"></ion-icon></label>
+                                                                    <input type="radio" id="star4" name="rating" value="4" hidden>
+                                                                    <label for="star5" data-rating="5"><ion-icon name="star-outline"></ion-icon></label>
+                                                                    <input type="radio" id="star5" name="rating" value="5" hidden>
+                                                                </div>
+                                                            </div>
+
+                                                            <label for="message"></label>
+                                                            <textarea required id="message" name="message" rows="4" class="mb-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500" placeholder="Write your review here..."></textarea>
+                                                            <button data-modal-hide="popup-modal" type="submit" class="text-white bg-purple-400  focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                                                Submit
+                                                            </button>
+                                                            <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                         <?php } ?>
@@ -184,6 +220,7 @@ $verifyData = $_SESSION["verifyData"];
                 </div>
             </div>
         </div>
+        
     </section>
     <section id="footer">
         <div class="relative bg-purple-300 dark:bg-color-primary-dark dark:text-white border-t border-t-transparent dark:border-t-slate-200">
