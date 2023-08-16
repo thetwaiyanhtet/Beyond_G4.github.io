@@ -32,21 +32,7 @@ if (count($_POST) == 0) {
 
     include "../Model/model.php";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $pid = $_POST["pid"];
-
-        // Prepare and execute SQL to check if product ID exists
-        $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product WHERE code = :pid");
-        $checkSql->bindValue(":pid", $pid);
-        $checkSql->execute();
-        $productIdExists = $checkSql->fetchColumn();
-
-        if ($productIdExists) {
-            $_SESSION["productIdError"] = "*ProductId is already exist!";
-            header("Location: ../View/editProduct.php");
-            exit;
-        }
-    }
+    
 
     $existingPhoto1 = null;
     $existingPhoto2 = null;

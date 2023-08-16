@@ -135,13 +135,7 @@ $productdata = $_SESSION["editproduct"];
                                         <p>Product ID</p>
                                     </div>
                                     <div><input type="text" name="pid" value="<?php echo $productdata[0]["code"] ?>" class="inputBox" placeholder="#001">
-                                    <div class="text-red-800 font-thin">
-                                            <?php
-                                            if (isset($_SESSION["productIdError"])) {
-                                                echo $_SESSION["productIdError"];
-                                            }
-                                            ?>
-                                        </div>
+                    
                                 </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
