@@ -1,4 +1,5 @@
 <?php
+session_start();
  include "../Model/model.php";
  if (isset($_POST['invoice'])) {
     $id = $_GET['id'];

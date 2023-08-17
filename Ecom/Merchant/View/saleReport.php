@@ -1,5 +1,6 @@
 <?php
 include "./sidebar.php";
+include "../Controller/salereportController.php";
 ?>
 
 <!doctype html>
@@ -79,169 +80,38 @@ include "./sidebar.php";
                             </tr>
                         </thead>
                         <tbody>
-
+                            <?php foreach ($sales as $key => $value) { ?>
+                            
+                           
                             <tr class=" border-b  hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Microsoft Surface Pro
+                                    <?= $value['name'] ?>
                                 </th>
                                 <td class="px-6 py-4">
-                                    #201
+                                    <?= $value['code'] ?>
                                 </td>
                                 <td class="px-6 py-4 text-start">
-                                    Laptop Pc
+                                    <?= $value['c_name'] ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    $999
+                                <?= $value['buyprice'] ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    $1100
+                                <?= $value['sellprice'] ?>
                                 </td>
 
                                 <td class="px-16 py-4">
-                                    9
+                                <?= $value['quantity'] ?>
                                 </td>
                                 <td class="px-16 py-4 ">
-                                    $9900
+                                <?php $total =  $value['quantity'] * $value['sellprice'] ?>
+                                <?= $total ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     07/24/2023
                                 </td>
                             </tr>
-                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Microsoft Surface Pro
-                                </th>
-                                <td class="px-6 py-4">
-                                    #201
-                                </td>
-                                <td class="px-6 py-4 text-start">
-                                    Laptop Pc
-                                </td>
-                                <td class="px-6 py-4">
-                                    $999
-                                </td>
-                                <td class="px-6 py-4">
-                                    $1100
-                                </td>
-
-                                <td class="px-16 py-4">
-                                    9
-                                </td>
-                                <td class="px-16 py-4 ">
-                                    $9900
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-                            </tr>
-                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Microsoft Surface Pro
-                                </th>
-                                <td class="px-6 py-4">
-                                    #201
-                                </td>
-                                <td class="px-6 py-4 text-start">
-                                    Laptop Pc
-                                </td>
-                                <td class="px-6 py-4">
-                                    $999
-                                </td>
-                                <td class="px-6 py-4">
-                                    $1100
-                                </td>
-
-                                <td class="px-16 py-4">
-                                    9
-                                </td>
-                                <td class="px-16 py-4 ">
-                                    $9900
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-                            </tr>
-                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Microsoft Surface Pro
-                                </th>
-                                <td class="px-6 py-4">
-                                    #201
-                                </td>
-                                <td class="px-6 py-4 text-start">
-                                    Laptop Pc
-                                </td>
-                                <td class="px-6 py-4">
-                                    $999
-                                </td>
-                                <td class="px-6 py-4">
-                                    $1100
-                                </td>
-
-                                <td class="px-16 py-4">
-                                    9
-                                </td>
-                                <td class="px-16 py-4 ">
-                                    $9900
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-                            </tr>
-                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Microsoft Surface Pro
-                                </th>
-                                <td class="px-6 py-4">
-                                    #201
-                                </td>
-                                <td class="px-6 py-4 text-start">
-                                    Laptop Pc
-                                </td>
-                                <td class="px-6 py-4">
-                                    $999
-                                </td>
-                                <td class="px-6 py-4">
-                                    $1100
-                                </td>
-
-                                <td class="px-16 py-4">
-                                    9
-                                </td>
-                                <td class="px-16 py-4 ">
-                                    $9900
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-                            </tr>
-                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    Microsoft Surface Pro
-                                </th>
-                                <td class="px-6 py-4">
-                                    #201
-                                </td>
-                                <td class="px-6 py-4 text-start">
-                                    Laptop Pc
-                                </td>
-                                <td class="px-6 py-4">
-                                    $999
-                                </td>
-                                <td class="px-6 py-4">
-                                    $1100
-                                </td>
-
-                                <td class="px-16 py-4">
-                                    9
-                                </td>
-                                <td class="px-16 py-4 ">
-                                    $9900
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-                            </tr>
+                           <?php } ?>
                         </tbody>
                     </table>
                     <div class="flex justify-between items-center py-2 px-3 pt-5">
