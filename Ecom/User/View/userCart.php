@@ -208,7 +208,7 @@ if (!empty($_SESSION['carttle'])) {
                                         <form action="./userCart.php" method="post">
                                             <div class="flex items-center text-sm md:text-[16px] font-semibold space-x-10 justify-evenly pb-4">
                                                 <div class="bg-white/30 w-20 h-20 p-2 flex items-center justify-center rounded-md">
-                                                    <img class="w-12" src="../..<?= $value['p_one'] ?>" alt="">
+                                                    <img class="w-12" src="../../Storage/product/<?= $value['p_one'] ?>" alt="">
                                                 </div>
                                                 <div name="pname" class="w-24"><?= $value['name'] ?></div>
 

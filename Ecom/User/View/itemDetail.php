@@ -82,9 +82,13 @@ ini_set('display_errors', 1);
                         <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(2)" style="background-color: <?= $ItemDetails[0]["color_3"]; ?>"></div>
                     </div>
 
+                    <input type="hidden" id="selectedImageInput" name="selectedImage" value="">
+
+
                     <script>
                         const userPics = document.getElementsByClassName('user-pic');
                         const productImage = document.getElementById('productImage');
+                        const selectedImageInput = document.getElementById('selectedImage');
                         const imageSources = [
                             "<?= $ItemDetails[0]["p_one"] ?>",
                             "<?= $ItemDetails[0]["p_two"] ?>",
@@ -97,9 +101,14 @@ ini_set('display_errors', 1);
                             }
                             userPics[index].classList.add('active-pic');
                             productImage.src = "../../Storage//product/" + imageSources[index];
+                            selectedImageInput.value = imageSources[index];
+                            console.log(selectedImageInput.value);
+                            
                         }
                     </script>
                     <!-- end -->
+                    
+
 
                     <div class="flex space-x-7">
                         <h3>Quantity</h3>
@@ -108,8 +117,13 @@ ini_set('display_errors', 1);
 
                     <!-- if size hava data,size select box are shown.If not,nondisplay -->
                     <?php if (
-                       isset( $ItemDetails[0]["size_s"] , $ItemDetails[0]["size_m"] , $ItemDetails[0]["size_l"] ,
-                       $ItemDetails[0]["size_xl"], $ItemDetails[0]["size_2xl"] )
+                        isset(
+                            $ItemDetails[0]["size_s"],
+                            $ItemDetails[0]["size_m"],
+                            $ItemDetails[0]["size_l"],
+                            $ItemDetails[0]["size_xl"],
+                            $ItemDetails[0]["size_2xl"]
+                        )
                     ) { ?>
                         <div class="flex space-x-16 hidden">
                             <h3>Size</h3>
