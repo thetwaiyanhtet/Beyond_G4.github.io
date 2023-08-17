@@ -2,7 +2,6 @@
 session_start();
 include "../Controller/logoandbusinessController.php";
 $logoandname = $_SESSION["m_logo"];
-print_r($logoandname);
 ?>
 <!doctype html>
 <html>
