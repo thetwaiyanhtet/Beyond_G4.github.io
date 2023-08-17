@@ -53,8 +53,8 @@ ini_set('display_errors', 1);
                         <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-64 h-64">
                     </div>
                     <div class="flex items-center justify-center space-x-3">
-                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-20 h-20">
-                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-20 h-20">
+                        <img src="../../Storage/product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-20 h-20">
+                        <img src="../../Storage/product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-20 h-20">
                         <input type="hidden" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                     </div>
                 </div>
@@ -212,7 +212,7 @@ ini_set('display_errors', 1);
                     <?php foreach ($topComments as $CustomerReviews) { ?>
                         <div class="reviewCard flex  ">
                             <div class="flex">
-                                <img src="../../<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
+                                <img src="../../Storage/profile/<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
                                 <div class="">
                                     <h2 class=" font-semibold lg:text-xl text-lg"><?= $CustomerReviews["username"] ?></h2>
                                     <div class=" text-yellow-500 text-xl">

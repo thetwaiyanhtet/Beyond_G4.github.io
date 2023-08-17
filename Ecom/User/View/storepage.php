@@ -72,7 +72,7 @@ include "../Controller/storePageController.php";
       <div class="  flex flex-col justify-center mb-10 ">
           <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
        bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
-              <img src="../../<?= $AllProduct["p_one"]?>" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
+              <img src="../../Storage/product/<?= $AllProduct["p_one"]?>" alt="" class="w-[100%] lg:w-60 transition-all duration-200 hover:scale-110">
               <p class="font-semibold text-[9px] max-md:text-sm"><?php echo $AllProduct['name']?></p>
               <p class=" font-extrabold text-xs lg:text-2xl"><?php echo $AllProduct['sellprice'] ?></p>
               <div class="flex space-x-1 lg:space-x-0 pb-5">
