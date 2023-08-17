@@ -63,7 +63,7 @@ $verifyData = $_SESSION["verifyData"];
 
                             <?php
                             if (isset($_SESSION['usercart'])) {
-                                $cc = count($_SESSION['usercart']);
+                                $cc = count($_SESSION['carttle']);
                                 echo $cc;
 
                                 //    echo ' <span class="text-sm text-white p-1"></span>'
