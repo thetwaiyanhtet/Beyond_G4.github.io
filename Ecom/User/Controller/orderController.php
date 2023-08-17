@@ -4,6 +4,7 @@ $strquanti = $_SESSION['quantity'];
 $totamt = $_SESSION['delitotalamt'];
 $carted = $_SESSION["placeholdcart"];
 $userEmail = $_SESSION["user_ID"];
+$payment = $_SESSION["payment_method"];
 ini_set('display_errors', 1);
 
 $stringWithoutDollar = str_replace('$', '', $totamt);
@@ -32,12 +33,15 @@ $sql = $pdo->prepare(
         SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1),
         SUBSTRING('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', FLOOR(1 + RAND() * 62), 1)
     )
-),(SELECT id FROM m_customer WHERE email = :email),1,1,
-       $number);
+),(SELECT id FROM m_customer WHERE email = :email),:payment,1,
+       :number);
    "
 );
 
 $sql->bindValue(":email", $userEmail);
+$sql->bindValue(":payment", $payment);
+$sql->bindValue(":number", $number);
+
 
 // $sql->bindValue(":totalamt",$totalamt);
 $sql->execute();

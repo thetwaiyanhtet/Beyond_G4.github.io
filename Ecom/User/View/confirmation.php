@@ -2,6 +2,7 @@
 include ("../Controller/merchantaddressController.php");
 $addressandname = $_SESSION['m_cusaddress'];
 $tot = $_SESSION["placeholdcart"];
+$_SESSION["payment_method"] = $_POST['deli'];
 
 
 ?>
@@ -104,8 +105,13 @@ $tot = $_SESSION["placeholdcart"];
                 </div>
                 <button class="px-4 py-3 mt-2 bg-[#314755] rounded-md flex justify-center items-center">
                     <label class="flex text-white space-x-2">
-                        <input type="radio" name="deli" class="form-checkbox w-6 h-6  ">
-                        <span>Credit Card</span>
+                        <!-- <input type="radio" name="deli" class="form-checkbox w-6 h-6  "> -->
+                        <?php if ($_POST['deli'] == 0) { ?>
+                            <span>Visa</span>
+                      <?php  } ?>
+                      <?php if ($_POST['deli'] == 1) { ?>
+                            <span>KBZ Pay</span>
+                      <?php  } ?>
                     </label>
                 </button>
             </div>
@@ -147,7 +153,7 @@ $tot = $_SESSION["placeholdcart"];
                         </div>
                     </div>
             </div>
-            <div class="absolute max-lg:hidden -bottom-10 right-0 max-lg:-bottom-10 max-lg:right-5">
+            <div class="absolute max-lg:hidden -bottom-10 right-0 max-lg:-bottom-10 max-lg:right-5 mb-10">
                 <a> <input type="submit" value="Check Out" class=" cursor-pointer text-white py-1 px-5 rounded-md font-PlayfairSC bg-[#314755]"></input></a>
             </div>
             </form>

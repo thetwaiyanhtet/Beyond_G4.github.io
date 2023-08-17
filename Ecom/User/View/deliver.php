@@ -5,6 +5,7 @@ $delitotalamt = $_POST['delitotal'];
 $_SESSION['totalamount'] = $_POST['stotal'];
 $_SESSION['delitotalamt'] = $_POST['delitotal'];
 $_SESSION['quantity']   = $_POST['quantiarr'];
+
 ?>
 
 <!DOCTYPE html>
