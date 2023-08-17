@@ -65,19 +65,21 @@ include "../Controller/merchantDetailController.php";
                                  <?php if(isset($orderCount["order_count"])){?>
                                  <p><?= $orderCount["order_count"] ?></p>
                                  <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <p>0</p>
+                                 <?php }?>
                              </div>
                          </div>
                          <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
                              <img src="./resources/img/purchased.png" alt="...">
                              <div class=" font-semibold text-center">
                                  <p>Products</p>
-                                 <?php if(isset($orderCount["product_count"])){?>
+                                 <?php if(isset($productCount["product_count"])){?>
                                  <p><?= $productCount["product_count"] ?></p>
                                  <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <p>0</p>
+                                 <?php }?>
+                                
+                               
                              </div>
                          </div>
                          <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
@@ -85,11 +87,12 @@ include "../Controller/merchantDetailController.php";
                              <div class=" font-semibold text-center">
                                  <p>In-Stock</p>
                                  <p>
-                                 <?php if(isset($orderCount["total_product_sum"])){?>
+                                <?php if(isset($productSum["total_product_sum"])){?>
                                  <p><?= $productSum["total_product_sum"] ?></p>
                                  <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <p>0</p>
+                                 <?php }?>  
+                                   
                              </div>
                          </div>
                      </div>
