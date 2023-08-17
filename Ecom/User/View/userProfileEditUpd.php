@@ -29,6 +29,7 @@ $verifyData = $_SESSION["verifyData"];
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
+    <script src="../View/resources/js/product.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -40,7 +41,7 @@ $verifyData = $_SESSION["verifyData"];
 </head>
 
 <body class="bg-purple-200 dark:bg-color-primary-dark ">
-    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
+<nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
                 <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
@@ -132,11 +133,16 @@ $verifyData = $_SESSION["verifyData"];
                             <p class=" font-philosopher text-3xl text-center">My Profile</p>
                             <p class="text-center">Manage and protect your account</p>
                         </div>
-                        <div class=" w-40 h-auto border border-dashed rounded-full border-gray-400 m-auto ">
-                            <label for="photo1">
-                                <img src="../View/resources/img/product_image.png" id="photoimg" alt="" class=" scale-90">
+                        <div class=" w-40 h-40 border border-dashed rounded-full border-gray-400 m-auto flex justify-center items-center">
+                            <label for="photo">
+                                <input type="file" class=" hidden" id="photo" accept=".png,.jpeg" name="photo">
+                                <?php if (isset($userData["p_picture"])) { ?>
+                                    <img src="../../Storage//profile/<?= $userData["p_picture"] ?>" id="photoimg" alt="" class="">
+                                <?php } else { ?>
+                                    <img src="../../Merchant/View/resources/img/gallery-add.png" id="photoimg" alt="" class=" w-16 h-16">
+                                <?php } ?>
                             </label>
-                            <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo">
+
                         </div>
 
                     </div>
@@ -175,6 +181,20 @@ $verifyData = $_SESSION["verifyData"];
                     <div class="space-x-3 pb-3 float-right ">
                         <button type="submit" class=" text-white bg-purple-500 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800 shadow-md ">Save</button>
                         <button class="  text-white bg-red-500 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600  dark:focus:ring-red-800 shadow-md ">Cancel</button>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <p class="text-xs pl-2 inline font-bold text-gray-500">Gender - </p>
+                        <div>
+
+                            <input type="radio" id="male" name="gender" value="0" required>
+                            <label for="male" class=" md:text-base text-sm  dark:text-white">Male</label>
+
+                            <input type="radio" id="female" name="gender" value="1" required>
+                            <label for="female" class=" md:text-base text-sm  dark:text-white">Female</label>
+
+                            <input type="radio" id="other" name="gender" value="2" required>
+                            <label for="other" class=" md:text-base text-sm  dark:text-white">Other</label>
+                        </div>
                     </div>
                 </div>
 

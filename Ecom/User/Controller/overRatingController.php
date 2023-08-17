@@ -10,6 +10,7 @@ $sql = $pdo->prepare(
     "SELECT 
     m_customer.username,
     m_cusreview.comment,
+    m_customer.p_picture,
     AVG(m_cusreview.rating) as review_rating,
     COUNT(m_cusreview.customer_id) as customer_count
     FROM m_cusreview

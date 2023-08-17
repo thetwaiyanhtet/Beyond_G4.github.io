@@ -63,7 +63,7 @@ $verifyData = $_SESSION["verifyData"];
 
                             <?php
                             if (isset($_SESSION['usercart'])) {
-                                $cc = count($_SESSION['usercart']);
+                                $cc = count($_SESSION['carttle']);
                                 echo $cc;
 
                                 //    echo ' <span class="text-sm text-white p-1"></span>'
@@ -160,7 +160,7 @@ $verifyData = $_SESSION["verifyData"];
                     <?php if ($verifyData["verify"] == 0) { ?>
                         <img class="w-10 h-10 rounded-full" src="../../Storage/profile/profile.png" alt="user photo">
                     <?php } else if ($verifyData["verify"] == 1) { ?>
-                        <img class="w-10 h-10 rounded-full" src="../../<?= $userData["p_picture"] ?>" alt="user photo">
+                        <img class="w-10 h-10 rounded-full" src="../../Storage/profile/<?= $userData["p_picture"] ?>" alt="user photo">
                     <?php } ?>
                 </button>
                 <!-- Dropdown menu -->
