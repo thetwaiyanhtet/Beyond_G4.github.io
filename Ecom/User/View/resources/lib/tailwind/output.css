@@ -1141,6 +1141,10 @@ video {
   margin-top: 2%;
 }
 
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1344,6 +1348,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .max-h-full {
@@ -1596,6 +1604,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .min-w-0 {

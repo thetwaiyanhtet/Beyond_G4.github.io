@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/verify.css">
 </head>
 
 <body>
@@ -21,32 +22,53 @@
     <div class="flex flex-col items-center">
         <p class=" font-philosopher font-medium text-xl">Verify your email </p>
         <img src="./resources/img/verify.png" alt="verify" class="w-56 mt-10 ml-5">
-        <p class="text-center font-poppins font-medium mt-5 ml-10">Please Enter The 4 Digit Code Sent To <br>
+        <p class="text-center font-poppins font-semibold mt-5 ml-10 mb-9">Please Enter The 4 Digit Code Sent To <br>
             user@gmail.com </p>
         <form action="../Controller/verifyController.php" method="post">
-            <div class="flex p-5 ml-4 mt-5">
-                <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4">
-                    <input type="text" name="number1" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
-                </div>
-                <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4">
-                    <input type="text" name="number2" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
-                </div>
-                <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4">
-                    <input type="text" name="number3" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
-                </div>
-                <div class="border border-solid w-10 h-10 p-2 bg-verify-color ml-4 ">
-                    <input type="text" name="number4" id="" maxlength="1" class="w-6 text-center h-5 hover:outline-none focus:outline-none bg-verify-color">
-                </div>
+            <div class="pin-code">
+                <input type="number" name="number1" maxlength="1" autofocus>
+                <input type="number" name="number2" maxlength="1">
+                <input type="number" name="number3"  maxlength="1">
+                <input type="number" name="number4" maxlength="1">
             </div>
             <div class="flex flex-col ml-20">
                 <button type="submit" name="resend" type="submit" class=" text-red-800 underline font-poppins mt-10 mr-10">Resend Code</button>
-                <a href="">
+                <a href="../Controller/verifyController.php">
                     <button type="submit" name="verify" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg mr-10">Send</button>
                 </a>
             </div>
         </form>
-
     </div>
+    <script>
+        var pinContainer = document.querySelector(".pin-code");
+        console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
+
+        pinContainer.addEventListener('keyup', function (event) {
+            var target = event.target;
+            
+            var maxLength = parseInt(target.getAttribute("maxlength"), 10);
+            var myLength = target.value.length;
+
+            if (myLength >= maxLength) {
+                var next = target.nextElementSibling;
+                if (next !== null && next.tagName.toLowerCase() === "input") {
+                    next.focus();
+                }
+            }
+
+            if (myLength === 0) {
+                var prev = target.previousElementSibling;
+                if (prev !== null && prev.tagName.toLowerCase() === "input") {
+                    prev.focus();
+                }
+            }
+        });
+
+        pinContainer.addEventListener('keydown', function (event) {
+            var target = event.target;
+            target.value = "";
+        });
+    </script>
 </body>
 
 </html>

@@ -26,20 +26,20 @@ include "./adminsidebar.php";
 
             <div class="py-10 w-full flex">
                 <div class="flex flex-col space-y-4 items-center">
-                    <div><img src="../..<?= $productDetail["p_one"] ?>" alt="..." width="100px"></div>
+                    <div><img src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="..." width="100px"></div>
                     <div class="flex space-x-5 justify-between">
                         <?php if (!empty($productDetail["p_two"])) { ?>
-                            <div><img src="../..<?= $productDetail["p_two"] ?>" alt="..." width="100px"></div>
+                            <div><img src="../../Storage/product/<?= $productDetail["p_two"] ?>" alt="..." width="100px"></div>
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>
                         <?php if (!empty($productDetail["p_three"])) { ?>
-                            <div><img src="../..<?= $productDetail["p_three"] ?>" alt="..." width="100px"></div>
+                            <div><img src="../../Storage/product/<?= $productDetail["p_three"] ?>" alt="..." width="100px"></div>
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>
                         <?php if (!empty($productDetail["p_four"])) { ?>
-                            <div><img src="../..<?= $productDetail["p_four"] ?>" alt="..." width="100px"></div>
+                            <div><img src="../../Storage/product/<?= $productDetail["p_four"] ?>" alt="..." width="100px"></div>
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>
