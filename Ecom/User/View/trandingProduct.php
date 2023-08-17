@@ -1,7 +1,6 @@
 <?php
-
-include "../Controller/trendingProductController.php";
 include "../Controller/newcartController.php";
+include "../Controller/trendingProductController.php";
 include "../Controller/wishlistcart.php";
 
 ?>
@@ -99,7 +98,7 @@ include "../Controller/wishlistcart.php";
                         <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
                         <form action="./trandingProduct.php" method="post">
                         <div class="relative overflow-hidden">
-                                <img class="w-32 h-40 m-auto" src="../../<?= $tranding["p_one"] ?>" alt="">
+                                <img class="w-32 h-40 m-auto" src="../../Storage/product/<?= $tranding["p_one"] ?>" alt="">
                                 <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                 <a href="./trandingProduct.php?pid=<?= $tranding["product_id"]; ?>"> <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
                                 <a href="../View/itemDetail.php?pid=<?= $tranding["product_id"]; ?>">  <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
