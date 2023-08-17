@@ -4,8 +4,6 @@ include "../Model/model.php";
 
 $userEmail = $_SESSION["user_ID"];
 $name = $_POST["name"];
-$photo=$_FILES["photo"]["name"];
-$phototmp=$_FILES["photo"]["tmp_name"];
 $phone_no = $_POST["phone_no"];
 $dob = $_POST["dob"];
 $gender = $_POST["gender"];
@@ -13,7 +11,32 @@ $street = $_POST["street"];
 $region =$_POST["region"];
 $township =$_POST["township"];
 
-if(move_uploaded_file($phototmp,"../../Storage/profile/".$photo)){
+// $photo=$_FILES["photo"]["name"];
+// $phototmp=$_FILES["photo"]["tmp_name"];
+
+$existingPhoto=null;
+
+$existingUserQuery=$pdo->prepare("SELECT p_picture FROM m_customer WHERE email=:mail");
+$existingUserQuery->bindValue(":mail",$userEmail);
+$existingUserQuery->execute();
+
+$existingUserData=$existingUserQuery->fetch(PDO::FETCH_ASSOC);
+
+if($existingUserData){
+    $existingPhoto=$existingUserData["p_picture"];
+}
+
+if (isset($_FILES["photo"]["name"]) && !empty($_FILES["photo"]["name"])) {
+    $photo = $_FILES["photo"]["name"];
+    $phototmp = $_FILES["photo"]["tmp_name"];
+} else {
+    $photo = $existingPhoto; 
+    $phototmp = null;
+}
+
+     move_uploaded_file($phototmp,"../../Storage/profile/".$photo);
+
+
     $sql = $pdo->prepare(
         "UPDATE m_customer
         SET 
@@ -32,7 +55,7 @@ if(move_uploaded_file($phototmp,"../../Storage/profile/".$photo)){
     );
     
     $sql->bindValue(":name",$name);
-    $sql->bindValue(":photo","/Storage/profile/".$photo);
+    $sql->bindValue(":photo", $photo != null ? $photo : $existingPhoto);
     $sql->bindValue(":phone_no", $phone_no);
     $sql->bindValue(":dob", $dob);
     $sql->bindValue(":gender", $gender);
@@ -48,9 +71,6 @@ if(move_uploaded_file($phototmp,"../../Storage/profile/".$photo)){
     // print_r($userDetailData);
     
     header("Location: ../View/profileMenu.php");
-}else{
-    header("Location: ../View/errors/error.php");
-}
 
 
 
