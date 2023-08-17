@@ -14,7 +14,7 @@ $saleSql = $pdo->prepare(
     ON m_product.merchant_id = m_merchant.id
     JOIN m_admin_category
     ON m_product.category_id=m_admin_category.id
-    WHERE m_merchant.email = :email"
+    WHERE m_merchant.email = :email and m_product.del_flg = 0"
 );
 
 $saleSql->bindValue(':email', $merchantEmail);
@@ -229,21 +229,27 @@ $lowQuantity = $lowQuantitySql->fetchAll(PDO::FETCH_ASSOC);
 // echo "</pre>";
 
 $deliverySql = $pdo->prepare(
-    "SELECT m_order_details.delivery_status, COUNT(*) AS product_count
-    FROM m_order_details
-    JOIN m_merchant ON m_order_details.merchant_id = m_merchant.id
-    WHERE m_merchant.email = :email
-    GROUP BY m_order_details.delivery_status"
+    "SELECT 
+        COUNT(DISTINCT CASE WHEN od.delivery_status = 1 THEN od.order_id END) AS total_delivery_status_1,
+        COUNT(DISTINCT CASE WHEN od.delivery_status = 0 THEN od.order_id END) AS total_delivery_status_0
+    FROM m_order_details AS od
+    JOIN m_merchant AS m ON od.merchant_id = m.id
+    WHERE m.email = :email AND (od.delivery_status = 0 OR od.delivery_status = 1)"
 );
 
 $deliverySql->bindValue(':email', $merchantEmail);
 $deliverySql->execute();
 
-$deliveryCounts = $deliverySql->fetchAll(PDO::FETCH_ASSOC);
+$row = $deliverySql->fetch(PDO::FETCH_ASSOC);
+$totalDeliveryStatus1 = $row['total_delivery_status_1'];
+$totalDeliveryStatus0 = $row['total_delivery_status_0'];
 
-// echo "<pre>";
-// print_r($deliveryCounts);
-// echo "</pre>";
+// echo "Total Delivery Status 1 (Distinct Order IDs): " . $totalDeliveryStatus1;
+// echo "Total Delivery Status 0 (Distinct Order IDs): " . $totalDeliveryStatus0;
+
+
+
+
 
 $earnProfitSql = $pdo->prepare(
     "SELECT 

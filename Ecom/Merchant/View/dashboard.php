@@ -40,17 +40,17 @@ $trending_json = json_encode($trending);
             <p class=" pt-3 pl-5 font-semibold text-lg">Dashboard</p>
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                    <h1 class=" text-lg font-bold font-philosopher pb-5">Sales Overview</h1>
+                    <h1 class=" text-lg font-bold font-philosopher pb-5">Inventory Cost Overview</h1>
                     <div class=" flex justify-evenly pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Sales.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                 
-                                 
-                               
-                                        <p>$ <?= $totalProfitSell ?></p>
-                                
+
+
+
+                                    <p>$ <?= $totalProfitSell ?></p>
+
                                     <p>Sales</p>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Profit.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                    <p>$<?= $profit ?></p>
+                                    <p>$<?= $TotalProfit ?></p>
                                     <p>Profit</p>
                                 </div>
                             </div>
@@ -77,12 +77,12 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Cost.png" alt="..."></div>
                                 <div class=" flex space-x-5">
-                                
-                                       
-                                   
-                                        <p>$ <?= $totalProfitBuy ?></p>
-                                 
-                                    <p>Cost</p>
+
+
+
+                                    <p>$ <?= $totalProfitBuy ?></p>
+
+                                    <p>Capital</p>
                                 </div>
                             </div>
                         </div>
@@ -235,33 +235,21 @@ $trending_json = json_encode($trending);
                             <h1 class=" text-lg font-bold font-philosopher">Delivery</h1>
                         </div>
                         <hr>
-                        <?php if (!count($deliveryCounts) == 0) { ?>
-                            <div class=" flex justify-between pb-3 space-x-5 p-3">
+                      
+                          
+                            <div class="flex justify-between pb-3 space-x-5 p-3">
                                 <div>
-                                    <?php if ($deliveryCounts[0]["delivery_status"] == 0) { ?>
-                                        <p class=" font-semibold"><?= $deliveryCounts[0]["product_count"] ?></p>
-                                        <p>Processing</p>
-                                    <?php } ?>
-                                </div>
-                                <div>
-                                    <?php if ($deliveryCounts[1]["delivery_status"] == 1) { ?>
-                                        <p class=" font-semibold"><?= $deliveryCounts[1]["product_count"] ?></p>
-                                        <p>Processed</p>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        <?php } else { ?>
-                            <div class=" flex justify-between pb-3 space-x-5 p-3">
-                                <div>
-                                    <p class=" font-semibold">0</p>
+                                        <p class="font-semibold"><?= $totalDeliveryStatus0 ?></p>
                                     <p>Processing</p>
                                 </div>
-                                <div>
-                                    <p class=" font-semibold">0</p>
+                                <div>  
+                                        <p class="font-semibold"><?= $totalDeliveryStatus1 ?></p>
+
                                     <p>Processed</p>
                                 </div>
                             </div>
-                        <?php } ?>
+
+                        
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950 h-[192px]">
                         <div class=" flex justify-center items-center space-x-3 pb-3 pt-3">
@@ -443,7 +431,7 @@ $trending_json = json_encode($trending);
                     <h1 class=" text-lg font-bold font-philosopher pb-5">Low Quantity Stocks</h1>
                     <?php foreach ($lowQuantity as $lowQuantityStock) { ?>
                         <div class=" flex justify-between items-center pb-3 space-y-4">
-                            <img src="../../<?= $lowQuantityStock["p_one"] ?>" alt="..." class=" w-12 h-12 ">
+                            <img src="../../Storage/product/<?= $lowQuantityStock["p_one"] ?>" alt="..." class=" w-12 h-12 ">
                             <div class="">
                                 <p class=" font-semibold text-lg"><?= $lowQuantityStock["name"] ?></p>
                                 <p class=" opacity-60">Remaining Qty : <?= $lowQuantityStock["instock"] ?> Units</p>

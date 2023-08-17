@@ -41,7 +41,9 @@ session_start();
                 <form action="../Controller/loginController.php" method="post">
                     <p class="text-red-700 text-center">
                         <?php
-                        echo  $_SESSION["loginerror"]
+                        if(isset($_SESSION["loginerror"])){
+                        echo  $_SESSION["loginerror"];
+                        }
                         ?></p>
                     <div class="m-10 w-[100%]">
                         <input name="email" type="email" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Email"></input> <br>

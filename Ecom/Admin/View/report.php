@@ -17,34 +17,40 @@ include "./adminsidebar.php";
 
 <body>
     <main class="  ml-60 h-screen pt-20  w-[80%] font-Inter">
-    
+
         <div class="ml-16">
             <p class=" text-xl font-bold font-philosopher py-3">Report</p>
-            
+
             <div class="border shadow-md mt-5 rounded-xl border-gray-200">
-            <div class="p-5">
-                <p class="font-semibold text-lg">Export to CSV</p>
-                <div class="flex justify-evenly p-7 font-medium text-lg">
-                    <div class="flex flex-col space-y-12">
-                        <button class=" py-2 px-8 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600">Order List</button>
-                        <button class="py-2 px-8 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600">Category List</button>
-                    </div>
-                    <div class="flex flex-col space-y-12">
-                        <button class="py-2 px-6 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600">Trending Store List</button>
-                        <button class="py-2 px-6 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600">Bussiness Plan</button>
-                    </div>
+                <div class="p-5">
+                    <p class="font-semibold text-lg">Export to CSV</p>
+                    <form method='post' action='../Controller/downloadCSV.php'>
+                        <div class="flex justify-evenly p-7 font-medium text-lg">
+                            <div class="flex flex-col space-y-12">
+                                <a href="./orderlist.php">
+                                    <input type='submit' value='Order List' name='export_type' class="py-2 px-8 rounded-lg text-white flex items-center justify-center 
+                        bg-blue-600">
+                                </a>
+                                <a href="./categorylist.php">
+                                    <input type='submit' value='Category List' name='export_type' class="py-2 px-8 rounded-lg text-white flex items-center justify-center 
+                        bg-blue-600">
+                                </a>
+                            </div>
+                            <div class="flex flex-col space-y-12">
+                                <input type='submit' value='Trending Store List' name='export_type' class="py-2 px-6 rounded-lg text-white flex items-center justify-center 
+                        bg-blue-600">
+                                <a href="./merchant_list.php">
+                                    <input type='submit' value='Business Plan' name='export_type' class="py-2 px-6 rounded-lg text-white flex items-center justify-center 
+                        bg-blue-600"></a>
+                            </div>
+                        </div>
+
                 </div>
-                
+
+
+
+
             </div>
-           
-            
-        
-      
-        </div>
     </main>
 </body>
 

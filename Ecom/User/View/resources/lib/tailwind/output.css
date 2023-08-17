@@ -1622,6 +1622,10 @@ video {
   width: 100vw;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1787,6 +1791,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-start {
@@ -3453,6 +3461,10 @@ body * {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:no-underline:hover {
