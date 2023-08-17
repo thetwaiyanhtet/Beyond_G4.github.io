@@ -214,20 +214,20 @@ if (!empty($_SESSION['carttle'])) {
 
 
                                               
-                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="quanti" autocomplete="off"  name="pquantity" onchange="subTotal()" oninput="updateQuantity()" min="1" max="<?= $value['instock'] ?>" type="number" value="1">
+                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="quanti" autocomplete="off"  name="pquantity" onchange="subTotal()" oninput="updateQuantity(<?= $value['id'] ?>)" min="1" max="<?= $value['instock'] ?>" type="number" value="1">
                                                 <p>$<?= $value['sellprice'] ?> </p>
                                                 <input type="hidden" class="iprice " name="psellprice" value="<?= $value['sellprice'] ?>">
 
 
                                                 <p class="itotal"></p>
-                                                <input type="hidden" name="id" value="<?= $value['id'] ?>">
+                                                <input type="hidden" name="id"  value="<?= $value['id'] ?>">
 
                                                 <input type="submit" value="x"  class="cursor-pointer rounded-full font-black bg-[#EBEBEB] flex items-center justify-center"></input>
                                                 <script>
-                                                    function updateQuantity() {
+                                                    
+                                                    function updateQuantity(ID) {
                                                         // Get the in-stock quantity from PHP (you'll need to implement this)
-                                                        var inStockQuantity = <?= $value['instock'] ?>;
-
+                                                        var inStockQuantity = ID;
                                                         // Get the input field value
                                                         var inputField = document.getElementById("quanti");
                                                         var inputValue = parseInt(inputField.value);
