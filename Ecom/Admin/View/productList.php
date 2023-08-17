@@ -60,7 +60,7 @@ include '../Controller/productListController.php';
                         <?php foreach ($paginatedData as $product) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
-                                    <img src="../..<?= $product["p_one"] ?>" alt="..." width="50px">
+                                    <img src="../../Storage/product/<?= $product["p_one"] ?>" alt="..." width="50px">
                                 </th>
                                 <td class="px-6 py-2">
                                     <?= $product["name"]; ?>

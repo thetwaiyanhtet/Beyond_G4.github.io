@@ -65,19 +65,21 @@ include "../Controller/merchantDetailController.php";
                                  <?php if(isset($orderCount["order_count"])){?>
                                  <p><?= $orderCount["order_count"] ?></p>
                                  <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <p>0</p>
+                                 <?php }?>
                              </div>
                          </div>
                          <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
                              <img src="./resources/img/purchased.png" alt="...">
                              <div class=" font-semibold text-center">
                                  <p>Products</p>
-                                 <?php if(isset($orderCount["product_count"])){?>
+                                 <?php if(isset($productCount["product_count"])){?>
                                  <p><?= $productCount["product_count"] ?></p>
                                  <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <p>0</p>
+                                 <?php }?>
+                                
+                               
                              </div>
                          </div>
                          <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
@@ -85,11 +87,12 @@ include "../Controller/merchantDetailController.php";
                              <div class=" font-semibold text-center">
                                  <p>In-Stock</p>
                                  <p>
-                                 <?php if(isset($orderCount["total_product_sum"])){?>
+                                <?php if(isset($productSum["total_product_sum"])){?>
                                  <p><?= $productSum["total_product_sum"] ?></p>
                                  <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <p>0</p>
+                                 <?php }?>  
+                                   
                              </div>
                          </div>
                      </div>
@@ -103,7 +106,7 @@ include "../Controller/merchantDetailController.php";
                  <div class=" flex flex-wrap space-x-10 p-5">
                      <?php foreach ($productList as $productListDetail) { ?>
                          <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400 text-center">
-                             <img src="../..<?= $productListDetail["p_one"] ?>" alt="..." class="  w-40 mx-auto pt-2">
+                             <img src="../../Storage/product/<?= $productListDetail["p_one"] ?>" alt="..." class="  w-40 mx-auto pt-2">
                              <div class="pl-3 pb-2 pt-10">
                                  <p><?= $productListDetail["name"] ?></p>
                                  <p>$<?= $productListDetail["sellprice"] ?></p>
