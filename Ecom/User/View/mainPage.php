@@ -34,6 +34,8 @@ $verifyData = $_SESSION["verifyData"];
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
+    <link rel="stylesheet" href="./resources/css/bannerSlideShow.css">
+    <script src="./resources/js/bannerSlideShow.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -236,13 +238,20 @@ $verifyData = $_SESSION["verifyData"];
             </div>
         </div>
     </div>
+
+
     <section class="sec h-screen">
         <section class="w-[85%] m-auto">
 
-            <div>
+            <div class="banner-container mt-32">
                 <!-- Banner_1 section -->
-                <img src="<?= $banner[0]['banner_one_img']  ?>" alt="" class="rounded-xl mt-24">
+                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
+                <!-- Additional banners go here -->
+                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
             </div>
+
+
             <!--Trending product section  -->
             <div class=" flex flex-col m-auto p-auto font-poppins ">
 
@@ -314,8 +323,11 @@ $verifyData = $_SESSION["verifyData"];
             </a>
             <!--End of Trending product section  -->
             <!-- Banner 2 -->
-            <div>
-                <img src="<?= $banner[0]['banner_two_img']  ?>" alt="" class=" w-full rounded-xl">
+            <div class="banner-container">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <!-- More images for this banner section -->
             </div>
             <!--End of Banner 2 -->
             <!-- All Product session start -->
@@ -369,8 +381,11 @@ $verifyData = $_SESSION["verifyData"];
                 <span class="relative invisible ">View All</span>
             </a>
 
-            <div>
-                <img src="<?= $banner[0]['banner_three_img']  ?>" alt="" class=" w-full rounded-xl">
+            <div class="banner-container">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
+                <!-- More images for this banner section -->
             </div>
             <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Feature Shops</span></h1>
             <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
@@ -432,8 +447,11 @@ $verifyData = $_SESSION["verifyData"];
 
         </section>
         <section class="w-[90%] m-auto">
-            <div>
-                <img src="<?= $banner[0]['banner_four_img']  ?>" alt="" class=" w-full rounded-xl">
+            <div class="banner-container">
+                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
+                <!-- More images for this banner section -->
             </div>
 
             <div class=" w-full h-auto py-5 z-10">

@@ -123,29 +123,16 @@ include "../Controller/orderDetailController.php";
                 <p class="m-1 mr-11 font-semibold"> = $<?= $totalSum + 2 ?></p>
             </div>
         </div>
-<<<<<<< Updated upstream
+        <form action="../Controller/invoiceMailController.php?id=<?= $orderDetails[0]['id']?>" method="post">
         <div class=" py-7 absolute left-[52%] flex">
-            <form id="invoiceForm" method="post">
                 <div class="ml-3 items-center flex space-x-2">
-                    <input type="checkbox" id="invoice" name="invoice" class="w-5 h-5">
+                    <input type="checkbox" name="invoice" class=" w-5 h-5">
                     <label for="invoice">Invoice</label>
                 </div>
-                <input type="submit" value="Submit" class="mt-2">
-            </form>
-
-
-=======
-      <form action="../Controller/invoiceController.php?email=<?= $orderDetails[0]["email"]?>" method = "post">
-      <div class=" py-7 absolute left-[52%] flex">
-            <div class="ml-3 items-center flex space-x-2">
-                <input type="checkbox" name="invoice" class=" w-5 h-5">
-                <label for="invoice">Invoice</label>
-            </div>
->>>>>>> Stashed changes
+        </form>
             <button class=" w-24 rounded-md p-2 ml-6 border border-gray-500 bg-transparent mr-3">Cancel</button>
-            <a href="../Controller/updateOrderController.php"><button type="submit" name="delivery" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
-        </div>
-      </form>
+            <a href="../Controller/updateOrderController.php"><button type="submit" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
+            </div>
     </main>
 </body>
 
