@@ -103,7 +103,7 @@ include "../Controller/merchantDetailController.php";
                  <div class=" flex flex-wrap space-x-10 p-5">
                      <?php foreach ($productList as $productListDetail) { ?>
                          <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400 text-center">
-                             <img src="../..<?= $productListDetail["p_one"] ?>" alt="..." class="  w-40 mx-auto pt-2">
+                             <img src="../../Storage/product/<?= $productListDetail["p_one"] ?>" alt="..." class="  w-40 mx-auto pt-2">
                              <div class="pl-3 pb-2 pt-10">
                                  <p><?= $productListDetail["name"] ?></p>
                                  <p>$<?= $productListDetail["sellprice"] ?></p>
