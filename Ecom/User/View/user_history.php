@@ -153,7 +153,7 @@ $verifyData = $_SESSION["verifyData"];
                                 <div class="flex items-center justify-between space-x-4">
                                     <div class="flex">
                                         <?php foreach ($order as $img) { ?>
-                                            <img class="w-14 object-fill scale-150 rounded-full" src="../..<?= $img["p_one"] ?>" alt="...">
+                                            <img class="w-14 object-fill scale-150 rounded-full" src="../../Storage/product/<?= $img["p_one"] ?>" alt="...">
                                         <?php } ?>
                                     </div>
 

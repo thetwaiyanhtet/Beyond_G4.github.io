@@ -26,10 +26,9 @@ session_start();
     );
     $sql->bindValue(":id",$id);
     $sql->execute();
-    $customerInfo = $sql->fetchAll();
-    $_SESSION["customerInfo"] = $customerInfo;
-    echo "<pre>";
-    print_r($customerInfo);
+    $customerInfo = $sql->fetchAll(PDO::FETCH_DEFAULT);
+    session_start();
+    $_SESSION['customerInfo'] = $customerInfo;
     // echo $customerInfo['username'].'<br>';
     // echo $customerInfo['name'].'<br>';
     // echo $customerInfo['total_amt'] .'<br>';
@@ -42,13 +41,14 @@ session_start();
     // echo $customerInfo['address']. '<br>';
     // $payment_type = $customerInfo['payment_id'];
   
-    if($payment_type == 0){
-        echo "Visa".'<br>';
-    }else{
-        echo "KBZ".'<br>';
-    }
-    echo $customerInfo['r_name'].' , '.$customerInfo['t_name']. ' , '. $customerInfo['street'];
+    // if($payment_type == 0){
+    //     echo "Visa".'<br>';
+    // }else{
+    //     echo "KBZ".'<br>';
+    // }
+    // echo $customerInfo['r_name'].' , '.$customerInfo['t_name']. ' , '. $customerInfo['street'];
    header("Location: ../View/invoice_mail.php");
+   exit();
 }
 
 ?>
