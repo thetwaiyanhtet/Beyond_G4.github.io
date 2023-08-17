@@ -212,9 +212,9 @@ if (!empty($_SESSION['carttle'])) {
                                                 </div>
                                                 <div name="pname" class="w-24"><?= $value['name'] ?></div>
 
-                               
 
-                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="iquantity" name="pquantity" onchange="subTotal()"  min="1" max="<?= $value['instock'] ?>" type="number" value="1">
+
+                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="iquantity" name="pquantity" onchange="subTotal()" min="1" max="<?= $value['instock'] ?>" type="number" value="1">
                                                 <p>$<?= $value['sellprice'] ?> </p>
                                                 <input type="hidden" class="iprice " name="psellprice" value="<?= $value['sellprice'] ?>">
 
@@ -227,23 +227,22 @@ if (!empty($_SESSION['carttle'])) {
                                             </div>
                                         </form>
                                 <?php }
-
                                 } ?>
-                                                 <script>
-                                                    const inputElement = document.getElementsByClassName('iquantity');
+                                <script>
+                                    const inputElement = document.getElementsByClassName('iquantity');
 
-                                                   Array.from(inputElement).forEach(element =>{
-                                                    element.addEventListener('input', function() {
-                                                        let enteredValue = parseFloat(element.value);
+                                    Array.from(inputElement).forEach(element => {
+                                        element.addEventListener('input', function() {
+                                            let enteredValue = parseFloat(element.value);
 
-                                                        if (enteredValue < parseFloat(element.min)) {
-                                                            element.value = element.min;
-                                                        } else if (enteredValue > parseFloat(element.max)) {
-                                                            element.value = element.max;
-                                                        }
-                                                    });
-                                                   })
-                                                </script>
+                                            if (enteredValue < parseFloat(element.min)) {
+                                                element.value = element.min;
+                                            } else if (enteredValue > parseFloat(element.max)) {
+                                                element.value = element.max;
+                                            }
+                                        });
+                                    })
+                                </script>
 
                                 <!-- <div class="ml-[240px] block md:hidden">
                                 <a href="./cart2.php">

@@ -1,7 +1,7 @@
 <?php
 //DB connection
 //include "../Controller/wishlistcart.php";
-  session_start();
+//   session_start();
 include "../Model/model.php";
 
 $userEmail = $_SESSION["user_ID"];
@@ -21,7 +21,7 @@ $sql = $pdo->prepare(
 
 $sql->execute();
 
-$_SESSION["wishlist"]  = $sql->fetchAll(PDO::FETCH_ASSOC);
+$wishlist_items = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
 function uniqueAssocArray($array) {
@@ -35,6 +35,6 @@ function uniqueAssocArray($array) {
 }
 
 
-$uniqueAssocArray = uniqueAssocArray($_SESSION["wishlist"] );
+$uniqueAssocArray = uniqueAssocArray($wishlist_items);
 
 
