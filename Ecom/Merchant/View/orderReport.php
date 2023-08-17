@@ -1,5 +1,7 @@
 <?php
 include "./sidebar.php";
+include "../Controller/orderController.php";
+
 ?>
 
 <!doctype html>
@@ -51,6 +53,9 @@ include "./sidebar.php";
                     <table class="w-full text-sm text-left text-gray-500 ">
                         <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                             <tr>
+                            <th scope="col" class="px-6 py-3">
+                                    No
+                                </th>
                                 <th scope="col" class="px-6 py-3">
                                     Customer name
                                 </th>
@@ -64,121 +69,39 @@ include "./sidebar.php";
                                 <th scope="col" class="px-6 py-3">
                                     Order date
                                 </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Action
-                                </th>
+                               
 
                             </tr>
                         </thead>
                         <tbody>
+                        <?php $count = ($currentPage - 1) * $itemsPerPage ?>
+                        <?php foreach ($paginatedData as $order) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Kyaw Swarr Myo
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                                    <?= ++$count ?>.
                                 </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    <?= $order["username"]; ?>
                                 </td>
-                                <td class="pl-10 py-4 ">
-                                    2000.0
-                                </td>
-
-                                <td class="pl-5 py-4 ">
-                                    07/24/2023
-                                </td>
-                                <td class="pl-7 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Kyaw Swarr Myo
-                                </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
-                                </td>
-                                <td class="pl-10 py-4 ">
-                                    2000.0
-                                </td>
+                                    <?php if ($order["payment_id"] == 0) { ?>
+                                        Visa
 
-                                <td class="pl-5 py-4 ">
-                                    07/24/2023
+                                    <?php } ?>
+                                    <?php if ($order["payment_id"] == 1) { ?>
+                                        KBZ pay
+                                    <?php } ?> </td>
+                                    <td class="px-6 py-4">
+                                    <?php $totalamt = $order["quantity"] * $order["price_per_unit"]  ?>
+                                    <?= $totalamt ?>
                                 </td>
-                                <td class="pl-7 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Kyaw Swarr Myo
-                                </th>
                                 <td class="px-6 py-4">
-                                    Bank deposit
+                                    <?= $order["order_date"]; ?>
                                 </td>
-                                <td class="pl-10 py-4 ">
-                                    2000.0
-                                </td>
-
-                                <td class="pl-5 py-4 ">
-                                    07/24/2023
-                                </td>
-                                <td class="pl-7 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                                </td>
+                              
+                               
                             </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    Bank deposit
-                                </td>
-                                <td class="pl-10 py-4 ">
-                                    2000.0
-                                </td>
-
-                                <td class="pl-5 py-4 ">
-                                    07/24/2023
-                                </td>
-                                <td class="pl-7 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    Bank deposit
-                                </td>
-                                <td class="pl-10 py-4 ">
-                                    2000.0
-                                </td>
-
-                                <td class="pl-5 py-4 ">
-                                    07/24/2023
-                                </td>
-                                <td class="pl-7 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                                </td>
-                            </tr>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    Kyaw Swarr Myo
-                                </th>
-                                <td class="px-6 py-4">
-                                    Bank deposit
-                                </td>
-                                <td class="pl-10 py-4 ">
-                                    2000.0
-                                </td>
-
-                                <td class="pl-5 py-4 ">
-                                    07/24/2023
-                                </td>
-                                <td class="pl-7 py-4">
-                                    <a href="#" class="font-medium text-blue-600  hover:underline">View</a>
-                                </td>
-                            </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                     <div class="flex justify-between items-center py-2 px-3">
