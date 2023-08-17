@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$customerInfo = $_SESSION['customerInfo'];
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -317,7 +318,7 @@
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <br />
                     <tr style="font: Roboto; height: 50px;font-weight: bold;text-align: center">
-                        <td style="font-size: 1em;padding-left: 10px;"><?= $customerInfo['store_name']?></td>
+                        <td style="font-size: 1em;padding-left: 10px;"><?= $customerInfo['store_name'] ?></td>
                         <td style="font-size: 1em">Address</td>
                         <td style="font-size: 1em">Social</td>
                     </tr>
