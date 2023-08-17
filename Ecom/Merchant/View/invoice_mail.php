@@ -215,7 +215,7 @@
                                 font-weight: bold;
                               ">
                                                         <?php
-                                                        echo $customerInfo['store_name'];
+                                                        echo $customerInfo[0]['store_name'];
                                                         ?>
                                                     </h1>
                                                 </td>
@@ -266,7 +266,7 @@
                                     <p style="margin: auto">
 
                                     <p style="text-align: center; font-size: 16px; margin-top: 1px;">Your Order</p>
-                                    <p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 1px;"><?php echo $customerInfo['order_date'] ?></p>
+                                    <p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 1px;"><?php echo $customerInfo[0]['order_date'] ?></p>
                                     <div style="margin: auto; width: 64px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 5px;"></div>
                                     <?php foreach ($customerInfo as $product) { ?>
                                         <div style="margin: auto; width: 64px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
@@ -276,21 +276,21 @@
                                     <?php } ?>
                                     <div style="margin: auto; width: 64px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin-bottom: 3px;">Delivery Fee</p>
-                                        <p style="margin-bottom: 3px;"><?= $customerInfo['delivery_fees'] ?></p>
+                                        <p style="margin-bottom: 3px;"><?= $customerInfo[0]['delivery_fees'] ?></p>
                                     </div>
                                     <div style="margin: auto; width: 64px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin-bottom: 3px;">Total</p>
-                                        <p style="margin-bottom: 3px;"><?= $customerInfo['total_amt'] ?></p>
+                                        <p style="margin-bottom: 3px;"><?= $customerInfo[0]['total_amt'] ?></p>
                                     </div>
                                     <p style="text-align: center; font-weight: bold; font-size: 18px; margin: 5px;">Your Details</p>
                                     <div style="margin: auto; width: 80px; border-bottom: 2px solid #ccc; border-top: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin: 3px; font-style: normal; text-align: justify;">Shipping to</p>
-                                        <p style="margin: 3px; font-size: 12px; text-align: center;"><?= $customerInfo['r_name'] . ' , ' . $customerInfo['t_name'] . ' , ' . $customerInfo['street'] ?></p>
+                                        <p style="margin: 3px; font-size: 12px; text-align: center;"><?= $customerInfo[0]['r_name'] . ' , ' . $customerInfo[0]['t_name'] . ' , ' . $customerInfo[0]['street'] ?></p>
                                     </div>
                                     <div style="margin: auto; width: 80px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin: 3px; font-style: normal; text-align: justify;">Billed With</p>
                                         <p style="margin: 3px;"><?php
-                                                                $payment_type = $customerInfo['payment_id'];
+                                                                $payment_type = $customerInfo[0]['payment_id'];
 
                                                                 if ($payment_type == 0) {
                                                                     echo "Visa" . '<br>';
@@ -329,7 +329,7 @@
                       padding-left: 30px;">
                             <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/ringingphoneoutlineicon.png" style="margin-right: 5px;width: 19px;height: 17px;" alt="" srcset=""><span style="opacity: 0.6;">+959-000-000-000</span>
                         </td>
-                        <td style="text-align: center;opacity: 0.6;">No--<?= $customerInfo['address'] ?></td>
+                        <td style="text-align: center;opacity: 0.6;">No--<?= $customerInfo[0]['address'] ?></td>
                         <td style="
                       display: flex;
                       align-items: center;

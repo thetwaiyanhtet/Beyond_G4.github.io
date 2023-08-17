@@ -86,7 +86,6 @@ include "../Controller/orderController.php";
                                 <td class="px-6 py-4">
                                     <?php if ($order["payment_id"] == 0) { ?>
                                         Visa
-
                                     <?php } ?>
                                     <?php if ($order["payment_id"] == 1) { ?>
                                         KBZ pay
