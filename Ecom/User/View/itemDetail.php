@@ -192,7 +192,7 @@ ini_set('display_errors', 1);
                     <?php foreach ($topComments as $CustomerReviews) { ?>
                         <div class="reviewCard flex  ">
                             <div class="flex">
-                                <img src="./resources/img/profile.png" alt="..." class=" lg:w-[70px] w-12 mr-10">
+                                <img src="../../<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
                                 <div class="">
                                     <h2 class=" font-semibold lg:text-xl text-lg"><?= $CustomerReviews["username"] ?></h2>
                                     <div class=" text-yellow-500 text-xl">

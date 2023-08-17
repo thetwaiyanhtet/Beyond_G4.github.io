@@ -1,4 +1,5 @@
 <?php
+session_start();
  include "../Model/model.php";
  if (isset($_POST['invoice'])) {
     $id = $_GET['id'];
@@ -25,26 +26,29 @@
     );
     $sql->bindValue(":id",$id);
     $sql->execute();
-    $customerInfo = $sql->fetch();
-    echo $customerInfo['username'].'<br>';
-    echo $customerInfo['name'].'<br>';
-    echo $customerInfo['total_amt'] .'<br>';
-    echo $customerInfo['sellprice'].'<br>';
-    echo $customerInfo['delivery_fees'].'<br>';
-    echo $customerInfo['store_name'].'<br>';
-    echo $customerInfo['order_date'].'<br>';
-    echo $customerInfo['email'].'<br>';
-    echo $customerInfo['phone']. '<br>';
-    echo $customerInfo['address']. '<br>';
-    $payment_type = $customerInfo['payment_id'];
+    $customerInfo = $sql->fetchAll(PDO::FETCH_DEFAULT);
+    session_start();
+    $_SESSION['customerInfo'] = $customerInfo;
+    // echo $customerInfo['username'].'<br>';
+    // echo $customerInfo['name'].'<br>';
+    // echo $customerInfo['total_amt'] .'<br>';
+    // echo $customerInfo['sellprice'].'<br>';
+    // echo $customerInfo['delivery_fees'].'<br>';
+    // echo $customerInfo['store_name'].'<br>';
+    // echo $customerInfo['order_date'].'<br>';
+    // echo $customerInfo['email'].'<br>';
+    // echo $customerInfo['phone']. '<br>';
+    // echo $customerInfo['address']. '<br>';
+    // $payment_type = $customerInfo['payment_id'];
   
-    if($payment_type == 0){
-        echo "Visa".'<br>';
-    }else{
-        echo "KBZ".'<br>';
-    }
-    echo $customerInfo['r_name'].' , '.$customerInfo['t_name']. ' , '. $customerInfo['street'];
+    // if($payment_type == 0){
+    //     echo "Visa".'<br>';
+    // }else{
+    //     echo "KBZ".'<br>';
+    // }
+    // echo $customerInfo['r_name'].' , '.$customerInfo['t_name']. ' , '. $customerInfo['street'];
    header("Location: ../View/invoice_mail.php");
+   exit();
 }
 
 ?>
