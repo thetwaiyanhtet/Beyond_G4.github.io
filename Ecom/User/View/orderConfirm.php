@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+  <title>Confirmation</title>
   <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +17,7 @@
 </head>
 
 <body class="mt-3 overflow-hidden">
-  
+
   <section class="w-screen h-screen flex justify-center align-middle items-center">
     <section class="flex flex-col items-center">
       <ion-icon class="text-9xl text-green " name="checkmark-circle-outline"></ion-icon>
@@ -23,7 +25,7 @@
       <p class="font-bold text-3xl max-md:text-xl ">Your order is accepted.</p>
       <p class="font-bold text-xl max-md:text-xl mt-10 ">Thanks you for your order.</p>
       <button class="rounded-md border shadow-lg p-2 bg-gray-100 mt-8 ">
-       <a href="../View/mainPage.php"> Go back to your home page</a></button>
+        <a href="../View/mainPage.php"> Go back to your home page</a></button>
     </section>
   </section>
 </body>

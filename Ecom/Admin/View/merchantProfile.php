@@ -1,13 +1,14 @@
  <?php
-include "./adminsidebar.php";
-include "../Controller/merchantDetailController.php";
-?>
+    include "./adminsidebar.php";
+    include "../Controller/merchantDetailController.php";
+    ?>
  <!doctype html>
  <html>
 
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
      <title>Merchant Profile</title>
      <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,22 +63,22 @@ include "../Controller/merchantDetailController.php";
                              <img src="./resources/img/order.png" alt="...">
                              <div class=" font-semibold text-center">
                                  <p>Orders</p>
-                                 <?php if(isset($orderCount["order_count"])){?>
-                                 <p><?= $orderCount["order_count"] ?></p>
-                                 <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <?php if (isset($orderCount["order_count"])) { ?>
+                                     <p><?= $orderCount["order_count"] ?></p>
+                                 <?php } else { ?>
+                                     <p>0</p>
+                                 <?php } ?>
                              </div>
                          </div>
                          <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
                              <img src="./resources/img/purchased.png" alt="...">
                              <div class=" font-semibold text-center">
                                  <p>Products</p>
-                                 <?php if(isset($orderCount["product_count"])){?>
-                                 <p><?= $productCount["product_count"] ?></p>
-                                 <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                                 <?php if (isset($orderCount["product_count"])) { ?>
+                                     <p><?= $productCount["product_count"] ?></p>
+                                 <?php } else { ?>
+                                     <p>0</p>
+                                 <?php } ?>
                              </div>
                          </div>
                          <div class=" flex items-center py-5 space-x-3 border border-gray-400 rounded-lg shadow-lg p-4">
@@ -85,11 +86,11 @@ include "../Controller/merchantDetailController.php";
                              <div class=" font-semibold text-center">
                                  <p>In-Stock</p>
                                  <p>
-                                 <?php if(isset($orderCount["total_product_sum"])){?>
+                                     <?php if (isset($orderCount["total_product_sum"])) { ?>
                                  <p><?= $productSum["total_product_sum"] ?></p>
-                                 <?php }else{?>
-                                    <p>0</p>
-                                    <?php }?>
+                             <?php } else { ?>
+                                 <p>0</p>
+                             <?php } ?>
                              </div>
                          </div>
                      </div>

@@ -14,6 +14,7 @@ $verifyData = $_SESSION["verifyData"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Profile Menu</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -69,7 +70,7 @@ $verifyData = $_SESSION["verifyData"];
                         <div class=" grid grid-cols-2">
                             <p class="dark:text-white">Gender</p>
                             <p class=" col-start-2 dark:text-white">
-                           
+
                             </p>
                         </div>
                         <div class=" grid grid-cols-2">

@@ -155,6 +155,12 @@ $verifyData = $_SESSION["verifyData"];
                         <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
+
+                <div class="relative w-32">
+                    <div class=" overflow-hidden absolute mx-2 ">
+                        <div id="ln_space" class="w-28 h-20"></div>
+                    </div>
+                </div>
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <?php if ($verifyData["verify"] == 0) { ?>
@@ -704,6 +710,7 @@ $verifyData = $_SESSION["verifyData"];
         <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold animate-bounce"><ion-icon name="arrow-up-outline"></ion-icon></button>
 
     </section>
+    <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script>
     <script>
         var toTopButton = document.getElementById("to-top-button");
         window.onscroll = function() {
@@ -720,6 +727,11 @@ $verifyData = $_SESSION["verifyData"];
                 behavior: 'smooth'
             });
         }
+        document.addEventListener("DOMContentLoaded", function(e) {
+            ConveyThis_Initializer.init({
+                api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
+            });
+        });
     </script>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

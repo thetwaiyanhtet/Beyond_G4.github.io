@@ -13,6 +13,7 @@ ini_set('display_errors', 1);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Item Detail</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -103,11 +104,11 @@ ini_set('display_errors', 1);
                             productImage.src = "../../Storage//product/" + imageSources[index];
                             selectedImageInput.value = imageSources[index];
                             console.log(selectedImageInput.value);
-                            
+
                         }
                     </script>
                     <!-- end -->
-                    
+
 
 
                     <div class="flex space-x-7">

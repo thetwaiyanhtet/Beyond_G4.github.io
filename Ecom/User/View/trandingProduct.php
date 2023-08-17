@@ -11,6 +11,8 @@ include "../Controller/wishlistcart.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+    <title>Products</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,23 +98,23 @@ include "../Controller/wishlistcart.php";
                 <?php foreach ($trandingProductViewAll as $tranding) { ?>
                     <div class="inline p-3">
                         <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                        <form action="./trandingProduct.php" method="post">
-                        <div class="relative overflow-hidden">
-                                <img class="w-32 h-40 m-auto" src="../../Storage/product/<?= $tranding["p_one"] ?>" alt="">
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                <a href="./trandingProduct.php?pid=<?= $tranding["product_id"]; ?>"> <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
-                                <a href="../View/itemDetail.php?pid=<?= $tranding["product_id"]; ?>">  <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
+                            <form action="./trandingProduct.php" method="post">
+                                <div class="relative overflow-hidden">
+                                    <img class="w-32 h-40 m-auto" src="../../Storage/product/<?= $tranding["p_one"] ?>" alt="">
+                                    <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                        <a href="./trandingProduct.php?pid=<?= $tranding["product_id"]; ?>"> <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                        <a href="../View/itemDetail.php?pid=<?= $tranding["product_id"]; ?>"> <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="relative dark:text-white">
-                                <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold"><?= $tranding["name"] ?></h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-5 block "><?= $tranding["description"] ?></p>
-                                <p class="text-md font-bold mt-2 ml-5 block ">$<?= $tranding["sellprice"] ?></p>
-                                <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                                <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
-                            </div>
+                                <div class="relative dark:text-white">
+                                    <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold"><?= $tranding["name"] ?></h2>
+                                    <!-- <del class="text-red-700 text-lg">$999</del> -->
+                                    <p class="text-xs mt-2 ml-5 block "><?= $tranding["description"] ?></p>
+                                    <p class="text-md font-bold mt-2 ml-5 block ">$<?= $tranding["sellprice"] ?></p>
+                                    <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                                    <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
+                                </div>
                             </form>
                         </div>
                     </div>

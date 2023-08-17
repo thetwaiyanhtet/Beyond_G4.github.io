@@ -10,6 +10,7 @@ include "../Controller/orderController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -53,7 +54,7 @@ include "../Controller/orderController.php";
                     <table class="w-full text-sm text-left text-gray-500 ">
                         <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                             <tr>
-                            <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3">
                                     No
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -69,38 +70,38 @@ include "../Controller/orderController.php";
                                 <th scope="col" class="px-6 py-3">
                                     Order date
                                 </th>
-                               
+
 
                             </tr>
                         </thead>
                         <tbody>
-                        <?php $count = ($currentPage - 1) * $itemsPerPage ?>
-                        <?php foreach ($paginatedData as $order) { ?>
-                            <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
-                                    <?= ++$count ?>.
-                                </th>
-                                <td class="px-6 py-4">
-                                    <?= $order["username"]; ?>
-                                </td>
-                                <td class="px-6 py-4">
-                                    <?php if ($order["payment_id"] == 0) { ?>
-                                        Visa
-                                    <?php } ?>
-                                    <?php if ($order["payment_id"] == 1) { ?>
-                                        KBZ pay
-                                    <?php } ?> </td>
+                            <?php $count = ($currentPage - 1) * $itemsPerPage ?>
+                            <?php foreach ($paginatedData as $order) { ?>
+                                <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                                        <?= ++$count ?>.
+                                    </th>
                                     <td class="px-6 py-4">
-                                    <?php $totalamt = $order["quantity"] * $order["price_per_unit"]  ?>
-                                    <?= $totalamt ?>
-                                </td>
-                                <td class="px-6 py-4">
-                                    <?= $order["order_date"]; ?>
-                                </td>
-                              
-                               
-                            </tr>
-                        <?php } ?>
+                                        <?= $order["username"]; ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <?php if ($order["payment_id"] == 0) { ?>
+                                            Visa
+                                        <?php } ?>
+                                        <?php if ($order["payment_id"] == 1) { ?>
+                                            KBZ pay
+                                        <?php } ?> </td>
+                                    <td class="px-6 py-4">
+                                        <?php $totalamt = $order["quantity"] * $order["price_per_unit"]  ?>
+                                        <?= $totalamt ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <?= $order["order_date"]; ?>
+                                    </td>
+
+
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class="flex justify-between items-center py-2 px-3">

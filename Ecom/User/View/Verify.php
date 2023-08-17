@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>VerifyEmail</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -38,13 +39,13 @@
                 </div>
             </div>
             <div class="flex flex-col ml-20">
-            <button type="submit" name="resend" type="submit" class=" text-red-800 underline font-poppins mt-10 mr-10">Resend Code</button>
-            <a href="">
-                <button type="submit" name="verify" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg mr-10">Send</button>
-            </a>
-        </div>
+                <button type="submit" name="resend" type="submit" class=" text-red-800 underline font-poppins mt-10 mr-10">Resend Code</button>
+                <a href="">
+                    <button type="submit" name="verify" class="bg-btn-color text-white font-Playfair Display md:w-44 w-32 p-2 rounded-lg mt-10 font-semibold text-lg mr-10">Send</button>
+                </a>
+            </div>
         </form>
-       
+
     </div>
 </body>
 

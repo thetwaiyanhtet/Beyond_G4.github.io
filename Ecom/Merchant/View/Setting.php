@@ -11,6 +11,7 @@ include "../Controller/settingShowDataController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Setting</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -56,13 +57,13 @@ include "../Controller/settingShowDataController.php";
                                     <label for="photo5" class="cursor-pointer">
                                         <input type="file" id="photo5" name="photo5" style="display: none;" onchange="displayUserImage('photoimg5', 'photo5')">
                                         <?php
-                                            if (isset($merchant["logo"])) {
-                                                echo '<img src="../../Storage/profile/' . $merchant["logo"] . '" id="photoimg5" alt="">';
-                                            } else {
-                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg5" alt="">';
-                                            }
-                                            ?>
-                                       
+                                        if (isset($merchant["logo"])) {
+                                            echo '<img src="../../Storage/profile/' . $merchant["logo"] . '" id="photoimg5" alt="">';
+                                        } else {
+                                            echo '<img src="./resources/img/gallery-add.png" id="photoimg5" alt="">';
+                                        }
+                                        ?>
+
                                     </label>
                                     <!-- <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p> -->
                                 </div>
@@ -70,12 +71,12 @@ include "../Controller/settingShowDataController.php";
                                     <label for="photo6" class="cursor-pointer">
                                         <input type="file" id="photo6" name="photo6" style="display: none;" onchange="displayUserImage('photoimg6', 'photo6')">
                                         <?php
-                                            if (isset($merchant["banner"])) {
-                                                echo '<img src="../../Storage/profile/' . $merchant["banner"] . '" id="photoimg6" alt="">';
-                                            } else {
-                                                echo '<img src="./resources/img/gallery-add.png" id="photoimg6" alt="">';
-                                            }
-                                            ?>
+                                        if (isset($merchant["banner"])) {
+                                            echo '<img src="../../Storage/profile/' . $merchant["banner"] . '" id="photoimg6" alt="">';
+                                        } else {
+                                            echo '<img src="./resources/img/gallery-add.png" id="photoimg6" alt="">';
+                                        }
+                                        ?>
                                     </label>
                                     <!-- <p class="font-poppins text-gray-400 text-sm w-20 ml-5 text-center mt-5">Upload the photo</p> -->
                                 </div>
@@ -106,7 +107,7 @@ include "../Controller/settingShowDataController.php";
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="myTextarea" class=" text-sm">Slogan<span class=" text-red-600">*</span></label>
-                                        <textarea id="myTextarea" name="slogan" cols="30" rows="5" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" require><?php echo trim(isset($merchant['slogan'])) ? $merchant['slogan'] : ''; ?></textarea>    
+                                        <textarea id="myTextarea" name="slogan" cols="30" rows="5" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" require><?php echo trim(isset($merchant['slogan'])) ? $merchant['slogan'] : ''; ?></textarea>
                                     </div>
                                 </div>
                             </div>

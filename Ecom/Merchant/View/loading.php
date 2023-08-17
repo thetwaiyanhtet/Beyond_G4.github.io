@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Loading</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <script>
         setTimeout(function() {
-            window.location.href = "../View/Setting.php";  
-        }, 2000); 
+            window.location.href = "../View/Setting.php";
+        }, 2000);
         setTimeout(function() {
-            window.location.href = "../View/dashboard.php";  
+            window.location.href = "../View/dashboard.php";
         }, 2000);
     </script>
 </head>

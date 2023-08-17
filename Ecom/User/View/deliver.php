@@ -14,6 +14,7 @@ $_SESSION['quantity']   = $_POST['quantiarr'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -122,14 +123,14 @@ $_SESSION['quantity']   = $_POST['quantiarr'];
                         <p class="mb-5">Total Amount</p>
                     </div>
                     <!-- <?php
-                    // $totprice = $tot['totprice'];
-                    // $numericString = preg_replace("/[^0-9]/", "", $totprice);
-                    // $intValue = substr($numericString, 0, -2);
-                    // $addedValue = $intValue + 10;
-                     
-                    ?> -->
+                            // $totprice = $tot['totprice'];
+                            // $numericString = preg_replace("/[^0-9]/", "", $totprice);
+                            // $intValue = substr($numericString, 0, -2);
+                            // $addedValue = $intValue + 10;
+
+                            ?> -->
                     <div>
-                        <p class="mb-5"><?= $delitotalamt?>.00</p>
+                        <p class="mb-5"><?= $delitotalamt ?>.00</p>
                     </div>
                 </div>
 

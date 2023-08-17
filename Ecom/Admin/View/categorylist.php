@@ -15,6 +15,8 @@ $result = $_SESSION["m_category"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+    <title>Category List</title>
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -33,7 +35,7 @@ $result = $_SESSION["m_category"];
             </div> -->
             <div class="border shadow-2xl mt-10 rounded-xl">
 
-            
+
                 <div class="  p-5">
                     <p class="font-bold text-xl">Edit Categories</p>
                     <!-- <div class="flex justify-around">
@@ -49,17 +51,17 @@ $result = $_SESSION["m_category"];
                     </div>
                 </div>
                 <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-16">Update</button> -->
-          
 
-                <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
-                    <div class="container">
-                        <div class="flex flex-wrap -mx-4">
-                            <div class="w-full px-4">
-                                <div class="max-w-full overflow-x-auto">
-                                    <table class="table-auto w-full">
-                                        <thead>
-                                            <tr class="bg-primary text-center">
-                                                <th class="
+
+                    <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
+                        <div class="container">
+                            <div class="flex flex-wrap -mx-4">
+                                <div class="w-full px-4">
+                                    <div class="max-w-full overflow-x-auto">
+                                        <table class="table-auto w-full">
+                                            <thead>
+                                                <tr class="bg-primary text-center">
+                                                    <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -69,9 +71,9 @@ $result = $_SESSION["m_category"];
                            lg:px-4
                            border-l border-transparent rounded-tl-md
                            ">
-                                                    Category Name
-                                                </th>
-                                                <th class="
+                                                        Category Name
+                                                    </th>
+                                                    <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -80,9 +82,9 @@ $result = $_SESSION["m_category"];
                            px-3
                            lg:px-4
                            ">
-                                                    Create By
-                                                </th>
-                                                <th class="
+                                                        Create By
+                                                    </th>
+                                                    <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -91,9 +93,9 @@ $result = $_SESSION["m_category"];
                            px-3
                            lg:px-4
                            ">
-                                                    Create Date
+                                                        Create Date
 
-                                                <th class="
+                                                    <th class="
                            w-1/6
                            min-w-[160px]
                            text-white
@@ -102,14 +104,14 @@ $result = $_SESSION["m_category"];
                            px-3
                            lg:px-4 rounded-tr-md
                            ">
-                                                    Details
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($result as $category) { ?>
-                                                <tr>
-                                                    <td class="
+                                                        Details
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($result as $category) { ?>
+                                                    <tr>
+                                                        <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -117,9 +119,9 @@ $result = $_SESSION["m_category"];
                            px-2
                            bg-[#F3F6FF]
                            border-b border-l border-[#E8E8E8]
-                           "> <?= $category["c_name"];?>
-                                                    </td>
-                                                    <td class="
+                           "> <?= $category["c_name"]; ?>
+                                                        </td>
+                                                        <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -128,9 +130,9 @@ $result = $_SESSION["m_category"];
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                                                        Admin
-                                                    </td>
-                                                    <td class="
+                                                            Admin
+                                                        </td>
+                                                        <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -138,11 +140,11 @@ $result = $_SESSION["m_category"];
                            px-2
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
-                           "><?= $category["create_date"];?>
-                                                      
-                                                    </td>
+                           "><?= $category["create_date"]; ?>
 
-                                                    <td class="
+                                                        </td>
+
+                                                        <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -151,26 +153,26 @@ $result = $_SESSION["m_category"];
                            bg-[#F3F6FF]
                            border-b border-[#E8E8E8]
                            ">
-                                                        <button>
-                                                            <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="../Controller/editCategoryController.php?id=<?= $category["id"] ?>"><i class='bx bx-edit'></i></a>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            <?php } ?>
+                                                            <button>
+                                                                <a class=" text-blue-600 text-3xl py-2 px-3 rounded-md" href="../Controller/editCategoryController.php?id=<?= $category["id"] ?>"><i class='bx bx-edit'></i></a>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                <?php } ?>
 
-                                        </tbody>
-                                    </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-            <div id="hs" class=" absolute top-20 mt-40 ml-60 hidden">
-                <?php
-                include "./savepop-up.php";
-                ?>
-            </div>
+                    </section>
+                </div>
+                <div id="hs" class=" absolute top-20 mt-40 ml-60 hidden">
+                    <?php
+                    include "./savepop-up.php";
+                    ?>
+                </div>
     </main>
     <!-- <script>
         document.getElementById('update').addEventListener('click', (e) => {

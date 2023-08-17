@@ -7,6 +7,7 @@ include "./sidebar.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Transaction</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -80,7 +81,7 @@ include "./sidebar.php"
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-green-500">
-                                   Approved
+                                    Approved
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" checked class=" w-10">
@@ -126,7 +127,7 @@ include "./sidebar.php"
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
-                                   Pending
+                                    Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">
@@ -172,7 +173,7 @@ include "./sidebar.php"
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
-                                   Pending
+                                    Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">
@@ -218,7 +219,7 @@ include "./sidebar.php"
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
-                                   Pending
+                                    Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">
@@ -264,7 +265,7 @@ include "./sidebar.php"
                                     M-BANKING
                                 </td>
                                 <td class="px-6 py-4 text-yellow-500">
-                                   Pending
+                                    Pending
                                 </td>
                                 <td class="px-6 py-4">
                                     <input type="checkbox" name="" id="" class=" w-10">

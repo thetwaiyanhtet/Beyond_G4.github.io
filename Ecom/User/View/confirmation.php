@@ -1,5 +1,5 @@
 <?php
-include ("../Controller/merchantaddressController.php");
+include("../Controller/merchantaddressController.php");
 $addressandname = $_SESSION['m_cusaddress'];
 $tot = $_SESSION["placeholdcart"];
 $_SESSION["payment_method"] = $_POST['deli'];
@@ -13,7 +13,8 @@ $_SESSION["payment_method"] = $_POST['deli'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <l<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Poppins:wght@300&display=swap" rel="stylesheet">
         <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
@@ -108,19 +109,19 @@ $_SESSION["payment_method"] = $_POST['deli'];
                         <!-- <input type="radio" name="deli" class="form-checkbox w-6 h-6  "> -->
                         <?php if ($_POST['deli'] == 0) { ?>
                             <span>Visa</span>
-                      <?php  } ?>
-                      <?php if ($_POST['deli'] == 1) { ?>
+                        <?php  } ?>
+                        <?php if ($_POST['deli'] == 1) { ?>
                             <span>KBZ Pay</span>
-                      <?php  } ?>
+                        <?php  } ?>
                     </label>
                 </button>
             </div>
             <div class="flex flex-col max-lg:hidden  font-poppins">
                 <p class=" border-b-4 border-[#314755] pb-5 text-3xl text-center max-lg:text-xl font-bold">Your order</p>
                 <?php
-                
+
                 foreach ($_SESSION["placeholdcart"] as $index => $chunk) { ?>
-                   
+
                     <form action="../Controller/orderController.php" method="post">
                         <div class="flex mt-10 border-b-4 border-[#314755]   justify-center items-center">
                             <div class="mb-10 ">
@@ -149,7 +150,7 @@ $_SESSION["payment_method"] = $_POST['deli'];
                             <p class="mb-5">Total Amount</p>
                         </div>
                         <div>
-                            <p class="mb-5"><?=$_SESSION['delitotalamt']?></p>
+                            <p class="mb-5"><?= $_SESSION['delitotalamt'] ?></p>
                         </div>
                     </div>
             </div>

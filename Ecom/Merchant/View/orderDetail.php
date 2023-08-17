@@ -8,6 +8,7 @@ include "../Controller/orderDetailController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Order Detail</title>
     <link rel="stylesheet" href="./resources/css/order.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
@@ -123,16 +124,16 @@ include "../Controller/orderDetailController.php";
                 <p class="m-1 mr-11 font-semibold"> = $<?= $totalSum + 2 ?></p>
             </div>
         </div>
-        <form action="../Controller/invoiceMailController.php?id=<?= $orderDetails[0]['id']?>" method="post">
-        <div class=" py-7 absolute left-[52%] flex">
+        <form action="../Controller/invoiceMailController.php?id=<?= $orderDetails[0]['id'] ?>" method="post">
+            <div class=" py-7 absolute left-[52%] flex">
                 <div class="ml-3 items-center flex space-x-2">
                     <input type="checkbox" name="invoice" class=" w-5 h-5">
                     <label for="invoice">Invoice</label>
                 </div>
         </form>
-            <button class=" w-24 rounded-md p-2 ml-6 border border-gray-500 bg-transparent mr-3">Cancel</button>
-            <a href="../Controller/updateOrderController.php"><button type="submit" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
-            </div>
+        <button class=" w-24 rounded-md p-2 ml-6 border border-gray-500 bg-transparent mr-3">Cancel</button>
+        <a href="../Controller/updateOrderController.php"><button type="submit" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
+        </div>
     </main>
 </body>
 

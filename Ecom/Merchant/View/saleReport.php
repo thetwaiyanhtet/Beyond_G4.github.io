@@ -9,6 +9,8 @@ include "../Controller/salereportController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+    <title>Sale Report</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -81,37 +83,37 @@ include "../Controller/salereportController.php";
                         </thead>
                         <tbody>
                             <?php foreach ($sales as $key => $value) { ?>
-                            
-                           
-                            <tr class=" border-b  hover:bg-gray-200 border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
-                                    <?= $value['name'] ?>
-                                </th>
-                                <td class="px-6 py-4">
-                                    <?= $value['code'] ?>
-                                </td>
-                                <td class="px-6 py-4 text-start">
-                                    <?= $value['c_name'] ?>
-                                </td>
-                                <td class="px-6 py-4">
-                                <?= $value['buyprice'] ?>
-                                </td>
-                                <td class="px-6 py-4">
-                                <?= $value['sellprice'] ?>
-                                </td>
 
-                                <td class="px-16 py-4">
-                                <?= $value['quantity'] ?>
-                                </td>
-                                <td class="px-16 py-4 ">
-                                <?php $total =  $value['quantity'] * $value['sellprice'] ?>
-                                <?= $total ?>
-                                </td>
-                                <td class="px-6 py-4">
-                                    07/24/2023
-                                </td>
-                            </tr>
-                           <?php } ?>
+
+                                <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
+                                        <?= $value['name'] ?>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <?= $value['code'] ?>
+                                    </td>
+                                    <td class="px-6 py-4 text-start">
+                                        <?= $value['c_name'] ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <?= $value['buyprice'] ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <?= $value['sellprice'] ?>
+                                    </td>
+
+                                    <td class="px-16 py-4">
+                                        <?= $value['quantity'] ?>
+                                    </td>
+                                    <td class="px-16 py-4 ">
+                                        <?php $total =  $value['quantity'] * $value['sellprice'] ?>
+                                        <?= $total ?>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        07/24/2023
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class="flex justify-between items-center py-2 px-3 pt-5">

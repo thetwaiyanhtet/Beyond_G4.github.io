@@ -21,6 +21,7 @@ $trending_json = json_encode($trending);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Dashboard</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -235,21 +236,21 @@ $trending_json = json_encode($trending);
                             <h1 class=" text-lg font-bold font-philosopher">Delivery</h1>
                         </div>
                         <hr>
-                      
-                          
-                            <div class="flex justify-between pb-3 space-x-5 p-3">
-                                <div>
-                                        <p class="font-semibold"><?= $totalDeliveryStatus0 ?></p>
-                                    <p>Processing</p>
-                                </div>
-                                <div>  
-                                        <p class="font-semibold"><?= $totalDeliveryStatus1 ?></p>
 
-                                    <p>Processed</p>
-                                </div>
+
+                        <div class="flex justify-between pb-3 space-x-5 p-3">
+                            <div>
+                                <p class="font-semibold"><?= $totalDeliveryStatus0 ?></p>
+                                <p>Processing</p>
                             </div>
+                            <div>
+                                <p class="font-semibold"><?= $totalDeliveryStatus1 ?></p>
 
-                        
+                                <p>Processed</p>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950 h-[192px]">
                         <div class=" flex justify-center items-center space-x-3 pb-3 pt-3">
