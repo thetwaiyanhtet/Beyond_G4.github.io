@@ -34,7 +34,7 @@ session_start();
 
     <section class="relative">
         <div class="float-right w-72 h-96 z-10">
-            <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-40 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
+            <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-32 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
         </div>
         <div class="w-3/4 md:w-1/2  border-2 border-solid m-auto rounded-lg drop-shadow-xl bg-white/50 blur-xs z-10">
             <div class="flex md:m-2 md:justify-center space-x-20 p-5 z-20 ">
@@ -48,9 +48,11 @@ session_start();
                     <div class="m-10 w-[100%]">
                         <input name="email" type="email" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Email"></input> <br>
                         <input type="password" name="password" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Password"></input><br>
-                        <a href="./forgetPw.php" class="underline md:text-sm text-xs mb-8 float-right">Forget Password</a>
+                        <a href="./forgetPw.php" class="underline md:text-sm text-xs mb-8 float-right font-bold">Forget Password</a>
                         <br>
-                        <button type="submit" name="login" class="text-white bg-btn-color rounded-xl w-32 md:mt-12 mt-2 h-10 opacity-100">Log in</button>
+                        <div class=" ml-12">
+                            <button name="login" class=" text-white bg-btn-color rounded-xl w-32 md:mt-12 mt-2 h-10 opacity-100">Login</button>
+                        </div>
                     </div>
                 </form>
                 <p class=" font-semibold mt-36 md:block hidden">Or</p>
@@ -64,18 +66,19 @@ session_start();
                         <li class="p-2">Track new orders</li>
                     </ul>
                     <a href="./SignUp.php">
-                        <button class="text-white bg-btn-color rounded-xl h-10 w-48 mt-10 font-Playfair Display">Create New Account</button>
+                        <button class="text-white bg-btn-color rounded-xl h-10 w-48 mt-10 font-Playfair Display ">Create New Account</button>
                     </a>
                 </div>
             </div>
         </div>
         <div class="flex flex-col items-center m-10 md:hidden">
-            <p class=" px-2 font-Playfair Display">Don't have account?</p>
-            <a href="./SignUp.php" class=" text-purple-700 underline  px-2 font-Playfair Display">Create New Account</a>
+            <p class=" px-2 font-Playfair Display mt-6 pb-4">Don't have account?</p>
+            <a href="./SignUp.php" class=" text-purple-700 underline px-2 font-Playfair Display pb-4">Create New Account</a>
+            <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block m-auto underline text-btn-color text-center p-2 font-Playfair Display" type="button">
+                Terms and Conditions
+            </button>
         </div>
-        <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block m-auto underline text-btn-color text-center p-2 font-Playfair Display" type="button">
-            Terms and Conditions
-        </button>
+
     </section>
 
     <!-- Modal toggle -->

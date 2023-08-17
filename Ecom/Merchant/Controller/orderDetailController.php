@@ -7,7 +7,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $merchantEmail = $_SESSION["merchant_ID"];
 
     $sql = $pdo->prepare(
-        "SELECT m_customer.username,m_order.order_date,m_order.total_amt,m_order.payment_id,m_customer.phone,m_customer.street,
+        "SELECT m_customer.username,m_order.order_date,m_order.total_amt,m_order.payment_id,m_customer.phone,m_customer.street,m_customer.email,
         m_townships.t_name,m_product.p_one,m_order_details.quantity,m_product.sellprice,m_product.name,m_regions.r_name,m_merchant.logo
         FROM m_order
         JOIN m_customer

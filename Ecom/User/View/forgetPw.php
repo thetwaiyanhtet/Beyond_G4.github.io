@@ -31,8 +31,10 @@ session_start();
         <form action="../Controller/forgetPwController.php" method="post" class="md:mr-20 mr-28 mt-16">
             <div class="flex flex-col">
                 <label class="font-poppins font-semibold text-lg text-black">Email
-                    <?php echo
-                    '<span class=" text-red-600 ">' .  $_SESSION['error'] . '</span>'
+                    <?php
+                    if (isset($_SESSION['error'])) {
+                      echo  '<span class=" text-red-600 ">' .  $_SESSION['error'] . '</span>';
+                    }
                     ?>
                 </label> <br><br>
                 <input type="email" name="email" class="dark:border-black  border-0 border-b-2 border-black shadow-md w-64 outline-none hover:outline-none" placeholder="user@gmail.com">

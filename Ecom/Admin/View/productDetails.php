@@ -52,7 +52,7 @@ include "./adminsidebar.php";
                             <p><?= $productDetail["store_name"]; ?></p>
                         </div>
                         <div class=" flex">
-                            <p class="w-40">Catagory</p>
+                            <p class="w-40">Category</p>
                             <p class="w-32">-</p>
                             <p><?= $productDetail["c_name"]; ?></p>
                         </div>

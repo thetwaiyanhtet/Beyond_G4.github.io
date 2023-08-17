@@ -211,4 +211,8 @@ include "../Controller/categoryListController.php";
 </body>
 
 </html>
-<?php $_SESSION["productIdError"] = "" ?>
+<?php   $_SESSION["productIdError"] = "";
+        $_SESSION["sellpriceError"] = ""
+  
+  
+  ?>

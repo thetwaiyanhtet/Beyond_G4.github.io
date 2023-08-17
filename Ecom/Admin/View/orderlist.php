@@ -75,9 +75,9 @@ include "./adminsidebar.php";
                                     echo $result["username"];
                                     ?>
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4 w-40">
                                     <?php
-                                    echo $result['r_name'] . ' , ' . $result['t_name'] . ' , ' . $result['street'];
+                                    echo $result['r_name']  . $result['t_name'] .' , ' . $result['street'];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">

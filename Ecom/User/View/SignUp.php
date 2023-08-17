@@ -35,17 +35,18 @@ session_start();
             <img src="./resources/img/Triangle.png" alt="1" class="md:w-64 w-36 absolute left-2/3 top-40 md:scale-100 scale-125">
             <img src="./resources/img/Triangle-2.png" alt="1" class="md:w-64 w-36 absolute right-2/3 scale-125">
         </div>
-        <div class="md:w-1/2 w-96 md:h-fit h-96 border border-solid  bg-transparent mt-5 rounded-lg  drop-shadow-2xl opacity-75 m-auto z-10">
+        <div class="md:w-1/2 w-96 md:h-fit h-96 border border-solid  bg-transparent mt-5 rounded-lg  drop-shadow-2xl  m-auto z-10">
             <form action="../Controller/registerController.php" method="post">
                 <div class="m-5 flex flex-col items-center">
                     <input name="name" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Full Name"></input>
                     <input name="email" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Email"></input>
                     <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Password"></input>
                     <span class="text-red-500"><?php echo $_SESSION["registerError"] ?></span>
+                </div>
                     <a>
-                        <button type="submit" name="register" class="text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display">Get Started</button>
+                     <button name="register" class=" text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display ml-32">Get Started</button>
                     </a>
-            </form>\
+            </form>
         </div>
         </div>
         </div>
