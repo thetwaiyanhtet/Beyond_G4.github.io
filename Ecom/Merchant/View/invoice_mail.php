@@ -1,9 +1,10 @@
 <?php
 
+  session_start();
+  $customer = $_SESSION['customerInfo'];
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -186,7 +187,7 @@
                                                     <img style="
                                 margin: 0;
                                 width: 30%;
-                              " src="{{ $logo }}">
+                              " src="../../<?php echo $customer[0]['logo']?>">
 
                                                     </img>
                                                 </td>
@@ -215,7 +216,7 @@
                                 font-weight: bold;
                               ">
                                                         <?php
-                                                        echo $customerInfo[0]['store_name'];
+                                                        echo $customer[0]['store_name'];
                                                         ?>
                                                     </h1>
                                                 </td>
@@ -268,29 +269,29 @@
                                     <p style="text-align: center; font-size: 16px; margin-top: 1px;">Your Order</p>
                                     <p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 1px;"><?php echo $customerInfo[0]['order_date'] ?></p>
                                     <div style="margin: auto; width: 64px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 5px;"></div>
-                                    <?php foreach ($customerInfo as $product) { ?>
+                                    <?php foreach ($customer as $product) { ?>
                                         <div style="margin: auto; width: 64px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
                                             <p style="margin-bottom: 3px;"><?= $product['name'] ?></p>
-                                            <p style="margin-bottom: 3px;"><?= $product['sellprice'] ?></p>
+                                            <p style="margin-bottom: 3px;"><?= '$'.$product['sellprice'] ?></p>
                                         </div>
                                     <?php } ?>
                                     <div style="margin: auto; width: 64px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin-bottom: 3px;">Delivery Fee</p>
-                                        <p style="margin-bottom: 3px;"><?= $customerInfo[0]['delivery_fees'] ?></p>
+                                        <p style="margin-bottom: 3px;"><?= '$'. $customer[0]['delivery_fees'] ?></p>
                                     </div>
                                     <div style="margin: auto; width: 64px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin-bottom: 3px;">Total</p>
-                                        <p style="margin-bottom: 3px;"><?= $customerInfo[0]['total_amt'] ?></p>
+                                        <p style="margin-bottom: 3px;"><?= '$'.$customer[0]['total_amt'] ?></p>
                                     </div>
                                     <p style="text-align: center; font-weight: bold; font-size: 18px; margin: 5px;">Your Details</p>
                                     <div style="margin: auto; width: 80px; border-bottom: 2px solid #ccc; border-top: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin: 3px; font-style: normal; text-align: justify;">Shipping to</p>
-                                        <p style="margin: 3px; font-size: 12px; text-align: center;"><?= $customerInfo[0]['r_name'] . ' , ' . $customerInfo[0]['t_name'] . ' , ' . $customerInfo[0]['street'] ?></p>
+                                        <p style="margin: 3px; font-size: 12px; text-align: center;"><?= $customer[0]['r_name'] . ' , ' . $customer[0]['t_name'] . ' , ' . $customer[0]['street'] ?></p>
                                     </div>
                                     <div style="margin: auto; width: 80px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin: 3px; font-style: normal; text-align: justify;">Billed With</p>
                                         <p style="margin: 3px;"><?php
-                                                                $payment_type = $customerInfo[0]['payment_id'];
+                                                                $payment_type = $customer[0]['payment_id'];
 
                                                                 if ($payment_type == 0) {
                                                                     echo "Visa" . '<br>';
@@ -317,7 +318,7 @@
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <br />
                     <tr style="font: Roboto; height: 50px;font-weight: bold;text-align: center">
-                        <td style="font-size: 1em;padding-left: 10px;"><?= $customerInfo['store_name']?></td>
+                        <td style="font-size: 1em;padding-left: 10px;"><?= $customer['store_name']?></td>
                         <td style="font-size: 1em">Address</td>
                         <td style="font-size: 1em">Social</td>
                     </tr>
@@ -327,9 +328,9 @@
                       align-items: center;
                       text-align: center;
                       padding-left: 30px;">
-                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/ringingphoneoutlineicon.png" style="margin-right: 5px;width: 19px;height: 17px;" alt="" srcset=""><span style="opacity: 0.6;">+959-000-000-000</span>
+                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/ringingphoneoutlineicon.png" style="margin-right: 5px;width: 19px;height: 17px;" alt="" srcset=""><span style="opacity: 0.6;"><?= $customer[0]['phone']?></span>
                         </td>
-                        <td style="text-align: center;opacity: 0.6;">No--<?= $customerInfo[0]['address'] ?></td>
+                        <td style="text-align: center;opacity: 0.6;">No--<?= $customer[0]['address'] ?></td>
                         <td style="
                       display: flex;
                       align-items: center;
@@ -343,7 +344,7 @@
                       align-items: center;
                       text-align: center;
                       padding-left: 30px;">
-                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/emailicon.png" style="margin-right: 5px;width: 19px;height: 13px;" alt="" srcset=""><span style="opacity: 0.6;">merchant email@gmail.com</span>
+                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/emailicon.png" style="margin-right: 5px;width: 19px;height: 13px;" alt="" srcset=""><span style="opacity: 0.6;"><?php echo $customer[0]['email']?></span>
 
                         </td>
                         <td style="text-align: center;opacity: 0.6;">Road Name, Township Name</td>
@@ -402,3 +403,6 @@
 </body>
 
 </html>
+<?php
+ header("Location: ../Controller/sendMail.php?id=<?php echo $customer[0]['userEmail']?>");
+?>
