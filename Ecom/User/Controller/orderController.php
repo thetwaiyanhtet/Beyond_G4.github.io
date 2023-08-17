@@ -71,5 +71,6 @@ SET p.instock = p.instock - od.quantity
 WHERE od.order_id = (SELECT MAX(id) FROM m_order)");
 $productQuanti->execute();
 unset($_SESSION['usercart']);
+unset($_SESSION['carttle']);
 
 header("Location: ../View/orderConfirm.php");
