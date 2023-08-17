@@ -261,7 +261,7 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-between pb-3 p-3 space-y-2">
                                 <?php foreach ($topCustomers as $topCus) { ?>
                                     <div class=" flex space-x-5 pl-1">
-                                        <img src="../../<?= $topCus["p_picture"] ?>" alt="..." class=" w-6 h-6 rounded-full">
+                                        <img src="../../Storage/profile/<?= $topCus["p_picture"] ?>" alt="..." class=" w-6 h-6 rounded-full">
                                         <p><?= $topCus["username"] ?></p>
                                     </div>
                                 <?php } ?>

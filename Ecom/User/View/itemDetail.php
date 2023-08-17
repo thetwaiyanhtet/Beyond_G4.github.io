@@ -48,13 +48,13 @@ ini_set('display_errors', 1);
         <form action="./mainPage.php" method="post">
             <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
 
-                <div class=" border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
+                <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
                     <div class="flex items-center justify-center">
-                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class=" w-64 h-64">
+                        <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-64 h-64">
                     </div>
                     <div class="flex items-center justify-center space-x-3">
-                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class=" w-20 h-20">
-                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-20 h-20">
+                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-20 h-20">
+                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-20 h-20">
                         <input type="hidden" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                     </div>
                 </div>
@@ -77,23 +77,38 @@ ini_set('display_errors', 1);
 
                     <!-- Color choose -->
                     <div class="flex space-x-3">
-                        <div class="w-5 h-5 rounded-full user-pic active-pic" onclick="showReview()" style="background-color: <?= $ItemDetails[0]["color_1"]; ?>"></div>
-                        <div class="w-5 h-5 rounded-full user-pic" onclick="showReview()" style="background-color: <?= $ItemDetails[0]["color_2"]; ?>"></div>
-                        <div class="w-5 h-5 rounded-full user-pic" onclick="showReview()" style="background-color: <?= $ItemDetails[0]["color_3"]; ?>"></div>
+                        <div class="w-5 h-5 rounded-full user-pic active-pic" onclick="showReview(0)" style="background-color: <?= $ItemDetails[0]["color_1"]; ?>"></div>
+                        <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(1)" style="background-color: <?= $ItemDetails[0]["color_2"]; ?>"></div>
+                        <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(2)" style="background-color: <?= $ItemDetails[0]["color_3"]; ?>"></div>
                     </div>
+
+                    <input type="hidden" id="selectedImageInput" name="selectedImage" value="">
+
 
                     <script>
                         const userPics = document.getElementsByClassName('user-pic');
+                        const productImage = document.getElementById('productImage');
+                        const selectedImageInput = document.getElementById('selectedImage');
+                        const imageSources = [
+                            "<?= $ItemDetails[0]["p_one"] ?>",
+                            "<?= $ItemDetails[0]["p_two"] ?>",
+                            "<?= $ItemDetails[0]["p_three"] ?>"
+                        ];
 
-                        function showReview() {
+                        function showReview(index) {
                             for (userPic of userPics) {
                                 userPic.classList.remove("active-pic");
                             }
-                            let i = Array.from(userPics).indexOf(event.target);
-                            userPics[i].classList.add('active-pic');
+                            userPics[index].classList.add('active-pic');
+                            productImage.src = "../../Storage//product/" + imageSources[index];
+                            selectedImageInput.value = imageSources[index];
+                            console.log(selectedImageInput.value);
+                            
                         }
                     </script>
                     <!-- end -->
+                    
+
 
                     <div class="flex space-x-7">
                         <h3>Quantity</h3>
@@ -102,8 +117,13 @@ ini_set('display_errors', 1);
 
                     <!-- if size hava data,size select box are shown.If not,nondisplay -->
                     <?php if (
-                        $ItemDetails[0]["size_s"] && $ItemDetails[0]["size_s"] && $ItemDetails[0]["size_s"] &&
-                        $ItemDetails[0]["size_s"] && $ItemDetails[0]["size_s"] == NULL
+                        isset(
+                            $ItemDetails[0]["size_s"],
+                            $ItemDetails[0]["size_m"],
+                            $ItemDetails[0]["size_l"],
+                            $ItemDetails[0]["size_xl"],
+                            $ItemDetails[0]["size_2xl"]
+                        )
                     ) { ?>
                         <div class="flex space-x-16 hidden">
                             <h3>Size</h3>
