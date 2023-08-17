@@ -204,7 +204,7 @@ if (!empty($_SESSION['carttle'])) {
                                     # code...
                                 ?>
 
-                                    <?php foreach ($cartloop as $key => $value) { ?>
+                                    <?php foreach ($cartloop as $key => $value) {  ?>
                                         <form action="./userCart.php" method="post">
                                             <div class="flex items-center text-sm md:text-[16px] font-semibold space-x-10 justify-evenly pb-4">
                                                 <div class="bg-white/30 w-20 h-20 p-2 flex items-center justify-center rounded-md">
@@ -212,40 +212,38 @@ if (!empty($_SESSION['carttle'])) {
                                                 </div>
                                                 <div name="pname" class="w-24"><?= $value['name'] ?></div>
 
+                               
 
-                                              
-                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="quanti" autocomplete="off"  name="pquantity" onchange="subTotal()" oninput="updateQuantity(<?= $value['id'] ?>)" min="1" max="<?= $value['instock'] ?>" type="number" value="1">
+                                                <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="iquantity" name="pquantity" onchange="subTotal()"  min="1" max="<?= $value['instock'] ?>" type="number" value="1">
                                                 <p>$<?= $value['sellprice'] ?> </p>
                                                 <input type="hidden" class="iprice " name="psellprice" value="<?= $value['sellprice'] ?>">
 
 
                                                 <p class="itotal"></p>
-                                                <input type="hidden" name="id"  value="<?= $value['id'] ?>">
+                                                <input type="hidden" name="id" value="<?= $value['id'] ?>">
 
-                                                <input type="submit" value="x"  class="cursor-pointer rounded-full font-black bg-[#EBEBEB] flex items-center justify-center"></input>
-                                                <script>
-                                                    
-                                                    function updateQuantity(ID) {
-                                                        // Get the in-stock quantity from PHP (you'll need to implement this)
-                                                        var inStockQuantity = ID;
-                                                        // Get the input field value
-                                                        var inputField = document.getElementById("quanti");
-                                                        var inputValue = parseInt(inputField.value);
-                                                      
-                                                       console.log(inStockQuantity);
-                                                       console.log(inputValue);
-                                                        // Limit the input value to the in-stock quantity
-                                                        if (inputValue > inStockQuantity) {
-                                                            inputField.value = inStockQuantity;
-                                                        } else if (inputValue < 1) {
-                                                            inputField.value = 1;
-                                                        }
-                                                    }
-                                                </script>
+                                                <input type="submit" value="x" class="cursor-pointer rounded-full font-black bg-[#EBEBEB] flex items-center justify-center"></input>
+
                                             </div>
                                         </form>
                                 <?php }
+
                                 } ?>
+                                                 <script>
+                                                    const inputElement = document.getElementsByClassName('iquantity');
+
+                                                   Array.from(inputElement).forEach(element =>{
+                                                    element.addEventListener('input', function() {
+                                                        let enteredValue = parseFloat(element.value);
+
+                                                        if (enteredValue < parseFloat(element.min)) {
+                                                            element.value = element.min;
+                                                        } else if (enteredValue > parseFloat(element.max)) {
+                                                            element.value = element.max;
+                                                        }
+                                                    });
+                                                   })
+                                                </script>
 
                                 <!-- <div class="ml-[240px] block md:hidden">
                                 <a href="./cart2.php">
