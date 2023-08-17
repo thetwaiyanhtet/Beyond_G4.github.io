@@ -1,7 +1,9 @@
 <?php
-include "./adminsidebar.php";
-
 session_start();
+include "./adminsidebar.php";
+$categories = $_SESSION["m_category"];
+// include "../Controller/addSubCategoryController.php";
+
 ?>
 
 <!doctype html>
@@ -32,23 +34,64 @@ session_start();
                     <div class="p-5">
                         <p class="font-bold text-xl">Add New Categories</p>
                         <div class="flex justify-around">
-                            <div class="space-y-3 mt-5">
-                                <p>Category</p>
-
-                                <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="cname">
-                                <div class=" text-red-800 font-thin">
-                                    <?php if (isset($_SESSION["categoryError"])) {
-                                        echo $_SESSION["categoryError"];
-                                    } ?>
+                            <div class="">
+                                <div class="space-y-3 mt-5">
+                                    <p>Category</p>
+                                    <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="cname">
+                                    <div class=" text-red-800 font-thin">
+                                        <?php if (isset($_SESSION["categoryError"])) {
+                                            echo $_SESSION["categoryError"];
+                                        } ?>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col justify-start space-y-3 mt-5">
-                                <p>Description</p>
-                                <input type="text" class="border h-8 w-72 rounded-md outline-none indent-2" id="text" name="cdescription" rows="4" cols="50"></input>
+                            <div>
+                                <div class="flex flex-col justify-start space-y-3 mt-5">
+                                    <p>Description</p>
+                                    <input type="text" class="border h-8 w-72 rounded-md outline-none indent-2" id="text" name="cdescription" rows="4" cols="50"></input>
+                                </div>
+                                <div class=" pl-10 pt-14">
+                                    <button class="py-1 px-4 float-right text-white rounded-md bg-blue-600 mr-16 font-philosopher">Save</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button class="py-1 px-4 float-right text-white rounded-md bg-blue-600 mr-16 font-philosopher">Save</button>
+
+                </div>
+            </form>
+            <form action="../Controller/addSubCategoryController.php" method="post">
+                <div class="border shadow-2xl h-72 mt-10 rounded-xl">
+                    <div class="p-5">
+                        <p class="font-bold text-xl">Add New Sub Category</p>
+                        <div class="">
+                            <div class=" flex justify-around">
+                                <div class="space-y-3 mt-5">
+                                    <p>Category</p>
+                                    <div>
+                                        <select name="category" id="">
+                                            <?php foreach ($categories as $category) { ?>
+                                                <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="space-y-3 mt-5">
+                                    <p>Sub Category</p>
+                                    <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="scname">
+                                    <!-- <div class=" text-red-800 font-thin">
+                                        <?php if (isset($_SESSION["categoryError"])) {
+                                            echo $_SESSION["categoryError"];
+                                        } ?>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div>
+                                <div class=" pl-10 pt-14">
+                                    <button type="submit" class="py-1 px-4 float-right text-white rounded-md bg-blue-600 mr-16 font-philosopher">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
     </main>
