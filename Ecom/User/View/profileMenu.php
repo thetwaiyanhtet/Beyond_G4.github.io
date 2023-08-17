@@ -124,7 +124,7 @@ $verifyData = $_SESSION["verifyData"];
                     </div>
             </a>
 
-            <a href="">
+            <a href="./userCart.php">
                 <div class=" settingBar lg:mr-0 mr-3 dark:bg-gray-500 dark:border-gray-500 ">
                     <img src="./resources/img/cart-outline.svg" alt="..." class=" lg:w-[30px] w-[20px]">
                     <p class=" lg:w-40 w-10 text-center uppercase dark:text-white">cart</p>

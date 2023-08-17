@@ -150,7 +150,7 @@ $verifyData = $_SESSION["verifyData"];
                                 <div class="flex items-center justify-between space-x-4">
                                     <div class="flex">
 
-                                        <img class="w-14 object-fill scale-150 rounded-full" src="../..<?= $order["p_one"] ?>" alt="...">
+                                        <img class="w-14 object-fill scale-150 rounded-full" src="../../Storage/product/<?= $order["p_one"] ?>" alt="...">
 
                                         <?php ?>
                                     </div>

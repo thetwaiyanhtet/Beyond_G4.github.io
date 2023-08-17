@@ -6,13 +6,13 @@ if (isset($_POST['verify']) || isset($_POST[''])) {
   echo $userInput;
   echo $email;
   echo $_SESSION['verificationCode'];
-  // try {
-  //   if ($userInput == $_SESSION['verificationCode']) {
-  //     header("Location: ../View/CreatNPw.php");
-  //   }
-  // } catch (PDOException $e) {
-  //   // Handle the exception
-  //   echo "Error: " . $e->getMessage();
-  // }
+  try {
+    if ($userInput == $_SESSION['verificationCode']) {
+      header("Location: ../View/CreatNPw.php");
+    }
+  } catch (PDOException $e) {
+    // Handle the exception
+    echo "Error: " . $e->getMessage();
+  }
 }
 ?>
