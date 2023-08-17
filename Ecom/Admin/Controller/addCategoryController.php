@@ -48,9 +48,8 @@ if (count($_POST) == 0) {
     $sql->bindValue(":cdescription", $cdescription);
     $sql->bindValue(":createDate", date("Y-m-d"));
     $sql->bindValue(":updateDate", date("Y-m-d"));
-
-
     $sql->execute();
+
 
     header("Location: ../View/categorylist.php");
 }

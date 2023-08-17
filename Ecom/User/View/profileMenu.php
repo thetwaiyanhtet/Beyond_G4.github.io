@@ -79,7 +79,7 @@ $verifyData = $_SESSION["verifyData"];
                     </div>
                     <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
                 <?php } else if ($verifyData["verify"] == 1) { ?>
-                    <img src="../../Storage//profile/<?= $userData["p_picture"] ?>" alt="..." class=" w-16 rounded-lg z-50">
+                    <img src="../../Storage/profile/<?=$userData["p_picture"] ?>" alt="..." class=" w-16 rounded-lg z-50">
                     <div class="text-center">
                         <p class=" text-xl font-philosopher dark:text-white">NAME</p>
                         <p class="dark:text-white uppercase text-blue-500"><?= $userData["username"] ?></p>
