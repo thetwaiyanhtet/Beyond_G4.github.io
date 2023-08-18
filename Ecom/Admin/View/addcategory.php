@@ -1,8 +1,7 @@
 <?php
-session_start();
+
 include "./adminsidebar.php";
 $categories = $_SESSION["m_category"];
-// include "../Controller/addSubCategoryController.php";
 
 ?>
 
@@ -24,15 +23,14 @@ $categories = $_SESSION["m_category"];
     <main id="main" class="ml-60 h-screen pt-20  w-[80%]">
 
         <div class="ml-10">
-            <p class=" text-xl font-bold font-philosopher ml-2 pt-10">Add New Category</p>
             <!-- <div class=" flex items-center mt-5">
                 <span class="text-xl">Search : </span>
                 <input class="bg-gray-300 ml-3 w-52 outline-none rounded-lg h-8 indent-2" type="search" name="" id="">
             </div> -->
             <form action="../Controller/addCategoryController.php" method="POST">
-                <div class="border shadow-2xl h-72 mt-10 rounded-xl">
+                <div class="border shadow-2xl h-72 mt-5 rounded-xl">
                     <div class="p-5">
-                        <p class="font-bold text-xl">Add New Categories</p>
+                        <p class="font-bold text-xl font-philosopher">Add New Category</p>
                         <div class="flex justify-around">
                             <div class="">
                                 <div class="space-y-3 mt-5">
@@ -60,15 +58,15 @@ $categories = $_SESSION["m_category"];
                 </div>
             </form>
             <form action="../Controller/addSubCategoryController.php" method="post">
-                <div class="border shadow-2xl h-72 mt-10 rounded-xl">
+                <div class="border shadow-2xl h-72 mt-5 rounded-xl pb-5">
                     <div class="p-5">
-                        <p class="font-bold text-xl">Add New Sub Category</p>
+                        <p class="font-bold text-xl font-philosopher">Add New Sub Category</p>
                         <div class="">
                             <div class=" flex justify-around">
                                 <div class="space-y-3 mt-5">
                                     <p>Category</p>
                                     <div>
-                                        <select name="category" id="">
+                                        <select name="category" id="" class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2">
                                             <?php foreach ($categories as $category) { ?>
                                                 <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
                                             <?php } ?>

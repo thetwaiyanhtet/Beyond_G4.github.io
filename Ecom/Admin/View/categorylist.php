@@ -1,10 +1,7 @@
 <?php
 include "./adminsidebar.php";
-
 include "../Controller/categoryListController.php";
 $result = $_SESSION["m_category"];
-// echo "<pre>";
-// print_r($result);
 
 ?>
 

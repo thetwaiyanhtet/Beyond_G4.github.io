@@ -87,14 +87,24 @@ include "./adminsidebar.php";
             </div>
             <p class="font-semibold text-4xl"><?= $productDetail["name"]; ?></p>
             <div class="flex space-x-4">
-                <div class="flex space-x-2">
-                    <img src="./resources/img/star admin.svg" alt="">
-                    <img src="./resources/img/star admin.svg" alt="">
-                    <img src="./resources/img/star admin.svg" alt="">
-                    <img src="./resources/img/star admin.svg" alt="">
-                    <img src="./resources/img/star gray.svg" alt="">
+            <div class=" text-yellow-500 text-xl">
+                    <?php
+                    if (!function_exists('numberToStars')) {
+                        function numberToStars($number)
+                        {
+                            $roundedNumber = round($number);
+                            $maxStars = 5;
+                            $fullStars = str_repeat('★', $roundedNumber);
+                            $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                            return $fullStars . $emptyStars;
+                        }
+
+                    ?>
+                    <?php }  ?>
+                    <?= numberToStars($overallAverageRating) ?>
+
                 </div>
-                <p class=" font-medium">1184 Reviews</p>
+                <p class=" font-medium"><?= $totalCustomerCount ?> Reviews</p>
             </div>
         </div>
     </main>

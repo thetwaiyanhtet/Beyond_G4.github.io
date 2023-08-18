@@ -85,7 +85,7 @@
         </div>
 
     </div>
-    <form action="./confirmation.php" method="post">
+    <form id="myForm" action="./confirmation.php" method="post">
         <div class=" font-poppins relative mt-10 mx-auto container">
             <div class="flex justif-center items-center flex-col">
                 <div class="w-11/12 h-12 p-5 flex  bg-btn-color rounded-lg shadow-md">
@@ -182,6 +182,16 @@
         </div>
     </form>
     </div>
+    <script>
+                        const form = document.getElementById("myForm");
+                        form.addEventListener("submit", function(event) {
+                            const selectedOptions = form.querySelectorAll('input[name="deli"]:checked');
+                            if (selectedOptions.length !== 1) {
+                                event.preventDefault(); // Prevent form submission
+                                alert("Please select exactly one payment option.");
+                            }
+                        });
+                    </script>
 </body>
 
 </html>

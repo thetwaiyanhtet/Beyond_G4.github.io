@@ -94,7 +94,7 @@ include "../Controller/wishlistcart.php";
     </div>
     <div>
         <div class="flex overflow-y-scroll pb-6 h-96 ">
-            <div class="flex flex-wrap w-full space-x-10 pl-20 pt-10">
+            <div class="flex flex-wrap w-full justify-around">
                 <?php foreach ($trandingProductViewAll as $tranding) { ?>
                     <div class="inline p-3">
                         <div class=" h-fit w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
@@ -125,6 +125,44 @@ include "../Controller/wishlistcart.php";
 
     </div>
 
+
+
+    <div class="flex items-center space-x-2 lg:space-x-4 pt-10">
+        <p class=" pl-5 lg:ml-0 font-philosopher Display text-2xl lg:text-4xl bg-gradient-to-r to-blue-600 from-red-400 font-bold text-transparent bg-clip-text">All Products</p>
+        <img src="../View/resources/img/fire.svg" alt="" class=" w-[40px] h-[40px]">
+    </div>
+    <div>
+        <div class="flex overflow-y-scroll pb-6 h-96">
+            <div class="flex flex-wrap w-full justify-around">
+            <?php foreach ($AllProduct as $productDetail) { ?>
+                    <div class="inline p-3">
+                        <div class=" h-auto w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                        <form action="./trandingProduct.php" method="post">
+                        <div class="relative overflow-hidden">
+                                <img class="w-32 h-40 m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
+                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <a href="./trandingProduct.php?pid=<?= $productDetail["id"]; ?>"> <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                <a href="../View/itemDetail.php?pid=<?= $productDetail["id"]; ?>">  <button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button></a>
+
+                                </div>
+                            </div>
+                            <div class="relative dark:text-white">
+                                <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold"><?= $productDetail["name"] ?></h2>
+                                <!-- <del class="text-red-700 text-lg">$999</del> -->
+                                <p class="text-xs mt-2 ml-5 block "><?= $productDetail["description"] ?></p>
+                                <p class="text-md font-bold mt-2 ml-5 block ">$<?= $productDetail["sellprice"] ?></p>
+                                <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                                <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+
+        </div>
+
+    </div>
 
 
 
