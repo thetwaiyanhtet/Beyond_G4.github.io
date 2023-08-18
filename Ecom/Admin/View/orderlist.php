@@ -8,6 +8,7 @@ include "./adminsidebar.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Order List</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,7 +78,7 @@ include "./adminsidebar.php";
                                 </td>
                                 <td class="px-6 py-4 w-40">
                                     <?php
-                                    echo $result['r_name']  . $result['t_name'] .' , ' . $result['street'];
+                                    echo $result['r_name']  . $result['t_name'] . ' , ' . $result['street'];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">

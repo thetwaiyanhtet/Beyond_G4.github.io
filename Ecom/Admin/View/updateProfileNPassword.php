@@ -16,6 +16,7 @@ include "../Controller/passwordchangeContoller.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Update Profile and Password</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +34,7 @@ include "../Controller/passwordchangeContoller.php";
                 <section class=" border border-gray-400 rounded-lg shadow-lg p-3">
                     <p class=" font-semibold">Update Profile</p>
                     <div class=" w-[50%] mx-auto space-y-6">
-                        <div class=" flex-col flex items-center justify-between">                            
+                        <div class=" flex-col flex items-center justify-between">
                             <div class=" w-20 shadow-xl border-2 border-blue-950">
                                 <label for="profile1">
                                     <img class="w-20" src="<?= $admin['p_picture'] ?>" id="profileimg1" alt="">

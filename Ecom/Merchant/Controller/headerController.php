@@ -30,7 +30,7 @@ if ($verify_data["verify"] == 0) {
 
 } else if ($verify_data["verify"] == 1) {
     $sql = $pdo->prepare(
-        "SELECT m_merchant.m_name,m_merchant.email,m_merchant.phone,m_merchant.address,m_merchant.logo,m_merchant.verify
+        "SELECT m_merchant.m_name,m_merchant.email,m_merchant.phone,m_merchant.address,m_merchant.logo,m_merchant.verify,m_merchant.store_name
           FROM m_merchant
           WHERE email=:email"
     );

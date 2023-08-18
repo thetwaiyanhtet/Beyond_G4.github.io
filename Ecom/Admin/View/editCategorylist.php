@@ -1,12 +1,12 @@
 <?php
-
+include "./adminsidebar.php";
 include "../Controller/categoryListController.php";
-$result = $_SESSION["m_category"];
 
+$result = $_SESSION["m_category"];
 $categorydata = $_SESSION["editcategory"];
 
 //  print_r($categorydata);
-include "./adminsidebar.php";
+
 ?>
 
 
@@ -16,6 +16,7 @@ include "./adminsidebar.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -57,7 +58,7 @@ include "./adminsidebar.php";
                 </form>
                 <a href="../View/categorylist.php">
                     <button id="" class="py-2 px-4  text-white rounded-md bg-blue-600 absolute right-12 top-[157px]">Back</button>
-                    </a>
+                </a>
 
                 <section class="bg-white w-auto mt-10 ml-10 py-0 lg:py-[20px]">
                     <div class="container">

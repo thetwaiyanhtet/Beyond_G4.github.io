@@ -13,6 +13,7 @@ $productdata = $_SESSION["editproduct"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Edit Product</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -54,7 +55,7 @@ $productdata = $_SESSION["editproduct"];
                                 <li>
                                     <div class="w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
 
-                                    <label for="photo1">
+                                        <label for="photo1">
                                             <?php
                                             if (isset($productdata[0]["p_one"])) {
                                                 echo '<img src="../../Storage/product/' . $productdata[0]["p_one"] . '" id="photoimg1" alt="">';
@@ -70,7 +71,7 @@ $productdata = $_SESSION["editproduct"];
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                    <label for="photo2">
+                                        <label for="photo2">
                                             <?php
                                             if (isset($productdata[0]["p_two"])) {
                                                 echo '<img src="../../Storage/product/' . $productdata[0]["p_two"] . '" id="photoimg2" alt="">';
@@ -84,7 +85,7 @@ $productdata = $_SESSION["editproduct"];
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                    <label for="photo3">
+                                        <label for="photo3">
                                             <?php
                                             if (isset($productdata[0]["p_three"])) {
                                                 echo '<img src="../../Storage/product/' . $productdata[0]["p_three"] . '" id="photoimg3" alt="">';
@@ -98,7 +99,7 @@ $productdata = $_SESSION["editproduct"];
                                 </li>
                                 <li>
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
-                                    <label for="photo4">
+                                        <label for="photo4">
                                             <?php
                                             if (isset($productdata[0]["p_four"])) {
                                                 echo '<img src="../../Storage/product/' . $productdata[0]["p_four"] . '" id="photoimg4" alt="">';
@@ -135,8 +136,8 @@ $productdata = $_SESSION["editproduct"];
                                         <p>Product ID</p>
                                     </div>
                                     <div><input type="text" name="pid" value="<?php echo $productdata[0]["code"] ?>" class="inputBox" placeholder="#001">
-                    
-                                </div>
+
+                                    </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div>

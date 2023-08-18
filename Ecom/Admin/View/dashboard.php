@@ -27,6 +27,8 @@ $category_json = json_encode($category);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+    <title>Dashboard</title>
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../View/resources/css/dashboard.css">
@@ -284,8 +286,8 @@ $category_json = json_encode($category);
                         totcategory.push(item.c_name);
                         categoryquanti.push(item.quantity);
                     });
-                   
-               
+
+
                     var firstValue = totcategory[0].toString();
                     var secondValue = totcategory[1].toString();
                     var quantityValue = categoryquanti[0]
@@ -297,13 +299,13 @@ $category_json = json_encode($category);
                         labels: ['August'],
                         datasets: [{
                                 label: firstValue,
-                                data: [quantityValue], 
-                                backgroundColor: '#671ee1', 
+                                data: [quantityValue],
+                                backgroundColor: '#671ee1',
                             },
                             {
                                 label: secondValue,
-                                data: [quantitytwoValue], 
-                                backgroundColor: '#0dcbf2', 
+                                data: [quantitytwoValue],
+                                backgroundColor: '#0dcbf2',
                             },
                         ],
                     };

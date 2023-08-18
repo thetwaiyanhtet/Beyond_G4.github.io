@@ -222,6 +222,8 @@
             </div>
         </div>
     </section>
+    <script script src="//cdn.conveythis.com/javascript/conveythis-initializer.js">
+    </script>
     <script>
         // testimonial
         const userTexts = document.getElementsByClassName('user-text');
@@ -240,6 +242,12 @@
             userPics[i].classList.add('active-pic');
             userTexts[i].classList.add('active-text');
         }
+
+        document.addEventListener("DOMContentLoaded", function(e) {
+            ConveyThis_Initializer.init({
+                api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
+            });
+        });
     </script>
 
 

@@ -8,7 +8,8 @@ include "../Controller/logoandbusinessController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forget Password</title>
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+    <title>Update Password</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,13 +31,14 @@ include "../Controller/logoandbusinessController.php";
                 </div>
                 <div class=" py-5">
                     <div>Email Address *
-                    <span class=" text-red-800">
-                        <?php 
-                        if(isset($_SESSION['error'])){
-                            echo $_SESSION['error'];
-                        }
-                        ?>
-                    </span></div>
+                        <span class=" text-red-800">
+                            <?php
+                            if (isset($_SESSION['error'])) {
+                                echo $_SESSION['error'];
+                            }
+                            ?>
+                        </span>
+                    </div>
                     <input type="text" name="email" class="w-[360px] h-[44px] border-gray-200 border-2 rounded-md bg-white outline-none indent-3 mt-2 shadow-xl" placeholder="Enter your email">
                 </div>
                 <button name="update" type="submit" class="w-[360px] h-[44px] rounded-lg bg-yellow-500 flex items-center justify-center font-playfairDisplay text-white text-lg shadow-xl">Reset Password</button>

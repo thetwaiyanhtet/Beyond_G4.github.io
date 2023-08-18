@@ -10,6 +10,8 @@ include "../Controller/deliveryController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
+    <title>Delivery</title>
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -61,7 +63,7 @@ include "../Controller/deliveryController.php";
 
                         <tbody class=" text-center" id="searchResult">
                             <?php
-                            $count = ($currentPage - 1) * $itemsPerPage; 
+                            $count = ($currentPage - 1) * $itemsPerPage;
                             if (isset($paginatedData)) {
                                 foreach ($paginatedData as $delivery) { ?>
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">

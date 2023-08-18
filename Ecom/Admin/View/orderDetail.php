@@ -9,6 +9,7 @@ include "../Controller/orderDetailController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Order Detail</title>
     <link href="./resources/lib/tailwind/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,30 +30,30 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/cart.png" alt="cart" class="w-[26px]">
                     <p>
                         <?php
-                         echo $orderDetail[0]['store_name'];
+                        echo $orderDetail[0]['store_name'];
                         ?>
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/schdule.png" alt="cart" class="w-[26px]">
                     <p><?php
-                         echo $orderDetail[0]['order_date'];
+                        echo $orderDetail[0]['order_date'];
                         ?>
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/bulid.png" alt="cart" class="w-[26px]">
                     <p><?php
-                    echo $orderDetail[0]['create_date']
-                        ?> 
+                        echo $orderDetail[0]['create_date']
+                        ?>
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/car.png" alt="cart" class="w-[26px]">
                     <p>
-                    <?php
-                    echo $orderDetail[0]['delivery_name'];
-                    ?> </p>
+                        <?php
+                        echo $orderDetail[0]['delivery_name'];
+                        ?> </p>
                 </div>
             </div>
             <!--Customer Details-->
@@ -63,7 +64,7 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/people.png" alt="cart" class="w-[26px]">
                     <p class="text-sm">
                         <?php
-                         echo $orderDetail[0]['username']
+                        echo $orderDetail[0]['username']
                         ?>
                     </p>
                 </div>
@@ -71,15 +72,15 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/email.png" alt="cart" class="w-[26px]">
                     <p class="text-sm">
                         <?php
-                         echo $orderDetail[0]['email']
+                        echo $orderDetail[0]['email']
                         ?>
                     </p>
                 </div>
                 <div class="flex space-x-2 m-4">
                     <img src="./resources/img/phone.png" alt="cart" class="w-[26px]">
-                    <p class="text-sm" >
+                    <p class="text-sm">
                         <?php
-                         echo $orderDetail[0]['phone']
+                        echo $orderDetail[0]['phone']
                         ?>
                     </p>
                 </div>
@@ -87,13 +88,13 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/home.png" alt="cart" class="h-7">
                     <p class="text-sm">
                         <?php
-                       echo $orderDetail[0]['r_name'].$orderDetail[0]['t_name'].$orderDetail[0]['street'];
+                        echo $orderDetail[0]['r_name'] . $orderDetail[0]['t_name'] . $orderDetail[0]['street'];
                         ?>
                     </p>
                 </div>
             </div>
         </div>
-   
+
         <!-- <table class="mt-5 h-32 shadow-lg w-[60%] mx-auto">
             <thead>
                 <tr>
@@ -110,7 +111,7 @@ include "../Controller/orderDetailController.php";
                 </tr>
             </tbody>
         </table> -->
-        
+
         <!---Product list-->
         <table class="w-[90%] text-sm text-left text-white m-5">
             <thead class="text-xs text-white uppercase bg-table">
@@ -130,81 +131,81 @@ include "../Controller/orderDetailController.php";
                 </tr>
             </thead>
             <tbody>
-            <?php foreach ($orderDetail as  $order) {?> 
+                <?php foreach ($orderDetail as  $order) { ?>
                     <tr class="border border-b text-black">
-                  
+
                         <th scope="row" class="px-6 py-4 font-medium  whitespace-nowrap text-black">
-                        <?php
-                          echo $order['name'];
-                        ?>
+                            <?php
+                            echo $order['name'];
+                            ?>
                         </th>
                         <td class="px-6 py-4">
-                        <?php
-                          echo $order['quantity'];
-                        ?>
-                        </td>
-                        <td class="px-6 py-4">
-                        <?php
-                         echo '$'.$order['sellprice']
-                        ?>
+                            <?php
+                            echo $order['quantity'];
+                            ?>
                         </td>
                         <td class="px-6 py-4">
                             <?php
-                              $total = $order['quantity'] * $order['sellprice'];
-                              echo '$'. $total;
+                            echo '$' . $order['sellprice']
                             ?>
-                        </td>
-                    </tr>
-                    <?php } ?>
-                    <tr class="border border-b text-black">
-                        <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap ">
-
-                        </th>
-                        <td class="px-6 py-4">
-
-                        </td>
-                        <td class="px-6 py-4">
-                            Sub-Total
                         </td>
                         <td class="px-6 py-4">
                             <?php
-                             echo '$'.$order['total_amt']
+                            $total = $order['quantity'] * $order['sellprice'];
+                            echo '$' . $total;
                             ?>
                         </td>
                     </tr>
-                    <tr class="border border-b text-black">
-                        <th scope="row" class="px-6 py-4 font-medium  whitespace-nowrap">
+                <?php } ?>
+                <tr class="border border-b text-black">
+                    <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap ">
 
-                        </th>
-                        <td class="px-6 py-4">
+                    </th>
+                    <td class="px-6 py-4">
 
-                        </td>
-                        <td class="px-6 py-4">
-                            Delivery Rate
-                        </td>
-                        <td class="px-6 py-4">
-                           <?php
-                           echo '$'.$order['delivery_fees'];
-                           ?>
-                        </td>
-                    </tr>
-                    <tr class="border border-b text-black">
-                        <th scope="row" class="px-6 py-4 font-medium  whitespace-nowrap">
+                    </td>
+                    <td class="px-6 py-4">
+                        Sub-Total
+                    </td>
+                    <td class="px-6 py-4">
+                        <?php
+                        echo '$' . $order['total_amt']
+                        ?>
+                    </td>
+                </tr>
+                <tr class="border border-b text-black">
+                    <th scope="row" class="px-6 py-4 font-medium  whitespace-nowrap">
 
-                        </th>
-                        <td class="px-6 py-4">
+                    </th>
+                    <td class="px-6 py-4">
 
-                        </td>
-                        <td class="px-6 py-4 font-bold">
-                            Total
-                        </td>
-                        <td class="px-6 py-4 font-bold">
-                          <?php 
-                          $total = $order['delivery_fees'] + $order['total_amt'];
-                          echo '$'.$total;
-                          ?>
-                        </td>
-                    </tr>
+                    </td>
+                    <td class="px-6 py-4">
+                        Delivery Rate
+                    </td>
+                    <td class="px-6 py-4">
+                        <?php
+                        echo '$' . $order['delivery_fees'];
+                        ?>
+                    </td>
+                </tr>
+                <tr class="border border-b text-black">
+                    <th scope="row" class="px-6 py-4 font-medium  whitespace-nowrap">
+
+                    </th>
+                    <td class="px-6 py-4">
+
+                    </td>
+                    <td class="px-6 py-4 font-bold">
+                        Total
+                    </td>
+                    <td class="px-6 py-4 font-bold">
+                        <?php
+                        $total = $order['delivery_fees'] + $order['total_amt'];
+                        echo '$' . $total;
+                        ?>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </main>

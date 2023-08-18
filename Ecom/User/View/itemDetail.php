@@ -13,6 +13,7 @@ ini_set('display_errors', 1);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Item Detail</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -49,12 +50,24 @@ ini_set('display_errors', 1);
             <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
 
                 <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
-                    <div class="flex items-center justify-center">
-                        <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-64 h-64">
-                    </div>
+                    <?php if (!empty($ItemDetails[0]["p_one"])) { ?>
+                        <div class="flex items-center justify-center">
+                            <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-64 h-64">
+                        </div>
+                    <?php } else { ?>
+                        <div></div>
+                    <?php } ?>
                     <div class="flex items-center justify-center space-x-3">
-                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-20 h-20">
-                        <img src="../../Storage//product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-20 h-20">
+                        <?php if (!empty($ItemDetails[0]["p_two"])) { ?>
+                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-20 h-20"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>
+                        <?php if (!empty($ItemDetails[0]["p_three"])) { ?>
+                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-20 h-20"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>
                         <input type="hidden" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                     </div>
                 </div>
@@ -103,11 +116,11 @@ ini_set('display_errors', 1);
                             productImage.src = "../../Storage//product/" + imageSources[index];
                             selectedImageInput.value = imageSources[index];
                             console.log(selectedImageInput.value);
-                            
+
                         }
                     </script>
                     <!-- end -->
-                    
+
 
 
                     <div class="flex space-x-7">
@@ -212,7 +225,7 @@ ini_set('display_errors', 1);
                     <?php foreach ($topComments as $CustomerReviews) { ?>
                         <div class="reviewCard flex  ">
                             <div class="flex">
-                                <img src="../../<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
+                                <img src="../../Storage/profile/<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
                                 <div class="">
                                     <h2 class=" font-semibold lg:text-xl text-lg"><?= $CustomerReviews["username"] ?></h2>
                                     <div class=" text-yellow-500 text-xl">

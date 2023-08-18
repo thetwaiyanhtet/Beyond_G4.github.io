@@ -7,6 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>SignUp</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,9 +44,9 @@ session_start();
                     <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Password"></input>
                     <span class="text-red-500"><?php echo $_SESSION["registerError"] ?></span>
                 </div>
-                    <a>
-                     <button name="register" class=" text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display ml-32">Get Started</button>
-                    </a>
+                <a>
+                    <button name="register" class=" text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display ml-32">Get Started</button>
+                </a>
             </form>
         </div>
         </div>

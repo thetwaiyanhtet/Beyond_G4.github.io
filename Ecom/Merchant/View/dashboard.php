@@ -21,6 +21,7 @@ $trending_json = json_encode($trending);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Dashboard</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -45,12 +46,8 @@ $trending_json = json_encode($trending);
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Sales.png" alt="..."></div>
-                                <div class=" flex space-x-5">
-
-
-
-                                    <p>$ <?= $totalProfitSell ?></p>
-
+                                <div class=" text-center">
+                                    <p class=" font-semibold text-lg">$ <?= $totalProfitSell ?></p>
                                     <p>Sales</p>
                                 </div>
                             </div>
@@ -67,8 +64,12 @@ $trending_json = json_encode($trending);
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Profit.png" alt="..."></div>
-                                <div class=" flex space-x-5">
-                                    <p>$<?= $TotalProfit ?></p>
+                                <div class=" text-center">
+                                    <?php if (isset($TotalProfit)) { ?>
+                                        <p class=" font-semibold text-lg">$<?= $TotalProfit ?></p>
+                                    <?php } else { ?>
+                                        <p class=" font-semibold text-lg">$0</p>
+                                    <?php } ?>
                                     <p>Profit</p>
                                 </div>
                             </div>
@@ -76,12 +77,8 @@ $trending_json = json_encode($trending);
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Cost.png" alt="..."></div>
-                                <div class=" flex space-x-5">
-
-
-
-                                    <p>$ <?= $totalProfitBuy ?></p>
-
+                                <div class=" text-center">
+                                    <p class=" font-semibold text-lg">$ <?= $totalProfitBuy ?></p>
                                     <p>Capital</p>
                                 </div>
                             </div>
@@ -95,11 +92,11 @@ $trending_json = json_encode($trending);
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Quantity.png" alt="..."></div>
-                                <div class=" flex space-x-5">
+                                <div class=" text-center">
                                     <?php if (!$result["quantityOnHand"] == 0) { ?>
-                                        <p><?= $result["quantityOnHand"] ?></p>
+                                        <p class=" font-semibold text-lg pb-1"><?= $result["quantityOnHand"] ?></p>
                                     <?php } else { ?>
-                                        <p>0</p>
+                                        <p class=" font-semibold text-lg">0</p>
                                     <?php } ?>
                                     <p class=" text-sm">Quantity in Hand</p>
                                 </div>
@@ -108,8 +105,8 @@ $trending_json = json_encode($trending);
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Categories.png" alt="..."></div>
-                                <div class=" flex space-x-5">
-                                    <p><?= $totalCategoryCount ?></p>
+                                <div class=" text-center">
+                                    <p class=" font-semibold text-lg pb-1"><?= $totalCategoryCount ?></p>
                                     <p class=" text-sm">Number of Categories</p>
                                 </div>
                             </div>
@@ -207,23 +204,18 @@ $trending_json = json_encode($trending);
                     <div class=" flex space-x-2 pt-6 pb-6">
                         <div>
                             <p>Worst=1</p>
-
                         </div>
                         <div>
                             <p>Poor=2</p>
-
                         </div>
                         <div>
                             <p>Normal=3</p>
-
                         </div>
                         <div>
                             <p>Good=4</p>
-
                         </div>
                         <div>
                             <p>Excellent=5</p>
-
                         </div>
                     </div>
                 </div>
@@ -235,21 +227,16 @@ $trending_json = json_encode($trending);
                             <h1 class=" text-lg font-bold font-philosopher">Delivery</h1>
                         </div>
                         <hr>
-                      
-                          
-                            <div class="flex justify-between pb-3 space-x-5 p-3">
-                                <div>
-                                        <p class="font-semibold"><?= $totalDeliveryStatus0 ?></p>
-                                    <p>Processing</p>
-                                </div>
-                                <div>  
-                                        <p class="font-semibold"><?= $totalDeliveryStatus1 ?></p>
-
-                                    <p>Processed</p>
-                                </div>
+                        <div class="flex justify-between pb-3 space-x-5 p-3 text-center">
+                            <div>
+                                <p class="font-semibold"><?= $totalDeliveryStatus0 ?></p>
+                                <p>Processing</p>
                             </div>
-
-                        
+                            <div>
+                                <p class="font-semibold"><?= $totalDeliveryStatus1 ?></p>
+                                <p>Processed</p>
+                            </div>
+                        </div>
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950 h-[192px]">
                         <div class=" flex justify-center items-center space-x-3 pb-3 pt-3">
@@ -278,7 +265,7 @@ $trending_json = json_encode($trending);
                         </div>
                         <hr>
                         <div class=" text-center py-6">
-                            <p>$<?= $totalProfit ?></p>
+                            <p class=" font-semibold">$<?= $totalProfit ?></p>
                         </div>
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950">
@@ -372,7 +359,7 @@ $trending_json = json_encode($trending);
                     <div class=" flex justify-around pt-4 pb-4">
                         <?php foreach ($trending as $trendingProduct) { ?>
                             <div class=" flex-col space-y-3">
-                                <div class=" flex space-x-2">
+                                <div class=" flex space-x-2 text-sm flex-wrap">
                                     <p><?= $trendingProduct["name"] ?> :</p>
                                     <p><?= $trendingProduct["product_count"] ?></p>
                                 </div>
