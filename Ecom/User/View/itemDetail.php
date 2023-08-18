@@ -49,22 +49,22 @@ ini_set('display_errors', 1);
         <form action="./mainPage.php" method="post">
             <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
 
-                <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] lg:m shadow-2xl lg:w-[350px]">
+                <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] w-2/4 shadow-2xl lg:w-[350px] p-5">
                     <?php if (!empty($ItemDetails[0]["p_one"])) { ?>
                         <div class="flex items-center justify-center">
-                            <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-64 h-64">
+                            <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-96 h-auto">
                         </div>
                     <?php } else { ?>
                         <div></div>
                     <?php } ?>
                     <div class="flex items-center justify-center space-x-3">
                         <?php if (!empty($ItemDetails[0]["p_two"])) { ?>
-                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-20 h-20"></div>
+                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-40 h-auto"></div>
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>
                         <?php if (!empty($ItemDetails[0]["p_three"])) { ?>
-                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-20 h-20"></div>
+                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_three"] ?>" alt="..." class="w-40 h-auto"></div>
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>

@@ -22,7 +22,7 @@ $verifyData = $_SESSION["verifyData"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
-    <title>Beyond </title>
+    <title>Beyond</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,8 @@ $verifyData = $_SESSION["verifyData"];
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
     <link rel="stylesheet" href="./resources/css/bannerSlideShow.css">
+    <script src="./resources/js/chat.js" defer></script>
+    <link rel="stylesheet" href="./resources/css/chat.css">
     <script src="./resources/js/bannerSlideShow.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -156,11 +158,15 @@ $verifyData = $_SESSION["verifyData"];
                     </svg>
                 </button>
 
-                <div class="relative w-32">
+                <!-- <div class="relative w-32">
                     <div class=" overflow-hidden absolute mx-2 ">
                         <div id="ln_space" class="w-28 h-20"></div>
                     </div>
-                </div>
+                </div> -->
+
+
+
+
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <?php if ($verifyData["verify"] == 0) { ?>
@@ -218,7 +224,7 @@ $verifyData = $_SESSION["verifyData"];
                 </ul>
             </div>
         </div>
-        <form action="" method="post" >
+        <form action="" method="post">
             <div class="flex">
                 <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
                 <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -279,17 +285,23 @@ $verifyData = $_SESSION["verifyData"];
         </div>
     </div>
 
+    <button class="chat-btn z-50" id="chatBoxButton">
+        <img src="./resources/img/chat.png" alt="" class="w-20 h-auto">
+    </button>
+    <div class="chat-popup z-50 bg-white">
+       
+    </div>
 
 
     <section class="sec h-screen">
-        <section class="w-[85%] m-auto">
+        <section class="w-[90%] m-auto">
 
-            <div class="banner-container mt-32">
+            <div class="banner-container mt-28">
                 <!-- Banner_1 section -->
                 <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
-                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
             </div>
 
 
@@ -310,13 +322,13 @@ $verifyData = $_SESSION["verifyData"];
                                     <div class="product-item">
                                         <!-- <form method="post" action="../Controller/cartController.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>"> -->
                                         <div class="mx-4">
-                                            <div class="h-auto w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                                            <div class="h-auto w-52 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
                                                 <form action="./mainPage.php" method="post">
                                                     <div class="relative overflow-hidden bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                                         <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
                                                         <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
-                                                        <div class="w-56 m-auto p-2 h-44">
-                                                            <img class=" w-48 h-40 m-auto" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
+                                                        <div class=" flex justify-center items-center h-44">
+                                                            <img class=" w-52 h-auto m-auto" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
                                                         </div>
                                                         <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                                             <a href="./mainPage.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
@@ -327,7 +339,7 @@ $verifyData = $_SESSION["verifyData"];
 
                                                     <div class="relative dark:text-white ">
                                                         <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full "><?php echo $tranding["name"]; ?></h2>
-                                                        <p class="text-xs mt-2 ml-5 block "><?php echo $tranding["description"]; ?></p>
+                                                        <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
                                                         <!-- <del class="text-red-700 text-md">$999</del> -->
                                                         <p name="price" class="text-md font-bold mt-2 ml-5 block "><?php echo "$" . $tranding["sellprice"]; ?></p>
                                                         <div class="cart-action">
@@ -385,8 +397,8 @@ $verifyData = $_SESSION["verifyData"];
                                 <div class=" h-auto w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
                                     <form action="./mainPage.php" method="post">
                                         <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
-                                            <div class="w-56 m-auto p-2 h-44">
-                                                <img class="w-48 h-40 m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
+                                            <div class="flex justify-center items-center h-44">
+                                                <img class="w-48 h-auto m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
                                             </div>
                                             <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                                 <a href="./mainPage.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
@@ -397,7 +409,8 @@ $verifyData = $_SESSION["verifyData"];
                                         <div class="relative dark:text-white">
                                             <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full"><?= $productDetail["name"] ?></h2>
                                             <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                            <p class="text-xs mt-2 ml-5 block "><?= $productDetail["description"] ?></p>
+                                            <p class="text-xs mt-2 ml-5 block 
+                                             overflow-hidden h-4"><?= $productDetail["description"] ?></p>
                                             <p class="text-md font-bold mt-2 ml-5 block ">$<?= $productDetail["sellprice"] ?></p>
                                             <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                                             <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
@@ -487,7 +500,7 @@ $verifyData = $_SESSION["verifyData"];
 
 
         </section>
-        <section class="w-[90%] m-auto">
+        <section class="w-[90%] m-auto z-0">
             <div class="banner-container">
                 <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
                 <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
@@ -495,7 +508,7 @@ $verifyData = $_SESSION["verifyData"];
                 <!-- More images for this banner section -->
             </div>
 
-            <div class=" w-full h-auto py-5 z-10">
+            <div class=" w-full h-auto py-5 z-0">
                 <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
                 <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
 
@@ -742,10 +755,10 @@ $verifyData = $_SESSION["verifyData"];
             </div>
         </section>
 
-        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold animate-bounce"><ion-icon name="arrow-up-outline"></ion-icon></button>
+        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-50 bottom-28 right-10 border-0 w-14 h-14 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold animate-bounce"><ion-icon name="arrow-up-outline" class="scale-110"></ion-icon></button>
 
     </section>
-    <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script>
+    <!-- <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script> -->
     <script>
         var toTopButton = document.getElementById("to-top-button");
         window.onscroll = function() {
@@ -762,11 +775,11 @@ $verifyData = $_SESSION["verifyData"];
                 behavior: 'smooth'
             });
         }
-        document.addEventListener("DOMContentLoaded", function(e) {
-            ConveyThis_Initializer.init({
-                api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
-            });
-        });
+        // document.addEventListener("DOMContentLoaded", function(e) {
+        //     ConveyThis_Initializer.init({
+        //         api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
+        //     });
+        // });
     </script>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
