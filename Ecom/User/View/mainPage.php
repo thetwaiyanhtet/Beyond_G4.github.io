@@ -10,6 +10,7 @@ include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
 $verifyData = $_SESSION["verifyData"];
+$logoutEmail =  $_SESSION['logOutEmail']; 
 // echo "<pre>";
 // print_r($userData);
 // echo "</pre>";
@@ -171,31 +172,46 @@ $verifyData = $_SESSION["verifyData"];
                 </button>
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-                    <div class="px-4 py-3">
-                        <span class="block text-sm text-gray-900 dark:text-white"><?= $userData["username"] ?></span>
-                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400"><?= $userEmail ?></span>
-                    </div>
-                    <ul class="py-2" aria-labelledby="user-menu-button">
+                    <?php if ($userData) { ?>
+                        <div class="px-4 py-3">
+                            <span class="block text-sm text-gray-900 dark:text-white"><?= $userData["username"] ?></span>
+                            <span class="block text-sm  text-gray-500 truncate dark:text-gray-400"><?= $userEmail ?></span>
+                        </div>
+                        <ul class="py-2" aria-labelledby="user-menu-button">
+                            <li>
+                                <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+                            </li>
+                            <li>
+                                <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
+                            </li>
+                            <li>
+                                <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
+                            </li>
+                            <li>
+                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                        <p class="float-left px-4">Log out</p>
+                                    </button>
+                            </li>
+                        </ul>
+                    <?php } else { ?>
+                        <ul class="py-2" aria-labelledby="user-menu-button">
                         <li>
-                            <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
-                        </li>
-                        <li>
-                            <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
-                        </li>
-                        <li>
-                            <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
-                        </li>
-                        <li>
-                            <!-- <a href="./login.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</a> -->
-                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
-                                <p class="float-left px-4">Log out</p>
-                            </button>
-                        </li>
-                    </ul>
+                                <a href="./login.php">
+                                    <button class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                        <p class="float-left px-4">Log in</p>
+                                    </button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./SignUp.php">
+                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                        <p class="float-left px-4">Sign Up</p>
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    <?php } ?>
                 </div>
-
-
-
                 <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
@@ -218,7 +234,7 @@ $verifyData = $_SESSION["verifyData"];
                 </ul>
             </div>
         </div>
-        <form action="" method="post" >
+        <form action="" method="post">
             <div class="flex">
                 <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
                 <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -268,12 +284,12 @@ $verifyData = $_SESSION["verifyData"];
                     </svg> -->
                     <img src="./resources/img/sad-sponge.gif" alt="" class="mx-auto mb-4 w-3/4 h-52">
                     <h3 class="mb-5 text-lg font-normal text-gray-800 dark:text-gray-500">Are you sure you want to Log Out?</h3>
-                    <a href="./login.php">
-                        <button data-modal-hide="popup-modal" type="button" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                            Log out
-                        </button>
-                    </a>
+                    <form action="../Controller/logoutController.php?email=<?php echo $userEmail?>" method="post">
+                    <button data-modal-hide="popup-modal" type="submit" name="logout" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                        Log out
+                    </button>
                     <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -771,5 +787,6 @@ $verifyData = $_SESSION["verifyData"];
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
+
 
 </html>

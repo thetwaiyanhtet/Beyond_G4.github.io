@@ -1,6 +1,6 @@
 <?php
 include "../Model/model.php";
-$userEmail = $_SESSION["user_ID"];
+$userEmail = $_SESSION["userEmail"];
 
 $VerifySql = $pdo->prepare(
   "SELECT verify
