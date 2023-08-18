@@ -1,7 +1,7 @@
 <?php
 include "./adminsidebar.php";
-
-include "../Controller/logoandbusinessController.php";
+ include "../Controller/logoandbusinessController.php";
+// include "../Controller/updatelogoandnameController.php";
 $logoandname = $_SESSION["m_logo"];
 ?>
 
@@ -51,11 +51,6 @@ $logoandname = $_SESSION["m_logo"];
             </form>
 
 
-        </div>
-        <div id="delhid" class=" absolute top-20 mt-40 ml-60 hidden">
-            <?php
-            include "./savepop-up.php";
-            ?>
         </div>
     </main>
 

@@ -1,5 +1,8 @@
 <?php
 include "./header.php";
+
+include "../Controller/planupgrade.php";
+$plandate = $_SESSION["plancheck"];
 ?>
 <!doctype html>
 <html>
@@ -78,13 +81,18 @@ include "./header.php";
             <span class="text-sm font-medium">Report</span>
           </a>
         </li>
-        <li class=" w-52">
-          <a href="./ChoosePlan.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white">
-            <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"></span>
-            <button class=" bg-gray-200 px-4 py-1 rounded-md text-black">Upgrade Plan</button>
-          </a>
-        </li>
-        <li class=" w-52 mt-3">
+        <?php $currentdate = strtotime(date('Y-m-d'));
+        $planexp = strtotime($plandate[0]["plan_end_date"]);
+        if ($currentdate > $planexp - 604800) { ?>
+          <li class=" w-52">
+            <a href="./ChoosePlan.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white">
+              <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"></span>
+              <button class=" bg-gray-200 px-4 py-1 rounded-md text-black">Upgrade Plan</button>
+            </a>
+          </li>
+        <?php  } ?>
+
+        <li class=" w-52 ">
           <a href="./Setting.php" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-100 text-white hover:text-white setting">
             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i class='bx bx-cog'></i></span>
             <span class="text-sm font-medium">Setting</span>
