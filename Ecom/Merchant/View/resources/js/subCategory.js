@@ -32,4 +32,6 @@ $(document).ready(function () {
     const selectedCategoryId = $(this).val();
     updateSubcategories(selectedCategoryId);
   });
+// Simulate a change event on the category dropdown
+  $("select[name='category']").trigger("change");
 });
