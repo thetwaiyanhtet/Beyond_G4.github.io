@@ -11,7 +11,7 @@
     height: 60px;
     background-color: transparent;
     border-radius: 50%;
-    opacity: 0.5;;
+    opacity: 0.8;
     transition: opacity 0.3s;
     box-shadow: 0 5px 5px rgba(0,0,0,0.4);
 }
