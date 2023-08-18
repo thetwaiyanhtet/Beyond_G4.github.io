@@ -41,8 +41,8 @@ session_start();
                 <form action="../Controller/loginController.php" method="post">
                     <p class="text-red-700 text-center">
                         <?php
-                        if(isset($_SESSION["loginerror"])){
-                        echo  $_SESSION["loginerror"];
+                        if (isset($_SESSION["loginerror"])) {
+                            echo  $_SESSION["loginerror"];
                         }
                         ?></p>
                     <div class="m-10 w-[100%]">
@@ -74,17 +74,16 @@ session_start();
         <div class="flex flex-col items-center m-10 md:hidden">
             <p class=" px-2 font-Playfair Display mt-6 pb-4">Don't have account?</p>
             <a href="./SignUp.php" class=" text-purple-700 underline px-2 font-Playfair Display pb-4">Create New Account</a>
-            <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block m-auto underline text-btn-color text-center p-2 font-Playfair Display" type="button">
-                Terms and Conditions
-            </button>
         </div>
+        <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block m-auto underline text-btn-color text-center p-2 font-Playfair Display" type="button">
+            Terms and Conditions
+        </button>
 
     </section>
 
     <!-- Modal toggle -->
 
 
-    <!-- Main modal -->
     <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-2xl max-h-full">
             <!-- Modal content -->
@@ -104,6 +103,7 @@ session_start();
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
+                        <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
                         <b>1. User Accounts</b> <br>
                         a. Registration: To access certain features of the Website, you may be required to create a user account. You agree to provide accurate and complete information during the registration process. <br>
                         b. Account Security: You are responsible for maintaining the confidentiality of your account login credentials and for any activities that occur under your account. Notify us immediately of any unauthorized use or security breach. <br><br>
@@ -140,11 +140,13 @@ session_start();
 
                 </div>
                 <!-- Modal footer -->
-                <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">I agree</button>
+                <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
