@@ -1,10 +1,8 @@
 <?php
-include "../Controller/logoandbusinessController.php";
+
 include "../Controller/updatepasswordController.php";
 $admin = $_SESSION["adminInfo"];
-
-// echo "<pre>";
-//  print_r($admin);
+include "../Controller/logoandbusinessController.php";
  $logoandname = $_SESSION["m_logo"];
 ?>
 <!doctype html>
