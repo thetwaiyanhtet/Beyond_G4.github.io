@@ -224,12 +224,6 @@ include "../Controller/categoryListController.php";
         </section>
     </main>
 </body>
-<script>
-    $(document).ready(function() {
-        // Simulate a change event on the category dropdown
-        $("select[name='category']").trigger("change");
-    });
-</script>
 </html>
 <?php $_SESSION["productIdError"] = "";
 $_SESSION["sellpriceError"] = ""
