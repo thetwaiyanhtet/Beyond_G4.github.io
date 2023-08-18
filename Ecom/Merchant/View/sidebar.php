@@ -18,6 +18,8 @@ include "./header.php";
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./resources/js/dateandtime.js "></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./resources/js/chat.js" defer></script>
+  <link rel="stylesheet" href="./resources/css/chat.css">
 </head>
 
 <body class=" font-poppins">
@@ -96,6 +98,12 @@ include "./header.php";
         </li>
       </ul>
     </div>
+  </div>
+  <button class="chat-btn z-50 scale-110" id="chatBoxButton">
+    <img src="./resources/img/chat.png" alt="" class="w-20 h-auto animate-[wiggle_700ms_ease-in-out_infinite] ">
+  </button>
+  <div class="chat-popup z-50 bg-white">
+
   </div>
 
   <script>

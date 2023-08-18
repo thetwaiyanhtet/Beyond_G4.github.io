@@ -3,6 +3,15 @@ incoming_id = form.querySelector(".incoming_id").value,
 inputField = form.querySelector(".input-field"),
 sendBtn = form.querySelector("button"),
 chatBox = document.querySelector(".chat-box");
+const popup = document.querySelector('.chat-popup');
+const chatBtn = document.querySelector('.chat-btn');
+
+
+
+
+chatBtn.addEventListener('click', () => {
+    popup.classList.toggle('show');
+})
 
 form.onsubmit = (e)=>{
     e.preventDefault();
