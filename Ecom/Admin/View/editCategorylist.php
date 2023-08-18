@@ -1,12 +1,12 @@
 <?php
-
+include "./adminsidebar.php";
 include "../Controller/categoryListController.php";
-$result = $_SESSION["m_category"];
 
+$result = $_SESSION["m_category"];
 $categorydata = $_SESSION["editcategory"];
 
 //  print_r($categorydata);
-include "./adminsidebar.php";
+
 ?>
 
 
