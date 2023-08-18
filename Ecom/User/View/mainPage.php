@@ -80,7 +80,7 @@ $verifyData = $_SESSION["verifyData"];
                 </label>
                 <!-- <label for="cart" class="ml-3"><ion-icon name="cart-outline" class="text-2xl mt-2 dark:text-white text-black"></ion-icon>
                 </label> -->
-                <!-- <div id="shopping-cart" class="  peer-checked:visible w-auto bg-white/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-white p-5 absolute z-30 top-20 right-0 rounded-bl-2xl drop-shadow-lg cursor-pointer overflow-y-scroll hide-scroll-bar">
+    <!-- <div id="shopping-cart" class="  peer-checked:visible w-auto bg-white/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-white p-5 absolute z-30 top-20 right-0 rounded-bl-2xl drop-shadow-lg cursor-pointer overflow-y-scroll hide-scroll-bar">
                     <div class="font-bold">Your Shopping Cart</div>
 
                     <a id="btnEmpty" href="../Controller/cartController.php?action=empty">Empty Cart</a>
@@ -144,7 +144,7 @@ $verifyData = $_SESSION["verifyData"];
                     <?php
                     }
                     ?>
-                </div> -->
+                </div>
 
 
                 <button id="theme-toggle" type="button" class="text-gray-900 dark:text-white focus:outline-none  rounded-lg text-sm p-2.5">
@@ -155,12 +155,6 @@ $verifyData = $_SESSION["verifyData"];
                         <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
-
-                <div class="relative w-32">
-                    <div class=" overflow-hidden absolute mx-2 ">
-                        <div id="ln_space" class="w-28 h-20"></div>
-                    </div>
-                </div>
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <?php if ($verifyData["verify"] == 0) { ?>
@@ -196,13 +190,13 @@ $verifyData = $_SESSION["verifyData"];
 
 
 
-                <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </div>
+    <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+    </button>
+    </div>
 
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:border-gray-700">
@@ -218,41 +212,7 @@ $verifyData = $_SESSION["verifyData"];
                 </ul>
             </div>
         </div>
-        <form action="" method="post" >
-            <div class="flex">
-                <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
-                <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                    </svg></button>
-                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mockups</button>
-                        </li>
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Templates</button>
-                        </li>
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Design</button>
-                        </li>
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="relative w-full">
-                    <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search Mockups, Logos, Design Templates..." required>
-                    <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium w-20 h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
-                        <span class="sr-only">Search</span>
-                    </button>
-                </div>
-            </div>
-        </form>
     </nav>
-
     <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-md max-h-full">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -428,7 +388,7 @@ $verifyData = $_SESSION["verifyData"];
                 <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
-            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Feature Shops</span></h1>
+            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Shops</span></h1>
             <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-10">
@@ -446,12 +406,26 @@ $verifyData = $_SESSION["verifyData"];
                                 <div class="flex py-2">
                                     <div class="flex justify-between items-center">
                                         <div class="flex items-center">
-                                            <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
+                                            <div class=" text-yellow-500 text-xl">
+                                                <?php
+                                                if (!function_exists('numberToStars')) {
+                                                    function numberToStars($number)
+                                                    {
+                                                        $roundedNumber = round($number);
+                                                        $maxStars = 5;
+                                                        $fullStars = str_repeat('★', $roundedNumber);
+                                                        $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                                                        return $fullStars . $emptyStars;
+                                                    }
+
+                                                ?>
+                                                <?php }  ?>
+                                                <?= numberToStars($latestShop["review_rating"]) ?>
+
+                                            </div>
                                             <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                                4.96
-                                                <span class="text-gray-500 font-normal">(76 reviews)</span>
+                                                    <?= $latestShop["review_rating"] ?>
+                                                <span class="text-gray-500 font-normal">(<?= $latestShop["review_count"] ?> reviews)</span>
                                             </p>
                                         </div>
                                     </div>

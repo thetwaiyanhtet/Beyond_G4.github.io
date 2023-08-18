@@ -68,11 +68,16 @@ $AllProduct = $AllProductSql->fetchAll(PDO::FETCH_ASSOC);
 // echo "<pre>";
 //  print_r($AllProduct);
 //  echo "</pre>";
-
 $FeatureShopSql = $pdo->prepare(
-    "SELECT m_merchant.logo, m_merchant.m_name,m_merchant.id,m_merchant.store_name
-    FROM m_merchant 
-    ORDER BY create_date DESC
+    "SELECT m_merchant.logo, m_merchant.m_name, m_merchant.id, m_merchant.store_name,
+    ROUND(AVG(m_cusreview.rating), 1) as review_rating,COUNT(m_cusreview.rating) as review_count
+    FROM m_cusreview
+    JOIN m_merchant 
+    ON m_cusreview.merchant_id = m_merchant.id
+    JOIN m_product
+    ON m_cusreview.product_id = m_product.id
+    GROUP BY m_cusreview.merchant_id 
+    ORDER BY m_merchant.create_date DESC
     LIMIT 3"
 );
 
@@ -81,3 +86,5 @@ $latestMerchants = $FeatureShopSql->fetchAll(PDO::FETCH_ASSOC);
 
 // echo "<pre>";
 // print_r($latestMerchants);
+// echo "</pre>";
+
