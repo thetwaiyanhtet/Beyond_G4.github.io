@@ -16,8 +16,6 @@ if(!isset($category)){
 
         $_SESSION["editcategory"]= $sql->fetchAll(PDO::FETCH_ASSOC);
         
-
-        
         header("Location: ../View/editCategorylist.php");
     
 }

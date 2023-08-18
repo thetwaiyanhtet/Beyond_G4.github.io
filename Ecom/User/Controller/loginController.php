@@ -16,8 +16,6 @@ if(isset($_POST["login"])){
    $sql -> bindValue(":email", $email);
    $sql -> execute();
    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-  //  echo "<pre>";
-  //  print_r($result);
    
    if (count($result) == 0) {
     $_SESSION["loginerror"] = "Email not found!";

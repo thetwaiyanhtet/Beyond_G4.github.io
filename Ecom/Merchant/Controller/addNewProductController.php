@@ -1,7 +1,6 @@
 <?php
 session_start();
-// echo "<pre>";
-// print_r($_POST);
+
 //middleware
 // include "../../Merchant/Controller/middleware/loginCheck.php";
 ini_set('display_errors', 1);

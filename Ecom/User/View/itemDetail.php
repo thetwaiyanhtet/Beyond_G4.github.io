@@ -68,7 +68,7 @@ ini_set('display_errors', 1);
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>
-                        <input type="hidden" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
+                        <input type="hidden" id="selectedImage" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                     </div>
                 </div>
                 <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
@@ -95,8 +95,7 @@ ini_set('display_errors', 1);
                         <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(2)" style="background-color: <?= $ItemDetails[0]["color_3"]; ?>"></div>
                     </div>
 
-                    <input type="hidden" id="selectedImageInput" name="selectedImage" value="">
-
+                   
 
                     <script>
                         const userPics = document.getElementsByClassName('user-pic');
@@ -114,8 +113,8 @@ ini_set('display_errors', 1);
                             }
                             userPics[index].classList.add('active-pic');
                             productImage.src = "../../Storage//product/" + imageSources[index];
-                            selectedImageInput.value = imageSources[index];
-                            console.log(selectedImageInput.value);
+                            selectedImage.value = imageSources[index];
+                            console.log(selectedImage.value);
 
                         }
                     </script>

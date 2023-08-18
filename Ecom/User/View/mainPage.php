@@ -10,6 +10,7 @@ include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
 $verifyData = $_SESSION["verifyData"];
+$logoutEmail =  $_SESSION['logOutEmail']; 
 // echo "<pre>";
 // print_r($userData);
 // echo "</pre>";
@@ -49,7 +50,7 @@ $verifyData = $_SESSION["verifyData"];
 </head>
 
 <body class=" bg-purple-50 dark:bg-gray-950 hide-scroll-bar scroll-smooth">
-    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+<nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4 ">
             <a href="./mainPage.php" class="flex items-center">
                 <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
@@ -274,12 +275,12 @@ $verifyData = $_SESSION["verifyData"];
                     </svg> -->
                     <img src="./resources/img/sad-sponge.gif" alt="" class="mx-auto mb-4 w-3/4 h-52">
                     <h3 class="mb-5 text-lg font-normal text-gray-800 dark:text-gray-500">Are you sure you want to Log Out?</h3>
-                    <a href="./login.php">
-                        <button data-modal-hide="popup-modal" type="button" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                            Log out
-                        </button>
-                    </a>
+                    <form action="../Controller/logoutController.php?email=<?php echo $userEmail?>" method="post">
+                    <button data-modal-hide="popup-modal" type="submit" name="logout" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                        Log out
+                    </button>
                     <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -291,7 +292,6 @@ $verifyData = $_SESSION["verifyData"];
     <div class="chat-popup z-50 bg-white">
        
     </div>
-
 
     <section class="sec h-screen">
         <section class="w-[90%] m-auto">
@@ -441,7 +441,7 @@ $verifyData = $_SESSION["verifyData"];
                 <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
-            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Feature Shops</span></h1>
+            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Shops</span></h1>
             <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-10">
@@ -459,12 +459,26 @@ $verifyData = $_SESSION["verifyData"];
                                 <div class="flex py-2">
                                     <div class="flex justify-between items-center">
                                         <div class="flex items-center">
-                                            <svg class="h-3 md:h-5 md:w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
+                                            <div class=" text-yellow-500 text-xl">
+                                                <?php
+                                                if (!function_exists('numberToStars')) {
+                                                    function numberToStars($number)
+                                                    {
+                                                        $roundedNumber = round($number);
+                                                        $maxStars = 5;
+                                                        $fullStars = str_repeat('★', $roundedNumber);
+                                                        $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                                                        return $fullStars . $emptyStars;
+                                                    }
+
+                                                ?>
+                                                <?php }  ?>
+                                                <?= numberToStars($latestShop["review_rating"]) ?>
+
+                                            </div>
                                             <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                                4.96
-                                                <span class="text-gray-500 font-normal">(76 reviews)</span>
+                                                    <?= $latestShop["review_rating"] ?>
+                                                <span class="text-gray-500 font-normal">(<?= $latestShop["review_count"] ?> reviews)</span>
                                             </p>
                                         </div>
                                     </div>
@@ -784,5 +798,6 @@ $verifyData = $_SESSION["verifyData"];
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
+
 
 </html>

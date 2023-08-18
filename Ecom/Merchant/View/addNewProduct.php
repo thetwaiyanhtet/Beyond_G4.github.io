@@ -1,5 +1,4 @@
 <?php
-
 include "./sidebar.php";
 include "../Controller/categoryListController.php";
 
@@ -14,10 +13,13 @@ include "../Controller/categoryListController.php";
     <title>Add New Product</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
+    <script src="../View/resources/js/subCategory.js"></script>
     <link rel="stylesheet" href="./resources/css/inventory.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="../View/resources/js/product.js" defer></script>
     <!-- <script>
 
@@ -32,7 +34,7 @@ include "../Controller/categoryListController.php";
             document.getElementById("put3").value=get;
         }
     </script> -->
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -108,13 +110,25 @@ include "../Controller/categoryListController.php";
                                     <div>
                                         <p>Category</p>
                                     </div>
-                                    <div><select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
+                                    <div>
+                                        <select name="category" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
                                             <?php foreach ($categories as $category) { ?>
                                                 <option value="<?= $category["id"] ?>"><?= $category["c_name"] ?></option>
                                             <?php } ?>
-
-
-                                        </select></div>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Sub Category</p>
+                                    </div>
+                                    <div>
+                                        <select name="subCategory" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
+                                            <?php foreach ($subCategories as $subCategory) { ?>
+                                                <option value="<?= $subCategory["category_id"] ?>"><?= $subCategory["s_c_name"] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color</label></div>
@@ -210,10 +224,7 @@ include "../Controller/categoryListController.php";
         </section>
     </main>
 </body>
-
 </html>
 <?php $_SESSION["productIdError"] = "";
 $_SESSION["sellpriceError"] = ""
-
-
 ?>
