@@ -24,9 +24,7 @@ if (isset($_POST["payment"])) {
             password,
             plan_id,
             plan_start_date,
-            plan_end_date,
-            create_date,
-            update_date
+            plan_end_date
         )
         VALUES
         (
@@ -35,9 +33,7 @@ if (isset($_POST["payment"])) {
            :merchantPw,
            :planID,
            :planStart,
-           :planEnd,
-           :createDate,
-           :updateDate
+           :planEnd
         )"
     );
     $sql2->bindValue(":merchantName",$merchantName);
@@ -46,8 +42,6 @@ if (isset($_POST["payment"])) {
     $sql2->bindValue(":planID",$selected_plan);
     $sql2->bindValue(":planStart",date('Y-m-d'));
     $sql2->bindValue(":planEnd",date('Y-m-d'));
-    $sql2->bindValue(":createDate",date('Y-m-d'));
-    $sql2->bindValue(":updateDate",date('Y-m-d'));
     $sql2->execute();
 
 
