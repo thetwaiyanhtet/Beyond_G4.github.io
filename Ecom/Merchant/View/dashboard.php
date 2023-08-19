@@ -135,7 +135,7 @@ $trending_json = json_encode($trending);
                             <?= numberToStars($averageReview["review_rating"]) ?>
 
                         </div>
-                        <p class=" font-semibold text-lg"><?= $averageReview["review_rating"] ?></p>
+                        <p class=" font-semibold text-lg"><?= $averageReview["review_rating"] ?><span class=" opacity-50 text-sm">  / 5</span></p>
                         <p>Out of Stars</p>
                     </div>
                     <p class=" text-sm opacity-50">Overall rating of Customers' Reviews</p>
