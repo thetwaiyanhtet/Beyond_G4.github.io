@@ -46,15 +46,15 @@ session_start();
                         <div class="flex justify-between">
                             <div>
                                 <label>Card Number</label><br>
-                                <input type="text" name="user" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2 outline-none">
+                                <input type="text" name="user" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2 outline-none" required>
                             </div>
                             <div>
                                 <label>Date</label><br>
-                                <input type="text" name="user" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" placeholder="03/23">
+                                <input type="text" name="user" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" placeholder="03/23" required>
                             </div>
                             <div>
                                 <label>CVV</label><br>
-                                <input type="text" name="user" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none">
+                                <input type="text" name="user" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" required>
                             </div>
                         </div>
                         <ion-icon name="lock-closed-outline" class="mt-2"></ion-icon>
@@ -66,7 +66,7 @@ session_start();
                     </div>
                     <p class=" w-94  border border-solid border-black"></p>
                     <div class="float-left inline-flex m-4">
-                        <input type="radio" name="payment" value="Kpay" class="form-checkbox w-6 h-6 outline-none">
+                        <input type="radio" name="payment" value="KBZ" class="form-checkbox w-6 h-6 outline-none">
                         <p class="ml-2 font-poppins">Kpay</p>
                     </div>
                     <div class="float-right inline-flex m-4">
@@ -135,10 +135,9 @@ session_start();
                             echo  '$' . $Data['price'];
                             ?></p>
                     </div>
-                    <button data-modal-target="defaultModal1" data-modal-toggle="defaultModal1" type="button" class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>
+                    <button name="payNow" type="submit" data-modal-target="defaultModal1" data-modal-toggle="defaultModal1" type="button" class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>
                 </div>
     </form>
-
     </div>
 
     </div>
