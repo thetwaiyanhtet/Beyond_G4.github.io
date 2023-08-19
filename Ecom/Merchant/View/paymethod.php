@@ -17,11 +17,12 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+
 </head>
 
 <body class=" font-poppins">
     <a href="./ChoosePlan.php"><ion-icon name="arrow-back-outline" class="m-2 text-4xl p-3"></ion-icon></a>
-    <form action="../Controller/paymentController.php" method="post">
+    <form action="../Controller/paymentController.php" method="post" id="paymentForm">
         <div class="flex justify-center space-x-5">
             <!--Payment Method-->
             <div class="flex flex-col">
@@ -46,15 +47,15 @@ session_start();
                         <div class="flex justify-between">
                             <div>
                                 <label>Card Number</label><br>
-                                <input type="text" name="user" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2 outline-none">
+                                <input type="text" name="cardNumber" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2 outline-none">
                             </div>
                             <div>
                                 <label>Date</label><br>
-                                <input type="text" name="user" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" placeholder="03/23">
+                                <input type="text" name="cardDate" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" placeholder="03/23">
                             </div>
                             <div>
                                 <label>CVV</label><br>
-                                <input type="text" name="user" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none">
+                                <input type="text" name="cardCVV" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none">
                             </div>
                         </div>
                         <ion-icon name="lock-closed-outline" class="mt-2"></ion-icon>
@@ -66,7 +67,7 @@ session_start();
                     </div>
                     <p class=" w-94  border border-solid border-black"></p>
                     <div class="float-left inline-flex m-4">
-                        <input type="radio" name="payment" value="Kpay" class="form-checkbox w-6 h-6 outline-none">
+                        <input type="radio" name="payment" value="KBZ" class="form-checkbox w-6 h-6 outline-none">
                         <p class="ml-2 font-poppins">Kpay</p>
                     </div>
                     <div class="float-right inline-flex m-4">
@@ -135,15 +136,14 @@ session_start();
                             echo  '$' . $Data['price'];
                             ?></p>
                     </div>
-                    <button class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>
+                    <button id="payNowButton" name="payNow" type="submit"  class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>
                 </div>
     </form>
-
     </div>
 
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
+<script src="./resources/js/payment.js"></script>
 
 </html>
