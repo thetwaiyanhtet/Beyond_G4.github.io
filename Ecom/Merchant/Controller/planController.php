@@ -10,5 +10,3 @@ ini_set('display_errors', 1);
 }else {
     header("Location: ../View/404page.php");
 }
-
-$_SESSION["selectedPlan"] = $selectedPlan;

@@ -11,28 +11,18 @@
 //         }
 //     });
 
-
-
 document.getElementById("paymentForm").addEventListener("submit", function (event) {
-    // Get all payment method radio inputs
+   
     var paymentMethodInputs = document.querySelectorAll('input[name="payment"]');
-    
-
-    // Initialize a variable to track whether validation should be performed
     var performValidation = true;
-
-    // Loop through the payment method inputs to find the selected one
     for (var i = 0; i < paymentMethodInputs.length; i++) {
         if (paymentMethodInputs[i].checked) {
-            // If "Kpay" is selected, no validation needed, so set performValidation to false
             if (paymentMethodInputs[i].value === "KBZ") {
                 performValidation = false;
                 break;
             }
         }
     }
-
-    // If performValidation is true, validate the credit card details
     if (performValidation) {
         var cardHolderName = document.querySelector('input[name="user"]');
         var cardNumber = document.querySelector('input[name="cardNumber"]');
