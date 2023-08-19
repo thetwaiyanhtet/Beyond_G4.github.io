@@ -1,6 +1,6 @@
 <?php
 include "./sidebar.php";
-include "../Controller/orderController.php";
+include "../Controller/orderreportcontroller.php";
 
 ?>
 
@@ -75,10 +75,10 @@ include "../Controller/orderController.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $count = ($currentPage - 1) * $itemsPerPage ?>
-                            <?php foreach ($paginatedData as $order) { ?>
+                            <!-- <?php $count = ($currentPage - 1) * $itemsPerPage ?> -->
+                            <?php foreach ($ordersreport as $order) { ?>
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                                    <th scope="row" class="-py-5 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                         <?= ++$count ?>.
                                     </th>
                                     <td class="px-6 py-4">
