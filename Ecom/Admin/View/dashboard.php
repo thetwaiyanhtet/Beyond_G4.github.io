@@ -3,6 +3,7 @@ include "./adminsidebar.php";
 include "../Controller/totalController.php";
 include "../Controller/trendingproductController.php";
 include "../Controller/orderandcustomerController.php";
+include "../Controller/recentmerchantcontroller.php";
 $order = $_SESSION["order"];
 $revenue = $_SESSION["revenue"];
 $merchant = $_SESSION["merchant"];
@@ -341,12 +342,14 @@ $category_json = json_encode($category);
             </div>
             <div class=" w-60 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Recent Registred Merchant</p>
-                <?php foreach ($lmerchant as $index => $value) { ?>
+                <?php $for = 2; foreach ($lmerchant as $index => $value) { ?>
                     <div class="flex items-center ml-3 border-b-2 pb-2">
                         <img class="w-20" src="../..<?= $value['logo'] ?>" alt="">
                         <div class="mx-3">
                             <p><?= $value['m_name'] ?></p>
-                            <p>30 mins</p>
+                            <p><?= $data[$for - $index]['create_date'] ?>
+                             
+                            </p>
                         </div>
                     </div>
                 <?php } ?>
