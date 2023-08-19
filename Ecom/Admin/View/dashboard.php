@@ -348,7 +348,6 @@ $category_json = json_encode($category);
                         <div class="mx-3">
                             <p><?= $value['m_name'] ?></p>
                             <p><?= $data[$for - $index]['create_date'] ?>
-                             
                             </p>
                         </div>
                     </div>
