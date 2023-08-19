@@ -100,7 +100,7 @@ include "../Controller/orderDetailController.php";
                         <tr class="border-b">
                             <td class="py-4"><?= ++$productCount; ?>.</td>
                             <td class=" text-left pl-6"><?= $orderDetail["name"] ?></td>
-                            <td><img src="../../<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
+                            <td><img src="../../Storage/product/<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
                             <td> <?= $orderDetail["quantity"] ?></td>
                             <td>$<?= $orderDetail["sellprice"] ?></td>
                             <td>$<?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?></td>

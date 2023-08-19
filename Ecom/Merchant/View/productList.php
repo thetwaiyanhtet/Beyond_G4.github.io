@@ -87,7 +87,7 @@ include "../Controller/productListController.php";
                                             <?= $product["name"]; ?>
                                         </th>
                                         <td class="px-6 py-4">
-                                            <?= $product["id"]; ?>
+                                            <?= $product["code"]; ?>
                                         </td>
                                         <td class="px-6 py-4">
                                             <?= $product["c_name"]; ?>

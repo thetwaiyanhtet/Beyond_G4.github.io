@@ -21,25 +21,12 @@ include "../Controller/categoryListController.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="../View/resources/js/product.js" defer></script>
-    <!-- <script>
-
-        function fetch(){
-            var get=document.getElementById("get1").value;
-            document.getElementById("put1").value=get;
-
-            var get=document.getElementById("get2").value;
-            document.getElementById("put2").value=get;
-
-            var get=document.getElementById("get3").value;
-            document.getElementById("put3").value=get;
-        }
-    </script> -->
 
 </head>
 
 <body>
     <main class=" ml-56">
-        <section>
+        <section class="relative">
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">New Product</span></p>
             <form action="../Controller/addNewProductController.php" method="POST" enctype="multipart/form-data">
                 <div class=" flex justify-center px-5 py-1">
@@ -49,37 +36,41 @@ include "../Controller/categoryListController.php";
                         </div>
                         <div>
                             <ul class=" flex space-x-3">
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo1">
                                             <img src="../View/resources/img/gallery-add.png" id="photoimg1" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo1">
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo1">Remove</p>
                                 </li>
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
                                             <img src="../View/resources/img/gallery-add.png" id="photoimg2" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" name="photo2">
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo2">Remove</p>
                                 </li>
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
                                             <img src="../View/resources/img/gallery-add.png" id="photoimg3" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" name="photo3">
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo3">Remove</p>
                                 </li>
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
                                             <img src="../View/resources/img/gallery-add.png" id="photoimg4" alt="">
                                         </label>
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" name="photo4">
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo4">Remove</p>
                                 </li>
                             </ul>
                         </div>
@@ -133,13 +124,13 @@ include "../Controller/categoryListController.php";
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color</label></div>
                                     <div>
-                                        <span><input type="color" name="color1" class=" rounded-full w-9 h-9">
+                                        <span><input type="color" name="color1" class=" w-9 h-9">
                                             <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
                                         </span>
-                                        <span><input type="color" name="color2" class=" rounded-full w-9 h-9">
+                                        <span><input type="color" name="color2" class=" w-9 h-9">
                                             <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
                                         </span>
-                                        <span><input type="color" name="color3" class=" rounded-full w-9 h-9">
+                                        <span><input type="color" name="color3" class=" w-9 h-9">
                                             <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
                                         </span>
                                     </div>
@@ -175,6 +166,19 @@ include "../Controller/categoryListController.php";
                             </div>
 
                             <div class="flex-col space-y-5">
+                                <!-- <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Buying Price</p>
+                                    </div>
+                                    <div><input type="text" name="buyprice" class=" inputBox"></div>
+                                </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Selling Price</p>
+                                    </div>
+                                    <div><input type="text" name="sellprice" class="inputBox"></div>
+                                </div> -->
+
                                 <div class="flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Buying Price</p>
@@ -233,58 +237,49 @@ include "../Controller/categoryListController.php";
                     </div>
                 </div>
             </form>
+
         </section>
     </main>
-</body>
-<script>
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     const colorFields = document.getElementById("colorFields");
-    //     const addColorFieldButton = document.getElementById("addColorField");
-    //     let colorCount = 1;
 
-    //     addColorFieldButton.addEventListener("click", function () {
-    //         colorCount++;
+    <script>
+    const cancelButtons = document.querySelectorAll('.cancel-btn');
 
-    //         const colorInput = document.createElement("input");
-    //         colorInput.type = "color";
-    //         colorInput.name = `color${colorCount}`;
-    //         colorInput.className = "rounded-full w-9 h-9";
-
-    //         const span = document.createElement("span");
-    //         span.appendChild(colorInput);
-
-    //         colorFields.appendChild(span);
-    //     });
-    // });
-
-    //dunamic input texts
-    document.addEventListener("DOMContentLoaded", function() {
-        const inputForm = document.getElementById("inputForm");
-        const inputFields = document.getElementById("inputFields");
-        const addInputFieldButton = document.getElementById("addInputField");
-        let inputCount = 1;
-
-        addInputFieldButton.addEventListener("click", function() {
-            inputCount++;
-
-            const input = document.createElement("input");
-            input.type = "text";
-            input.name = `input${inputCount}`;
-            input.className = "inputBox";
-
-            const span = document.createElement("span");
-            span.appendChild(input);
-
-            inputFields.appendChild(span);
+    cancelButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const inputId = button.getAttribute('data-input-id');
+            const inputElement = document.getElementById(inputId);
+            const imgElement = document.getElementById(`photoimg${inputId.slice(-1)}`);
+            
+            inputElement.value = ''; // Reset the input value
+            imgElement.src = '../View/resources/img/gallery-add.png'; // Reset the image source
+            
+            button.classList.add('hidden'); // Hide the cancel button
         });
+    });
 
-        inputForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-            // Handle form submission as needed
+    // Show cancel buttons when a file is selected
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    fileInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            const inputId = input.getAttribute('id');
+            const cancelBtn = document.querySelector(`[data-input-id="${inputId}"]`);
+            const imgElement = document.getElementById(`photoimg${inputId.slice(-1)}`);
+            
+            cancelBtn.classList.remove('hidden');
+            
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imgElement.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
         });
     });
 </script>
 
+</body>
 </html>
 <?php $_SESSION["productIdError"] = "";
 $_SESSION["sellpriceError"] = ""

@@ -47,8 +47,9 @@ if (count($_POST) == 0) {
         $pid = $_POST["pid"];
 
         // Prepare and execute SQL to check if product ID exists
-        $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product WHERE code = :pid");
+        $checkSql = $pdo->prepare("SELECT COUNT(*) FROM m_product JOIN m_merchant ON m_product.merchant_id=m_merchant.id WHERE code = :pid and merchant_id= :id");
         $checkSql->bindValue(":pid", $pid);
+        $checkSql->bindValue(":id", $merchantEmail);
         $checkSql->execute();
         $productIdExists = $checkSql->fetchColumn();
 
