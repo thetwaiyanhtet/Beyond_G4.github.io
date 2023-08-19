@@ -17,8 +17,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -45,7 +44,7 @@ session_start();
                     <input name="email" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Email"></input>
                     <div class="field-input">
                         <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Password"></input>
-                        <i class="fas-fa-eye"></i>
+                        <i class="fas-fa-eye z-50"></i>
                     </div>
                     <span class="text-red-500"><?php echo $_SESSION["registerError"] ?></span>
                 </div>

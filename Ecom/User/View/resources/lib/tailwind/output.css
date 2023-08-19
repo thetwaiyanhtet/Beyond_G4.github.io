@@ -2175,6 +2175,10 @@ video {
   border-left-width: 2px;
 }
 
+.border-s {
+  border-inline-start-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
 }
