@@ -17,6 +17,8 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -41,7 +43,10 @@ session_start();
                 <div class="m-5 flex flex-col items-center">
                     <input name="name" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Full Name"></input>
                     <input name="email" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Email"></input>
-                    <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Password"></input>
+                    <div class="field-input">
+                        <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Password"></input>
+                        <i class="fas-fa-eye"></i>
+                    </div>
                     <span class="text-red-500"><?php echo $_SESSION["registerError"] ?></span>
                 </div>
                 <a>
@@ -78,6 +83,7 @@ session_start();
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
+                        <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
                         <b>1. User Accounts</b> <br>
                         a. Registration: To access certain features of the Website, you may be required to create a user account. You agree to provide accurate and complete information during the registration process. <br>
                         b. Account Security: You are responsible for maintaining the confidentiality of your account login credentials and for any activities that occur under your account. Notify us immediately of any unauthorized use or security breach. <br><br>
@@ -114,8 +120,8 @@ session_start();
 
                 </div>
                 <!-- Modal footer -->
-                <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">I agree</button>
+                <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
                 </div>
             </div>
         </div>
