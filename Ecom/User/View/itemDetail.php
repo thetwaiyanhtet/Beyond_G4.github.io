@@ -48,7 +48,6 @@ ini_set('display_errors', 1);
         </nav>
         <form action="./mainPage.php" method="post">
             <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
-
                 <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] w-2/4 shadow-2xl lg:w-[350px] p-5">
                     <?php if (!empty($ItemDetails[0]["p_one"])) { ?>
                         <div class="flex items-center justify-center">
@@ -95,7 +94,7 @@ ini_set('display_errors', 1);
                         <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(2)" style="background-color: <?= $ItemDetails[0]["color_3"]; ?>"></div>
                     </div>
 
-                   
+
 
                     <script>
                         const userPics = document.getElementsByClassName('user-pic');
@@ -119,13 +118,6 @@ ini_set('display_errors', 1);
                         }
                     </script>
                     <!-- end -->
-
-
-
-                    <div class="flex space-x-7">
-                        <h3>Quantity</h3>
-                        <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1" min="1">
-                    </div>
 
                     <!-- if size hava data,size select box are shown.If not,nondisplay -->
                     <?php if (
@@ -182,6 +174,14 @@ ini_set('display_errors', 1);
                         </div>
                     <?php } ?>
                     <!-- end -->
+
+                    <div class=" flex space-x-5 items-center">
+                        <div class="flex space-x-7">
+                            <h3>Quantity</h3>
+                            <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1" min="1">
+                        </div>
+                        <p class=" opacity-70 text-sm">Only <span>10</span> items left</p>
+                    </div>
                     <div>
                         <button type="submit" class="btn mr-3">Add To Cart</button>
         </form>
@@ -189,10 +189,6 @@ ini_set('display_errors', 1);
     </div>
     </div>
     </header>
-    <!-- <div class="grid grid-cols-6">
-            <div class="lg:block hidden absolute bottom-[90px] left-[220px] col-start-2 text-start"><ion-icon name="caret-back-outline" class="w-10 h-10"></ion-icon></div>
-        </div> -->
-    <div id="chatBoxButton" class=" w-14 h-14 fixed lg:right-[50px] right-[10px] bottom-10 col-start-5 ml-36 bg-white rounded-lg flex justify-center items-center z-50 shadow-inner"><ion-icon name="chatbubble-ellipses-outline" class="w-10 h-10"></ion-icon></div>
 
     <main class="flex justify-center">
         <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
@@ -256,101 +252,6 @@ ini_set('display_errors', 1);
     </main>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
-
-    <!-- chatbox popup -->
-    <div id="chatBoxPopup" class=" hidden flex flex-col items-center justify-center md:w-[600px] w-[380px] h-full text-gray-800 p-10 fixed top-[1%] md:left-[33%] left-0 z-50 ">
-        <div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">
-            <div class="flex flex-col flex-grow h-0 p-4 overflow-auto">
-                <div class="flex w-full mt-2 space-x-3 max-w-xs">
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                    <div>
-                        <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
-                    <div>
-                        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
-                    <div>
-                        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs">
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                    <div>
-                        <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
-                    <div>
-                        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
-                    <div>
-                        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
-                    <div>
-                        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs">
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                    <div>
-                        <div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                </div>
-                <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
-                    <div>
-                        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
-                            <p class="text-sm">Lorem ipsum dolor sit.</p>
-                        </div>
-                        <span class="text-xs text-gray-500 leading-none">2 min ago</span>
-                    </div>
-                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
-                </div>
-            </div>
-
-            <div class="bg-gray-300 p-4 flex items-center justify-around">
-                <input class="flex items-center h-10 md:w-96 w-60 rounded px-3 text-sm focus:outline-none" type="text" placeholder="Type your message…">
-                <img src="./resources/img/send.png" alt="sent" class="h-5">
-            </div>
-        </div>
-    </div>
-
     <script>
         // Get references to the popup and buttons
         const chatBoxPopup = document.getElementById("chatBoxPopup");
