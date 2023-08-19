@@ -203,6 +203,14 @@ $productdata = $_SESSION["editproduct"];
                                             <input type="checkbox" id="other" name="size5" value="1">
                                             <label for="2xl" class=" md:text-base text-sm  ">2XL</label>
                                         <?php } ?>
+
+                                        <?php if ($productdata[0]["size_free"] == 1) { ?>
+                                            <input type="checkbox" id="other" name="size6" value="1" checked>
+                                            <label for="free" class=" md:text-base text-sm  ">free size</label>
+                                        <?php } else { ?>
+                                            <input type="checkbox" id="other" name="size6" value="1">
+                                            <label for="free" class=" md:text-base text-sm  ">free size</label>
+                                        <?php } ?>
                                     </div>
 
                                 </div>

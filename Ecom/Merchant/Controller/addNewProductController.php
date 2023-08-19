@@ -24,6 +24,7 @@ if (count($_POST) == 0) {
     $size3 = $_POST["size3"];
     $size4 = $_POST["size4"];
     $size5 = $_POST["size5"];
+    $size6 = $_POST["size6"];
     // $photo1 = $_FILES["photo1"]["name"];
     // $photo1tmp = $_FILES["photo1"]["tmp_name"];
     // $photo2 = $_FILES["photo2"]["name"];
@@ -124,6 +125,7 @@ if (count($_POST) == 0) {
             size_l,
             size_xl,
             size_2xl,
+            size_free,
             p_one,
             p_two,
             p_three,
@@ -149,6 +151,7 @@ if (count($_POST) == 0) {
                 :size3,
                 :size4,
                 :size5,
+                :size6,
                 :photo1,
                 :photo2,
                 :photo3,
@@ -175,6 +178,7 @@ if (count($_POST) == 0) {
     $sql->bindValue(":size3", $size3);
     $sql->bindValue(":size4", $size4);
     $sql->bindValue(":size5", $size5);
+    $sql->bindValue(":size6", $size6);
     $sql->bindValue(":photo1", $photo1 !== null ?  $photo1 : null);
     $sql->bindValue(":photo2", $photo2 !== null ?  $photo2 : null);
     $sql->bindValue(":photo3", $photo3 !== null ?  $photo3 : null);

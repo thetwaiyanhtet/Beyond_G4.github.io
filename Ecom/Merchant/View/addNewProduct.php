@@ -166,18 +166,6 @@ include "../Controller/categoryListController.php";
                             </div>
 
                             <div class="flex-col space-y-5">
-                                <!-- <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Buying Price</p>
-                                    </div>
-                                    <div><input type="text" name="buyprice" class=" inputBox"></div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Selling Price</p>
-                                    </div>
-                                    <div><input type="text" name="sellprice" class="inputBox"></div>
-                                </div> -->
 
                                 <div class="flex justify-between space-x-10 items-center">
                                     <div>
@@ -216,7 +204,7 @@ include "../Controller/categoryListController.php";
                                     <div><textarea cols="23" name="description" rows="5" class="inputBox"></textarea></div>
                                 </div>
 
-                                <div class="flex justify-between space-x-10 items-center">
+                                <!-- <div class="flex justify-between space-x-10 items-center">
                                     <div><label>Specifications</label></div>
                                     <div class=" w-52">
                                         <form id="inputForm">
@@ -228,7 +216,7 @@ include "../Controller/categoryListController.php";
                                         </form>
                                         <p id="addInputField">+</p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class=" justify-end space-x-3 flex pt-4">
