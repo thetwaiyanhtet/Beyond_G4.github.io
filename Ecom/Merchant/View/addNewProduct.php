@@ -21,25 +21,12 @@ include "../Controller/categoryListController.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <script src="../View/resources/js/product.js" defer></script>
-    <!-- <script>
-
-        function fetch(){
-            var get=document.getElementById("get1").value;
-            document.getElementById("put1").value=get;
-
-            var get=document.getElementById("get2").value;
-            document.getElementById("put2").value=get;
-
-            var get=document.getElementById("get3").value;
-            document.getElementById("put3").value=get;
-        }
-    </script> -->
 
 </head>
 
 <body>
     <main class=" ml-56">
-        <section>
+        <section class="relative">
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">New Product</span></p>
             <form action="../Controller/addNewProductController.php" method="POST" enctype="multipart/form-data">
                 <div class=" flex justify-center px-5 py-1">
@@ -49,37 +36,41 @@ include "../Controller/categoryListController.php";
                         </div>
                         <div>
                             <ul class=" flex space-x-3">
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo1">
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg1" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg1" alt="..." >
                                         </label>
-                                        <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo1">
+                                        <input type="file" class=" hidden" id="photo1" accept=".png,.jpeg" name="photo1" >
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo1">Remove</p>
                                 </li>
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo2">
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg2" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg2" alt="..." >
                                         </label>
                                         <input type="file" class=" hidden" id="photo2" accept=".png,.jpeg" name="photo2">
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo2">Remove</p>
                                 </li>
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo3">
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg3" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg3" alt="..." >
                                         </label>
-                                        <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" name="photo3">
+                                        <input type="file" class=" hidden" id="photo3" accept=".png,.jpeg" name="photo3" >
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo3">Remove</p>
                                 </li>
-                                <li>
+                                <li class="text-center">
                                     <div class=" w-20 h-20 border border-dashed rounded-md border-gray-400 flex justify-center items-center">
                                         <label for="photo4">
-                                            <img src="../View/resources/img/gallery-add.png" id="photoimg4" alt="">
+                                            <img src="../View/resources/img/gallery-add.png" id="photoimg4" alt="..." >
                                         </label>
                                         <input type="file" class=" hidden" id="photo4" accept=".png,.jpeg" name="photo4">
                                     </div>
+                                    <p class="mt-2 text-blue-500 cursor-pointer cancel-btn hidden text-sm " data-input-id="photo4">Remove</p>
                                 </li>
                             </ul>
                         </div>
@@ -133,17 +124,27 @@ include "../Controller/categoryListController.php";
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color</label></div>
                                     <div>
-                                        <span><input type="color" name="color1" class=" rounded-full w-9 h-9">
+                                        <span><input type="color" name="color1" class=" w-9 h-9">
                                             <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
                                         </span>
-                                        <span><input type="color" name="color2" class=" rounded-full w-9 h-9">
+                                        <span><input type="color" name="color2" class=" w-9 h-9">
                                             <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
                                         </span>
-                                        <span><input type="color" name="color3" class=" rounded-full w-9 h-9">
+                                        <span><input type="color" name="color3" class=" w-9 h-9">
                                             <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
                                         </span>
                                     </div>
                                 </div>
+
+                                <!-- <div class="flex justify-between space-x-10 items-center">
+                                    <div><label>Color</label></div>
+                                    <div id="colorFields">
+                                        <span>
+                                            <input type="color" name="color1" class="rounded-full w-9 h-9">
+                                        </span>
+                                    </div>
+                                    <button id="addColorField">+</button>
+                                </div> -->
 
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <p>Size</p>
@@ -158,23 +159,13 @@ include "../Controller/categoryListController.php";
                                         <label for="xl" class=" md:text-base text-sm ">XL</label>
                                         <input type="checkbox" id="other" name="size5" value="1">
                                         <label for="2xl" class=" md:text-base text-sm ">2XL</label>
+                                        <input type="checkbox" id="other" name="size6" value="1">
+                                        <label for="free" class=" md:text-base text-sm ">Free Size</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="flex-col space-y-5">
-                                <!-- <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Buying Price</p>
-                                    </div>
-                                    <div><input type="text" name="buyprice" class=" inputBox"></div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Selling Price</p>
-                                    </div>
-                                    <div><input type="text" name="sellprice" class="inputBox"></div>
-                                </div> -->
 
                                 <div class="flex justify-between space-x-10 items-center">
                                     <div>
@@ -212,6 +203,20 @@ include "../Controller/categoryListController.php";
                                     </div>
                                     <div><textarea cols="23" name="description" rows="5" class="inputBox"></textarea></div>
                                 </div>
+
+                                <!-- <div class="flex justify-between space-x-10 items-center">
+                                    <div><label>Specifications</label></div>
+                                    <div class=" w-52">
+                                        <form id="inputForm">
+                                            <div id="inputFields">
+                                                <span class=" mb-3">
+                                                    <input type="text" name="input1" class="inputBox">
+                                                </span>
+                                            </div>
+                                        </form>
+                                        <p id="addInputField">+</p>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class=" justify-end space-x-3 flex pt-4">
@@ -223,6 +228,45 @@ include "../Controller/categoryListController.php";
 
         </section>
     </main>
+
+    <script>
+    const cancelButtons = document.querySelectorAll('.cancel-btn');
+
+    cancelButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const inputId = button.getAttribute('data-input-id');
+            const inputElement = document.getElementById(inputId);
+            const imgElement = document.getElementById(`photoimg${inputId.slice(-1)}`);
+            
+            inputElement.value = ''; // Reset the input value
+            imgElement.src = '../View/resources/img/gallery-add.png'; // Reset the image source
+            
+            button.classList.add('hidden'); // Hide the cancel button
+        });
+    });
+
+    // Show cancel buttons when a file is selected
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    fileInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            const inputId = input.getAttribute('id');
+            const cancelBtn = document.querySelector(`[data-input-id="${inputId}"]`);
+            const imgElement = document.getElementById(`photoimg${inputId.slice(-1)}`);
+            
+            cancelBtn.classList.remove('hidden');
+            
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imgElement.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
 <?php $_SESSION["productIdError"] = "";
