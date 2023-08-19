@@ -29,7 +29,7 @@ $productdata = $_SESSION["editproduct"];
 
 <body>
     <main class=" ml-56 ">
-        <section class="relative">
+        <section >
             <p class=" p-3"><a href="./productList.php">Inventory</a> > <span class=" font-semibold">Edit Product</span></p>
 
             <div class=" flex justify-center px-5 py-1">
@@ -46,7 +46,7 @@ $productdata = $_SESSION["editproduct"];
                                         <label for="photo1">
                                             <?php
                                             if (isset($productdata[0]["p_one"])) {
-                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_one"] . '" id="photoimg1" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_one"] . '" id="photoimg1" alt="..." class=" w-16 h-16">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg1" alt="">';
                                             }
@@ -63,7 +63,7 @@ $productdata = $_SESSION["editproduct"];
                                         <label for="photo2">
                                             <?php
                                             if (isset($productdata[0]["p_two"])) {
-                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_two"] . '" id="photoimg2" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_two"] . '" id="photoimg2" alt="..." class=" w-16 h-16">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg2" alt="">';
                                             }
@@ -78,7 +78,7 @@ $productdata = $_SESSION["editproduct"];
                                         <label for="photo3">
                                             <?php
                                             if (isset($productdata[0]["p_three"])) {
-                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_three"] . '" id="photoimg3" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_three"] . '" id="photoimg3" alt="..." class=" w-16 h-16">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg3" alt="">';
                                             }
@@ -93,7 +93,7 @@ $productdata = $_SESSION["editproduct"];
                                         <label for="photo4">
                                             <?php
                                             if (isset($productdata[0]["p_four"])) {
-                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_four"] . '" id="photoimg4" alt="">';
+                                                echo '<img src="../../Storage/product/' . $productdata[0]["p_four"] . '" id="photoimg4" alt="..." class=" w-16 h-16">';
                                             } else {
                                                 echo '<img src="./resources/img/gallery-add.png" id="photoimg4" alt="">';
                                             }
