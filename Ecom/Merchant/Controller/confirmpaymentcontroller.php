@@ -2,45 +2,33 @@
 session_start();
 ini_set('display_errors', 1);
 if(isset($_POST['confirmPayment'])){
-    $merchantName = $_SESSION['merchantName'];
     $merchantEmail = $_SESSION["merchant_ID"]; 
-    $merchantPw = $_SESSION['password'];
-    $selected_plan =$_SESSION['choosePlan'];
+    $selected_plan = $_SESSION["selectedPlan"];
     $selected_payment = $_SESSION['select_payment'];
-;
-    echo $selected_plan;
-    echo $merchantEmail;
-    echo $merchantName;
-    echo $merchantPw;
-    echo $selected_payment;
-    include "../Model/model.php";
+    
+    $enddate ;
+    if ($selected_plan == 6) {
+        $enddate = 30;
+    } elseif($selected_plan == 7){
+        $enddate = 180;
+    }elseif($selected_plan == 8 ){
+        $enddate = 360;
+    }
 
+    include "../Model/model.php";
+  echo $enddate;
     $sql2 = $pdo->prepare(
-        "INSERT INTO m_merchant
-        (
-            m_name,
-            email,
-            password,
-            plan_id,
-            plan_start_date,
-            plan_end_date
-        )
-        VALUES
-        (
-           :merchantName,
-           :merchantEmail,
-           :merchantPw,
-           :planID,
-           :planStart,
-           :planEnd
-        )"
+        "UPDATE `m_merchant` 
+        SET `plan_id`=:planID,
+        `plan_start_date`= :planStart,
+        `plan_end_date`= DATE_ADD(CURDATE(), INTERVAL $enddate DAY) WHERE m_merchant.email = :merchantEmail;
+        "
     );
-    $sql2->bindValue(":merchantName",$merchantName);
+
     $sql2->bindValue(":merchantEmail",$merchantEmail);
-    $sql2->bindValue(":merchantPw",password_hash($merchantPw, PASSWORD_DEFAULT));
     $sql2->bindValue(":planID",$selected_plan);
     $sql2->bindValue(":planStart",date('Y-m-d'));
-    $sql2->bindValue(":planEnd",date('Y-m-d'));
+    // $sql2->bindValue(":planEnd",date('Y-m-d'));
     $sql2->execute();
 
 

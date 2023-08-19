@@ -16,7 +16,8 @@ $customer = $pdo->prepare(
 );
 
 $revenue = $pdo->prepare(
-    "SELECT SUM(price) AS sum_received FROM m_plan JOIN m_merchant ON m_merchant.plan_id = m_plan.id; "
+    "SELECT SUM(price) AS sum_received FROM m_payment JOIN 
+    m_plan ON m_payment.plan_id = m_plan.id; "
 );
 
 
@@ -25,9 +26,7 @@ $merchant->execute(); //run real sql
 $customer->execute(); //run real sql
 $revenue->execute(); //run real sql
 
-$_SESSION["order"]=$order->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["merchant"]=$merchant->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["customer"]=$customer->fetchAll(PDO::FETCH_ASSOC);
-$_SESSION["revenue"]=$revenue->fetchAll(PDO::FETCH_ASSOC);
-
-
+$_SESSION["order"] = $order->fetchAll(PDO::FETCH_ASSOC);
+$_SESSION["merchant"] = $merchant->fetchAll(PDO::FETCH_ASSOC);
+$_SESSION["customer"] = $customer->fetchAll(PDO::FETCH_ASSOC);
+$_SESSION["revenue"] = $revenue->fetchAll(PDO::FETCH_ASSOC);

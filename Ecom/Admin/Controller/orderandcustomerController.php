@@ -28,7 +28,7 @@ $slqplan = $pdo->prepare(
 );
 
 $lastmerchant = $pdo->prepare(
-    "SELECT m_name,logo
+    "SELECT m_name,logo,create_date
     FROM m_merchant
     ORDER BY m_merchant.id DESC
     LIMIT 3;
