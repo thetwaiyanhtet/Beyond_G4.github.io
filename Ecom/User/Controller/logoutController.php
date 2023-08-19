@@ -14,5 +14,6 @@ if(isset($_POST['logout'])){
     $logoutUser = $DBlogoutEmail->fetchAll(PDO::FETCH_ASSOC);
     $_SESSION['logOutEmail'] = $logoutUser[0]['logOut'];
     header("Location: ../View/mainPage.php");
+    session_unset($logoutEmail);
 }
 ?>
