@@ -10,7 +10,7 @@ include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
 $verifyData = $_SESSION["verifyData"];
-$logoutEmail =  $_SESSION['logOutEmail']; 
+$logoutEmail =  $_SESSION['logOutEmail'];
 // echo "<pre>";
 // print_r($userData);
 // echo "</pre>";
@@ -23,7 +23,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
-    <title>Beyond </title>
+    <title>Beyond</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +36,8 @@ $logoutEmail =  $_SESSION['logOutEmail'];
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
     <link rel="stylesheet" href="./resources/css/bannerSlideShow.css">
+    <script src="./resources/js/chat.js" defer></script>
+    <link rel="stylesheet" href="./resources/css/chat.css">
     <script src="./resources/js/bannerSlideShow.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -81,7 +83,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                 </label>
                 <!-- <label for="cart" class="ml-3"><ion-icon name="cart-outline" class="text-2xl mt-2 dark:text-white text-black"></ion-icon>
                 </label> -->
-    <!-- <div id="shopping-cart" class="  peer-checked:visible w-auto bg-white/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-white p-5 absolute z-30 top-20 right-0 rounded-bl-2xl drop-shadow-lg cursor-pointer overflow-y-scroll hide-scroll-bar">
+                <!-- <div id="shopping-cart" class="  peer-checked:visible w-auto bg-white/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-white p-5 absolute z-30 top-20 right-0 rounded-bl-2xl drop-shadow-lg cursor-pointer overflow-y-scroll hide-scroll-bar">
                     <div class="font-bold">Your Shopping Cart</div>
 
                     <a id="btnEmpty" href="../Controller/cartController.php?action=empty">Empty Cart</a>
@@ -145,7 +147,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                     <?php
                     }
                     ?>
-                </div>
+                </div> -->
 
 
                 <button id="theme-toggle" type="button" class="text-gray-900 dark:text-white focus:outline-none  rounded-lg text-sm p-2.5">
@@ -156,6 +158,16 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                         <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
+
+                <!-- <div class="relative w-32">
+                    <div class=" overflow-hidden absolute mx-2 ">
+                        <div id="ln_space" class="w-28 h-20"></div>
+                    </div>
+                </div> -->
+
+
+
+
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <?php if ($verifyData["verify"] == 0) { ?>
@@ -166,46 +178,31 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                 </button>
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-                    <?php if ($userData) { ?>
-                        <div class="px-4 py-3">
-                            <span class="block text-sm text-gray-900 dark:text-white"><?= $userData["username"] ?></span>
-                            <span class="block text-sm  text-gray-500 truncate dark:text-gray-400"><?= $userEmail ?></span>
-                        </div>
-                        <ul class="py-2" aria-labelledby="user-menu-button">
-                            <li>
-                                <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
-                            </li>
-                            <li>
-                                <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
-                            </li>
-                            <li>
-                                <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
-                            </li>
-                            <li>
-                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
-                                        <p class="float-left px-4">Log out</p>
-                                    </button>
-                            </li>
-                        </ul>
-                    <?php } else { ?>
-                        <ul class="py-2" aria-labelledby="user-menu-button">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white"><?= $userData["username"] ?></span>
+                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400"><?= $userEmail ?></span>
+                    </div>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
                         <li>
-                                <a href="./login.php">
-                                    <button class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
-                                        <p class="float-left px-4">Log in</p>
-                                    </button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./SignUp.php">
-                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
-                                        <p class="float-left px-4">Sign Up</p>
-                                    </button>
-                                </a>
-                            </li>
-                        </ul>
-                    <?php } ?>
+                            <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+                        </li>
+                        <li>
+                            <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
+                        </li>
+                        <li>
+                            <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
+                        </li>
+                        <li>
+                            <!-- <a href="./login.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</a> -->
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                <p class="float-left px-4">Log out</p>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
+
+
+
                 <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
@@ -229,7 +226,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
             </div>
         </div>
         <form action="" method="post">
-            <div class="flex">
+            <div class="flex w-3/4 m-auto">
                 <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
                 <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
@@ -262,6 +259,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
             </div>
         </form>
     </nav>
+
     <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-md max-h-full">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -277,28 +275,33 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                     </svg> -->
                     <img src="./resources/img/sad-sponge.gif" alt="" class="mx-auto mb-4 w-3/4 h-52">
                     <h3 class="mb-5 text-lg font-normal text-gray-800 dark:text-gray-500">Are you sure you want to Log Out?</h3>
-                    <form action="../Controller/logoutController.php?email=<?php echo $userEmail?>" method="post">
-                    <button data-modal-hide="popup-modal" type="submit" name="logout" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                        Log out
-                    </button>
-                    <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
+                    <form action="../Controller/logoutController.php?email=<?php echo $userEmail ?>" method="post">
+                        <button data-modal-hide="popup-modal" type="submit" name="logout" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                            Log out
+                        </button>
+                        <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <button class="chat-btn z-50 scale-110" id="chatBoxButton">
+        <img src="./resources/img/chat.png" alt="" class="w-20 h-auto animate-[wiggle_700ms_ease-in-out_infinite] ">
+    </button>
+    <div class="chat-popup z-50 bg-white">
 
+    </div>
 
     <section class="sec h-screen">
-        <section class="w-[85%] m-auto">
+        <section class="w-[90%] m-auto">
 
-            <div class="banner-container mt-32">
+            <div class="banner-container mt-20">
                 <!-- Banner_1 section -->
                 <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
-                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
             </div>
 
 
@@ -319,13 +322,13 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                                     <div class="product-item">
                                         <!-- <form method="post" action="../Controller/cartController.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>"> -->
                                         <div class="mx-4">
-                                            <div class="h-auto w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                                            <div class=" h-80 w-52 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
                                                 <form action="./mainPage.php" method="post">
                                                     <div class="relative overflow-hidden bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                                         <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
                                                         <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
-                                                        <div class="w-56 m-auto p-2 h-44">
-                                                            <img class=" w-48 h-40 m-auto" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
+                                                        <div class=" flex justify-center items-center h-44">
+                                                            <img class=" w-52 h-auto m-auto" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
                                                         </div>
                                                         <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                                             <a href="./mainPage.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
@@ -334,15 +337,14 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                                                         </div>
                                                     </div>
 
-                                                    <div class="relative dark:text-white ">
+                                                    <div class=" dark:text-white ">
                                                         <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full "><?php echo $tranding["name"]; ?></h2>
-                                                        <p class="text-xs mt-2 ml-5 block "><?php echo $tranding["description"]; ?></p>
+                                                        <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
                                                         <!-- <del class="text-red-700 text-md">$999</del> -->
                                                         <p name="price" class="text-md font-bold mt-2 ml-5 block "><?php echo "$" . $tranding["sellprice"]; ?></p>
                                                         <div class="cart-action">
-                                                            <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto flex justify-center items-center" />
+                                                            <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto " />
                                                             <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
-
                                                         </div>
                                                     </div>
                                                 </form>
@@ -391,11 +393,11 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                         <!-- <form action="../Controller/newcartController.php" method="post"> -->
                         <?php foreach ($AllProduct as $productDetail) { ?>
                             <div class="inline p-3">
-                                <div class=" h-auto w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                                <div class="h-80 w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
                                     <form action="./mainPage.php" method="post">
                                         <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
-                                            <div class="w-56 m-auto p-2 h-44">
-                                                <img class="w-48 h-40 m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
+                                            <div class="flex justify-center items-center h-44">
+                                                <img class="w-48 h-auto m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
                                             </div>
                                             <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
                                                 <a href="./mainPage.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
@@ -406,7 +408,8 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                                         <div class="relative dark:text-white">
                                             <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full"><?= $productDetail["name"] ?></h2>
                                             <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                            <p class="text-xs mt-2 ml-5 block "><?= $productDetail["description"] ?></p>
+                                            <p class="text-xs mt-2 ml-5 block 
+                                             overflow-hidden h-4"><?= $productDetail["description"] ?></p>
                                             <p class="text-md font-bold mt-2 ml-5 block ">$<?= $productDetail["sellprice"] ?></p>
                                             <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                                             <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
@@ -473,7 +476,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
 
                                             </div>
                                             <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                                    <?= $latestShop["review_rating"] ?>
+                                                <?= $latestShop["review_rating"] ?>
                                                 <span class="text-gray-500 font-normal">(<?= $latestShop["review_count"] ?> reviews)</span>
                                             </p>
                                         </div>
@@ -510,7 +513,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
 
 
         </section>
-        <section class="w-[90%] m-auto">
+        <section class="w-[90%] m-auto z-0">
             <div class="banner-container">
                 <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
                 <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
@@ -518,7 +521,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                 <!-- More images for this banner section -->
             </div>
 
-            <div class=" w-full h-auto py-5 z-10">
+            <div class=" w-full h-auto py-5 z-0">
                 <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
                 <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
 
@@ -674,6 +677,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                         <!-- Modal body -->
                         <div class="p-6 space-y-6">
                             <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
+                                <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
                                 <b>1. User Accounts</b> <br>
                                 a. Registration: To access certain features of the Website, you may be required to create a user account. You agree to provide accurate and complete information during the registration process. <br>
                                 b. Account Security: You are responsible for maintaining the confidentiality of your account login credentials and for any activities that occur under your account. Notify us immediately of any unauthorized use or security breach. <br><br>
@@ -710,8 +714,8 @@ $logoutEmail =  $_SESSION['logOutEmail'];
 
                         </div>
                         <!-- Modal footer -->
-                        <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">I agree</button>
+                        <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                            <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
                         </div>
                     </div>
                 </div>
@@ -737,6 +741,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                         <!-- Modal body -->
                         <div class="p-6 space-y-6">
                             <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
+                                <img src="./resources/img/return.png" alt="" class="m-auto w-auto h-44 pb-2">
                                 <b>At Beyond, we strive to provide you with the best shopping experience possible. If you're not completely satisfied with your purchase, we're here to help. Our return policy is designed to be fair and transparent, ensuring your peace of mind.</b> <br> <br>
 
                                 <b>30-Day Return Window:</b> You have up to 30 days from the date of delivery to return eligible items. <br>
@@ -757,18 +762,18 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                             </p>
                         </div>
                         <!-- Modal footer -->
-                        <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button data-modal-hide="defaultModal1" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">I agree</button>
+                        <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                            <button data-modal-hide="defaultModal1" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md shadow-inner bg-rose-500 text-white text-3xl font-bold animate-bounce"><ion-icon name="arrow-up-outline"></ion-icon></button>
+        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-50 bottom-28 right-10 border-0 w-14 h-14 rounded-full drop-shadow-md shadow-inner bg-purple-500 text-white text-3xl font-bold "><ion-icon name="arrow-up-outline" class="scale-110"></ion-icon></button>
 
     </section>
-    <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script>
+    <!-- <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script> -->
     <script>
         var toTopButton = document.getElementById("to-top-button");
         window.onscroll = function() {
@@ -785,11 +790,11 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                 behavior: 'smooth'
             });
         }
-        document.addEventListener("DOMContentLoaded", function(e) {
-            ConveyThis_Initializer.init({
-                api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
-            });
-        });
+        // document.addEventListener("DOMContentLoaded", function(e) {
+        //     ConveyThis_Initializer.init({
+        //         api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
+        //     });
+        // });
     </script>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

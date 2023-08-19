@@ -69,7 +69,7 @@ include "../Controller/storePageController.php";
         </div>
     </div>
     <div class="flex ml-3 justify-around w-screen">
-        <?php foreach ($AllProducts as $AllProduct) { ?>
+        <!-- <?php foreach ($AllProducts as $AllProduct) { ?>
             <div class="  flex flex-col justify-center mb-10 ">
                 <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
        bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">
@@ -89,7 +89,7 @@ include "../Controller/storePageController.php";
                     <ion-icon name="cart-outline" class="text-[#A61473] lg:w-8 lg:h-8"></ion-icon>
                 </div>
             </div>
-        <?php } ?>
+        <?php } ?> -->
         <!-- <div class="  flex flex-col justify-center mb-10 ">
           <div class="w-[100%] max-lg:w-[80%]   border border-[#f3f5f768] flex flex-col justify-center items-center
        bg-gradient-to-t from-[#e5e8ea] - to-[#949ba0] rounded-tl-md rounded-tr-md space-y-1 shadow-md">

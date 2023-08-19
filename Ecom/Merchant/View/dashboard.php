@@ -201,21 +201,26 @@ $trending_json = json_encode($trending);
                     </script>
 
 
-                    <div class=" flex space-x-2 pt-6 pb-6">
-                        <div>
-                            <p>Worst=1</p>
+                    <div class=" flex space-x-4 pt-6 items-center justify-center">
+                        <div class="text-center">
+                            <p>Worst</p>
+                            <p>1</p>
                         </div>
-                        <div>
-                            <p>Poor=2</p>
+                        <div class="text-center">
+                            <p>Poor</p>
+                            <p>2</p>
                         </div>
-                        <div>
-                            <p>Normal=3</p>
+                        <div class="text-center">
+                            <p>Normal</p>
+                            <p>3</p>
                         </div>
-                        <div>
-                            <p>Good=4</p>
+                        <div class="text-center">
+                            <p>Good</p>
+                            <p>4</p>
                         </div>
-                        <div>
-                            <p>Excellent=5</p>
+                        <div class="text-center">
+                            <p>Excellent</p>
+                            <p>5</p>
                         </div>
                     </div>
                 </div>
