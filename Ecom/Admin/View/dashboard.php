@@ -192,13 +192,13 @@ $category_json = json_encode($category);
                     var options = {
                         plugins: {
                             legend: {
-                                display: false
+                                display: true
                             }
                         },
                         aspectRatio: 1,
                         cutout: '50%',
                         animation: {
-                            animateRotate: false
+                            animateRotate: true
                         }
                     };
 

@@ -16,4 +16,12 @@ $sql->bindValue(":searchText", '%' . $searchText . '%');
 $sql->execute();
 $merchants = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-echo json_encode($merchants);
+// Pagination Parameters
+$itemsPerPage = 5; // Number of items to display per page
+$currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1; // Current page number
+$startIndex = ($currentPage - 1) * $itemsPerPage; // Calculate the starting index of items for the current page
+
+// Paginate the data
+$paginatedData = array_slice($merchants, $startIndex, $itemsPerPage);
+
+echo json_encode($paginatedData);
