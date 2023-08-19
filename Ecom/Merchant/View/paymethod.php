@@ -33,39 +33,41 @@ session_start();
                         <p class="mt-0.5 ml-2"><img src="./resources/img/pngwing 1.png" alt="PayPal"></p>
                     </label>
                     <p class=" w-94  border border-solid border-black"></p> -->
-                    <div class="float-left inline-flex m-2">
-                        <input type="radio" name="payment" value="Credit or debit card" class="form-checkbox w-6 h-6">
-                        <p class="ml-2 font-poppins">Credit or debit card</p>
-                    </div>
-                    <div class="float-right inline-flex m-2">
-                        <img src="./resources/img/pngwing 2.png" alt="VISA" class="h-5">
-                        <img src="./resources/img/pngwing 3.png" alt="Master" class="h-5">
-                    </div>
-                    <div class="clear-both m-5">
-                        <p>Cardholder Name</p>
-                        <input type="text" name="user" placeholder="user" class=" w-[340px] border border-solid border-black rounded-md p-1 m-2 outline-none">
-                        <div class="flex justify-between">
-                            <div>
-                                <label>Card Number</label><br>
-                                <input type="text" name="cardNumber" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2 outline-none">
-                            </div>
-                            <div>
-                                <label>Date</label><br>
-                                <input type="text" name="cardDate" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" placeholder="03/23">
-                            </div>
-                            <div>
-                                <label>CVV</label><br>
-                                <input type="text" name="cardCVV" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none">
-                            </div>
+                    <div>
+                        <div class="float-left inline-flex m-2">
+                            <input type="radio" name="payment" value="Credit or debit card" class="form-checkbox w-6 h-6">
+                            <p class="ml-2 font-poppins">Credit or debit card</p>
                         </div>
-                        <ion-icon name="lock-closed-outline" class="mt-2"></ion-icon>
-                        <span>Your transition is secure with SSL encryption.</span><br>
-                        <ion-icon name="alert-circle" class="mt-2"></ion-icon>
-                        <span>Credit card payment may take up to 24h to be proceed.</span><br>
-                        <input type="checkbox" name="" id="" class="mt-2 outline-none">
-                        <span>Save my payment details for future transactions</span><br>
+                        <div class="float-right inline-flex m-2">
+                            <img src="./resources/img/pngwing 2.png" alt="VISA" class="h-5">
+                            <img src="./resources/img/pngwing 3.png" alt="Master" class="h-5">
+                        </div>
+                        <div class="clear-both m-5">
+                            <p>Cardholder Name</p>
+                            <input type="text" name="user" placeholder="user" class=" w-[340px] border border-solid border-black rounded-md p-1 m-2 outline-none">
+                            <div class="flex justify-between">
+                                <div>
+                                    <label>Card Number</label><br>
+                                    <input type="text" name="cardNumber" placeholder="user" class=" w-[200px] border border-solid border-black rounded-md p-1 m-2 outline-none">
+                                </div>
+                                <div>
+                                    <label>Date</label><br>
+                                    <input type="text" name="cardDate" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none" placeholder="03/23">
+                                </div>
+                                <div>
+                                    <label>CVV</label><br>
+                                    <input type="text" name="cardCVV" placeholder="123" class=" w-[120px] border border-solid border-black rounded-md p-1 m-2 outline-none">
+                                </div>
+                            </div>
+                            <ion-icon name="lock-closed-outline" class="mt-2"></ion-icon>
+                            <span>Your transition is secure with SSL encryption.</span><br>
+                            <ion-icon name="alert-circle" class="mt-2"></ion-icon>
+                            <span>Credit card payment may take up to 24h to be proceed.</span><br>
+                            <input type="checkbox" name="" id="" class="mt-2 outline-none">
+                            <span>Save my payment details for future transactions</span><br>
+                        </div>
+                        <p class=" w-94  border border-solid border-black"></p>
                     </div>
-                    <p class=" w-94  border border-solid border-black"></p>
                     <div class="float-left inline-flex m-4">
                         <input type="radio" name="payment" value="KBZ" class="form-checkbox w-6 h-6 outline-none">
                         <p class="ml-2 font-poppins">Kpay</p>
@@ -136,7 +138,7 @@ session_start();
                             echo  '$' . $Data['price'];
                             ?></p>
                     </div>
-                    <button id="payNowButton" name="payNow" type="submit"  class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>
+                    <button id="payNowButton" name="payNow" type="submit" class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>
                 </div>
     </form>
     </div>
