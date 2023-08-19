@@ -145,6 +145,16 @@ include "../Controller/categoryListController.php";
                                     </div>
                                 </div>
 
+                                <!-- <div class="flex justify-between space-x-10 items-center">
+                                    <div><label>Color</label></div>
+                                    <div id="colorFields">
+                                        <span>
+                                            <input type="color" name="color1" class="rounded-full w-9 h-9">
+                                        </span>
+                                    </div>
+                                    <button id="addColorField">+</button>
+                                </div> -->
+
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <p>Size</p>
                                     <div>
@@ -158,24 +168,13 @@ include "../Controller/categoryListController.php";
                                         <label for="xl" class=" md:text-base text-sm ">XL</label>
                                         <input type="checkbox" id="other" name="size5" value="1">
                                         <label for="2xl" class=" md:text-base text-sm ">2XL</label>
+                                        <input type="checkbox" id="other" name="size6" value="1">
+                                        <label for="free" class=" md:text-base text-sm ">Free Size</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="flex-col space-y-5">
-                                <!-- <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Buying Price</p>
-                                    </div>
-                                    <div><input type="text" name="buyprice" class=" inputBox"></div>
-                                </div>
-                                <div class=" flex justify-between space-x-10 items-center">
-                                    <div>
-                                        <p>Selling Price</p>
-                                    </div>
-                                    <div><input type="text" name="sellprice" class="inputBox"></div>
-                                </div> -->
-
                                 <div class="flex justify-between space-x-10 items-center">
                                     <div>
                                         <p>Buying Price</p>
@@ -212,6 +211,20 @@ include "../Controller/categoryListController.php";
                                     </div>
                                     <div><textarea cols="23" name="description" rows="5" class="inputBox"></textarea></div>
                                 </div>
+
+                                <div class="flex justify-between space-x-10 items-center">
+                                    <div><label>Specifications</label></div>
+                                    <div class=" w-52">
+                                        <form id="inputForm">
+                                            <div id="inputFields">
+                                                <span class=" mb-3">
+                                                    <input type="text" name="input1" class="inputBox">
+                                                </span>
+                                            </div>
+                                        </form>
+                                        <p id="addInputField">+</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class=" justify-end space-x-3 flex pt-4">
@@ -220,10 +233,58 @@ include "../Controller/categoryListController.php";
                     </div>
                 </div>
             </form>
-
         </section>
     </main>
 </body>
+<script>
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const colorFields = document.getElementById("colorFields");
+    //     const addColorFieldButton = document.getElementById("addColorField");
+    //     let colorCount = 1;
+
+    //     addColorFieldButton.addEventListener("click", function () {
+    //         colorCount++;
+
+    //         const colorInput = document.createElement("input");
+    //         colorInput.type = "color";
+    //         colorInput.name = `color${colorCount}`;
+    //         colorInput.className = "rounded-full w-9 h-9";
+
+    //         const span = document.createElement("span");
+    //         span.appendChild(colorInput);
+
+    //         colorFields.appendChild(span);
+    //     });
+    // });
+
+    //dunamic input texts
+    document.addEventListener("DOMContentLoaded", function() {
+        const inputForm = document.getElementById("inputForm");
+        const inputFields = document.getElementById("inputFields");
+        const addInputFieldButton = document.getElementById("addInputField");
+        let inputCount = 1;
+
+        addInputFieldButton.addEventListener("click", function() {
+            inputCount++;
+
+            const input = document.createElement("input");
+            input.type = "text";
+            input.name = `input${inputCount}`;
+            input.className = "inputBox";
+
+            const span = document.createElement("span");
+            span.appendChild(input);
+
+            inputFields.appendChild(span);
+        });
+
+        inputForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Handle form submission as needed
+        });
+    });
+</script>
+
 </html>
 <?php $_SESSION["productIdError"] = "";
 $_SESSION["sellpriceError"] = ""
