@@ -6,4 +6,8 @@
     .hide-scroll-bar::-webkit-scrollbar {
       display: none;
     }
-  
+
+.form form .field ion-icon.active::before{
+  color: #333;
+  content: "\f070";
+}

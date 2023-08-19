@@ -16,6 +16,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+   
     <link rel="stylesheet" href="./resources/css/scroll.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -38,14 +39,15 @@ session_start();
             <img src="./resources/img/Triangle.png" alt="1" class="md:w-64 w-36 absolute left-2/3 top-40 md:scale-100 scale-125">
             <img src="./resources/img/Triangle-2.png" alt="1" class="md:w-64 w-36 absolute right-2/3 scale-125">
         </div>
-        <div class="md:w-1/2 w-96 md:h-fit h-96 border border-solid  bg-transparent mt-5 rounded-lg  drop-shadow-2xl  m-auto z-10">
+        <div class="form md:w-1/2 w-96 md:h-fit h-96 border border-solid  bg-transparent mt-5 rounded-lg  drop-shadow-2xl  m-auto z-10">
             <form action="../Controller/registerController.php" method="post">
                 <div class="m-5 flex flex-col items-center">
                     <input name="name" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Full Name"></input>
                     <input name="email" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Email"></input>
-                    <div class="field-input">
-                        <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5  drop-shadow-md bg-blend-normal" placeholder="Password"></input>
-                        <i class="fas-fa-eye"></i>
+                    <div class="field input relative">
+                        <input type="password" name="password" class="border border-solid rounded-lg bg-white w-64 h-12 p-4 mb-5 drop-shadow-md bg-blend-normal tracking-wide" placeholder="Password"></input>
+                        <!-- <i class="fa-regular fa-eye "></i> -->
+                        <ion-icon name="eye-outline" class="absolute top-6 right-4 cursor-pointer -translate-y-1/2"></ion-icon>
                     </div>
                     <span class="text-red-500"><?php echo $_SESSION["registerError"] ?></span>
                 </div>
@@ -126,6 +128,20 @@ session_start();
             </div>
         </div>
     </div>
+    <script>
+        const pswrdField = document.querySelector(".form input[type='password']"),
+            toggleIcon = document.querySelector(".form .field ion-icon");
+
+        toggleIcon.onclick = () => {
+            if (pswrdField.type === "password") {
+                pswrdField.type = "text";
+                toggleIcon.classList.add("active");
+            } else {
+                pswrdField.type = "password";
+                toggleIcon.classList.remove("active");
+            }
+        }
+    </script>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>

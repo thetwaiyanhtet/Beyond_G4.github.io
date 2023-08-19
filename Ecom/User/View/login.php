@@ -39,7 +39,7 @@ session_start();
             <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-32 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
         </div>
         <div class="w-3/4 md:w-1/2  border-2 border-solid m-auto rounded-lg drop-shadow-xl bg-white/50 blur-xs z-10">
-            <div class="flex md:m-2 md:justify-center space-x-20 p-5 z-20 ">
+            <div class="[[form flex md:m-2 md:justify-center space-x-20 p-5 z-20 ">
                 <form action="../Controller/loginController.php" method="post">
                     <p class="text-red-700 text-center">
                         <?php
@@ -49,7 +49,10 @@ session_start();
                         ?></p>
                     <div class="m-10 w-[100%]">
                         <input name="email" type="email" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Email"></input> <br>
-                        <input type="password" name="password" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Password"></input><br>
+                        <div class="field input relative">
+                            <input type="password" name="password" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Password"></input><br>
+                            <ion-icon name="eye-outline" class="absolute top-6 right-4 cursor-pointer -translate-y-1/2"></ion-icon>
+                        </div>
                         <a href="./forgetPw.php" class="underline md:text-sm text-xs mb-8 float-right font-bold">Forget Password</a>
                         <br>
                         <div class=" ml-12">
@@ -150,6 +153,20 @@ session_start();
     </div>
     </div>
     </div>
+    <script>
+        const pswrdField = document.querySelector(".form input[type='password']"),
+            toggleIcon = document.querySelector(".form .field ion-icon");
+
+        toggleIcon.onclick = () => {
+            if (pswrdField.type === "password") {
+                pswrdField.type = "text";
+                toggleIcon.classList.add("active");
+            } else {
+                pswrdField.type = "password";
+                toggleIcon.classList.remove("active");
+            }
+        }
+    </script>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
