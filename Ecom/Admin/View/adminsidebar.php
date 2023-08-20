@@ -52,7 +52,7 @@ include "../Controller/logoandbusinessController.php";
             <ul class="flex space-x-5 items-center pr-5 text-white">
 
               
-                <li><img src="<?= $admin['p_picture'] ?>" alt="..." width="40px"></li>
+                <li><img src="../../Storage/profile/<?= $admin['p_picture'] ?>" alt="..." width="40px"></li>
                 <li class=" font-medium"><?= $admin['username'] ?></li>
             </ul>
         </div>
