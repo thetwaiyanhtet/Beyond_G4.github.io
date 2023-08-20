@@ -5,9 +5,9 @@ if(isset($_POST['confirmPayment'])){
     $merchantName = $_SESSION['merchantName'];
     $merchantEmail = $_SESSION["merchant_ID"]; 
     $merchantPw = $_SESSION['password'];
-    $selected_plan = $_SESSION["selectedPlan"];
+    $selected_plan =$_SESSION['choosePlan'];
     $selected_payment = $_SESSION['select_payment'];
-
+;
     echo $selected_plan;
     echo $merchantEmail;
     echo $merchantName;

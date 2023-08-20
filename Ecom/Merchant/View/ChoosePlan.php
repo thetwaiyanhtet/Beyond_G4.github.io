@@ -33,17 +33,17 @@ session_start();
                     <?php
                     include "../Model/model.php";
                     $sql = $pdo->prepare(
-                        "SELECT * from m_plan WHERE id = 6 "
+                        "SELECT * from m_plan WHERE id=6"
                     );
                     $sql->execute();
                     $row = $sql->fetch(PDO::FETCH_ASSOC);
-                    echo $row["plan_name"] . ' Plan';
+                    echo $row["plan_name"].' Plan';
                     ?>
                 </p>
                 <hr>
                 <span class=" ml-16 text-text1 text-2xl font-semibold">
                     <?php
-                    echo "$" . $row["price"];
+                    echo "MMK " . $row["price"];
                     ?><span class="text-sm text-black">/month</span></span>
                 <hr>
                 <ul class=" list-disc m-2 text-gray-600 text-sm space-y-2">
@@ -54,9 +54,7 @@ session_start();
                 </ul>
                 <a href="">
                     <div class=" flex justify-center">
-                        <button type="submit" name="plan" value="
-                        <?php echo $row['id']
-                        ?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
+                        <button type="submit" name="plan" value="<?php echo $row['id']?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
                     </div>
                 </a>
             </div>
@@ -75,7 +73,7 @@ session_start();
                 </p>
                 <hr>
                 <span class=" text-text1 text-2xl font-semibold"> <?php
-                                                                    echo "$" . $row["price"];
+                                                                    echo " MMK " . $row["price"];
                                                                     ?><span class="text-sm text-btn">/month</span></span>
                 <hr>
                 <ul class=" list-disc  text-gray-600 text-sm space-y-2 m-2 text-left">
@@ -109,7 +107,7 @@ session_start();
                 </p>
                 <hr>
                 <span class=" ml-16 text-text1 text-2xl font-semibold"><?php
-                                                                        echo "$" . $row["price"];
+                                                                        echo " MMK " . $row["price"];
                                                                         ?><span class="text-sm text-btn">/month</span></span>
                 <hr>
                 <ul class=" list-disc m-2 text-gray-600 text-sm space-y-2">
@@ -120,8 +118,7 @@ session_start();
                 </ul>
                 <a href="">
                     <div class=" flex justify-center">
-                        <button type="submit" name="plan" value="<?php echo $row['id']
-                                                                    ?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
+                        <button type="submit" name="plan" value="<?php echo $row['id']?>" class="bg-btn w-32 h-10 rounded-xl shadow-xl m-5 text-black hover:bg-text1 hover:text-white font-philosopher">Choose Plan</button>
                     </div>
                 </a>
             </div>

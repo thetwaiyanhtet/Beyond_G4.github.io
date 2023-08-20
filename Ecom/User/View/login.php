@@ -39,7 +39,7 @@ session_start();
             <img src="./resources/img/Triangle-2.png" alt="2" class="md:w-64 w-32 absolute md:rotate-180 -rotate-180 md:top-0 top-72 mt-2">
         </div>
         <div class="w-3/4 md:w-1/2  border-2 border-solid m-auto rounded-lg drop-shadow-xl bg-white/50 blur-xs z-10">
-            <div class="[[form flex md:m-2 md:justify-center space-x-20 p-5 z-20 ">
+            <div class="form flex md:m-2 md:justify-center space-x-20 p-5 z-20 ">
                 <form action="../Controller/loginController.php" method="post">
                     <p class="text-red-700 text-center">
                         <?php
@@ -154,16 +154,16 @@ session_start();
     </div>
     </div>
     <script>
-        const pswrdField = document.querySelector(".form input[type='password']"),
-            toggleIcon = document.querySelector(".form .field ion-icon");
+        const pswrdField = document.querySelector(".form input[type='password']");
+        const Icon = document.querySelector(".form .field ion-icon");
 
-        toggleIcon.onclick = () => {
+        Icon.onclick = () => {
             if (pswrdField.type === "password") {
                 pswrdField.type = "text";
-                toggleIcon.classList.add("active");
+                Icon.classList.add("active");
             } else {
                 pswrdField.type = "password";
-                toggleIcon.classList.remove("active");
+                Icon.classList.remove("active");
             }
         }
     </script>
