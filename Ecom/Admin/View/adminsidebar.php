@@ -4,6 +4,8 @@ include "../Controller/updatepasswordController.php";
 $admin = $_SESSION["adminInfo"];
 include "../Controller/logoandbusinessController.php";
  $logoandname = $_SESSION["m_logo"];
+ include "../View/admininfocontroller.php";
+ $admininfo = $_SESSION["m_admin"];
 ?>
 <!doctype html>
 <html>
@@ -52,8 +54,8 @@ include "../Controller/logoandbusinessController.php";
             <ul class="flex space-x-5 items-center pr-5 text-white">
 
               
-                <li><img src="../../Storage/profile/<?= $admin['p_picture'] ?>" alt="..." width="40px"></li>
-                <li class=" font-medium"><?= $admin['username'] ?></li>
+                <li><img src="<?= $admininfo[0]['p_picture'] ?>" alt="..." width="40px"></li>
+                <li class=" font-medium"><?= $admininfo[0]['username'] ?></li>
             </ul>
         </div>
     </div>

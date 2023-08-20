@@ -1,6 +1,8 @@
 <?php
-include "../Controller/updatepasswordController.php";
-include "../Controller/passwordchangeContoller.php";
+// include "../Controller/updatepasswordController.php";
+// include "../Controller/passwordchangeContoller.php";
+include "../View/admininfocontroller.php";
+$admininfo =$_SESSION["m_admin"];
 
 ?>
 
@@ -9,8 +11,8 @@ include "../Controller/passwordchangeContoller.php";
 
 
 
-<?php include "./adminsidebar.php"; ?>;
-<?php include "../Controller/updatepasswordController.php" ?>
+<?php include "./adminsidebar.php" ?>;
+
 
 
 <head>
@@ -37,7 +39,7 @@ include "../Controller/passwordchangeContoller.php";
                         <div class=" flex-col flex items-center justify-between">
                             <div class=" w-20 shadow-xl border-2 border-blue-950">
                                 <label for="profile1">
-                                    <img class="w-20" src="<?= $admin['p_picture'] ?>" id="profileimg1" alt="">
+                                    <img class="w-20" src="<?= $admininfo[0]['p_picture'] ?>" id="profileimg1" alt="">
                                 </label>
                                 <input type="file" class="hidden" id="profile1" accept=".png,.jpeg" name="profile1">
                             </div>
@@ -46,21 +48,21 @@ include "../Controller/passwordchangeContoller.php";
                             <p class=" w-40">Username</p>
                             <p>- </p>
                             <div class="">
-                                <input type="text" name="username" require value="<?= $admin['username'] ?>" class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
+                                <input type="text" name="username" require value="<?= $admininfo[0]['username'] ?>" class=" border border-gray-400 rounded-md ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                             </div>
                         </div>
-                        <div class=" flex items-center justify-between">
+                        <!-- <div class=" flex items-center justify-between">
                             <p class=" w-40">Email</p>
                             <p>-</p>
                             <div class="">
-                                <input type="email" name="email" require value="<?= $admin['email'] ?>" class=" border border-gray-400 ml-3 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
+                                <input type="email" name="email" require value="<?= $admininfo[0]['email'] ?>" class=" border border-gray-400 ml-3 rounded-md shadow-md indent-2 px-2 py-1 outline-none w-80">
                             </div>
-                        </div>
+                        </div> -->
                         <div class=" flex items-center justify-between">
                             <p class=" w-40">Phone</p>
                             <p>-</p>
                             <div class="">
-                                <input type="text" name="phone" require value="<?= $admin['phone'] ?>" class=" border border-gray-400 rounded-md  ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
+                                <input type="text" name="phone" require value="<?= $admininfo[0]['phone'] ?>" class=" border border-gray-400 rounded-md  ml-3 shadow-md indent-2 px-2 py-1 outline-none w-80">
                             </div>
                         </div>
                     </div>
