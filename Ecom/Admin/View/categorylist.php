@@ -1,8 +1,12 @@
 <?php
-include "./adminsidebar.php";
+// include "./adminsidebar.php";
+session_start();
 include "../Controller/categoryListController.php";
 $result = $_SESSION["m_category"];
-
+$sub=$_SESSION["sub_category"];
+echo "<pre>";
+print_r($sub);
+echo "</pre>";
 ?>
 
 
@@ -79,7 +83,7 @@ $result = $_SESSION["m_category"];
                            px-3
                            lg:px-4
                            ">
-                                                        Create By
+                                                        Sub-Category Name
                                                     </th>
                                                     <th class="
                            w-1/6
@@ -127,7 +131,13 @@ $result = $_SESSION["m_category"];
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                                                            Admin
+                                                            
+                                                            <select name="scname" id="">
+                                                            <?php foreach($sub as $subCategory) { ?>
+                                                                <option value="<?= $subCategory["category_id"] ?>"><?= $subCategory["s_c_name"] ?></option>
+                                                                <?php } ?>
+                                                            </select>
+                                                            
                                                         </td>
                                                         <td class="
                            text-center text-dark

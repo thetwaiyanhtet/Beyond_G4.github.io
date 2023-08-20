@@ -35,7 +35,7 @@ $categories = $_SESSION["m_category"];
                             <div class="">
                                 <div class="space-y-3 mt-5">
                                     <p>Category</p>
-                                    <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="cname">
+                                    <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="cname" required>
                                     <div class=" text-red-800 font-thin">
                                         <?php if (isset($_SESSION["categoryError"])) {
                                             echo $_SESSION["categoryError"];
@@ -75,12 +75,12 @@ $categories = $_SESSION["m_category"];
                                 </div>
                                 <div class="space-y-3 mt-5">
                                     <p>Sub Category</p>
-                                    <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="scname">
-                                    <!-- <div class=" text-red-800 font-thin">
-                                        <?php if (isset($_SESSION["categoryError"])) {
-                                            echo $_SESSION["categoryError"];
+                                    <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" name="scname" required>
+                                     <div class=" text-red-800 font-thin">
+                                        <?php if (isset($_SESSION["subCategoryError"])) {
+                                            echo $_SESSION["subCategoryError"];
                                         } ?>
-                                    </div> -->
+                                    </div> 
                                 </div>
                             </div>
                             <div>
@@ -97,3 +97,4 @@ $categories = $_SESSION["m_category"];
 
 </html>
 <?php $_SESSION["categoryError"] = "" ?>
+<?php $_SESSION["subCategoryError"] = "" ?>
