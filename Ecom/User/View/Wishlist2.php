@@ -125,7 +125,7 @@ $wishlist =  $uniqueAssocArray;
                 <form action="./Wishlist2.php" method="post">
                 <div class=" w-44 h-auto shadow rounded-md p-2 dark:text-white  bg-purple-300">
                     <div class="h-36 flex justify-center items-center bg-slate-600">
-                        <img src="../..<?= $value['p_one'] ?>" alt="photo" class=" w-24">
+                        <img src="../../Storage/product/<?= $value['p_one'] ?>" alt="photo" class=" w-24">
                         <input type="hidden" name="image" value="../..<?= $value['p_one'] ?>">
                         <input type="hidden" name="price" value="<?= $value['sellprice'] ?>">
                         

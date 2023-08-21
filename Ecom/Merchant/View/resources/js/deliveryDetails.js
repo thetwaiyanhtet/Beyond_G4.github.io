@@ -28,7 +28,7 @@ $(document).ready(function () {
           </div>
           <div class=" flex space-x-3">
             <div class=" w-40">Total Price: </div>
-            <div>${orderDetails.total_amt} MMK</div>
+            <div>${orderDetails.total_amt} Ks</div>
           </div>
           <div class=" flex space-x-3">
             <div class=" w-40">Delivery Service: </div>
@@ -36,11 +36,11 @@ $(document).ready(function () {
           </div>
           <div class=" flex space-x-3">
             <div class=" w-40">Delivery Charges: </div>
-            <div>${orderDetails.delivery_fees} MMK</div>
+            <div>${orderDetails.delivery_fees} Ks</div>
           </div>
           <div class=" flex space-x-3">
             <div class=" w-40">Total Amount: </div>
-            <div>${totalAmount} MMK</div>
+            <div>${totalAmount} Ks</div>
           </div>
           <div class=" flex justify-center">
           <button id="cancelPopupButton" class=" border px-3 py-2 bg-blue-500 rounded-md text-white font-playfairDisplay">Cancel</button>

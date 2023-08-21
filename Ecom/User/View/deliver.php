@@ -6,12 +6,7 @@ $delitotalamt = $_POST['delitotal'];
 $_SESSION['totalamount'] = $_POST['stotal'];
 $_SESSION['delitotalamt'] = $_POST['delitotal'];
 $_SESSION['quantity']   = $_POST['quantiarr'];
-// }else { ?>
-//     <script> 
-//     alert("You need login first.");
-//             window.location.href = "../View/login.php";
-// </script>
-//  <?php } 
+ }
 ?>
 
 <!DOCTYPE html>

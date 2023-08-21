@@ -6,7 +6,8 @@ $merchantEmail = $_SESSION["merchant_ID"];
 
 // Fetch delivery-related data
 $fetchDeliverySql = $pdo->prepare(
-    "SELECT m_customer.username, m_order.generate_id, m_order.order_date, m_order.total_amt, m_delivery.delivery_name, m_order_details.quantity,m_order_details.delivery_status
+    "SELECT m_customer.username, m_order.generate_id, m_order.order_date, m_order.total_amt, m_delivery.delivery_name, m_order_details.quantity,
+    m_order_details.delivery_status,m_delivery.delivery_fees
     FROM m_customer 
     JOIN m_order ON m_order.customer_id = m_customer.id
     JOIN m_order_details ON m_order_details.order_id = m_order.id
