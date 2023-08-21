@@ -3,6 +3,7 @@
 
 require_once("../Controller/newcartController.php");
 require_once "../Model/model.php";
+$user = $_SESSION["user_ID"];
 
 // $selectedColor=$_SESSION['selectedItem'];
 // echo "<pre>";
@@ -57,6 +58,16 @@ if (!empty($_SESSION['carttle'])) {
     $_SESSION['placeholdcart'] = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     $cartloop = $_SESSION["placeholdcart"];
+
+    
+    $delifees = $pdo->prepare(
+        "SELECT delivery_fees FROM `m_delivery` JOIN m_customer ON m_delivery.region_id = m_customer.region_id
+         WHERE m_customer.id = (SELECT id FROM m_customer WHERE email = :email) "
+    );
+   
+    $delifees->bindValue(":email", $user);
+    $delifees->execute();
+    $_SESSION['delifees'] = $delifees->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 
@@ -266,7 +277,7 @@ if (!empty($_SESSION['carttle'])) {
                                         </div>
                                         <div class="flex">
                                             <p class="ml-[15px] font-bold text-xs md:text-sm">Shipping fee</p>
-                                            <div class="ml-[25px] font-bold text-xs md:text-sm" name="name">$10</div>
+                                            <div class="ml-[25px] font-bold text-xs md:text-sm" id="delifees" name="name"><?=  $_SESSION['delifees'][0]['delivery_fees']  ?> Ks</div>
                                         </div>
                                     </div>
 
@@ -359,21 +370,23 @@ if (!empty($_SESSION['carttle'])) {
         var gtotal = document.getElementById("gtotal");
         var delitotal = document.getElementById("delitotal");
         var quantiarray = document.getElementById("quantiarray");
+        var delifees = document.getElementById("delifees").innerText;
 
         function subTotal() {
             gt = 0;
             quanti = [];
             for (let i = 0; i < iprice.length; i++) {
-                itotal[i].innerHTML = "$" + (iprice[i].value) * (iquantity[i].value);
+                itotal[i].innerHTML =  (iprice[i].value) * (iquantity[i].value) + " Ks" ;
                 gt = gt + (iprice[i].value) * (iquantity[i].value);
                 quanti.push(iquantity[i].value);
 
             }
-            gtotal.value = "$" + gt;
-            var tot = gt + 10;
-            delitotal.value = "$" + tot;
+            var sliceddelifees = delifees.slice(0,-3);
+            console.log(typeof(sliceddelifees)); 
+            gtotal.value =  gt + " Ks";
+            var tot = gt + Number(sliceddelifees);
+            delitotal.value =   tot +  " Ks";
             quantiarray.value = quanti;
-
         }
         subTotal();
     </script>
