@@ -6,6 +6,8 @@ $delitotalamt = $_POST['delitotal'];
 $_SESSION['totalamount'] = $_POST['stotal'];
 $_SESSION['delitotalamt'] = $_POST['delitotal'];
 $_SESSION['quantity']   = $_POST['quantiarr'];
+$delifee   = $_POST['deli'];
+
  }
 ?>
 
@@ -114,8 +116,8 @@ $_SESSION['quantity']   = $_POST['quantiarr'];
 
                     </div>
                     <div class="flex flex-col max-lg:text-base items-end text-xl font-semibold">
-                        <p class="mb-5"><?= $totalamount  ?>.00</p>
-                        <p class="mb-5">$10.00</p>
+                        <p class="mb-5"><?= $totalamount  ?></p>
+                        <p class="mb-5"><?= $delifee ?></p>
 
                     </div>
                 </div>
@@ -131,7 +133,7 @@ $_SESSION['quantity']   = $_POST['quantiarr'];
 
                             ?> -->
                     <div>
-                        <p class="mb-5"><?= $delitotalamt ?>.00</p>
+                        <p class="mb-5"><?= $delitotalamt ?></p>
                     </div>
                 </div>
 

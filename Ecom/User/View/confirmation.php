@@ -125,7 +125,7 @@ $_SESSION["payment_method"] = $_POST['deli'];
                     <form  action="../Controller/orderController.php" method="post">
                         <div class="flex mt-10 border-b-4 border-[#314755]   justify-center items-center">
                             <div class="mb-10 ">
-                                <img class="w-32" src="../..<?= $chunk["p_one"] ?>" alt="">
+                                <img class="w-32" src="../../Storage/product/<?= $chunk["p_one"] ?>" alt="">
                             </div>
                             <div class=" mx-5 flex flex-col  ">
                                 <div class="flex justify-between mb-5 space-x-5">
@@ -171,7 +171,7 @@ $_SESSION["payment_method"] = $_POST['deli'];
                 <form action="../Controller/orderController.php" method="post">
                     <div class="flex w-11/12 mt-10 border-b-4 border-button-color  justify-center items-center">
                         <div class="mb-10 ">
-                            <img class="w-32" src="../..<?= $chunk["p_one"] ?>" alt="">
+                            <img class="w-32" src="../../Storage/product/<?= $chunk["p_one"] ?>" alt="">
                         </div>
                         <div class=" mx-5 flex flex-col ">
                             <div class="flex justify-between mb-5">

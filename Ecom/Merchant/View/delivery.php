@@ -82,7 +82,7 @@ include "../Controller/deliveryController.php";
                                         </td>
 
                                         <td class="px-6 py-4 ">
-                                            Ks <?= $delivery["total_amt"] + $delivery["delivery_fees"] ?>
+                                            <?= $delivery["total_amt"] + $delivery["delivery_fees"] ?> Ks
                                         </td>
                                         <td class=" pr-2 py-4 ">
                                             <?= $delivery["delivery_name"] ?>
