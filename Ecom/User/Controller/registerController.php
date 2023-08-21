@@ -56,15 +56,11 @@ if (isset($_POST["register"])) {
         $sql->bindValue(":create_date",date('Y-m-d'));
         $sql->bindValue(":update_date",date('Y-m-d'));
         $sql->execute();
-        header("Location: ../View/mainPage.php");
+        header("Location: ../View/testingLogout.php");
     } else {
         $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
         header("Location: ../View/signUp.php");
     }
-    $sql2 = $pdo -> prepare("SELECT * FROM m_customer WHERE email=:email");
-    $sql2->bindValue(":email", $email);
-    $signUp = $sql2->fetchAll(PDO::FETCH_ASSOC);
-    $_SESSION['signUp'] = $signUp;
     $_SESSION['signUpEmail'] = $email;
     }
 } else {

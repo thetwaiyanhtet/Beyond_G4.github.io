@@ -1,6 +1,6 @@
 <?php
 include "../Model/model.php";
-$userEmail = $_SESSION['signUpEmail'];
+$userEmail = $_SESSION['user_ID'];
 
 $VerifySql = $pdo->prepare(
   "SELECT verify
@@ -16,7 +16,7 @@ $_SESSION["verifyData"] = $verify_data;
 if ($verify_data["verify"] == 0) {
 
   $sql = $pdo->prepare(
-    "SELECT username,email
+    "SELECT username,email,unique_id,del_flg
     FROM m_customer
     WHERE email=:email"
   );
