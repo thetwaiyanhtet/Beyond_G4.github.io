@@ -24,7 +24,7 @@ if(isset($_POST["login"])){
     if (password_verify($password,$result[0]["password"])) {
       $_SESSION["user_ID"] = $email;
       // echo($_SESSION["user_ID"]);
-      header("Location: ../View/mainPage.php");
+      header("Location: ../View/testingLogout.php");
     }else {
       $_SESSION["loginerror"] = "Email or password incorrect!";
       header("Location: ../View/login.php");

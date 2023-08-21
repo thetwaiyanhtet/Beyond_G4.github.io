@@ -5,15 +5,13 @@ include "../Controller/trendingProductController.php";
 include  "../../User/Controller/bannerController.php";
 include  "../../Admin/Controller/readfaqController.php";
 include "../Controller/userProfileController.php";
+include "../Controller/testinguserProfileController.php";
 $faq = $_SESSION["m_faq"];
 include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
-$verifyData = $_SESSION["verifyData"];
-$SignUp = $_SESSION["userEmail"];
-// echo "<pre>";
-// print_r($userData);
-// echo "</pre>";
+$verifyData = $_SESSION['verifyData'];
+$customer = $_SESSION['checkEmail']
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +90,6 @@ $SignUp = $_SESSION["userEmail"];
                         $total_quantity = 0;
                         $total_price = 0;
                     ?>
-
                         <table class="tbl-cart m-4" cellpadding="5" cellspacing="1">
                             <tbody>
                                 <tr class="text-left border-b-2 border-b-black dark:border-b-white">
@@ -174,9 +171,19 @@ $SignUp = $_SESSION["userEmail"];
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                     <div class="px-4 py-3">
-                        <span class="block text-sm text-gray-900 dark:text-white"><?= $userData["username"] ?></span>
-                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400"><?= $userEmail ?></span>
+                        <?php if ($customer) { ?>
+                            <span class="block text-sm text-gray-900 dark:text-white">
+                                <?php
+                                
+                                    echo $customer[0]['email'];
+                        
+                                ?>
+                            </span>
+                        <?php } else { ?>
+                            <span class="block text-sm text-gray-900 dark:text-white">User Email</span>
+                        <?php } ?>
                     </div>
+
                     <ul class="py-2" aria-labelledby="user-menu-button">
                         <li>
                             <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
@@ -187,11 +194,24 @@ $SignUp = $_SESSION["userEmail"];
                         <li>
                             <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
                         </li>
-                        <li>
-                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
-                                <p class="float-left px-4">Log out</p>
-                            </button>
-                        </li>
+                        <?php if ($customer) { ?>
+                            <li>
+                                <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                    <p class="float-left px-4">Log out</p>
+                                </button>
+                            </li>
+                        <?php } else { ?>
+                            <li>
+                                <a href="./login.php">
+                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                        <p class="float-left px-4">
+                                           logIn
+                                        </p>
+                                    </button>
+                                </a>
+                            </li>
+                        <?php } ?>
+
                     </ul>
                 </div>
                 <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
@@ -266,10 +286,12 @@ $SignUp = $_SESSION["userEmail"];
                     </svg> -->
                     <img src="./resources/img/sad-sponge.gif" alt="" class="mx-auto mb-4 w-3/4 h-52">
                     <h3 class="mb-5 text-lg font-normal text-gray-800 dark:text-gray-500">Are you sure you want to Log Out?</h3>
+                    <form action="../Controller/logoutController.php?email=<?php echo $customer[0]['email'] ?>" method="post">
                         <button data-modal-hide="popup-modal" type="submit" name="logout" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                             Log out
                         </button>
                         <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -788,6 +810,8 @@ $SignUp = $_SESSION["userEmail"];
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
+
+
 
 
 </html>
