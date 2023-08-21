@@ -56,12 +56,12 @@ if (isset($_POST["register"])) {
         $sql->bindValue(":create_date",date('Y-m-d'));
         $sql->bindValue(":update_date",date('Y-m-d'));
         $sql->execute();
-        header("Location: ../View/testingLogout.php");
+        header("Location: ../View/mainPage.php");
     } else {
         $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
         header("Location: ../View/signUp.php");
     }
-    $$_SESSION["user_ID"] = $email;
+    $_SESSION["user_ID"] = $email;
     }
 } else {
     // header("Location: ../View/404page.php");
