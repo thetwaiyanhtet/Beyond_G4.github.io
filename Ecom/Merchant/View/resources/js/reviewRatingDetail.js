@@ -7,7 +7,6 @@ $(document).ready(function () {
         id: Id,
       },
         success: function (reviewData) {
-          console.log(reviewData);
         const reviewDetails = JSON.parse(reviewData);
         const popupContent = `
           <div>
@@ -15,18 +14,6 @@ $(document).ready(function () {
                 <div class=" p-3 space-y-3">
                     <p class=" font-semibold"> ${reviewDetails.name} </p>
                     <p class=" text-yellow-500 text-xl">
-                        <?php
-
-                        function numberToStars($number)
-                        {
-                            $roundedNumber = round($number);
-                            $maxStars = 5;
-                            $fullStars = str_repeat('★', $roundedNumber);
-                            $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
-                            return $fullStars . $emptyStars;
-                        }
-                        echo numberToStars($reviewdetail[0]["rating"]);
-                        ?>
                         <span class="text-black">/</span>
                         <span class="text-black">${reviewDetails.username}</span>
                     </p>
