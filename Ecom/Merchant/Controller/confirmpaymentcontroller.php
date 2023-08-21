@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../Controller/dateplusController.php";
 ini_set('display_errors', 1);
 if(isset($_POST['confirmPayment'])){
     $merchantEmail = $_SESSION["merchant_ID"]; 
@@ -8,11 +9,11 @@ if(isset($_POST['confirmPayment'])){
     
     $enddate ;
     if ($selected_plan == 6) {
-        $enddate = 30;
+        $enddate = 30 + $daysRemaining;
     } elseif($selected_plan == 7){
-        $enddate = 180;
+        $enddate = 180 + $daysRemaining;
     }elseif($selected_plan == 8 ){
-        $enddate = 360;
+        $enddate = 360 + $daysRemaining;
     }
 
     include "../Model/model.php";
