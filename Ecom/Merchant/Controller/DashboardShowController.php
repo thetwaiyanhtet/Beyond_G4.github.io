@@ -150,19 +150,19 @@ $topCustomers = $topCustomersSql->fetchAll(PDO::FETCH_ASSOC);
 // echo "</pre>";
 
 
+// $planSql = $pdo->prepare(
+//     "SELECT m_plan.plan_name, m_merchant.create_date
+//     FROM m_merchant
+//     JOIN m_plan ON m_merchant.plan_id = m_plan.id
+//     WHERE m_merchant.email = :email"
+// );
+
+// $planSql->bindValue(':email', $merchantEmail);
+// $planSql->execute();
+
+
 $planSql = $pdo->prepare(
-    "SELECT m_plan.plan_name, m_merchant.create_date
-    FROM m_merchant
-    JOIN m_plan ON m_merchant.plan_id = m_plan.id
-    WHERE m_merchant.email = :email"
-);
-
-$planSql->bindValue(':email', $merchantEmail);
-$planSql->execute();
-
-
-$planSql = $pdo->prepare(
-    "SELECT m_plan.plan_name, m_merchant.plan_start_date
+    "SELECT m_plan.plan_name, m_merchant.plan_start_date, m_merchant.plan_end_date
     FROM m_merchant
     JOIN m_plan ON m_merchant.plan_id = m_plan.id
     WHERE m_merchant.email = :email"
@@ -175,18 +175,21 @@ $merchantPlans = $planSql->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($merchantPlans as $merchantPlan) {
     $planName = $merchantPlan['plan_name'];
-    $createDate = new DateTime($merchantPlan['plan_start_date']);
-    $endDate = clone $createDate;
-    $endDate->modify($planName);
+    $planStartDate = new DateTime($merchantPlan['plan_start_date']);
+    $planEndDate = new DateTime($merchantPlan['plan_end_date']);
 
     $currentDate = new DateTime();
-    $interval = $currentDate->diff($endDate);
-
-    $daysRemaining = $interval->days;
-
+    
+    // Calculate the interval between current date and plan end date
+    $interval = $currentDate->diff($planEndDate);
+    
+    // Calculate days remaining (invert the interval if end date is in the past)
+    $daysRemaining = $interval->invert === 0 ? $interval->days : 0;
+    
     // echo "Plan: $planName<br>";
     // echo "Days Remaining: $daysRemaining days<br>";
 }
+
 
 
 

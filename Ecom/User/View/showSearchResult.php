@@ -1,4 +1,5 @@
 <?php
+include "../Controller/categoryListController.php";
 include "../Controller/newcartController.php";
 include "../Controller/wishlistcart.php";
 include "../Controller/trendingProductController.php";
@@ -10,7 +11,7 @@ include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
 $verifyData = $_SESSION["verifyData"];
-$SignUp = $_SESSION["userEmail"];
+$logoutEmail =  $_SESSION['logOutEmail'];
 // echo "<pre>";
 // print_r($userData);
 // echo "</pre>";
@@ -31,14 +32,17 @@ $SignUp = $_SESSION["userEmail"];
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
     <link rel="stylesheet" href="./resources/css/bannerSlideShow.css">
-    <script src="./resources/js/chat.js" defer></script>
     <link rel="stylesheet" href="./resources/css/chat.css">
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./resources/js/chat.js" defer></script>
     <script src="./resources/js/bannerSlideShow.js" defer></script>
+    <script src="./resources/js/searchProduct.js"></script>
+    <script src="./resources/js/userMainPage.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -158,14 +162,12 @@ $SignUp = $_SESSION["userEmail"];
                         <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
+
                 <!-- <div class="relative w-32">
                     <div class=" overflow-hidden absolute mx-2 ">
                         <div id="ln_space" class="w-28 h-20"></div>
                     </div>
                 </div> -->
-
-
-
 
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
@@ -192,12 +194,16 @@ $SignUp = $_SESSION["userEmail"];
                             <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
                         </li>
                         <li>
+                            <!-- <a href="./login.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</a> -->
                             <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
                                 <p class="float-left px-4">Log out</p>
                             </button>
                         </li>
                     </ul>
                 </div>
+
+
+
                 <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
@@ -220,39 +226,46 @@ $SignUp = $_SESSION["userEmail"];
                 </ul>
             </div>
         </div>
-        <form action="" method="post">
-            <div class="flex w-3/4 m-auto">
-                <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
-                <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                    </svg></button>
-                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mockups</button>
+        <!-- <form action="../Controller/searchProductController.php" method="post"> -->
+        <div class="flex w-3/4 m-auto pb-4">
+            <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                </svg></button>
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button relative">
+                    <?php foreach ($categories as $category) { ?>
+                        <li class="relative">
+                            <div class="category inline-flex w-full px-4 py-2 hover:bg-gray-100 text-start" data-category-id="<?= $category["id"] ?>">
+                                <?= $category["c_name"] ?>
+                            </div>
+                            <div class="category-subcategories fixed top-0 w-40 h-[250px] left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
+                                <?php foreach ($subCategories as $subcategory) {
+                                    if ($subcategory["category_id"] === $category["id"]) { ?>
+                                        <div class="py-1 pl-3 hover:bg-gray-100" data-subcategory-id="<?= $subcategory["id"] ?>">
+                                            <?= $subcategory["s_c_name"] ?>
+                                        </div>
+                                <?php }
+                                } ?>
+                            </div>
                         </li>
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Templates</button>
-                        </li>
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Design</button>
-                        </li>
-                        <li>
-                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="relative w-full">
-                    <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search Mockups, Logos, Design Templates..." required>
-                    <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium w-20 h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
-                        <span class="sr-only">Search</span>
-                    </button>
-                </div>
+                    <?php } ?>
+                </ul>
             </div>
-        </form>
+            <div class="relative w-full">
+                <input type="search" id="search" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search Here..." required>
+                <button id="searchButton" type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium w-20 h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </div>
+        </div>
+        <!-- </form> -->
+        <?php
+        // echo "<pre>";
+        // print_r($categories);
+        ?>
     </nav>
 
     <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -284,324 +297,48 @@ $SignUp = $_SESSION["userEmail"];
     <button class="chat-btn z-50 scale-110" id="chatBoxButton">
         <img src="./resources/img/chat.png" alt="" class="w-20 h-auto animate-[wiggle_700ms_ease-in-out_infinite] ">
     </button>
-    <div class="chat-popup z-50 bg-white">
+    <div class="chat-popup z-50 bg-white"></div>
+    <section class=" mt-24">
+        <!-- <div class="m-2">
+            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">All Product</span></h1>
+            <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
+        </div> -->
+        <div>
+            <div class="flex overflow-y-scroll pb-6 h-full">
+                <div id="searchResult" class="flex flex-wrap w-full  justify-around">
+                    <!-- <form action="../Controller/newcartController.php" method="post"> -->
+                    <?php foreach ($AllProduct as $productDetail) { ?>
+                        <div class="inline p-3">
+                            <div class="h-80 w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                                <form action="./mainPage.php" method="post">
+                                    <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
+                                        <div class="flex justify-center items-center h-44">
+                                            <img class="w-48 h-auto m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
+                                        </div>
+                                        <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                            <a href="./mainPage.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                            <a href="../View/itemDetail.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="list-outline"></ion-icon></button></a>
 
-    </div>
-
-    <section class="sec h-screen">
-        <section class="w-[90%] m-auto">
-
-            <div class="banner-container mt-20">
-                <!-- Banner_1 section -->
-                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
-                <!-- Additional banners go here -->
-                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
-            </div>
-
-
-            <!--Trending product section  -->
-            <div class=" flex flex-col m-auto p-auto font-poppins ">
-
-                <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Product</span></h1>
-                <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
-
-                <div class="flex overflow-x-scroll pb-3 hide-scroll-bar mt-4">
-                    <div class="flex flex-nowrap">
-                        <div id="product-grid">
-                            <?php
-                            // $product_array = $db_handle->runQuery("SELECT * FROM m_cart ORDER BY id ASC");
-                            if (!empty($_SESSION["trandingProduct"])) {
-                                foreach ($_SESSION["trandingProduct"] as $tranding) {
-                            ?>
-                                    <div class="product-item">
-                                        <!-- <form method="post" action="../Controller/cartController.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>"> -->
-                                        <div class="mx-4">
-                                            <div class=" h-80 w-52 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                                                <form action="./mainPage.php" method="post">
-                                                    <div class="relative overflow-hidden bg-slate-300 dark:bg-slate-700 rounded-xl ">
-                                                        <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
-                                                        <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
-                                                        <div class=" flex justify-center items-center h-44">
-                                                            <img class=" w-52 h-auto m-auto" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
-                                                        </div>
-                                                        <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                                            <a href="./mainPage.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
-
-                                                            <a href="../View/itemDetail.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="list-outline"></ion-icon></button></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class=" dark:text-white ">
-                                                        <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full "><?php echo $tranding["name"]; ?></h2>
-                                                        <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
-                                                        <!-- <del class="text-red-700 text-md">$999</del> -->
-                                                        <p name="price" class="text-md font-bold mt-2 ml-5 block "><?php echo "$" . $tranding["sellprice"]; ?></p>
-                                                        <div class="cart-action">
-                                                            <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto " />
-                                                            <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
                                         </div>
                                     </div>
-                                    <!-- </form> -->
-                        </div>
-                <?php
-                                }
-                            }
-                ?>
-
-                    </div>
-
-                </div>
-            </div>
-            </div>
-
-            <a href="./trandingProduct.php" class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-my-purple1 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group float-right m-2">
-                <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </span>
-                <span class="absolute flex items-center justify-center w-full h-fuinline p-3ll text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
-                <span class="relative invisible ">View All</span>
-            </a>
-            <!--End of Trending product section  -->
-            <!-- Banner 2 -->
-            <div class="banner-container">
-                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_five_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_six_img'] ?>" alt="" class="banner-image">
-                <!-- More images for this banner section -->
-            </div>
-            <!--End of Banner 2 -->
-            <!-- All Product session start -->
-            <div class=" pdt m-2">
-                <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">All Product</span></h1>
-                <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
-            </div>
-            <div>
-                <div class="flex overflow-y-scroll pb-6 h-96">
-                    <div class="flex flex-wrap w-full  justify-around">
-                        <!-- <form action="../Controller/newcartController.php" method="post"> -->
-                        <?php foreach ($AllProduct as $productDetail) { ?>
-                            <div class="inline p-3">
-                                <div class="h-80 w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                                    <form action="./mainPage.php" method="post">
-                                        <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
-                                            <div class="flex justify-center items-center h-44">
-                                                <img class="w-48 h-auto m-auto" src="../../Storage/product/<?= $productDetail["p_one"] ?>" alt="">
-                                            </div>
-                                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                                <a href="./mainPage.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
-                                                <a href="../View/itemDetail.php?pid=<?= $productDetail["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="list-outline"></ion-icon></button></a>
-
-                                            </div>
-                                        </div>
-                                        <div class="relative dark:text-white">
-                                            <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full"><?= $productDetail["name"] ?></h2>
-                                            <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                            <p class="text-xs mt-2 ml-5 block 
+                                    <div class="relative dark:text-white">
+                                        <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full"><?= $productDetail["name"] ?></h2>
+                                        <!-- <del class="text-red-700 text-lg">$999</del> -->
+                                        <p class="text-xs mt-2 ml-5 block 
                                              overflow-hidden h-4"><?= $productDetail["description"] ?></p>
-                                            <p class="text-md font-bold mt-2 ml-5 block ">$<?= $productDetail["sellprice"] ?></p>
-                                            <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                                            <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
-                                        </div>
-
-                                </div>
+                                        <p class="text-md font-bold mt-2 ml-5 block ">$<?= $productDetail["sellprice"] ?></p>
+                                        <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                                        <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
+                                    </div>
                                 </form>
                             </div>
-                        <?php } ?>
-                    </div>
-
+                        </div>
+                    <?php } ?>
                 </div>
-
             </div>
-            <a href="./trandingProduct.php" class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-my-purple1 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group float-right m-2">
-                <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </span>
-                <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
-                <span class="relative invisible ">View All</span>
-            </a>
-
-            <div class="banner-container">
-                <img src="<?= $banner[0]['banner_seven_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_eight_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_nine_img'] ?>" alt="" class="banner-image">
-                <!-- More images for this banner section -->
-            </div>
-            <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Shops</span></h1>
-            <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-10">
-                <!-- Product Card 1 -->
-                <?php foreach ($latestMerchants as $latestShop) { ?>
-                    <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
-                        <div class=" w-auto h-60 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
-                            <div class="relative">
-                                <img src="../../Storage/profile/<?= $latestShop["logo"] ?>" class=" w-20 h-20 object-cover rounded-full ml-2" alt="">
-                                <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
-                            </div>
-                            <div class="px-2 py-1">
-                                <!-- Product Title -->
-                                <div class="text-sm md:text-base font-bold pr-2"><?= $latestShop["store_name"] ?></div>
-                                <div class="flex py-2">
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex items-center">
-                                            <div class=" text-yellow-500 text-xl">
-                                                <?php
-                                                if (!function_exists('numberToStars')) {
-                                                    function numberToStars($number)
-                                                    {
-                                                        $roundedNumber = round($number);
-                                                        $maxStars = 5;
-                                                        $fullStars = str_repeat('★', $roundedNumber);
-                                                        $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
-                                                        return $fullStars . $emptyStars;
-                                                    }
-
-                                                ?>
-                                                <?php }  ?>
-                                                <?= numberToStars($latestShop["review_rating"]) ?>
-
-                                            </div>
-                                            <p class="text-gray-600 font-bold text-xs md:text-sm ml-1">
-                                                <?= $latestShop["review_rating"] ?>
-                                                <span class="text-gray-500 font-normal">(<?= $latestShop["review_count"] ?> reviews)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="bg-black dark:bg-slate-300 rounded-xl py-4 m-2 flex">
-                                <div>
-                                    <a href="#" target="_blank"><img alt="" height="auto" src="./resources/img/crop.png" /></a>
-                                </div>
-                                <div class="text-white w-72">
-                                    <h2 class="mt-3 text-sm md:text-md capitalize font-bold">Long Sleeve Crop Top</h2>
-                                  
-                                    <p class="text-xs mt-2 ml-1 block ">E-spot</p>
-                                    <p class="text-md font-bold mt-2 ml-1 block ">$999</p>
-                                    <div class="flex justify-end">
-                                        <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="heart-outline"></ion-icon></button>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="list-outline"></ion-icon></button>
-                                        </div>
-                                        <div class="">
-                                            <button class="bg-pink-900 text-white p-1.5 text-2xl rounded-full m-1 w-9 h-9 shadow-xl"><ion-icon name="cart-outline"></ion-icon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                                <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl p-2 text-gray-100 hover:text-blue-900 w-24 float-right mb-4" href="./storepage.php?id=<?= $latestShop['id'] ?>">View Shop</a>
-                            </div>
-
-                        </div>
-                    </div>
-                <?php } ?>
-            </div>
-
-
-
-        </section>
-        <section class="w-[90%] m-auto z-0">
-            <div class="banner-container">
-                <img src="<?= $banner[0]['banner_ten_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_eleven_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_twelve_img'] ?>" alt="" class="banner-image">
-                <!-- More images for this banner section -->
-            </div>
-
-            <div class=" w-full h-auto py-5 z-0">
-                <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
-                <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
-
-
-
-                <div class=" w-[80%] m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg">
-
-                    <div class="p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-                        <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg" data-inactive-classes="text-gray-500 dark:text-gray-400">
-                            <h2 id="accordion-flush-heading-1">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
-                                    <span><?= $faq[0]['question_one'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_one'] ?>
-                                    </p>
-
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-2">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-                                    <span><?= $faq[0]['question_two'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_two'] ?></p>
-
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-3">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                                    <span><?= $faq[0]['question_three'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_three'] ?></p>
-
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-4">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
-                                    <span><?= $faq[0]['question_four'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_four'] ?></p>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-5">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-                                    <span><?= $faq[0]['question_fivre'] ?>
-                                    </span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_five'] ?></p>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-        </section>
+        </div>
+    </section>
+    <section class="sec">
         <section id="footer">
             <div class="relative bg-purple-300 dark:bg-color-primary-dark dark:text-white border-t border-t-transparent dark:border-t-slate-200">
                 <div class="container pl-12 py-5 ">
@@ -648,7 +385,7 @@ $SignUp = $_SESSION["userEmail"];
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-center pt-10 border-t border-color-gray">
+                    <div class="flex justify-center pt-5 border-t border-color-gray">
                         <p>2023 &copy; Beyond. All Rights Reserved.</p>
                     </div>
                 </div>
@@ -770,26 +507,7 @@ $SignUp = $_SESSION["userEmail"];
     </section>
     <!-- <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script> -->
     <script>
-        var toTopButton = document.getElementById("to-top-button");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                toTopButton.classList.remove("hidden");
-            } else {
-                toTopButton.classList.add("hidden");
-            }
-        }
 
-        function goToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        // document.addEventListener("DOMContentLoaded", function(e) {
-        //     ConveyThis_Initializer.init({
-        //         api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
-        //     });
-        // });
     </script>
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

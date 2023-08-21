@@ -1,12 +1,13 @@
 <?php
 include "./adminsidebar.php";
+// session_start();
 include "../Controller/categoryListController.php";
 
 $result = $_SESSION["m_category"];
 $categorydata = $_SESSION["editcategory"];
-
+// echo "<pre>";
 //  print_r($categorydata);
-
+//  echo "</pre>";
 ?>
 
 
@@ -43,9 +44,15 @@ $categorydata = $_SESSION["editcategory"];
                             <input type="hidden" name="id" id="username" autocomplete="username" value="<?php echo $categorydata[0]["id"] ?>" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6">
                         </div>
                         <div class="flex justify-around">
+                            <div class="flex flex-col">
                             <div class="space-y-3 mt-5">
                                 <p>Category</p>
                                 <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" value="<?php echo $categorydata[0]["c_name"] ?>" name="cname">
+                            </div>
+                            <!-- <div class="space-y-3 mt-5">
+                                <p> Sub Category</p>
+                                <input class=" outline-none border rounded-md cursor-text h-8 w-72 indent-2" type="text" value="<?php echo $categorydata[0]["sub_category_names"] ?>" name="scname">
+                            </div> -->
                             </div>
                             <div class="flex flex-col justify-start space-y-3 mt-5">
                                 <p>Description</p>
@@ -53,6 +60,7 @@ $categorydata = $_SESSION["editcategory"];
                                 </input>
                             </div>
                         </div>
+                        
                     </div>
                     <button id="update" class="py-2 px-4 float-right text-white rounded-md bg-blue-600 mr-36">Update</button>
                 </form>

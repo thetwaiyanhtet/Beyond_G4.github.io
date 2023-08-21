@@ -1,12 +1,12 @@
 <?php
-// include "./adminsidebar.php";
-session_start();
+include "./adminsidebar.php";
+// session_start();
 include "../Controller/categoryListController.php";
 $result = $_SESSION["m_category"];
-$sub=$_SESSION["sub_category"];
-echo "<pre>";
-print_r($sub);
-echo "</pre>";
+// $sub=$_SESSION["sub_category"];
+// echo "<pre>";
+// print_r($result);
+// echo "</pre>";
 ?>
 
 
@@ -132,11 +132,11 @@ echo "</pre>";
                            border-b border-[#E8E8E8]
                            ">
                                                             
-                                                            <select name="scname" id="">
-                                                            <?php foreach($sub as $subCategory) { ?>
-                                                                <option value="<?= $subCategory["category_id"] ?>"><?= $subCategory["s_c_name"] ?></option>
-                                                                <?php } ?>
-                                                            </select>
+                                                         
+                                                        
+                                                                <div value="<?= $category["category_id"] ?>"><?= $category["sub_category_names"] ?></div>
+                                                             
+                                                           
                                                             
                                                         </td>
                                                         <td class="
