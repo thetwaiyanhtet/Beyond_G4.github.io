@@ -5,7 +5,7 @@ include "../Model/model.php";
 
 $sql = $pdo->prepare(
     "SELECT m_cusreview.id,m_product.name,m_admin_category.c_name,
-    m_customer.username,m_cusreview.comment,m_cusreview.rating
+    m_customer.username,m_cusreview.comment,m_cusreview.rating,m_product.p_one
     FROM m_product 
     JOIN m_cusreview ON m_product.id = m_cusreview.product_id
     JOIN m_customer ON m_cusreview.customer_id = m_customer.id 
@@ -16,6 +16,6 @@ $sql = $pdo->prepare(
 $sql->bindValue(":id", $id);
 $sql->execute();
 
-$_SESSION["reviewDetail"] = $sql->fetchAll(PDO::FETCH_ASSOC);
+$_SESSION["reviewDetail"] = $sql->fetch();
 $reviewData = $_SESSION["reviewDetail"];
 echo json_encode($reviewData);

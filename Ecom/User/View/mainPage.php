@@ -238,7 +238,7 @@ $SignUp = $_SESSION["userEmail"];
                             <div class="category-subcategories fixed top-0 w-40 h-[250px] left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
                                 <?php foreach ($subCategories as $subcategory) {
                                     if ($subcategory["category_id"] === $category["id"]) { ?>
-                                        <div class="py-1 pl-3 hover:bg-gray-100" data-subcategory-id="<?= $subcategory["id"] ?>">
+                                        <div class="py-1 pl-3 hover:bg-gray-100 subCategory" data-subcategory-id="<?= $subcategory["id"] ?>">
                                             <?= $subcategory["s_c_name"] ?>
                                         </div>
                                 <?php }
@@ -291,8 +291,8 @@ $SignUp = $_SESSION["userEmail"];
 
     </div>
 
-    <section class="sec h-auto">
-        <section class="w-[90%] m-auto">
+    <section class="sec h-auto flex justify-center flex-wrap p-5 mt-10" id="searchResult">
+        <section class="w-[90%] m-auto" >
 
             <div class="banner-container mt-20">
                 <!-- Banner_1 section -->
