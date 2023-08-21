@@ -38,13 +38,6 @@ include "../Controller/salereportController.php";
 
         </div>
         <div class="flex items-center float-right mt-3 pr-5 pb-5 ">
-            <!-- <span class="flex p-1 border rounded-lg">
-                <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
-            </span>
-            <span>-</span>
-            <span class="flex p-1 border rounded-lg">
-                <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
-            </span> -->
             <button class=" ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
         </div>
 
@@ -58,7 +51,7 @@ include "../Controller/salereportController.php";
                                     Product name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Product id
+                                    Code
                                 </th>
                                 <th scope="col" class="px-6 py-3 text-start">
                                     Category
@@ -92,14 +85,14 @@ include "../Controller/salereportController.php";
                                     <td class="px-6 py-4">
                                         <?= $value['code'] ?>
                                     </td>
-                                    <td class="px-6 py-4 text-start">
+                                    <td class="pl-8 py-4 text-start">
                                         <?= $value['c_name'] ?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        Ks <?= $value['buyprice'] ?>
+                                        <?= $value['buyprice'] ?> Ks
                                     </td>
                                     <td class="px-6 py-4">
-                                        Ks <?= $value['sellprice'] ?>
+                                        <?= $value['sellprice'] ?> Ks
                                     </td>
 
                                     <td class="px-16 py-4">
@@ -107,7 +100,7 @@ include "../Controller/salereportController.php";
                                     </td>
                                     <td class="px-16 py-4 ">
                                         <?php $total =  $value['quantity'] * $value['sellprice'] ?>
-                                        <?= $total ?>
+                                        <?= $total ?> Ks    
                                     </td>
                                     <td class="px-6 py-4">
                                         07/24/2023
