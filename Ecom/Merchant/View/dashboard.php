@@ -47,7 +47,7 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Sales.png" alt="..."></div>
                                 <div class=" text-center">
-                                    <p class=" font-semibold text-lg">Ks <?= $totalProfitSell ?></p>
+                                    <p class=" font-semibold text-lg"> <?= $totalProfitSell ?> Ks</p>
                                     <p>Sales</p>
                                 </div>
                             </div>
@@ -66,9 +66,9 @@ $trending_json = json_encode($trending);
                                 <div class=" flex justify-center"><img src="./resources/img/Profit.png" alt="..."></div>
                                 <div class=" text-center">
                                     <?php if (isset($TotalProfit)) { ?>
-                                        <p class=" font-semibold text-lg">Ks <?= $TotalProfit ?></p>
+                                        <p class=" font-semibold text-lg"><?= $TotalProfit ?> Ks</p>
                                     <?php } else { ?>
-                                        <p class=" font-semibold text-lg">Ks 0</p>
+                                        <p class=" font-semibold text-lg"> 0 Ks</p>
                                     <?php } ?>
                                     <p>Profit</p>
                                 </div>
@@ -78,7 +78,7 @@ $trending_json = json_encode($trending);
                             <div class=" flex-col justify-center space-y-3">
                                 <div class=" flex justify-center"><img src="./resources/img/Cost.png" alt="..."></div>
                                 <div class=" text-center">
-                                    <p class=" font-semibold text-lg">Ks <?= $totalProfitBuy ?></p>
+                                    <p class=" font-semibold text-lg"> <?= $totalProfitBuy ?> Ks</p>
                                     <p>Capital</p>
                                 </div>
                             </div>
@@ -252,9 +252,12 @@ $trending_json = json_encode($trending);
                         <div class=" flex justify-center">
                             <div class=" flex-col justify-between pb-3 p-3 space-y-2">
                                 <?php foreach ($topCustomers as $topCus) { ?>
+                                    
                                     <div class=" flex space-x-5 pl-1">
-                                        <img src="../../Storage/profile/<?= $topCus["p_picture"] ?>" alt="..." class=" w-6 h-6 rounded-full">
+                                        <div><img src="../../Storage/profile/<?= $topCus["p_picture"] ?>" alt="..." class=" w-6 h-6 rounded-full"></div>
+                                       
                                         <p><?= $topCus["username"] ?></p>
+
                                     </div>
                                 <?php } ?>
                             </div>
@@ -270,7 +273,7 @@ $trending_json = json_encode($trending);
                         </div>
                         <hr>
                         <div class=" text-center py-6">
-                            <p class=" font-semibold">Ks <?= $totalProfit ?></p>
+                            <p class=" font-semibold"> <?= $totalProfit ?> Ks</p>
                         </div>
                     </div>
                     <div class=" rounded-lg p-3 shadow-xl border-2 border-blue-950">
@@ -409,7 +412,7 @@ $trending_json = json_encode($trending);
                                                 <?= $topSelling["instock"] ?>
                                             </td>
                                             <td class="px-6 py-4">
-                                                Ks <?= $topSelling["sellprice"] ?>
+                                                 <?= $topSelling["sellprice"] ?> Ks
                                             </td>
                                         </tr>
                                     <?php } ?>

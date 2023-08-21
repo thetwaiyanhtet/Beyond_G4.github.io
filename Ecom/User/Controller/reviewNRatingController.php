@@ -45,9 +45,9 @@ if ($existingReviewData['review_count'] > 0) {
 // If no existing review, proceed with inserting the new review
 $insertReviewQuery = $pdo->prepare(
     "INSERT INTO 
-    m_cusreview (customer_id, merchant_id, product_id, comment, rating, create_date) 
+    m_cusreview (customer_id, merchant_id, product_id, comment, rating) 
     VALUES 
-    (:customerid, :merchantid, :productid, :review_text, :rating, NOW())"
+    (:customerid, :merchantid, :productid, :review_text, :rating)"
 );
 
 $insertReviewQuery->bindValue(":customerid", $cusid);
