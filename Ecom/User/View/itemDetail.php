@@ -18,6 +18,7 @@ ini_set('display_errors', 1);
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../../User/View/resources/css/label">
@@ -48,6 +49,7 @@ ini_set('display_errors', 1);
         </nav>
         <form action="./mainPage.php" method="post">
             <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
+
                 <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] w-2/4 shadow-2xl lg:w-[350px] p-5">
                     <?php if (!empty($ItemDetails[0]["p_one"])) { ?>
                         <div class="flex items-center justify-center">
@@ -112,11 +114,13 @@ ini_set('display_errors', 1);
                             }
                             userPics[index].classList.add('active-pic');
                             productImage.src = "../../Storage//product/" + imageSources[index];
-                            selectedImage.value = imageSources[index];
-                            console.log(selectedImage.value);
+                            selectedImageInput.value = imageSources[index];
+                            console.log(selectedImageInput.value);
+
 
                         }
                     </script>
+
                     <!-- end -->
 
                     <!-- if size hava data,size select box are shown.If not,nondisplay -->

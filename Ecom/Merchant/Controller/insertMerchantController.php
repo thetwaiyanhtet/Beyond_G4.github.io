@@ -15,6 +15,15 @@ if(isset($_POST['confirmPayment'])){
     echo $selected_payment;
     include "../Model/model.php";
 
+    $enddate ;
+    if ($selected_plan == 6) {
+        $enddate = 30;
+    } elseif($selected_plan == 7){
+        $enddate = 180;
+    }elseif($selected_plan == 8 ){
+        $enddate = 360;
+    }
+
     $sql2 = $pdo->prepare(
         "INSERT INTO m_merchant
         (
@@ -22,7 +31,6 @@ if(isset($_POST['confirmPayment'])){
             email,
             password,
             plan_id,
-            plan_start_date,
             plan_end_date
         )
         VALUES
@@ -31,16 +39,13 @@ if(isset($_POST['confirmPayment'])){
            :merchantEmail,
            :merchantPw,
            :planID,
-           :planStart,
-           :planEnd
+           DATE_ADD(CURDATE(), INTERVAL $enddate DAY)
         )"
     );
     $sql2->bindValue(":merchantName",$merchantName);
     $sql2->bindValue(":merchantEmail",$merchantEmail);
     $sql2->bindValue(":merchantPw",password_hash($merchantPw, PASSWORD_DEFAULT));
     $sql2->bindValue(":planID",$selected_plan);
-    $sql2->bindValue(":planStart",date('Y-m-d'));
-    $sql2->bindValue(":planEnd",date('Y-m-d'));
     $sql2->execute();
 
 
