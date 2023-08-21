@@ -234,12 +234,12 @@ $trending_json = json_encode($trending);
                         <hr>
                         <div class="flex justify-between pb-3 space-x-5 p-3 text-center">
                             <div>
-                                <p class="font-semibold"><?= $totalDeliveryStatus0 ?></p>
-                                <p>Processing</p>
+                                <p class="font-semibold "><?= $totalDeliveryStatus0 ?></p>
+                                <p class="font-semibold text-orange-600">Processing</p>
                             </div>
                             <div>
-                                <p class="font-semibold"><?= $totalDeliveryStatus1 ?></p>
-                                <p>Processed</p>
+                                <p class="font-semibold "><?= $totalDeliveryStatus1 ?></p>
+                                <p class="font-semibold text-green-600">Delivered</p>
                             </div>
                         </div>
                     </div>
