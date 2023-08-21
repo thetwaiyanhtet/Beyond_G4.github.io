@@ -17,6 +17,7 @@ $customer_json = json_encode($customerchart);
 $planchart = $_SESSION["m_plan"];
 $plan_json = json_encode($planchart);
 $lmerchant = $_SESSION["m_lastmerchant"];
+$lcustomer = $_SESSION["m_lastcustomer"];
 $category = $_SESSION["m_category"];
 $category_json = json_encode($category);
 ?>
@@ -216,20 +217,6 @@ $category_json = json_encode($category);
         <div class=" flex justify-center">
             <div class="shadow-lg rounded-lg w-[90%] h-auto mt-10  overflow-hidden">
                 <div class="py-3 px-5 bg-gray-50 font-semibold">Orders and Customers Overview</div>
-                <!-- <div class="flex">
-                    <div class="flex items-center text-xs  border border-black rounded-lg w-28 justify-center mx-5">
-                        <i class='bx bxs-circle text-[#F86D59]'></i>
-                        <span>Pro</span>
-                    </div>
-                    <div class="flex items-center text-xs  border border-black rounded-lg w-28 justify-center mx-5">
-                        <i class='bx bxs-circle text-[#835D6A]'></i>
-                        <span>Enterprice</span>
-                    </div>
-                    <div class="flex items-center text-xs  border border-black rounded-lg w-28 justify-center mx-5">
-                        <i class='bx bxs-circle text-[#BFCCDF]'></i>
-                        <span>Basic</span>
-                    </div>
-                </div> -->
                 <canvas class="p-10 text-center " id="chartLinetwo"></canvas>
             </div>
 
@@ -340,7 +327,7 @@ $category_json = json_encode($category);
                     );
                 </script>
             </div>
-            <div class=" w-60 h-auto  border rounded-lg space-y-3 shadow-xl">
+            <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Recent Registred Merchant</p>
                 <?php $for = 2; foreach ($lmerchant as $index => $value) { ?>
                     <div class="flex items-center ml-3 border-b-2 pb-2">
@@ -354,25 +341,17 @@ $category_json = json_encode($category);
                 <?php } ?>
             </div>
             <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
-                <p class="font-semibold px-3 my-3">Quick Actions</p>
-                <div class="flex items-center ml-3 border-b-2 pb-2 space-x-3">
-                    <img src="./resources/img/amazfit.png" alt="">
-                    <p>Mary Pu Tu</p>
-                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
-                    <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
-                </div>
-                <div class="flex items-center ml-3 border-b-2 pb-2 space-x-3">
-                    <img src="./resources/img/amazfit.png" alt="">
-                    <p>Mary Pu Tu</p>
-                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
-                    <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
-                </div>
-                <div class="flex items-center ml-3 border-b-2 pb-2 space-x-3">
-                    <img src="./resources/img/amazfit.png" alt="">
-                    <p>Mary Pu Tu</p>
-                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 ">Approve</button>
-                    <button class="bg-red-500 rounded-lg text-white px-3 py-1">Reject</button>
-                </div>
+                <p class="font-semibold px-3 my-3">Recent Registred Merchant</p>
+                <?php $for = 2; foreach ($lcustomer as $index => $value) { ?>
+                    <div class="flex items-center ml-3 border-b-2 pb-2">
+                        <img class="w-20" src="../..<?= $value['p_picture'] ?>" alt="">
+                        <div class="mx-3">
+                            <p><?= $value['username'] ?></p>
+                            <p><?= $value['create_date'] ?>
+                            </p>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </main>
