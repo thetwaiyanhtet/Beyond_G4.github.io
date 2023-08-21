@@ -341,7 +341,7 @@ $category_json = json_encode($category);
                 <?php } ?>
             </div>
             <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
-                <p class="font-semibold px-3 my-3">Recent Registred Merchant</p>
+                <p class="font-semibold px-3 my-3">Recent Registred Customer</p>
                 <?php $for = 2; foreach ($lcustomer as $index => $value) { ?>
                     <div class="flex items-center ml-3 border-b-2 pb-2">
                         <img class="w-20" src="../..<?= $value['p_picture'] ?>" alt="">
