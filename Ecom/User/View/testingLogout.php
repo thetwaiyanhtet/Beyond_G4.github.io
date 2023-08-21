@@ -170,8 +170,9 @@ $customer = $_SESSION['checkEmail']
                 </button>
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-                    <div class="px-4 py-3">
+                   
                         <?php if ($customer) { ?>
+                            <div class="px-4 py-3">
                             <span class="block text-sm text-gray-900 dark:text-white">
                                 <?php
                                 
@@ -179,21 +180,23 @@ $customer = $_SESSION['checkEmail']
                         
                                 ?>
                             </span>
-                        <?php } else { ?>
-                            <span class="block text-sm text-gray-900 dark:text-white">User Email</span>
-                        <?php } ?>
-                    </div>
-
+                            </div>
+                        <?php }  ?>
+                  
+                    <?php if(!empty($customer)) { ?>
                     <ul class="py-2" aria-labelledby="user-menu-button">
+                        
                         <li>
                             <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
                         </li>
+                       
                         <li>
                             <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
                         </li>
                         <li>
                             <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
                         </li>
+                        <?php } ?>
                         <?php if ($customer) { ?>
                             <li>
                                 <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
@@ -202,10 +205,19 @@ $customer = $_SESSION['checkEmail']
                             </li>
                         <?php } else { ?>
                             <li>
+                                <a href="./SignUp.php">
+                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                        <p class="float-left px-4">
+                                           Signup
+                                        </p>
+                                    </button>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="./login.php">
                                     <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
                                         <p class="float-left px-4">
-                                           logIn
+                                           Login
                                         </p>
                                     </button>
                                 </a>

@@ -3,6 +3,10 @@
 
 require_once("../Controller/newcartController.php");
 require_once "../Model/model.php";
+
+// $selectedColor=$_SESSION['selectedItem'];
+// echo "<pre>";
+// print_r($selectedColor);
 // echo "</pre>";
 // print_r($_SESSION['usercart']);
 if (!empty($_SESSION['carttle'])) {
@@ -212,16 +216,12 @@ if (!empty($_SESSION['carttle'])) {
                                                 </div>
                                                 <div name="pname" class="w-24"><?= $value['name'] ?></div>
 
-
-
                                                 <input class="w-16 h-8 bg-white/30 rounded-md iquantity" id="iquantity" name="pquantity" onchange="subTotal()" min="1" max="<?= $value['instock'] ?>" type="number" value="1">
-                                                <p>$<?= $value['sellprice'] ?> </p>
+                                                <p><?= $value['sellprice'] ?> Ks </p>
                                                 <input type="hidden" class="iprice " name="psellprice" value="<?= $value['sellprice'] ?>">
-
 
                                                 <p class="itotal"></p>
                                                 <input type="hidden" name="id" value="<?= $value['id'] ?>">
-
                                                 <input type="submit" value="x" class="cursor-pointer rounded-full font-black bg-[#EBEBEB] flex items-center justify-center"></input>
 
                                             </div>

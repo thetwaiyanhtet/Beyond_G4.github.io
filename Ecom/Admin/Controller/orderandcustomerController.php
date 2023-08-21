@@ -35,6 +35,14 @@ $lastmerchant = $pdo->prepare(
     "
 );
 
+$lastcustomer = $pdo->prepare(
+    "SELECT username,p_picture,create_date
+    FROM m_customer
+    ORDER BY m_customer.id DESC
+    LIMIT 3;
+    "
+);
+
 $category = $pdo->prepare(
     "SELECT c.c_name,od.quantity
     FROM m_order_details od
@@ -50,9 +58,11 @@ $sqlcc->execute();
 $slqplan->execute();
 $lastmerchant->execute();
 $category->execute();
+$lastcustomer -> execute();
 
 $_SESSION["m_order"]=$sql->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["m_customer"] = $sqlcc->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["m_plan"] = $slqplan->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["m_lastmerchant"] = $lastmerchant->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION["m_category"] = $category->fetchAll(PDO::FETCH_ASSOC);
+$_SESSION["m_lastcustomer"] = $lastcustomer->fetchAll(PDO::FETCH_ASSOC);

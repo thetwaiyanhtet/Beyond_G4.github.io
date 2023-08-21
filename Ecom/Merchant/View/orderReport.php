@@ -78,7 +78,7 @@ include "../Controller/orderreportcontroller.php";
                             <!-- <?php $count = ($currentPage - 1) * $itemsPerPage ?> -->
                             <?php foreach ($ordersreport as $order) { ?>
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <th scope="row" class="-py-5 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                                    <th scope="row" class="px-6 py-3 font-medium text-gray-900 whitespace-nowrap text-center">
                                         <?= ++$count ?>.
                                     </th>
                                     <td class="px-6 py-4">
@@ -91,9 +91,9 @@ include "../Controller/orderreportcontroller.php";
                                         <?php if ($order["payment_id"] == 1) { ?>
                                             KBZ pay
                                         <?php } ?> </td>
-                                    <td class="px-6 py-4">
+                                    <td class="pl-8 py-4">
                                         <?php $totalamt = $order["quantity"] * $order["price_per_unit"]  ?>
-                                        <?= $totalamt ?>
+                                        <?= $totalamt ?> Ks
                                     </td>
                                     <td class="px-6 py-4">
                                         <?= $order["order_date"]; ?>
