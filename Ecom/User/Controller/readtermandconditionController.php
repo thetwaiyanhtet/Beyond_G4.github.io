@@ -9,6 +9,5 @@ $sql = $pdo->prepare(
 $sql->execute(); //run real sql
 
 $_SESSION["m_tc"]=$sql->fetchAll(PDO::FETCH_ASSOC);
-echo "<pre>";
-print_r($_SESSION["m_tc"]);
+
 

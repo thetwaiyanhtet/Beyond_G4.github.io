@@ -3,7 +3,6 @@ include "./sidebar.php";
 include "../Controller/reviewandratingController.php";
 $reviewdata = $_SESSION["getReviewandRating"];
 ?>
-
 <!doctype html>
 <html>
 
@@ -18,12 +17,13 @@ $reviewdata = $_SESSION["getReviewandRating"];
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./resources/css/reviewNRating.css">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/navbar.css">
+    <script src="./resources/js/reviewRatingDetail.js" defer></script>
     <script src="./resources/js/dateandtime.js " defer></script>
-    <script src="./resources/js/star.js"></script>
 </head>
 
 <body class=" font-poppins">
@@ -88,24 +88,19 @@ $reviewdata = $_SESSION["getReviewandRating"];
                                                                     $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
                                                                     return $fullStars . $emptyStars;
                                                                 }
-
                                                             ?>
                                                             <?php }  ?>
                                                             <?= numberToStars($data["rating"]) ?>
-
                                                         </div>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
                                                         <?= $data["comment"] ?>
                                                     </td>
                                                     <td class=" text-center text-dark font-medium text-sm py-5 px-2 border-b border-gray-500">
-                                                        <button class="font-medium  hover:underline text-blue-600">
-                                                            <a href="../Controller/revieandratingdetailcontroller.php?id=<?= $data["id"] ?>" class="font-medium text-blue-600  hover:underline">View details</a>
-                                                        </button>
+                                                        <div class="font-medium  hover:underline text-blue-600 view-details-button" data-id="<?= $data["id"] ?>">View details</div>
                                                     </td>
                                                 </tr>
-
-                                            <?php   } ?>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -134,23 +129,9 @@ $reviewdata = $_SESSION["getReviewandRating"];
                 </div>
             </div>
         </section>
-
-        <script>
-            // Get references to the popup and buttons
-            const detailPopup = document.getElementById("detailPopup");
-            const popupButton = document.getElementById("popupButton");
-            const cancelRNRButton = document.getElementById("cancelRNRButton");
-
-            // Function to toggle the visibility of the popup and blur the background
-            function toggleDetailPopup() {
-                detailPopup.classList.toggle("hidden");
-            }
-
-            // Attach click event listeners to the logout button and cancel button
-            popupButton.addEventListener("click", toggleDetailPopup);
-            cancelRNRButton.addEventListener("click", toggleDetailPopup);
-        </script>
-
+        <div id="detailPopup" class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
+            <!-- Dynamically generated content will be populated here -->
+        </div>
     </main>
 </body>
 

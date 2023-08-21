@@ -23,17 +23,6 @@ include "../Controller/orderDetailController.php";
 
 <body>
     <main class="ml-56 relative">
-        <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center">
-            <div class=" pl-2">
-                <p id="date_time"></p>
-            </div>
-            <div>
-                <ul class="flex space-x-5 items-center pr-5">
-                    <li><ion-icon name="notifications-outline" class=" text-xl"></ion-icon></li>
-                    <li><img src="../../<?= $orderDetails[0]["logo"] ?>" alt="..." class=" rounded-full w-16"></li>
-                </ul>
-            </div>
-        </header>
         <div class="flex justify-between">
             <div class="flex m-2 items-center">
                 <img src="./resources/img/fluent_people-32-filled.png" alt="" class="h-8">

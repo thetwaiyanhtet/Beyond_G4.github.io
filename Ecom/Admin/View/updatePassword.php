@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "../Controller/logoandbusinessController.php";
+$logoandname = $_SESSION["m_logo"];
 ?>
 <!doctype html>
 <html>
@@ -22,8 +23,8 @@ include "../Controller/logoandbusinessController.php";
             <div class=" space-y-5 pt-14 shadow-xl p-10 mt-10 rounded-md">
 
                 <div class="items-center flex-col justify-center space-y-4">
-                    <div><img src="../AdminStorge/admin/<?php echo $admin['p_picture'] ?>" alt="..." class=" mx-auto w-20"></div>
-                    <div class=" text-center font-quantico italic font-bold text-3xl text-blue-500 font-philosopher"><?php echo $admin['username']; ?></div>
+                    <div><img src="<?= $logoandname[0]['logo']  ?>" alt="..." class=" mx-auto w-20"></div>
+                    <div class=" text-center font-quantico italic font-bold text-3xl text-blue-500 font-philosopher"><?= $logoandname[0]['business_name']  ?></div>
                 </div>
                 <div>
                     <p class=" text-lg font-semibold">Forgot Password?</p>

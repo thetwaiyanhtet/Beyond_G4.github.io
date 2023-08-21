@@ -1,8 +1,12 @@
 <?php
 include "./adminsidebar.php";
+// session_start();
 include "../Controller/categoryListController.php";
 $result = $_SESSION["m_category"];
-
+// $sub=$_SESSION["sub_category"];
+// echo "<pre>";
+// print_r($result);
+// echo "</pre>";
 ?>
 
 
@@ -79,7 +83,7 @@ $result = $_SESSION["m_category"];
                            px-3
                            lg:px-4
                            ">
-                                                        Create By
+                                                        Sub-Category Name
                                                     </th>
                                                     <th class="
                            w-1/6
@@ -127,7 +131,13 @@ $result = $_SESSION["m_category"];
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                                                            Admin
+                                                            
+                                                         
+                                                        
+                                                                <div value="<?= $category["category_id"] ?>"><?= $category["sub_category_names"] ?></div>
+                                                             
+                                                           
+                                                            
                                                         </td>
                                                         <td class="
                            text-center text-dark

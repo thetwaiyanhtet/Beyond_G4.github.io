@@ -1,5 +1,7 @@
 <?php
 session_start();
+include "../Controller/readtermandconditionController.php";
+$tcondition = $_SESSION["m_tc"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,38 +111,42 @@ session_start();
                 <div class="p-6 space-y-6">
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
                         <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
+                        <?php foreach ($tcondition as $key => $value) { ?>
+                           
+                       
                         <b>1. User Accounts</b> <br>
-                        a. Registration: To access certain features of the Website, you may be required to create a user account. You agree to provide accurate and complete information during the registration process. <br>
-                        b. Account Security: You are responsible for maintaining the confidentiality of your account login credentials and for any activities that occur under your account. Notify us immediately of any unauthorized use or security breach. <br><br>
+                      a. <?= $value['onea'] ?> <br>
+                      b. <?= $value['oneb'] ?> <br><br>
 
                         <b>2. Use of the Website</b> <br>
-                        a. General Use: You may use the Website for personal and non-commercial purposes only. You agree not to use the Website for any illegal, harmful, or abusive activities that may disrupt or interfere with the proper functioning of the Website or infringe on the rights of others. <br>
-                        b. Content: Any content you upload or submit to the Website must not violate any applicable laws or infringe on the rights of any third parties.<br><br>
+                        a. <?= $value['twoa'] ?><br>
+                        b. <?= $value['twob'] ?><br><br>
 
-                        <b>3. Intellectual Property</b>
-                        a. Ownership: The Website and its content, including text, graphics, images, logos, and software, are the property of Beyond or its licensors and are protected by intellectual property laws. <br>
-                        b. Limited License: Beyond grants you a limited, non-exclusive, non-transferable license to access and use the Website for its intended purposes. <br><br>
+                        <b>3. Intellectual Property</b><br>
+                        a. <?= $value['threea'] ?><br>
+                        b. <?= $value['threeb'] ?> <br><br>
 
-                        <b>4. Privacy</b>
-                        Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and disclose your personal information. <br><br>
+                        <b>4. Privacy</b><br>
+                        <?= $value['four'] ?> <br><br>
 
-                        <b>5. Third-Party Links</b>
-                        The Website may contain links to third-party websites or services. Beyond is not responsible for the content or actions of any third-party websites or services. These links are provided for convenience and do not imply endorsement or affiliation. <br><br>
+                        <b>5. Third-Party Links</b><br>
+                        <?= $value['five'] ?> <br><br>
 
-                        <b>6. Limitation of Liability</b>
-                        Beyond shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the Website. <br><br>
+                        <b>6. Limitation of Liability</b><br>
+                        <?= $value['six'] ?> <br><br>
 
-                        <b>7. Modifications to the Terms</b>
-                        We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Website after such changes constitutes your acceptance of the revised Terms. <br><br>
+                        <b>7. Modifications to the Terms</b><br>
+                        <?= $value['seven'] ?> <br><br>
 
-                        <b>8. Termination</b>
-                        Beyond may terminate or suspend your access to the Website at any time and for any reason without prior notice. <br><br>
+                        <b>8. Termination</b><br>
+                        <?= $value['eight'] ?> <br><br>
 
 
-                        <b>9. Contact Us</b>
-                        If you have any questions or concerns about these Terms or the Website, please contact us at beyondecommerce634@gmail.com. <br><br>
+                        <b>9. Contact Us</b><br>
+                        <?= $value['nine'] ?> <br><br>
 
                         <b>By using the Beyond website, you agree to abide by these Terms and Conditions. Please read them carefully before proceeding with your use of the Website.</b>
+                  <?php  } ?>
                     </p>
 
                 </div>
