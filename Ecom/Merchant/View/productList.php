@@ -93,10 +93,10 @@ include "../Controller/productListController.php";
                                             <?= $product["c_name"]; ?>
                                         </td>
                                         <td class=" px-12 py-4">
-                                            Ks <?= $product["buyprice"]; ?>
+                                            <?= $product["buyprice"]; ?> Ks
                                         </td>
                                         <td class="px-12 py-4">
-                                            Ks <?= $product["sellprice"]; ?>
+                                            <?= $product["sellprice"]; ?> Ks
                                         </td>
                                         <td class="px-12 py-4">
                                             <?= $product["instock"]; ?>

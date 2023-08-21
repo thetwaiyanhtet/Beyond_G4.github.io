@@ -85,7 +85,7 @@ ini_set('display_errors', 1);
                             </div>
                         </a>
                     </h3>
-                    <h1 class=" font-philosopher">$<?= $ItemDetails[0]["sellprice"] ?></h1>
+                    <h1 class=" font-philosopher"><?= $ItemDetails[0]["sellprice"] ?> Ks</h1>
                     <input type="hidden" name="price" value="<?= $ItemDetails[0]["sellprice"] ?>">
                     <input type="hidden" name="product_id" value="<?= $id  ?>">
 
@@ -184,91 +184,96 @@ ini_set('display_errors', 1);
                             <h3>Quantity</h3>
                             <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1" min="1">
                         </div>
-                        <p class=" opacity-70 text-sm">Only <span>10</span> items left</p>
+                        <?php if ($ItemDetails[0]["instock"] <= 10) { ?>
+                            <p class=" opacity-70 text-sm">Only <span class=" text-red-500 font-semibold"><?= $ItemDetails[0]["instock"] ?></span> items left</p>
+                        <?php } ?>
                     </div>
-                    <div>
-                        <button type="submit" class="btn mr-3">Add To Cart</button>
-        </form>
-        <a href="./mainPage.php?pid=<?= $id  ?>"> <button type="button" class="btn">Add To Wishlist</button></a>
-    </div>
-    </div>
-    </header>
-
-    <main class="flex justify-center">
-        <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
-            <div class="flex justify-center items-center flex-col space-y-3">
-                <p class=" lg:text-3xl text-lg mt-3">Overall Rating</p>
-                <h1><?= number_format($overallAverageRating, 1) ?></h1>
-                <div class=" text-yellow-500 text-xl">
-                    <?php
-                    if (!function_exists('numberToStars')) {
-                        function numberToStars($number)
-                        {
-                            $roundedNumber = round($number);
-                            $maxStars = 5;
-                            $fullStars = str_repeat('★', $roundedNumber);
-                            $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
-                            return $fullStars . $emptyStars;
-                        }
-
-                    ?>
-                    <?php }  ?>
-                    <?= numberToStars($overallAverageRating) ?>
-
+                    <div class=" flex">
+                        <div>
+                            <button type="submit" class="btn mr-3">Add To Cart</button>
+                        </div>
+                        <a href="./mainPage.php?pid=<?= $id ?>">
+                            <p class="btn">Add To Wishlist</p>
+                        </a>
+                    </div>
                 </div>
-                <p class=" font-philosopher">Based on <?= $totalCustomerCount ?> Reviews</p>
-            </div>
+            </header>
+        </form>
+        <main class="flex justify-center">
+            <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
+                <div class="flex justify-center items-center flex-col space-y-3">
+                    <p class=" lg:text-3xl text-lg mt-3">Overall Rating</p>
+                    <h1><?= number_format($overallAverageRating, 1) ?></h1>
+                    <div class=" text-yellow-500 text-xl">
+                        <?php
+                        if (!function_exists('numberToStars')) {
+                            function numberToStars($number)
+                            {
+                                $roundedNumber = round($number);
+                                $maxStars = 5;
+                                $fullStars = str_repeat('★', $roundedNumber);
+                                $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                                return $fullStars . $emptyStars;
+                            }
 
-            <div class=" w-full lg:flex-col lg:text-base text-sm">
-                <div class=" lg:flex flex-wrap justify-evenly items-center h-20">
-                    <?php foreach ($topComments as $CustomerReviews) { ?>
-                        <div class="reviewCard flex  ">
-                            <div class="flex">
-                                <img src="../../Storage/profile/<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
-                                <div class="">
-                                    <h2 class=" font-semibold lg:text-xl text-lg"><?= $CustomerReviews["username"] ?></h2>
-                                    <div class=" text-yellow-500 text-xl">
-                                        <?php
-                                        if (!function_exists('numberToStars')) {
-                                            function numberToStars($number)
-                                            {
-                                                $roundedNumber = round($number);
-                                                $maxStars = 5;
-                                                $fullStars = str_repeat('★', $roundedNumber);
-                                                $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
-                                                return $fullStars . $emptyStars;
-                                            }
+                        ?>
+                        <?php }  ?>
+                        <?= numberToStars($overallAverageRating) ?>
 
-                                        ?>
-                                        <?php }  ?>
-                                        <?= numberToStars($CustomerReviews["review_rating"]) ?>
+                    </div>
+                    <p class=" font-philosopher">Based on <?= $totalCustomerCount ?> Reviews</p>
+                </div>
 
+                <div class=" w-full lg:flex-col lg:text-base text-sm">
+                    <div class=" lg:flex flex-wrap justify-evenly items-center h-20">
+                        <?php foreach ($topComments as $CustomerReviews) { ?>
+                            <div class="reviewCard flex  ">
+                                <div class="flex">
+                                    <img src="../../Storage/profile/<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
+                                    <div class="">
+                                        <h2 class=" font-semibold lg:text-xl text-lg"><?= $CustomerReviews["username"] ?></h2>
+                                        <div class=" text-yellow-500 text-xl">
+                                            <?php
+                                            if (!function_exists('numberToStars')) {
+                                                function numberToStars($number)
+                                                {
+                                                    $roundedNumber = round($number);
+                                                    $maxStars = 5;
+                                                    $fullStars = str_repeat('★', $roundedNumber);
+                                                    $emptyStars = str_repeat('☆', $maxStars - $roundedNumber);
+                                                    return $fullStars . $emptyStars;
+                                                }
+
+                                            ?>
+                                            <?php }  ?>
+                                            <?= numberToStars($CustomerReviews["review_rating"]) ?>
+
+                                        </div>
                                     </div>
                                 </div>
+                                <p class=""><?= $CustomerReviews["comment"] ?></p>
                             </div>
-                            <p class=""><?= $CustomerReviews["comment"] ?></p>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
-    </main>
-    <script src="./resources/js/toggle.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
-    <script>
-        // Get references to the popup and buttons
-        const chatBoxPopup = document.getElementById("chatBoxPopup");
-        const chatBoxButton = document.getElementById("chatBoxButton");
+        </main>
+        <script src="./resources/js/toggle.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+        <script>
+            // Get references to the popup and buttons
+            const chatBoxPopup = document.getElementById("chatBoxPopup");
+            const chatBoxButton = document.getElementById("chatBoxButton");
 
-        // Function to toggle the visibility of the popup 
-        function toggleLogoutPopup() {
-            chatBoxPopup.classList.toggle("hidden");
-        }
+            // Function to toggle the visibility of the popup 
+            function toggleLogoutPopup() {
+                chatBoxPopup.classList.toggle("hidden");
+            }
 
-        // Attach click event listeners to the chatbox button 
-        chatBoxButton.addEventListener("click", toggleLogoutPopup);
-    </script>
+            // Attach click event listeners to the chatbox button 
+            chatBoxButton.addEventListener("click", toggleLogoutPopup);
+        </script>
 
 </body>
 
