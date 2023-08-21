@@ -61,7 +61,7 @@ if (isset($_POST["register"])) {
         $_SESSION["registerError"] = "Email is already registered. Please use a different email.";
         header("Location: ../View/signUp.php");
     }
-    $_SESSION['signUpEmail'] = $email;
+    $$_SESSION["user_ID"] = $email;
     }
 } else {
     // header("Location: ../View/404page.php");
