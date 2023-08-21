@@ -6,14 +6,22 @@ $(document).ready(function () {
       data: {
         id: Id,
       },
-        success: function (reviewData) {
-        const reviewDetails = JSON.parse(reviewData);
+      success: function (reviewData) {
+          const reviewDetails = JSON.parse(reviewData);
+          function numberToStars(number) {
+            var roundedNumber = Math.round(number);
+            var maxStars = 5;
+            var fullStars = "★".repeat(roundedNumber);
+            var emptyStars = "☆".repeat(maxStars - roundedNumber);
+            return fullStars + emptyStars;
+          }
         const popupContent = `
           <div>
-                <img src="${reviewDetails.p_one}" alt="" class=" hover:transition-all hover:duration-300 hover:scale-125">
+                <img src="../../Storage/product/${reviewDetails.p_one}" alt="" class=" mt-3 mx-auto w-20 hover:transition-all hover:duration-300 hover:scale-125">
                 <div class=" p-3 space-y-3">
                     <p class=" font-semibold"> ${reviewDetails.name} </p>
-                    <p class=" text-yellow-500 text-xl">
+                    <p class=" text-yellow-500">
+                        <span>${numberToStars(reviewDetails.rating)}</span>
                         <span class="text-black">/</span>
                         <span class="text-black">${reviewDetails.username}</span>
                     </p>

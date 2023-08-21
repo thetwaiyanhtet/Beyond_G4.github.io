@@ -16,6 +16,6 @@ $sql = $pdo->prepare(
 $sql->bindValue(":id", $id);
 $sql->execute();
 
-$_SESSION["reviewDetail"] = $sql->fetchAll(PDO::FETCH_ASSOC);
+$_SESSION["reviewDetail"] = $sql->fetch();
 $reviewData = $_SESSION["reviewDetail"];
 echo json_encode($reviewData);
