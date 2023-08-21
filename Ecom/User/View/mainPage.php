@@ -291,7 +291,7 @@ $SignUp = $_SESSION["userEmail"];
 
     </div>
 
-    <section class="sec h-auto flex justify-center flex-wrap p-5" id="searchResult">
+    <section class="sec h-auto flex justify-center flex-wrap p-5 mt-10" id="searchResult">
         <section class="w-[90%] m-auto" >
 
             <div class="banner-container mt-20">
