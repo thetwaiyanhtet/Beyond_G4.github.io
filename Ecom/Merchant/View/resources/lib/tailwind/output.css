@@ -608,6 +608,10 @@ video {
   top: 20%;
 }
 
+.top-\[25\%\] {
+  top: 25%;
+}
+
 .top-\[30\%\] {
   top: 30%;
 }
@@ -1071,6 +1075,10 @@ video {
   width: 55%;
 }
 
+.w-\[600px\] {
+  width: 600px;
+}
+
 .w-\[700px\] {
   width: 700px;
 }
@@ -1090,6 +1098,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[00px\] {
+  width: 00px;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .min-w-\[160px\] {
