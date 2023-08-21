@@ -11,7 +11,7 @@ include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
 $verifyData = $_SESSION["verifyData"];
-$SignUp = $_SESSION["userEmail"];
+
 // echo "<pre>";
 // print_r($userData);
 // echo "</pre>";
