@@ -7,8 +7,8 @@ if(isset($_POST['confirmPayment'])){
     $merchantPw = $_SESSION['password'];
     $selected_plan =$_SESSION['choosePlan'];
     $selected_payment = $_SESSION['select_payment'];
-;
-    echo $selected_plan;
+
+   echo $selected_plan;
     echo $merchantEmail;
     echo $merchantName;
     echo $merchantPw;
@@ -31,6 +31,7 @@ if(isset($_POST['confirmPayment'])){
             email,
             password,
             plan_id,
+            plan_start_date,
             plan_end_date
         )
         VALUES
@@ -39,11 +40,13 @@ if(isset($_POST['confirmPayment'])){
            :merchantEmail,
            :merchantPw,
            :planID,
+           :planStartDate,
            DATE_ADD(CURDATE(), INTERVAL $enddate DAY)
         )"
     );
     $sql2->bindValue(":merchantName",$merchantName);
     $sql2->bindValue(":merchantEmail",$merchantEmail);
+    $sql2->bindValue(":planStartDate", date("Y_m_d"));
     $sql2->bindValue(":merchantPw",password_hash($merchantPw, PASSWORD_DEFAULT));
     $sql2->bindValue(":planID",$selected_plan);
     $sql2->execute();

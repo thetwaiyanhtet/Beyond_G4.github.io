@@ -17,9 +17,9 @@ if (isset($signUpEmail) || isset($loginEmail)) {
     }
     $sql->execute();
     $_SESSION['checkEmail'] = $sql->fetchAll(PDO::FETCH_ASSOC);
-    echo "<pre>";
-    print_r($_SESSION['checkEmail']) ;
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($_SESSION['checkEmail']) ;
+    // echo "</pre>";
     //  header("Location: ../View/testingLogout.php");
 }
 ?>

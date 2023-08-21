@@ -13,5 +13,6 @@ if (isset($_POST['send'])) {
       "verify",
       $username . ',' . $message
     );
+    header("Location: ../View/contactUs.php");
 }
 ?>
