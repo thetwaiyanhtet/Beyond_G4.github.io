@@ -96,10 +96,10 @@ include "../Controller/salereportController.php";
                                         <?= $value['c_name'] ?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <?= $value['buyprice'] ?>
+                                        Ks <?= $value['buyprice'] ?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <?= $value['sellprice'] ?>
+                                        Ks <?= $value['sellprice'] ?>
                                     </td>
 
                                     <td class="px-16 py-4">

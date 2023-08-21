@@ -153,9 +153,9 @@ $productdata = $_SESSION["editproduct"];
                                     </div>
                                     <div>
                                         <select name="subCategory" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
-                                            <?php foreach ($subCategories as $subCategory) { ?>
+                                            <!-- <?php foreach ($subCategories as $subCategory) { ?>
                                                 <option value="<?= $subCategory["category_id"] ?>" <?= $subCategory["category_id"] == $productdata[0]["sub_category_id"] ? 'selected' : '' ?> ><?= $subCategory["s_c_name"] ?></option>
-                                            <?php } ?>
+                                            <?php } ?> -->
                                         </select>
                                     </div>
                                 </div>
