@@ -3,6 +3,10 @@
 
 require_once("../Controller/newcartController.php");
 require_once "../Model/model.php";
+
+// $selectedColor=$_SESSION['selectedItem'];
+// echo "<pre>";
+// print_r($selectedColor);
 // echo "</pre>";
 // print_r($_SESSION['usercart']);
 if (!empty($_SESSION['carttle'])) {

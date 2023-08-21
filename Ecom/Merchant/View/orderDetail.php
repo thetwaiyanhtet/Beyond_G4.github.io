@@ -91,8 +91,8 @@ include "../Controller/orderDetailController.php";
                             <td class=" text-left pl-6"><?= $orderDetail["name"] ?></td>
                             <td><img src="../../Storage/product/<?= $orderDetail["p_one"] ?>" alt="..." width="40px" class=" mx-auto"></td>
                             <td> <?= $orderDetail["quantity"] ?></td>
-                            <td>$<?= $orderDetail["sellprice"] ?></td>
-                            <td>$<?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?></td>
+                            <td><?= $orderDetail["sellprice"] ?> Ks</td>
+                            <td><?= $orderDetail["sellprice"] * $orderDetail["quantity"] ?> Ks</td>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -101,16 +101,16 @@ include "../Controller/orderDetailController.php";
 
             <div class="flex justify-between">
                 <p class="m-5">Sub Total</p>
-                <p class="m-5 mr-11 font-semibold">$<?= $totalSum ?></p>
+                <p class="m-5 mr-11 font-semibold"><?= $totalSum ?> Ks</p>
             </div>
             <div class="flex justify-between">
                 <p class="ml-5">Delivery Fee</p>
-                <p class="m-1 mr-11">$2 </p>
+                <p class="m-1 mr-11">2500 Ks</p>
             </div>
             <hr>
             <div class="flex justify-between py-4">
                 <p class="ml-5">Total Amount</p>
-                <p class="m-1 mr-11 font-semibold"> = $<?= $totalSum + 2 ?></p>
+                <p class="m-1 mr-11 font-semibold"> = <?= $totalSum + 2500 ?> Ks</p>
             </div>
         </div>
         <form action="../Controller/invoiceMailController.php?id=<?= $orderDetails[0]['id'] ?>" method="post">
