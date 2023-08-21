@@ -10,7 +10,7 @@ $sql->execute();
 $categories = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 $subSql = $pdo->prepare(
-  "SELECT *
+  "SELECT t_sub_category.id AS id, t_sub_category.s_c_name, t_sub_category.category_id
   FROM t_sub_category
   JOIN m_admin_category
   ON m_admin_category.id = t_sub_category.category_id;"

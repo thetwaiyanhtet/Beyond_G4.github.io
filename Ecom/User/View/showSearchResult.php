@@ -226,7 +226,6 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                 </ul>
             </div>
         </div>
-        <!-- <form action="../Controller/searchProductController.php" method="post"> -->
         <div class="flex w-3/4 m-auto pb-4">
             <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
@@ -241,9 +240,9 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                             <div class="category-subcategories fixed top-0 w-40 h-[250px] left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
                                 <?php foreach ($subCategories as $subcategory) {
                                     if ($subcategory["category_id"] === $category["id"]) { ?>
-                                        <div class="py-1 pl-3 hover:bg-gray-100" data-subcategory-id="<?= $subcategory["id"] ?>">
+                                        <div class="py-1 pl-3 hover:bg-gray-100 subCategory" data-subcategory-id="<?= $subcategory["id"] ?>">
                                             <?= $subcategory["s_c_name"] ?>
-                                        </div>
+                                        </div>       
                                 <?php }
                                 } ?>
                             </div>
@@ -261,7 +260,7 @@ $logoutEmail =  $_SESSION['logOutEmail'];
                 </button>
             </div>
         </div>
-        <!-- </form> -->
+
         <?php
         // echo "<pre>";
         // print_r($categories);

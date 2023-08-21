@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //-------------search product by productName-----------------
+  //-------------search product by productName-----------------
   function searchProducts() {
     $.ajax({
       url: "../Controller/searchProductController.php",
@@ -61,7 +61,6 @@ $(document).ready(function () {
     searchProducts();
   });
 
-    
   // ---------------search by category--------------
   // Function to fetch and display products by category
   function showProductsByCategory(categoryId) {
@@ -123,5 +122,30 @@ $(document).ready(function () {
   $(".category").on("click", function () {
     var categoryId = $(this).data("category-id");
     showProductsByCategory(categoryId);
+  });
+
+  // Function to fetch and display products by subcategory
+  function showProductsBySubcategory(subcategoryId) {
+    $.ajax({
+      url: "../Controller/searchBySubCategoryController.php",
+      type: "POST",
+      data: {
+        subcategoryId: subcategoryId,
+      },
+      success: function (res) {
+        console.log(res);
+        var products = JSON.parse(res);
+        displayProducts(products);
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
+
+  // Handle subcategory click
+  $(".subCategory").on("click", function () {
+    var subcategoryId = $(this).data("subcategory-id");
+    showProductsBySubcategory(subcategoryId);
   });
 });

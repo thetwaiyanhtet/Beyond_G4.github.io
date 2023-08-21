@@ -17,13 +17,14 @@ include "../Controller/deliveryController.php";
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="./resources/js/dateandtime.js " defer></script>
-    <script src="../View/resources/js/searchDelivery.js"></script>
+    <script src="./resources/js/deliveryDetails.js" defer></script>
     <link rel="stylesheet" href="./resources/css/delivery.css">
     <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
+
 </head>
 
 <body>
@@ -87,7 +88,9 @@ include "../Controller/deliveryController.php";
                                             <?= $delivery["delivery_name"] ?>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <div id="popupButton" class="font-medium text-blue-600  hover:underline">View Details</div>
+                                            <div class="font-medium text-blue-600 hover:underline view-details-button" data-generate-id="<?= $delivery["generate_id"] ?>">
+                                                View Details
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -140,57 +143,12 @@ include "../Controller/deliveryController.php";
                 </div>
             </div>
         </section>
-        <div id="detailPopup" class=" max-lg:left-40 space-y-3 absolute top-[30%] left-[35%] p-4 shadow-lg rounded-md bg-gray-300 hidden">
-            <div>
-                <span>Customer Name : </span>
-                <span>user</span>
-            </div>
-            <div>
-                <span>Address : </span>
-                <span>Ahlone, Yangon</span>
-            </div>
-            <div>
-                <span>Phone No : </span>
-                <span>09-123456789</span>
-            </div>
-            <div>
-                <span>Order Date : </span>
-                <span>12/07/2023</span>
-            </div>
-            <div>
-                <span>Total Price :</span>
-                <span>$200</span>
-            </div>
-            <div>
-                <span>Delivery Service : </span>
-                <span>Royal Express</span>
-            </div>
-            <div>
-                <span>Delivery Charges : </span>
-                <span>$20</span>
-            </div>
-            <div>
-                <span>Total Amount : </span>
-                <span>$220</span>
-            </div>
-            <a href="./delivery.php"> <button id="cancelPopupButton" class="bg-blue-500 text-white py-2 px-3 rounded-md mx-auto flex items-center mt-3">Cancel</button></a>
+
+        <!-- Container for dynamically generated content -->
+        <div id="popupContainer" class="w-auto space-y-3 absolute top-[25%] left-[35%] p-4 shadow-lg rounded-md bg-white hidden">
+            <!-- Dynamically generated content will be populated here -->
         </div>
 
-        <script>
-            // Get references to the popup and buttons
-            const detailPopup = document.getElementById("detailPopup");
-            const popupButton = document.getElementById("popupButton");
-            const cancelPopupButton = document.getElementById("cancelPopupButton");
-
-            // Function to toggle the visibility of the popup and blur the background
-            function toggleDetailPopup() {
-                detailPopup.classList.toggle("hidden");
-            }
-
-            // Attach click event listeners to the logout button and cancel button
-            popupButton.addEventListener("click", toggleDetailPopup);
-            cancelPopupButton.addEventListener("click", toggleDetailPopup);
-        </script>
     </main>
 </body>
 
