@@ -329,7 +329,7 @@ $verifyData = $_SESSION["verifyData"];
     <section class="sec h-auto flex justify-center flex-wrap p-5 mt-10" id="searchResult">
         <section class="w-[90%] m-auto">
 
-            <div class="banner-container mt-20">
+            <div class="banner-container mt-28">
                 <!-- Banner_1 section -->
                 <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->

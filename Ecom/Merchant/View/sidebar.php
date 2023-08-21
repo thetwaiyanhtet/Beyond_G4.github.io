@@ -1,6 +1,5 @@
 <?php
 include "./header.php";
-
 include "../Controller/planupgrade.php";
 $plandate = $_SESSION["plancheck"];
 ?>
@@ -11,7 +10,7 @@ $plandate = $_SESSION["plancheck"];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="stylesheet" href="./resources/lib/tailwind/output.css">
+  <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
@@ -21,8 +20,8 @@ $plandate = $_SESSION["plancheck"];
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./resources/js/dateandtime.js "></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="./resources/js/chat.js" defer></script>
-  <link rel="stylesheet" href="./resources/css/chat.css">
+  <script src="./resources/js/chattoggle.js" defer></script>
+  <link rel="stylesheet" href="./resources/css/chat_design.css">
 </head>
 
 <body class=" font-poppins">
@@ -111,9 +110,14 @@ $plandate = $_SESSION["plancheck"];
     <img src="./resources/img/chat.png" alt="" class="w-20 h-auto animate-[wiggle_700ms_ease-in-out_infinite] ">
   </button>
   <div class="chat-popup z-50 bg-white">
-
+    <div class="search">
+      <input type="text" placeholder="Search users...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="users-list">
+          
+    </div>
   </div>
-
   <script>
     // Add an event listener to the logout button
     document.getElementById('logoutButton').addEventListener('click', function() {

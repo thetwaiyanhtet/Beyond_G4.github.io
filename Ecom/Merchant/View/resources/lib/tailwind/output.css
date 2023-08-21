@@ -612,6 +612,17 @@ video {
   top: 25%;
 }
 
+<<<<<<< Updated upstream
+=======
+.top-\[30\%\] {
+  top: 30%;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+>>>>>>> Stashed changes
 .z-40 {
   z-index: 40;
 }
