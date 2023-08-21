@@ -172,7 +172,7 @@ $verifyData = $_SESSION["verifyData"];
                                         </p>
                                     </div>
                                     <div class="flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        $ <?= $order[0]["total_amt"] ?>
+                                        <?= $order[0]["total_amt"] ?> Ks
                                     </div>
                                     <a href="./userHistoryDetails.php?id=<?= $order[0]['generate_id']; ?>">
                                         <p class=" hover:underline text-blue-500">View Details</p>

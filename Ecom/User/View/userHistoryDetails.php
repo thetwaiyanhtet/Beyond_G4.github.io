@@ -149,9 +149,7 @@ $verifyData = $_SESSION["verifyData"];
                             <li class="py-3 sm:py-4 w-auto my-5 pt-3">
                                 <div class="flex items-center justify-between space-x-4">
                                     <div class="flex">
-
                                         <img class="w-14 object-fill scale-150 rounded-full" src="../../Storage/product/<?= $order["p_one"] ?>" alt="...">
-
                                         <?php ?>
                                     </div>
 
@@ -161,7 +159,7 @@ $verifyData = $_SESSION["verifyData"];
                                         </p>
                                     </div>
                                     <div class="flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        $ <?= $order["sellprice"] ?>
+                                         <?= $order["sellprice"] ?> Ks
                                     </div>
                                     <button data-modal-target="popup-modal" data-order-id="<?= $order['product_id']; ?>" data-modal-toggle="popup-modal" class="rating-button block text-white bg-purple-400 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800" type="button">
                                         Rate Your Satisfaction
