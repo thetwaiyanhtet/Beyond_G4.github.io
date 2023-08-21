@@ -277,7 +277,7 @@ if (!empty($_SESSION['carttle'])) {
                                         </div>
                                         <div class="flex">
                                             <p class="ml-[15px] font-bold text-xs md:text-sm">Shipping fee</p>
-                                            <div class="ml-[25px] font-bold text-xs md:text-sm" id="delifees" name="name"><?=  $_SESSION['delifees'][0]['delivery_fees']  ?> Ks</div>
+                                            <input readonly class="ml-[25px] font-bold text-xs md:text-sm bg-transparent " value="<?=  $_SESSION['delifees'][0]['delivery_fees']  ?> Ks" id="delifees" name="deli" >
                                         </div>
                                     </div>
 
@@ -370,7 +370,7 @@ if (!empty($_SESSION['carttle'])) {
         var gtotal = document.getElementById("gtotal");
         var delitotal = document.getElementById("delitotal");
         var quantiarray = document.getElementById("quantiarray");
-        var delifees = document.getElementById("delifees").innerText;
+        var delifees = document.getElementById("delifees").value;
 
         function subTotal() {
             gt = 0;
