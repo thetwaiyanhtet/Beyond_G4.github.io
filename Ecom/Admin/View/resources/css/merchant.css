@@ -4,7 +4,11 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-.merchantList{
+/* .merchantList{
     color:#2535A1;
     font-weight: bold;
+} */
+
+.textm{
+    color: white;
 }
