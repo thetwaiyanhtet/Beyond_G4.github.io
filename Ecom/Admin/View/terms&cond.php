@@ -20,19 +20,31 @@ include "./adminsidebar.php";
 <body>
     <main class=" ml-72 pt-20 h-screen" id="main">
         <p class=" mt-5 font-philosopher font-bold text-xl pb-3">Terms and Conditions</p>
-        <form action="../Controller/updatefaqController.php" method="post">
+        <form action="../Controller/updatetermandconditioncontroller.php" method="post">
             <div class="h-auto">
                 <div class="flex justify-center items-center p-2">
-                    <div class="pr-4">1.</div>
-                    <textarea name="one" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
+                    <div class="pr-4">1a.</div>
+                    <textarea name="onea" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
-                    <div class="pr-4">2.</div>
-                    <textarea name="two" id="q1" cols="100" rows="2" class=" rounded-md outline-none bg-slate-200 p-2"></textarea>
+                <div class="pr-4">1b.</div>
+                    <textarea name="oneb" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
-                    <div class="pr-4">3.</div>
-                    <textarea name="three" id="q1" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
+                    <div class="pr-4">2a.</div>
+                    <textarea name="twoa" id="q1" cols="100" rows="2" class=" rounded-md outline-none bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                <div class="pr-4">2b.</div>
+                    <textarea name="twob" id="q1" cols="100" rows="2" class=" rounded-md outline-none bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-4">3a.</div>
+                    <textarea name="threea" id="q1" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
+                </div>
+                <div class="flex justify-center items-center p-2">
+                    <div class="pr-4">3b.</div>
+                    <textarea name="threeb" id="q1" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">4.</div>
@@ -52,7 +64,7 @@ include "./adminsidebar.php";
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">8.</div>
-                    <textarea name="eith" id="q1" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
+                    <textarea name="eight" id="q1" cols="100" rows="2" class="rounded-md outline-none bg-slate-200 p-2"></textarea>
                 </div>
                 <div class="flex justify-center items-center p-2">
                     <div class="pr-4">9.</div>

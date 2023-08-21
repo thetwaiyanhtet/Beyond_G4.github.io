@@ -1,14 +1,14 @@
 <?php
-session_start();
+ session_start();
 include "../Model/model.php";
-include "./common/generatePwFunction.php";
+// include "../Controller/common/passwordGenerate.php";
 
-$data = $_SESSION['adminInfo'];
+ $data = $_SESSION['adminInfo'];
 $old_password = $_POST['current'];
 $hashed_password = $data['login_password'];
 $new_password = $_POST['new'];
 $confirm_password = $_POST['confirm'];
-
+// echo $old_password;
 if (password_verify($old_password, $hashed_password)) {
     if ($new_password == $confirm_password) {
         $sql = $pdo->prepare(

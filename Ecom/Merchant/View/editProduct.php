@@ -1,9 +1,10 @@
 <?php
 include "./sidebar.php";
+// session_start();
 include "../Controller/categoryListController.php";
 $productdata = $_SESSION["editproduct"];
 // echo "<pre>";
-// print_r($categories);
+// print_r($productdata);
 //  echo "</pre>";
 
 ?>
@@ -17,7 +18,9 @@ $productdata = $_SESSION["editproduct"];
     <title>Edit Product</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="./resources/js/dateandtime.js " defer></script>
+    <script src="./resources/js/subCategory.js" defer></script>
     <link rel="stylesheet" href="./resources/css/inventory.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,7 +146,18 @@ $productdata = $_SESSION["editproduct"];
                                             <?php } ?>
                                         </select>
                                     </div>
-
+                                </div>
+                                <div class=" flex justify-between space-x-10 items-center">
+                                    <div>
+                                        <p>Sub Category</p>
+                                    </div>
+                                    <div>
+                                        <select name="subCategory" class=" w-[203px] h-10 bg-transparent border border-gray-400 py-2 rounded-md ">
+                                            <!-- <?php foreach ($subCategories as $subCategory) { ?>
+                                                <option value="<?= $subCategory["category_id"] ?>" <?= $subCategory["category_id"] == $productdata[0]["sub_category_id"] ? 'selected' : '' ?> ><?= $subCategory["s_c_name"] ?></option>
+                                            <?php } ?> -->
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color</label></div>

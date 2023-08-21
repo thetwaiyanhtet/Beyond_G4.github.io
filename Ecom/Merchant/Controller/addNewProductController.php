@@ -12,6 +12,7 @@ if (count($_POST) == 0) {
     $name = $_POST["pname"];
     $pid = $_POST["pid"];
     $category = $_POST["category"];
+    $subCategory=$_POST["subCategory"];
     $buyprice = $_POST["buyprice"];
     $sellprice = $_POST["sellprice"];
     $quantity = $_POST["quantity"];
@@ -113,6 +114,7 @@ if (count($_POST) == 0) {
             name,
             code,
             category_id,
+            sub_category_id,
             buyprice,
             sellprice,
             instock,
@@ -139,6 +141,7 @@ if (count($_POST) == 0) {
                 :name,
                 :product_id,
                 :category_id,
+                :subCategory_id,
                 :buyprice,
                 :sellprice,
                 :instock,
@@ -166,6 +169,7 @@ if (count($_POST) == 0) {
     $sql->bindValue(":name", $name);
     $sql->bindValue(":product_id", $pid);
     $sql->bindValue(":category_id", $category);
+    $sql->bindVAlue(":subCategory_id",$subCategory);
     $sql->bindValue(":buyprice", $buyprice);
     $sql->bindValue(":sellprice", $sellprice);
     $sql->bindValue(":instock", $quantity);
