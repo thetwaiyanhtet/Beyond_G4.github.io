@@ -86,35 +86,35 @@ include "../Controller/productListController.php";
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             <?= $product["name"]; ?>
                                         </th>
-                                        <td class="px-6 py-4">
+                                        <td class="px-10 py-4">
                                             <?= $product["code"]; ?>
                                         </td>
                                         <td class="px-6 py-4">
                                             <?= $product["c_name"]; ?>
                                         </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["buyprice"]; ?>
+                                        <td class=" px-12 py-4">
+                                            Ks <?= $product["buyprice"]; ?>
                                         </td>
-                                        <td class="px-6 py-4">
-                                            <?= $product["sellprice"]; ?>
+                                        <td class="px-12 py-4">
+                                            Ks <?= $product["sellprice"]; ?>
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-12 py-4">
                                             <?= $product["instock"]; ?>
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td class="px-10 py-4">
                                             <?= $product["create_date"]; ?>
                                         </td>
 
                                         <?php if ($product["instock"] > 10) { ?>
-                                            <td class="px-6 py-4 text-green-500">
+                                            <td class="px-10 py-4 text-green-500">
                                                 Instock
                                             </td>
                                         <?php } else if ($product["instock"] < 10 && $product["instock"] >= 1) { ?>
-                                            <td class="px-6 py-4 text-orange-500">
+                                            <td class="px-10 py-4 text-orange-500">
                                                 Low stock
                                             </td>
                                         <?php } else { ?>
-                                            <td class="px-6 py-4 text-red-500">
+                                            <td class="px-10 py-4 text-red-500">
                                                 Out of Stock
                                             </td>
                                         <?php } ?>
