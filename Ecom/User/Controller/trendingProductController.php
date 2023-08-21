@@ -59,8 +59,7 @@ $trandingProductViewAll = $TrendingViewAllsql->fetchAll(PDO::FETCH_ASSOC);
 
 $AllProductSql = $pdo->prepare(
     "SELECT m_product.id,m_product.name, m_product.description, m_product.sellprice, m_product.p_one
-    FROM m_product
-    WHERE m_product.id"
+    FROM m_product;"
 );
 
 $AllProductSql->execute();
