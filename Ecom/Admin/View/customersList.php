@@ -54,9 +54,7 @@ include "../Controller/costomerListController.php";
                             </th>
                         </tr>
                     </thead>
-                    <tbody id="searchResult">
-                        <?php echo "<pre>";
-                        print_r($paginatedData);?>                        
+                    <tbody id="searchResult">                       
                         <?php foreach ($paginatedData as $customer) { ?>
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
