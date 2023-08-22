@@ -1,10 +1,7 @@
 <?php
 session_start();
 include_once "../Model/model.php";
-if (!isset($_SESSION['unique_id'])) {
-  header("location: ./login.php");
-  exit;
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +11,6 @@ if (!isset($_SESSION['unique_id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./resources/css/chat_design.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /> -->
   <script src="https://kit.fontawesome.com/154f79af60.js" crossorigin="anonymous"></script>
 </head>
 
@@ -39,7 +35,6 @@ if (!isset($_SESSION['unique_id'])) {
 
               </div>
         </div>
-        <!-- <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a> -->
       </header>
       <div class="search">
         <span class="text">Select a user to start chat</span>
@@ -47,7 +42,6 @@ if (!isset($_SESSION['unique_id'])) {
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">
-
       </div>
     </section>
   </div>
@@ -62,7 +56,6 @@ if (!isset($_SESSION['unique_id'])) {
 <?php
             } else {
               echo "No data found.";
-              // Handle this scenario appropriately, such as redirecting or displaying a message
             }
           } else {
             echo "Error executing query: " . print_r($stmt->errorInfo(), true);

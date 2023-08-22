@@ -19,3 +19,4 @@ if(isset($_SESSION['unique_id'])){
 } else {
     header("location: ../View/login.php");
 }
+//customer insert

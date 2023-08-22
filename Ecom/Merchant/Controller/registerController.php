@@ -36,7 +36,6 @@ if (isset($_POST["register"])) {
         $_SESSION['merchantName'] = $username;
         header("Location: ../View/ChoosePlan.php");
     }
-
 } else {
     header("Location: ../View/404page.php");
 }

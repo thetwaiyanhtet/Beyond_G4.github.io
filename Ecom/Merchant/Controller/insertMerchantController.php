@@ -7,8 +7,9 @@ if(isset($_POST['confirmPayment'])){
     $merchantPw = $_SESSION['password'];
     $selected_plan =$_SESSION['choosePlan'];
     $selected_payment = $_SESSION['select_payment'];
+    $ran_id = rand(time(), 100000000); 
 
-   echo $selected_plan;
+    echo $selected_plan;
     echo $merchantEmail;
     echo $merchantName;
     echo $merchantPw;
@@ -31,6 +32,7 @@ if(isset($_POST['confirmPayment'])){
             email,
             password,
             plan_id,
+            unique_id,
             plan_start_date,
             plan_end_date
         )
@@ -40,6 +42,7 @@ if(isset($_POST['confirmPayment'])){
            :merchantEmail,
            :merchantPw,
            :planID,
+           :unique_id,
            :planStartDate,
            DATE_ADD(CURDATE(), INTERVAL $enddate DAY)
         )"
@@ -47,18 +50,20 @@ if(isset($_POST['confirmPayment'])){
     $sql2->bindValue(":merchantName",$merchantName);
     $sql2->bindValue(":merchantEmail",$merchantEmail);
     $sql2->bindValue(":planStartDate", date("Y_m_d"));
+    $sql2->bindValue(":unique_id",$ran_id);
     $sql2->bindValue(":merchantPw",password_hash($merchantPw, PASSWORD_DEFAULT));
     $sql2->bindValue(":planID",$selected_plan);
     $sql2->execute();
 
 
-    $merchantData = $pdo->prepare("SELECT id FROM m_merchant WHERE email=:email");
+    $merchantData = $pdo->prepare("SELECT * FROM m_merchant WHERE email=:email");
     $merchantData->bindValue(":email", $merchantEmail);
     $merchantData->execute();
-    $merchantID = $merchantData->fetchColumn();
-    echo $merchantID;
-
-
+    $merchantInfo = $merchantData-> fetchAll(PDO::FETCH_ASSOC);
+    $merchantID = $merchantInfo[0]['id'];
+    $uniqueID = $merchantInfo[0]['unique_id'];
+    $_SESSION['merchantInfo'] = $merchantInfo;
+    $_SESSION['unique_id'] = $uniqueID;
 
     $sql2 = $pdo->prepare(
         "INSERT INTO m_payment
