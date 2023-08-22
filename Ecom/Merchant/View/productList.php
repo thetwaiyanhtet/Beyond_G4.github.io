@@ -144,9 +144,7 @@ include "../Controller/productListController.php";
                                 </ul>
                             </nav>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </section>

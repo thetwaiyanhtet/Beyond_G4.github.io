@@ -39,7 +39,7 @@ $customer = $_SESSION['checkEmail']
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="./resources/js/bannerSlideShow.js" defer></script>
-    <script src="./resources/js/searchProduct.js"></script>
+    <script src="./resources/js/searchProduct.js" defer></script>
     <script src="./resources/js/userMainPage.js" defer></script>
     <script src="./resources/js/chat.js" defer></script>
     <script>
@@ -254,7 +254,7 @@ $customer = $_SESSION['checkEmail']
 
     </div>
 
-    <section class="sec h-screen">
+    <section class="sec h-screen" id="searchResult">
         <section class="w-[90%] m-auto">
 
             <div class="banner-container md:mt-20 mt-0 md:h-96 h-40">
