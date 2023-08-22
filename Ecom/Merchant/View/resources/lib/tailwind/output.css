@@ -747,6 +747,10 @@ video {
   margin-left: 1.5rem;
 }
 
+.ml-7 {
+  margin-left: 1.75rem;
+}
+
 .ml-\[1\%\] {
   margin-left: 1%;
 }
@@ -809,10 +813,6 @@ video {
 
 .mt-\[195px\] {
   margin-top: 195px;
-}
-
-.ml-7 {
-  margin-left: 1.75rem;
 }
 
 .block {
@@ -1698,6 +1698,10 @@ video {
 
 .pl-20 {
   padding-left: 5rem;
+}
+
+.pl-24 {
+  padding-left: 6rem;
 }
 
 .pl-3 {
