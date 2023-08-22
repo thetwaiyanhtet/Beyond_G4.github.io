@@ -127,7 +127,7 @@ session_start();
                         <p>Subscription</p>
                         <p>
                             <?php
-                            echo  '$' . $Data['price'];
+                            echo   $Data['price'] . 'Ks' ;
                             ?>
                         </p>
                     </div>
@@ -135,7 +135,7 @@ session_start();
                     <div class="flex justify-between m-4">
                         <p>Subtotal</p>
                         <p> <?php
-                            echo  '$' . $Data['price'];
+                            echo   $Data['price'] . 'Ks';
                             ?></p>
                     </div>
                     <button id="payNowButton" name="payNow" type="submit" class=" w-28 border border-solid border-black rounded-md bg-blue-600 text-white hover:text-black hover:bg-white p-2 m-2 ml-40 font-philosopher">Pay Now</button>

@@ -28,18 +28,18 @@ $bannereleventmp = $_FILES["photo11"]["tmp_name"];
 $bannertwelve = $_FILES["photo12"]["name"];
 $bannertwelvetmp = $_FILES["photo12"]["tmp_name"];
 
-if (move_uploaded_file($banneronetmp,"../../Storage/profile/".$bannerone) &&
-move_uploaded_file($bannertwotmp,"../../Storage/profile/".$bannertwo) && 
-move_uploaded_file($bannerthreetmp,"../../Storage/profile/".$bannerthree) &&
-move_uploaded_file($bannerfourtmp,"../../Storage/profile/".$bannerfour) && 
-move_uploaded_file($bannerfivetmp,"../../Storage/profile/".$bannerfive) &&
-move_uploaded_file($bannersixtmp,"../../Storage/profile/".$bannersix) &&
-move_uploaded_file($bannerseventmp,"../../Storage/profile/".$bannerseven) &&
-move_uploaded_file($bannereighttmp,"../../Storage/profile/".$bannereight) &&
-move_uploaded_file($bannerninetmp,"../../Storage/profile/".$bannernine) &&
-move_uploaded_file($bannertentmp,"../../Storage/profile/".$bannerten) &&
-move_uploaded_file($bannereleventmp,"../../Storage/profile/".$bannereleven) &&
-move_uploaded_file($bannertwelvetmp,"../../Storage/profile/".$bannertwelve)
+if (move_uploaded_file($banneronetmp,"../../Storage/banner/".$bannerone) &&
+move_uploaded_file($bannertwotmp,"../../Storage/banner/".$bannertwo) && 
+move_uploaded_file($bannerthreetmp,"../../Storage/banner/".$bannerthree) &&
+move_uploaded_file($bannerfourtmp,"../../Storage/banner/".$bannerfour) && 
+move_uploaded_file($bannerfivetmp,"../../Storage/banner/".$bannerfive) &&
+move_uploaded_file($bannersixtmp,"../../Storage/banner/".$bannersix) &&
+move_uploaded_file($bannerseventmp,"../../Storage/banner/".$bannerseven) &&
+move_uploaded_file($bannereighttmp,"../../Storage/banner/".$bannereight) &&
+move_uploaded_file($bannerninetmp,"../../Storage/banner/".$bannernine) &&
+move_uploaded_file($bannertentmp,"../../Storage/banner/".$bannerten) &&
+move_uploaded_file($bannereleventmp,"../../Storage/banner/".$bannereleven) &&
+move_uploaded_file($bannertwelvetmp,"../../Storage/banner/".$bannertwelve)
 
 )  {
     
@@ -62,18 +62,18 @@ move_uploaded_file($bannertwelvetmp,"../../Storage/profile/".$bannertwelve)
     "
     );
 
-    $sql->bindValue(":banner_one", "../../Storage/profile/".$bannerone);
-    $sql->bindValue(":banner_two","../../Storage/profile/".$bannertwo);
-    $sql->bindValue(":banner_three","../../Storage/profile/".$bannerthree);
-    $sql->bindValue(":banner_four", "../../Storage/profile/".$bannerfour);
-    $sql->bindValue(":banner_five", "../../Storage/profile/".$bannerfive);
-    $sql->bindValue(":banner_six", "../../Storage/profile/".$bannersix);
-    $sql->bindValue(":banner_seven", "../../Storage/profile/".$bannerseven);
-    $sql->bindValue(":banner_eight", "../../Storage/profile/".$bannereight);
-    $sql->bindValue(":banner_nine", "../../Storage/profile/".$bannernine);
-    $sql->bindValue(":banner_ten", "../../Storage/profile/".$bannerten);
-    $sql->bindValue(":banner_eleven", "../../Storage/profile/".$bannereleven);
-    $sql->bindValue(":banner_twelve", "../../Storage/profile/".$bannertwelve);
+    $sql->bindValue(":banner_one", "../../Storage/banner/".$bannerone);
+    $sql->bindValue(":banner_two","../../Storage/banner/".$bannertwo);
+    $sql->bindValue(":banner_three","../../Storage/banner/".$bannerthree);
+    $sql->bindValue(":banner_four", "../../Storage/banner/".$bannerfour);
+    $sql->bindValue(":banner_five", "../../Storage/banner/".$bannerfive);
+    $sql->bindValue(":banner_six", "../../Storage/banner/".$bannersix);
+    $sql->bindValue(":banner_seven", "../../Storage/banner/".$bannerseven);
+    $sql->bindValue(":banner_eight", "../../Storage/banner/".$bannereight);
+    $sql->bindValue(":banner_nine", "../../Storage/banner/".$bannernine);
+    $sql->bindValue(":banner_ten", "../../Storage/banner/".$bannerten);
+    $sql->bindValue(":banner_eleven", "../../Storage/banner/".$bannereleven);
+    $sql->bindValue(":banner_twelve", "../../Storage/banner/".$bannertwelve);
     
     $sql->execute();
 

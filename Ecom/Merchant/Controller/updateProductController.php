@@ -3,8 +3,7 @@
 if (count($_POST) == 0) {
     header("Location: ../View/errors/error.php");
 } else {
-    // echo "<pre>";
-    // print_r($_POST);
+ 
     $id = $_POST["id"];
     $name = $_POST["pname"];
     $pid = $_POST["pid"];
@@ -23,18 +22,8 @@ if (count($_POST) == 0) {
     $size4 = $_POST["size4"];
     $size5 = $_POST["size5"];
     $size6 = $_POST["size6"];
-    // $photo1 = $_FILES["photo1"]["name"];
-    // $photo1tmp = $_FILES["photo1"]["tmp_name"];
-    // $photo2 = $_FILES["photo2"]["name"];
-    // $photo2tmp = $_FILES["photo2"]["tmp_name"];
-    // $photo3 = $_FILES["photo3"]["name"];
-    // $photo3tmp = $_FILES["photo3"]["tmp_name"];
-    // $photo4 = $_FILES["photo4"]["name"];
-    // $photo4tmp = $_FILES["photo4"]["tmp_name"];
-
+  
     include "../Model/model.php";
-
-    
 
     $existingPhoto1 = null;
     $existingPhoto2 = null;
@@ -51,9 +40,6 @@ if (count($_POST) == 0) {
         $existingPhotosQuery->execute();
 
         $existingPhotosData = $existingPhotosQuery->fetch(PDO::FETCH_ASSOC);
-        // echo "<pre>";
-        // print_r($existingPhotosData);
-        // echo "</pre>";
 
         if ($existingPhotosData) {
             $existingPhoto1 = $existingPhotosData["p_one"];
@@ -124,8 +110,6 @@ if (count($_POST) == 0) {
         p_two=:photo2,
         p_three=:photo3,
         p_four=:photo4
-
-        
         WHERE id=:id;
     "
     );

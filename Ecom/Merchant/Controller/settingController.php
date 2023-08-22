@@ -44,7 +44,7 @@ if (isset($_POST["send"])) {
     }
 
     move_uploaded_file($imgTmp, "../../Storage/profile/" . $img);
-    move_uploaded_file($imgTmp2, "../../Storage/profile/" . $img2);
+    move_uploaded_file($imgTmp2, "../../Storage/banner/" . $img2);
 
     $pattern = '/^\d{11}$/';
 
