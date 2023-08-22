@@ -34,12 +34,14 @@ $profit = $totalSales - $totalCost;
 // echo "</pre>";
 
 $profitSaleSql = $pdo->prepare(
-    "SELECT m_product.sellprice, m_product.buyprice, SUM(instock) as quantityOnHand
-    FROM m_product
+    "SELECT m_product.sellprice, m_product.buyprice, SUM(m_order_details.quantity) as quantityOnHand
+    FROM m_order_details
     JOIN m_merchant
-    ON m_product.merchant_id = m_merchant.id
+    ON m_order_details.merchant_id = m_merchant.id
+    JOIN m_product
+    ON m_order_details.product_id = m_product.id
     WHERE m_merchant.email = :email
-    GROUP BY m_product.sellprice"
+    "
 );
 
 $profitSaleSql->bindValue(':email', $merchantEmail);

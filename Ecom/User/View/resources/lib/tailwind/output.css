@@ -1514,6 +1514,10 @@ video {
   width: 2rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-9 {
   width: 2.25rem;
 }
@@ -2791,6 +2795,10 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pt-9 {
+  padding-top: 2.25rem;
 }
 
 .pt-\[6\%\] {
@@ -4646,8 +4654,8 @@ body * {
     margin-left: 0px;
   }
 
-  .lg\:ml-20 {
-    margin-left: 5rem;
+  .lg\:ml-\[60\%\] {
+    margin-left: 60%;
   }
 
   .lg\:mr-0 {
