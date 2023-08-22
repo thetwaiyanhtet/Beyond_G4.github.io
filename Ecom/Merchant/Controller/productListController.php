@@ -16,12 +16,16 @@ $sql = $pdo->prepare(
     `m_product`.sellprice,
     `m_product`.instock,
     `m_product`.create_date,
-    `m_admin_category`.c_name
+    `m_admin_category`.c_name,
+    t_sub_category.s_c_name
+
      FROM `m_product` 
      LEFT JOIN `m_admin_category`
      ON `m_product`.`category_id`=`m_admin_category`.id
      JOIN m_merchant
      ON m_product.merchant_id=m_merchant.id
+     JOIN t_sub_category
+     ON t_sub_category.id = m_product.sub_category_id
      WHERE `m_product`.`del_flg`= 0 and email=:email"
 );
 $sql->bindValue(":email", $merchantEmail);
