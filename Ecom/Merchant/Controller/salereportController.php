@@ -19,7 +19,7 @@ JOIN m_order_details ON m_order_details.order_id = m_order.id
 JOIN m_merchant ON m_merchant.id = m_order_details.merchant_id
 JOIN m_product ON m_product.id = m_order_details.product_id
 JOIN m_admin_category ON m_product.category_id = m_admin_category.id
-WHERE m_merchant.email = :email AND m_order_details.delivery_status = 0
+WHERE m_merchant.email = :email 
 GROUP BY m_order_details.id
 ORDER BY m_order_details.id DESC;"
 );
