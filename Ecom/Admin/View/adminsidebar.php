@@ -28,7 +28,7 @@ include "../Controller/logoandbusinessController.php";
 
 </head>
 
-<body class=" font-poppins overflow-x-hidden">
+<body class=" font-poppins overflow-x-hidden ">
     <style>
         #sidebar,
         #navbar,
@@ -63,7 +63,7 @@ include "../Controller/logoandbusinessController.php";
 
     <div id="sidebar" class="bg-white font-poppins fixed top-0 min-h-screen border shadow-xl text-ellipsis flex justify-around overflow-y-auto">
         <div class="flex flex-col sm:flex-row relative sm:justify-around">
-            <div id="navs" class=" w-64  h-screen ">
+            <div id="navs" class=" w-64  h-screen overflow-hidden ">
                 <nav class=" mt-28">
                     <div x-data="{ open: false }">
                         <a href="./dashboard.php">
@@ -203,10 +203,10 @@ include "../Controller/logoandbusinessController.php";
 
         </div>
     </div>
-    <button id="btnSidebarToggler" type="button" class=" bg-gray-200 hover:bg-gray-300 rounded-full border shadow-xl fixed p-1 left-60 top-20 text-xl ">
+    <!-- <button id="btnSidebarToggler" type="button" class=" bg-gray-200 hover:bg-gray-300 rounded-full border shadow-xl fixed p-1 left-60 top-20 text-xl ">
         <ion-icon id="navClosed" class="h-6 bg-table rounded-full m-1 -mb-1 text-white w-6" name="chevron-back-outline"></ion-icon>
         <ion-icon id="navOpen" class="h-6 bg-table rounded-full m-1 hidden -mb-1 text-white w-6" name="chevron-forward-outline"></ion-icon>
-    </button>
+    </button> -->
 
     <script>
     // Add an event listener to the logout button
