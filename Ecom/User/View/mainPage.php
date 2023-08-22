@@ -79,74 +79,7 @@ $customer = $_SESSION['checkEmail']
                         </div>
                     </div>
                 </label>
-                <!-- <label for="cart" class="ml-3"><ion-icon name="cart-outline" class="text-2xl mt-2 dark:text-white text-black"></ion-icon>
-                </label> -->
-                <!-- <div id="shopping-cart" class="  peer-checked:visible w-auto bg-white/50 backdrop-blur-lg dark:bg-gray-800/50 dark:text-white p-5 absolute z-30 top-20 right-0 rounded-bl-2xl drop-shadow-lg cursor-pointer overflow-y-scroll hide-scroll-bar">
-                    <div class="font-bold">Your Shopping Cart</div>
-
-                    <a id="btnEmpty" href="../Controller/cartController.php?action=empty">Empty Cart</a>
-                    <?php
-                    if (isset($_SESSION["cart_item"])) {
-                        $total_quantity = 0;
-                        $total_price = 0;
-                    ?>
-                        <table class="tbl-cart m-4" cellpadding="5" cellspacing="1">
-                            <tbody>
-                                <tr class="text-left border-b-2 border-b-black dark:border-b-white">
-                                    <th class="w-36">Name</th>
-                                    <th class="w-32">Code</th>
-                                    <th class="w-32">Quantity</th>
-                                    <th class="w-32">Unit Price</th>
-                                    <th class="w-32">Price</th>
-                                    <th class="w-32">Remove</th>
-                                </tr>
-                                <?php
-                                $index = 0;
-                                foreach ($_SESSION["cart_item"] as  $item) {
-                                    $item_price = $item["quantity"] * $item["price"];
-                                ?>
-                                    <form action="./mainPage.php" method="post" enctype="multipart/form-data">
-                                        <tr class="text-left">
-                                            <td hidden><input type="text" value="<?php echo $item["image"] ?>" hidden name="image_<?= $index ?>" id=""></td>
-                                            <td><img name="image_<?= $index ?>" src="<?php echo $item["image"] ?>" class="cart-item-image" /><input type="text" readonly name="itemname_<?= $index ?>" class=" w-48 bg-transparent border border-transparent outline-none" value="<?php echo $item["name"]; ?>"></td>
-                                            <td><input type="text" readonly name="code_<?= $index ?>" class="w-20 bg-transparent border border-transparent outline-none" value="<?php echo $item["code"]; ?>"></td>
-                                            <td><input type="text" readonly name="quantity_<?= $index ?>" class="w-20 bg-transparent border border-transparent outline-none" value="<?php echo $item["quantity"]; ?>"></td>
-                                            <td><input type="text" readonly name="price_<?= $index ?>" class="w-28 bg-transparent border border-transparent outline-none" value=" <?php echo "$ " . $item["price"]; ?>"></td>
-                                            <td><input type="text" readonly name="subprice_<?= $index ?>" class="w-28 bg-transparent border border-transparent outline-none" value="<?php echo "$ " . number_format($item_price, 2); ?>" id=""></td>
-
-                                            <td class="text-center"><a href="../Controller/cartController.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><ion-icon name="trash-outline" alt="Remove Item"></ion-icon></a></td>
-                                        </tr>
-                                    <?php
-                                    $total_quantity += $item["quantity"];
-                                    $total_price += ($item["price"] * $item["quantity"]);
-                                    $index += 1;
-                                }
-                                    ?>
-
-                                    <tr class=" border-t-2 border-t-black dark:border-t-white">
-                                        <td colspan="2" align="right">Total:</td>
-                                        <td align="right"><?php echo $total_quantity; ?></td>
-                                        <td align="right" colspan="2"><strong><input type="text" readonly name="totprice" class="w-28 bg-transparent border border-transparent outline-none" value="<?php echo "$ " . number_format($total_price, 2); ?>" id=""></strong></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="5"><input type="submit" value="Check Out" class=" cursor-pointer float-right bg-blue-500 text-white py-1 px-3 rounded-md"></input></td>
-                                    </tr>
-                                    </form>
-                            </tbody>
-
-                        </table>
-
-                    <?php
-                    } else {
-                    ?>
-                        <div class="no-records">Your Cart is Empty</div>
-                    <?php
-                    }
-                    ?>
-                </div> -->
-
-
+                <!-- <label for="cart" class="ml-3"><ion-icon name="cart-outline" class="text-2xl mt-2 dark:text-white text-black"></ion-icon></label> -->
                 <button id="theme-toggle" type="button" class="text-gray-900 dark:text-white focus:outline-none  rounded-lg text-sm p-2.5">
                     <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -155,11 +88,7 @@ $customer = $_SESSION['checkEmail']
                         <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <!-- <div class="relative w-32">
-                    <div class=" overflow-hidden absolute mx-2 ">
-                        <div id="ln_space" class="w-28 h-20"></div>
-                    </div>
-                </div> -->
+            
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <?php if ($verifyData["verify"] == 0) { ?>
@@ -168,6 +97,7 @@ $customer = $_SESSION['checkEmail']
                         <img class="w-10 h-10 rounded-full" src="../../Storage/profile/<?= $userData["p_picture"] ?>" alt="user photo">
                     <?php } ?>
                 </button>
+                
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                    

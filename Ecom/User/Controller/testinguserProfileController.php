@@ -1,10 +1,9 @@
 <?php
-session_start();
 include "../Model/model.php";
 
 $signUpEmail = $_SESSION['signUpEmail'];
 $loginEmail = $_SESSION["user_ID"];
-echo $loginEmail;
+
 $logOutEmail =  $_SESSION['logOutEmail'];
 
 if (isset($signUpEmail) || isset($loginEmail)) {
