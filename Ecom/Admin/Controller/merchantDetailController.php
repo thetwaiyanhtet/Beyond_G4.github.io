@@ -1,16 +1,14 @@
 <?php 
-session_start();
 
 // DB Connection
 include "../Model/model.php";
 $merchantId = $_GET['id'];
-// echo($merchantId); 
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $merchantId = $_GET['id'];
 
     $sql=$pdo->prepare(
-        "SELECT m_merchant.store_name,m_merchant.address,m_merchant.plan_start_date,m_merchant.plan_end_date,m_plan.plan_name
+        "SELECT m_merchant.store_name,m_merchant.address,m_merchant.plan_start_date,m_merchant.plan_end_date,m_plan.plan_name,m_merchant.logo
         FROM m_merchant
         JOIN m_plan
         ON m_merchant.plan_id=m_plan.id
@@ -81,7 +79,5 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     echo "Invalid customer ID!";
 }
-
-
 
 ?>

@@ -24,8 +24,8 @@
 
              <section class=" border border-gray-400 rounded-lg shadow-lg p-3 h-44 relative">
                  <div class=" bg-violet-300 rounded-md w-auto border h-20"></div>
-                 <div class=" flex items-center space-x-5 absolute top-[17%] left-[10%]">
-                     <img src="./resources/img/mk.png" alt="..." width="120px" class=" rounded-md">
+                 <div class=" flex items-center space-x-5 absolute top-[19%] left-[5%]">
+                     <img src="../../Storage/profile/<?=$merchantDetail["logo"]?>" alt="..." width="150px" class=" rounded-md">
                      <div class=" pt-14">
                          <p class=" font-semibold text-lg"><?= $merchantDetail["store_name"] ?></p>
                          <p><?= $merchantDetail["address"] ?></p>
