@@ -178,7 +178,7 @@ $verifyData = $_SESSION["verifyData"];
                     <select name="region" class="profileInputBox rounded-md w-32 text-gray-900 dark:text-white  border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
                         <?php foreach ($resultR as $rID => $region) { ?>
                             <option value="<?= ++$rID ?>" <?= isset($userData["r_name"]) && $region["r_name"] == $userData["r_name"] ? 'selected' : '' ?>>
-                                <?= $region["r_name"]; ?></option>
+                            <?= $region["r_name"]; ?></option>
                         <?php } ?>
                     </select><br>
 

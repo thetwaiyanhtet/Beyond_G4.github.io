@@ -55,7 +55,7 @@ $category_json = json_encode($category);
                 <div class="h-full  absolute rounded-tl-lg rounded-bl-lg left-0 w-2 bg-pink-600"></div>
                 <p class="mt-2 p-2 pl-5">Total Revenue</p>
                 <div class="flex  p-2 pl-5 items-center  justify-between">
-                    <p class=" text-pink-600 font-semibold">$<?= $revenue[0]['sum_received'] ?></p>
+                    <p class=" text-pink-600 font-semibold"><?= $revenue[0]['sum_received'] ?> Ks</p>
                     <div class="h-10 bg-pink-600 w-10 rounded-full ">
                         <i class='bx bxs-wallet text-white mt-1 ml-1 text-center text-3xl'></i>
                     </div>

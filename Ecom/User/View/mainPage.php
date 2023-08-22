@@ -321,10 +321,10 @@ $customer = $_SESSION['checkEmail']
 
             <div class="banner-container mt-20">
                 <!-- Banner_1 section -->
-                <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
-                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
             </div>
 
 
@@ -399,9 +399,9 @@ $customer = $_SESSION['checkEmail']
             <!--End of Trending product section  -->
             <!-- Banner 2 -->
             <div class="banner-container">
-                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_five_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_six_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
             <!--End of Banner 2 -->
@@ -458,9 +458,9 @@ $customer = $_SESSION['checkEmail']
             </a>
 
             <div class="banner-container">
-                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_seven_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_eight_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_nine_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
             <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Shops</span></h1>
@@ -538,9 +538,9 @@ $customer = $_SESSION['checkEmail']
         </section>
         <section class="w-[90%] m-auto z-0">
             <div class="banner-container">
-                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_ten_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_eleven_img'] ?>" alt="" class="banner-image">
+                <img src="../../Storage/banner/<?= $banner[0]['banner_twelve_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
 

@@ -52,7 +52,6 @@ ini_set('display_errors', 1);
         </nav>
         <form action="./mainPage.php" method="post">
             <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
-
                 <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] w-2/4 shadow-2xl lg:w-[350px] p-5">
                     <?php if (!empty($ItemDetails[0]["p_one"])) { ?>
                         <div class="flex items-center justify-center">
