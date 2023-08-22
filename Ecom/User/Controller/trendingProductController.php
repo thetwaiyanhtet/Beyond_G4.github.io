@@ -1,6 +1,6 @@
 <?php
 $merchantEmail = $_SESSION["merchant_ID"];
-// echo $merchantEmail;
+
 // DB connection
 include "../Model/model.php";
 

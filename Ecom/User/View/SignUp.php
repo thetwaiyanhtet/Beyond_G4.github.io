@@ -48,7 +48,9 @@ session_start();
                         <!-- <i class="fa-regular fa-eye "></i> -->
                         <i class="fas fa-eye absolute top-6 right-4 cursor-pointer -translate-y-1/2"></i>
                     </div>
+                    <?php if(isset($_SESSION["registerError"])) {?>
                     <span class="text-red-500"><?php echo $_SESSION["registerError"] ?></span>
+                    <?php } ?>
                 </div>
                 <a>
                     <button name="register" class=" text-white bg-btn-color rounded-xl w-32 h-10 ml-18 mt-6 font-Playfair Display ml-32">Get Started</button>
