@@ -26,7 +26,8 @@ if ($verify_data["verify"] == 0) {
 
 } else if ($verify_data["verify"] == 1) {
   $sql = $pdo->prepare(
-    "SELECT m_customer.username,m_regions.r_name,m_townships.t_name,m_customer.birthday,m_customer.email,m_customer.phone,m_customer.gender,m_customer.p_picture
+    "SELECT m_customer.username,m_regions.r_name,m_regions.id,m_townships.t_name,m_townships.id,m_customer.birthday,m_customer.email,
+    m_customer.street,m_customer.phone,m_customer.gender,m_customer.p_picture
           FROM m_customer
           JOIN m_townships
           On m_customer.township_id=m_townships.id

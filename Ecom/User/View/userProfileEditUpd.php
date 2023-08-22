@@ -41,7 +41,7 @@ $verifyData = $_SESSION["verifyData"];
 </head>
 
 <body class="bg-purple-200 dark:bg-color-primary-dark ">
-<nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
+    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="./mainPage.php" class="flex items-center">
                 <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
@@ -152,29 +152,33 @@ $verifyData = $_SESSION["verifyData"];
                 <div class="space-y-3 w-3/5 m-auto">
                     <!-- <input type="text" placeholder="Username" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="username"> -->
 
-                    <input type="text" placeholder="Name" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="name" required>
+                    <input type="text" value="<?php echo isset($userData["username"]) ? $userData["username"] : '';  ?>" placeholder="Name" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="name" required>
 
                     <!-- <input type="text" placeholder="Email" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="email"> -->
 
-                    <input type="text" placeholder="Phone Number" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="phone_no" required>
+                    <input type="text" value="<?php echo isset($userData["phone"]) ? $userData["phone"] : '';  ?>" placeholder="Phone Number" class="profileInputBox w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="phone_no" required>
 
                     <p class="text-xs pl-2 inline font-bold text-gray-500">Date of Birth - </p>
-                    <input type="date" class="rounded-md  w-40 text-gray-900 border border-gray-300 dark:text-white  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="dob" required>
+                    <input type="date" value="<?php echo isset($userData["birthday"]) ? $userData["birthday"] : '';  ?>" class="rounded-md  w-40 text-gray-900 border border-gray-300 dark:text-white  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="dob" required>
 
-                    <input type="text" placeholder="Street" class="profileInputBox  w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="street" required>
+                    <input type="text" value="<?php echo isset($userData["street"]) ? $userData["street"] : '';  ?>" placeholder="Street" class="profileInputBox  w-44 md:w-64 rounded-md text-gray-900 border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-purple-300 dark:focus:border-purple-300" name="street" required>
 
 
                     <p class="text-xs pl-2 pr-4 inline font-bold text-gray-500">Township - </p>
-                    <select name="township" class=" profileInputBox w-32 rounded-md  text-gray-900 dark:text-white  border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
-                        <?php foreach ($resultT as $township) { ?>
-                            <option value="<?= ++$tID ?>"><?= $township["t_name"]; ?></option>
+                    <select name="township" class="profileInputBox w-32 rounded-md text-gray-900 dark:text-white border border-gray-300 bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
+                        <?php foreach ($resultT as $tID => $township) { ?>
+                            <option value="<?= $tID ?>" <?= isset($userData["t_name"]) && $township["t_name"] == $userData["t_name"] ? 'selected' : '' ?>>
+                                <?= $township["t_name"]; ?>
+                            </option>
                         <?php } ?>
                     </select>
 
+
                     <p class="text-xs pl-2 inline font-bold text-gray-500">Region/State - </p>
                     <select name="region" class="profileInputBox rounded-md w-32 text-gray-900 dark:text-white  border border-gray-300  bg-gray-50 text-sm sm:text-xs focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600  dark:focus:ring-purple-300 dark:focus:border-purple-300" required>
-                        <?php foreach ($resultR as $region) { ?>
-                            <option value="<?= ++$rID ?>"><?= $region["r_name"]; ?></option>
+                        <?php foreach ($resultR as $rID => $region) { ?>
+                            <option value="<?= ++$rID ?>" <?= isset($userData["r_name"]) && $region["r_name"] == $userData["r_name"] ? 'selected' : '' ?>>
+                                <?= $region["r_name"]; ?></option>
                         <?php } ?>
                     </select><br>
 
@@ -185,16 +189,28 @@ $verifyData = $_SESSION["verifyData"];
                     <div class="flex items-center space-x-3">
                         <p class="text-xs pl-2 inline font-bold text-gray-500">Gender - </p>
                         <div>
+                            <?php if (isset($userData["gender"]) && $userData["gender"] == 0) { ?>
+                                <input type="radio" id="male" name="gender" value="0" required checked>
+                            <?php } else { ?>
+                                <input type="radio" id="male" name="gender" value="0" required>
+                            <?php } ?>
+                            <label for="male" class="md:text-base text-sm dark:text-white">Male</label>
 
-                            <input type="radio" id="male" name="gender" value="0" required>
-                            <label for="male" class=" md:text-base text-sm  dark:text-white">Male</label>
+                            <?php if (isset($userData["gender"]) && $userData["gender"] == 1) { ?>
+                                <input type="radio" id="female" name="gender" value="1" required checked>
+                            <?php } else { ?>
+                                <input type="radio" id="female" name="gender" value="1" required>
+                            <?php } ?>
+                            <label for="female" class="md:text-base text-sm dark:text-white">Female</label>
 
-                            <input type="radio" id="female" name="gender" value="1" required>
-                            <label for="female" class=" md:text-base text-sm  dark:text-white">Female</label>
-
-                            <input type="radio" id="other" name="gender" value="2" required>
-                            <label for="other" class=" md:text-base text-sm  dark:text-white">Other</label>
+                            <?php if (isset($userData["gender"]) && $userData["gender"] == 2) { ?>
+                                <input type="radio" id="other" name="gender" value="2" required checked>
+                            <?php } else { ?>
+                                <input type="radio" id="other" name="gender" value="2" required>
+                            <?php } ?>
+                            <label for="other" class="md:text-base text-sm dark:text-white">Other</label>
                         </div>
+
                     </div>
                 </div>
 

@@ -18,9 +18,9 @@ $tcondition = $_SESSION["m_tc"];
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/154f79af60.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resources/css/scroll.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -53,7 +53,8 @@ $tcondition = $_SESSION["m_tc"];
                         <input name="email" type="email" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Email"></input> <br>
                         <div class="field input relative">
                             <input type="password" name="password" class="border border-solid rounded-lg bg-white w-full h-12 p-4  mb-5  drop-shadow-md bg-blend-normal md:text-base text-sm focus:outline-none" placeholder="Password"></input><br>
-                            <ion-icon name="eye-outline" class="absolute top-6 right-4 cursor-pointer -translate-y-1/2"></ion-icon>
+                            <!-- <ion-icon name="eye-outline" class="a"></ion-icon> -->
+                            <i class="fas fa-eye absolute top-6 right-4 cursor-pointer -translate-y-1/2"></i>
                         </div>
                         <a href="./forgetPw.php" class="underline md:text-sm text-xs mb-8 float-right font-bold">Forget Password</a>
                         <br>
@@ -112,41 +113,41 @@ $tcondition = $_SESSION["m_tc"];
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
                         <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
                         <?php foreach ($tcondition as $key => $value) { ?>
-                           
-                       
-                        <b>1. User Accounts</b> <br>
-                      a. <?= $value['onea'] ?> <br>
-                      b. <?= $value['oneb'] ?> <br><br>
-
-                        <b>2. Use of the Website</b> <br>
-                        a. <?= $value['twoa'] ?><br>
-                        b. <?= $value['twob'] ?><br><br>
-
-                        <b>3. Intellectual Property</b><br>
-                        a. <?= $value['threea'] ?><br>
-                        b. <?= $value['threeb'] ?> <br><br>
-
-                        <b>4. Privacy</b><br>
-                        <?= $value['four'] ?> <br><br>
-
-                        <b>5. Third-Party Links</b><br>
-                        <?= $value['five'] ?> <br><br>
-
-                        <b>6. Limitation of Liability</b><br>
-                        <?= $value['six'] ?> <br><br>
-
-                        <b>7. Modifications to the Terms</b><br>
-                        <?= $value['seven'] ?> <br><br>
-
-                        <b>8. Termination</b><br>
-                        <?= $value['eight'] ?> <br><br>
 
 
-                        <b>9. Contact Us</b><br>
-                        <?= $value['nine'] ?> <br><br>
+                            <b>1. User Accounts</b> <br>
+                            a. <?= $value['onea'] ?> <br>
+                            b. <?= $value['oneb'] ?> <br><br>
 
-                        <b>By using the Beyond website, you agree to abide by these Terms and Conditions. Please read them carefully before proceeding with your use of the Website.</b>
-                  <?php  } ?>
+                            <b>2. Use of the Website</b> <br>
+                            a. <?= $value['twoa'] ?><br>
+                            b. <?= $value['twob'] ?><br><br>
+
+                            <b>3. Intellectual Property</b><br>
+                            a. <?= $value['threea'] ?><br>
+                            b. <?= $value['threeb'] ?> <br><br>
+
+                            <b>4. Privacy</b><br>
+                            <?= $value['four'] ?> <br><br>
+
+                            <b>5. Third-Party Links</b><br>
+                            <?= $value['five'] ?> <br><br>
+
+                            <b>6. Limitation of Liability</b><br>
+                            <?= $value['six'] ?> <br><br>
+
+                            <b>7. Modifications to the Terms</b><br>
+                            <?= $value['seven'] ?> <br><br>
+
+                            <b>8. Termination</b><br>
+                            <?= $value['eight'] ?> <br><br>
+
+
+                            <b>9. Contact Us</b><br>
+                            <?= $value['nine'] ?> <br><br>
+
+                            <b>By using the Beyond website, you agree to abide by these Terms and Conditions. Please read them carefully before proceeding with your use of the Website.</b>
+                        <?php  } ?>
                     </p>
 
                 </div>
@@ -161,7 +162,7 @@ $tcondition = $_SESSION["m_tc"];
     </div>
     <script>
         const pswrdField = document.querySelector(".form input[type='password']");
-        const Icon = document.querySelector(".form .field ion-icon");
+        const Icon = document.querySelector(".form .field i");
 
         Icon.onclick = () => {
             if (pswrdField.type === "password") {
