@@ -16,16 +16,16 @@ $(document).ready(function () {
             return fullStars + emptyStars;
           }
         const popupContent = `
-          <div>
+          <div class=" w-[40%]">
                 <img src="../../Storage/product/${reviewDetails.p_one}" alt="" class=" mt-3 mx-auto w-20 hover:transition-all hover:duration-300 hover:scale-125">
                 <div class=" p-3 space-y-3">
                     <p class=" font-semibold"> ${reviewDetails.name} </p>
                     <p class=" text-yellow-500">
                         <span>${numberToStars(reviewDetails.rating)}</span>
                         <span class="text-black">/</span>
-                        <span class="text-black">${reviewDetails.username}</span>
+                        <span class="text-black">${reviewDetails.usernam}</span>
                     </p>
-                    <p class=" text-gray-500">${reviewDetails.comment}</p>
+                    <p class=" text-gray-500 w-40" width="200px">${reviewDetails.comment}</p>
                     <div>
                         <span class=" text-gray-500 pt-5">Category : </span>
                         <span>${reviewDetails.c_name}</span>

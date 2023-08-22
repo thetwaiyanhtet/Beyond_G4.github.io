@@ -129,7 +129,7 @@ $reviewdata = $_SESSION["getReviewandRating"];
                 </div>
             </div>
         </section>
-        <div id="detailPopup" class=" fixed left-[45%] top-[20%] border bg-gray-200 rounded-md shadow-lg">
+        <div id="detailPopup" class=" fixed left-[45%] top-[20%] w-96 border bg-gray-200 rounded-md shadow-lg">
             <!-- Dynamically generated content will be populated here -->
         </div>
     </main>
