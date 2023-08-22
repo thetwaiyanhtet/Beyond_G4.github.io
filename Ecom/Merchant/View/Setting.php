@@ -103,7 +103,7 @@ include "../Controller/settingShowDataController.php";
                                                 ?>
                                             </span>
                                         </label>
-                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : ''; ?>" placeholder="09********" >
+                                        <input type="text" name="phNo" class="w-72 p-1 border border-solid rounded-md mt-2 outline-none indent-2" value="<?php echo isset($merchant['phone']) ? $merchant['phone'] : ''; ?>">
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="myTextarea" class=" text-sm">Slogan</label>

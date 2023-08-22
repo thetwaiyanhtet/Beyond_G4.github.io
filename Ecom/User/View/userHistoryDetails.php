@@ -182,7 +182,6 @@ $verifyData = $_SESSION["verifyData"];
                                                                 <path d="M20,2H4C2.9,2,2,2.9,2,4v18l4-4h14c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M13.57,11.57L12,15l-1.57-3.43L7,10l3.43-1.57 L12,5l1.57,3.43L17,10L13.57,11.57z" fill="#a1a1a1"></path>
                                                             </svg>
                                                             <h3 class=" text-lg font-normal text-gray-800 dark:text-gray-400 pb-2">Share Your Experience</h3>
-                                                            <!-- <p hidden>Selected rating: <span id="star-count">0</span></p> -->
                                                             <div class="flex items-center space-x-1 justify-center pb-2">
                                                                 <label for="rating">Rating:</label>
                                                                 <div class="star-rating">
