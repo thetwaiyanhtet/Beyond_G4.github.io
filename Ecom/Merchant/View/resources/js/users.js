@@ -34,23 +34,22 @@ searchBar.onkeyup = () => {
 }
 
 setInterval(() => {
-  let xhr = new XMLHttpRequest();
- if ( xhr.open("GET", '../Controller/usersController.php', true)) {
-     console.log( "can't open this file");
- }else{
-  console.log("Path");
- }
-
-  xhr.onload = () => {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        let data = xhr.response;
-        if (!searchBar.classList.contains("active")) {
-          usersList.innerHTML = data;
-        }
+  fetch('../Controller/usersController.php')
+    .then(response => {
+      if (!response.ok) {
+        console.log('Error:', response.status, response.statusText);
+        throw new Error('Network response was not ok');
       }
-    }
-  };
-  xhr.send();
+      return response.text();
+    })
+    .then(data => {
+      if (!searchBar.classList.contains('active')) {
+        usersList.innerHTML = data;
+      }
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+    });
 }, 500);
+
 

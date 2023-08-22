@@ -21,9 +21,9 @@ include '../Controller/productListController.php';
 </head>
 
 <body>
-    <main id="main" class=" ml-72 mt-24 py-5">
+    <main id="main" class=" ml-72 mt-16">
         <div class=" px-5 space-y-3">
-            <p class=" text-xl font-semibold font-philosopher">Product List</p>
+            <p class=" text-xl font-semibold font-philosopher py-5">Product List</p>
 
             <!-- <section class=" py-3">
                 <div class=" flex justify-start items-center space-x-3">

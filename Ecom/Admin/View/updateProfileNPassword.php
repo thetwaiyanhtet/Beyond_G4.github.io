@@ -29,12 +29,12 @@ $admininfo =$_SESSION["m_admin"];
 </head>
 
 <body>
-    <main id="main" class=" ml-72 mt-24">
-        <div class=" px-5 space-y-5 pb-5">
-            <p class=" text-xl font-semibold font-philosopher">Update Profile and Passwod</p>
+    <main id="main" class=" ml-72 mt-16">
+        <div class="px-5">
+            <p class="text-xl font-semibold font-philosopher pb-5">Update Profile and Passwod</p>
             <form action="../Controller/updateprofileController.php" method="post" enctype="multipart/form-data">
                 <section class=" border border-gray-400 rounded-lg shadow-lg p-3">
-                    <p class=" font-semibold">Update Profile</p>
+                    <p class="font-semibold py-5">Update Profile</p>
                     <div class=" w-[50%] mx-auto space-y-6">
                         <div class=" flex-col flex items-center justify-between">
                             <div class=" w-20 shadow-xl border-2 border-blue-950">

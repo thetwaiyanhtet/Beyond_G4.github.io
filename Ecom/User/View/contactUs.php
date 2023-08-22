@@ -29,6 +29,7 @@ $contact = $_SESSION["m_contactus"];
 </head>
 
 <body class=" bg-purple-300 dark:bg-purple-400 relative overflow-hidden font-poppins">
+<a href="./mainPage.php"><ion-icon name="chevron-back-outline" class="m-5 font-semibold text-3xl"></ion-icon></a>
   <nav>
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="./mainPage.php" class="flex items-center">
@@ -83,7 +84,7 @@ $contact = $_SESSION["m_contactus"];
       <p class="text-2xl font-bold my-[10%] mx-[10%] font-poppins">Info</p>
       <span class="flex items-center mx-[10%]">
         <ion-icon class="w-[36px] h-[36px]" name="mail-open-outline"></ion-icon>
-        <p class="text-[16px] font-medium mx-[7%]"><?= $contact[0]['email'] ?></p>
+        <p class="text-[16px] font-bold mx-[7%] w-44"><?= $contact[0]['email'] ?></p>
       </span>
       <span class="flex items-center mx-[10%] my-[6%]">
         <ion-icon class="w-[36px] h-[36px]" name="call-outline"></ion-icon>

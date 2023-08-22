@@ -1113,12 +1113,12 @@ video {
   margin-top: 6rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.mt-28 {
+  margin-top: 7rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-36 {
@@ -1145,8 +1145,8 @@ video {
   margin-top: 2%;
 }
 
-.mt-28 {
-  margin-top: 7rem;
+.mb-28 {
+  margin-bottom: 7rem;
 }
 
 .block {
@@ -2737,6 +2737,10 @@ video {
 
 .pt-\[6\%\] {
   padding-top: 6%;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
 }
 
 .text-left {

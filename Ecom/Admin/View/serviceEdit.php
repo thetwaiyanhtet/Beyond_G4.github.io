@@ -21,7 +21,7 @@ $contact = $_SESSION["m_contactus"];
 </head>
 
 <body>
-    <main id="main" class=" ml-72 mt-24 font-poppins">
+    <main id="main" class=" ml-72 mt-16 font-poppins">
         <div class=" px-5 space-y-3 shadow-2xl">
             <p class=" text-xl font-semibold font-philosopher">Contact Us</p>
 

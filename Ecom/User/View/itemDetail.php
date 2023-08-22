@@ -16,15 +16,16 @@ ini_set('display_errors', 1);
     <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Item Detail</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../../User/View/resources/css/label">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./resources/css/scroll.css">
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -32,9 +33,11 @@ ini_set('display_errors', 1);
             document.documentElement.classList.remove('dark')
         }
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
-<body class=" font-poppins w-full">
+<body class="font-poppins w-full dark:bg-gray-800">
     <div>
         <nav class="flex justify-between">
             <img src="./resources/img/logo_slowdown.gif" alt="..." class="h-10 ml-5 mt-3">
@@ -259,9 +262,8 @@ ini_set('display_errors', 1);
                 </div>
             </div>
         </main>
-        <script src="./resources/js/toggle.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
-        <script>
+
+         <script>
             // Get references to the popup and buttons
             const chatBoxPopup = document.getElementById("chatBoxPopup");
             const chatBoxButton = document.getElementById("chatBoxButton");
@@ -274,6 +276,9 @@ ini_set('display_errors', 1);
             // Attach click event listeners to the chatbox button 
             chatBoxButton.addEventListener("click", toggleLogoutPopup);
         </script>
+        <script src="./resources/js/toggle.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
 
 </body>
 

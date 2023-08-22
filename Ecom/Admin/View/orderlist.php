@@ -18,13 +18,13 @@ include "./adminsidebar.php";
 </head>
 
 <body>
-    <main class="ml-72 mt-24 py-5" id="main">
+    <main class="ml-72 mt-24" id="main">
         <div class=" px-5 space-y-3">
             <p class=" text-xl font-semibold font-philosopher">Order list</p>
 
-            <section class=" py-3">
+            <section class=" py-3 ml-5">
                 <div class=" flex justify-start items-center space-x-3">
-                    <p class="text-lg">Search : </p>
+                    <p>Search : </p>
                     <input type="text" class="border bg-bcolor rounded-md indent-1 px-2 py-1 outline-none">
                 </div>
             </section>
