@@ -1,5 +1,6 @@
 <?php
 
+include "./navigation.php";
 
 require_once("../Controller/newcartController.php");
 require_once "../Model/model.php";
@@ -59,12 +60,12 @@ if (!empty($_SESSION['carttle'])) {
 
     $cartloop = $_SESSION["placeholdcart"];
 
-    
+
     $delifees = $pdo->prepare(
         "SELECT delivery_fees FROM `m_delivery` JOIN m_customer ON m_delivery.region_id = m_customer.region_id
          WHERE m_customer.id = (SELECT id FROM m_customer WHERE email = :email) "
     );
-   
+
     $delifees->bindValue(":email", $user);
     $delifees->execute();
     $_SESSION['delifees'] = $delifees->fetchAll(PDO::FETCH_ASSOC);
@@ -109,72 +110,7 @@ if (!empty($_SESSION['carttle'])) {
 </div>
 
 <body class="bg-purple-200 dark:bg-color-primary-dark ">
-    <nav class=" bg-violet-300 dark:bg-color-primary-dark fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 font-PlayfairSC">
-        <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="./mainPage.php" class="flex items-center">
-                <img src="./resources/img/logo_slowdown.gif" class="mr-3 h-12" alt="beyond Logo" />
-                <span class="text-2xl font-semibold whitespace-nowrap text-black dark:text-white font-philosopher">Beyond</span>
-            </a>
 
-            <div class="flex items-center md:order-2">
-                <ion-icon name="cart-outline" class="text-xl dark:text-white text-black"></ion-icon>
-
-                <button id="theme-toggle" type="button" class="text-gray-900 dark:text-white focus:outline-none  rounded-lg text-sm p-2.5">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-                    <span class="sr-only">Open user menu</span>
-                    <img class="w-8 h-8 rounded-full" src="./resources/img/bille.png" alt="user photo">
-                </button>
-                <!-- Dropdown menu -->
-                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-                    <div class="px-4 py-3">
-                        <span class="block text-sm text-gray-900 dark:text-white">User's name</span>
-                        <span class="block text-xs  text-gray-500 truncate dark:text-gray-400">name@something.com</span>
-                    </div>
-                    <ul class="py-2" aria-labelledby="user-menu-button">
-                        <li>
-                            <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
-                        </li>
-                        <li>
-                            <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
-                        </li>
-                        <li>
-                            <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Log out</a>
-                        </li>
-                    </ul>
-                </div>
-                <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </div>
-
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-transparent" id="navbar-user">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:border-gray-700">
-                    <li>
-                        <a href="./mainPage.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-purple-500 md:dark:hover:bg-transparent dark:border-gray-700 font-bold" aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="./aboutUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-purple-500 md:dark:hover:bg-transparent dark:border-gray-700 font-bold">About Us</a>
-                    </li>
-                    <li>
-                        <a href="./contactUs.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-600 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-purple-500 md:dark:hover:bg-transparent dark:border-gray-700 font-bold">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <section class="flex flex-wrap w-full mt-24 ">
         <div class="md:flex flex-col m-5 space-y-5 w-[100%] md:w-44">
             <a href="./userProfileEditUpd.php">
@@ -269,15 +205,15 @@ if (!empty($_SESSION['carttle'])) {
                             <div class="bg-purple-300 dark:bg-purple-500 w-[100%] md:w-1/4 rounded-lg">
                                 <form action="../View/deliver.php" method="post">
                                     <div class="">
-                                        <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-[136px] h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
-                                        <div class="flex item py-[4%]">
+                                        <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-full h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
+                                        <div class="flex justify-around py-[4%]">
                                             <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
                                             <input readonly class="ml-[44px] font-bold text-xs w-[60px] md:text-sm bg-transparent " id="gtotal" name="stotal"></input>
                                             <input type="hidden" name="quantiarr" id="quantiarray">
                                         </div>
-                                        <div class="flex">
-                                            <p class="ml-[15px] font-bold text-xs md:text-sm">Shipping fee</p>
-                                            <input readonly class="ml-[25px] font-bold text-xs md:text-sm bg-transparent " value="<?=  $_SESSION['delifees'][0]['delivery_fees']  ?> Ks" id="delifees" name="deli" >
+                                        <div class="flex justify-around ">
+                                            <p class="ml-[44px]  font-bold text-xs md:text-sm">Shipping fee</p>
+                                            <input readonly class="ml-[44px] font-bold text-xs md:text-sm bg-transparent " value="<?= $_SESSION['delifees'][0]['delivery_fees']  ?> Ks" id="delifees" name="deli">
                                         </div>
                                     </div>
 
@@ -376,16 +312,16 @@ if (!empty($_SESSION['carttle'])) {
             gt = 0;
             quanti = [];
             for (let i = 0; i < iprice.length; i++) {
-                itotal[i].innerHTML =  (iprice[i].value) * (iquantity[i].value) + " Ks" ;
+                itotal[i].innerHTML = (iprice[i].value) * (iquantity[i].value) + " Ks";
                 gt = gt + (iprice[i].value) * (iquantity[i].value);
                 quanti.push(iquantity[i].value);
 
             }
-            var sliceddelifees = delifees.slice(0,-3);
-            console.log(typeof(sliceddelifees)); 
-            gtotal.value =  gt + " Ks";
+            var sliceddelifees = delifees.slice(0, -3);
+            console.log(typeof(sliceddelifees));
+            gtotal.value = gt + " Ks";
             var tot = gt + Number(sliceddelifees);
-            delitotal.value =   tot +  " Ks";
+            delitotal.value = tot + " Ks";
             quantiarray.value = quanti;
         }
         subTotal();

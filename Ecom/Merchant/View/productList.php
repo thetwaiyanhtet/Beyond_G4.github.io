@@ -17,7 +17,7 @@ include "../Controller/productListController.php";
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
-    <script src="../View/resources/js/searchProduct.js"></script>
+    <script src="../View/resources/js/searchProduct.js" defer></script>
     <script src="./resources/js/dateandtime.js " defer></script>
     <link rel="stylesheet" href="./resources/css/inventory.css">
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
@@ -33,7 +33,7 @@ include "../Controller/productListController.php";
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
             <div class="pl-5 pt-1 w-60">
-                <input type="search" class="inputBox text-xs" id="search" placeholder="Search by Name,ID,or category...">
+                <input type="search" class="inputBox text-xs" id="search" placeholder="Search by Name,Code,Category..">
             </div>
             <div class=" flex-col justify-center px-5 py-1">
 
@@ -50,14 +50,17 @@ include "../Controller/productListController.php";
                         <table class="w-full text-sm text-left text-gray-500 ">
                             <thead class="text-xs text-gray-700 uppercase bg-blue-200 text-center ">
                                 <tr>
+                                    <th scope="col" class="px-3 py-3">
+                                        No
+                                    </th>
                                     <th scope="col" class="px-6 py-3">
                                         Product Name
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-start">
-                                        Product Id
+                                        Code
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-start">
-                                        Category
+                                        Sub Category
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         buying Price
@@ -69,9 +72,6 @@ include "../Controller/productListController.php";
                                         quantity
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Create date
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
                                         availablity
                                     </th>
                                     <th scope="col" class=" text-center py-3">
@@ -81,8 +81,13 @@ include "../Controller/productListController.php";
                                 </tr>
                             </thead>
                             <tbody id="searchResult">
+                                <!-- <?php print_r($paginatedData); ?> -->
+                                <?php $count = ($currentPage - 1) * $itemsPerPage ?>
                                 <?php foreach ($paginatedData as $product) { ?>
                                     <tr class=" border-b hover:bg-gray-200 border-gray-500">
+                                        <td class="px-5 py-4">
+                                            <?= ++$count ?>.
+                                        </td>
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             <?= $product["name"]; ?>
                                         </th>
@@ -90,7 +95,7 @@ include "../Controller/productListController.php";
                                             <?= $product["code"]; ?>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <?= $product["c_name"]; ?>
+                                            <?= $product["s_c_name"]; ?>
                                         </td>
                                         <td class=" px-12 py-4">
                                             <?= $product["buyprice"]; ?> Ks
@@ -101,10 +106,6 @@ include "../Controller/productListController.php";
                                         <td class="px-12 py-4">
                                             <?= $product["instock"]; ?>
                                         </td>
-                                        <td class="px-10 py-4">
-                                            <?= $product["create_date"]; ?>
-                                        </td>
-
                                         <?php if ($product["instock"] > 10) { ?>
                                             <td class="px-10 py-4 text-green-500">
                                                 Instock

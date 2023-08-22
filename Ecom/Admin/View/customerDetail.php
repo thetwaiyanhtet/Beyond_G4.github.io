@@ -90,14 +90,15 @@ include "../Controller/customerDetailController.php";
         <div class=" flex justify-center pr-5 py-3">
             <div class="flex flex-col w-full rounded-lg  border border-gray-400 shadow-md ">
                 <p class=" font-bold p-5 border border-b-black h-14">All purchased products</p>
-
-                <div class="flex justify-around p-5">
+                <div class="flex flex-wrap space-x-5 p-5">
                     <?php foreach ($products as $product) { ?>
-                        <div class=" flex flex-col  w-[222px] h-[330px] rounded-lg  shadow-xl border border-gray-400 text-center">
-                            <img src="../../Storage/product/<?= $product["p_one"] ?>" alt="..." class=" w-40 mx-auto pt-2">
-                            <div class="pl-3 pb-2 pt-10">
+                        <div class=" flex flex-col  w-[180px] h-[200px] rounded-lg  shadow-xl border border-gray-400 text-center">
+                            <div class=" h-24">
+                                <img src="../../Storage/product/<?= $product["p_one"] ?>" alt="..." class=" w-24 mx-auto pt-2">
+                            </div>
+                            <div class="pt-10">
                                 <p class=" font-semibold "><?= $product["name"] ?></p>
-                                <p class=" opacity-60">$<?= $product["unit_price"] ?></p>
+                                <p class=" opacity-60"><?= $product["unit_price"] ?> Ks</p>
                             </div>
                         </div>
                     <?php } ?>
@@ -115,7 +116,7 @@ include "../Controller/customerDetailController.php";
                         <thead class="text-xs text-white uppercase bg-table ">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
-                                    Product
+                                    Order ID
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Store Name
@@ -136,20 +137,14 @@ include "../Controller/customerDetailController.php";
                         <tbody>
                             <?php foreach ($orders as $order) { ?>
                                 <tr class=" border-b hover:bg-gray-200 border-gray-500">
-                                    <?php if ($purchasedCount > 1) { ?>
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                            <?= $order["name"] ?> ,...
-                                        </th>
-                                    <?php } else if ($purchasedCount == 0) { ?>
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                            <?= $order["name"] ?>
-                                        </th>
-                                    <?php } ?>
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <?= $order["generate_id"] ?> 
+                                    </th>
                                     <td class="px-6 py-4">
                                         <?= $order["store_name"] ?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        $ <?= $order["total_amt"] ?>
+                                         <?= $order["total_amt"] ?> Ks
                                     </td>
                                     <td class="pr-6 py-4 ">
                                         <?= $order["order_date"] ?>

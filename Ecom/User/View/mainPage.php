@@ -1,18 +1,19 @@
 <?php
-include "../Controller/categoryListController.php";
-include "../Controller/newcartController.php";
-include "../Controller/wishlistcart.php";
-include "../Controller/trendingProductController.php";
-include  "../../User/Controller/bannerController.php";
-include  "../../Admin/Controller/readfaqController.php";
-include "../Controller/userProfileController.php";
-include "../Controller/testinguserProfileController.php";
-$faq = $_SESSION["m_faq"];
-include "../Controller/bannerController.php";
-$banner = $_SESSION["banner"];
-$userData = $_SESSION["user_data"];
-$verifyData = $_SESSION['verifyData'];
-$customer = $_SESSION['checkEmail']
+include "./navigation.php";
+// include "../Controller/categoryListController.php";
+// include "../Controller/newcartController.php";
+// include "../Controller/wishlistcart.php";
+// include "../Controller/trendingProductController.php";
+// include  "../../User/Controller/bannerController.php";
+// include  "../../Admin/Controller/readfaqController.php";
+// include "../Controller/userProfileController.php";
+// include "../Controller/testinguserProfileController.php";
+// $faq = $_SESSION["m_faq"];
+// include "../Controller/bannerController.php";
+// $banner = $_SESSION["banner"];
+// $userData = $_SESSION["user_data"];
+// $verifyData = $_SESSION['verifyData'];
+// $customer = $_SESSION['checkEmail']
 ?>
 
 <!DOCTYPE html>
@@ -24,24 +25,12 @@ $customer = $_SESSION['checkEmail']
     <link rel="icon" href="./resources/img/logo_upt.png" type="image/png" sizes="16x16">
     <title>Beyond</title>
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
     <link rel="stylesheet" href="./resources/css/bannerSlideShow.css">
-    <link rel="stylesheet" href="./resources/css/chat.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="./resources/js/bannerSlideShow.js" defer></script>
     <script src="./resources/js/searchProduct.js" defer></script>
     <script src="./resources/js/userMainPage.js" defer></script>
-    <script src="./resources/js/chat.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -49,18 +38,12 @@ $customer = $_SESSION['checkEmail']
             document.documentElement.classList.remove('dark')
         }
     </script>
-
 </head>
 
 <body class=" bg-purple-50 dark:bg-gray-950 hide-scroll-bar scroll-smooth">
-   
 
 
-
-
-
-
-    <form action="" method="post">
+    <form action="" method="post" class="bg-violet-300 dark:bg-color-primary-dark border-b border-gray-200 dark:border-gray-600  w-full z-30  md:mt-8 py-4">
         <div class="flex w-3/4 m-auto">
             <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
             <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -70,13 +53,13 @@ $customer = $_SESSION['checkEmail']
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button relative">
                     <?php foreach ($categories as $category) { ?>
                         <li class="relative">
-                            <div class="category inline-flex w-full px-4 py-1 hover:bg-gray-100 text-start" data-category-id="<?= $category["id"] ?>">
+                            <div class="category inline-flex w-full px-4 py-1 text-gray-900 hover:bg-purple-100 hover:text-purple-600 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-800 dark:hover:text-purple-200 font-semibold text-start" data-category-id="<?= $category["id"] ?>">
                                 <?= $category["c_name"] ?>
                             </div>
-                            <div class="category-subcategories fixed top-0 w-full h-[320px] left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
+                            <div class="category-subcategories fixed top-0 w-64 h-auto left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
                                 <?php foreach ($subCategories as $subcategory) {
                                     if ($subcategory["category_id"] === $category["id"]) { ?>
-                                        <div class="py-1 pl-3 hover:bg-gray-100 subCategory" data-subcategory-id="<?= $subcategory["id"] ?>">
+                                        <div class="py-1 pl-3 subCategory text-gray-900 hover:bg-purple-100 hover:text-purple-600 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-800 dark:hover:text-purple-200" data-subcategory-id="<?= $subcategory["id"] ?>">
                                             <?= $subcategory["s_c_name"] ?>
                                         </div>
                                 <?php }
@@ -88,8 +71,8 @@ $customer = $_SESSION['checkEmail']
             </div>
             <div class="relative w-full">
                 <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-purple-500 focus:border-purple-500 " placeholder="Search Here..." required>
-                <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium w-20 h-full text-white bg-purple-700 rounded-r-lg border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium w-12 h-full text-white bg-purple-700 rounded-r-lg border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                    <svg class="w-4 h-4 m-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                     <span class="sr-only">Search</span>
@@ -112,9 +95,9 @@ $customer = $_SESSION['checkEmail']
 
 
     <section class="sec h-screen" id="searchResult">
-        <section class="w-[90%] m-auto">
+        <section class="w-[100%] md:w-[90%] m-auto">
 
-            <div class="banner-container mt-32 md:h-96 h-40">
+            <div class="banner-container md:h-96 h-40 rounded-none">
                 <!-- Banner_1 section -->
                 <img src="../../Storage/banner/<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
@@ -124,7 +107,7 @@ $customer = $_SESSION['checkEmail']
 
 
             <!--Trending product section  -->
-            <div class=" flex flex-col m-auto p-auto font-poppins">
+            <div class=" flex flex-col m-auto p-auto">
 
                 <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Product</span></h1>
                 <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
@@ -159,7 +142,7 @@ $customer = $_SESSION['checkEmail']
                                                         <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full "><?php echo $tranding["name"]; ?></h2>
                                                         <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
                                                         <!-- <del class="text-red-700 text-md">$999</del> -->
-                                                        <p name="price" class="text-md font-bold mt-2 ml-5 block "><?php echo "$" . $tranding["sellprice"]; ?></p>
+                                                        <p name="price" class="text-md font-bold mt-2 ml-5 block "><?php echo $tranding["sellprice"] . " Ks"; ?></p>
                                                         <div class="cart-action relative">
                                                             <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto " />
                                                             <ion-icon name="cart-outline" class="absolute top-3 right-6 md:right-10 text-xl"></ion-icon>
@@ -194,7 +177,7 @@ $customer = $_SESSION['checkEmail']
             </a>
             <!--End of Trending product section  -->
             <!-- Banner 2 -->
-            <div class="banner-container md:h-96 h-40">
+            <div class="banner-container md:h-96 h-40 rounded-none">
                 <img src="../../Storage/banner/<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
                 <img src="../../Storage/banner/<?= $banner[0]['banner_five_img'] ?>" alt="" class="banner-image">
                 <img src="../../Storage/banner/<?= $banner[0]['banner_six_img'] ?>" alt="" class="banner-image">
@@ -331,100 +314,101 @@ $customer = $_SESSION['checkEmail']
 
 
 
-        </section>
-        <section class="w-[90%] m-auto z-0">
-            <div class="banner-container md:h-96 h-40">
-                <img src="../../Storage/banner/<?= $banner[0]['banner_ten_img'] ?>" alt="" class="banner-image">
-                <img src="../../Storage/banner/<?= $banner[0]['banner_eleven_img'] ?>" alt="" class="banner-image">
-                <img src="../../Storage/banner/<?= $banner[0]['banner_twelve_img'] ?>" alt="" class="banner-image">
-                <!-- More images for this banner section -->
-            </div>
 
-            <div class=" w-full h-auto py-5 z-0">
-                <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
-                <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
+            <section class=" m-auto z-0">
+                <div class="banner-container md:h-96 h-40">
+                    <img src="../../Storage/banner/<?= $banner[0]['banner_ten_img'] ?>" alt="" class="banner-image">
+                    <img src="../../Storage/banner/<?= $banner[0]['banner_eleven_img'] ?>" alt="" class="banner-image">
+                    <img src="../../Storage/banner/<?= $banner[0]['banner_twelve_img'] ?>" alt="" class="banner-image">
+                    <!-- More images for this banner section -->
+                </div>
+
+                <div class=" w-full h-auto py-5 z-0">
+                    <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Frequently Ask Questions</span></h1>
+                    <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 mb-4">
 
 
 
-                <div class=" w-[80%] m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg">
+                    <div class="w-[90%] md:w-[80%] m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 backdrop-blur-lg">
 
-                    <div class="p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-                        <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg" data-inactive-classes="text-gray-500 dark:text-gray-400">
-                            <h2 id="accordion-flush-heading-1">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
-                                    <span><?= $faq[0]['question_one'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_one'] ?>
-                                    </p>
+                        <div class="p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                                <h2 id="accordion-flush-heading-1">
+                                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
+                                        <span><?= $faq[0]['question_one'] ?></span>
+                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                        <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_one'] ?>
+                                        </p>
 
+                                    </div>
+                                </div>
+                                <h2 id="accordion-flush-heading-2">
+                                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                                        <span><?= $faq[0]['question_two'] ?></span>
+                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                        <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_two'] ?></p>
+
+                                    </div>
+                                </div>
+                                <h2 id="accordion-flush-heading-3">
+                                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                                        <span><?= $faq[0]['question_three'] ?></span>
+                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                        <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_three'] ?></p>
+
+                                    </div>
+                                </div>
+                                <h2 id="accordion-flush-heading-4">
+                                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                                        <span><?= $faq[0]['question_four'] ?></span>
+                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                        <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_four'] ?></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h2 id="accordion-flush-heading-5">
+                                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                                        <span><?= $faq[0]['question_fivre'] ?>
+                                        </span>
+                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
+                                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                                        <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_five'] ?></p>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <h2 id="accordion-flush-heading-2">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-                                    <span><?= $faq[0]['question_two'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_two'] ?></p>
 
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-3">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-                                    <span><?= $faq[0]['question_three'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_three'] ?></p>
-
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-4">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
-                                    <span><?= $faq[0]['question_four'] ?></span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_four'] ?></p>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h2 id="accordion-flush-heading-5">
-                                <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-                                    <span><?= $faq[0]['question_fivre'] ?>
-                                    </span>
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-                                <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                                    <p class="mb-2 text-gray-500 dark:text-gray-400"><?= $faq[0]['answer_five'] ?></p>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
-
-                    </div>
+            </section>
         </section>
         <section id="footer">
             <div class="relative bg-purple-300 dark:bg-color-primary-dark dark:text-white border-t border-t-transparent dark:border-t-slate-200">
@@ -589,34 +573,11 @@ $customer = $_SESSION['checkEmail']
             </div>
         </section>
 
-        <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-50 bottom-28 right-10 border-0 w-14 h-14 rounded-full drop-shadow-md shadow-inner bg-purple-500 text-white text-3xl font-bold "><ion-icon name="arrow-up-outline" class="scale-110"></ion-icon></button>
+
 
     </section>
-    <!-- <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script> -->
-    <script>
-        var toTopButton = document.getElementById("to-top-button");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                toTopButton.classList.remove("hidden");
-            } else {
-                toTopButton.classList.add("hidden");
-            }
-        }
 
-        function goToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        // document.addEventListener("DOMContentLoaded", function(e) {
-        //     ConveyThis_Initializer.init({
-        //         api_key: "pub_f0dadebebe17f7b23e125a0a04edb015"
-        //     });
-        // });
-    </script>
-    <script src="./resources/js/toggle.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
 </body>
 
 

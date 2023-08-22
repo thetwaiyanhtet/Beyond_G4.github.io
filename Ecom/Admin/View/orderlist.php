@@ -21,23 +21,15 @@ include "./adminsidebar.php";
     <main class="ml-72 mt-24" id="main">
         <div class=" px-5 space-y-3">
             <p class=" text-xl font-semibold font-philosopher">Order list</p>
-
-            <section class=" py-3 ml-5">
-                <div class=" flex justify-start items-center space-x-3">
-                    <p>Search : </p>
-                    <input type="text" class="border bg-bcolor rounded-md indent-1 px-2 py-1 outline-none">
-                </div>
-            </section>
-
             <section class="border rounded-lg shadow-lg p-2">
                 <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs uppercase bg-table text-white border rounded-lg">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Product
+                                Order ID
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Merchant Name
+                                Store Name
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Customer Name
@@ -62,13 +54,12 @@ include "./adminsidebar.php";
                             <tr class=" border-b hover:bg-gray-200 border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                     <?php
-                                    $product_name = $result['id'];
-                                    echo $product_name;
+                                    echo $result['generate_id'];
                                     ?>
                                 </th>
                                 <td class="px-6 py-4">
                                     <?php
-                                    echo $result['m_name'];
+                                    echo $result['store_name'];
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">
@@ -82,8 +73,7 @@ include "./adminsidebar.php";
                                     ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <?php echo $result['total_amt'];
-                                    ?>
+                                    <?php echo $result['total_amt']. " Ks"; ?>
                                 </td>
                                 <td class="px-6 py-4">
                                     <?php echo $result['order_date'];
