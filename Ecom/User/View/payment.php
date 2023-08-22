@@ -101,24 +101,24 @@
                             <div id="input_canva" class=" h-80 bg-white px-3 py-5 space-y-3">
                                 <div class=" flex flex-col items-start ">
                                     <span>Card number</span>
-                                    <input id="cardNo" type="number" maxlength="16" class="outline-none h-10 w-full border-b-2 border-btn-color ">
+                                    <input id="cardNo" type="number" name="cardNumber" maxlength="16" class="outline-none h-10 w-full border-b-2 border-btn-color ">
                                 </div>
                                 <div class="  flex flex-col items-start ">
                                     <span>Card holder</span>
-                                    <input id="cardHolder" type="text" class="outline-none bg-transparent h-10 w-full border-b-2 border-btn-color">
+                                    <input id="cardHolder" type="text" name="cardholder" class="outline-none bg-transparent h-10 w-full border-b-2 border-btn-color">
                                 </div>
                                 <div class="flexbox flex justify-between">
                                     <div class=" flex flex-col items-start ">
                                         <span>expire MM</span>
-                                        <input id="expMonth" type="number" min="1" max="12" maxlength="2" class="outline-none h-10 w-[100%] border-b-2 border-btn-color">
+                                        <input id="expMonth" type="number" name="expm" min="1" max="12" maxlength="2" class="outline-none h-10 w-[100%] border-b-2 border-btn-color">
                                     </div>
                                     <div class=" flex flex-col items-start ">
                                         <span>expire YY</span>
-                                        <input id="expYear" type="number" max="2030" min="2023" class="outline-none h-10 w-[100%] border-b-2 border-btn-color ">
+                                        <input id="expYear" type="number" name="expy" max="2030" min="2023" class="outline-none h-10 w-[100%] border-b-2 border-btn-color ">
                                     </div>
                                     <div class=" flex flex-col -mr-24 ml-5 items-start">
                                         <span>CVV</span>
-                                        <input id="cvv" type="text" maxlength="4" class="outline-none h-10 w-[70%]   border-b-2 border-btn-color " placeholder="only 4 digit">
+                                        <input id="cvv" name="cardCVV" type="number" maxlength="4" class="outline-none h-10 w-[70%]   border-b-2 border-btn-color " placeholder="only 4 digit">
                                     </div>
                                     <div class="items-start">
 
@@ -177,21 +177,100 @@
                 </div>
             </div>
             <div class="absolute -bottom-20 mr-10 max-lg:right-3  right-0 max-lg:-bottom-20">
-                <a href="./confirmation.php"> <button class=" text-white  py-2 px-7 rounded-md bg-[#314755]">Next Step ></button></a>
+                <a href="./confirmation.php"> <input type="submit" id="myButton" class=" text-white  py-2 px-7  rounded-md bg-[#314755]" value="Next Step"></a>
             </div>
         </div>
     </form>
     </div>
     <script>
-                        const form = document.getElementById("myForm");
-                        form.addEventListener("submit", function(event) {
-                            const selectedOptions = form.querySelectorAll('input[name="deli"]:checked');
-                            if (selectedOptions.length !== 1) {
-                                event.preventDefault(); // Prevent form submission
-                                alert("Please select exactly one payment option.");
-                            }
-                        });
-                    </script>
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event) {
+            const selectedOptions = form.querySelectorAll('input[name="deli"]:checked');
+
+            if (selectedOptions.length !== 1) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please select exactly one payment option.");
+            }
+
+
+
+        });
+
+
+        document.getElementById("myButton").addEventListener("click", function(event) {
+
+            var paymentMethodInputs = document.querySelectorAll('input[name="deli"]');
+            var performValidation = true;
+            for (var i = 0; i < paymentMethodInputs.length; i++) {
+                if (paymentMethodInputs[i].checked) {
+                    if (paymentMethodInputs[i].value === "1") {
+                        performValidation = false;
+                        break;
+                    }
+                }
+            }
+            if (performValidation) {
+                var cardHolderName = document.querySelector('input[name="cardholder"]');
+                var cardNumber = document.querySelector('input[name="cardNumber"]');
+                var expMonth = document.querySelector('input[name="expm"]');
+                var expYear = document.querySelector('input[name="expy"]');
+                var cardCVV = document.querySelector('input[name="cardCVV"]');
+                console.log(cardHolderName);
+                console.log(cardNumber);
+                console.log(expMonth);
+                console.log(cardCVV);
+
+
+                if (!cardHolderName.value || !expYear.value || !expMonth.value || !cardNumber.value || !cardDate.value || !cardCVV.value) {
+                    event.preventDefault(); // Prevent form submission
+                    alert("Please fill in all payment details before proceeding.");
+                }
+            }
+
+
+        });
+
+
+        var cardno = document.getElementById('cardNo');
+        cardno.addEventListener('input', function() {
+            var inputValue = cardno.value;
+            var maxLength = 16;
+
+            if (inputValue.length > maxLength) {
+                cardno.value = inputValue.slice(0, maxLength);
+            }
+        });
+
+
+        var month = document.getElementById('expMonth');
+        month.addEventListener('input', function() {
+            var inputValue = month.value;
+            var maxLength = 2;
+
+            if (inputValue.length > maxLength) {
+                month.value = inputValue.slice(0, maxLength);
+            }
+        });
+        var year = document.getElementById('expYear');
+        year.addEventListener('input', function() {
+            var inputValue = year.value;
+            var maxLength = 4;
+
+            if (inputValue.length > maxLength) {
+                year.value = inputValue.slice(0, maxLength);
+            }
+        });
+        var cv = document.getElementById('cvv');
+        cv.addEventListener('input', function() {
+            var inputValue = cv.value;
+            var maxLength = 4;
+
+            if (inputValue.length > maxLength) {
+                cv.value = inputValue.slice(0, maxLength);
+            }
+        });
+    </script>
+
 </body>
 
 </html>
