@@ -95,10 +95,10 @@ include "../Controller/logoandbusinessController.php";
 
                     <div x-data="{ open: false }">
                         <a href="./merchant_list.php">
-                            <button @click="open = !open" class="w-full flex my-2 justify-between items-center py-3 px-6  cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none merchant">
+                            <button @click="open = !open" id="merchant" class="w-full merchant flex my-2 justify-between items-center py-3 px-6  cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                                 <span class="flex items-center ">
-                                    <ion-icon class="h-5 w-5 textm " name="person-outline"></ion-icon>
-                                    <span class="mx-4 textm font-medium">Merchant</span>
+                                    <ion-icon class="h-5 w-5  " name="person-outline"></ion-icon>
+                                    <span class="mx-4  font-medium">Merchant</span>
                                 </span>
                             </button>
                         </a>
