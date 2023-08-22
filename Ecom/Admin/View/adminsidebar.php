@@ -63,7 +63,7 @@ include "../Controller/logoandbusinessController.php";
 
     <div id="sidebar" class="bg-white font-poppins fixed top-0 min-h-screen border shadow-xl text-ellipsis flex justify-around overflow-y-auto">
         <div class="flex flex-col sm:flex-row relative sm:justify-around">
-            <div id="navs" class=" w-64  h-screen overflow-hidden ">
+            <div id="navs" class=" w-64  h-screen  ">
                 <nav class=" mt-28">
                     <div x-data="{ open: false }">
                         <a href="./dashboard.php">
@@ -144,7 +144,7 @@ include "../Controller/logoandbusinessController.php";
                                 </span>
                             </button>
                         </a>
-                    </div>
+                    <!-- </div>
                     <div x-data="{ open: false }">
                         <a href="./chatBox.php">
                             <button @click="open = !open" class="w-full flex my-2 justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none chatBox">
@@ -154,7 +154,7 @@ include "../Controller/logoandbusinessController.php";
                                 </span>
                             </button>
                         </a>
-                    </div>
+                    </div> -->
                     <div x-data="{ open: false }">
                         <a href="./report.php">
                             <button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none report">
@@ -181,7 +181,7 @@ include "../Controller/logoandbusinessController.php";
                         </button>
 
                         <div x-show="open" class="bg-gray-100">
-                            <a class="py-2 px-16 block text-sm  hover:bg-table hover:text-white service" href="./serviceEdit.php">Service and Contact</a>
+                            <a class="py-2 px-16 block text-sm  hover:bg-table hover:text-white service" href="./serviceEdit.php">Update Contact</a>
                             <a class="py-2 px-16 block text-sm  hover:bg-table hover:text-white updateProfile" href="./updateProfileNPassword.php">Update Profile</a>
                             <a class="py-2 px-16 block text-sm  hover:bg-table hover:text-white updateLogoName" href="./updatelogoAndName.php">Update Logo and Name</a>
                             <a class="py-2 px-16 block text-sm  hover:bg-table hover:text-white updateBanners" href="./updatebanner.php">Update Banners</a>
