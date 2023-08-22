@@ -67,7 +67,7 @@ $verifyData = $_SESSION["verifyData"];
                     <?php if ($verifyData["verify"] == 0) { ?>
                         <img class="w-10 h-10 rounded-full" src="../../Storage/profile/profile.png" alt="...">
                     <?php } else if ($verifyData["verify"] == 1) { ?>
-                        <img class="w-10 h-10 rounded-full" src="../../<?= $userData["p_picture"] ?>" alt="...">
+                        <img class="w-10 h-10 rounded-full" src="../../Storage/profile/<?= $userData["p_picture"] ?>" alt="...">
                     <?php } ?>
                     <!-- <img class="w-8 h-8 rounded-full" src="./resources/img/bille.png" alt="..."> -->
                 </button>
