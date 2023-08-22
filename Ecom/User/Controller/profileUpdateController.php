@@ -40,7 +40,7 @@ if (isset($_FILES["photo"]["name"]) && !empty($_FILES["photo"]["name"])) {
     $sql = $pdo->prepare(
         "UPDATE m_customer
         SET 
-        name = :name,
+        username = :name,
         p_picture=:photo,
         phone = :phone_no,
         birthday = :dob,
