@@ -39,7 +39,7 @@ $customer = $_SESSION['checkEmail']
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="./resources/js/bannerSlideShow.js" defer></script>
-    <script src="./resources/js/searchProduct.js"></script>
+    <script src="./resources/js/searchProduct.js" defer></script>
     <script src="./resources/js/userMainPage.js" defer></script>
     <script src="./resources/js/chat.js" defer></script>
     <script>
@@ -111,7 +111,7 @@ $customer = $_SESSION['checkEmail']
 
 
 
-    <section class="sec h-screen">
+    <section class="sec h-screen" id="searchResult">
         <section class="w-[90%] m-auto">
 
             <div class="banner-container mt-32 md:h-96 h-40">
@@ -229,7 +229,7 @@ $customer = $_SESSION['checkEmail']
                                             <!-- <del class="text-red-700 text-lg">$999</del> -->
                                             <p class="text-xs mt-2 ml-5 block 
                                              overflow-hidden h-4"><?= $productDetail["description"] ?></p>
-                                            <p class="text-md font-bold mt-2 ml-5 block ">$<?= $productDetail["sellprice"] ?></p>
+                                            <p class="text-md font-bold mt-2 ml-5 block "><?= $productDetail["sellprice"] ?> Ks</p>
                                             <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                                             <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
                                         </div>

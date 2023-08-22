@@ -23,11 +23,12 @@ include "../Controller/logoandbusinessController.php";
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./resources/js/sidebar.js" defer></script>
 
 </head>
 
-<body class=" font-poppins overflow-x-hidden">
+<body class=" font-poppins overflow-x-hidden ">
     <style>
         #sidebar,
         #navbar,
@@ -62,7 +63,7 @@ include "../Controller/logoandbusinessController.php";
 
     <div id="sidebar" class="bg-white font-poppins fixed top-0 min-h-screen border shadow-xl text-ellipsis flex justify-around overflow-y-auto">
         <div class="flex flex-col sm:flex-row relative sm:justify-around">
-            <div id="navs" class=" w-64  h-screen ">
+            <div id="navs" class=" w-64  h-screen overflow-hidden ">
                 <nav class=" mt-28">
                     <div x-data="{ open: false }">
                         <a href="./dashboard.php">
@@ -95,10 +96,10 @@ include "../Controller/logoandbusinessController.php";
 
                     <div x-data="{ open: false }">
                         <a href="./merchant_list.php">
-                            <button @click="open = !open" class="w-full flex my-2 justify-between items-center py-3 px-6  cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none merchant">
+                            <button @click="open = !open" id="merchant" class="w-full merchant flex my-2 justify-between items-center py-3 px-6  cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                                 <span class="flex items-center ">
-                                    <ion-icon class="h-5 w-5 textm " name="person-outline"></ion-icon>
-                                    <span class="mx-4 textm font-medium">Merchant</span>
+                                    <ion-icon class="h-5 w-5  " name="person-outline"></ion-icon>
+                                    <span class="mx-4  font-medium">Merchant</span>
                                 </span>
                             </button>
                         </a>
@@ -188,8 +189,9 @@ include "../Controller/logoandbusinessController.php";
                             <a class="py-2 px-16 block text-sm  hover:bg-table hover:text-white faq" href="./FAQ_edit.php">FAQs</a>
                         </div>
                     </div>
-                    <div x-data="{ open: false }">
-                        <a href="./login.php"><button @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
+
+                    <div id="logoutButton" x-data="{ open: false }">
+                        <a ><button  @click="open = !open" class="w-full my-2 flex justify-between items-center py-3 px-6 text-black cursor-pointer rounded-r-3xl hover:bg-table hover:text-white focus:outline-none">
                                 <span class="flex items-center">
                                     <ion-icon class="h-5 w-5" name="log-in-outline"></ion-icon>
                                     <span class="mx-4 font-medium">Logout</span>
@@ -201,12 +203,35 @@ include "../Controller/logoandbusinessController.php";
 
         </div>
     </div>
-    <button id="btnSidebarToggler" type="button" class=" bg-gray-200 hover:bg-gray-300 rounded-full border shadow-xl fixed p-1 left-60 top-20 text-xl ">
+    <!-- <button id="btnSidebarToggler" type="button" class=" bg-gray-200 hover:bg-gray-300 rounded-full border shadow-xl fixed p-1 left-60 top-20 text-xl ">
         <ion-icon id="navClosed" class="h-6 bg-table rounded-full m-1 -mb-1 text-white w-6" name="chevron-back-outline"></ion-icon>
         <ion-icon id="navOpen" class="h-6 bg-table rounded-full m-1 hidden -mb-1 text-white w-6" name="chevron-forward-outline"></ion-icon>
-    </button>
+    </button> -->
 
-
+    <script>
+    // Add an event listener to the logout button
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        console.log("log");
+      // Display the Swal confirmation dialog with custom content
+      Swal.fire({
+        title: '',
+        html: `
+      <div>
+        <img src="../../Storage/logout.png" alt="..." class="rounded-md mx-auto" style="max-width: 300px;">
+        <p class="pt-3">Are you sure? You will be logged out.</p> 
+      </div>`,
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, logout',
+        backdrop: false, // Disable the backdrop blur effect
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = 'login.php';
+        }
+      });
+    });
+  </script>
 
 
 

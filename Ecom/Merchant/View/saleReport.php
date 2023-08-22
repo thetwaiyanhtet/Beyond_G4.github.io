@@ -48,6 +48,9 @@ include "../Controller/salereportController.php";
                         <thead class="text-xs text-gray-700 uppercase bg-blue-200 ">
                             <tr>
                                 <th scope="col" class="px-6 py-3 text-start">
+                                    No
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-start">
                                     Product name
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -75,10 +78,12 @@ include "../Controller/salereportController.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($sales as $key => $value) { ?>
-
-
+                            <?php $count = ($currentPage - 1) * $itemsPerPage ?>
+                            <?php foreach ($paginatedData as $key => $value) { ?>
                                 <tr class=" border-b  hover:bg-gray-200 border-gray-500">
+                                    <td class="px-6 py-3 text-start text-gray-900 ">
+                                        <?= ++$count ?>.
+                                    </td>
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-start ">
                                         <?= $value['name'] ?>
                                     </th>
@@ -100,7 +105,7 @@ include "../Controller/salereportController.php";
                                     </td>
                                     <td class="px-16 py-4 ">
                                         <?php $total =  $value['quantity'] * $value['sellprice'] ?>
-                                        <?= $total ?> Ks    
+                                        <?= $total ?> Ks
                                     </td>
                                     <td class="px-6 py-4">
                                         07/24/2023
@@ -109,10 +114,23 @@ include "../Controller/salereportController.php";
                             <?php } ?>
                         </tbody>
                     </table>
-                    <div class="flex justify-between items-center py-2 px-3 pt-5">
-                        <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Previous</button></div>
-                        <div>Page 1 of 10</div>
-                        <div><button class=" hover:underline border-violet-400 border-2 bg-transparent rounded-md px-3 py-2">Next</button></div>
+                    <div class="flex justify-center items-end pt-5">
+                        <nav aria-label="Page navigation example">
+                            <ul class=" flex space-x-3 pagination justify-content-center">
+                                <?php if ($currentPage > 1) { ?>
+                                    <li class="page-item p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link " href="?page=<?= $currentPage - 1 ?>">Previous</a></li>
+                                <?php } else { ?>
+                                    <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50">Previous</a></li>
+                                <?php } ?>
+                                <?php for ($i = 1; $i <= ceil(count($sales) / $itemsPerPage); $i++) { ?>
+                                    <li class="page-item p-2 rounded-md px-3 <?= $i === $currentPage ? 'active font-semibold bg-blue-500 text-white' : '' ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                                <?php } ?>
+                                <?php if ($startIndex + $itemsPerPage < count($sales)) { ?><a class="page-link p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline" href="?page=<?= $currentPage + 1 ?>">Next</a></li>
+                                <?php } else { ?>
+                                    <li class="page-item disabled p-2  border-violet-400 border-2 bg-transparent rounded-md px-3 py-2 hover:underline"><a class="page-link opacity-50 ">Next</a></li>
+                                <?php } ?>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

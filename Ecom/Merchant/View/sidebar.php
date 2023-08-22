@@ -122,6 +122,7 @@ $plandate = $_SESSION["plancheck"];
     // Add an event listener to the logout button
     document.getElementById('logoutButton').addEventListener('click', function() {
       // Display the Swal confirmation dialog with custom content
+      console.log("jk");
       Swal.fire({
         title: '',
         html: `

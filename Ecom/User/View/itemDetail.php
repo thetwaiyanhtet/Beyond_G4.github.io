@@ -52,10 +52,10 @@ ini_set('display_errors', 1);
         </nav>
         <form action="./mainPage.php" method="post">
             <header class=" w-full justify-evenly items-center lg:grid lg:grid-cols-3 relative flex flex-wrap">
-                <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px] w-2/4 shadow-2xl lg:w-[350px] p-5">
+                <div class="border bg-transparent rounded-tl-xl rounded-bl-xl space-y-3 lg:m-16 lg:absolute lg:left-[210px]  shadow-2xl lg:w-[350px] p-5">
                     <?php if (!empty($ItemDetails[0]["p_one"])) { ?>
                         <div class="flex items-center justify-center">
-                            <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-96 h-auto">
+                            <img id="productImage" src="../../Storage//product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class=" w-80 h-auto">
                         </div>
                     <?php } else { ?>
                         <div></div>
@@ -74,7 +74,8 @@ ini_set('display_errors', 1);
                         <input type="hidden" id="selectedImage" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                     </div>
                 </div>
-                <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-20 flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
+                <div class=" border lg:w-[700px] w-5/6 lg:h-[530px] h-[390px] bg-transparent rounded-xl lg:p-20 p-5 lg:ml-[60%]
+                flex-col lg:space-y-5 space-y-3 col-start-2 col-span-2 shadow-2xl z-50">
                     <h2 class="lg:text-4xl text-2xl font-semibold font-philosopher"><?= $ItemDetails[0]["name"] ?></h2>
                     <p class=" lg:text-base text-xs">
                         <?= $ItemDetails[0]["description"] ?>
@@ -201,7 +202,7 @@ ini_set('display_errors', 1);
                 </div>
             </header>
         </form>
-        <main class="flex justify-center">
+        <main class="flex justify-center pt-9">
             <div class=" lg:w-[1050px] lg:h-[800px] p-5 lg:mt-20 mt-2 lg:min-h-screen flex-col justify-center items-center border-2 shadow-xl  rounded-xl bg-transparent">
                 <div class="flex justify-center items-center flex-col space-y-3">
                     <p class=" lg:text-3xl text-lg mt-3">Overall Rating</p>

@@ -22,8 +22,7 @@ $logoandname = $_SESSION["m_logo"];
         <div class=" space-y-5 pt-14 shadow-xl p-10 mt-10 rounded-md">
 
             <div class="items-center flex-col justify-center space-y-4">
-                <div><img src="<?php echo $logoandname[0]['logo'] ?>" class=" mx-auto w-20"></div>
-                
+                <div><img src="../AdminStorge/admin/<?php echo $logoandname[0]['logo'] ?>" class=" mx-auto w-20"></div>
                 <div class="text-center font-quantico italic font-bold text-2xl text-blue-500 font-philosopher"><?= $logoandname[0]['business_name'] ?> </div>
             </div>
             <form action="../Controller/loginController.php" method="post">
