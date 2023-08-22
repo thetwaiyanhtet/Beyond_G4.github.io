@@ -110,8 +110,7 @@ $verifyData = $_SESSION["verifyData"];
                             <p class="dark:text-white">Date of Birth</p>
                             <p class=" col-start-2 dark:text-white"><?= $userData["birthday"] ?></p>
                         </div>
-                    </div>
-                    <button class=" text-black px-5 py-2 lg:text-lg text-base drop-shadow-xl rounded-md bg-white dark:bg-gray-500 font-PlayfairSC dark:text-white">Log out</button>
+                </div>
                 <?php } ?>
             </div>
 

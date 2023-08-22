@@ -1,20 +1,17 @@
 <?php
-include "../Controller/categoryListController.php";
 include "../Controller/newcartController.php";
 include "../Controller/wishlistcart.php";
 include "../Controller/trendingProductController.php";
 include  "../../User/Controller/bannerController.php";
 include  "../../Admin/Controller/readfaqController.php";
 include "../Controller/userProfileController.php";
+include "../Controller/testinguserProfileController.php";
 $faq = $_SESSION["m_faq"];
 include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
-$verifyData = $_SESSION["verifyData"];
-
-// echo "<pre>";
-// print_r($userData['email']);
-// echo "</pre>";
+$verifyData = $_SESSION['verifyData'];
+$customer = $_SESSION['checkEmail']
 ?>
 
 <!DOCTYPE html>
@@ -32,16 +29,13 @@ $verifyData = $_SESSION["verifyData"];
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./resources/css/scroll.css">
     <link rel="stylesheet" href="./resources/css/bannerSlideShow.css">
-    <link rel="stylesheet" href="./resources/css/chat.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="./resources/js/chat.js" defer></script>
-    <script src="./resources/js/searchProduct.js"></script>
-    <script src="./resources/js/userMainPage.js" defer></script>
+    <link rel="stylesheet" href="./resources/css/chat.css">
     <script src="./resources/js/bannerSlideShow.js" defer></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -96,7 +90,6 @@ $verifyData = $_SESSION["verifyData"];
                         $total_quantity = 0;
                         $total_price = 0;
                     ?>
-
                         <table class="tbl-cart m-4" cellpadding="5" cellspacing="1">
                             <tbody>
                                 <tr class="text-left border-b-2 border-b-black dark:border-b-white">
@@ -167,10 +160,6 @@ $verifyData = $_SESSION["verifyData"];
                         <div id="ln_space" class="w-28 h-20"></div>
                     </div>
                 </div> -->
-
-
-
-
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <?php if ($verifyData["verify"] == 0) { ?>
@@ -181,32 +170,34 @@ $verifyData = $_SESSION["verifyData"];
                 </button>
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-
-                    <?php if ($userData) { ?>
-                        <div class="px-4 py-3">
+                   
+                        <?php if ($customer) { ?>
+                            <div class="px-4 py-3">
                             <span class="block text-sm text-gray-900 dark:text-white">
                                 <?php
-                                echo $userData['email'];
+                                
+                                    echo $customer[0]['email'];
+                        
                                 ?>
                             </span>
-                        </div>
-                    <?php }  ?>
-
-                    <?php if (!empty($userData)) { ?>
-                        <ul class="py-2" aria-labelledby="user-menu-button">
-
-                            <li>
-                                <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
-                            </li>
-
-                            <li>
-                                <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
-                            </li>
-                            <li>
-                                <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
-                            </li>
+                            </div>
+                        <?php }  ?>
+                  
+                    <?php if(!empty($customer)) { ?>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                        
+                        <li>
+                            <a href="./profileMenu.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+                        </li>
+                       
+                        <li>
+                            <a href="./Wishlist2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Wishlist</a>
+                        </li>
+                        <li>
+                            <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
+                        </li>
                         <?php } ?>
-                        <?php if ($userData) { ?>
+                        <?php if ($customer) { ?>
                             <li>
                                 <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
                                     <p class="float-left px-4">Log out</p>
@@ -215,9 +206,9 @@ $verifyData = $_SESSION["verifyData"];
                         <?php } else { ?>
                             <li>
                                 <a href="./SignUp.php">
-                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                    <button class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
                                         <p class="float-left px-4">
-                                            Signup
+                                           Signup
                                         </p>
                                     </button>
                                 </a>
@@ -226,14 +217,14 @@ $verifyData = $_SESSION["verifyData"];
                                 <a href="./login.php">
                                     <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
                                         <p class="float-left px-4">
-                                            Login
+                                           Login
                                         </p>
                                     </button>
                                 </a>
                             </li>
                         <?php } ?>
 
-                        </ul>
+                    </ul>
                 </div>
                 <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -257,40 +248,39 @@ $verifyData = $_SESSION["verifyData"];
                 </ul>
             </div>
         </div>
-        <div class="flex w-3/4 m-auto pb-4">
-            <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                </svg></button>
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button relative">
-                    <?php foreach ($categories as $category) { ?>
-                        <li class="relative">
-                            <div class="category inline-flex w-full px-4 py-2 hover:bg-gray-100 text-start" data-category-id="<?= $category["id"] ?>">
-                                <?= $category["c_name"] ?>
-                            </div>
-                            <div class="category-subcategories fixed top-0 w-40 h-[250px] left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
-                                <?php foreach ($subCategories as $subcategory) {
-                                    if ($subcategory["category_id"] === $category["id"]) { ?>
-                                        <div class="py-1 pl-3 hover:bg-gray-100 subCategory" data-subcategory-id="<?= $subcategory["id"] ?>">
-                                            <?= $subcategory["s_c_name"] ?>
-                                        </div>
-                                <?php }
-                                } ?>
-                            </div>
+        <form action="" method="post">
+            <div class="flex w-3/4 m-auto">
+                <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+                <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                    </svg></button>
+                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mockups</button>
                         </li>
-                    <?php } ?>
-                </ul>
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Templates</button>
+                        </li>
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Design</button>
+                        </li>
+                        <li>
+                            <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative w-full">
+                    <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search Mockups, Logos, Design Templates..." required>
+                    <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium w-20 h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                        <span class="sr-only">Search</span>
+                    </button>
+                </div>
             </div>
-            <div class="relative w-full">
-                <input type="search" id="search" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search Here..." required>
-                <button id="searchButton" type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium w-20 h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                    </svg>
-                    <span class="sr-only">Search</span>
-                </button>
-            </div>
-        </div>
+        </form>
     </nav>
 
     <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -308,7 +298,7 @@ $verifyData = $_SESSION["verifyData"];
                     </svg> -->
                     <img src="./resources/img/sad-sponge.gif" alt="" class="mx-auto mb-4 w-3/4 h-52">
                     <h3 class="mb-5 text-lg font-normal text-gray-800 dark:text-gray-500">Are you sure you want to Log Out?</h3>
-                    <form action="../Controller/logoutController.php?email=<?php echo $userData[0]['email'] ?>" method="post">
+                    <form action="../Controller/logoutController.php?email=<?php echo $customer[0]['email'] ?>" method="post">
                         <button data-modal-hide="popup-modal" type="submit" name="logout" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                             Log out
                         </button>
@@ -326,10 +316,10 @@ $verifyData = $_SESSION["verifyData"];
 
     </div>
 
-    <section class="sec h-auto flex justify-center flex-wrap p-5 mt-10" id="searchResult">
+    <section class="sec h-screen">
         <section class="w-[90%] m-auto">
 
-            <div class="banner-container mt-28">
+            <div class="banner-container mt-20">
                 <!-- Banner_1 section -->
                 <img src="<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
@@ -409,9 +399,9 @@ $verifyData = $_SESSION["verifyData"];
             <!--End of Trending product section  -->
             <!-- Banner 2 -->
             <div class="banner-container">
-                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_five_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_six_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_two_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
             <!--End of Banner 2 -->
@@ -468,9 +458,9 @@ $verifyData = $_SESSION["verifyData"];
             </a>
 
             <div class="banner-container">
-                <img src="<?= $banner[0]['banner_seven_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_eight_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_nine_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_three_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
             <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Shops</span></h1>
@@ -548,9 +538,9 @@ $verifyData = $_SESSION["verifyData"];
         </section>
         <section class="w-[90%] m-auto z-0">
             <div class="banner-container">
-                <img src="<?= $banner[0]['banner_ten_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_eleven_img'] ?>" alt="" class="banner-image">
-                <img src="<?= $banner[0]['banner_twelve_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
+                <img src="<?= $banner[0]['banner_four_img'] ?>" alt="" class="banner-image">
                 <!-- More images for this banner section -->
             </div>
 
@@ -640,171 +630,171 @@ $verifyData = $_SESSION["verifyData"];
 
                     </div>
         </section>
+        <section id="footer">
+            <div class="relative bg-purple-300 dark:bg-color-primary-dark dark:text-white border-t border-t-transparent dark:border-t-slate-200">
+                <div class="container pl-12 py-5 ">
+                    <div class="grid gap-10 md:grid-cols-3 pb-10">
+                        <div class="space-y-6">
+                            <img src="./resources/img/logo.png" class="h-20" alt="beyond Logo" />
+                            <h4 class="font-bold text-lg">About Beyond</h4>
+                            <p class="leading-relaxed"> Discover a curated collection of unique products that transcend the ordinary. Join us as we redefine the art of shopping, delivering seamless journeys that inspire and delight. Unleash the extraordinary with Beyond.</p>
+                            <div class="flex gap-5 items-center">
+                                <p>Follow Us</p>
+                                <i class="fa-brands fa-facebook-f cursor-pointer hover:text-purple-700"></i>
+                                <i class="fa-brands fa-twitter cursor-pointer hover:text-purple-700"></i>
+                                <i class="fa-brands fa-youtube cursor-pointer hover:text-purple-700"></i>
+                                <i class="fa-brands fa-instagram cursor-pointer hover:text-purple-700"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between md:justify-around">
+                            <div class="space-y-6">
+                                <h4 class="font-bold text-lg">Quick Links</h4>
+                                <ul class="space-y-3">
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./mainPage.php">Home</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./aboutUs.php">About us</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./contactUs.php">Contact Us</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><a href="./profileMenu.php">Profile</a></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><button data-modal-target="defaultModal1" data-modal-toggle="defaultModal1" class="block" type="button">
+                                            Return Policy
+                                        </button></li>
+                                    <li class="underline hover:no-underline hover:text-purple-700"><button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block" type="button">
+                                            Terms and Conditions
+                                        </button></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="space-y-6">
+                            <h4 class="font-bold text-lg">Newsletter</h4>
+                            <p class="leading-relaxed">Subscribe With Email And Loads Of News Will Be Sent To You</p>
+                            <div class="flex items-center">
+                                <input type="text" class="w-3/4 text-black bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
+
+                                <button type="submit" class="px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90 border border-solid bg-slate-900">
+                                    <i class="fa-solid fa-chevron-right text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center pt-10 border-t border-color-gray">
+                        <p>2023 &copy; Beyond. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-2xl max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                Terms and Conditions
+                            </h3>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-6 space-y-6">
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
+                                <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
+                                <b>1. User Accounts</b> <br>
+                                a. Registration: To access certain features of the Website, you may be required to create a user account. You agree to provide accurate and complete information during the registration process. <br>
+                                b. Account Security: You are responsible for maintaining the confidentiality of your account login credentials and for any activities that occur under your account. Notify us immediately of any unauthorized use or security breach. <br><br>
+
+                                <b>2. Use of the Website</b> <br>
+                                a. General Use: You may use the Website for personal and non-commercial purposes only. You agree not to use the Website for any illegal, harmful, or abusive activities that may disrupt or interfere with the proper functioning of the Website or infringe on the rights of others. <br>
+                                b. Content: Any content you upload or submit to the Website must not violate any applicable laws or infringe on the rights of any third parties.<br><br>
+
+                                <b>3. Intellectual Property</b>
+                                a. Ownership: The Website and its content, including text, graphics, images, logos, and software, are the property of Beyond or its licensors and are protected by intellectual property laws. <br>
+                                b. Limited License: Beyond grants you a limited, non-exclusive, non-transferable license to access and use the Website for its intended purposes. <br><br>
+
+                                <b>4. Privacy</b>
+                                Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and disclose your personal information. <br><br>
+
+                                <b>5. Third-Party Links</b>
+                                The Website may contain links to third-party websites or services. Beyond is not responsible for the content or actions of any third-party websites or services. These links are provided for convenience and do not imply endorsement or affiliation. <br><br>
+
+                                <b>6. Limitation of Liability</b>
+                                Beyond shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the Website. <br><br>
+
+                                <b>7. Modifications to the Terms</b>
+                                We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Website after such changes constitutes your acceptance of the revised Terms. <br><br>
+
+                                <b>8. Termination</b>
+                                Beyond may terminate or suspend your access to the Website at any time and for any reason without prior notice. <br><br>
+
+
+                                <b>9. Contact Us</b>
+                                If you have any questions or concerns about these Terms or the Website, please contact us at beyondecommerce634@gmail.com. <br><br>
+
+                                <b>By using the Beyond website, you agree to abide by these Terms and Conditions. Please read them carefully before proceeding with your use of the Website.</b>
+                            </p>
+
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                            <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="defaultModal1" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-2xl max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                Return Policy
+                            </h3>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal1">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-6 space-y-6">
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
+                                <img src="./resources/img/return.png" alt="" class="m-auto w-auto h-44 pb-2">
+                                <b>At Beyond, we strive to provide you with the best shopping experience possible. If you're not completely satisfied with your purchase, we're here to help. Our return policy is designed to be fair and transparent, ensuring your peace of mind.</b> <br> <br>
+
+                                <b>30-Day Return Window:</b> You have up to 30 days from the date of delivery to return eligible items. <br>
+
+                                <b>Eligibility Criteria:</b> To be eligible for a return, the item must be in its original condition and packaging. It should be unused, unworn, and free from any signs of damage or alteration. <br>
+
+                                <b>Easy Returns Process:</b> Initiating a return is simple. Just log in to your account, go to the order history, and select the items you want to return. Our system will guide you through the process step by step. <br>
+
+                                <b>Non-Returnable Items:</b> Some items, such as personalized or intimate goods, are non-returnable for hygiene and safety reasons. <br>
+
+                                <b>Exchanges:</b> Currently, we don't offer direct exchanges. You can return the unwanted item and place a new order for the desired item. <br>
+
+                                <b>Processing Time:</b> Once we receive your returned item, we'll inspect it and process your refund within merchants business days. <br>
+
+                                <b>Contact Us:</b> If you have any questions or concerns about our return policy, feel free to reach out to our customer support team. We're here to assist you every step of the way. <br>
+
+                                <b>Please note that this policy is subject to change, and we recommend reviewing it periodically. Your satisfaction is our priority, and we want your shopping experience with Beyond to be exceptional.</b>
+                            </p>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                            <button data-modal-hide="defaultModal1" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <button id="to-top-button" onclick="goToTop()" title="Go To Top" class="hidden fixed z-50 bottom-28 right-10 border-0 w-14 h-14 rounded-full drop-shadow-md shadow-inner bg-purple-500 text-white text-3xl font-bold "><ion-icon name="arrow-up-outline" class="scale-110"></ion-icon></button>
 
-    </section>
-    <section id="footer">
-        <div class="relative bg-purple-300 dark:bg-color-primary-dark dark:text-white border-t border-t-transparent dark:border-t-slate-200">
-            <div class="container pl-12 py-5 ">
-                <div class="grid gap-10 md:grid-cols-3 pb-10">
-                    <div class="space-y-6">
-                        <img src="./resources/img/logo.png" class="h-20" alt="beyond Logo" />
-                        <h4 class="font-bold text-lg">About Beyond</h4>
-                        <p class="leading-relaxed"> Discover a curated collection of unique products that transcend the ordinary. Join us as we redefine the art of shopping, delivering seamless journeys that inspire and delight. Unleash the extraordinary with Beyond.</p>
-                        <div class="flex gap-5 items-center">
-                            <p>Follow Us</p>
-                            <i class="fa-brands fa-facebook-f cursor-pointer hover:text-purple-700"></i>
-                            <i class="fa-brands fa-twitter cursor-pointer hover:text-purple-700"></i>
-                            <i class="fa-brands fa-youtube cursor-pointer hover:text-purple-700"></i>
-                            <i class="fa-brands fa-instagram cursor-pointer hover:text-purple-700"></i>
-                        </div>
-                    </div>
-                    <div class="flex justify-between md:justify-around">
-                        <div class="space-y-6">
-                            <h4 class="font-bold text-lg">Quick Links</h4>
-                            <ul class="space-y-3">
-                                <li class="underline hover:no-underline hover:text-purple-700"><a href="./mainPage.php">Home</a></li>
-                                <li class="underline hover:no-underline hover:text-purple-700"><a href="./aboutUs.php">About us</a></li>
-                                <li class="underline hover:no-underline hover:text-purple-700"><a href="./contactUs.php">Contact Us</a></li>
-                                <li class="underline hover:no-underline hover:text-purple-700"><a href="./profileMenu.php">Profile</a></li>
-                                <li class="underline hover:no-underline hover:text-purple-700"><button data-modal-target="defaultModal1" data-modal-toggle="defaultModal1" class="block" type="button">
-                                        Return Policy
-                                    </button></li>
-                                <li class="underline hover:no-underline hover:text-purple-700"><button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block" type="button">
-                                        Terms and Conditions
-                                    </button></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="space-y-6">
-                        <h4 class="font-bold text-lg">Newsletter</h4>
-                        <p class="leading-relaxed">Subscribe With Email And Loads Of News Will Be Sent To You</p>
-                        <div class="flex items-center">
-                            <input type="text" class="w-3/4 text-black bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Enter Your Email">
-
-                            <button type="submit" class="px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90 border border-solid bg-slate-900">
-                                <i class="fa-solid fa-chevron-right text-white"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center pt-10 border-t border-color-gray">
-                    <p>2023 &copy; Beyond. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-        <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-            <div class="relative w-full max-w-2xl max-h-full">
-                <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <!-- Modal header -->
-                    <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                            Terms and Conditions
-                        </h3>
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                            </svg>
-                            <span class="sr-only">Close modal</span>
-                        </button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="p-6 space-y-6">
-                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
-                            <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
-                            <b>1. User Accounts</b> <br>
-                            a. Registration: To access certain features of the Website, you may be required to create a user account. You agree to provide accurate and complete information during the registration process. <br>
-                            b. Account Security: You are responsible for maintaining the confidentiality of your account login credentials and for any activities that occur under your account. Notify us immediately of any unauthorized use or security breach. <br><br>
-
-                            <b>2. Use of the Website</b> <br>
-                            a. General Use: You may use the Website for personal and non-commercial purposes only. You agree not to use the Website for any illegal, harmful, or abusive activities that may disrupt or interfere with the proper functioning of the Website or infringe on the rights of others. <br>
-                            b. Content: Any content you upload or submit to the Website must not violate any applicable laws or infringe on the rights of any third parties.<br><br>
-
-                            <b>3. Intellectual Property</b>
-                            a. Ownership: The Website and its content, including text, graphics, images, logos, and software, are the property of Beyond or its licensors and are protected by intellectual property laws. <br>
-                            b. Limited License: Beyond grants you a limited, non-exclusive, non-transferable license to access and use the Website for its intended purposes. <br><br>
-
-                            <b>4. Privacy</b>
-                            Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and disclose your personal information. <br><br>
-
-                            <b>5. Third-Party Links</b>
-                            The Website may contain links to third-party websites or services. Beyond is not responsible for the content or actions of any third-party websites or services. These links are provided for convenience and do not imply endorsement or affiliation. <br><br>
-
-                            <b>6. Limitation of Liability</b>
-                            Beyond shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the Website. <br><br>
-
-                            <b>7. Modifications to the Terms</b>
-                            We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Website after such changes constitutes your acceptance of the revised Terms. <br><br>
-
-                            <b>8. Termination</b>
-                            Beyond may terminate or suspend your access to the Website at any time and for any reason without prior notice. <br><br>
-
-
-                            <b>9. Contact Us</b>
-                            If you have any questions or concerns about these Terms or the Website, please contact us at beyondecommerce634@gmail.com. <br><br>
-
-                            <b>By using the Beyond website, you agree to abide by these Terms and Conditions. Please read them carefully before proceeding with your use of the Website.</b>
-                        </p>
-
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                        <button data-modal-hide="defaultModal" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="defaultModal1" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-            <div class="relative w-full max-w-2xl max-h-full">
-                <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <!-- Modal header -->
-                    <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                            Return Policy
-                        </h3>
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal1">
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                            </svg>
-                            <span class="sr-only">Close modal</span>
-                        </button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="p-6 space-y-6">
-                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
-                            <img src="./resources/img/return.png" alt="" class="m-auto w-auto h-44 pb-2">
-                            <b>At Beyond, we strive to provide you with the best shopping experience possible. If you're not completely satisfied with your purchase, we're here to help. Our return policy is designed to be fair and transparent, ensuring your peace of mind.</b> <br> <br>
-
-                            <b>30-Day Return Window:</b> You have up to 30 days from the date of delivery to return eligible items. <br>
-
-                            <b>Eligibility Criteria:</b> To be eligible for a return, the item must be in its original condition and packaging. It should be unused, unworn, and free from any signs of damage or alteration. <br>
-
-                            <b>Easy Returns Process:</b> Initiating a return is simple. Just log in to your account, go to the order history, and select the items you want to return. Our system will guide you through the process step by step. <br>
-
-                            <b>Non-Returnable Items:</b> Some items, such as personalized or intimate goods, are non-returnable for hygiene and safety reasons. <br>
-
-                            <b>Exchanges:</b> Currently, we don't offer direct exchanges. You can return the unwanted item and place a new order for the desired item. <br>
-
-                            <b>Processing Time:</b> Once we receive your returned item, we'll inspect it and process your refund within merchants business days. <br>
-
-                            <b>Contact Us:</b> If you have any questions or concerns about our return policy, feel free to reach out to our customer support team. We're here to assist you every step of the way. <br>
-
-                            <b>Please note that this policy is subject to change, and we recommend reviewing it periodically. Your satisfaction is our priority, and we want your shopping experience with Beyond to be exceptional.</b>
-                        </p>
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                        <button data-modal-hide="defaultModal1" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-md px-5 py-2.5  text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">Agree</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script> -->
     <script>
@@ -832,6 +822,8 @@ $verifyData = $_SESSION["verifyData"];
     <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
+
+
 
 
 </html>
