@@ -32,15 +32,15 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     );
 
     $purchasedCountSql = $pdo->prepare(
-        "SELECT COUNT(*) AS purchased_count 
+        "SELECT SUM(m_order_details.quantity) AS purchased_count
         FROM m_order_details 
-        JOIN m_order
-        ON m_order.id = m_order_details.order_id 
-        WHERE customer_id = :id;"
+        JOIN m_order ON m_order.id = m_order_details.order_id 
+        WHERE m_order.customer_id = :id;"
     );
 
+
     $orderSql = $pdo->prepare(
-        "SELECT m_product.name,m_merchant.store_name,m_order.total_amt,m_order.order_date,m_order_details.delivery_status
+        "SELECT m_product.name,m_merchant.store_name,m_order.total_amt,m_order.order_date,m_order_details.delivery_status,m_order.generate_id
         FROM m_order
         JOIN m_customer 
         ON m_customer.id = m_order.customer_id

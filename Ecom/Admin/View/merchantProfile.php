@@ -116,8 +116,6 @@
                          </div>
                      <?php } ?>
                  </div>
-
-
              </section>
 
          </div>

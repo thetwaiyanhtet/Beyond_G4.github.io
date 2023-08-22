@@ -57,7 +57,7 @@ include "../Controller/orderDetailController.php";
                 </div>
             </div>
             <!--Customer Details-->
-            <div class=" w-64 h-56 border border-solid shadow-lg rounded-lg">
+            <div class=" w-80 h-56 border border-solid shadow-lg rounded-lg">
                 <p class="m-2">Customer Details</p>
                 <hr>
                 <div class="flex space-x-2 m-4">
@@ -88,29 +88,12 @@ include "../Controller/orderDetailController.php";
                     <img src="./resources/img/home.png" alt="cart" class="h-7">
                     <p class="text-sm">
                         <?php
-                        echo $orderDetail[0]['r_name'] . $orderDetail[0]['t_name'] . $orderDetail[0]['street'];
+                        echo $orderDetail[0]['r_name'] .", ". $orderDetail[0]['t_name'] .", ". $orderDetail[0]['street'];
                         ?>
                     </p>
                 </div>
             </div>
         </div>
-
-        <!-- <table class="mt-5 h-32 shadow-lg w-[60%] mx-auto">
-            <thead>
-                <tr>
-                    <td class="border border-slate-40 p-2">Payment Address</td>
-                    <td class="border border-slate-40 p-2">Delivery Address</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="border border-slate-40  p-2">
-                        
-                    <td class="border border-slate-40  p-2">
-                        </td> 
-                </tr>
-            </tbody>
-        </table> -->
 
         <!---Product list-->
         <table class="w-[90%] text-sm text-left text-white m-5">
@@ -139,20 +122,20 @@ include "../Controller/orderDetailController.php";
                             echo $order['name'];
                             ?>
                         </th>
-                        <td class="px-6 py-4">
+                        <td class="pl-10 py-4">
                             <?php
-                            echo $order['quantity'];
+                            echo "x ".$order['quantity'];
                             ?>
                         </td>
                         <td class="px-6 py-4">
                             <?php
-                            echo '$' . $order['sellprice']
+                            echo  $order['sellprice'].' Ks'  
                             ?>
                         </td>
                         <td class="px-6 py-4">
                             <?php
                             $total = $order['quantity'] * $order['sellprice'];
-                            echo '$' . $total;
+                            echo $total . ' Ks'  
                             ?>
                         </td>
                     </tr>
@@ -169,7 +152,7 @@ include "../Controller/orderDetailController.php";
                     </td>
                     <td class="px-6 py-4">
                         <?php
-                        echo '$' . $order['total_amt']
+                        echo  $order['total_amt'] . ' Ks'  
                         ?>
                     </td>
                 </tr>
@@ -183,9 +166,9 @@ include "../Controller/orderDetailController.php";
                     <td class="px-6 py-4">
                         Delivery Rate
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="pl-8 py-4">
                         <?php
-                        echo '$' . $order['delivery_fees'];
+                        echo $order['delivery_fees'] . ' Ks'  
                         ?>
                     </td>
                 </tr>
@@ -202,7 +185,7 @@ include "../Controller/orderDetailController.php";
                     <td class="px-6 py-4 font-bold">
                         <?php
                         $total = $order['delivery_fees'] + $order['total_amt'];
-                        echo '$' . $total;
+                        echo $total . ' Ks'  
                         ?>
                     </td>
                 </tr>

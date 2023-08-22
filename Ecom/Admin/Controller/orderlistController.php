@@ -4,7 +4,7 @@ include "../Model/model.php";
 
 
 $sql = $pdo -> prepare(
-    "SELECT m_order.generate_id, m_order.id, m_product.name,m_merchant.m_name,m_customer.username,m_customer.street,m_regions.r_name,m_townships.t_name,
+    "SELECT m_order.generate_id, m_order.id, m_product.name,m_merchant.store_name,m_customer.username,m_customer.street,m_regions.r_name,m_townships.t_name,
     m_order.total_amt,m_order.order_date
     From m_order 
     JOIN m_order_details
