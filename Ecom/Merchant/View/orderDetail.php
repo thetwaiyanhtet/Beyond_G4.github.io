@@ -110,7 +110,7 @@ include "../Controller/orderDetailController.php";
             <hr>
             <div class="flex justify-between py-4">
                 <p class="ml-5">Total Amount</p>
-                <p class="m-1 mr-11 font-semibold"> = <?= $orderDetail["total_amt"]?> Ks</p>
+                <p class="m-1 mr-11 font-semibold"> = <?= $orderDetail["total_amt"] ?> Ks</p>
             </div>
         </div>
         <form action="../Controller/invoiceMailController.php?id=<?= $orderDetails[0]['id'] ?>" method="post">
@@ -119,10 +119,11 @@ include "../Controller/orderDetailController.php";
                     <input type="checkbox" name="invoice" class=" w-5 h-5">
                     <label for="invoice">Invoice</label>
                 </div>
+                <button class=" w-24 rounded-md p-2 ml-6 border border-gray-500 bg-transparent mr-3">Cancel</button>
+                <button type="submit" name="delivery" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
+            </div>
         </form>
-        <button class=" w-24 rounded-md p-2 ml-6 border border-gray-500 bg-transparent mr-3">Cancel</button>
-        <a href="../Controller/updateOrderController.php"><button type="submit" class="w-32 rounded-md bg-blue-700 p-2 text-white">Deliver</button></a>
-        </div>
+
     </main>
 </body>
 

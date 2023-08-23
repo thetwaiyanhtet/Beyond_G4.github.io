@@ -7,13 +7,15 @@ include "../Controller/trendingProductController.php";
 include  "../../User/Controller/bannerController.php";
 include  "../../Admin/Controller/readfaqController.php";
 include "../Controller/userProfileController.php";
-include "../Controller/testinguserProfileController.php";
 $faq = $_SESSION["m_faq"];
 include "../Controller/bannerController.php";
 $banner = $_SESSION["banner"];
 $userData = $_SESSION["user_data"];
 $verifyData = $_SESSION['verifyData'];
-$customer = $_SESSION['checkEmail']
+// echo "<pre>";
+// print_r($userData);
+// echo "</pre>"
+
 ?>
 
 <!DOCTYPE html>
@@ -112,19 +114,23 @@ $customer = $_SESSION['checkEmail']
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
 
-                    <?php if ($customer) { ?>
+                    <?php if ($userData) { ?>
                         <div class="px-4 py-3">
                             <span class="block text-sm text-gray-900 dark:text-white">
                                 <?php
-
-                                echo $customer[0]['email'];
-
+                                echo $userData['username'];
+                                ?>
+                            </span>
+                            <span class="block text-sm text-gray-900 dark:text-white">
+                                <?php
+                                echo $userData['email'];
                                 ?>
                             </span>
                         </div>
+                        
                     <?php }  ?>
 
-                    <?php if (!empty($customer)) { ?>
+                    <?php if (!empty($userData)) { ?>
                         <ul class="py-2" aria-labelledby="user-menu-button">
 
                             <li>
@@ -138,7 +144,7 @@ $customer = $_SESSION['checkEmail']
                                 <a href="./orderNotification.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Notification</a>
                             </li>
                         <?php } ?>
-                        <?php if ($customer) { ?>
+                        <?php if ($userData) { ?>
                             <li>
                                 <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
                                     <p class="float-left px-4">Log out</p>
@@ -156,7 +162,7 @@ $customer = $_SESSION['checkEmail']
                             </li>
                             <li>
                                 <a href="./login.php">
-                                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
+                                    <button  class="block w-full py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" type="button">
                                         <p class="float-left px-4">
                                             Login
                                         </p>
@@ -206,7 +212,7 @@ $customer = $_SESSION['checkEmail']
                     </svg> -->
                     <img src="./resources/img/sad-sponge.gif" alt="" class="mx-auto mb-4 w-3/4 h-52">
                     <h3 class="mb-5 text-lg font-normal text-gray-800 dark:text-gray-500">Are you sure you want to Log Out?</h3>
-                    <form action="../Controller/logoutController.php?email=<?php echo $customer[0]['email'] ?>" method="post">
+                    <form action="../Controller/logoutController.php?email=<?php echo $userData['email'] ?>" method="post">
                         <button data-modal-hide="popup-modal" type="submit" name="logout" class="text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                             Log out
                         </button>

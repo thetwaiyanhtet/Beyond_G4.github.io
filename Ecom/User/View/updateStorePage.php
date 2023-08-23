@@ -93,8 +93,6 @@
                     </div>
                 </li>
             </ul>
-
-
         </section>
 
         <div class="flex overflow-y-scroll pb-6 h-96">
