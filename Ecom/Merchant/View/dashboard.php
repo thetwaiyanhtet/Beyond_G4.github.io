@@ -250,7 +250,7 @@ $trending_json = json_encode($trending);
                         </div>
                         <hr>
                         <div class=" flex justify-center">
-                            <div class=" flex-col justify-between pb-3 p-3 space-y-2">
+                            <div class=" flex-col justify-between pb-3 p-1 space-y-2">
                                 <?php foreach ($topCustomers as $topCus) { ?>
                                     
                                     <div class=" flex space-x-5 pl-1">

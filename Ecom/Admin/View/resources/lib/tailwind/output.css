@@ -604,6 +604,14 @@ video {
   left: 5%;
 }
 
+.left-\[7\%\] {
+  left: 7%;
+}
+
+.top-\[18\%\] {
+  top: 18%;
+}
+
 .top-\[19\%\] {
   top: 19%;
 }
@@ -784,6 +792,10 @@ video {
   margin-top: 2.75rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -810,10 +822,6 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .block {
@@ -948,12 +956,28 @@ video {
   height: 100vh;
 }
 
-.h-24 {
-  height: 6rem;
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[250px\] {
+  height: 250px;
 }
 
 .h-\[200px\] {
   height: 200px;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-2\/4 {
+  height: 50%;
+}
+
+.h-36 {
+  height: 9rem;
 }
 
 .min-h-screen {
@@ -1136,8 +1160,24 @@ video {
   width: 6rem;
 }
 
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[170px\] {
+  width: 170px;
+}
+
 .w-\[180px\] {
   width: 180px;
+}
+
+.w-0 {
+  width: 0px;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .min-w-\[160px\] {
@@ -1196,6 +1236,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-start {
@@ -1308,10 +1352,6 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
 }
 
 .text-ellipsis {
@@ -1702,6 +1742,21 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1828,6 +1883,10 @@ video {
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.pl-9 {
+  padding-left: 2.25rem;
 }
 
 .text-left {

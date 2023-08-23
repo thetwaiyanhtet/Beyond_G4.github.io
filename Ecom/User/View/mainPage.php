@@ -139,7 +139,7 @@ include "./navigation.php";
                                                     </div>
 
                                                     <div class=" dark:text-white ">
-                                                        <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full "><?php echo $tranding["name"]; ?></h2>
+                                                        <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full overflow-hidden "><?php echo $tranding["name"]; ?></h2>
                                                         <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
                                                         <!-- <del class="text-red-700 text-md">$999</del> -->
                                                         <p name="price" class="text-md font-bold mt-2 mb-1 ml-5 block "><?php echo $tranding["sellprice"] . " Ks"; ?></p>
@@ -208,9 +208,9 @@ include "./navigation.php";
                                             </div>
                                         </div>
                                         <div class="relative dark:text-white">
-                                            <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full"><?= $productDetail["name"] ?></h2>
+                                            <h2 class="mt-3 mx-5 text-sm md:text-md capitalize font-bold w-full overflow-hidden h-4"><?= $productDetail["name"] ?></h2>
                                             <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                            <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?= $productDetail["description"] ?></p>
+                                            <p class="text-xs mt-2 mx-5 block overflow-hidden h-4"><?= $productDetail["description"] ?></p>
                                             <p class="text-md font-bold mt-2 mb-1 ml-5 block "><?= $productDetail["sellprice"] ?> Ks</p>
                                             <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                                             <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
@@ -218,7 +218,7 @@ include "./navigation.php";
 
                                 </div>
                                 </form>
-                        </span>
+                            </span>
                         <?php } ?>
                     </div>
 
