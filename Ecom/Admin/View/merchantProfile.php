@@ -25,7 +25,11 @@
              <section class=" border border-gray-400 rounded-lg shadow-lg p-3 h-44 relative">
                  <div class=" bg-violet-300 rounded-md w-auto border h-20"></div>
                  <div class=" flex items-center space-x-5 absolute top-[19%] left-[5%]">
+                    <?php if(isset($merchantDetail["logo"])){ ?>
                      <img src="../../Storage/profile/<?=$merchantDetail["logo"]?>" alt="..." width="150px" class=" rounded-md">
+                     <?php }else{ ?>
+                        <img src="../../Storage/profile/403022_business man_male_user_avatar_profile_icon.png" alt="..." width="100px" class=" rounded-md">
+                        <?php }?>
                      <div class=" pt-14">
                          <p class=" font-semibold text-lg"><?= $merchantDetail["store_name"] ?></p>
                          <p><?= $merchantDetail["address"] ?></p>

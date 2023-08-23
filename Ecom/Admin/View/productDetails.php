@@ -75,6 +75,7 @@ include "./adminsidebar.php";
                                 <div class="w-7 h-7 rounded-full" style="background-color: <?= $productDetail["color_1"]; ?>"></div>
                                 <div class="w-7 h-7 rounded-full" style="background-color: <?= $productDetail["color_2"]; ?>"></div>
                                 <div class="w-7 h-7 rounded-full" style="background-color: <?= $productDetail["color_3"]; ?>"></div>
+                                <div class="w-7 h-7 rounded-full" style="background-color: <?= $productDetail["color_4"]; ?>"></div>
                             </div>
                         </div>
                         <div class="flex">
