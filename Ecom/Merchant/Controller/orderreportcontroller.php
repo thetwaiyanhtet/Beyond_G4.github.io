@@ -1,5 +1,7 @@
 <?php
-
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start(); 
+}
 include "../Model/model.php";
 // session_start();
 $merchantEmail = $_SESSION["merchant_ID"];
