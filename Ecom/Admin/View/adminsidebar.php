@@ -1,7 +1,7 @@
 <?php
 
 include "../Controller/updatepasswordController.php";
-$admin = $_SESSION["adminInfo"];
+// $admin = $_SESSION["adminInfo"];
 include "../Controller/logoandbusinessController.php";
  $logoandname = $_SESSION["m_logo"];
  include "../View/admininfocontroller.php";
