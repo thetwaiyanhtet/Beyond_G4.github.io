@@ -41,7 +41,7 @@ $trending_json = json_encode($trending);
             <p class=" pt-3 pl-5 font-semibold text-lg">Dashboard</p>
             <div class=" flex justify-center px-5 py-2 space-x-4">
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950">
-                    <h1 class=" text-lg font-bold font-philosopher pb-5">Sales Order Overview</h1>
+                    <h1 class=" text-lg font-bold font-philosopher pb-5">Sales Overview</h1>
                     <div class=" flex justify-evenly pb-3">
                         <div class=" flex justify-center ">
                             <div class=" flex-col justify-center space-y-3">
@@ -367,7 +367,7 @@ $trending_json = json_encode($trending);
                     <div class=" flex justify-around pt-4 pb-4">
                         <?php foreach ($trending as $trendingProduct) { ?>
                             <div class=" flex-col space-y-3">
-                                <div class=" flex flex-col space-x-2 text-sm flex-wrap text-center">
+                                <div class=" flex flex-col space-x-2 text-xs flex-wrap text-center">
                                     <p><?= $trendingProduct["name"] ?></p>
                                     <p><?= $trendingProduct["product_count"] ?></p>
                                 </div>
