@@ -55,9 +55,9 @@ $(document).ready(function () {
     $("#search").on("keyup input", function () {
       searchProducts();
     });
-  $("#searchButton").on("click", function () {
-    searchProducts();
-  });
+  // $("#searchButton").on("click", function () {
+  //   searchProducts();
+  // });
 
   // ---------------search by category--------------
   // Function to fetch and display products by category
