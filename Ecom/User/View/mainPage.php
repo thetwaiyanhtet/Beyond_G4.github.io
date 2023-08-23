@@ -1,19 +1,5 @@
 <?php
 include "./navigation.php";
-// include "../Controller/categoryListController.php";
-// include "../Controller/newcartController.php";
-// include "../Controller/wishlistcart.php";
-// include "../Controller/trendingProductController.php";
-// include  "../../User/Controller/bannerController.php";
-// include  "../../Admin/Controller/readfaqController.php";
-// include "../Controller/userProfileController.php";
-// include "../Controller/testinguserProfileController.php";
-// $faq = $_SESSION["m_faq"];
-// include "../Controller/bannerController.php";
-// $banner = $_SESSION["banner"];
-// $userData = $_SESSION["user_data"];
-// $verifyData = $_SESSION['verifyData'];
-// $customer = $_SESSION['checkEmail']
 ?>
 
 <!DOCTYPE html>
