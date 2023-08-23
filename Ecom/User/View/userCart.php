@@ -69,7 +69,15 @@ if (!empty($_SESSION['carttle'])) {
     $delifees->bindValue(":email", $user);
     $delifees->execute();
     $_SESSION['delifees'] = $delifees->fetchAll(PDO::FETCH_ASSOC);
-}
+    if (empty($_SESSION['delifees'])) {
+        echo "      <script>
+        alert('You should enter the address first.');
+        window.location.href = './userProfileEditUpd.php'
+      </script>"; 
+
+    }  
+
+  }
 ?>
 
 <!DOCTYPE html>
@@ -139,7 +147,6 @@ if (!empty($_SESSION['carttle'])) {
                     </div>
 
                     <section class="">
-
                         <div class=" h-auto bg-purple-200 dark:bg-color-primary-dark dark:text-white rounded-lg flex flex-wrap w-[100%]">
 
                             <div class=" w-[100%] md:w-3/4">
@@ -149,6 +156,7 @@ if (!empty($_SESSION['carttle'])) {
                                     <p class="font-semibold text-[12px] md:text-[16px]">Quantity</p>
                                     <p class="font-semibold text-[12px] md:text-[16px]">Price</p>
                                     <p class="font-semibold text-[12px] md:text-[16px]">Total</p>
+                                    <p class="font-semibold text-[12px] md:text-[16px]"></p>
                                 </div>
 
                                 <?php $total_price = 0; {
@@ -207,19 +215,19 @@ if (!empty($_SESSION['carttle'])) {
                                     <div class="">
                                         <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-full h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
                                         <div class="flex justify-around py-[4%]">
-                                            <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
-                                            <input readonly class="ml-[44px] font-bold text-xs md:text-sm bg-transparent " id="gtotal" name="stotal"></input>
+                                            <p class=" font-bold float-left text-xs md:text-sm">Sub Total</p>
+                                            <input readonly class=" float-right w-28 font-bold text-xs md:text-sm bg-transparent " id="gtotal" name="stotal"></input>
                                             <input type="hidden" name="quantiarr" id="quantiarray">
                                         </div>
                                         <div class="flex justify-around ">
-                                            <p class="ml-[44px]  font-bold text-xs md:text-sm">Delivery fee</p>
-                                            <input readonly class="ml-[44px] font-bold text-xs md:text-sm bg-transparent " value="<?= $_SESSION['delifees'][0]['delivery_fees']  ?> Ks" id="delifees" name="deli">
+                                            <p class="  font-bold float-left text-xs md:text-sm">Delivery fee</p>
+                                            <input readonly class=" float-right w-20 font-bold border-transparent text-xs md:text-sm bg-transparent " value="<?= $_SESSION['delifees'][0]['delivery_fees']  ?> Ks" id="delifees" name="deli">
                                         </div>
                                     </div>
 
                                     <div class="flex h-[40px] items-center md:justify-around mt-2  border-t-2 space-x-12 md:space-x-0  font-bold">
-                                        <p class="text-xs md:text-sm ml-9 md:ml-0">Total</p>
-                                        <input readonly class="text-xs md:text-sm bg-transparent" id="delitotal" name="delitotal">
+                                        <p class="text-xs md:text-sm float-left ml-9 md:ml-0">Total</p>
+                                        <input readonly class="text-xs w-28 float-right md:text-sm bg-transparent" id="delitotal" name="delitotal">
                                     </div>
 
                                     <div class="ml-[110px] my-3">

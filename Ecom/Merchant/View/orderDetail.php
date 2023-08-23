@@ -84,6 +84,7 @@ include "../Controller/orderDetailController.php";
                     </tr>
                 </thead>
                 <tbody class=" text-center">
+                    <?php print_r($orderDetails) ?>
                     <?php $productCount = 0; ?>
                     <?php foreach ($orderDetails as $orderDetail) { ?>
                         <tr class="border-b">

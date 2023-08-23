@@ -28,7 +28,8 @@ include "./navigation.php";
 
 <body class=" bg-purple-50 dark:bg-gray-950 hide-scroll-bar scroll-smooth">
 
-    <form  method="post" class="bg-violet-300 dark:bg-color-primary-dark border-b border-gray-200 dark:border-gray-600  w-full z-30  md:mt-8 py-4 m-auto">
+
+    <form action="" method="post" class="bg-violet-300 dark:bg-color-primary-dark border-b border-gray-200 dark:border-gray-600 w-full z-30 mt-20 py-4">
         <div class="flex w-3/4 m-auto">
             <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
             <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -77,24 +78,10 @@ include "./navigation.php";
             </form>
         </div>
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section class="sec h-screen" id="searchResult">
         <section class="w-[100%] md:w-[90%] m-auto">
 
-            <div class="banner-container md:h-[450px] h-40 rounded-none">
+            <div class="banner-container md:h-[450px] h-40 rounded-none mt-4">
                 <!-- Banner_1 section -->
                 <img src="../../Storage/banner/<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
@@ -245,7 +232,7 @@ include "./navigation.php";
                 <!-- Product Card 1 -->
                 <?php foreach ($latestMerchants as $latestShop) { ?>
                     <div class="w-full sm:w-1/2 lg:w-1/3 mb-4">
-                        <div class=" w-auto h-60 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
+                        <div class="w-72 h-60 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-xl z-10">
                             <div class="relative">
                                 <img src="../../Storage/profile/<?= $latestShop["logo"] ?>" class=" w-20 h-20 object-cover rounded-full ml-2" alt="">
                                 <div class="bottom-0 right-0 mb-2 mr-2 px-4 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">Myanmar</div>
@@ -300,7 +287,7 @@ include "./navigation.php";
                                     </div>
                                 </div>
                             </div> -->
-                                <a class="inset-x-0 bottom-0 flex justify-center bg-purple-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-purple-500 rounded-xl p-2 text-gray-100 hover:text-purple-900 w-24 float-right mb-4" href="./storepage.php?id=<?= $latestShop['id'] ?>">View Shop</a>
+                                <a class="inset-x-0 bottom-0 flex justify-center bg-purple-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-purple-500 rounded-xl p-2 text-gray-100 hover:text-purple-900 w-24 float-right mb-4" href="./updateStorePage.php?id=<?= $latestShop['id'] ?>">View Shop</a>
                             </div>
 
                         </div>
