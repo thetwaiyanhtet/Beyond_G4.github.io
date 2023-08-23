@@ -15,6 +15,7 @@ $verifyData = $_SESSION["verifyData"];
     <link href="./resources/lib/tailwind/output.css?id=<?= time() ?>" rel="stylesheet">
     <script src="../View/resources/lib/jquery3.6.0.js"></script>
     <script src="../View/resources/js/order.js"></script>
+    <script src="./resources/js/"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,7 +94,7 @@ $verifyData = $_SESSION["verifyData"];
                                     <div class="flex items-center text-base font-semibold text-gray-900 dark:text-white">
                                         <?= $order["sellprice"] ?> Ks
                                     </div>
-                                    <button data-modal-target="popup-modal" data-order-id="<?= $order['product_id']; ?>" data-modal-toggle="popup-modal" class="rating-button block text-white bg-purple-400 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800" type="button">
+                                    <button data-order-id="<?= $order['product_id']; ?>" class="rating-button block text-white bg-purple-400 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800" type="button">
                                         Rate Your Satisfaction
                                     </button>
                                     <div>
