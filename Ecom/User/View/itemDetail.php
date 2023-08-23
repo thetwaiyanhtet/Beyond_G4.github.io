@@ -61,6 +61,11 @@ ini_set('display_errors', 1);
                         <div></div>
                     <?php } ?>
                     <div class="flex items-center justify-center space-x-3">
+                    <?php if (!empty($ItemDetails[0]["p_one"])) { ?>
+                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_one"] ?>" alt="..." class="w-40 h-auto"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>
                         <?php if (!empty($ItemDetails[0]["p_two"])) { ?>
                             <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_two"] ?>" alt="..." class="w-40 h-auto"></div>
                         <?php } else { ?>
@@ -72,7 +77,7 @@ ini_set('display_errors', 1);
                             <div></div>
                         <?php } ?>
                         <?php if (!empty($ItemDetails[0]["p_four"])) { ?>
-                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_four"] ?>" alt="..." class="w-40 h-auto"></div>
+                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_four"] ?>" alt="..." class="w-40 h-auto user-pic"></div>
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>
@@ -98,7 +103,7 @@ ini_set('display_errors', 1);
                     <input type="hidden" name="product_id" value="<?= $id  ?>">
 
                     <!-- Color choose -->
-                    <div class="flex space-x-3">
+                    <div class="flex space-x-3 p-5">
                     <?php if (!empty($ItemDetails[0]["color_1"])) { ?>
                         <div class="w-5 h-5 rounded-full user-pic active-pic" onclick="showReview(0)" style="background-color: <?= $ItemDetails[0]["color_1"]; ?>"></div>
                         <?php } else { ?>
@@ -115,7 +120,7 @@ ini_set('display_errors', 1);
                             <div></div>
                         <?php } ?> 
                         <?php if (!empty($ItemDetails[0]["color_4"])) { ?>
-                        <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(3)" style="background-color: <?= $ItemDetails[0]["color_4"]; ?>"></div>
+                        <div class="w-5 h-5 rounded-full " onclick="showReview(3)" style="background-color: <?= $ItemDetails[0]["color_4"]; ?>"></div>
                         <?php } else { ?>
                             <div></div>
                         <?php } ?> 
@@ -183,7 +188,7 @@ ini_set('display_errors', 1);
                     <?php } else { ?>
                         <div class="flex space-x-16 ">
                             <h3>Size</h3>
-                            <select name="" id="" class=" border  rounded-md outline-none">
+                            <select name="" id="" class=" border  rounded-md outline-none h-9 ">
                                 <?php if ($ItemDetails[0]["size_s"] == 1) { ?>
                                     <option value="" selected>S</option>
                                 <?php } ?>
@@ -208,7 +213,7 @@ ini_set('display_errors', 1);
                     <div class=" flex space-x-5 items-center">
                         <div class="flex space-x-7">
                             <h3>Quantity</h3>
-                            <input type="number" class="border w-20 h-6 indent-12 shadow-xl rounded-md" value="1" min="1">
+                            <input type="number" class="border w-20 h-6 indent-6 shadow-xl rounded-md" value="1" min="1">
                         </div>
                         <?php if ($ItemDetails[0]["instock"] <= 10) { ?>
                             <p class=" opacity-70 text-sm">Only <span class=" text-red-500 font-semibold"><?= $ItemDetails[0]["instock"] ?></span> items left</p>
@@ -253,7 +258,7 @@ ini_set('display_errors', 1);
                 <div class=" w-full lg:flex-col lg:text-base text-sm">
                     <div class=" lg:flex flex-wrap justify-evenly items-center h-20">
                         <?php foreach ($topComments as $CustomerReviews) { ?>
-                            <div class="reviewCard flex  ">
+                            <div class="reviewCard flex flex-col ">
                                 <div class="flex">
                                     <img src="../../Storage/profile/<?= $CustomerReviews["p_picture"] ?>" alt="..." class=" lg:w-[70px] w-12 mr-10 rounded-full">
                                     <div class="">
