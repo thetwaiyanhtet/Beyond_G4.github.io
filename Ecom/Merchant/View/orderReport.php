@@ -44,7 +44,11 @@ include "../Controller/orderreportcontroller.php";
             <span class="flex p-1 border rounded-lg">
                 <input type="date" name="" id="" class="outline-none text-[#756e6ef7]">
             </span> -->
-            <button class=" ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
+            <form action="./exportOrder.php" method="post" id="exportOrderForm">
+                <input type="hidden" name="export_type" value="Order Report">
+                <button type="submit" class="ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export Order Report to CSV</button>
+            </form>
+
         </div>
 
 
