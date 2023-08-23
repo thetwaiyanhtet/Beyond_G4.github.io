@@ -367,7 +367,7 @@ $trending_json = json_encode($trending);
                     <div class=" flex justify-around pt-4 pb-4">
                         <?php foreach ($trending as $trendingProduct) { ?>
                             <div class=" flex-col space-y-3">
-                                <div class=" flex flex-col space-x-2 text-sm flex-wrap text-center">
+                                <div class=" flex flex-col space-x-2 text-xs flex-wrap text-center">
                                     <p><?= $trendingProduct["name"] ?></p>
                                     <p><?= $trendingProduct["product_count"] ?></p>
                                 </div>
