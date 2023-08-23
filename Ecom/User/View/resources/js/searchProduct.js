@@ -14,8 +14,6 @@ $(document).ready(function () {
         const filterText = $("#search").val().toLowerCase();
         const filteredProducts = products.filter(
           (product) => product.name.toLowerCase().includes(filterText)
-          // product.productID.toString().includes(filterText) ||
-          // product.c_name.toLowerCase().includes(filterText)
         );
 
         for (let i = 0; i < filteredProducts.length; i++) {
@@ -54,9 +52,9 @@ $(document).ready(function () {
     });
   }
 
-  //   $("#search").on("keyup input", function () {
-  //     searchProducts();
-  //   });
+    $("#search").on("keyup input", function () {
+      searchProducts();
+    });
   $("#searchButton").on("click", function () {
     searchProducts();
   });
