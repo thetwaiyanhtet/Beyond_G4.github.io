@@ -110,7 +110,7 @@ if (!empty($_SESSION['carttle'])) {
 </div>
 
 <body class="bg-purple-200 dark:bg-color-primary-dark ">
-        <?php include "./navigation.php";?>
+    <?php include "./navigation.php"; ?>
     <section class="flex flex-wrap w-full mt-24 ">
         <div class="md:flex flex-col m-5 space-y-5 w-[100%] md:w-44">
             <a href="./userProfileEditUpd.php">
@@ -208,26 +208,27 @@ if (!empty($_SESSION['carttle'])) {
                                         <div class="py-[2%] ml-[15px] border-b-black border-2 border-transparent w-full h-[30px] font-bold text-[10px] md:text-[15px] ">Order Summary</div>
                                         <div class="flex justify-around py-[4%]">
                                             <p class="ml-[15px] font-bold text-xs md:text-sm">Sub Total</p>
-                                            <input readonly class="ml-[44px] font-bold text-xs w-[60px] md:text-sm bg-transparent " id="gtotal" name="stotal"></input>
+                                            <input readonly class="ml-[44px] font-bold text-xs md:text-sm bg-transparent " id="gtotal" name="stotal"></input>
                                             <input type="hidden" name="quantiarr" id="quantiarray">
                                         </div>
                                         <div class="flex justify-around ">
-                                            <p class="ml-[44px]  font-bold text-xs md:text-sm">Shipping fee</p>
+                                            <p class="ml-[44px]  font-bold text-xs md:text-sm">Delivery fee</p>
                                             <input readonly class="ml-[44px] font-bold text-xs md:text-sm bg-transparent " value="<?= $_SESSION['delifees'][0]['delivery_fees']  ?> Ks" id="delifees" name="deli">
                                         </div>
                                     </div>
 
                                     <div class="flex h-[40px] items-center md:justify-around mt-2  border-t-2 space-x-12 md:space-x-0  font-bold">
                                         <p class="text-xs md:text-sm ml-9 md:ml-0">Total</p>
-                                        <input readonly class="text-xs md:text-sm w-[60px] bg-transparent" id="delitotal" name="delitotal">
+                                        <input readonly class="text-xs md:text-sm bg-transparent" id="delitotal" name="delitotal">
                                     </div>
 
-                                    <div class="ml-[110px] mt-3">
-                                        <input type="submit" class="w-[90px] h-[28px] bg-slate-600 font-bold text-xs text-black cursor-pointer rounded-lg " value="Checkout">
-                                        <div class="m-2 rounded-md flex justify-center bg-[#3147558b]"><a href="./mainPage.php"> <button type="button" class="w-[100px] h-[40px]  font-bold text-xs rounded-lg text-white">Continue Shopping</button></a></div>
+                                    <div class="ml-[110px] my-3">
+                                        <input type="submit" class="cursor-pointer block text-white bg-purple-500 scale-100 hover:scale-90 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600  dark:focus:ring-purple-800" value="Checkout">
                                     </div>
                                 </form>
                             </div>
+                        </div>
+                        <div class="w-full flex items-center justify-end h-auto"> <a href="./mainPage.php"> <button type="button" class="font-bold text-xs rounded-lg text-gray-800">Continue Shopping</button> <ion-icon name="arrow-redo-circle-outline"></ion-icon></a>
                         </div>
                     </section>
 
@@ -326,6 +327,7 @@ if (!empty($_SESSION['carttle'])) {
         }
         subTotal();
     </script>
+    <script src="./resources/js/toggle.js" defer></script>
 </body>
 
 </html>
