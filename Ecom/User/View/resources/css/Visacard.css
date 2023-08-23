@@ -1,0 +1,140 @@
+.container .card-container {
+  margin-bottom: -70px;
+  position: relative;
+  height: 230px;
+  width: 370px;
+  z-index: 2;
+  transform: perspective(75em) rotateX(0deg);
+}
+
+.container .card-container .front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  border-radius: 10px;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.429);
+  padding: 20px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.4s ease-out;
+}
+
+.container .card-container .front .image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.container .card-container .front .image img {
+  height: 30px;
+}
+.chip{
+  transform: scale(2);
+  margin-left: 6%;
+}
+.container .card-container .front .card-number-box {
+  padding: 30px 0;
+  font-size: 22px;
+  letter-spacing: 3px;
+color: #fff;
+font-family: 'lora';
+
+}
+
+.container .card-container .front .flexbox {
+  display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1) {
+  margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box {
+  font-size: 14px;
+  color: #fff;
+}
+.container .card-container .front .flexbox .box div{
+  font-size: 18px;
+margin-top: 10px;
+}
+
+.container .card-container .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  border-radius: 5px;
+  padding: 20px 0;
+
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.4s ease-out;
+}
+
+.container .card-container .back .stripe {
+  background: #181818;
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+}
+
+.container .card-container .back .box {
+  padding: 0 20px;
+}
+
+.container .card-container .back .box span {
+  color: #fff;
+  font-size: 18px;
+ 
+}
+
+.container .card-container .back .box .cvv-box {
+  height: 45px;
+  padding: 10px;
+  margin-top: 5px;
+  color: #000000;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  letter-spacing: 1.5px;
+}
+
+.container .card-container .back .box img {
+  margin-top: 20px;
+  height: 20px;
+  float: right;
+}
+
+#toggle{
+    width: 60px;
+    height: 50px;
+ background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+    border-bottom: 3px solid rgb(76, 76, 76);  
+}
+#modes{
+    font-size: 40px;   
+}
+@media screen and (max-width:1150px) {
+  .container .card-container {
+  margin-bottom: -60px;
+  height: 210px;
+  width: 350px;
+}
+.container form {
+  padding: 8% 6% 1.5% 6%;
+}
+}

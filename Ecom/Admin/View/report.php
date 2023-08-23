@@ -26,26 +26,38 @@ include "./adminsidebar.php";
             <div class="border shadow-md mt-5 rounded-xl border-gray-200">
                 <div class="p-5">
                     <p class="font-semibold text-lg text-center">Export to CSV</p>
-                    <form method='post' action='../Controller/downloadCSV.php'>
-                        <div class="flex justify-evenly p-7 font-medium text-lg">
-                            <div class="flex flex-col space-y-12">
-                                <a href="./orderlist.php">
-                                    <input type='submit' value='Order List' name='export_type' class="py-2 px-8 w-52 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600">
-                                </a>
-                                <a href="./categorylist.php">
-                                    <input type='submit' value='Category List' name='export_type' class="py-2 px-8 w-52 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600">
-                                </a>
-                            </div>
-                            <div class="flex flex-col space-y-12">
-                                <input type='submit' value='Trending Store List' name='export_type' class="py-2 px-6 w-52 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600">
-                                <a href="./merchant_list.php">
-                                    <input type='submit' value='Business Plan' name='export_type' class="py-2 px-6 w-52 rounded-lg text-white flex items-center justify-center 
-                        bg-blue-600"></a>
-                            </div>
+                    <div class="flex justify-evenly p-7 font-medium text-lg">
+                        <div class="flex flex-col space-y-12">
+
+
+                            <a href="./orderlist.php">
+                                <form action="./exportOrderList.php" method="post" class="">
+                                    <input type="hidden" name="export_type" value="Order List">
+                                    <input type="submit" value="Export Order List" class="py-2 px-8 w-full rounded-lg text-white bg-blue-600">
+                                </form>
+                            </a>
+
+
+
+                            <a href="./categorylist.php">
+                                <form action="./exportCategoryList.php" method="post" class=" ">
+                                    <input type="hidden" name="export_type" value="Category List">
+                                    <input type="submit" value="Export Category List" class="py-2 px-8 w-full rounded-lg text-white bg-blue-600">
+                                </form>
+                            </a>
+                            <a href="./merchant_list.php">
+                                <form action="./exportMerchantList.php" method="post" class=" ">
+                                    <input type="hidden" name="export_type" value="Merchant List">
+                                    <input type="submit" value="Export Merchant List" class="py-2 px-8 w-full rounded-lg text-white bg-blue-600">
+                                </form>
+                            </a>
+
                         </div>
+
+
+
+
+                    </div>
 
                 </div>
 

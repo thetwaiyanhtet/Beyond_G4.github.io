@@ -106,17 +106,6 @@ $plandate = $_SESSION["plancheck"];
       </ul>
     </div>
   </div>
-  <button class="chat-btn z-50 scale-110" id="chatBoxButton">
-    <img src="./resources/img/chat.png" alt="" class="w-20 h-auto animate-[wiggle_700ms_ease-in-out_infinite] ">
-  </button>
-  <div class="chat-popup z-50 bg-red-900">
-   <!-- <?php 
-     if(include "./users.php"){
-      //  echo "go";
-     }else{
-      echo "fuck";
-     }
-   ?> -->
   </div>
   <script>
     // Add an event listener to the logout button

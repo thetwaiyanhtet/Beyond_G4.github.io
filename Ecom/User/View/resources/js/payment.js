@@ -22,7 +22,6 @@ document.getElementById('cvv').addEventListener('mouseenter',(e)=>{
 });
 
 document.getElementById('cvv').addEventListener('mouseleave',(e)=>{
-    console.log("chit lar");
     document.getElementById('front').classList.remove('hidden');
     document.getElementById('cvvs').style.transform = 'perspective(1000px) rotateY(180deg)';
     document.getElementById('cvvs').style.transition = 'transform 0.5s';
@@ -30,3 +29,5 @@ document.getElementById('cvv').addEventListener('mouseleave',(e)=>{
     document.getElementById('cvvs').classList.add('hidden');
     
 });
+
+
