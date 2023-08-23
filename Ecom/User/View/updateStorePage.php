@@ -1,3 +1,7 @@
+<?php
+include "../Controller/storePageController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +37,11 @@
 <body class=" dark:bg-gray-950">
     <nav class="m-10">
         <div class="flex justify-around items-center">
-            <p class="font-PlayfairSC font-semibold md:text-2xl text-sm dark:text-white">Store Name</p>
+            <p class="font-PlayfairSC font-semibold md:text-2xl text-sm dark:text-white"> <?php
+            $storeName = $storeData[0]['store_name'];
+            echo $storeName;
+
+            ?></p>
             <form class="flex items-center mx-auto">
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative md:w-[600px] w-[150px]">
@@ -54,78 +62,48 @@
                     <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <img src="../../Storage/profile/h&m.jpg" class="h-16">
+            <img src="../../Storage/profile/<?= $storeData[0]["logo"] ?>" class="h-16">
         </div>
     </nav>
     <section>
         <section>
             <div class="banner">
-                <img src="../../Storage/banner/10.png" alt="img" class="rounded-lg w-[90%] m-auto">
+                <img src="../../Storage/banner/<?= $storeData[0]["banner"] ?>" alt="img" class="rounded-lg w-[90%] m-auto">
             </div>
-            <ul class="md:w-48 w-40 text-sm font-medium text-gray-900  md:m-20 m-10">
-                <li class="w-full">
-                    <div class="flex items-center pl-3">
-                        <label for="vue-checkbox" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">Categories</label>
-                    </div>
-                </li>
-                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-                    <div class="flex items-center pl-3">
-
-                        <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Vue JS</label>
-                    </div>
-                </li>
-                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-                    <div class="flex items-center pl-3">
-
-                        <label for="react-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">React</label>
-                    </div>
-                </li>
-                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-                    <div class="flex items-center pl-3">
-
-                        <label for="angular-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Angular</label>
-                    </div>
-                </li>
-                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-                    <div class="flex items-center pl-3">
-
-                        <label for="laravel-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Laravel</label>
-                    </div>
-                </li>
-            </ul>
+           
         </section>
 
         <div class="flex overflow-y-scroll pb-6 h-96">
             <div class="flex flex-wrap w-full  justify-around">
-
-                <div class="inline p-3">
-                    <div class="h-80 w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                        <form action="" method="post">
-                            <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
-                                <div class="flex justify-center items-center h-44">
-                                    <img class="w-3/5 scale-110 md:scale-105 h-auto m-auto p-4" src="./resources/img/products/imac1.png" alt="">
-                                </div>
-                                <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                    <a href=""><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
-                                    <a href=""><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="list-outline"></ion-icon></button></a>
-
-                                </div>
+        <!-- <form action="../Controller/newcartController.php" method="post"> -->
+        <?php foreach ($AllProducts as $AllProduct) { ?>
+            <div class="inline p-3">
+                <div class=" h-auto w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                    <form action="./mainPage.php" method="post">
+                        <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
+                            <div class="w-56 m-auto p-2 h-44">
+                                <img class="w-48 h-40 m-auto" src="../../Storage/product/<?= $AllProduct["p_one"] ?>" alt="">
                             </div>
-                            <div class="relative dark:text-white">
-                                <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full">Imac</h2>
-                                <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                <p class="text-xs mt-2 ml-5 block 
-                                             overflow-hidden h-4">nice product</p>
-                                <p class="text-md font-bold mt-2 ml-5 block ">3500000 Ks</p>
-                                <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
-                                <!-- <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>"> -->
-                            </div>
+                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                <a href="./mainPage.php?pid=<?= $AllProduct["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
+                                <a href="../View/itemDetail.php?pid=<?= $AllProduct["id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="list-outline"></ion-icon></button></a>
 
-                    </div>
-                    </form>
+                            </div>
+                        </div>
+                        <div class="relative dark:text-white">
+                            <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full"><?php echo $AllProduct['name'] ?></h2>
+                            <!-- <del class="text-red-700 text-lg">$999</del> -->
+                            <p class="text-xs mt-2 ml-5 block "><?php echo $AllProduct['description'] ?></p>
+                            <p class="text-md font-bold mt-2 ml-5 block "><?php echo $AllProduct['sellprice'] ?> Ks</p>
+                            <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                            <input type="hidden" name="product_id" value="<?= $AllProduct["id"] ?>">
+                        </div>
+
                 </div>
-
+                </form>
             </div>
+        <?php } ?>
+    </div>
 
         </div>
     </section>
