@@ -32,9 +32,9 @@ include "../Controller/productListController.php";
     <main class=" ml-56">
         <section>
             <p class=" pt-3 pl-5 pb-1 font-semibold text-lg">Inventory</p>
-            <div class="pl-5 pt-1 w-60">
+            <!-- <div class="pl-5 pt-1 w-60">
                 <input type="search" class="inputBox text-xs" id="search" placeholder="Search by Name,Code,Category..">
-            </div>
+            </div> -->
             <div class=" flex-col justify-center px-5 py-1">
 
                 <div class=" w-full h-full  rounded-lg p-3 shadow-xl border-2 border-blue-950 mt-3">
@@ -53,7 +53,7 @@ include "../Controller/productListController.php";
                                     <th scope="col" class="px-3 py-3">
                                         No
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" class="pr-10 py-3">
                                         Product Name
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-start">
@@ -88,7 +88,7 @@ include "../Controller/productListController.php";
                                         <td class="px-5 py-4">
                                             <?= ++$count ?>.
                                         </td>
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <th scope="row" class="pl-8 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                             <?= $product["name"]; ?>
                                         </th>
                                         <td class="px-10 py-4">

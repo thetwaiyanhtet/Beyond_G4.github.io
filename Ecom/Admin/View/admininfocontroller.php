@@ -1,5 +1,7 @@
 <?php
-
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start(); 
+}
 //DB Connection
 include "../Model/model.php";
 

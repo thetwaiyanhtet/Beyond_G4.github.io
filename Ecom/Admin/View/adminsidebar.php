@@ -1,7 +1,7 @@
 <?php
 
 include "../Controller/updatepasswordController.php";
-$admin = $_SESSION["adminInfo"];
+// $admin = $_SESSION["adminInfo"];
 include "../Controller/logoandbusinessController.php";
  $logoandname = $_SESSION["m_logo"];
  include "../View/admininfocontroller.php";
@@ -48,7 +48,7 @@ include "../Controller/logoandbusinessController.php";
 
     <div id="navbar" class="flex items-center justify-between bg-table w-full fixed top-0 left-0 z-40 h-[80px]">
         <div class="flex items-center pl-4">
-            <img class="w-20" src="../AdminStorge/admin/<?=$logoandname[0]['logo']  ?>" alt="...">
+            <img class="w-20" src="<?=$logoandname[0]['logo']  ?>" alt="...">
             <span class=" text-2xl font-bold text-white"><?= $logoandname[0]['business_name']  ?></span>
         </div>
         <div>
