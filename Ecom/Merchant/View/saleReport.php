@@ -38,7 +38,11 @@ include "../Controller/salereportController.php";
 
         </div>
         <div class="flex items-center float-right mt-3 pr-5 pb-5 ">
-            <button class=" ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
+            <!-- <button id="exportButton" class=" ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button> -->
+            <form action="./exportSale.php" method="post" id="exportForm">
+                <input type="hidden" name="export_type" value="Sale Report">
+                <button type="submit" class="ml-3 p-2 border border-[#1366D9] rounded-lg transition-all duration-200 hover:bg-[#1366D9] hover:text-white">Export to CSV</button>
+            </form>
         </div>
 
         <section class=" p-5">
