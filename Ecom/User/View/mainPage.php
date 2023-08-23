@@ -43,7 +43,7 @@ include "./navigation.php";
 <body class=" bg-purple-50 dark:bg-gray-950 hide-scroll-bar scroll-smooth">
 
 
-    <form action="" method="post" class="bg-violet-300 dark:bg-color-primary-dark border-b border-gray-200 dark:border-gray-600  w-full z-30  md:mt-8 py-4">
+    <form action="" method="post" class="bg-violet-300 dark:bg-color-primary-dark border-b border-gray-200 dark:border-gray-600 w-full z-30 mt-20 py-4">
         <div class="flex w-3/4 m-auto">
             <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
             <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100" type="button">All categories <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -80,24 +80,10 @@ include "./navigation.php";
             </div>
         </div>
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section class="sec h-screen" id="searchResult">
         <section class="w-[100%] md:w-[90%] m-auto">
 
-            <div class="banner-container md:h-[450px] h-40 rounded-none">
+            <div class="banner-container md:h-[450px] h-40 rounded-none mt-4">
                 <!-- Banner_1 section -->
                 <img src="../../Storage/banner/<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
