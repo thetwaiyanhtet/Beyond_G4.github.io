@@ -72,7 +72,7 @@ include "../Controller/settingShowDataController.php";
                                         <input type="file" id="photo6" name="photo6" style="display: none;" onchange="displayUserImage('photoimg6', 'photo6')">
                                         <?php
                                         if (isset($merchant["banner"])) {
-                                            echo '<img src="../../Storage/profile/' . $merchant["banner"] . '" id="photoimg6" alt="">';
+                                            echo '<img src="../../Storage/profile/' $merchant["banner"] . '" id="photoimg6" alt="">';
                                         } else {
                                             echo '<img src="./resources/img/gallery-add.png" id="photoimg6" alt="">';
                                         }
