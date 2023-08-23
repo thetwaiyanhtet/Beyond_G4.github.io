@@ -89,7 +89,7 @@ $(document).ready(function () {
       var product = products[i];
 
       $("#searchResult").append(
-        `<div class="inline p-3 mt-10">
+        `<div class=" flex flex-wrap p-3 mt-10">
                             <div class="h-80 w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
                                 <form action="./mainPage.php" method="post">
                                     <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
