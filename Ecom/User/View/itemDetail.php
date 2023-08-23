@@ -71,6 +71,11 @@ ini_set('display_errors', 1);
                         <?php } else { ?>
                             <div></div>
                         <?php } ?>
+                        <?php if (!empty($ItemDetails[0]["p_four"])) { ?>
+                            <div><img src="../../Storage/product/<?= $ItemDetails[0]["p_four"] ?>" alt="..." class="w-40 h-auto"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>
                         <input type="hidden" id="selectedImage" name="image" value="../../<?= $ItemDetails[0]["p_one"] ?>">
                     </div>
                 </div>
@@ -94,9 +99,26 @@ ini_set('display_errors', 1);
 
                     <!-- Color choose -->
                     <div class="flex space-x-3">
+                    <?php if (!empty($ItemDetails[0]["color_1"])) { ?>
                         <div class="w-5 h-5 rounded-full user-pic active-pic" onclick="showReview(0)" style="background-color: <?= $ItemDetails[0]["color_1"]; ?>"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?>   
+                        <?php if (!empty($ItemDetails[0]["color_2"])) { ?>
                         <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(1)" style="background-color: <?= $ItemDetails[0]["color_2"]; ?>"></div>
+                        <?php } else if($ItemDetails[0]["color_2"] == "#000000") { ?>
+                            <div></div>
+                        <?php } ?>  
+                        <?php if (!empty($ItemDetails[0]["color_3"])) { ?>
                         <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(2)" style="background-color: <?= $ItemDetails[0]["color_3"]; ?>"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?> 
+                        <?php if (!empty($ItemDetails[0]["color_4"])) { ?>
+                        <div class="w-5 h-5 rounded-full user-pic" onclick="showReview(3)" style="background-color: <?= $ItemDetails[0]["color_4"]; ?>"></div>
+                        <?php } else { ?>
+                            <div></div>
+                        <?php } ?> 
                     </div>
 
 
@@ -108,7 +130,8 @@ ini_set('display_errors', 1);
                         const imageSources = [
                             "<?= $ItemDetails[0]["p_one"] ?>",
                             "<?= $ItemDetails[0]["p_two"] ?>",
-                            "<?= $ItemDetails[0]["p_three"] ?>"
+                            "<?= $ItemDetails[0]["p_three"] ?>",
+                            "<?= $ItemDetails[0]["p_four"] ?>"
                         ];
 
                         function showReview(index) {

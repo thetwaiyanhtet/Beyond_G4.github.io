@@ -16,6 +16,7 @@ if (count($_POST) == 0) {
     $color1 = $_POST["color1"];
     $color2 = $_POST["color2"];
     $color3 = $_POST["color3"];
+    $color4 = $_POST["color4"];
     $size1 = $_POST["size1"];
     $size2 = $_POST["size2"];
     $size3 = $_POST["size3"];
@@ -100,6 +101,7 @@ if (count($_POST) == 0) {
         color_1=:color_1,
         color_2=:color_2,
         color_3=:color_3,
+        color_4=:color_4,
         size_s=:size1,
         size_m=:size2,
         size_l=:size3,
@@ -121,9 +123,10 @@ if (count($_POST) == 0) {
     $sql->bindValue(":sellprice", $sellprice);
     $sql->bindValue(":instock", $quantity);
     $sql->bindValue(":description", $description);
-    $sql->bindValue(":color_1", $color1);
-    $sql->bindValue(":color_2", $color2);
-    $sql->bindValue(":color_3", $color3);
+    $sql->bindValue(":color_1",  $color1 == "#000000" ? null : $color1);
+    $sql->bindValue(":color_2",  $color2 == "#000000" ? null : $color2);
+    $sql->bindValue(":color_3",  $color3 == "#000000" ? null : $color3);
+    $sql->bindValue(":color_4",  $color4 == "#000000" ? null : $color4);
     $sql->bindValue(":size1", $size1);
     $sql->bindValue(":size2", $size2);
     $sql->bindValue(":size3", $size3);
