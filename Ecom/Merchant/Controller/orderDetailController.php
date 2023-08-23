@@ -35,6 +35,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $orderDetails = $sql->fetchAll(PDO::FETCH_ASSOC);
 
+
     $_SESSION["selectedOrder"] = $selectedOrder;
 
 } else {
