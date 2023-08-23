@@ -1,6 +1,6 @@
 <?php
 
-include "./navigation.php";
+
 
 require_once("../Controller/newcartController.php");
 require_once "../Model/model.php";
@@ -110,7 +110,7 @@ if (!empty($_SESSION['carttle'])) {
 </div>
 
 <body class="bg-purple-200 dark:bg-color-primary-dark ">
-
+        <?php include "./navigation.php";?>
     <section class="flex flex-wrap w-full mt-24 ">
         <div class="md:flex flex-col m-5 space-y-5 w-[100%] md:w-44">
             <a href="./userProfileEditUpd.php">

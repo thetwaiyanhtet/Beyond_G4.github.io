@@ -97,7 +97,7 @@ include "./navigation.php";
     <section class="sec h-screen" id="searchResult">
         <section class="w-[100%] md:w-[90%] m-auto">
 
-            <div class="banner-container md:h-96 h-40 rounded-none">
+            <div class="banner-container md:h-[450px] h-40 rounded-none">
                 <!-- Banner_1 section -->
                 <img src="../../Storage/banner/<?= $banner[0]['banner_one_img'] ?>" alt="" class="banner-image">
                 <!-- Additional banners go here -->
@@ -142,9 +142,9 @@ include "./navigation.php";
                                                         <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full "><?php echo $tranding["name"]; ?></h2>
                                                         <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
                                                         <!-- <del class="text-red-700 text-md">$999</del> -->
-                                                        <p name="price" class="text-md font-bold mt-2 ml-5 block "><?php echo $tranding["sellprice"] . " Ks"; ?></p>
+                                                        <p name="price" class="text-md font-bold mt-2 mb-1 ml-5 block "><?php echo $tranding["sellprice"] . " Ks"; ?></p>
                                                         <div class="cart-action relative">
-                                                            <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto " />
+                                                            <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto " />
                                                             <ion-icon name="cart-outline" class="absolute top-3 right-6 md:right-10 text-xl"></ion-icon>
                                                             <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
                                                         </div>
@@ -172,7 +172,7 @@ include "./navigation.php";
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                 </span>
-                <span class="absolute flex items-center justify-center w-full h-fuinline p-3ll text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
+                <span class="absolute flex items-center justify-center w-full h-full p-3 text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
                 <span class="relative invisible ">View All</span>
             </a>
             <!--End of Trending product section  -->
@@ -190,12 +190,12 @@ include "./navigation.php";
                 <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
             </div>
             <div>
-                <div class="flex overflow-y-scroll pb-6 h-96">
-                    <div class="flex flex-wrap w-full  justify-around">
+                <div class="flex overflow-y-scroll pb-6 ">
+                    <div class="flex flex-wrap w-full ">
                         <!-- <form action="../Controller/newcartController.php" method="post"> -->
                         <?php foreach ($AllProduct as $productDetail) { ?>
-                            <div class="inline p-3">
-                                <div class="h-80 w-48 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                            <span class="h-auto p-1">
+                                <div class="h-80 w-[185px] md:w-[240px] rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
                                     <form action="./mainPage.php" method="post">
                                         <div class="relative overflow-hidden  bg-slate-300 dark:bg-slate-700 rounded-xl ">
                                             <div class="flex justify-center items-center h-44">
@@ -210,16 +210,15 @@ include "./navigation.php";
                                         <div class="relative dark:text-white">
                                             <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full"><?= $productDetail["name"] ?></h2>
                                             <!-- <del class="text-red-700 text-lg">$999</del> -->
-                                            <p class="text-xs mt-2 ml-5 block 
-                                             overflow-hidden h-4"><?= $productDetail["description"] ?></p>
-                                            <p class="text-md font-bold mt-2 ml-5 block "><?= $productDetail["sellprice"] ?> Ks</p>
-                                            <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
+                                            <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?= $productDetail["description"] ?></p>
+                                            <p class="text-md font-bold mt-2 mb-1 ml-5 block "><?= $productDetail["sellprice"] ?> Ks</p>
+                                            <button type="submit" class="bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto justify-end items-baseline">Add to Cart<ion-icon name="cart-outline" class="px-2 text-xl"></ion-icon></button>
                                             <input type="hidden" name="product_id" value="<?= $productDetail["id"] ?>">
                                         </div>
 
                                 </div>
                                 </form>
-                            </div>
+                        </span>
                         <?php } ?>
                     </div>
 

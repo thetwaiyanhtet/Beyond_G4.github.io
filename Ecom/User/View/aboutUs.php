@@ -35,8 +35,8 @@ include "./navigation.php";
 
 
     <!--Title-->
-    <section class=" m-auto w-3/4 md:w-2/3 font-poppins">
-        <p class=" font-PlayfairSC underline text-center mt-5 m-2 text-2xl text-black dark:text-gray-200">About Us</p>
+    <section class=" m-auto w-3/4 md:w-2/3 font-poppins mt-16">
+        <p class=" font-PlayfairSC underline text-center mt-5 m-2 text-2xl text-black dark:text-gray-200 ">About Us</p>
         <p class="mt-10 text-2xl font-PlayfairSC text-center text-black dark:text-gray-200">Our Project Overview And Story</p>
         <div class="md:flex m-5 md:justify-around">
             <img src="./resources/img/logo_slowdown.gif" alt="logo" class="md:m-0 m-auto h-auto w-56 md:w-64">
