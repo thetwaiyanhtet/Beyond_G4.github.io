@@ -108,7 +108,7 @@ include "../Controller/salereportController.php";
                                         <?= $total ?> Ks
                                     </td>
                                     <td class="px-6 py-4">
-                                        07/24/2023
+                                    <?= $value['order_date'] ?>
                                     </td>
                                 </tr>
                             <?php } ?>

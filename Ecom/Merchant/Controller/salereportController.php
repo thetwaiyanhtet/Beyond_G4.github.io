@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "../Model/model.php";
 
 $merchantEmail = $_SESSION["merchant_ID"];
