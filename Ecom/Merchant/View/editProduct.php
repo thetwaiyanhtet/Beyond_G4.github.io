@@ -171,6 +171,9 @@ $productdata = $_SESSION["editproduct"];
                                         <span><input type="color" name="color3" value="<?php echo $productdata[0]["color_3"] ?>" class=" w-9 h-9">
                                             <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
                                         </span>
+                                        <span><input type="color" name="color4" value="<?php echo $productdata[0]["color_4"] ?>" class=" w-9 h-9">
+                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        </span>
                                     </div>
                                 </div>
 

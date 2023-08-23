@@ -124,27 +124,18 @@ include "../Controller/categoryListController.php";
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <div><label>Color</label></div>
                                     <div>
-                                        <span><input type="color" name="color1" class=" w-9 h-9">
-                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        <span><input type="color" name="color1" class=" w-9 h-9">                                          
                                         </span>
-                                        <span><input type="color" name="color2" class=" w-9 h-9">
-                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        <span><input type="color" name="color2" class=" w-9 h-9">                                           
                                         </span>
-                                        <span><input type="color" name="color3" class=" w-9 h-9">
-                                            <!-- <input type="text" id="put1" name="color1" class="inputBox"></div> -->
+                                        <span><input type="color" name="color3" class=" w-9 h-9">                                          
+                                        </span>
+                                        <span><input type="color" name="color4" class=" w-9 h-9">                                          
                                         </span>
                                     </div>
                                 </div>
 
-                                <!-- <div class="flex justify-between space-x-10 items-center">
-                                    <div><label>Color</label></div>
-                                    <div id="colorFields">
-                                        <span>
-                                            <input type="color" name="color1" class="rounded-full w-9 h-9">
-                                        </span>
-                                    </div>
-                                    <button id="addColorField">+</button>
-                                </div> -->
+                                
 
                                 <div class=" flex justify-between space-x-10 items-center">
                                     <p>Size</p>

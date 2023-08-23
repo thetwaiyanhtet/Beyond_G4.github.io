@@ -31,7 +31,7 @@ include "./navigation.php";
 </head>
 
 <body class="bg-purple-200 dark:bg-color-primary-dark ">
-   
+
     <section class="flex flex-wrap w-full mt-24 ">
         <div class="md:flex flex-col m-5 space-y-5 w-[100%] md:w-44">
             <a href="./userProfileEditUpd.php">
@@ -138,7 +138,6 @@ include "./navigation.php";
         </div>
     </section>
 
-    <script src="./resources/js/toggle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
 
