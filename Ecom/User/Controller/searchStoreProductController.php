@@ -10,7 +10,7 @@ $storeProductSql = $pdo->prepare(
     WHERE m_product.name LIKE :searchText"
 );
 
-$storeProductSql->bindValue(":searchText", '%' . $searchText . '%');
+
 $storeProductSql->execute();
 $storeProducts = $storeProductSql->fetchAll(PDO::FETCH_ASSOC);
 echo json_encode($storeProducts);
