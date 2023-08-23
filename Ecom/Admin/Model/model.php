@@ -1,10 +1,10 @@
 <?php
 
-$hostname = "hosting-beyond-do-user-14484910-0.b.db.ondigitalocean.com";
-$port = 25060;
+$hostname = "localhost";
+$port = 3306;
 $dbname = "beyond_db";
-$uname = "doadmin";
-$pwd = "AVNS_odSp7G5IWykGCI5O0CB";
+$uname = "root";
+$pwd = "";
 
 //Connection
 $pdo = new PDO("mysql:host=$hostname;port=$port;dbname=$dbname",

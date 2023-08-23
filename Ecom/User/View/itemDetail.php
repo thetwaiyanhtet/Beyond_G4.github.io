@@ -37,7 +37,7 @@ ini_set('display_errors', 1);
 
 </head>
 
-<body class="font-poppins w-full dark:bg-gray-800">
+<body class="font-poppins w-full dark:bg-gray-800 dark:text-white">
     <div>
         <nav class="flex justify-between">
             <img src="./resources/img/logo_slowdown.gif" alt="..." class="h-10 ml-5 mt-3">
@@ -91,10 +91,12 @@ ini_set('display_errors', 1);
                         <?= $ItemDetails[0]["description"] ?>
                     </p>
                     <h3 class="flex justify-start items-center gap-2 font-philosopher">
-                        <a href="./storepage.php">
+                        <a href="./updateStorePage.php">
                             <div class=" flex items-center space-x-3">
                                 <!-- <div class=" lg:w-10 lg:h-10 w-7 h-7 bg-slate-500 rounded-full flex items-center justify-center ">H</div> -->
-                                <p><?= $ItemDetails[0]["store_name"] ?></p>
+                               <a href="./updateStorePage.php?id=<?= $latestShop['id'] ?>">
+                               <p><?= $ItemDetails[0]["store_name"] ?></p>
+                             </a>
                             </div>
                         </a>
                     </h3>
