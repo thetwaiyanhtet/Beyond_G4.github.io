@@ -84,7 +84,6 @@ include "../Controller/orderDetailController.php";
                     </tr>
                 </thead>
                 <tbody class=" text-center">
-                    <?php print_r($orderDetails) ?>
                     <?php $productCount = 0; ?>
                     <?php foreach ($orderDetails as $orderDetail) { ?>
                         <tr class="border-b">
@@ -116,7 +115,7 @@ include "../Controller/orderDetailController.php";
         </div>
 
         <div class=" py-7 absolute left-[52%] flex">
-            <a href="../Controller/updateOrderController.php">
+            <a href="../Controller/updateOrderController.php" class="flex">
                 <div class="ml-3 items-center flex space-x-2">
                     <input type="checkbox" name="invoice" class=" w-5 h-5">
                     <label for="invoice">Invoice</label>

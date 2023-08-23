@@ -1,8 +1,9 @@
 <?php
-  include "../Controller/invoiceMailController.php";
+include "../Controller/invoiceMailController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -185,7 +186,7 @@
                                                     <img style="
                                 margin: 0;
                                 width: 30%;
-                              " src="../../<?php echo $customer[0]['logo']?>">
+                              " src="../../<?php echo $customer[0]['logo'] ?>">
 
                                                     </img>
                                                 </td>
@@ -246,7 +247,7 @@
                       font-weight: bold;
                       margin: auto;
                     ">
-                                    <p style="margin: auto">
+                                    <p style="margin-left: 200px;">
                                         Thank you for Your Order.
                                     </p>
                                 </td>
@@ -265,29 +266,46 @@
                                     <p style="margin: auto">
 
                                     <p style="text-align: center; font-size: 16px; margin-top: 1px;">Your Order</p>
-                                    <p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 1px;"><?php echo $customerInfo[0]['order_date'] ?></p>
-                                    <div style="margin: auto; width: 64px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 5px;"></div>
+                                    <p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 1px;">
+                                        <?php
+                                        echo "Wednesday " . $customer[0]['order_date'];
+                                        ?>
+                                    </p>
+                                    <p id="currentTime" style="text-align: center; font-size: 14px; color: #ccc; margin-top: 1px;"></p>
+                                    <script>
+                                        function updateTime() {
+                                            var currentTimeElement = document.getElementById('currentTime');
+                                            var now = new Date();
+                                            var formattedTime = now.toTimeString().slice(0, 8); // Extracts HH:MM:SS from the time string
+                                            currentTimeElement.textContent = formattedTime;
+
+                                            setTimeout(updateTime, 1000); // Update every second
+                                        }
+
+                                        updateTime(); // Initial call to start updating
+                                    </script>
+                                    <div style="margin: auto; width: 100px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 5px;"></div>
                                     <?php foreach ($customer as $product) { ?>
-                                        <div style="margin: auto; width: 64px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
-                                            <p style="margin-bottom: 3px;"><?= $product['name'] ?></p>
-                                            <p style="margin-bottom: 3px;"><?= '$'.$product['sellprice'] ?></p>
+                                        <div style="margin: auto; width: 180px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
+                                            <p style="margin-bottom: 3px;"><?= $product['name'] . ":" ?></p>
+                                            <p style="margin-bottom: 3px;"><?= '$' . $product['sellprice'] ?></p>
                                         </div>
                                     <?php } ?>
-                                    <div style="margin: auto; width: 64px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
-                                        <p style="margin-bottom: 3px;">Delivery Fee</p>
-                                        <p style="margin-bottom: 3px;"><?= '$'. $customer[0]['delivery_fees'] ?></p>
+                                    <div style="margin: auto; width: 150px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
+                                        <p style="margin-bottom: 3px;">Delivery Fee:</p>
+                                        <p style="margin-bottom: 3px;"><?= '$' . $customer[0]['delivery_fees'] ?></p>
                                     </div>
-                                    <div style="margin: auto; width: 64px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
+                                    <div style="margin: auto; width: 100px; border-bottom: 2px solid #000; display: flex; justify-content: space-between; margin-top: 3px;">
                                         <p style="margin-bottom: 3px;">Total</p>
-                                        <p style="margin-bottom: 3px;"><?= '$'.$customer[0]['total_amt'] ?></p>
+                                        <p style="margin-bottom: 3px;"><?= '$' . $customer[0]['total_amt'] ?></p>
                                     </div>
                                     <p style="text-align: center; font-weight: bold; font-size: 18px; margin: 5px;">Your Details</p>
-                                    <div style="margin: auto; width: 80px; border-bottom: 2px solid #ccc; border-top: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
-                                        <p style="margin: 3px; font-style: normal; text-align: justify;">Shipping to</p>
+                                    <div style="margin: auto; width: 300px; border-bottom: 2px solid #ccc; border-top: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
+                                        <p style="margin: 3px; font-style: normal; text-align: justify;">Shipping to :</p>
                                         <p style="margin: 3px; font-size: 12px; text-align: center;"><?= $customer[0]['r_name'] . ' , ' . $customer[0]['t_name'] . ' , ' . $customer[0]['street'] ?></p>
                                     </div>
-                                    <div style="margin: auto; width: 80px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
-                                        <p style="margin: 3px; font-style: normal; text-align: justify;">Billed With</p>
+                                    <div style="margin: auto; width: 200px; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between; margin-top: 3px;">
+                                        <p style="margin: 3px; font-style: normal; text-align: justify;">Billed With : </p>
                                         <p style="margin: 3px;"><?php
                                                                 $payment_type = $customer[0]['payment_id'];
 
@@ -316,7 +334,7 @@
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <br />
                     <tr style="font: Roboto; height: 50px;font-weight: bold;text-align: center">
-                        <td style="font-size: 1em;padding-left: 10px;"><?= $customer['store_name']?></td>
+                        <td style="font-size: 1em;padding-left: 10px;"><?= $customer[0]['store_name'] ?></td>
                         <td style="font-size: 1em">Address</td>
                         <td style="font-size: 1em">Social</td>
                     </tr>
@@ -326,15 +344,15 @@
                       align-items: center;
                       text-align: center;
                       padding-left: 30px;">
-                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/ringingphoneoutlineicon.png" style="margin-right: 5px;width: 19px;height: 17px;" alt="" srcset=""><span style="opacity: 0.6;"><?= $customer[0]['phone']?></span>
+                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/ringingphoneoutlineicon.png" style="margin-right: 5px;width: 19px;height: 17px;" alt="" srcset=""><span style="opacity: 0.6;"><?= $customer[0]['phone'] ?></span>
                         </td>
-                        <td style="text-align: center;opacity: 0.6;">No--<?= $customer[0]['address'] ?></td>
+                        <td style="text-align: center;opacity: 0.6;"><?= $customer[0]['address'] ?></td>
                         <td style="
                       display: flex;
                       align-items: center;
                       padding-left: 10px;
                     ">
-                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/facebookroundcoloricon.png" style="width: 30px;height: 30px;" style="margin-right: 5px" alt="" srcset=""><a href="{{ $facebook_link }}" style="opacity: 0.6;margin-left: 10px;">{{ $merchantfbpage }}</a>
+                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/facebookroundcoloricon.png" style="width: 30px;height: 30px;" style="margin-right: 5px" alt="" srcset=""><a href="{{ $facebook_link }}" style="opacity: 0.6;margin-left: 10px;"><?php $customer[0]['store_name'] ?></a>
                         </td>
                     </tr>
                     <tr style="font: Roboto; font-size: 0.8em;">
@@ -342,16 +360,16 @@
                       align-items: center;
                       text-align: center;
                       padding-left: 30px;">
-                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/emailicon.png" style="margin-right: 5px;width: 19px;height: 13px;" alt="" srcset=""><span style="opacity: 0.6;"><?php echo $customer[0]['email']?></span>
+                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/emailicon.png" style="margin-right: 5px;width: 19px;height: 13px;" alt="" srcset=""><span style="opacity: 0.6;"><?php echo $customer[0]['email'] ?></span>
 
                         </td>
-                        <td style="text-align: center;opacity: 0.6;">Road Name, Township Name</td>
+                        <td style="text-align: center;opacity: 0.6;">AwBar Street, Tamawe </td>
                         <td style="
                       display: flex;
                       align-items: center;
                       padding-left: 10px;
                     ">
-                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/youtubecoloricon.png" style="width: 35px;height: 30px;" style="margin-right: 5px" alt="" srcset=""><a href="{{ $youtube_link1 }}" style="opacity: 0.6;margin-left: 5px;">Merchant youtube(optional)</a>
+                            <img src="https://myschoolstorage.sgp1.digitaloceanspaces.com/emailLogo/zpfooter/youtubecoloricon.png" style="width: 35px;height: 30px;" style="margin-right: 5px" alt="" srcset=""><a href="{{ $youtube_link1 }}" style="opacity: 0.6;margin-left: 5px;">Beyondecommerce634</a>
                         </td>
                     </tr>
                     <tr style="font: Roboto; font-size: 0.8em;">
@@ -367,7 +385,6 @@
                       align-items: center;
                       padding-left: 10px;
                     ">
-
                         </td>
                     </tr>
                     <tr>
@@ -402,5 +419,4 @@
 
 </html>
 <?php
- header("Location: ../Controller/sendMail.php?id=<?php echo $customer[0]['userEmail']?>");
 ?>
