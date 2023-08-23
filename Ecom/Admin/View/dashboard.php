@@ -1,5 +1,5 @@
 <?php
-include "./adminsidebar.php";
+// include "./adminsidebar.php";
 include "../Controller/totalController.php";
 include "../Controller/trendingproductController.php";
 include "../Controller/orderandcustomerController.php";
