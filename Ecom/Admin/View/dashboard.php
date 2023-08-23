@@ -258,7 +258,8 @@ $category_json = json_encode($category);
                 );
             </script>
         </div>
-        </div>
+        <div class="flex justify-around mt-5 mb-20">
+        <!-- </div>
         <div class="flex justify-around mt-5 mb-20">
             <div class=" w-64 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Top Selling Categories</p>
@@ -326,12 +327,12 @@ $category_json = json_encode($category);
                         configee
                     );
                 </script>
-            </div>
-            <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
+            </div> -->
+            <div class=" w-96 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Recent Registred Merchant</p>
                 <?php $for = 2; foreach ($lmerchant as $index => $value) { ?>
                     <div class="flex items-center ml-3 border-b-2 pb-2">
-                        <img class="w-20" src="../..<?= $value['logo'] ?>" alt="">
+                        <img class="w-20" src="../../Storage/profile/<?= $value['logo'] ?>" alt="">
                         <div class="mx-3">
                             <p><?= $value['m_name'] ?></p>
                             <p><?= $data[$for - $index]['create_date'] ?>
@@ -340,11 +341,11 @@ $category_json = json_encode($category);
                     </div>
                 <?php } ?>
             </div>
-            <div class=" w-80 h-auto  border rounded-lg space-y-3 shadow-xl">
+            <div class=" w-96 h-auto  border rounded-lg space-y-3 shadow-xl">
                 <p class="font-semibold px-3 my-3">Recent Registred Customer</p>
                 <?php $for = 2; foreach ($lcustomer as $index => $value) { ?>
                     <div class="flex items-center ml-3 border-b-2 pb-2">
-                        <img class="w-20" src="../..<?= $value['p_picture'] ?>" alt="">
+                        <img class="w-20" src="../../Storage/profile/<?= $value['p_picture'] ?>" alt="">
                         <div class="mx-3">
                             <p><?= $value['username'] ?></p>
                             <p><?= $value['create_date'] ?>
