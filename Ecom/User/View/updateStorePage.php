@@ -1,5 +1,6 @@
 <?php
 include "../Controller/storePageController.php";
+include "../Controller/storePageCategoryController.php";
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +72,7 @@ include "../Controller/storePageController.php";
 
         </div>
     </nav>
-    <section>
+    <section class=" flex">
         <section>
             <div class="banner">
                 <?php if (isset($storeData[0]["banner"])) { ?>
@@ -79,17 +80,25 @@ include "../Controller/storePageController.php";
                 <?php } ?>
             </div>
             <ul class="md:w-48 w-40 text-sm font-medium text-gray-900  md:m-20 m-10">
-                <li class="w-full">
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
                     <div class="flex items-center pl-3">
-                        <label for="vue-checkbox" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">Categories</label>
+                        <label for="vue-checkbox" class="w-full py-3 text-lg font-medium text-gray-900 dark:text-gray-300">Categories</label>
                     </div>
                 </li>
-                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                <?php foreach ($categories as $category) { ?>
+                    <li class="w-full border-b py-2 border-gray-200 rounded-t-lg dark:border-gray-600 category" data-category-id="<?= $category["id"] ?>">
+                        <div class="flex items-center pl-3"><?= $category["c_name"] ?></div>
+                    </li>
+                <?php } ?>
+                <!-- <li class="w-full">
+                    
+                </li>
+               
                     <div class="flex items-center pl-3">
 
                         <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Vue JS</label>
                     </div>
-                </li>
+                
                 <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
                     <div class="flex items-center pl-3">
 
@@ -107,12 +116,12 @@ include "../Controller/storePageController.php";
 
                         <label for="laravel-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Laravel</label>
                     </div>
-                </li>
+                </li> -->
             </ul>
-           
+
         </section>
 
-        <div class="flex overflow-y-scroll pb-6 h-96">
+        <div class="flex pb-6 h-96">
             <div class="flex flex-wrap w-full  justify-around" id="searchResult">
                 <!-- <form action="../Controller/newcartController.php" method="post"> -->
                 <?php foreach ($AllProducts as $Product) { ?>
