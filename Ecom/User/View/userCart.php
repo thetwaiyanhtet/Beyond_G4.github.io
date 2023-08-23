@@ -69,7 +69,15 @@ if (!empty($_SESSION['carttle'])) {
     $delifees->bindValue(":email", $user);
     $delifees->execute();
     $_SESSION['delifees'] = $delifees->fetchAll(PDO::FETCH_ASSOC);
-}
+    if (empty($_SESSION['delifees'])) {
+        echo "      <script>
+        alert('You should enter the address first.');
+        window.location.href = './userProfileEditUpd.php'
+      </script>"; 
+
+    }  
+
+  }
 ?>
 
 <!DOCTYPE html>
@@ -139,7 +147,6 @@ if (!empty($_SESSION['carttle'])) {
                     </div>
 
                     <section class="">
-
                         <div class=" h-auto bg-purple-200 dark:bg-color-primary-dark dark:text-white rounded-lg flex flex-wrap w-[100%]">
 
                             <div class=" w-[100%] md:w-3/4">
