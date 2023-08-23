@@ -178,7 +178,7 @@
         <div class="flex justify-center items-center relative">
 
             <div class="absolute -bottom-20 mr-10 max-lg:right-3  right-0 max-lg:-bottom-20">
-                <a href="./confirmation.php"> <input type="submit" id="myButton" class=" text-white  py-2 px-7  rounded-md bg-[#314755]" value="Next Step"></a>
+                <a href="./confirmation.php"> <input type="submit" id="myButton" class=" text-white  py-2 px-7  rounded-md bg-purple-600" value="Next Step"></a>
             </div>
         </div>
     </form>
