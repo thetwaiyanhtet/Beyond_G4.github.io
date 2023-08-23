@@ -70,6 +70,37 @@ include "../Controller/storePageController.php";
             <div class="banner">
                 <img src="../../Storage/banner/<?= $storeData[0]["banner"] ?>" alt="img" class="rounded-lg w-[90%] m-auto">
             </div>
+            <ul class="md:w-48 w-40 text-sm font-medium text-gray-900  md:m-20 m-10">
+                <li class="w-full">
+                    <div class="flex items-center pl-3">
+                        <label for="vue-checkbox" class="w-full py-3 ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">Categories</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <div class="flex items-center pl-3">
+
+                        <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Vue JS</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <div class="flex items-center pl-3">
+
+                        <label for="react-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">React</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <div class="flex items-center pl-3">
+
+                        <label for="angular-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Angular</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <div class="flex items-center pl-3">
+
+                        <label for="laravel-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Laravel</label>
+                    </div>
+                </li>
+            </ul>
            
         </section>
 
