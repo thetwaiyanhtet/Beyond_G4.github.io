@@ -1,7 +1,7 @@
 <?php
 $hostname = "hosting-beyond-do-user-14484910-0.b.db.ondigitalocean.com";
 $port = 25060;
-$dbname = "defaultdb";
+$dbname = "beyond_db";
 $uname = "doadmin";
 $pwd = "AVNS_odSp7G5IWykGCI5O0CB";
 
