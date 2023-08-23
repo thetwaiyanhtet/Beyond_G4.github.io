@@ -109,7 +109,7 @@
                  <p class=" font-semibold">All Products</p>
                  <div class=" flex flex-wrap space-x-5 p-5">
                      <?php foreach ($productList as $productListDetail) { ?>
-                         <div class=" flex flex-col  w-[180px] h-[200px] rounded-lg  shadow-xl border border-gray-400 text-center">
+                         <div class=" flex flex-col  w-[180px] h-[250px] rounded-lg  shadow-xl border border-gray-400 text-center">
                              <div class=" h-24">
                                 <img src="../../Storage/product/<?= $productListDetail["p_one"] ?>" alt="..." class=" w-24 mx-auto pt-2">
                             </div>
