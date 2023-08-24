@@ -16,11 +16,11 @@ $data = $_SESSION["verifyData"];
     <div class=" ml-56 ">
         <header class=" border-gray-300 border-b-2 h-[82px] flex justify-between items-center z-30">
             <div class=" pl-5">
-            <?php if(isset($merchant_data["store_name"])){ ?> 
+            <!-- <?php if(isset($merchant_data["store_name"])){ ?> 
                 <p class=" font-semibold"><?= $merchant_data["store_name"] ?></p>
                 <?php } else{ ?> 
                     <p class=" font-semibold"></p>
-                    <?php } ?>
+                    <?php } ?> -->
                 <p class=" text-sm" id="date_time"></p>
             </div>
             <div>
