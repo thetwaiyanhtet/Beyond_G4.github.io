@@ -1,7 +1,7 @@
 <?php
 include "../Controller/productDetailController.php";
 include "./adminsidebar.php";
-
+// session_start();
 ?>
 
 <!doctype html>

@@ -1,4 +1,5 @@
 <?php
+// session_start();
 include "./adminsidebar.php";
 include "../Controller/totalController.php";
 include "../Controller/trendingproductController.php";
