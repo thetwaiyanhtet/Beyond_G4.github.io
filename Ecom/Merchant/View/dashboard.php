@@ -1,6 +1,6 @@
 <?php
-// session_start();
-include "./sidebar.php";
+session_start();
+// include "./sidebar.php";
 
 
 include "../../User/Controller/trendingProductController.php";
