@@ -6,20 +6,21 @@ if (isset($_GET['pid'])) {
     $id = $_GET['pid'];
 
 
-$sql = $pdo->prepare(
-    "SELECT 
-    m_customer.username,
-    m_cusreview.comment,
-    m_customer.p_picture,
-    AVG(m_cusreview.rating) as review_rating,
-    COUNT(m_cusreview.customer_id) as customer_count
-    FROM m_cusreview
-    JOIN m_customer ON m_cusreview.customer_id = m_customer.id
-    JOIN m_product ON m_cusreview.product_id = m_product.id
-    WHERE m_product.id = :id
-    GROUP BY m_customer.username, m_cusreview.comment
-    ORDER BY review_rating "
-);
+    $sql = $pdo->prepare(
+        "SELECT 
+        m_customer.username,
+        m_cusreview.comment,
+        m_customer.p_picture,
+        AVG(m_cusreview.rating) as review_rating,
+        COUNT(m_cusreview.customer_id) as customer_count
+        FROM m_cusreview
+        JOIN m_customer ON m_cusreview.customer_id = m_customer.id
+        JOIN m_product ON m_cusreview.product_id = m_product.id
+        WHERE m_product.id = :id
+        GROUP BY m_customer.username, m_cusreview.comment, m_customer.p_picture
+        ORDER BY review_rating "
+    );
+    
 $sql->bindValue(":id", $id);
 $sql->execute();
 $topComments = $sql->fetchAll(PDO::FETCH_ASSOC);
