@@ -4,10 +4,10 @@
 include "../Model/model.php";
 
 $sql = $pdo->prepare(
-    "SELECT order_date, COUNT(*) AS total_rows
+    "SELECT DATE(order_date) AS date_only, COUNT(*) AS total_rows
     FROM m_order 
-    GROUP BY order_date
-    ORDER BY order_date;"
+    GROUP BY DATE(order_date)
+    ORDER BY DATE(order_date);"
 );
 
 $sqlcc = $pdo->prepare(
@@ -21,7 +21,7 @@ $sqlcc = $pdo->prepare(
 $slqplan = $pdo->prepare(
     "SELECT  COUNT(m_merchant.id) AS total_merchants
     FROM m_plan
-    LEFT JOIN m_merchant ON m_plan.id = m_merchant.plan_id
+    JOIN m_merchant ON m_plan.id = m_merchant.plan_id
     GROUP BY m_plan.plan_name
     ORDER BY m_plan.id ASC;
     "
