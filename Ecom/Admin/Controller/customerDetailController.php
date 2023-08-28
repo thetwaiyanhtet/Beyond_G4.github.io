@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 // DB Connection
 include "../Model/model.php";
@@ -40,18 +40,15 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 
     $orderSql = $pdo->prepare(
-        "SELECT m_product.name,m_merchant.store_name,m_order.total_amt,m_order.order_date,m_order_details.delivery_status,m_order.generate_id
+        "SELECT m_product.name, m_merchant.store_name, m_order.total_amt, m_order.order_date, m_order_details.delivery_status, m_order.generate_id
         FROM m_order
-        JOIN m_customer 
-        ON m_customer.id = m_order.customer_id
-        JOIN m_order_details
-        ON m_order_details.order_id = m_order.id
-        JOIN m_product
-        ON m_product.id = m_order_details.product_id
-        JOIN m_merchant
-        ON m_merchant.id = m_order_details.merchant_id
+        JOIN m_customer ON m_customer.id = m_order.customer_id
+        JOIN m_order_details ON m_order_details.order_id = m_order.id
+        JOIN m_product ON m_product.id = m_order_details.product_id
+        JOIN m_merchant ON m_merchant.id = m_order_details.merchant_id
         WHERE customer_id = :id
-        GROUP BY m_order.generate_id "
+        GROUP BY m_order.generate_id, m_product.name, m_merchant.store_name, m_order.total_amt, m_order.order_date, m_order_details.delivery_status
+         "
     );
 
     $productsSql = $pdo->prepare(

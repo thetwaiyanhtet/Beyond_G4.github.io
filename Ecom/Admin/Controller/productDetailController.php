@@ -30,18 +30,19 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $productId = $_GET["id"];
     $sql = $pdo->prepare(
         "SELECT 
-    m_customer.username,
-    m_cusreview.comment,
-    m_customer.p_picture,
-    AVG(m_cusreview.rating) as review_rating,
-    COUNT(m_cusreview.customer_id) as customer_count
-    FROM m_cusreview
-    JOIN m_customer ON m_cusreview.customer_id = m_customer.id
-    JOIN m_product ON m_cusreview.product_id = m_product.id
-    WHERE m_product.id = :id
-    GROUP BY m_customer.username, m_cusreview.comment
-    ORDER BY review_rating "
+            m_customer.username,
+            MAX(m_cusreview.comment) as comment,
+            MAX(m_customer.p_picture) as p_picture,
+            AVG(m_cusreview.rating) as review_rating,
+            COUNT(m_cusreview.customer_id) as customer_count
+        FROM m_cusreview
+        JOIN m_customer ON m_cusreview.customer_id = m_customer.id
+        JOIN m_product ON m_cusreview.product_id = m_product.id
+        WHERE m_product.id = :id
+        GROUP BY m_customer.username
+        ORDER BY review_rating "
     );
+    
     $sql->bindValue(":id", $productId);
     $sql->execute();
     $topComments = $sql->fetchAll(PDO::FETCH_ASSOC);

@@ -1,4 +1,5 @@
 <?php
+// session_start();
 include "./adminsidebar.php";
 include "../Controller/customerDetailController.php";
 
