@@ -41,8 +41,9 @@ $profitSaleSql = $pdo->prepare(
     JOIN m_product
     ON m_order_details.product_id = m_product.id
     WHERE m_merchant.email = :email
-    "
+    GROUP BY m_product.sellprice, m_product.buyprice"
 );
+
 
 $profitSaleSql->bindValue(':email', $merchantEmail);
 

@@ -108,27 +108,28 @@ $plandate = $_SESSION["plancheck"];
   </div>
   </div>
   <script>
-    // Add an event listener to the logout button
-    document.getElementById('logoutButton').addEventListener('click', function() {
-      // Display the Swal confirmation dialog with custom content
-      console.log("jk");
-      Swal.fire({
-        title: '',
-        html: `
-      <div>
-        <img src="../../Storage/monkey.gif" alt="..." class="rounded-md mx-auto" style="max-width: 300px;">
-        <p class="pt-3">Are you sure? You will be logged out.</p> 
-      </div>`,
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, logout',
-        backdrop: false, // Disable the backdrop blur effect
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = 'login.php';
-        }
-      });
+      
+            // Add an event listener to the logout button
+            document.getElementById('logoutButton').addEventListener('click', function() {
+                // Display the Swal confirmation dialog with custom content
+                Swal.fire({
+                    title: '',
+                    html: `
+                    <div>
+                        <img src="../../Storage/monkey.gif" alt="..." class="rounded-md mx-auto" style="max-width: 300px;">
+                        <p class="pt-3">Are you sure? You will be logged out.</p> 
+                    </div>`,
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, logout',
+                    backdrop: false, // Disable the backdrop blur effect
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'login.php'; // Update the path if necessary
+                    }
+                });
+        
     });
   </script>
 </body>

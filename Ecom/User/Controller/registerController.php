@@ -35,17 +35,13 @@ if (isset($_POST["register"])) {
         username,
         email,
         password,
-        unique_id,
-        create_date,
-        update_date
+        unique_id
     )
     VALUES(
         :username,
         :email,
         :password,
-        :unique_id,
-        :create_date,
-        :update_date
+        :unique_id
     )
     "
     );
@@ -53,8 +49,6 @@ if (isset($_POST["register"])) {
         $sql->bindValue(":email", $email);
         $sql->bindValue(":unique_id",$ran_id);
         $sql->bindValue(":password", password_hash($password, PASSWORD_DEFAULT));
-        $sql->bindValue(":create_date",date('Y-m-d'));
-        $sql->bindValue(":update_date",date('Y-m-d'));
         $sql->execute();
         header("Location: ../View/mainPage.php");
     } else {

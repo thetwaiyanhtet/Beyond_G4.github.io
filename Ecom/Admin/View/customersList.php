@@ -68,9 +68,9 @@ include "../Controller/costomerListController.php";
                                 <td class="px-6 py-4">
                                     <?= $customer["phone"]; ?>
                                 </td>
-                                <td class="px-6 py-4 flex space-x-3">
+                                <td class="px-8 py-4 flex space-x-3">
                                     <a href="./customerDetail.php?id=<?= $customer["id"]; ?>"><img src="./resources/img/eye.svg" alt="..."></a>
-                                    <img id="del" class=" cursor-pointer" src="./resources/img/bin.svg" alt="...">
+                                    
                                 </td>
                             </tr>
                         <?php } ?>

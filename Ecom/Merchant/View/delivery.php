@@ -1,4 +1,5 @@
 <?php
+// session_start();
 include "./sidebar.php";
 include "../Controller/deliveryController.php";
 
@@ -82,7 +83,8 @@ include "../Controller/deliveryController.php";
                                         </td>
 
                                         <td class="px-6 py-4 ">
-                                            <?= $delivery["total_amt"] + $delivery["delivery_fees"] ?> Ks
+                                        <?= ($delivery["total_amt"] ?? 0) + ($delivery["delivery_fees"] ?? 0) ?> Ks
+
                                         </td>
                                         <td class=" pr-2 py-4 ">
                                             <?= $delivery["delivery_name"] ?>

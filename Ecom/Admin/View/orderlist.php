@@ -1,6 +1,7 @@
 <?php
 include "../Controller/orderlistController.php";
 include "./adminsidebar.php";
+// session_start();
 ?>
 <!doctype html>
 <html>

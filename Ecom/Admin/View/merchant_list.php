@@ -74,9 +74,9 @@ include "../Controller/merchantListController.php";
                                 $12600
                             </td> -->
 
-                                <td class="px-6 py-4 flex space-x-3">
+                                <td class="px-8 py-4 flex space-x-3">
                                     <a href="./merchantProfile.php?id=<?= $merchantListDetail["id"] ?>"><img src="./resources/img/eye.svg" alt=""></a>
-                                    <img src="./resources/img/bin.svg" alt="">
+                                    <!-- <img src="./resources/img/bin.svg" alt=""> -->
                                 </td>
 
                             </tr>

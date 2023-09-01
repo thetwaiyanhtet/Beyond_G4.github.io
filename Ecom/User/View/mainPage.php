@@ -43,7 +43,7 @@ $tcondition = $_SESSION["m_tc"];
                             <div class="category inline-flex w-full px-4 py-2 hover:bg-gray-100 text-start" data-category-id="<?= $category["id"] ?>">
                                 <?= $category["c_name"] ?>
                             </div>
-                            <div class="category-subcategories fixed top-0 w-40 h-[250px] left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
+                            <div class="category-subcategories fixed top-0 w-40 h-auto left-44 hidden py-3 bg-white shadow dark:bg-gray-700 rounded-md">
                                 <?php foreach ($subCategories as $subcategory) {
                                     if ($subcategory["category_id"] === $category["id"]) { ?>
                                         <div class="py-1 pl-3 hover:bg-gray-100 subCategory" data-subcategory-id="<?= $subcategory["id"] ?>">

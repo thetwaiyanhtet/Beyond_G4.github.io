@@ -23,7 +23,7 @@ $(document).ready(function () {
                     <p class=" text-yellow-500">
                         <span>${numberToStars(reviewDetails.rating)}</span>
                         <span class="text-black">/</span>
-                        <span class="text-black">${reviewDetails.usernam}</span>
+                        <span class="text-black">${reviewDetails.username}</span>
                     </p>
                     <p class=" text-gray-500 w-40" width="200px">${reviewDetails.comment}</p>
                     <div>
