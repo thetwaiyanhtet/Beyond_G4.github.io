@@ -85,58 +85,48 @@ $tcondition = $_SESSION["m_tc"];
                 <h1 class="m-2 text-2xl md:text-3xl text-center font-bold"><span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-red-400 font-philosopher">Trending Product</span></h1>
                 <hr class="w-20 m-auto bg-purple-800 dark:bg-white h-1 ">
 
-                <div class="flex overflow-x-scroll pb-3 hide-scroll-bar mt-4">
-                    <div class="flex flex-nowrap">
-                        <div id="product-grid">
-                            <?php
-                            // $product_array = $db_handle->runQuery("SELECT * FROM m_cart ORDER BY id ASC");
-                            if (!empty($_SESSION["trandingProduct"])) {
-                                foreach ($_SESSION["trandingProduct"] as $tranding) {
-                            ?>
-                                    <div class="product-item">
-                                        <!-- <form method="post" action="../Controller/cartController.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>"> -->
-                                        <div class="mx-4">
-                                            <div class="h-80 w-52 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
-                                                <form action="./mainPage.php" method="post">
-                                                    <div class="relative overflow-hidden bg-slate-300 dark:bg-slate-700 rounded-xl ">
-                                                        <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
-                                                        <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
-                                                        <div class=" flex justify-center items-center h-44">
-                                                            <img class=" w-3/5 scale-110 md:scale-105 h-auto m-auto p-4" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
-                                                        </div>
-                                                        <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
-                                                            <a href="./mainPage.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
+                <div class="flex overflow-x-auto pb-3 mt-4 w-full">
+                    <?php
+                    if (!empty($_SESSION["trandingProduct"])) {
+                        foreach ($_SESSION["trandingProduct"] as $tranding) {
+                    ?>
+                            <div class="flex-none mx-1">
+                                <div class="h-80 w-52 md:w-64 rounded-xl group border border-solid shadow-xl bg-slate-200 dark:bg-gray-900">
+                                    <form action="./mainPage.php" method="post">
+                                        <div class="relative overflow-hidden bg-slate-300 dark:bg-slate-700 rounded-xl ">
+                                            <input type="hidden" name="image" value="../../<?php echo $tranding["p_one"]; ?>">
+                                            <input type="hidden" name="price" value="/<?= $tranding["sellprice"] ?>">
+                                            <div class=" flex justify-center items-center h-44">
+                                                <img class=" w-3/5 scale-110 md:scale-105 h-auto m-auto p-4" src="../../Storage/product/<?php echo $tranding["p_one"]; ?>" alt="">
+                                            </div>
+                                            <div class="absolute h-full w-full flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-purple-600/20 dark:bg-white/20 rounded-xl">
+                                                <a href="./mainPage.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="heart-outline"></ion-icon></button></a>
 
-                                                            <a href="../View/itemDetail.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="list-outline"></ion-icon></button></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class=" dark:text-white ">
-                                                        <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full overflow-hidden "><?php echo $tranding["name"]; ?></h2>
-                                                        <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
-                                                        <!-- <del class="text-red-700 text-md">$999</del> -->
-                                                        <p name="price" class="text-md font-bold mt-2 mb-1 ml-5 block "><?php echo $tranding["sellprice"] . " Ks"; ?></p>
-                                                        <div class="cart-action relative">
-                                                            <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto " />
-                                                            <ion-icon name="cart-outline" class="absolute top-3 right-6 md:right-10 text-xl"></ion-icon>
-                                                            <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                                <a href="../View/itemDetail.php?pid=<?= $tranding["product_id"]; ?>"><button type="button" class="bg-purple-900 text-white p-1.5 text-2xl rounded-full m-2 w-9 h-9 shadow-xl hover:scale-90"><ion-icon name="list-outline"></ion-icon></button></a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- </form> -->
-                        </div>
-                <?php
-                                }
-                            }
-                ?>
 
-                    </div>
+                                        <div class=" dark:text-white ">
+                                            <h2 class="mt-3 ml-5 text-sm md:text-md capitalize font-bold w-full overflow-hidden "><?php echo $tranding["name"]; ?></h2>
+                                            <p class="text-xs mt-2 ml-5 block overflow-hidden h-4"><?php echo $tranding["description"]; ?></p>
+                                            <!-- <del class="text-red-700 text-md">$999</del> -->
+                                            <p name="price" class="text-md font-bold mt-2 mb-1 ml-5 block "><?php echo $tranding["sellprice"] . " Ks"; ?></p>
+                                            <div class="cart-action relative">
+                                                <input type="submit" value="Add to Cart" class="btnAddAction bg-slate-300 shadow-2xl w-full h-12 rounded-lg hover:bg-slate-50 dark:bg-gray-800 border-b-2 border-solid border-purple-600 dark:border-black m-auto " />
+                                                <ion-icon name="cart-outline" class="absolute top-3 right-6 md:right-10 text-xl"></ion-icon>
+                                                <input type="hidden" name="product_id" value="<?= $tranding["product_id"]; ?>">
+                                            </div>
+                                        </div>
 
+                                    </form>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
-            </div>
+
             </div>
 
             <a href="./trandingProduct.php" class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-my-purple1 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group float-right m-2">
@@ -452,43 +442,43 @@ $tcondition = $_SESSION["m_tc"];
                         <!-- Modal body -->
                         <div class="p-6 space-y-6">
                             <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 h-96 overflow-y-scroll">
-                            <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
-                        <?php foreach ($tcondition as $key => $value) { ?>
+                                <img src="./resources/img/terms.jpg" alt="" class="m-auto w-64 h-auto">
+                                <?php foreach ($tcondition as $key => $value) { ?>
 
 
-                            <b>1. User Accounts</b> <br>
-                            a. <?= $value['onea'] ?> <br>
-                            b. <?= $value['oneb'] ?> <br><br>
+                                    <b>1. User Accounts</b> <br>
+                                    a. <?= $value['onea'] ?> <br>
+                                    b. <?= $value['oneb'] ?> <br><br>
 
-                            <b>2. Use of the Website</b> <br>
-                            a. <?= $value['twoa'] ?><br>
-                            b. <?= $value['twob'] ?><br><br>
+                                    <b>2. Use of the Website</b> <br>
+                                    a. <?= $value['twoa'] ?><br>
+                                    b. <?= $value['twob'] ?><br><br>
 
-                            <b>3. Intellectual Property</b><br>
-                            a. <?= $value['threea'] ?><br>
-                            b. <?= $value['threeb'] ?> <br><br>
+                                    <b>3. Intellectual Property</b><br>
+                                    a. <?= $value['threea'] ?><br>
+                                    b. <?= $value['threeb'] ?> <br><br>
 
-                            <b>4. Privacy</b><br>
-                            <?= $value['four'] ?> <br><br>
+                                    <b>4. Privacy</b><br>
+                                    <?= $value['four'] ?> <br><br>
 
-                            <b>5. Third-Party Links</b><br>
-                            <?= $value['five'] ?> <br><br>
+                                    <b>5. Third-Party Links</b><br>
+                                    <?= $value['five'] ?> <br><br>
 
-                            <b>6. Limitation of Liability</b><br>
-                            <?= $value['six'] ?> <br><br>
+                                    <b>6. Limitation of Liability</b><br>
+                                    <?= $value['six'] ?> <br><br>
 
-                            <b>7. Modifications to the Terms</b><br>
-                            <?= $value['seven'] ?> <br><br>
+                                    <b>7. Modifications to the Terms</b><br>
+                                    <?= $value['seven'] ?> <br><br>
 
-                            <b>8. Termination</b><br>
-                            <?= $value['eight'] ?> <br><br>
+                                    <b>8. Termination</b><br>
+                                    <?= $value['eight'] ?> <br><br>
 
 
-                            <b>9. Contact Us</b><br>
-                            <?= $value['nine'] ?> <br><br>
+                                    <b>9. Contact Us</b><br>
+                                    <?= $value['nine'] ?> <br><br>
 
-                            <b>By using the Beyond website, you agree to abide by these Terms and Conditions. Please read them carefully before proceeding with your use of the Website.</b>
-                        <?php  } ?>
+                                    <b>By using the Beyond website, you agree to abide by these Terms and Conditions. Please read them carefully before proceeding with your use of the Website.</b>
+                                <?php  } ?>
                             </p>
 
                         </div>
